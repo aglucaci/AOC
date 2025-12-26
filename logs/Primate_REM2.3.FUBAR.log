@@ -1,0 +1,87 @@
+
+Analysis Description
+--------------------
+Perform a Fast Unbiased AppRoximate Bayesian (FUBAR) analysis of a
+coding sequence alignment to determine whether some sites have been
+will also exist FUBAR-generated files
+/home/sergei/FUBAR/data/pol.nex.FUBAR.json,
+/home/sergei/FUBAR/data/pol.nex.fubrar.cache. They also provide
+checkpointing so that a partially completed analysis can be restarted.
+subject to pervasive purifying or diversifying selection. v2.1
+introduces two more methods for estimating the posterior distribution of
+grid weights: collapsed Gibbs MCMC (faster) and 0-th order Variation
+Bayes approximation (fastest). Please note that a FUBAR analysis
+generates a cache and a results JSON file in the same directory as
+directory as the original alignment. HyPhy needs to have write
+privileges to this directory. For example if the original file is in
+/home/sergei/FUBAR/data/pol.nex then at the end of a FUBAR run, there
+
+- __Requirements__: in-frame codon alignment (possibly partitioned) and a phylogenetic tree
+(one per partition)
+
+- __Citation__: FUBAR: a fast, unconstrained bayesian approximation for inferring
+selection (2013), Mol Biol Evol. 30(5):1196-205
+
+- __Written by__: Sergei L Kosakovsky Pond
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.2
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.3.codon.fas'
+contains 13 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.3.codon.fas.FastTree.treefile
+results/Primate_REM2/Primate_REM2.3.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **35** sequences, **77** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.3.codon.fas`
+Save FUBAR cache to : 
+>cache => /Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.3.codon.fas.FUBAR.cache
+> FUBAR will write cache and result files to _/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.3.codon.fas.FUBAR.cache_ and _/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.3.codon.fas.FUBAR.json_, respectively 
+
+
+> Number of grid points per dimension (total number is D^2) (permissible range = [5,50], default value = 20, integer): 
+>grid => 20
+
+>method => Variational-Bayes
+> The concentration parameter of the Dirichlet prior (permissible range = [0.001,1], default value = 0.5): 
+>concentration_parameter => 0.5
+
+>non-zero => No
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 14 zero-length internal branches: `Node15, Node21, Node24, Node25, Node3, Node30, Node33, Node37, Node39, Node4, Node41, Node51, Node52, Node55`
+* Log(L) =  -949.04, AIC-c =  2029.15 (65 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.876
+* Tree length (expected substitutions/site) for partition 1 :    1.876
+
+### Computing the phylogenetic likelihood function on the grid 
+* Determining appropriate tree scaling based on the best score from a  20 x 20 rate grid
+* Best scaling achieved for 
+	* synonymous rate =  2.815
+	* non-synonymous rate =  0.429
+* Computing conditional site likelihoods on a 20 x 20 rate grid
+
+### Running an iterative zeroth order variational Bayes procedure to estimate the posterior mean of rate weights
+* Using the following settings
+	* Dirichlet alpha  : 0.5
+[2K[mcmc] Posterior mean estimation step          1, error =  4.6431334[2K[mcmc] Posterior mean estimation step          2, error =  0.0019651[2K[mcmc] Posterior mean estimation step          3, error =  0.0004743[2K[mcmc] Posterior mean estimation step          4, error =  0.0001502[2K[mcmc] Posterior mean estimation step          5, error =  0.0000550[2K[mcmc] Posterior mean estimation step          6, error =  0.0000220[2K[mcmc] Posterior mean estimation step          7, error =  0.0000094[2K[mcmc] Posterior mean estimation step          8, error =  0.0000043[2K[mcmc] Posterior mean estimation step          9, error =  0.0000021[2K[mcmc] Posterior mean estimation step         10, error =  0.0000011[2K[mcmc] Posterior mean estimation step         11, error =  0.0000006[2K[mcmc] Posterior mean estimation step         12, error =  0.0000004[2K[mcmc] Posterior mean estimation step         13, error =  0.0000002[2K[mcmc] Posterior mean estimation step         14, error =  0.0000001[2K[mcmc] Posterior mean estimation step         15, error =  0.0000001[2K[mcmc] Posterior mean estimation step         16, error =  0.0000001[2K[mcmc] Posterior mean estimation step         17, error =  0.0000000[2K[mcmc] Posterior mean estimation step         18, error =  0.0000000[2K[mcmc] Posterior mean estimation step         19, error =  0.0000000[2K[mcmc] Posterior mean estimation step         20, error =  0.0000000[2K                                                                    [2K
+### Tabulating site-level results
+----
+## FUBAR inferred no sites under subject to positive selection at posterior probability >= 0.9
+
+
+

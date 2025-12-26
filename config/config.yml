@@ -1,7 +1,14 @@
-Nucleotide: ACE2_refseq_transcript.fasta
-Protein: ACE2_refseq_protein.fasta
-CSV: ACE2_orthologs.csv
-Label: Primate_ACE2
-Email: aoc-user@example.com
+#Nucleotide: ACE2_refseq_transcript.fasta
+#Protein: ACE2_refseq_protein.fasta
+#CSV: ACE2_orthologs.csv
+#Label: Primate_ACE2
+#Email: aoc-user@example.com
+#log_dir: logs
+#multitestcorr: fdr
+
+
+MANIFEST: user/samples.csv
 log_dir: logs
 multitestcorr: fdr
+NCBI_API_KEY: "xxxxxxxxxxxxxxxx"
+Email: aoc-user@example.com

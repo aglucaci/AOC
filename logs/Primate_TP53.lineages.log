@@ -1,0 +1,234 @@
+[normalize] 'NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA' -> 'NM_000546.6' (underscore-version)
+[resolve] cand=NM_000546.6 attempt=1/8 db=nuccore
+[efetch] db=nuccore id=NM_000546.6
+[throttle] sleeping 0.073s
+[taxonomy] taxid=9606
+[resolved] cand=NM_000546.6 taxid=9606 organism=Homo sapiens
+[normalize] 'XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_063700589.1' (underscore-version)
+[resolve] cand=XM_063700589.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.309s
+[efetch] db=nuccore id=XM_063700589.1
+[throttle] sleeping 0.245s
+[taxonomy] taxid=9595
+[resolved] cand=XM_063700589.1 taxid=9595 organism=Gorilla gorilla gorilla
+[normalize] 'XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA' -> 'XM_030800485.1' (underscore-version)
+[resolve] cand=XM_030800485.1 attempt=1/8 db=nuccore
+[efetch] db=nuccore id=XM_030800485.1
+[taxonomy] taxid=61853
+[resolved] cand=XM_030800485.1 taxid=61853 organism=Nomascus leucogenys
+[normalize] 'XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_055256596.2' (underscore-version)
+[resolve] cand=XM_055256596.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.269s
+[efetch] db=nuccore id=XM_055256596.2
+[throttle] sleeping 0.246s
+[taxonomy] taxid=9590
+[resolved] cand=XM_055256596.2 taxid=9590 organism=Symphalangus syndactylus
+[normalize] 'XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA' -> 'XM_032139337.3' (underscore-version)
+[resolve] cand=XM_032139337.3 attempt=1/8 db=nuccore
+[throttle] sleeping 0.309s
+[efetch] db=nuccore id=XM_032139337.3
+[throttle] sleeping 0.233s
+[taxonomy] taxid=81572
+[resolved] cand=XM_032139337.3 taxid=81572 organism=Hylobates moloch
+[normalize] 'XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA' -> 'XM_002826974.6' (underscore-version)
+[resolve] cand=XM_002826974.6 attempt=1/8 db=nuccore
+[throttle] sleeping 0.343s
+[efetch] db=nuccore id=XM_002826974.6
+[throttle] sleeping 0.155s
+[taxonomy] taxid=9601
+[resolved] cand=XM_002826974.6 taxid=9601 organism=Pongo abelii
+[normalize] 'XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA' -> 'XM_054457336.2' (underscore-version)
+[resolve] cand=XM_054457336.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.331s
+[efetch] db=nuccore id=XM_054457336.2
+[throttle] sleeping 0.239s
+[taxonomy] taxid=9600
+[resolved] cand=XM_054457336.2 taxid=9600 organism=Pongo pygmaeus
+[normalize] 'NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA' -> 'NM_001047151.2' (underscore-version)
+[resolve] cand=NM_001047151.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.297s
+[efetch] db=nuccore id=NM_001047151.2
+[throttle] sleeping 0.106s
+[taxonomy] taxid=9544
+[resolved] cand=NM_001047151.2 taxid=9544 organism=Macaca mulatta
+[normalize] 'XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_050765346.1' (underscore-version)
+[resolve] cand=XM_050765346.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.318s
+[efetch] db=nuccore id=XM_050765346.1
+[throttle] sleeping 0.229s
+[taxonomy] taxid=257877
+[resolved] cand=XM_050765346.1 taxid=257877 organism=Macaca thibetana thibetana
+[normalize] 'XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA' -> 'XM_071082299.1' (underscore-version)
+[resolve] cand=XM_071082299.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.370s
+[efetch] db=nuccore id=XM_071082299.1
+[throttle] sleeping 0.231s
+[taxonomy] taxid=9545
+[resolved] cand=XM_071082299.1 taxid=9545 organism=Macaca nemestrina
+[normalize] 'XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA' -> 'XM_003912272.5' (underscore-version)
+[resolve] cand=XM_003912272.5 attempt=1/8 db=nuccore
+[throttle] sleeping 0.341s
+[efetch] db=nuccore id=XM_003912272.5
+[throttle] sleeping 0.246s
+[taxonomy] taxid=9555
+[resolved] cand=XM_003912272.5 taxid=9555 organism=Papio anubis
+[normalize] 'XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_025363515.1' (underscore-version)
+[resolve] cand=XM_025363515.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.319s
+[efetch] db=nuccore id=XM_025363515.1
+[throttle] sleeping 0.244s
+[taxonomy] taxid=9565
+[resolved] cand=XM_025363515.1 taxid=9565 organism=Theropithecus gelada
+[normalize] 'XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_011994540.1' (underscore-version)
+[resolve] cand=XM_011994540.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.359s
+[efetch] db=nuccore id=XM_011994540.1
+[throttle] sleeping 0.096s
+[taxonomy] taxid=9568
+[resolved] cand=XM_011994540.1 taxid=9568 organism=Mandrillus leucophaeus
+[normalize] 'XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_012052423.1' (underscore-version)
+[resolve] cand=XM_012052423.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.330s
+[efetch] db=nuccore id=XM_012052423.1
+[throttle] sleeping 0.136s
+[taxonomy] taxid=9531
+[resolved] cand=XM_012052423.1 taxid=9531 organism=Cercocebus atys
+[normalize] 'XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_008010192.2' (underscore-version)
+[resolve] cand=XM_008010192.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.302s
+[efetch] db=nuccore id=XM_008010192.2
+[throttle] sleeping 0.233s
+[taxonomy] taxid=60711
+[resolved] cand=XM_008010192.2 taxid=60711 organism=Chlorocebus sabaeus
+[normalize] 'XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_023193314.2' (underscore-version)
+[resolve] cand=XM_023193314.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.331s
+[efetch] db=nuccore id=XM_023193314.2
+[throttle] sleeping 0.232s
+[taxonomy] taxid=591936
+[resolved] cand=XM_023193314.2 taxid=591936 organism=Piliocolobus tephrosceles
+[normalize] 'XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_011958558.1' (underscore-version)
+[resolve] cand=XM_011958558.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.261s
+[efetch] db=nuccore id=XM_011958558.1
+[throttle] sleeping 0.237s
+[taxonomy] taxid=336983
+[resolved] cand=XM_011958558.1 taxid=336983 organism=Colobus angolensis palliatus
+[normalize] 'XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA' -> 'XM_010362387.1' (underscore-version)
+[resolve] cand=XM_010362387.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.090s
+[efetch] db=nuccore id=XM_010362387.1
+[throttle] sleeping 0.250s
+[taxonomy] taxid=61622
+[resolved] cand=XM_010362387.1 taxid=61622 organism=Rhinopithecus roxellana
+[normalize] 'XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_017850544.1' (underscore-version)
+[resolve] cand=XM_017850544.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.341s
+[efetch] db=nuccore id=XM_017850544.1
+[throttle] sleeping 0.071s
+[taxonomy] taxid=61621
+[resolved] cand=XM_017850544.1 taxid=61621 organism=Rhinopithecus bieti
+[normalize] 'XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_033184717.1' (underscore-version)
+[resolve] cand=XM_033184717.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.248s
+[efetch] db=nuccore id=XM_033184717.1
+[throttle] sleeping 0.073s
+[taxonomy] taxid=54180
+[resolved] cand=XM_033184717.1 taxid=54180 organism=Trachypithecus francoisi
+[normalize] 'XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_002747948.5' (underscore-version)
+[resolve] cand=XM_002747948.5 attempt=1/8 db=nuccore
+[throttle] sleeping 0.316s
+[efetch] db=nuccore id=XM_002747948.5
+[throttle] sleeping 0.247s
+[taxonomy] taxid=9483
+[resolved] cand=XM_002747948.5 taxid=9483 organism=Callithrix jacchus
+[normalize] 'XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_032280430.1' (underscore-version)
+[resolve] cand=XM_032280430.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.329s
+[efetch] db=nuccore id=XM_032280430.1
+[throttle] sleeping 0.225s
+[taxonomy] taxid=9515
+[resolved] cand=XM_032280430.1 taxid=9515 organism=Sapajus apella
+[normalize] 'XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_039476036.1' (underscore-version)
+[resolve] cand=XM_039476036.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.266s
+[efetch] db=nuccore id=XM_039476036.1
+[throttle] sleeping 0.244s
+[taxonomy] taxid=39432
+[resolved] cand=XM_039476036.1 taxid=39432 organism=Saimiri boliviensis boliviensis
+[normalize] 'XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_017531594.2' (underscore-version)
+[resolve] cand=XM_017531594.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.354s
+[efetch] db=nuccore id=XM_017531594.2
+[taxonomy] taxid=2715852
+[resolved] cand=XM_017531594.2 taxid=2715852 organism=Cebus imitator
+[normalize] 'XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_064378361.1' (underscore-version)
+[resolve] cand=XM_064378361.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.328s
+[efetch] db=nuccore id=XM_064378361.1
+[throttle] sleeping 0.236s
+[taxonomy] taxid=37293
+[resolved] cand=XM_064378361.1 taxid=37293 organism=Aotus nancymaae
+[normalize] 'XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA' -> 'XM_008062341.2' (underscore-version)
+[resolve] cand=XM_008062341.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.259s
+[efetch] db=nuccore id=XM_008062341.2
+[throttle] sleeping 0.241s
+[taxonomy] taxid=1868482
+[resolved] cand=XM_008062341.2 taxid=1868482 organism=Carlito syrichta
+[normalize] 'XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_012776058.2' (underscore-version)
+[resolve] cand=XM_012776058.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.165s
+[efetch] db=nuccore id=XM_012776058.2
+[throttle] sleeping 0.240s
+[taxonomy] taxid=30608
+[resolved] cand=XM_012776058.2 taxid=30608 organism=Microcebus murinus
+[normalize] 'XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA' -> 'XM_045570131.1' (underscore-version)
+[resolve] cand=XM_045570131.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.325s
+[efetch] db=nuccore id=XM_045570131.1
+[throttle] sleeping 0.092s
+[taxonomy] taxid=9447
+[resolved] cand=XM_045570131.1 taxid=9447 organism=Lemur catta
+[normalize] 'XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_069482023.1' (underscore-version)
+[resolve] cand=XM_069482023.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.294s
+[efetch] db=nuccore id=XM_069482023.1
+[throttle] sleeping 0.030s
+[taxonomy] taxid=859984
+[resolved] cand=XM_069482023.1 taxid=859984 organism=Eulemur rufifrons
+[normalize] 'XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA' -> 'XM_012655616.1' (underscore-version)
+[resolve] cand=XM_012655616.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.329s
+[efetch] db=nuccore id=XM_012655616.1
+[throttle] sleeping 0.246s
+[taxonomy] taxid=379532
+[resolved] cand=XM_012655616.1 taxid=379532 organism=Propithecus coquereli
+[normalize] 'XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_053569948.1' (underscore-version)
+[resolve] cand=XM_053569948.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.306s
+[efetch] db=nuccore id=XM_053569948.1
+[throttle] sleeping 0.104s
+[taxonomy] taxid=9470
+[resolved] cand=XM_053569948.1 taxid=9470 organism=Nycticebus coucang
+[normalize] 'XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA' -> 'XM_012806041.2' (underscore-version)
+[resolve] cand=XM_012806041.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.337s
+[efetch] db=nuccore id=XM_012806041.2
+[throttle] sleeping 0.237s
+[taxonomy] taxid=30611
+[resolved] cand=XM_012806041.2 taxid=30611 organism=Otolemur garnettii
+[normalize] 'XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_016931470.3' (underscore-version)
+[resolve] cand=XM_016931470.3 attempt=1/8 db=nuccore
+[throttle] sleeping 0.081s
+[efetch] db=nuccore id=XM_016931470.3
+[throttle] sleeping 0.178s
+[taxonomy] taxid=9598
+[resolved] cand=XM_016931470.3 taxid=9598 organism=Pan troglodytes
+[normalize] 'XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA' -> 'XM_057300362.2' (underscore-version)
+[resolve] cand=XM_057300362.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.286s
+[efetch] db=nuccore id=XM_057300362.2
+[throttle] sleeping 0.096s
+[taxonomy] taxid=9597
+[resolved] cand=XM_057300362.2 taxid=9597 organism=Pan paniscus

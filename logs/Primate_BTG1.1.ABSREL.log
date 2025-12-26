@@ -1,0 +1,228 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. v2.6 adds tree reports and ASCII
+art
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_BTG1/Primate_BTG1.1.codon.fas'
+contains 18 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_BTG1/Primate_BTG1.1.codon.fas.FastTree.treefile
+results/Primate_BTG1/Primate_BTG1.1.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **26** sequences, **106** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_BTG1/Primate_BTG1.1.codon.fas`
+
+>branches => All
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 34 branches for testing: `XM_069489666_1_PREDICTED_Eulemur_rufifrons_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_045553258_1_PREDICTED_Lemur_catta_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_012775241_1_PREDICTED_Microcebus_murinus_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_003783357_2_PREDICTED_Otolemur_garnettii_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node1, XM_055237919_2_PREDICTED_Symphalangus_syndactylus_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_012664017_1_PREDICTED_Propithecus_coquereli_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA, XM_032297546_1_PREDICTED_Sapajus_apella_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_012469349_2_PREDICTED_Aotus_nancymaae_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_003927879_4_PREDICTED_Saimiri_boliviensis_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node11, XM_002752814_4_PREDICTED_Callithrix_jacchus_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node10, Node8, XM_053582943_1_PREDICTED_Nycticebus_coucang_BTG_anti_proliferation_factor_1_BTG1_mRNA, NM_001731_3_Homo_sapiens_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_054444125_2_PREDICTED_Pongo_pygmaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA, NM_001266672_1_Macaca_mulatta_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_050750080_1_PREDICTED_Macaca_thibetana_thibetana_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_033221091_1_PREDICTED_Trachypithecus_francoisi_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_032170892_2_PREDICTED_Hylobates_moloch_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_025400855_1_PREDICTED_Theropithecus_gelada_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_012031683_1_PREDICTED_Cercocebus_atys_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA, XM_002823578_4_PREDICTED_Pongo_abelii_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_010383938_2_PREDICTED_Rhinopithecus_roxellana_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_019038967_4_PREDICTED_Gorilla_gorilla_gorilla_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_003906945_4_PREDICTED_Papio_anubis_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_011933701_1_PREDICTED_Colobus_angolensis_palliatus_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA, XM_023223561_1_PREDICTED_Piliocolobus_tephrosceles_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node19, XM_008004234_3_PREDICTED_Chlorocebus_sabaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node18, Node16, Node7`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 3 zero-length internal branches: `Node1, Node19, Node7`
+* Log(L) =  -456.99, AIC-c =   998.41 (42 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.182
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) =  -457.11, AIC-c =  1070.59 (76 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.50, and 95% of the weight in  0.00 -  1.00
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|              Node10               |   0.06   |    2     |    0.00 ( 5.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|              Node18               |   0.03   |    2     |    0.00 ( 5.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_008004234_3_PREDICTED_Chloroc...|   0.03   |    2     |    0.00 ( 0.25%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_055237919_2_PREDICTED_Symphal...|   0.02   |    2     |    0.00 ( 0.25%)   |    -457.11    |    1074.82    |     1070.59     |
+|              Node16               |   0.02   |    2     |    0.00 ( 5.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|               Node8               |   0.02   |    2     |    0.00 ( 0.25%)   |    -457.11    |    1074.82    |     1070.59     |
+|              Node11               |   0.02   |    2     |    0.00 ( 0.25%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_012469349_2_PREDICTED_Aotus_n...|   0.00   |    2     |    0.29 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|NM_001731_3_Homo_sapiens_BTG_ant...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|NM_001266672_1_Macaca_mulatta_BT...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_012031683_1_PREDICTED_Cercoce...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_003906945_4_PREDICTED_Papio_a...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_011933701_1_PREDICTED_Colobus...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_003927879_4_PREDICTED_Saimiri...|   0.00   |    2     |    0.25 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_050750080_1_PREDICTED_Macaca_...|   0.00   |    2     |    0.29 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_010383938_2_PREDICTED_Rhinopi...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_053582943_1_PREDICTED_Nyctice...|   0.00   |    2     |    0.25 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_002752814_4_PREDICTED_Callith...|   0.00   |    2     |    0.29 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_069489666_1_PREDICTED_Eulemur...|   0.00   |    2     |    0.29 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_012775241_1_PREDICTED_Microce...|   0.00   |    2     |    0.29 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_054444125_2_PREDICTED_Pongo_p...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_019038967_4_PREDICTED_Gorilla...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_033221091_1_PREDICTED_Trachyp...|   0.00   |    2     |    0.25 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_003783357_2_PREDICTED_Otolemu...|   0.00   |    2     |    0.29 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_023223561_1_PREDICTED_Pilioco...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_032297546_1_PREDICTED_Sapajus...|   0.00   |    2     |    0.25 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_012664017_1_PREDICTED_Propith...|   0.00   |    2     |    0.29 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_032170892_2_PREDICTED_Hylobat...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_025400855_1_PREDICTED_Theropi...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_045553258_1_PREDICTED_Lemur_c...|   0.00   |    2     |    0.25 ( 2.00%)   |    -457.11    |    1074.82    |     1070.59     |
+|XM_002823578_4_PREDICTED_Pongo_a...|   0.00   |    2     |    0.25 (51.00%)   |    -457.11    |    1074.82    |     1070.59     |
+
+### Rate class analyses summary
+*  31 branches with **1** rate classes
+
+### Annotated Tree
+(XM_055237919_2_PREDICTED_Symphalangus_syndactylus_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_069489666_1_PREDICTED_Eulemur_rufifrons_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_045553258_1_PREDICTED_Lemur_catta_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_012775241_1_PREDICTED_Microcebus_murinus_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_003783357_2_PREDICTED_Otolemur_garnettii_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},(XM_012664017_1_PREDICTED_Propithecus_coquereli_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA{1},((XM_032297546_1_PREDICTED_Sapajus_apella_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_012469349_2_PREDICTED_Aotus_nancymaae_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_003927879_4_PREDICTED_Saimiri_boliviensis_BTG_anti_proliferation_factor_1_BTG1_mRNA{1})Node11{1},XM_002752814_4_PREDICTED_Callithrix_jacchus_BTG_anti_proliferation_factor_1_BTG1_mRNA{1})Node10{1})Node8{1},(XM_053582943_1_PREDICTED_Nycticebus_coucang_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},(XM_008004234_3_PREDICTED_Chlorocebus_sabaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},NM_001731_3_Homo_sapiens_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_054444125_2_PREDICTED_Pongo_pygmaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},NM_001266672_1_Macaca_mulatta_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_050750080_1_PREDICTED_Macaca_thibetana_thibetana_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_033221091_1_PREDICTED_Trachypithecus_francoisi_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_032170892_2_PREDICTED_Hylobates_moloch_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_025400855_1_PREDICTED_Theropithecus_gelada_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_012031683_1_PREDICTED_Cercocebus_atys_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA{1},XM_002823578_4_PREDICTED_Pongo_abelii_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_010383938_2_PREDICTED_Rhinopithecus_roxellana_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_019038967_4_PREDICTED_Gorilla_gorilla_gorilla_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_003906945_4_PREDICTED_Papio_anubis_BTG_anti_proliferation_factor_1_BTG1_mRNA{1},XM_011933701_1_PREDICTED_Colobus_angolensis_palliatus_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA{1},XM_023223561_1_PREDICTED_Piliocolobus_tephrosceles_BTG_anti_proliferation_factor_1_BTG1_mRNA{1})Node18{1})Node16{1})
+
+----
+
+```
+|XM_055237919_2_PREDICTED_Symphalangus_syndactylus_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+|XM_069489666_1_PREDICTED_Eulemur_rufifrons_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+|XM_045553258_1_PREDICTED_Lemur_catta_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+|XM_012775241_1_PREDICTED_Microcebus_murinus_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+|XM_003783357_2_PREDICTED_Otolemur_garnettii_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+||XM_012664017_1_PREDICTED_Propithecus_coquereli_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA (1)
+|+Node8 (1)
+|| |XM_032297546_1_PREDICTED_Sapajus_apella_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+|||+Node11 (1)
+||||XM_012469349_2_PREDICTED_Aotus_nancymaae_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+||||XM_003927879_4_PREDICTED_Saimiri_boliviensis_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+||+Node10 (1)
+| |XM_002752814_4_PREDICTED_Callithrix_jacchus_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+||XM_053582943_1_PREDICTED_Nycticebus_coucang_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+|+Node16 (1)
+ ||XM_008004234_3_PREDICTED_Chlorocebus_sabaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+ ||NM_001731_3_Homo_sapiens_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+ ||XM_054444125_2_PREDICTED_Pongo_pygmaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+ ||NM_001266672_1_Macaca_mulatta_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+ ||XM_050750080_1_PREDICTED_Macaca_thibetana_thibetana_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+ ||XM_033221091_1_PREDICTED_Trachypithecus_francoisi_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+ ||XM_032170892_2_PREDICTED_Hylobates_moloch_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+ |+Node18 (1)
+  |XM_025400855_1_PREDICTED_Theropithecus_gelada_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+  |XM_012031683_1_PREDICTED_Cercocebus_atys_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA (1)
+  |XM_002823578_4_PREDICTED_Pongo_abelii_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+  |XM_010383938_2_PREDICTED_Rhinopithecus_roxellana_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+  |XM_019038967_4_PREDICTED_Gorilla_gorilla_gorilla_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+  |XM_003906945_4_PREDICTED_Papio_anubis_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+  |XM_011933701_1_PREDICTED_Colobus_angolensis_palliatus_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA (1)
+  |XM_023223561_1_PREDICTED_Piliocolobus_tephrosceles_BTG_anti_proliferation_factor_1_BTG1_mRNA (1)
+```
+
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) =  -457.11, AIC-c =  1070.59 (76 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|              Node10               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node18               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_008004234_3_PREDICTED_Chloroc...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_055237919_2_PREDICTED_Symphal...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node16               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node8               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node11               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012469349_2_PREDICTED_Aotus_n...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|NM_001731_3_Homo_sapiens_BTG_ant...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|NM_001266672_1_Macaca_mulatta_BT...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012031683_1_PREDICTED_Cercoce...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_003906945_4_PREDICTED_Papio_a...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_011933701_1_PREDICTED_Colobus...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_003927879_4_PREDICTED_Saimiri...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_050750080_1_PREDICTED_Macaca_...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_010383938_2_PREDICTED_Rhinopi...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_053582943_1_PREDICTED_Nyctice...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_002752814_4_PREDICTED_Callith...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_069489666_1_PREDICTED_Eulemur...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012775241_1_PREDICTED_Microce...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_054444125_2_PREDICTED_Pongo_p...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_019038967_4_PREDICTED_Gorilla...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_033221091_1_PREDICTED_Trachyp...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_003783357_2_PREDICTED_Otolemu...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_023223561_1_PREDICTED_Pilioco...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_032297546_1_PREDICTED_Sapajus...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012664017_1_PREDICTED_Propith...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_032170892_2_PREDICTED_Hylobat...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_025400855_1_PREDICTED_Theropi...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_045553258_1_PREDICTED_Lemur_c...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_002823578_4_PREDICTED_Pongo_a...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+----
+### Adaptive branch site random effects likelihood test 
+Likelihood ratio test for episodic diversifying positive selection at Holm-Bonferroni corrected _p =   0.0500_ found **0** branches under selection among **31** tested.
+
+
+### Annotated Tree
+(XM_055237919_2_PREDICTED_Symphalangus_syndactylus_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_069489666_1_PREDICTED_Eulemur_rufifrons_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_045553258_1_PREDICTED_Lemur_catta_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_012775241_1_PREDICTED_Microcebus_murinus_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_003783357_2_PREDICTED_Otolemur_garnettii_BTG_anti_proliferation_factor_1_BTG1_mRNA,(XM_012664017_1_PREDICTED_Propithecus_coquereli_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA,((XM_032297546_1_PREDICTED_Sapajus_apella_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_012469349_2_PREDICTED_Aotus_nancymaae_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_003927879_4_PREDICTED_Saimiri_boliviensis_BTG_anti_proliferation_factor_1_BTG1_mRNA)Node11,XM_002752814_4_PREDICTED_Callithrix_jacchus_BTG_anti_proliferation_factor_1_BTG1_mRNA)Node10)Node8,(XM_053582943_1_PREDICTED_Nycticebus_coucang_BTG_anti_proliferation_factor_1_BTG1_mRNA,(XM_008004234_3_PREDICTED_Chlorocebus_sabaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA,NM_001731_3_Homo_sapiens_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_054444125_2_PREDICTED_Pongo_pygmaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA,NM_001266672_1_Macaca_mulatta_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_050750080_1_PREDICTED_Macaca_thibetana_thibetana_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_033221091_1_PREDICTED_Trachypithecus_francoisi_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_032170892_2_PREDICTED_Hylobates_moloch_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_025400855_1_PREDICTED_Theropithecus_gelada_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_012031683_1_PREDICTED_Cercocebus_atys_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA,XM_002823578_4_PREDICTED_Pongo_abelii_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_010383938_2_PREDICTED_Rhinopithecus_roxellana_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_019038967_4_PREDICTED_Gorilla_gorilla_gorilla_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_003906945_4_PREDICTED_Papio_anubis_BTG_anti_proliferation_factor_1_BTG1_mRNA,XM_011933701_1_PREDICTED_Colobus_angolensis_palliatus_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA,XM_023223561_1_PREDICTED_Piliocolobus_tephrosceles_BTG_anti_proliferation_factor_1_BTG1_mRNA)Node18)Node16)
+
+----
+
+```
+|XM_055237919_2_PREDICTED_Symphalangus_syndactylus_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+|XM_069489666_1_PREDICTED_Eulemur_rufifrons_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+|XM_045553258_1_PREDICTED_Lemur_catta_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+|XM_012775241_1_PREDICTED_Microcebus_murinus_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+|XM_003783357_2_PREDICTED_Otolemur_garnettii_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+||XM_012664017_1_PREDICTED_Propithecus_coquereli_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA (N.S)
+|+Node8 (N.S)
+|| |XM_032297546_1_PREDICTED_Sapajus_apella_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+|||+Node11 (N.S)
+||||XM_012469349_2_PREDICTED_Aotus_nancymaae_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+||||XM_003927879_4_PREDICTED_Saimiri_boliviensis_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+||+Node10 (N.S)
+| |XM_002752814_4_PREDICTED_Callithrix_jacchus_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+||XM_053582943_1_PREDICTED_Nycticebus_coucang_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+|+Node16 (N.S)
+ ||XM_008004234_3_PREDICTED_Chlorocebus_sabaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+ ||NM_001731_3_Homo_sapiens_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+ ||XM_054444125_2_PREDICTED_Pongo_pygmaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+ ||NM_001266672_1_Macaca_mulatta_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+ ||XM_050750080_1_PREDICTED_Macaca_thibetana_thibetana_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+ ||XM_033221091_1_PREDICTED_Trachypithecus_francoisi_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+ ||XM_032170892_2_PREDICTED_Hylobates_moloch_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+ |+Node18 (N.S)
+  |XM_025400855_1_PREDICTED_Theropithecus_gelada_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+  |XM_012031683_1_PREDICTED_Cercocebus_atys_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA (N.S)
+  |XM_002823578_4_PREDICTED_Pongo_abelii_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+  |XM_010383938_2_PREDICTED_Rhinopithecus_roxellana_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+  |XM_019038967_4_PREDICTED_Gorilla_gorilla_gorilla_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+  |XM_003906945_4_PREDICTED_Papio_anubis_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+  |XM_011933701_1_PREDICTED_Colobus_angolensis_palliatus_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA (N.S)
+  |XM_023223561_1_PREDICTED_Piliocolobus_tephrosceles_BTG_anti_proliferation_factor_1_BTG1_mRNA (N.S)
+```
+
+
+

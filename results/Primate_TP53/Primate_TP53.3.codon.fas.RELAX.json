@@ -1,14 +1,30 @@
 {
+ "Evidence Ratios":{
+   "0":{
+     "By Branch":{
+      }
+    }
+  },
+ "Site Log Likelihood":{
+   "0":{
+     "constrained":      [
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] 
+      ]
+    },
+   "unconstrained":    [
+[-15.12518393230444, -4.643382973656498, -4.422967648042578, -8.926314226054933, -7.521089777516578, -4.892732204910438, -5.772105298387318, -4.581566819430623, -5.682365069055655, -7.056047269460333, -6.407407781523233, -5.184242407113136, -5.740823045600649, -10.30368933997127, -15.14539875989475, -15.16268233854405, -12.08549979697639, -15.41586665188973, -27.43846619966209, -16.92648140881807, -19.54182554783563, -6.237484026499966, -14.68876032344955, -24.31407255380953, -13.55837645318513, -13.63267078106639, -24.64316960666392, -16.02331232798876, -16.35532553447014, -16.91261040382821, -26.64185597649258, -24.21373209421347, -25.18931246667575, -9.841098485052981, -20.50346578311037, -11.17494002696832, -5.200118119968269, -36.41982716823096, -20.10423322099257, -13.29620621737363, -21.94545587001763, -33.25643622256748, -12.91615263502588, -4.879657084453451, -6.499868860237779, -22.31033345364567, -11.80239825672706, -17.71272496361961, -5.740823045600649, -27.6265897752273, -25.63233163828908, -13.24225442136092, -24.50857261776199, -15.57204902369856, -5.967470349990989, -17.80711196551578, -20.89586865668511, -35.03166434071526, -26.80138863267905, -29.49958375102946, -21.53529022726016, -28.08723356035231, -27.75335514357738, -22.26149951432233, -20.62716401209552, -20.42337638696299, -18.18238459008685, -15.81650597424128, -35.45562282484908, -30.29195226444329, -15.23313016186064, -19.42761098621219, -22.69626282008335, -5.256830969080246, -14.02172365701223, -13.77359707833243] 
+    ]
+  },
  "Synonymous site-posteriors":  [
-[0.5479680416725969, 0.2651871057097958, 0.2806702970660028, 0.4295715063104144, 0.4049459094800443, 0.2540170653250619, 0.2360627246238417, 0.2652711853816608, 0.2434544864878482, 0.2227950591407963, 0.05549286697859657, 0.08078193279233535, 0.07311515262718764, 0.1398826988213495, 0.3049481661226678, 0.2542132056244478, 0.0739033580301774, 0.3150067176018096, 0.5432724126052791, 0.3721301553433998, 0.365460690087643, 0.04765221521562692, 0.389097325488166, 0.5497474394008186, 0.1033179308367678, 0.4104617376009561, 0.5355712384575846, 0.1957665483382621, 0.3038037144752053, 0.3754821314738355, 0.5473373346543601, 0.5470732905998718, 0.5506035823347565, 0.2213913361990223, 0.26642760068757, 0.4658497532516227, 0.3139793860113004, 0.5571623501457869, 0.4993420641189461, 0.3037689292108763, 0.4312058910576232, 0.5574885688392689, 0.3664332187426651, 0.2036726898969568, 0.3468898825982641, 0.4650152828873663, 0.1509904959600814, 0.3896861795659145, 0.07311515262718764, 0.540828412379123, 0.5379369543477577, 0.0853356934886302, 0.5430606072884159, 0.3426308607599628, 0.07041962628998819, 0.4611988861876832, 0.4887920921202972, 0.5575365781911578, 0.5497641547716364, 0.5385955252388054, 0.4674523783009889, 0.5551878801355274, 0.5494881830753735, 0.4314603897067683, 0.3754126833234646, 0.5375600101647027, 0.4252809349011552, 0.1566894497994286, 0.5583565403074517, 0.5564650420764949, 0.3319221885355566, 0.5127617851086164, 0.5384248404726799, 0.05636999037830526],
-  [0.433310201099343, 0.2101271156146725, 0.2223768206070263, 0.340159268466021, 0.3207214557745917, 0.2012905450362359, 0.1870817871455827, 0.210197357911687, 0.1929327142426279, 0.1765820494199783, 0.04404323463321753, 0.06409517888902748, 0.05801602955464096, 0.11095942835306, 0.241741888322059, 0.2015994177146949, 0.05866742555083612, 0.249729053187195, 0.4300644266694233, 0.2950466151789367, 0.2897622922889528, 0.03782751434182147, 0.3083391951800084, 0.434976931788622, 0.08198684935615161, 0.3251907857506489, 0.4239388797333271, 0.1553111412974816, 0.240793417692324, 0.2976855836436483, 0.4331668730464271, 0.4329534222385354, 0.4356023128987561, 0.1755314388110585, 0.2112519536811135, 0.3687721067459929, 0.2487251765853548, 0.4405320438866066, 0.3955834204822989, 0.2407386498115262, 0.3416835064193923, 0.4408243330557474, 0.2903990485217793, 0.1614503342087519, 0.2748587478418812, 0.3683879351124121, 0.1197739743863361, 0.3087811393612203, 0.05801602955464096, 0.4279913749811005, 0.4259394574416336, 0.06772533489088288, 0.4297856380779732, 0.2715905187604609, 0.05588001520025632, 0.3653943829572482, 0.3871249390113628, 0.440706580341893, 0.4349856369035535, 0.4264804687692429, 0.3703206904203468, 0.4391043483108444, 0.4349397689109564, 0.3419132262770621, 0.2974932849280406, 0.425488952962984, 0.3370377954634646, 0.124331141163433, 0.4411267242136065, 0.4401059032581164, 0.2631141474752357, 0.4061201244769422, 0.4263170991329553, 0.04474065313477122],
-  [0.01872175722805997, 0.5246857786755318, 0.4969528823269709, 0.2302692252235647, 0.2743326347453641, 0.5446923896387024, 0.5768554882305756, 0.5245314567066522, 0.563612799269524, 0.6006228914392255, 0.9004638983881859, 0.8551228883186371, 0.8688688178181714, 0.7491578728255904, 0.4533099455552732, 0.5441873766608574, 0.8674292164189864, 0.4352642292109956, 0.02666316072529728, 0.3328232294776635, 0.344777017623404, 0.9145202704425518, 0.3025634793318255, 0.01527562881055925, 0.8146952198070806, 0.2643474766483951, 0.04048988180908818, 0.6489223103642563, 0.4554028678324707, 0.3268322848825162, 0.01949579229921293, 0.01997328716159284, 0.0137941047664873, 0.6030772249899192, 0.5223204456313165, 0.1653781400023842, 0.4372954374033448, 0.002305605967606413, 0.1050745153987549, 0.4554924209775976, 0.2271106025229844, 0.001687098104983632, 0.3431677327355556, 0.6348769758942913, 0.3782513695598548, 0.1665967820002215, 0.7292355296535824, 0.3015326810728651, 0.8688688178181714, 0.03118021263977647, 0.03612358821060881, 0.8469389716204868, 0.02715375463361091, 0.3857786204795762, 0.8737003585097555, 0.1734067308550685, 0.1240829688683399, 0.001756841466949066, 0.01525020832480992, 0.03492400599195174, 0.1622269312786644, 0.005707771553628073, 0.01557204801367002, 0.2266263840161697, 0.3270940317484948, 0.03695103687231345, 0.23768126963538, 0.7189794090371383, 0.0005167354789417816, 0.00342905466538871, 0.4049636639892076, 0.08111809041444132, 0.03525806039436486, 0.8988893564869236] 
+[0.02283968939884883, 0.5143075729629966, 0.483257898034913, 0.2415941928649248, 0.2771821615993146, 0.5248724979477636, 0.5578132960156412, 0.5134474870548429, 0.544864488445432, 0.5825561237012619, 0.8765232968043306, 0.8311434746307786, 0.8418306277594563, 0.7285960291885912, 0.4582375453691626, 0.5712296373766441, 0.8411311799664162, 0.4284077297766885, 0.03144940834820417, 0.3410995217938516, 0.353094404702674, 0.878897649494963, 0.3203310206416959, 0.01902753813731805, 0.7973380349560241, 0.2883735877390214, 0.0529904325724881, 0.643087390769754, 0.4855628221813147, 0.3450828952033018, 0.02401784640879013, 0.02573362265767933, 0.01832246660891892, 0.5897122490139576, 0.5420555518328694, 0.1737395194283317, 0.4327448154701771, 0.003424383035976666, 0.1224547453775765, 0.4781932660281065, 0.2413222438522916, 0.002694429379965634, 0.3634009372578501, 0.6083847670510717, 0.3716860363308296, 0.1964416973402143, 0.7073766139006149, 0.3329011653847035, 0.8418306277594563, 0.04020176758939441, 0.0427816721347049, 0.8281437317542669, 0.0381011951807377, 0.3910784520023979, 0.8432906084570937, 0.2002410505015175, 0.1408899378240062, 0.002486854089960536, 0.01912655850530454, 0.04537714039149778, 0.1713662072344332, 0.007390455129829506, 0.02095896802638957, 0.2381804979801506, 0.3369667658675833, 0.0442009674382826, 0.2633645751204015, 0.712552345866421, 0.00081683798052156, 0.005033398887542476, 0.3995156012636815, 0.09368297856253589, 0.04360951689315051, 0.8672705580578252, 0.3433146673895802, 0.2991923798428227],
+  [0.000596740136497879, 0.01463962203191061, 0.01373292430549586, 0.006688917517345163, 0.007691269846966252, 0.01494708589802308, 0.01591239126803681, 0.01461062076438359, 0.01553249717652462, 0.01663991313854505, 0.02564549093466411, 0.02416343038008467, 0.02451499523360995, 0.02078727490469501, 0.01271822225002232, 0.01591919884292954, 0.02417008204307378, 0.01184779652751562, 0.000805119925646016, 0.009263036334739553, 0.009601058788039504, 0.02570275597374155, 0.008797193655573066, 0.000484151502273818, 0.02283855390962069, 0.007917414360105068, 0.001383079184055437, 0.01798199635854752, 0.01354760163009881, 0.009380570382423811, 0.0006128152410297598, 0.0006573992724208613, 0.0004662677741324436, 0.01666295582721398, 0.01511200347742257, 0.004783769357628301, 0.01226173364646874, 8.313471944776095e-05, 0.003233906203912758, 0.01342357277013031, 0.006533045889040326, 6.449755730746258e-05, 0.01001899622248686, 0.01739495168945615, 0.01036442221150444, 0.005292610526539056, 0.02010912407696487, 0.009161794551932598, 0.02451499523360995, 0.001046110176583973, 0.001099988103427953, 0.02381887427675783, 0.0009830741084617214, 0.0107879612619596, 0.02455515536375079, 0.005392398152720079, 0.003774866852758799, 6.019283237186885e-05, 0.0004867833387930704, 0.00116606326402294, 0.00460514102369772, 0.000183526375163449, 0.0005276276298293972, 0.006434744288331811, 0.009278891938379861, 0.001150242952544093, 0.007125937388028251, 0.0200361959748514, 1.923407658613417e-05, 0.0001228882607147779, 0.01103164196535589, 0.002464556688095219, 0.001121118574479499, 0.0253215562822861, 0.009445386683206174, 0.008212414192447745],
+  [0.9765635704646534, 0.4710528050050929, 0.5030091776595911, 0.7517168896177301, 0.7151265685537191, 0.4601804161542134, 0.4262743127163219, 0.4719418921807735, 0.4396030143780432, 0.4008039631601929, 0.09783121226100525, 0.1446930949891367, 0.1336543770069338, 0.2506166959067138, 0.5290442323808151, 0.4128511637804261, 0.1346987379905101, 0.5597444736957957, 0.9677454717261499, 0.6496374418714087, 0.6373045365092864, 0.0953995945312955, 0.6708717857027309, 0.9804883103604081, 0.1798234111343552, 0.7037089979008735, 0.9456264882434564, 0.3389306128716986, 0.5008895761885864, 0.6455365344142744, 0.9753693383501801, 0.9736089780698999, 0.9812112656169485, 0.3936247951588286, 0.4428324446897081, 0.8214767112140401, 0.5549934508833542, 0.9964924822445757, 0.8743113484185109, 0.5083831612017633, 0.7521447102586681, 0.9972410730627269, 0.6265800665196632, 0.3742202812594723, 0.6179495414576659, 0.7982656921332467, 0.2725142620224202, 0.6579370400633637, 0.1336543770069338, 0.9587521222340216, 0.9561183397618672, 0.1480373939689753, 0.9609157307108006, 0.5981335867356425, 0.1321542361791554, 0.7943665513457625, 0.8553351953232351, 0.9974529530776676, 0.9803866581559024, 0.9534567963444792, 0.824028651741869, 0.992426018495007, 0.978513404343781, 0.7553847577315176, 0.6537543421940367, 0.9546487896091732, 0.7295094874915704, 0.2674114581587274, 0.9991639279428924, 0.9948437128517427, 0.5894527567709626, 0.9038524647493688, 0.9552693645323701, 0.1074078856598887, 0.6472399459272136, 0.6925952059647297] 
   ],
  "analysis":{
    "authors":"Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM / UCSD viral evolution g",
    "citation":"RELAX: Detecting Relaxed Selection in a Phylogenetic Framework (2015). Mol Biol Evol 32 (3): 820-832",
    "contact":"spond@temple.edu",
-   "info":"RELAX (a random effects test of selection relaxation) uses a random effects branch-site model framework to test whether a set of 'Test' branches evolves under relaxed selection relative to a set of 'Reference' branches (R), as measured by the relaxation parameter (K).\n                                                Version 2.1 adds a check for stability in K estimates to try to mitigate convergence problems. \n                                                Version 3 provides support for >2 branch sets.\n                                                Version 3.1 adds LHC + Nedler-Mead initial fit phase and keyword support.\n                                                Version 3.1.1 adds some bug fixes for better convergence.\n                                                Version 4.0 adds support for synonymous rate variation.\n                                                Version 4.1 adds further support for multiple hit models.\n                                                Version 4.1.1 adds reporting for convergence diagnostics.\n                                                Version 4.5 adds support for multiple datasets for joint testing.",
+   "info":"RELAX (a random effects test of selection relaxation) uses a random effects branch-site model framework to test whether a set of 'Test' branches evolves under relaxed selection relative to a set of 'Reference' branches (R), as measured by the relaxation parameter (K).\n                                                Version 2.1 adds a check for stability in K estimates to try to mitigate convergence problems. \n                                                Version 3 provides support for >2 branch sets.\n                                                Version 3.1 adds LHC + Nedler-Mead initial fit phase and keyword support.\n                                                Version 3.1.1 adds some bug fixes for better convergence.\n                                                Version 4.0 adds support for synonymous rate variation.\n                                                Version 4.1 adds further support for multiple hit models.\n                                                Version 4.1.1 adds reporting for convergence diagnostics.\n                                                Version 4.5 adds support for multiple datasets for joint testing.\n                                                Version 4.6 adds support for branch- and site-level evidence ratio calculation.",
    "requirements":"in-frame codon alignment and a phylogenetic tree, with at least two groups of branches defined using the {} notation (one group can be defined as all unlabeled branches)",
    "settings":{
     },
@@ -17,532 +33,532 @@
  "branch attributes":{
    "0":{
      "NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA":{
-       "General descriptive":2.223085094663609e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":7.213348159770287e-17,
-       "RELAX null":4.676759479450651e-17,
-       "RELAX partitioned descriptive":2.648707693282871e-17,
-       "k (general descriptive)":0.5179613590729173,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2868258411617828,
        "original name":"NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA"
       },
      "NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA":{
-       "General descriptive":2.154348524092865e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":8.602530172201226e-17,
-       "RELAX null":4.954041411503473e-17,
-       "RELAX partitioned descriptive":9.138445223285794e-18,
-       "k (general descriptive)":0.5171691250016658,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.6370602355890539,
        "original name":"NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA"
       },
      "Node10":{
-       "General descriptive":0.005057042763334015,
-       "MG94xREV with separate rates for branch sets":0.005175146990065506,
-       "Nucleotide GTR":0.004894374451361615,
-       "RELAX alternative":0.005435260592690536,
-       "RELAX null":0.005449080198769193,
-       "RELAX partitioned descriptive":0.005459209209378992,
-       "k (general descriptive)":2.863654147614266
+       "General descriptive":0.005038314926057899,
+       "MG94xREV with separate rates for branch sets":0.005014663342061002,
+       "Nucleotide GTR":0.004770990973500452,
+       "RELAX alternative":0.005249632614086878,
+       "RELAX null":0.005270957323439874,
+       "RELAX partitioned descriptive":0.005279118255154925,
+       "k (general descriptive)":3.190452870228917
       },
      "Node11":{
-       "General descriptive":0.02748560295241718,
-       "MG94xREV with separate rates for branch sets":0.02812035312441684,
-       "Nucleotide GTR":0.02798472138414158,
-       "RELAX alternative":0.02781054287290352,
-       "RELAX null":0.02749228853025306,
-       "RELAX partitioned descriptive":0.02796036185893988,
-       "k (general descriptive)":0
+       "General descriptive":0.02789238203860669,
+       "MG94xREV with separate rates for branch sets":0.02717456729762961,
+       "Nucleotide GTR":0.02710039486010627,
+       "RELAX alternative":0.02691572049931412,
+       "RELAX null":0.02657347731353219,
+       "RELAX partitioned descriptive":0.02708610362661606,
+       "k (general descriptive)":1.389003793391583
       },
      "Node16":{
-       "General descriptive":0.02203608053292407,
-       "MG94xREV with separate rates for branch sets":0.02194070240019538,
-       "Nucleotide GTR":0.02132648462787987,
-       "RELAX alternative":0.02239859739707828,
-       "RELAX null":0.02275222795360437,
-       "RELAX partitioned descriptive":0.02228360975231848,
-       "k (general descriptive)":0.02273888194817946
+       "General descriptive":0.02209604292585932,
+       "MG94xREV with separate rates for branch sets":0.02131765409544191,
+       "Nucleotide GTR":0.02066054634242298,
+       "RELAX alternative":0.0218299783448121,
+       "RELAX null":0.02208818092759797,
+       "RELAX partitioned descriptive":0.02166347265355776,
+       "k (general descriptive)":0.6377753312695574
       },
      "Node2":{
-       "General descriptive":0.005614911177739217,
-       "MG94xREV with separate rates for branch sets":0.005504887250638913,
-       "Nucleotide GTR":0.005407559534160897,
-       "RELAX alternative":0.005512519854155827,
-       "RELAX null":0.005558817909131848,
-       "RELAX partitioned descriptive":0.005491371698278077,
-       "k (general descriptive)":0.1169402476698183
+       "General descriptive":0.005424289207556431,
+       "MG94xREV with separate rates for branch sets":0.005331245479691956,
+       "Nucleotide GTR":0.005247138114135809,
+       "RELAX alternative":0.005362910835051674,
+       "RELAX null":0.005396859594751548,
+       "RELAX partitioned descriptive":0.005334508628548717,
+       "k (general descriptive)":0.1956619782557502
       },
      "Node20":{
-       "General descriptive":0.005441765548176948,
-       "MG94xREV with separate rates for branch sets":0.00527918530852484,
-       "Nucleotide GTR":0.005153236524054016,
-       "RELAX alternative":0.005344564306301878,
-       "RELAX null":0.005379769529676119,
-       "RELAX partitioned descriptive":0.005329896965806869,
-       "k (general descriptive)":0.1169084709386084
+       "General descriptive":0.005250389753616747,
+       "MG94xREV with separate rates for branch sets":0.005114897712257498,
+       "Nucleotide GTR":0.004997354958895841,
+       "RELAX alternative":0.005198102244284898,
+       "RELAX null":0.005214889827437837,
+       "RELAX partitioned descriptive":0.005178015772873165,
+       "k (general descriptive)":0.1955760696373171
       },
      "Node24":{
-       "General descriptive":0.03435437773014071,
-       "MG94xREV with separate rates for branch sets":0.03460693966652739,
-       "Nucleotide GTR":0.03341094617662816,
-       "RELAX alternative":0.0346246510437676,
-       "RELAX null":0.03422984920458643,
-       "RELAX partitioned descriptive":0.03495418134398476,
-       "k (general descriptive)":0
+       "General descriptive":0.03141917853174449,
+       "MG94xREV with separate rates for branch sets":0.0335219532130228,
+       "Nucleotide GTR":0.03233163654137931,
+       "RELAX alternative":0.03342648416096677,
+       "RELAX null":0.03320076980694237,
+       "RELAX partitioned descriptive":0.03391362778815932,
+       "k (general descriptive)":1.508111728806768
       },
      "Node27":{
-       "General descriptive":0.05209404759178518,
-       "MG94xREV with separate rates for branch sets":0.0499352674613629,
-       "Nucleotide GTR":0.04943770879516988,
-       "RELAX alternative":0.05814007520861496,
-       "RELAX null":0.05564244326813741,
-       "RELAX partitioned descriptive":0.05943442049991436,
-       "k (general descriptive)":0.006989642747387178
+       "General descriptive":0.05496645781320485,
+       "MG94xREV with separate rates for branch sets":0.04833787917976162,
+       "Nucleotide GTR":0.04816902168728031,
+       "RELAX alternative":0.05470315555320654,
+       "RELAX null":0.05302492240525175,
+       "RELAX partitioned descriptive":0.05642627334030849,
+       "k (general descriptive)":1.139232943672089
       },
      "Node28":{
-       "General descriptive":0.1642062571727134,
-       "MG94xREV with separate rates for branch sets":0.08920731839538266,
-       "Nucleotide GTR":0.08864111046432382,
-       "RELAX alternative":0.09452115615430354,
-       "RELAX null":0.0996230060072848,
-       "RELAX partitioned descriptive":0.09264660960755018,
-       "k (general descriptive)":1.66275173309825
+       "General descriptive":0.1276596240199975,
+       "MG94xREV with separate rates for branch sets":0.0863047318050794,
+       "Nucleotide GTR":0.08553945402271987,
+       "RELAX alternative":0.09178747920195524,
+       "RELAX null":0.09556843871270194,
+       "RELAX partitioned descriptive":0.08947608126525278,
+       "k (general descriptive)":1.529231931284142
       },
      "Node3":{
-       "General descriptive":0.005614557718143592,
-       "MG94xREV with separate rates for branch sets":0.005504575580364082,
-       "Nucleotide GTR":0.005410544762612046,
-       "RELAX alternative":0.00551160326149024,
-       "RELAX null":0.005554389034841202,
-       "RELAX partitioned descriptive":0.005490512607406002,
-       "k (general descriptive)":0.1169252420604931
+       "General descriptive":0.005433170024846577,
+       "MG94xREV with separate rates for branch sets":0.005332945390071783,
+       "Nucleotide GTR":0.005249224164364339,
+       "RELAX alternative":0.005347270239352545,
+       "RELAX null":0.005387300110610219,
+       "RELAX partitioned descriptive":0.005337209098236631,
+       "k (general descriptive)":0.1956122059376906
       },
      "Node30":{
-       "General descriptive":0.01540077912649577,
-       "MG94xREV with separate rates for branch sets":0.01541218848489112,
-       "Nucleotide GTR":0.01536686249763601,
-       "RELAX alternative":0.01553535573176056,
-       "RELAX null":0.01582123695935234,
-       "RELAX partitioned descriptive":0.01540534637528816,
-       "k (general descriptive)":0.2712179322476991
+       "General descriptive":0.01094772716437363,
+       "MG94xREV with separate rates for branch sets":0.0144190279162048,
+       "Nucleotide GTR":0.01491313671417856,
+       "RELAX alternative":0.01419756941576123,
+       "RELAX null":0.01465384283237225,
+       "RELAX partitioned descriptive":0.01453948629697785,
+       "k (general descriptive)":0.210500683396696
       },
      "Node34":{
-       "General descriptive":0.03259691380149024,
-       "MG94xREV with separate rates for branch sets":0.03231165897667376,
-       "Nucleotide GTR":0.03182861284958188,
-       "RELAX alternative":0.03308648933066093,
-       "RELAX null":0.03328863434843696,
-       "RELAX partitioned descriptive":0.03301504147812907,
-       "k (general descriptive)":0.01586613191608102
+       "General descriptive":0.03321364534634527,
+       "MG94xREV with separate rates for branch sets":0.03147326798051697,
+       "Nucleotide GTR":0.03092353493369663,
+       "RELAX alternative":0.0321186499499409,
+       "RELAX null":0.03235590741236957,
+       "RELAX partitioned descriptive":0.03213396785063465,
+       "k (general descriptive)":0.7608011652075456
       },
      "Node37":{
-       "General descriptive":0.09980944926181662,
-       "MG94xREV with separate rates for branch sets":0.07268127394025586,
-       "Nucleotide GTR":0.06780674027471989,
-       "RELAX alternative":0.09044152498939036,
-       "RELAX null":0.08641200219856869,
-       "RELAX partitioned descriptive":0.09066060583666194,
-       "k (general descriptive)":1.031505396708552
+       "General descriptive":0.1140501686511746,
+       "MG94xREV with separate rates for branch sets":0.08033014423060843,
+       "Nucleotide GTR":0.07504735933077421,
+       "RELAX alternative":0.1006215803699815,
+       "RELAX null":0.09540096290557215,
+       "RELAX partitioned descriptive":0.1002100953719916,
+       "k (general descriptive)":1.087981381206431
       },
      "Node39":{
-       "General descriptive":0.02076487281319619,
-       "MG94xREV with separate rates for branch sets":0.01694259848133704,
-       "Nucleotide GTR":0.01509933332388433,
-       "RELAX alternative":0.01756511525006128,
-       "RELAX null":0.01726543722981204,
-       "RELAX partitioned descriptive":0.01696071328196514,
-       "k (general descriptive)":0.1196628800524884
+       "General descriptive":0.02396979684107841,
+       "MG94xREV with separate rates for branch sets":0.016079140449304,
+       "Nucleotide GTR":0.01442542559358068,
+       "RELAX alternative":0.01687185909040649,
+       "RELAX null":0.01640548007511538,
+       "RELAX partitioned descriptive":0.01619705623547269,
+       "k (general descriptive)":0.2012467288950396
       },
      "Node40":{
-       "General descriptive":0.09272562952422177,
-       "MG94xREV with separate rates for branch sets":0.0774051147906037,
-       "Nucleotide GTR":0.07703656749316806,
-       "RELAX alternative":0.09424995916194615,
-       "RELAX null":0.08643047032067924,
-       "RELAX partitioned descriptive":0.09356318952369989,
-       "k (general descriptive)":0.8376210142986966
+       "General descriptive":0.09449477352091232,
+       "MG94xREV with separate rates for branch sets":0.07795772427967752,
+       "Nucleotide GTR":0.0779670856852646,
+       "RELAX alternative":0.09386429936413324,
+       "RELAX null":0.08606437674413353,
+       "RELAX partitioned descriptive":0.09314164934684188,
+       "k (general descriptive)":0.8887687457909813
       },
      "Node43":{
-       "General descriptive":0.07472267931622666,
-       "MG94xREV with separate rates for branch sets":0.06826614158595673,
-       "Nucleotide GTR":0.0680275099705971,
-       "RELAX alternative":0.07528166856822707,
-       "RELAX null":0.07343148826520372,
-       "RELAX partitioned descriptive":0.07498647993215775,
-       "k (general descriptive)":1.075394593311007
+       "General descriptive":0.07384131063135697,
+       "MG94xREV with separate rates for branch sets":0.06901807873927968,
+       "Nucleotide GTR":0.06784061751386092,
+       "RELAX alternative":0.07634235075634417,
+       "RELAX null":0.07443174545807141,
+       "RELAX partitioned descriptive":0.07583215303623195,
+       "k (general descriptive)":1.144508908358239
       },
      "Node45":{
-       "General descriptive":0.01322249032676926,
-       "MG94xREV with separate rates for branch sets":0.01227867760931524,
-       "Nucleotide GTR":0.01170774513835619,
-       "RELAX alternative":0.01196251533057314,
-       "RELAX null":0.01282413010167836,
-       "RELAX partitioned descriptive":0.01202492047147928,
-       "k (general descriptive)":3.016707329129306
+       "General descriptive":0.01207669693835192,
+       "MG94xREV with separate rates for branch sets":0.01232495797483178,
+       "Nucleotide GTR":0.01167644413959793,
+       "RELAX alternative":0.01210746112476221,
+       "RELAX null":0.01295402130737642,
+       "RELAX partitioned descriptive":0.01218730719466436,
+       "k (general descriptive)":3.04785476229856
       },
      "Node47":{
-       "General descriptive":0.01095261136576774,
-       "MG94xREV with separate rates for branch sets":0.008614828255772691,
-       "Nucleotide GTR":0.01019420477171309,
-       "RELAX alternative":0.006835382160999136,
-       "RELAX null":0.00633441759934491,
-       "RELAX partitioned descriptive":0.007049578064469807,
-       "k (general descriptive)":0.1178495974122671
+       "General descriptive":0.01104365054332957,
+       "MG94xREV with separate rates for branch sets":0.008754282045513815,
+       "Nucleotide GTR":0.01020963669208247,
+       "RELAX alternative":0.007110517626846127,
+       "RELAX null":0.006638221374564536,
+       "RELAX partitioned descriptive":0.007289527610554718,
+       "k (general descriptive)":0.1978096566142358
       },
      "Node50":{
-       "General descriptive":0.01766759629666773,
-       "MG94xREV with separate rates for branch sets":0.01678337262735755,
-       "Nucleotide GTR":0.016362669386735,
-       "RELAX alternative":0.01705392026421293,
-       "RELAX null":0.01751549389776314,
-       "RELAX partitioned descriptive":0.01684220156788583,
-       "k (general descriptive)":0.1191649863635915
+       "General descriptive":0.01702659226559502,
+       "MG94xREV with separate rates for branch sets":0.01624689835602283,
+       "Nucleotide GTR":0.0158599527750323,
+       "RELAX alternative":0.01656160560783495,
+       "RELAX null":0.01693083060521137,
+       "RELAX partitioned descriptive":0.01631834679258766,
+       "k (general descriptive)":0.2000756439061597
       },
      "Node51":{
-       "General descriptive":0.005582626028784386,
-       "MG94xREV with separate rates for branch sets":0.005512168663400957,
-       "Nucleotide GTR":0.005392482187124973,
-       "RELAX alternative":0.005481108043588815,
-       "RELAX null":0.005464553489521947,
-       "RELAX partitioned descriptive":0.005498635089036798,
-       "k (general descriptive)":2.866644548153208
+       "General descriptive":0.005374321216156758,
+       "MG94xREV with separate rates for branch sets":0.005336593704227129,
+       "Nucleotide GTR":0.005230354635591052,
+       "RELAX alternative":0.00531980582514008,
+       "RELAX null":0.005304395770538861,
+       "RELAX partitioned descriptive":0.005333604195012181,
+       "k (general descriptive)":3.261790014453338
       },
      "Node59":{
-       "General descriptive":0.005629596606819956,
-       "MG94xREV with separate rates for branch sets":0.005517730652775984,
-       "Nucleotide GTR":0.005403571001291541,
-       "RELAX alternative":0.005525136000344009,
-       "RELAX null":0.0055692714871504,
-       "RELAX partitioned descriptive":0.005506229381593554,
-       "k (general descriptive)":0.1169274116790815
+       "General descriptive":0.005436975686727714,
+       "MG94xREV with separate rates for branch sets":0.005335701294905972,
+       "Nucleotide GTR":0.005234024602348323,
+       "RELAX alternative":0.005351499084925911,
+       "RELAX null":0.005395429882692626,
+       "RELAX partitioned descriptive":0.005339733460833341,
+       "k (general descriptive)":0.1956128173314635
       },
      "Node9":{
-       "General descriptive":0.0243980487850245,
-       "MG94xREV with separate rates for branch sets":0.02612441012250394,
-       "Nucleotide GTR":0.02656844794811113,
-       "RELAX alternative":0.02612235341427983,
-       "RELAX null":0.02599801897241218,
-       "RELAX partitioned descriptive":0.02629146851810841,
-       "k (general descriptive)":0
+       "General descriptive":0.02381291069634802,
+       "MG94xREV with separate rates for branch sets":0.02535937401967357,
+       "Nucleotide GTR":0.02577850804783493,
+       "RELAX alternative":0.02552618536183054,
+       "RELAX null":0.02537426603401884,
+       "RELAX partitioned descriptive":0.02565156464245198,
+       "k (general descriptive)":1.324721908906805
       },
      "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":0.03243201426204716,
-       "MG94xREV with separate rates for branch sets":0.03284148146675107,
-       "Nucleotide GTR":0.03204426452407484,
-       "RELAX alternative":0.03279592950236118,
-       "RELAX null":0.0324084955581519,
-       "RELAX partitioned descriptive":0.03301221642010033,
-       "k (general descriptive)":0.001532676652764765,
+       "General descriptive":0.03110279546181428,
+       "MG94xREV with separate rates for branch sets":0.03183731413388378,
+       "Nucleotide GTR":0.031078680045495,
+       "RELAX alternative":0.03182134302973886,
+       "RELAX null":0.03141254235411287,
+       "RELAX partitioned descriptive":0.03203728710167664,
+       "k (general descriptive)":0.9683710788799698,
        "original name":"XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA":{
-       "General descriptive":0.005643004077337474,
-       "MG94xREV with separate rates for branch sets":0.005485367876936123,
-       "Nucleotide GTR":0.005401517958685895,
-       "RELAX alternative":0.005464727768863273,
-       "RELAX null":0.005464660414729817,
-       "RELAX partitioned descriptive":0.005486858262778619,
-       "k (general descriptive)":2.886437618345226,
+       "General descriptive":0.005417530117041358,
+       "MG94xREV with separate rates for branch sets":0.005310556137214564,
+       "Nucleotide GTR":0.005230756907296349,
+       "RELAX alternative":0.005309154771528383,
+       "RELAX null":0.005300452984308386,
+       "RELAX partitioned descriptive":0.005317427184276155,
+       "k (general descriptive)":3.305122601116225,
        "original name":"XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA"
       },
      "XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA":{
-       "General descriptive":2.236039117125761e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":7.346666055500512e-17,
-       "RELAX null":3.958598136507254e-17,
-       "RELAX partitioned descriptive":5.451751671685573e-18,
-       "k (general descriptive)":0.5148938991821236,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.641661500957369,
        "original name":"XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA"
       },
      "XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":0.02194505990276902,
-       "MG94xREV with separate rates for branch sets":0.02139358257032714,
-       "Nucleotide GTR":0.02110002866683377,
-       "RELAX alternative":0.02181108643843015,
-       "RELAX null":0.0226041223350201,
-       "RELAX partitioned descriptive":0.02144617703551373,
-       "k (general descriptive)":0.1200881849495543,
+       "General descriptive":0.02153745342251802,
+       "MG94xREV with separate rates for branch sets":0.02080470530746289,
+       "Nucleotide GTR":0.02047422058888083,
+       "RELAX alternative":0.02129842199926244,
+       "RELAX null":0.02190243997236867,
+       "RELAX partitioned descriptive":0.02086576314343454,
+       "k (general descriptive)":0.2018594718790405,
        "original name":"XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":{
-       "General descriptive":0.08363343554134894,
-       "MG94xREV with separate rates for branch sets":0.08106821220636701,
-       "Nucleotide GTR":0.08222669667885071,
-       "RELAX alternative":0.08414428623027705,
-       "RELAX null":0.08334012372325113,
-       "RELAX partitioned descriptive":0.08338932783774396,
-       "k (general descriptive)":0.0236339928857726,
+       "General descriptive":0.09379715638758157,
+       "MG94xREV with separate rates for branch sets":0.09186843954735198,
+       "Nucleotide GTR":0.09313219784367001,
+       "RELAX alternative":0.09667500095753424,
+       "RELAX null":0.09741430260867087,
+       "RELAX partitioned descriptive":0.09474729546620403,
+       "k (general descriptive)":0.0566144841783315,
        "original name":"XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA"
       },
      "XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA":{
-       "General descriptive":4.832264638103139e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":1.95570746261366e-16,
-       "RELAX null":1.371553333643898e-16,
-       "RELAX partitioned descriptive":7.195363333906797e-17,
-       "k (general descriptive)":0.5179599883434791,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.6370602355890539,
        "original name":"XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA"
       },
      "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":0.005625586979473561,
-       "MG94xREV with separate rates for branch sets":0.005514879110457991,
-       "Nucleotide GTR":0.005402694399038043,
-       "RELAX alternative":0.005524328260569243,
-       "RELAX null":0.005569558129013339,
-       "RELAX partitioned descriptive":0.005503904672596308,
-       "k (general descriptive)":0.1169266044173138,
+       "General descriptive":0.005437468679396059,
+       "MG94xREV with separate rates for branch sets":0.005335197933108157,
+       "Nucleotide GTR":0.005241831564030474,
+       "RELAX alternative":0.005355115794571632,
+       "RELAX null":0.005402329388531179,
+       "RELAX partitioned descriptive":0.005344509871440232,
+       "k (general descriptive)":0.1956129489580075,
        "original name":"XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":2.143250531299275e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":8.602530172201226e-17,
-       "RELAX null":4.954041411503473e-17,
-       "RELAX partitioned descriptive":9.138445223285794e-18,
-       "k (general descriptive)":0.511114820054973,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.6370602355890539,
        "original name":"XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":4.729008313647671e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":1.824447246552643e-16,
-       "RELAX null":1.255448320932072e-16,
-       "RELAX partitioned descriptive":4.707130455939026e-17,
-       "k (general descriptive)":0.5124564052074654,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2868258411617828,
        "original name":"XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA":{
-       "General descriptive":0.2676438774750245,
-       "MG94xREV with separate rates for branch sets":0.06110490578931649,
-       "Nucleotide GTR":0.06242759473641427,
-       "RELAX alternative":0.07153755398398005,
-       "RELAX null":0.0663668435731352,
-       "RELAX partitioned descriptive":0.07069784818013343,
-       "k (general descriptive)":4.108904536921655,
+       "General descriptive":0.2805389384624403,
+       "MG94xREV with separate rates for branch sets":0.06129199541804894,
+       "Nucleotide GTR":0.06235276397493885,
+       "RELAX alternative":0.07158273783494232,
+       "RELAX null":0.06653709727308565,
+       "RELAX partitioned descriptive":0.07076958693432456,
+       "k (general descriptive)":4.451934370113164,
        "original name":"XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA"
       },
      "XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":0.1096628430997547,
-       "MG94xREV with separate rates for branch sets":0.06286821595682286,
-       "Nucleotide GTR":0.06324121710054105,
-       "RELAX alternative":0.06925602162606144,
-       "RELAX null":0.0663772290243099,
-       "RELAX partitioned descriptive":0.06901288115525855,
-       "k (general descriptive)":1.75160849440756,
+       "General descriptive":0.1076672025308449,
+       "MG94xREV with separate rates for branch sets":0.06318169194529213,
+       "Nucleotide GTR":0.06316102248252212,
+       "RELAX alternative":0.06996028096812552,
+       "RELAX null":0.06676539263619771,
+       "RELAX partitioned descriptive":0.06965606950426111,
+       "k (general descriptive)":1.82124108014403,
        "original name":"XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA":{
-       "General descriptive":0.02681166509172792,
-       "MG94xREV with separate rates for branch sets":0.02524330656963054,
-       "Nucleotide GTR":0.02390367652797054,
-       "RELAX alternative":0.02558778517908108,
-       "RELAX null":0.02552192704399317,
-       "RELAX partitioned descriptive":0.02554619112182758,
-       "k (general descriptive)":0.003481371579977982,
+       "General descriptive":0.02818470209695277,
+       "MG94xREV with separate rates for branch sets":0.02403194664481509,
+       "Nucleotide GTR":0.02293287503182913,
+       "RELAX alternative":0.02435243406909994,
+       "RELAX null":0.02428453269350232,
+       "RELAX partitioned descriptive":0.02429565034462279,
+       "k (general descriptive)":0.8260118525565258,
        "original name":"XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA"
       },
      "XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":2.147389985207094e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":8.634622029784284e-17,
-       "RELAX null":4.979894098711246e-17,
-       "RELAX partitioned descriptive":2.859654151293059e-17,
-       "k (general descriptive)":0.514219131751191,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.6370602355890539,
        "original name":"XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":0.02184225679463278,
-       "MG94xREV with separate rates for branch sets":0.02090824545887042,
-       "Nucleotide GTR":0.02064015386114666,
-       "RELAX alternative":0.02097399289285519,
-       "RELAX null":0.02134897157367405,
-       "RELAX partitioned descriptive":0.02075931338804332,
-       "k (general descriptive)":0.1048340511478312,
+       "General descriptive":0.02101584865847821,
+       "MG94xREV with separate rates for branch sets":0.02024414875558325,
+       "Nucleotide GTR":0.01996782994086417,
+       "RELAX alternative":0.02030372283118649,
+       "RELAX null":0.02066429051817832,
+       "RELAX partitioned descriptive":0.02010238990016272,
+       "k (general descriptive)":0.1962059349341028,
        "original name":"XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":2.239423849319718e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":7.857343319137369e-17,
-       "RELAX null":5.23076087833008e-17,
-       "RELAX partitioned descriptive":3.035286941368822e-17,
-       "k (general descriptive)":0.5179610889718822,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2781738845737187,
        "original name":"XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":0.01105951666049727,
-       "MG94xREV with separate rates for branch sets":0.01105481711619184,
-       "Nucleotide GTR":0.01084660861228441,
-       "RELAX alternative":0.01104033469955997,
-       "RELAX null":0.01107862417082928,
-       "RELAX partitioned descriptive":0.01103826397068933,
-       "k (general descriptive)":0.02361881284332009,
+       "General descriptive":0.01072526799004219,
+       "MG94xREV with separate rates for branch sets":0.01070570379932628,
+       "Nucleotide GTR":0.01052257726423082,
+       "RELAX alternative":0.01071524338781572,
+       "RELAX null":0.0107295214878449,
+       "RELAX partitioned descriptive":0.0107180544730562,
+       "k (general descriptive)":0.5888522994472439,
        "original name":"XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":2.143345626684332e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":8.602530172201226e-17,
-       "RELAX null":4.954041411503473e-17,
-       "RELAX partitioned descriptive":9.138445223285794e-18,
-       "k (general descriptive)":0.5111148216857503,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2868258411617828,
        "original name":"XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA":{
-       "General descriptive":0.005689147604433072,
-       "MG94xREV with separate rates for branch sets":0.005514257596607432,
-       "Nucleotide GTR":0.005396013931967368,
-       "RELAX alternative":0.005508143613459853,
-       "RELAX null":0.005543553266380806,
-       "RELAX partitioned descriptive":0.005501533826486675,
-       "k (general descriptive)":0.1169739948659571,
+       "General descriptive":0.005474680959850247,
+       "MG94xREV with separate rates for branch sets":0.005336900658562792,
+       "Nucleotide GTR":0.005231949700024935,
+       "RELAX alternative":0.005345456900101052,
+       "RELAX null":0.005377268160936598,
+       "RELAX partitioned descriptive":0.005331743918108986,
+       "k (general descriptive)":0.1956491090210984,
        "original name":"XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA"
       },
      "XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA":{
-       "General descriptive":0.005832339466617971,
-       "MG94xREV with separate rates for branch sets":0.005513646421712847,
-       "Nucleotide GTR":0.005413401673904926,
-       "RELAX alternative":0.005490075499963561,
-       "RELAX null":0.00550249122724727,
-       "RELAX partitioned descriptive":0.005487673519069501,
-       "k (general descriptive)":2.894810645706925,
+       "General descriptive":0.00549678465059458,
+       "MG94xREV with separate rates for branch sets":0.005334691696064938,
+       "Nucleotide GTR":0.005250375858392718,
+       "RELAX alternative":0.005333702859093411,
+       "RELAX null":0.005332938348944887,
+       "RELAX partitioned descriptive":0.005330833633277632,
+       "k (general descriptive)":3.362261637987263,
        "original name":"XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA"
       },
      "XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":0.005540880780287146,
-       "MG94xREV with separate rates for branch sets":0.005966028994833966,
-       "Nucleotide GTR":0.005710336556012885,
-       "RELAX alternative":0.006194279230102521,
-       "RELAX null":0.006348917679726077,
-       "RELAX partitioned descriptive":0.006160311277908765,
-       "k (general descriptive)":0.1166730969349281,
+       "General descriptive":0.005691345184078642,
+       "MG94xREV with separate rates for branch sets":0.005820684729413894,
+       "Nucleotide GTR":0.005587418820605411,
+       "RELAX alternative":0.006066484247996164,
+       "RELAX null":0.006186187019433504,
+       "RELAX partitioned descriptive":0.006019554939417786,
+       "k (general descriptive)":0.1954555640984508,
        "original name":"XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":2.143773071244532e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":9.066329237946135e-17,
-       "RELAX null":6.28877818325512e-17,
-       "RELAX partitioned descriptive":3.785085337461046e-17,
-       "k (general descriptive)":0.5131287906160414,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2868258411617828,
        "original name":"XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":0.01991626993993691,
-       "MG94xREV with separate rates for branch sets":0.01919441961948322,
-       "Nucleotide GTR":0.01909415428581766,
-       "RELAX alternative":0.0198015279496954,
-       "RELAX null":0.02032894518483112,
-       "RELAX partitioned descriptive":0.01957818292469894,
-       "k (general descriptive)":0.1435728866258062,
+       "General descriptive":0.01934500572770947,
+       "MG94xREV with separate rates for branch sets":0.01866936417693551,
+       "Nucleotide GTR":0.01854578606149137,
+       "RELAX alternative":0.01926743789583182,
+       "RELAX null":0.0196890555048404,
+       "RELAX partitioned descriptive":0.01901925749388289,
+       "k (general descriptive)":0.2107200593392855,
        "original name":"XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA":{
-       "General descriptive":0.02926551176935272,
-       "MG94xREV with separate rates for branch sets":0.03088605775580583,
-       "Nucleotide GTR":0.03226671016179159,
-       "RELAX alternative":0.03325874717093573,
-       "RELAX null":0.03122617682044264,
-       "RELAX partitioned descriptive":0.03298361687799625,
-       "k (general descriptive)":0.009300398535853856,
+       "General descriptive":0.03151798290373585,
+       "MG94xREV with separate rates for branch sets":0.03067360611422336,
+       "Nucleotide GTR":0.03195093419247663,
+       "RELAX alternative":0.03301604364046187,
+       "RELAX null":0.03094596108819369,
+       "RELAX partitioned descriptive":0.03269139876585203,
+       "k (general descriptive)":0.8933101318536044,
        "original name":"XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA"
       },
      "XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":2.231436656516608e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":7.331303966952408e-17,
-       "RELAX null":3.946634653481385e-17,
-       "RELAX partitioned descriptive":5.41088847921421e-18,
-       "k (general descriptive)":0.5124564068586067,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2868258411617828,
        "original name":"XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":0.01942641452954642,
-       "MG94xREV with separate rates for branch sets":0.02112753550095428,
-       "Nucleotide GTR":0.0220051367908774,
-       "RELAX alternative":0.02167901075420736,
-       "RELAX null":0.02148198004031986,
-       "RELAX partitioned descriptive":0.02165424219603559,
-       "k (general descriptive)":0,
+       "General descriptive":0.01779152724704065,
+       "MG94xREV with separate rates for branch sets":0.02040012678307164,
+       "Nucleotide GTR":0.02123692589047695,
+       "RELAX alternative":0.02095481512683072,
+       "RELAX null":0.02074858728627569,
+       "RELAX partitioned descriptive":0.02089903871843044,
+       "k (general descriptive)":2.995050655555231,
        "original name":"XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA":{
-       "General descriptive":4.823618354227313e-24,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":5.65482503985141e-26,
-       "RELAX null":0,
-       "RELAX partitioned descriptive":1.139099930844834e-15,
-       "k (general descriptive)":0.5223768569729788,
+       "RELAX alternative":0,
+       "RELAX null":3.699602878735325e-17,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2850689871226127,
        "original name":"XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA"
       },
      "XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":4.803354220699761e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":1.933956300791545e-16,
-       "RELAX null":1.352296989840415e-16,
-       "RELAX partitioned descriptive":7.066970506971794e-17,
-       "k (general descriptive)":0.5107005618788681,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2868258411617828,
        "original name":"XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":4.806554939995555e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":1.921232430316125e-16,
-       "RELAX null":1.341011453425384e-16,
-       "RELAX partitioned descriptive":6.991839746517607e-17,
-       "k (general descriptive)":0.5117850818459402,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2833265878436348,
        "original name":"XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":2.32092810133401e-16,
+       "General descriptive":0,
        "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":1.246820760292296e-21,
-       "RELAX null":2.960765771254742e-25,
-       "RELAX partitioned descriptive":4.031339945198675e-28,
-       "k (general descriptive)":0.5172813078994416,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2714735368027638,
        "original name":"XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":1.988517645401857e-15,
-       "MG94xREV with separate rates for branch sets":0,
+       "General descriptive":0.004253337068440641,
+       "MG94xREV with separate rates for branch sets":0.000570207353959437,
        "Nucleotide GTR":1e-06,
-       "RELAX alternative":1.317125136854333e-15,
-       "RELAX null":1.411064006625965e-15,
-       "RELAX partitioned descriptive":1.082029869702378e-15,
-       "k (general descriptive)":0.5148908429957482,
+       "RELAX alternative":0.001008692333016172,
+       "RELAX null":0.0006970632638034189,
+       "RELAX partitioned descriptive":0.0005073092100844063,
+       "k (general descriptive)":0.2271787743080236,
        "original name":"XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":{
-       "General descriptive":0.05694993188962037,
-       "MG94xREV with separate rates for branch sets":0.05760898458929436,
-       "Nucleotide GTR":0.05654546943780547,
-       "RELAX alternative":0.08005621467927006,
-       "RELAX null":0.06564711208934458,
-       "RELAX partitioned descriptive":0.07768264343963859,
-       "k (general descriptive)":0.03265338083945694,
+       "General descriptive":0.0569892455370201,
+       "MG94xREV with separate rates for branch sets":0.05727636299094177,
+       "Nucleotide GTR":0.05613818091437321,
+       "RELAX alternative":0.07939852011706634,
+       "RELAX null":0.06497442394470337,
+       "RELAX partitioned descriptive":0.07691560872278189,
+       "k (general descriptive)":0.07841901790172442,
        "original name":"XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA"
       },
      "XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA":{
-       "General descriptive":0.005830058349728048,
-       "MG94xREV with separate rates for branch sets":0.005533611837191844,
-       "Nucleotide GTR":0.005400479989007329,
-       "RELAX alternative":0.005520796988873766,
-       "RELAX null":0.005528203923340968,
-       "RELAX partitioned descriptive":0.005523703280967788,
-       "k (general descriptive)":2.905826912329895,
+       "General descriptive":0.005564524241384063,
+       "MG94xREV with separate rates for branch sets":0.005350636970756768,
+       "Nucleotide GTR":0.005237561191356051,
+       "RELAX alternative":0.005356666714618901,
+       "RELAX null":0.005362130350790899,
+       "RELAX partitioned descriptive":0.005357000722574719,
+       "k (general descriptive)":3.258864101011349,
        "original name":"XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA"
       }
     },
@@ -584,28 +600,28 @@
  "data partitions":{
    "0":{
      "coverage":      [
-[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73] 
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75] 
       ],
      "name":"relax.filter.default"
     }
   },
  "fits":{
    "General descriptive":{
-     "AIC-c":2709.826559970022,
-     "Log Likelihood":-1218.884780404122,
+     "AIC-c":2779.164891904975,
+     "Log Likelihood":-1253.748705121192,
      "Rate Distributions":{
        "Shared":{
          "0":{
-           "omega":7.010869909686156e-18,
-           "proportion":0.3872531008756671
+           "omega":1.000000015037888e-08,
+           "proportion":0.3006508498728054
           },
          "1":{
-           "omega":7.010869909686156e-18,
-           "proportion":0.4701112472177973
+           "omega":1.000000230010745e-08,
+           "proportion":0.5234094357855392
           },
          "2":{
-           "omega":7.010869909686155,
-           "proportion":0.1426356519065357
+           "omega":5.683765007242802,
+           "proportion":0.1759397143416555
           }
         }
       },
@@ -613,149 +629,149 @@
      "estimated parameters":129
     },
    "MG94xREV with separate rates for branch sets":{
-     "AIC-c":2643.865745139909,
+     "AIC-c":2701.84333557544,
      "Equilibrium frequencies":      [
-[0.01115356890712592],
-      [0.008156041647537264],
-      [0.008817657226603937],
-      [0.009735668458740738],
-      [0.0227005111065873],
-      [0.01659973731703222],
-      [0.01794630288057113],
-      [0.01981470252418469],
-      [0.002407640885483348],
-      [0.001760586185267559],
-      [0.001903404392775647],
-      [0.002101568890097522],
-      [0.009559624275747748],
-      [0.006990470438389758],
-      [0.007557535241012514],
-      [0.008344354467505768],
-      [0.02311180482611279],
-      [0.0169004956423497],
-      [0.01827145862833485],
-      [0.02017371041894958],
-      [0.04703873589853893],
-      [0.03439705194190167],
-      [0.03718733017026254],
-      [0.04105892394082566],
-      [0.004988979464780053],
-      [0.003648188721679712],
-      [0.003944128663865692],
-      [0.004354754107945912],
-      [0.01980892145929139],
-      [0.0144852638433564],
-      [0.01566030397186648],
-      [0.01729070698883507],
-      [0.0272396523112653],
-      [0.01991898203750491],
-      [0.02153480370746191],
-      [0.02377680418188103],
-      [0.05544001520772364],
-      [0.04054048320671647],
-      [0.04382911468158804],
-      [0.0483921883573161],
-      [0.005880028281266338],
-      [0.004299767720094097],
-      [0.004648563549360274],
-      [0.00513252810388379],
-      [0.02334686266485807],
-      [0.01707238156858106],
-      [0.01845728788780695],
-      [0.02037888646669786],
-      [0.008711596522317157],
-      [0.01039882079479182],
-      [0.02424677339290946],
-      [0.01773044083536547],
-      [0.01916872871903999],
-      [0.02116439580130867],
-      [0.001880509829599472],
-      [0.00203305620609164],
-      [0.002244718826308549],
-      [0.01021078523065281],
-      [0.007466631558805913],
-      [0.008072322404431807],
-      [0.00891273641081205] 
+[0.01036530939556753],
+      [0.008557321575604834],
+      [0.008209914905027101],
+      [0.009081379598686184],
+      [0.02224636132035131],
+      [0.01836599955103605],
+      [0.01762038415029583],
+      [0.01949074978177033],
+      [0.002252290851616416],
+      [0.001859430950253777],
+      [0.00178394252669863],
+      [0.001973304163879898],
+      [0.008949981421365816],
+      [0.007388864740599736],
+      [0.007088894606697232],
+      [0.007841365422566979],
+      [0.02207671799421771],
+      [0.01822594656858468],
+      [0.01748601698202218],
+      [0.0193421198294737],
+      [0.04738176416392227],
+      [0.03911711433751675],
+      [0.03752905359508232],
+      [0.04151268138817037],
+      [0.004797077257853482],
+      [0.003960338389515603],
+      [0.003799558177844574],
+      [0.004202873052821864],
+      [0.01906225934533837],
+      [0.01573729031623445],
+      [0.01509839418683525],
+      [0.01670105604350294],
+      [0.0259177011092974],
+      [0.02139695926370603],
+      [0.02052829418987233],
+      [0.02270732817676133],
+      [0.05562540600253164],
+      [0.04592284405333757],
+      [0.04405848705622391],
+      [0.04873520007574919],
+      [0.005631689212129204],
+      [0.004649371645641606],
+      [0.004460618341302132],
+      [0.004934103321512184],
+      [0.02237877660573423],
+      [0.01847531806101045],
+      [0.01772526459174058],
+      [0.0196067630550205],
+      [0.008938582044570471],
+      [0.009485988799597899],
+      [0.02323751936844379],
+      [0.01918427306570828],
+      [0.01840543772870147],
+      [0.02035913509797417],
+      [0.001942275507378284],
+      [0.00186342379409377],
+      [0.002061222195741347],
+      [0.009348736345298014],
+      [0.007718066116431587],
+      [0.007404731198593256],
+      [0.008190727384943329] 
       ],
-     "Log Likelihood":-1247.781419438559,
+     "Log Likelihood":-1276.828477823562,
      "Rate Distributions":{
        "non-synonymous/synonymous rate ratio for *Haplorrhini*":        [
-[0.4493280539380718, 1] 
+[0.4541043263104789, 1] 
         ],
        "non-synonymous/synonymous rate ratio for *Strepsirrhini*":        [
-[0.7813721190039944, 1] 
+[0.7961736801131243, 1] 
         ],
        "non-synonymous/synonymous rate ratio for *Unclassified*":        [
-[0.8650918021991985, 1] 
+[0.9670422525250969, 1] 
         ]
       },
      "display order":1,
      "estimated parameters":72
     },
    "Nucleotide GTR":{
-     "AIC-c":2707.240583553323,
+     "AIC-c":2762.38290008779,
      "Equilibrium frequencies":      [
-[0.2237314597970335],
-      [0.3498829039812646],
-      [0.2199843871975019],
-      [0.2064012490241998] 
+[0.2180713743356112],
+      [0.3620349278663629],
+      [0.218830675778284],
+      [0.2010630220197418] 
       ],
-     "Log Likelihood":-1279.897519499434,
+     "Log Likelihood":-1307.487881406229,
      "Rate Distributions":{
-       "Substitution rate from nucleotide A to nucleotide C":0.3127467255845526,
+       "Substitution rate from nucleotide A to nucleotide C":0.3121717711838468,
        "Substitution rate from nucleotide A to nucleotide G":1,
-       "Substitution rate from nucleotide A to nucleotide T":0.1839054873646905,
-       "Substitution rate from nucleotide C to nucleotide G":0.2102310841190364,
-       "Substitution rate from nucleotide C to nucleotide T":0.8204132788496218,
-       "Substitution rate from nucleotide G to nucleotide T":0.1394381594892676
+       "Substitution rate from nucleotide A to nucleotide T":0.1882263814724357,
+       "Substitution rate from nucleotide C to nucleotide G":0.2165557511334225,
+       "Substitution rate from nucleotide C to nucleotide T":0.804296668082752,
+       "Substitution rate from nucleotide G to nucleotide T":0.1465677683540046
       },
      "display order":0,
      "estimated parameters":73
     },
    "RELAX alternative":{
-     "AIC-c":2651.493038814902,
-     "Log Likelihood":-1237.738288954776,
+     "AIC-c":2710.690653750337,
+     "Log Likelihood":-1267.41898580231,
      "Rate Distributions":{
        "Haplorrhini":{
          "0":{
-           "omega":0.2692888620514682,
-           "proportion":0.2948792138159567
+           "omega":0.2536922202658428,
+           "proportion":0.1973931838690494
           },
          "1":{
-           "omega":0.2717592382304631,
-           "proportion":0.4579592885079829
+           "omega":0.2551369492077971,
+           "proportion":0.5550435637321407
           },
          "2":{
-           "omega":1.213466883373221,
-           "proportion":0.2471614976760604
+           "omega":1.3121717470839,
+           "proportion":0.2475632523988099
           }
         },
        "Strepsirrhini":{
          "0":{
-           "omega":9.957847982663683e-05,
-           "proportion":0.2948792138159567
+           "omega":0.0009782905243648637,
+           "proportion":0.1973931838690494
           },
          "1":{
-           "omega":0.0001061744411296587,
-           "proportion":0.4579592885079829
+           "omega":0.001006763621533604,
+           "proportion":0.5550435637321407
           },
          "2":{
-           "omega":3.891940839118521,
-           "proportion":0.2471614976760604
+           "omega":3.945546130969287,
+           "proportion":0.2475632523988099
           }
         },
        "Synonymous site-to-site rates":{
          "0":{
-           "proportion":0.3544320157349163,
-           "rate":0.379430851195098
+           "proportion":0.009993429756967299,
+           "rate":0.395140873508179
           },
          "1":{
-           "proportion":0.2853055742500215,
-           "rate":1.340244711508487
+           "proportion":0.3541179421536493,
+           "rate":0.4060884929742833
           },
          "2":{
-           "proportion":0.3602624100150623,
-           "rate":1.341073223560081
+           "proportion":0.6358886280893834,
+           "rate":1.340247219914686
           }
         }
       },
@@ -763,35 +779,35 @@
      "estimated parameters":85
     },
    "RELAX null":{
-     "AIC-c":2654.655611170653,
-     "Log Likelihood":-1240.390742648264,
+     "AIC-c":2713.72346181523,
+     "Log Likelihood":-1270.004588050472,
      "Rate Distributions":{
        "Haplorrhini":{
          "0":{
            "omega":0,
-           "proportion":0.05669354669959994
+           "proportion":0.567479369921133
           },
          "1":{
-           "omega":0,
-           "proportion":0.5350301027228835
+           "omega":1,
+           "proportion":0.1386483236315049
           },
          "2":{
-           "omega":1.551031357963314,
-           "proportion":0.4082763505775165
+           "omega":1.715161298633955,
+           "proportion":0.293872306447362
           }
         },
        "Synonymous site-to-site rates":{
          "0":{
-           "proportion":0.4010688526281418,
-           "rate":0.4138044131949944
+           "proportion":0.3367627549983901,
+           "rate":0.439902565476863
           },
          "1":{
-           "proportion":0.3345575645719266,
-           "rate":1.39243115489757
+           "proportion":0.08152341604224932,
+           "rate":0.4531219847634227
           },
          "2":{
-           "proportion":0.2643735827999317,
-           "rate":1.392679097780533
+           "proportion":0.5817138289593606,
+           "rate":1.400890106902246
           }
         }
       },
@@ -799,35 +815,35 @@
      "estimated parameters":84
     },
    "RELAX partitioned descriptive":{
-     "AIC-c":2659.245602253056,
-     "Log Likelihood":-1237.32106988168,
+     "AIC-c":2718.258449588961,
+     "Log Likelihood":-1266.917516695042,
      "Rate Distributions":{
        "Haplorrhini":{
          "0":{
-           "omega":0.0740262315093866,
-           "proportion":0
-          },
-         "1":{
-           "omega":0.4600498712051642,
+           "omega":0.4632397029389309,
            "proportion":1
           },
+         "1":{
+           "omega":0.5512356795643177,
+           "proportion":0
+          },
          "2":{
-           "omega":1.416470966324864,
+           "omega":1.013104442317206,
            "proportion":0
           }
         },
        "Strepsirrhini":{
          "0":{
            "omega":0,
-           "proportion":0.01510416005338008
+           "proportion":0.7316951402247954
           },
          "1":{
-           "omega":0,
-           "proportion":0.7205497543100225
+           "omega":0.07884860685715359,
+           "proportion":0
           },
          "2":{
-           "omega":3.59802519484178,
-           "proportion":0.2643460856365973
+           "omega":3.607087645117202,
+           "proportion":0.2683048597752046
           }
         }
       },
@@ -836,21 +852,562 @@
     }
   },
  "input":{
-   "file name":"/Users/agl4001/Documents/AOC-develop/results/Primate_TP53/Primate_TP53.3.codon.fas",
+   "file name":"/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.3.codon.fas",
    "number of sequences":34,
-   "number of sites":74,
+   "number of sites":76,
    "partition count":1,
    "trees":{
-     "0":"(XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,((XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA,XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node3,XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node2,XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,(((XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA,XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA,XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node11,((XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node20,NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA,XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node16)Node10,(XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA,XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA)Node24,((XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,(XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,(XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node34)Node30)Node28,(XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA,((XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA)Node40,(XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA,(XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,(XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA)Node47)Node45)Node43)Node39)Node37)Node27)Node9,((XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA,XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node51,NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA,XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,(XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node59,XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA)Node50)"
+     "0":"(XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.011480954,((XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA:1e-10,XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:1e-10)Node3:0.005721535,XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:5e-09)Node2:0.005719421,XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.022647342,XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.005713225,(((XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA:0.005688855,XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA:0.005713059,XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:5e-09)Node11:0.029652974,((XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:1e-10,XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:1e-10)Node20:0.005481354,NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA:1e-10,XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:1e-10)Node16:0.023026821)Node10:0.005356389,(XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA:0.005686358,XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA:5e-09)Node24:0.035730505,((XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:5e-09,(XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.020607236,XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.034047978,(XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.00602613,XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.021989951)Node34:0.034780931)Node30:0.016499251)Node28:0.100113257,(XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA:0.103596363,((XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.022969448,XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA:0.024954424)Node40:0.086004477,(XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA:0.033224963,(XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.071061546,(XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.06097795,XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA:0.070348124)Node47:0.010423545)Node45:0.013813633)Node43:0.07748209)Node39:0.014977158)Node37:0.086943912)Node27:0.052971218)Node9:0.028480633,((XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA:1e-10,XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:1e-10)Node51:0.005694719,NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA:1e-10,XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:1e-10,(XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.022647342,XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA:0.005713225)Node59:0.00570023,XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA:0.005704233)Node50:0.017308813)"
     }
   },
- "runtime":"2.5.74",
+ "runtime":"2.5.86",
+ "substitutions":{
+   "0":{
+     "0":{
+       "Node10":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node27":"TCG",
+       "Node28":"TCC",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"GGG"
+      },
+     "1":{
+       "Node10":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"ACT"
+      },
+     "10":{
+       "root":"CTT"
+      },
+     "11":{
+       "root":"CCT"
+      },
+     "12":{
+       "root":"GAA"
+      },
+     "13":{
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"AAT",
+       "root":"AAC"
+      },
+     "14":{
+       "Node40":"AAT",
+       "XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"AAT",
+       "root":"AAC"
+      },
+     "15":{
+       "Node28":"ATT",
+       "XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA":"CTT",
+       "root":"GTT"
+      },
+     "16":{
+       "XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"TTG",
+       "root":"CTG"
+      },
+     "17":{
+       "XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"TCT",
+       "XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"TCT",
+       "root":"TCC"
+      },
+     "18":{
+       "Node27":"TCC",
+       "Node34":"CCC",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"CCC",
+       "XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA":"ACC",
+       "XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GCC",
+       "root":"CCC"
+      },
+     "19":{
+       "Node27":"TCG",
+       "Node40":"TCA",
+       "XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"CCG",
+       "root":"TTG"
+      },
+     "2":{
+       "Node10":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"GAC"
+      },
+     "20":{
+       "Node20":"CCA",
+       "Node27":"CTG",
+       "XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"CCA",
+       "root":"CCG"
+      },
+     "21":{
+       "root":"TCC"
+      },
+     "22":{
+       "Node37":"CCA",
+       "Node47":"CCG",
+       "root":"CAA"
+      },
+     "23":{
+       "Node16":"GCA",
+       "Node27":"CCA",
+       "Node30":"CCG",
+       "Node50":"GCA",
+       "root":"GCG"
+      },
+     "24":{
+       "Node10":"ATG",
+       "root":"GTG"
+      },
+     "25":{
+       "Node43":"GAC",
+       "XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GAC",
+       "root":"GAT"
+      },
+     "26":{
+       "Node2":"GAC",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GAC",
+       "XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA":"AAT",
+       "XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"AAT",
+       "root":"GAT"
+      },
+     "27":{
+       "Node37":"CTG",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"CTG",
+       "root":"TTG"
+      },
+     "28":{
+       "Node24":"CTG",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"ATA",
+       "root":"ATG"
+      },
+     "29":{
+       "Node28":"CTA",
+       "XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"CTA",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"TTG",
+       "root":"CTG"
+      },
+     "3":{
+       "Node10":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node34":"TCT",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"TTT"
+      },
+     "30":{
+       "Node34":"TCA",
+       "Node9":"TCC",
+       "XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA":"AAC",
+       "XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"TCT",
+       "root":"TCT"
+      },
+     "31":{
+       "Node37":"CCA",
+       "Node50":"CCA",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"CCA",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"ACA",
+       "XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GCA",
+       "root":"CCG"
+      },
+     "32":{
+       "Node11":"GAA",
+       "Node28":"GAT",
+       "Node37":"GAA",
+       "XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GAT",
+       "XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA":"---",
+       "XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA":"GAG",
+       "root":"GAC"
+      },
+     "33":{
+       "Node27":"GAC",
+       "root":"GAT"
+      },
+     "34":{
+       "Node45":"TTT",
+       "Node9":"ATT",
+       "root":"CTT"
+      },
+     "35":{
+       "Node10":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node30":"GAC",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"TAC"
+      },
+     "36":{
+       "Node10":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"ATT"
+      },
+     "37":{
+       "Node16":"GAA",
+       "Node40":"GTA",
+       "Node43":"GAA",
+       "Node47":"GAG",
+       "Node59":"GCG",
+       "XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA":"GTG",
+       "XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GCA",
+       "root":"GCA"
+      },
+     "38":{
+       "Node37":"AAC",
+       "Node43":"GGC",
+       "root":"CAA"
+      },
+     "39":{
+       "XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA":"TTG",
+       "root":"TGG"
+      },
+     "4":{
+       "Node10":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node28":"CTG",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"TTG"
+      },
+     "40":{
+       "Node40":"TTT",
+       "Node9":"TTC",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"TTG",
+       "root":"TTA"
+      },
+     "41":{
+       "Node24":"ATT",
+       "Node27":"AGT",
+       "Node40":"GAT",
+       "Node43":"ACC",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"AGC",
+       "XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"ACT",
+       "root":"ACT"
+      },
+     "42":{
+       "Node28":"CAA",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"GAG",
+       "root":"GAA"
+      },
+     "43":{
+       "Node37":"---",
+       "root":"GAC"
+      },
+     "44":{
+       "Node28":"CCG",
+       "Node37":"---",
+       "root":"CCA"
+      },
+     "45":{
+       "Node28":"GTT",
+       "Node43":"GGC",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"AGT",
+       "root":"GGT"
+      },
+     "46":{
+       "XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"ACA",
+       "root":"CCA"
+      },
+     "47":{
+       "Node11":"CAT",
+       "XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GAA",
+       "root":"GAT"
+      },
+     "48":{
+       "root":"GAA"
+      },
+     "49":{
+       "Node34":"GAT",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"GCG",
+       "XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA":"GCG",
+       "XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"TCT",
+       "root":"GCT"
+      },
+     "5":{
+       "Node10":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"CTC"
+      },
+     "50":{
+       "Node37":"CTC",
+       "Node50":"CCG",
+       "XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GCC",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"TCC",
+       "root":"CCC"
+      },
+     "51":{
+       "Node28":"ACA",
+       "root":"AGA"
+      },
+     "52":{
+       "Node28":"GTA",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GTT",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"ACG",
+       "XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA":"ACG",
+       "root":"ATG"
+      },
+     "53":{
+       "Node16":"CCA",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"---",
+       "XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA":"TTA",
+       "root":"TCA"
+      },
+     "54":{
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"---",
+       "root":"GAG"
+      },
+     "55":{
+       "XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"AAT",
+       "XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA":"GAT",
+       "root":"GCT"
+      },
+     "56":{
+       "Node27":"CCT",
+       "Node51":"ACT",
+       "XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"CCA",
+       "root":"GCT"
+      },
+     "57":{
+       "Node24":"TCC",
+       "Node34":"CCA",
+       "Node37":"GCA",
+       "Node43":"GAA",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"CCG",
+       "XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA":"CCT",
+       "root":"CCC"
+      },
+     "58":{
+       "Node24":"CCT",
+       "Node28":"GCC",
+       "Node34":"ACC",
+       "Node37":"CCA",
+       "XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GCG",
+       "root":"CCC"
+      },
+     "59":{
+       "Node11":"ATG",
+       "Node45":"GCG",
+       "Node9":"GTG",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"ATG",
+       "XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA":"ATG",
+       "root":"ATG"
+      },
+     "6":{
+       "Node10":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"TTG"
+      },
+     "60":{
+       "Node24":"GAC",
+       "Node40":"GCT",
+       "XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA":"GGC",
+       "root":"GCC"
+      },
+     "61":{
+       "Node16":"CCT",
+       "Node28":"CAG",
+       "Node40":"TCC",
+       "XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA":"CCT",
+       "XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"CCT",
+       "root":"CCC"
+      },
+     "62":{
+       "Node34":"GCT",
+       "Node37":"ACA",
+       "Node43":"GCG",
+       "Node9":"GCA",
+       "XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GTG",
+       "root":"ACA"
+      },
+     "63":{
+       "Node30":"CCG",
+       "Node40":"ACA",
+       "XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA":"CAA",
+       "root":"CCA"
+      },
+     "64":{
+       "Node39":"GCT",
+       "XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA":"GGA",
+       "root":"GCA"
+      },
+     "65":{
+       "Node39":"GCC",
+       "XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"ACT",
+       "XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GCA",
+       "root":"GCT"
+      },
+     "66":{
+       "Node40":"CTT",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"TCT",
+       "XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"ACT",
+       "root":"CCT"
+      },
+     "67":{
+       "Node24":"ATA",
+       "XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"ATA",
+       "root":"ACA"
+      },
+     "68":{
+       "Node11":"CTG",
+       "Node27":"CCA",
+       "Node28":"TCA",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"TTA",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"CAG",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"CCA",
+       "XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA":"CTA",
+       "root":"CCG"
+      },
+     "69":{
+       "Node3":"GCA",
+       "Node40":"GCA",
+       "Node43":"GTG",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GTG",
+       "XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA":"GCA",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GCA",
+       "root":"GCG"
+      },
+     "7":{
+       "NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA":"---",
+       "Node11":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"TCT"
+      },
+     "70":{
+       "Node11":"GCG",
+       "XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"GCT",
+       "root":"GCC"
+      },
+     "71":{
+       "Node28":"CCC",
+       "Node40":"TCT",
+       "Node43":"CCC",
+       "XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"TCC",
+       "root":"CCT"
+      },
+     "72":{
+       "Node28":"ACA",
+       "Node43":"ACA",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"GCT",
+       "XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA":"GCG",
+       "root":"GCA"
+      },
+     "73":{
+       "root":"CCA"
+      },
+     "74":{
+       "Node40":"GTC",
+       "Node43":"---",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"GGC",
+       "root":"GCC"
+      },
+     "75":{
+       "Node37":"ACC",
+       "Node43":"---",
+       "XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA":"ACG",
+       "root":"CCC"
+      },
+     "8":{
+       "NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA":"---",
+       "Node11":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"TTC"
+      },
+     "9":{
+       "NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA":"---",
+       "Node11":"---",
+       "Node2":"---",
+       "Node24":"---",
+       "Node37":"---",
+       "Node50":"---",
+       "XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA":"---",
+       "root":"AGA"
+      }
+    }
+  },
  "test results":{
-   "LRT":5.304907386975628,
-   "p-value":0.02126543020471383,
+   "LRT":5.171204496323753,
+   "p-value":0.02296428785285987,
    "relaxation or intensification parameter":{
      "Haplorrhini":1,
-     "Strepsirrhini":7.023453276658346
+     "Strepsirrhini":5.052154226193813
     }
   },
  "tested":{
@@ -915,27 +1472,27 @@
  "timers":{
    "General descriptive model fitting":{
      "order":2,
-     "timer":316
+     "timer":114
     },
    "Overall":{
      "order":0,
-     "timer":878
+     "timer":1302
     },
    "Preliminary model fitting":{
      "order":1,
-     "timer":11
+     "timer":4
     },
    "RELAX alternative model fitting":{
      "order":3,
-     "timer":399
+     "timer":107
     },
    "RELAX null model fitting":{
      "order":4,
-     "timer":74
+     "timer":986
     },
    "RELAX partitioned descriptive":{
      "order":5,
-     "timer":73
+     "timer":91
     }
   }
 }

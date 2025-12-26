@@ -1,0 +1,99 @@
+
+Analysis Description
+--------------------
+MEME (Mixed Effects Model of Evolution) estimates a site-wise synonymous
+(&alpha;) and a two-category mixture of non-synonymous (&beta;-, with
+Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. Version 3.0 adds a different format for
+ancestral state reconstruction, branch-site posterior storage, and
+site-level heterogeneity testing. Version 4 adds support for multiple
+hits and more than 2 rate classes on omega, as well as site-level
+imputation option. Version 4.1 fixes bugs with EBF computation for > 2
+more rates and MH reporting. 
+proportion p-, and &beta;+ with proportion [1-p-]) rates, and uses a
+likelihood ratio test to determine if &beta;+ > &alpha; at a site. The
+estimates aggregate information over a proportion of branches at a site,
+so the signal is derived from episodic diversification, which is a
+combination of strength of selection [effect size] and the proportion of
+the tree affected. A subset of branches can be selected for testing as
+well, in which case an additional (nuisance) parameter will be inferred
+-- the non-synonymous rate on branches NOT selected for testing.
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Detecting Individual Sites Subject to Episodic Diversifying Selection.
+_PLoS Genet_ 8(7): e1002764.
+
+- __Written by__: Sergei L. Kosakovsky Pond, Steven Weaver
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 4.1
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas'
+contains 11 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas.FastTree.treefile
+results/Primate_TP53/Primate_TP53.2.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **34** sequences, **66** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas`
+
+>branches => All
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample => 0
+The number omega rate classes to include in the model [2 is the strongly recommended default] (permissible range = [2,4], default value = 2, integer): 
+>rates => 2
+
+>multiple-hits => None
+
+>impute-states => No
+
+>precision => standard
+
+
+### Branches to include in the MEME analysis
+Selected 60 branches to include in the MEME analysis: `NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA, XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA, XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node1, XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node11, XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node10, XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA, XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA, Node18, Node16, XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA, XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA, Node25, Node23, Node21, Node15, Node9, XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA, XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node30, XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node29, XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA, XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA, Node36, XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node40, XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node45, Node43, Node39, Node35, Node28, Node8, XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA, XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA, XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA, Node51, XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node50, Node48, Node7, XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA, XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node57, XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node56`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 7 zero-length internal branches: `Node1, Node25, Node28, Node30, Node36, Node50, Node51`
+* Log(L) =  -735.68, AIC-c =  1608.77 (68 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.164
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -724.43, AIC-c =  1589.17 (68 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.477
+* non-synonymous/synonymous rate ratio for *test* =   0.3106
+
+>full-model => Yes
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) =  -722.50
+* Log(L) =  -722.50, AIC-c =  1585.31 (68 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.692
+* non-synonymous/synonymous rate ratio for *test* =   0.2543
+[2KWorking on site pattern 1/56 in partition 1[2KWorking on site pattern 2/56 in partition 1[2KWorking on site pattern 3/56 in partition 1[2KWorking on site pattern 4/56 in partition 1[2KWorking on site pattern 5/56 in partition 1[2KWorking on site pattern 6/56 in partition 1[2KWorking on site pattern 7/56 in partition 1[2KWorking on site pattern 8/56 in partition 1[2KWorking on site pattern 9/56 in partition 1[2KWorking on site pattern 10/56 in partition 1[2KWorking on site pattern 11/56 in partition 1[2KWorking on site pattern 12/56 in partition 1[2KWorking on site pattern 13/56 in partition 1[2KWorking on site pattern 14/56 in partition 1[2KWorking on site pattern 15/56 in partition 1[2KWorking on site pattern 16/56 in partition 1[2KWorking on site pattern 17/56 in partition 1[2KWorking on site pattern 18/56 in partition 1[2KWorking on site pattern 19/56 in partition 1[2KWorking on site pattern 20/56 in partition 1[2KWorking on site pattern 21/56 in partition 1[2KWorking on site pattern 22/56 in partition 1[2KWorking on site pattern 23/56 in partition 1[2KWorking on site pattern 24/56 in partition 1[2KWorking on site pattern 25/56 in partition 1[2KWorking on site pattern 26/56 in partition 1[2KWorking on site pattern 27/56 in partition 1[2KWorking on site pattern 28/56 in partition 1[2KWorking on site pattern 29/56 in partition 1[2KWorking on site pattern 30/56 in partition 1[2KWorking on site pattern 31/56 in partition 1[2KWorking on site pattern 32/56 in partition 1[2KWorking on site pattern 33/56 in partition 1[2KWorking on site pattern 34/56 in partition 1[2KWorking on site pattern 35/56 in partition 1[2KWorking on site pattern 36/56 in partition 1[2KWorking on site pattern 37/56 in partition 1[2KWorking on site pattern 38/56 in partition 1[2KWorking on site pattern 39/56 in partition 1[2KWorking on site pattern 40/56 in partition 1[2KWorking on site pattern 41/56 in partition 1[2KWorking on site pattern 42/56 in partition 1[2KWorking on site pattern 43/56 in partition 1[2KWorking on site pattern 44/56 in partition 1[2KWorking on site pattern 45/56 in partition 1[2KWorking on site pattern 46/56 in partition 1[2KWorking on site pattern 47/56 in partition 1[2KWorking on site pattern 48/56 in partition 1[2KWorking on site pattern 49/56 in partition 1[2KWorking on site pattern 50/56 in partition 1[2KWorking on site pattern 51/56 in partition 1[2KWorking on site pattern 52/56 in partition 1[2KWorking on site pattern 53/56 in partition 1[2KWorking on site pattern 54/56 in partition 1[2KWorking on site pattern 55/56 in partition 1[2KWorking on site pattern 56/56 in partition 1[2K                                            [2K
+### ** Found _0_ sites under episodic diversifying positive selection at p <= 0.1**
+
+
+

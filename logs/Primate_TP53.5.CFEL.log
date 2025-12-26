@@ -1,0 +1,99 @@
+
+Analysis Description
+--------------------
+Contrast-FEL (Fixed Effects Likelihood) investigates whether or not
+selective pressures differ between two or more sets of branches at a
+site. Site-specific synonymous (alpha) and non-synonymous (beta, one per
+branch set) substitution rates are estimated and then beta rates are
+tested for equality at each site. LRT and permutation tests ar used to
+assess significance at each site, and FDR is applied alignment wide to
+call sites with different selective profiles. Version 0.6 adds detailed
+ancestral state reconstruction. Version 0.61 adds storing root states in
+constant sites for ASR.
+
+- __Additional information__: http://www.hyphy.org/methods/other/contrast-fel/
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree; only single partition
+data are supported
+
+- __Citation__: Mol Biol Evol (2021), (38)3 1184–1198
+
+- __Written by__: Sergei L Kosakovsky Pond and Steven Weaver
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 0.61
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.5.codon.fas'
+contains 17 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.5.codon.fas.FastTree.treefile.labelled
+results/Primate_TP53/Primate_TP53.5.codon.fas.FastTree.treefile.labelled
+
+>Loaded a multiple sequence alignment with **34** sequences, **85** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.5.codon.fas`
+
+>branch-set => Haplorrhini
+
+>srv => Yes
+
+>permutations => Yes
+
+>Select nominal p-value threshold to use when testing for selection (FDR correction will be performed on all sites) (permissible range = [0,1], default value = 0.1): 
+>p-value => 0.05
+
+>Select nominal the q-value threshold to use when testing for selection (FDR reporting) (permissible range = [0,1], default value = 0.2): 
+>q-value => 0.20
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+
+### Branches to use as the test set in the FEL-contrast analysis
+Selected 2 sets of branches to test
+
+* Selected 39 branches in group _Haplorrhini_ : `XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA, XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node11, XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA, XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA, Node18, NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA, XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node23, XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA, XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA, Node28, Node22, Node17, Node10, XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA, XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA, XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA, XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node45, XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node6, Node4, Node2, XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA, XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA`
+* 14 branches are in the background group : `XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA, Node36, Node32, Node31, Node9, Node33, XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA, Node39, XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA, Node42, Node38`
+
+### **1** test will be performed at each site
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 8 zero-length internal branches: `Node10, Node11, Node22, Node28, Node38, Node4, Node45, Node6`
+* Log(L) =  -677.52, AIC-c =  1477.93 (61 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.621
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -670.12, AIC-c =  1464.91 (61 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.820
+* non-synonymous/synonymous rate ratio for *Haplorrhini* =   0.2890
+* non-synonymous/synonymous rate ratio for *background* =   0.2785
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) =  -667.35
+* non-synonymous/synonymous rate ratio for *Haplorrhini* =   0.1156
+* non-synonymous/synonymous rate ratio for *background* =   0.2994
+
+### For partition 1 these sites are significant at p <=0.05
+
+| Codon  |     alpha      |             beta             |        substitutions         |                  test                  |LRT p-value|Permutation p-value|
+|:------:|:--------------:|:----------------------------:|:----------------------------:|:--------------------------------------:|:---------:|:-----------------:|
+|   6    |        0.121   |        0.000 -      0.995    |              1               |                overall                 |  0.0256   |      1.0000       |
+|   19   |        2.087   |        0.000 -      0.785    |              1               |                overall                 |  0.0309   |      1.0000       |
+
+### ** Found _2_ sites with different _overall_ dN/dS at p <= 0.05**
+
+### ### False discovery rate correction
+There are no sites where the overall p-value passes the False Discovery Rate threshold of 0.2

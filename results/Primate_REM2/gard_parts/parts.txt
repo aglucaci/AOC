@@ -1,0 +1,5 @@
+results/Primate_REM2/gard_parts/Primate_REM2.1.codon.fas
+results/Primate_REM2/gard_parts/Primate_REM2.2.codon.fas
+results/Primate_REM2/gard_parts/Primate_REM2.3.codon.fas
+results/Primate_REM2/gard_parts/Primate_REM2.4.codon.fas
+results/Primate_REM2/gard_parts/Primate_REM2.5.codon.fas

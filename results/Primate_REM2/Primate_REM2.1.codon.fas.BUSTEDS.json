@@ -3,13 +3,13 @@
   },
  "Site Log Likelihood":{
    "unconstrained":    [
-[-6.94971081625195, -14.36417886073517, -11.96837947528406, -16.21624243203649, -26.93680715478126, -14.41483292051984, -22.07697855139771, -15.65305709987478, -10.5764808891197, -7.299654559536545, -20.85479245762244, -13.44443207742486, -9.00139540871316, -9.196355594893928, -14.11588166934336, -9.056300647209428, -6.198625715169707, -4.473051919758414, -5.256696439686659, -5.506022140465804, -4.112142053351246, -5.064823117961576, -8.874108137510754, -17.07790983830216, -15.41585723624383, -13.12741037662701, -8.20322450971174, -19.76507462915679, -17.92307792996523, -34.44973140488914, -5.589748420148078, -4.777186877488117, -14.79361269411979, -13.93649821791951, -17.15150281892339, -4.692584682212927, -4.777186877488117, -4.692584682212927, -4.196744248626436, -4.112142053351246, -15.53824161171323, -12.87790196354297, -21.85887154132614, -2.662558546812357, -5.837139068548339, -4.692584682212927, -5.256696439686659, -4.609354827264564, -5.823896295738879, -4.445194033812666, -5.256696439686659, -3.987634368954053, -6.076155525039468, -22.96314591998112, -4.707199795349215, -3.35426608726177, -3.73974729581988, -6.8310979626075, -5.506022140465804, -5.686543576272086, -6.156429617446578] 
+[-6.956646045814563, -14.36032323967973, -11.97434520483369, -16.21338120235787, -26.94658582566697, -14.40641506710668, -22.07329221158834, -15.64948857480137, -10.58211387358173, -7.299307975854052, -20.88242162260492, -13.40603587337604, -8.994283334268916, -9.184154018363298, -14.11276164766026, -9.06477578346111, -6.204952425790292, -4.4731781151468, -5.257085485852691, -5.507487395663226, -4.110994663263811, -5.065575323158049, -8.883684818759592, -17.07083698657054, -15.41905918830084, -13.18274325268983, -8.204559298188645, -19.79047594127848, -17.91859588648402, -34.43976399944244, -5.591820445928583, -4.777203550952661, -14.82339730987472, -13.93434064435858, -17.15696860902793, -4.693832477614882, -4.777203550952661, -4.693832477614882, -4.194365736601589, -4.110994663263811, -15.52380315528365, -12.8654142037949, -21.86589520826946, -2.662679778758254, -5.839923300203763, -4.693832477614882, -5.257085485852691, -4.610035061659181, -5.825985882991254, -4.445729623339702, -5.257085485852691, -3.988446795250568, -6.077112440362564, -22.96668920894124, -4.70734355220947, -3.354128043910058, -3.739808306665734, -6.833254412155542, -5.507487395663226, -5.687163589566661, -6.161224032767855] 
     ]
   },
  "Synonymous site-posteriors":  [
-[0.006858884778683485, 0.1173561307469904, 0.08502004677263174, 0.1416253748274537, 0.6558404808924877, 0.1276367924340937, 0.4170727645207505, 0.1336608294384228, 0.007136064769714395, 0.02718177841166074, 0.1549785904217849, 0.1011993056053438, 0.009576658478819996, 0.01162660028629955, 0.1027243826130089, 0.01967359304244019, 0.01454009638018737, 0.1503877279471925, 0.1503877279471928, 0.1503877279471926, 0.1503877279471927, 0.1503877279471927, 0.003046273530583164, 0.0733100172258338, 0.1107637210120943, 0.0001099405514508026, 0.01977053198746746, 0.3696707137084085, 0.2628106510214499, 0.869083637502521, 0.1503877279471926, 0.1503877279471928, 0.1666664337730434, 0.05551802446176418, 0.06462311301864371, 0.1503877279471926, 0.1503877279471928, 0.1503877279471926, 0.1503877279471926, 0.1503877279471927, 0.07985568610570509, 0.09718036611395736, 0.3956421560160556, 0.1503877279471927, 0.1503877279471925, 0.1503877279471926, 0.1503877279471928, 0.1503877279471926, 0.1503877279471927, 0.1503877279471927, 0.1503877279471928, 0.1503877279471927, 0.02190927490939086, 0.3788024264572509, 0.1503877279471928, 0.1503877279471926, 0.1503877279471927, 0.1503877279471927, 0.1503877279471926, 0.1503877279471926, 0.01424285542788349],
-  [0.6599669153367859, 0.0008175945136418039, 0.001368956885203193, 0.0002712555585286695, 1.816744310652038e-15, 0.0006690977711613043, 3.113041863028151e-09, 0.000512849586780082, 0.6464654879134709, 0.5074178265543765, 1.303425592511771e-06, 0.003441661068738165, 0.7058460684803459, 0.7300226808114922, 0.001252512761347007, 0.3957106218481148, 0.5419849480774305, 0.2214195610777154, 0.2214195610777154, 0.2214195610777153, 0.2214195610777154, 0.2214195610777153, 0.7846830311096162, 0.0004456233047645413, 0.0005765567593941357, 0.8753933293337242, 0.5794987444045236, 4.477460092163511e-07, 2.335075471946971e-06, 2.476533491177981e-16, 0.2214195610777155, 0.2214195610777155, 3.130112605161645e-06, 0.000567398448388068, 7.515569962999289e-06, 0.2214195610777155, 0.2214195610777155, 0.2214195610777155, 0.2214195610777154, 0.2214195610777154, 0.001668541919851335, 0.001945390224124267, 1.812454181364199e-09, 0.2214195610777155, 0.2214195610777154, 0.2214195610777155, 0.2214195610777154, 0.2214195610777153, 0.2214195610777153, 0.2214195610777155, 0.2214195610777154, 0.2214195610777155, 0.5205084853142513, 1.100807348644991e-09, 0.2214195610777152, 0.2214195610777155, 0.2214195610777154, 0.2214195610777153, 0.2214195610777153, 0.2214195610777154, 0.5639131456764258],
-  [0.3331741998845307, 0.8818262747393679, 0.9136109963421649, 0.8581033696140178, 0.3441595191075105, 0.8716941097947449, 0.5829272323662077, 0.8658263209747973, 0.3463984473168147, 0.4654003950339626, 0.8450201061526226, 0.8953590333259179, 0.2845772730408341, 0.2583507189022081, 0.8960231046256443, 0.584615785109445, 0.4434749555423821, 0.628192710975092, 0.6281927109750918, 0.6281927109750919, 0.6281927109750918, 0.628192710975092, 0.2122706953598006, 0.9262443594694016, 0.8886597222285116, 0.124496730114825, 0.4007307236080089, 0.6303288385455824, 0.7371870139030782, 0.1309163624974789, 0.628192710975092, 0.6281927109750917, 0.8333304361143514, 0.9439145770898477, 0.9353693714113932, 0.6281927109750918, 0.6281927109750917, 0.6281927109750918, 0.628192710975092, 0.6281927109750918, 0.9184757719744436, 0.9008742436619183, 0.6043578421714901, 0.6281927109750918, 0.6281927109750921, 0.6281927109750918, 0.6281927109750918, 0.628192710975092, 0.628192710975092, 0.6281927109750919, 0.6281927109750918, 0.6281927109750919, 0.4575822397763578, 0.6211975724419418, 0.628192710975092, 0.6281927109750919, 0.628192710975092, 0.628192710975092, 0.6281927109750919, 0.628192710975092, 0.4218439988956906] 
+[0.3344399305114914, 0.8586170070954374, 0.8847548567906609, 0.8419400262388829, 0.3194920978642576, 0.8504100166874338, 0.5591773814709637, 0.8464055920580871, 0.3489487075870777, 0.4577349083883895, 0.8287426175919766, 0.8374943210904159, 0.2792985051265792, 0.2515709755732071, 0.8677010150531613, 0.583463809605137, 0.4395975406503631, 0.6126208932325857, 0.6126208932325863, 0.612620893232586, 0.6126208932325856, 0.612620893232586, 0.2149948051468119, 0.9107931772669212, 0.8690629589840732, 0.1367014781601892, 0.3935743372320946, 0.607279217872233, 0.7166104853037546, 0.1235004326744213, 0.612620893232586, 0.612620893232586, 0.815655807589816, 0.9281383714345088, 0.9236659348348626, 0.6126208932325857, 0.612620893232586, 0.6126208932325857, 0.6126208932325858, 0.6126208932325856, 0.8855724013629933, 0.8635556143785122, 0.5813142640050705, 0.6126208932325853, 0.6126208932325858, 0.6126208932325857, 0.6126208932325863, 0.6126208932325858, 0.612620893232586, 0.6126208932325857, 0.6126208932325863, 0.6126208932325857, 0.4537020919857093, 0.59827033437511, 0.612620893232586, 0.612620893232586, 0.6126208932325857, 0.6126208932325861, 0.612620893232586, 0.6126208932325856, 0.4182793607059797],
+  [0.6576012172055042, 0.01367798557315527, 0.02302514366628219, 0.004545388478313633, 2.434435470143862e-09, 0.01125123733095152, 1.53740520972285e-05, 0.008637341200532164, 0.6427419253048531, 0.5123450465216347, 0.0003717936207570073, 0.05654879562366987, 0.7100844623031923, 0.7357451548958267, 0.02092575020911834, 0.3943568858940069, 0.5441150631856742, 0.2282667854665352, 0.2282667854665348, 0.228266785466535, 0.2282667854665352, 0.228266785466535, 0.7813906256079199, 0.007298562602406934, 0.009587262209607239, 0.8631451417747911, 0.584656407000148, 0.0001367115960372906, 0.0006817438654577647, 3.513516829124383e-10, 0.2282667854665349, 0.2282667854665351, 0.0009073963486258359, 0.009209180734930643, 0.002143465412952501, 0.2282667854665351, 0.2282667854665351, 0.2282667854665351, 0.2282667854665349, 0.2282667854665352, 0.02789473960715589, 0.03298535743289402, 8.89746530866557e-06, 0.2282667854665354, 0.2282667854665351, 0.2282667854665351, 0.2282667854665348, 0.228266785466535, 0.228266785466535, 0.2282667854665352, 0.2282667854665348, 0.2282667854665352, 0.5217550655913052, 5.345020204100946e-06, 0.2282667854665351, 0.2282667854665351, 0.228266785466535, 0.228266785466535, 0.228266785466535, 0.2282667854665351, 0.5657177932181278],
+  [0.007958852283004301, 0.1277050073314074, 0.09221999954305703, 0.1535145852828035, 0.6805078997013071, 0.1383387459816147, 0.4408072444769389, 0.1449570667413808, 0.008309367108069236, 0.02992004508997577, 0.1708855887872663, 0.1059568832859143, 0.01061703257022857, 0.01268386953096632, 0.1113732347377204, 0.02217930450085596, 0.01628739616396282, 0.1591123213008791, 0.1591123213008791, 0.159112321300879, 0.1591123213008792, 0.1591123213008791, 0.003614569245268203, 0.08190826013067198, 0.1213497788063197, 0.0001533800650196136, 0.02176925576775736, 0.3925840705317296, 0.2827077708307875, 0.876499566974227, 0.1591123213008792, 0.159112321300879, 0.183436796061558, 0.06265244783056054, 0.07419059975218487, 0.1591123213008792, 0.159112321300879, 0.1591123213008792, 0.1591123213008791, 0.1591123213008792, 0.08653285902985094, 0.1034590281885938, 0.4186768385296208, 0.1591123213008792, 0.1591123213008791, 0.1591123213008792, 0.1591123213008791, 0.1591123213008791, 0.1591123213008789, 0.1591123213008791, 0.1591123213008791, 0.1591123213008789, 0.02454284242298551, 0.4017243206046859, 0.159112321300879, 0.159112321300879, 0.1591123213008792, 0.1591123213008791, 0.159112321300879, 0.1591123213008791, 0.01600284607589251] 
   ],
  "analysis":{
    "authors":"Sergei L Kosakovsky Pond",
@@ -29,291 +29,291 @@
  "branch attributes":{
    "0":{
      "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.082944647421703e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
       },
      "Node11":{
-       "MG94xREV with separate rates for branch sets":0.02026560376918733,
-       "Nucleotide GTR":0.01972865884582046,
-       "unconstrained":0.01757247366117152
+       "MG94xREV with separate rates for branch sets":0.02030495727981029,
+       "Nucleotide GTR":0.0197399069273736,
+       "unconstrained":0.01765418329551086
       },
      "Node14":{
-       "MG94xREV with separate rates for branch sets":0.01013805877208423,
-       "Nucleotide GTR":0.01011425516238184,
-       "unconstrained":0.01088189782649746
+       "MG94xREV with separate rates for branch sets":0.01013954735683413,
+       "Nucleotide GTR":0.01013130834285044,
+       "unconstrained":0.01085113622268057
       },
      "Node17":{
-       "MG94xREV with separate rates for branch sets":0.01017480553763184,
-       "Nucleotide GTR":0.01005082544372665,
-       "unconstrained":0.01084498325437029
+       "MG94xREV with separate rates for branch sets":0.01018367759812885,
+       "Nucleotide GTR":0.0100417405241493,
+       "unconstrained":0.01076906086829453
       },
      "Node19":{
-       "MG94xREV with separate rates for branch sets":0.03274435818252688,
-       "Nucleotide GTR":0.03142181715447938,
-       "unconstrained":0.03658883663093259
+       "MG94xREV with separate rates for branch sets":0.03279595487250449,
+       "Nucleotide GTR":0.03140403658839034,
+       "unconstrained":0.03640857545228041
       },
      "Node21":{
-       "MG94xREV with separate rates for branch sets":0.01052147853548879,
-       "Nucleotide GTR":0.01024722503687066,
-       "unconstrained":0.01096894329557061
+       "MG94xREV with separate rates for branch sets":0.01053414990565321,
+       "Nucleotide GTR":0.01022615956747289,
+       "unconstrained":0.01091466904513861
       },
      "Node23":{
-       "MG94xREV with separate rates for branch sets":0.007153763393183249,
-       "Nucleotide GTR":0.009300459418859651,
+       "MG94xREV with separate rates for branch sets":0.007129459009872094,
+       "Nucleotide GTR":0.009305381332158207,
        "unconstrained":0
       },
      "Node25":{
-       "MG94xREV with separate rates for branch sets":0.01515405104080132,
-       "Nucleotide GTR":0.01192729735209172,
-       "unconstrained":0.02359476656109723
+       "MG94xREV with separate rates for branch sets":0.01518939054024305,
+       "Nucleotide GTR":0.01191460821183414,
+       "unconstrained":0.02341788021766187
       },
      "Node27":{
-       "MG94xREV with separate rates for branch sets":0.01248406363022526,
-       "Nucleotide GTR":0.01121458181727153,
-       "unconstrained":0.01720315222130872
+       "MG94xREV with separate rates for branch sets":0.01247576656146453,
+       "Nucleotide GTR":0.01123072081687058,
+       "unconstrained":0.01703370438455208
       },
      "Node29":{
-       "MG94xREV with separate rates for branch sets":0.02639019120650299,
-       "Nucleotide GTR":0.02290620057557038,
-       "unconstrained":0.035245794977479
+       "MG94xREV with separate rates for branch sets":0.02641356983985244,
+       "Nucleotide GTR":0.02287222908220434,
+       "unconstrained":0.03502197641419903
       },
      "Node35":{
-       "MG94xREV with separate rates for branch sets":0.0102026713193585,
-       "Nucleotide GTR":0.009939354064816835,
-       "unconstrained":0.01090372052898467
+       "MG94xREV with separate rates for branch sets":0.01021035862807502,
+       "Nucleotide GTR":0.009940957052261019,
+       "unconstrained":0.01085280530279469
       },
      "Node40":{
-       "MG94xREV with separate rates for branch sets":0.01037951617227624,
-       "Nucleotide GTR":0.01011675991108726,
-       "unconstrained":0.01148841279477988
+       "MG94xREV with separate rates for branch sets":0.01039241401473394,
+       "Nucleotide GTR":0.01010416416925657,
+       "unconstrained":0.01143523015537373
       },
      "Node46":{
-       "MG94xREV with separate rates for branch sets":0.01044781067080497,
-       "Nucleotide GTR":0.01021397248485192,
-       "unconstrained":0.01142331025630377
+       "MG94xREV with separate rates for branch sets":0.01043963689014209,
+       "Nucleotide GTR":0.01024132361439697,
+       "unconstrained":0.0113882652882636
       },
      "Node57":{
-       "MG94xREV with separate rates for branch sets":0.01039451478136076,
-       "Nucleotide GTR":0.0101430580139868,
-       "unconstrained":0.01142348918127038
+       "MG94xREV with separate rates for branch sets":0.01039860633201926,
+       "Nucleotide GTR":0.01011716704470008,
+       "unconstrained":0.01136545224252305
       },
      "Node6":{
-       "MG94xREV with separate rates for branch sets":0.01026882984366616,
-       "Nucleotide GTR":0.01002914218841439,
-       "unconstrained":0.01096499562953771
+       "MG94xREV with separate rates for branch sets":0.01027183117020639,
+       "Nucleotide GTR":0.01001507298590041,
+       "unconstrained":0.01089640394473199
       },
      "Node7":{
-       "MG94xREV with separate rates for branch sets":0.02120388851124385,
-       "Nucleotide GTR":0.02036704276341284,
-       "unconstrained":0.02347412135756092
+       "MG94xREV with separate rates for branch sets":0.02121620776473343,
+       "Nucleotide GTR":0.020387315478566,
+       "unconstrained":0.02336664053965475
       },
      "Node8":{
-       "MG94xREV with separate rates for branch sets":0.01030392744248197,
-       "Nucleotide GTR":0.009979010543087315,
-       "unconstrained":0.01112863117209449
+       "MG94xREV with separate rates for branch sets":0.01031539101300287,
+       "Nucleotide GTR":0.009990907531446235,
+       "unconstrained":0.01108802501342407
       },
      "XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.203630722568387e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.341735914973082e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":0.01037930942026959,
-       "Nucleotide GTR":0.0101174755885879,
+       "MG94xREV with separate rates for branch sets":0.01039241401902526,
+       "Nucleotide GTR":0.01010422492326252,
        "original name":"XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
-       "unconstrained":0.01148921721394785
+       "unconstrained":0.01141110955658965
       },
      "XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":0.007137279159535388,
-       "Nucleotide GTR":0.008929468487147638,
+       "MG94xREV with separate rates for branch sets":0.007098656019574308,
+       "Nucleotide GTR":0.008918235233957694,
        "original name":"XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
-       "unconstrained":0.00322925263782305
+       "unconstrained":0.003187094992366437
       },
      "XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.203630722568387e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.147198802790874e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
        "unconstrained":0
       },
      "XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.203630722568387e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
        "unconstrained":0
       },
      "XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":0.01044665394059833,
-       "Nucleotide GTR":0.01022080671927743,
+       "MG94xREV with separate rates for branch sets":0.01043963686938741,
+       "Nucleotide GTR":0.01024238776161758,
        "original name":"XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
-       "unconstrained":0.01136612327639694
+       "unconstrained":0.01131327907103538
       },
      "XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":0.06200727524835793,
-       "Nucleotide GTR":0.056665313035377,
+       "MG94xREV with separate rates for branch sets":0.06211108068253612,
+       "Nucleotide GTR":0.05665296259224763,
        "original name":"XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
-       "unconstrained":0.08661951926705883
+       "unconstrained":0.08615741676710018
       },
      "XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.118627295894976e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
        "unconstrained":0
       },
      "XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.118627295894976e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
        "unconstrained":0
       },
      "XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.173612768462132e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.203630722568387e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA",
        "unconstrained":0
       },
      "XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.173612768462132e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.203630722568387e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.203630722568387e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":0.032962374592492,
-       "Nucleotide GTR":0.03199335274440435,
+       "MG94xREV with separate rates for branch sets":0.03297578292404155,
+       "Nucleotide GTR":0.0319783197778726,
        "original name":"XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA",
-       "unconstrained":0.03933924351291623
+       "unconstrained":0.03915869340690445
       },
      "XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.61791721053994e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
        "unconstrained":0
       },
      "XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":0.009808023486672294,
-       "Nucleotide GTR":0.009560905592971031,
+       "MG94xREV with separate rates for branch sets":0.009820119266145858,
+       "Nucleotide GTR":0.009564542544783295,
        "original name":"XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
-       "unconstrained":0.01032143023549565
+       "unconstrained":0.01029964144020832
       },
      "XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.173612768462132e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":5.205427105743089,
-       "Nucleotide GTR":4.314340893226638,
+       "MG94xREV with separate rates for branch sets":5.230218978566084,
+       "Nucleotide GTR":4.305183019117126,
        "original name":"XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
-       "unconstrained":2365.328894895933
+       "unconstrained":135.8081081146885
       },
      "XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.203630722568387e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.165197756896722e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":0.01008965514391447,
-       "Nucleotide GTR":0.01001143176858059,
+       "MG94xREV with separate rates for branch sets":0.01008148084406213,
+       "Nucleotide GTR":0.009992777853487773,
        "original name":"XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
-       "unconstrained":0.01070172762988884
+       "unconstrained":0.01067389015299865
       },
      "XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.173612768462132e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":0.01046873525140798,
-       "Nucleotide GTR":0.01001886890077472,
+       "MG94xREV with separate rates for branch sets":0.01047568719702117,
+       "Nucleotide GTR":0.01001546553292542,
        "original name":"XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
-       "unconstrained":0.01144348966172818
+       "unconstrained":0.01139739473191703
       },
      "XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.360690502343724e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
        "unconstrained":0
       },
      "XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.203630722568387e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":0.03740713268422504,
-       "Nucleotide GTR":0.03312738301048786,
+       "MG94xREV with separate rates for branch sets":0.03754080826594337,
+       "Nucleotide GTR":0.03313202896999802,
        "original name":"XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
-       "unconstrained":0.04837895549753738
+       "unconstrained":0.04812793677220519
       },
      "XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":0.01016978145088003,
-       "Nucleotide GTR":0.01001240255616359,
+       "MG94xREV with separate rates for branch sets":0.0101728484613091,
+       "Nucleotide GTR":0.01000381696777021,
        "original name":"XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
-       "unconstrained":0.01102186769556588
+       "unconstrained":0.01097161336721419
       },
      "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.165197756896722e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
       },
      "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "MG94xREV with separate rates for branch sets":0.01015642126759853,
-       "Nucleotide GTR":0.009939256502566529,
+       "MG94xREV with separate rates for branch sets":0.01017346913295083,
+       "Nucleotide GTR":0.009940633379023395,
        "original name":"XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA",
-       "unconstrained":0.01078500138911822
+       "unconstrained":0.01071966491988354
       },
      "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
        "MG94xREV with separate rates for branch sets":0,
-       "Nucleotide GTR":1e-06,
+       "Nucleotide GTR":2.025729317285665e-08,
        "original name":"XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
-       "unconstrained":0.00398430579850398
+       "unconstrained":0.0037752895534247
       },
      "XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "MG94xREV with separate rates for branch sets":2.368037961242631e-11,
+       "MG94xREV with separate rates for branch sets":0,
        "Nucleotide GTR":1e-06,
        "original name":"XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA",
        "unconstrained":0
@@ -348,128 +348,128 @@
   },
  "fits":{
    "MG94xREV with separate rates for branch sets":{
-     "AIC-c":1408.51863417482,
+     "AIC-c":1408.597805288967,
      "Equilibrium frequencies":      [
-[0.01613511757602299],
-      [0.03313411906304883],
-      [0.01779367541827674],
-      [0.005664896896600593],
-      [0.03397521559711261],
-      [0.06976948469593718],
-      [0.037467589297233],
-      [0.0119283973290301],
-      [0.01141243281826408],
-      [0.02343589416177112],
-      [0.0125855373748775],
-      [0.004006804099829934],
-      [0.009030028139366224],
-      [0.01854352942286954],
-      [0.009958241021345696],
-      [0.003170362914425091],
-      [0.01484656102388042],
-      [0.03048801586503995],
-      [0.01637266581367428],
-      [0.005212496101940502],
-      [0.03126194211386436],
-      [0.06419766743331268],
-      [0.03447541353808763],
-      [0.01097579103642258],
-      [0.01050103164535203],
-      [0.0215642948483366],
-      [0.01158045163129838],
-      [0.003686819218922722],
-      [0.008308886699262746],
-      [0.01706263619571423],
-      [0.009162972151725674],
-      [0.002917176540864175],
-      [0.01504447825256481],
-      [0.03089444693001107],
-      [0.01659092731132386],
-      [0.005281983088277936],
-      [0.03167869027099757],
-      [0.06505347669486264],
-      [0.03493499999007686],
-      [0.01112210762388373],
-      [0.01064101928816253],
-      [0.02185176515664914],
-      [0.01173482885644121],
-      [0.003735967640654587],
-      [0.008419651193904004],
-      [0.0172900955827382],
-      [0.009285122328582444],
-      [0.00295606497405906],
-      [0.01128387583992538],
-      [0.001929189458925604],
-      [0.01157031257426885],
-      [0.02376010665098662],
-      [0.01275964587580595],
-      [0.004062234284060913],
-      [0.007981130248728104],
-      [0.00428602434990438],
-      [0.001364523375175702],
-      [0.003075190143481821],
-      [0.006315027819013626],
-      [0.003391294485756491],
-      [0.001079672027066863] 
+[0.01617148556627309],
+      [0.03318660391908108],
+      [0.01782421688248876],
+      [0.005665908255039663],
+      [0.03399381999578168],
+      [0.06976102691823001],
+      [0.03746799994261354],
+      [0.01191021471373827],
+      [0.0114109927127414],
+      [0.02341727319542378],
+      [0.01257720004280816],
+      [0.003998002381683423],
+      [0.009028730104175851],
+      [0.01852847028998224],
+      [0.009951469386703594],
+      [0.003163343047250084],
+      [0.0148715817271476],
+      [0.03051898295963619],
+      [0.01639146242959701],
+      [0.005210468594739099],
+      [0.03126131301997134],
+      [0.06415346375770814],
+      [0.03445622982599947],
+      [0.01095284232097019],
+      [0.0104937490139645],
+      [0.02153493510076738],
+      [0.01156621372654832],
+      [0.003676633103426022],
+      [0.00830297854123203],
+      [0.0170391062136662],
+      [0.009151545767583853],
+      [0.002909065742005641],
+      [0.01508030431446561],
+      [0.03094731675778365],
+      [0.01662151653621473],
+      [0.005283597499665729],
+      [0.0317000654174097],
+      [0.06505385735313031],
+      [0.03493982286744295],
+      [0.01110656541711845],
+      [0.01064102873746978],
+      [0.02183717782480476],
+      [0.01172854548780753],
+      [0.003728234633649621],
+      [0.008419510810318668],
+      [0.0172782499980836],
+      [0.009279987674141942],
+      [0.002949894467523196],
+      [0.01130243026366057],
+      [0.001929650080768425],
+      [0.01157734551069398],
+      [0.02375865707100273],
+      [0.01276055415319983],
+      [0.004056286432787191],
+      [0.007975269114661907],
+      [0.004283443004368856],
+      [0.001361607931414302],
+      [0.003074933265864764],
+      [0.006310279408385745],
+      [0.00338919248978956],
+      [0.001077346277394255] 
       ],
-     "Log Likelihood":-636.1210192150696,
+     "Log Likelihood":-636.1606047721433,
      "Rate Distributions":{
        "non-synonymous/synonymous rate ratio for *test*":        [
-[0.4293676847290033, 1] 
+[0.4259243235221224, 1] 
         ]
       },
      "display order":1,
      "estimated parameters":66
     },
    "Nucleotide GTR":{
-     "AIC-c":1412.0862968307,
+     "AIC-c":1412.086802319969,
      "Equilibrium frequencies":      [
 [0.2517118597644481],
       [0.4146809093399068],
       [0.2330868255272528],
       [0.1005204053683922] 
       ],
-     "Log Likelihood":-638.3241962297731,
+     "Log Likelihood":-638.3244489744079,
      "Rate Distributions":{
-       "Substitution rate from nucleotide A to nucleotide C":0.1566201309572156,
+       "Substitution rate from nucleotide A to nucleotide C":0.1571393755969973,
        "Substitution rate from nucleotide A to nucleotide G":1,
-       "Substitution rate from nucleotide A to nucleotide T":0,
-       "Substitution rate from nucleotide C to nucleotide G":0.08597188964508289,
-       "Substitution rate from nucleotide C to nucleotide T":2.048868428152511,
-       "Substitution rate from nucleotide G to nucleotide T":0.1828664976418055
+       "Substitution rate from nucleotide A to nucleotide T":6.055290838337745e-19,
+       "Substitution rate from nucleotide C to nucleotide G":0.08616153299887039,
+       "Substitution rate from nucleotide C to nucleotide T":2.054350345861871,
+       "Substitution rate from nucleotide G to nucleotide T":0.1835450972879084
       },
      "display order":0,
      "estimated parameters":67
     },
    "Unconstrained model":{
-     "AIC-c":1403.857479036732,
-     "Log Likelihood":-624.1604053755781,
+     "AIC-c":1404.055490663401,
+     "Log Likelihood":-624.2594111889126,
      "Rate Distributions":{
        "Synonymous site-to-site rates":{
          "0":{
-           "proportion":0.2214195610777152,
-           "rate":0.00132164657873501
+           "proportion":0.228266785466535,
+           "rate":0.02246023838155463
           },
          "1":{
-           "proportion":0.6281927109750922,
-           "rate":0.9821595867308831
+           "proportion":0.6126208932325858,
+           "rate":0.9739544082625576
           },
          "2":{
-           "proportion":0.1503877279471927,
-           "rate":2.544900926559488
+           "proportion":0.1591123213008791,
+           "rate":2.502686471861608
           }
         },
        "Test":{
          "0":{
            "omega":0,
-           "proportion":0.2726361161409853
+           "proportion":0.2716526782051429
           },
          "1":{
-           "omega":0.5903797107990997,
-           "proportion":0.7273638838590146
+           "omega":0.5876643205681406,
+           "proportion":0.7283473217948571
           },
          "2":{
-           "omega":2.145308593859598,
+           "omega":1.010466356543337,
            "proportion":0
           }
         }
@@ -479,15 +479,15 @@
     }
   },
  "input":{
-   "file name":"/Users/agl4001/Documents/AOC-develop/results/Primate_REM2/Primate_REM2.1.codon.fas",
+   "file name":"/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.1.codon.fas",
    "number of sequences":35,
    "number of sites":61,
    "partition count":1,
    "trees":{
-     "0":"(XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,((XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA,XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA,XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA)Node46,XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA)Node40,(XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA)Node57,XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,(((XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,(XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node11,(XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node14)Node8,(XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,(XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,(XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,(XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,(XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA,(XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,(XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node29)Node27)Node25)Node23)Node21)Node19)Node17)Node7,NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,(XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node35,XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node6)"
+     "0":"(XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,((XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.013109961,XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.013109961,XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:1e-10,XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA:1e-10,XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA:1e-10,XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA:1e-10)Node46:0.013083664,XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.013109961,XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA:1e-10)Node40:0.012992045,(XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:5e-09,XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.012853728)Node57:0.012997222,XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.012993569,(((XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:5e-09,(XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:5e-09,XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:1.809996725)Node11:0.025813842,(XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:0.012945468,XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:0.012590695)Node14:0.013220538)Node8:0.013034212,(XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:0.013168101,(XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:5e-09,(XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:5e-09,(XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.072038414,(XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA:0.041160336,(XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:5e-09,(XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.011694637,XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:0.042037751)Node29:0.028984735)Node27:0.014550859)Node25:0.014361698)Node23:0.012745326)Node21:0.013198871)Node19:0.040579948)Node17:0.013034997)Node7:0.026501542,NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:5e-09,(XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:1e-10,XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:1e-10)Node35:0.012861453,XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:1e-10)Node6:1e-10)"
     }
   },
- "runtime":"2.5.74",
+ "runtime":"2.5.86",
  "substitutions":{
    "0":{
      "0":{
@@ -1064,7 +1064,7 @@
        "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
        "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
        "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
-       "root":"CTC"
+       "root":"CTG"
       },
      "6":{
        "Node7":"ACC",
@@ -1154,15 +1154,15 @@
  "timers":{
    "Overall":{
      "order":0,
-     "timer":362
+     "timer":182
     },
    "Preliminary model fitting":{
      "order":1,
-     "timer":9
+     "timer":3
     },
    "Unconstrained BUSTED model fitting":{
      "order":2,
-     "timer":352
+     "timer":178
     }
   }
 }

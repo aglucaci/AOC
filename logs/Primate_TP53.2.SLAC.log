@@ -1,0 +1,97 @@
+
+Analysis Description
+--------------------
+SLAC (Single Likelihood Ancestor Counting) uses a maximum likelihood
+ancestral state reconstruction and minimum path substitution counting to
+estimate site - level dS and dN, and applies a simple binomial - based
+test to test if dS differs drom dN. The estimates aggregate information
+over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well. Multiple partitions within a NEXUS file are also
+supported for recombination - aware analysis. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.00
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas'
+contains 11 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas.FastTree.treefile
+results/Primate_TP53/Primate_TP53.2.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **34** sequences, **66** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas`
+
+>branches => All
+
+>Select the number of samples used to assess ancestral reconstruction uncertainty [select 0 to skip] (permissible range = [0,100000], default value = 100, integer): 
+>samples => 100
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+
+### Branches to include in the SLAC analysis
+Selected 60 branches to include in SLAC calculations: `NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA, XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA, XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node1, XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node11, XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node10, XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA, XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA, Node18, Node16, XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA, XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA, Node25, Node23, Node21, Node15, Node9, XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA, XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node30, XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node29, XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA, XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA, Node36, XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node40, XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node45, Node43, Node39, Node35, Node28, Node8, XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA, XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA, XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA, Node51, XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node50, Node48, Node7, XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA, XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node57, XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node56`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 7 zero-length internal branches: `Node1, Node25, Node28, Node30, Node36, Node50, Node51`
+* Log(L) =  -735.68, AIC-c =  1608.77 (68 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.164
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -724.43, AIC-c =  1589.17 (68 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.477
+* non-synonymous/synonymous rate ratio for *test* =   0.3106
+
+### Performing joint maximum likelihood ancestral state reconstruction
+
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |       S        |       N        |       dS       |       dN       |Selection detected?|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|
+|       12       |       1        |     2.000      |     0.000      |     4.166      |     0.000      |  Neg. p = 0.029   |
+|       28       |       1        |     7.000      |     3.000      |     6.970      |     1.503      |  Neg. p = 0.020   |
+|       33       |       1        |     3.000      |     4.000      |     6.225      |     1.599      |  Neg. p = 0.089   |
+|       43       |       1        |     4.000      |     0.000      |     4.044      |     0.000      |  Neg. p = 0.012   |
+|       49       |       1        |     2.000      |     2.000      |     4.829      |     0.778      |  Neg. p = 0.095   |
+|       54       |       1        |     4.000      |     1.000      |     3.414      |     0.570      |  Neg. p = 0.088   |
+
+### Ancestor sampling analysis
+
+>Generating 100 ancestral sequence samples to obtain confidence intervals
+
+[2K	Sample 1/100 for partition 1[2K	Sample 2/100 for partition 1[2K	Sample 3/100 for partition 1[2K	Sample 4/100 for partition 1[2K	Sample 5/100 for partition 1[2K	Sample 6/100 for partition 1[2K	Sample 7/100 for partition 1[2K	Sample 8/100 for partition 1[2K	Sample 9/100 for partition 1[2K	Sample 10/100 for partition 1[2K	Sample 11/100 for partition 1[2K	Sample 12/100 for partition 1[2K	Sample 13/100 for partition 1[2K	Sample 14/100 for partition 1[2K	Sample 15/100 for partition 1[2K	Sample 16/100 for partition 1[2K	Sample 17/100 for partition 1[2K	Sample 18/100 for partition 1[2K	Sample 19/100 for partition 1[2K	Sample 20/100 for partition 1[2K	Sample 21/100 for partition 1[2K	Sample 22/100 for partition 1[2K	Sample 23/100 for partition 1[2K	Sample 24/100 for partition 1[2K	Sample 25/100 for partition 1[2K	Sample 26/100 for partition 1[2K	Sample 27/100 for partition 1[2K	Sample 28/100 for partition 1[2K	Sample 29/100 for partition 1[2K	Sample 30/100 for partition 1[2K	Sample 31/100 for partition 1[2K	Sample 32/100 for partition 1[2K	Sample 33/100 for partition 1[2K	Sample 34/100 for partition 1[2K	Sample 35/100 for partition 1[2K	Sample 36/100 for partition 1[2K	Sample 37/100 for partition 1[2K	Sample 38/100 for partition 1[2K	Sample 39/100 for partition 1[2K	Sample 40/100 for partition 1[2K	Sample 41/100 for partition 1[2K	Sample 42/100 for partition 1[2K	Sample 43/100 for partition 1[2K	Sample 44/100 for partition 1[2K	Sample 45/100 for partition 1[2K	Sample 46/100 for partition 1[2K	Sample 47/100 for partition 1[2K	Sample 48/100 for partition 1[2K	Sample 49/100 for partition 1[2K	Sample 50/100 for partition 1[2K	Sample 51/100 for partition 1[2K	Sample 52/100 for partition 1[2K	Sample 53/100 for partition 1[2K	Sample 54/100 for partition 1[2K	Sample 55/100 for partition 1[2K	Sample 56/100 for partition 1[2K	Sample 57/100 for partition 1[2K	Sample 58/100 for partition 1[2K	Sample 59/100 for partition 1[2K	Sample 60/100 for partition 1[2K	Sample 61/100 for partition 1[2K	Sample 62/100 for partition 1[2K	Sample 63/100 for partition 1[2K	Sample 64/100 for partition 1[2K	Sample 65/100 for partition 1[2K	Sample 66/100 for partition 1[2K	Sample 67/100 for partition 1[2K	Sample 68/100 for partition 1[2K	Sample 69/100 for partition 1[2K	Sample 70/100 for partition 1[2K	Sample 71/100 for partition 1[2K	Sample 72/100 for partition 1[2K	Sample 73/100 for partition 1[2K	Sample 74/100 for partition 1[2K	Sample 75/100 for partition 1[2K	Sample 76/100 for partition 1[2K	Sample 77/100 for partition 1[2K	Sample 78/100 for partition 1[2K	Sample 79/100 for partition 1[2K	Sample 80/100 for partition 1[2K	Sample 81/100 for partition 1[2K	Sample 82/100 for partition 1[2K	Sample 83/100 for partition 1[2K	Sample 84/100 for partition 1[2K	Sample 85/100 for partition 1[2K	Sample 86/100 for partition 1[2K	Sample 87/100 for partition 1[2K	Sample 88/100 for partition 1[2K	Sample 89/100 for partition 1[2K	Sample 90/100 for partition 1[2K	Sample 91/100 for partition 1[2K	Sample 92/100 for partition 1[2K	Sample 93/100 for partition 1[2K	Sample 94/100 for partition 1[2K	Sample 95/100 for partition 1[2K	Sample 96/100 for partition 1[2K	Sample 97/100 for partition 1[2K	Sample 98/100 for partition 1[2K	Sample 99/100 for partition 1[2K	Sample 100/100 for partition 1[2KDone with ancestral sampling              
+Resampling results for partition 1
+
+|     Codon      |   Partition    |    S [median, IQR]    |    N [median, IQR]    |    dS [median, IQR]    |    dN [median, IQR]    |  p-value [median, IQR]  |
+|:--------------:|:--------------:|:---------------------:|:---------------------:|:----------------------:|:----------------------:|:-----------------------:|
+|       12       |       1        |   2.00 [0.84-2.00]    |   0.00 [0.00-3.00]    |    4.17 [1.33-4.17]    |    0.00 [0.00-1.34]    |    0.03 [0.03-0.70]     |
+|       28       |       1        |   7.00 [6.00-8.16]    |   3.00 [3.00-3.00]    |    6.97 [5.97-8.12]    |    1.50 [1.50-1.50]    |    0.02 [0.01-0.04]     |
+|       33       |       1        |   3.00 [1.17-3.00]    |   4.00 [4.00-6.83]    |    6.22 [2.38-6.61]    |    1.60 [1.58-2.81]    |    0.11 [0.09-0.71]     |
+|       43       |       1        |   5.00 [4.00-6.00]    |   1.00 [0.00-3.50]    |    5.00 [4.00-6.12]    |    0.50 [0.00-1.65]    |    0.01 [0.00-0.13]     |
+|       49       |       1        |   2.00 [1.00-2.00]    |   2.00 [2.00-4.00]    |    4.83 [2.04-5.01]    |    0.78 [0.77-1.66]    |    0.14 [0.10-0.51]     |
+|       54       |       1        |   4.00 [4.00-5.00]    |   1.00 [1.00-2.24]    |    3.78 [3.40-4.90]    |    0.57 [0.53-1.10]    |    0.09 [0.02-0.10]     |
+
+
+

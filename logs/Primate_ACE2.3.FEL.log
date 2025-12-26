@@ -1,0 +1,109 @@
+
+Analysis Description
+--------------------
+FEL (Fixed Effects Likelihood) estimates site-wise synonymous (&alpha;)
+and non-synonymous (&beta;) rates, and uses a likelihood ratio test to
+determine if beta &neq; alpha at a site. The estimates aggregate
+information over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well, in which case an additional (nuisance) parameter
+will be inferred -- the non-synonymous rate on branches NOT selected for
+testing. Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. Version 2.5 adds MH support. Version 2.6
+adds substitution mapping. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.3.codon.fas'
+contains 12 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.3.codon.fas.FastTree.treefile
+results/Primate_ACE2/Primate_ACE2.3.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **31** sequences, **45** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.3.codon.fas`
+
+>branches => All
+
+>srv => Yes
+
+>multiple-hits => None
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+>ci => Yes
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample => 0
+
+
+### Branches to include in the FEL analysis
+Selected 51 branches to include in FEL calculations: `XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node1, NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA, XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node11, XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node10, XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node9, XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node8, XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node27, XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node26, Node24, Node22, XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node34, XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA, Node37, Node33, XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node32, XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node31, Node21, Node19, Node7, NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node43, NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node49, Node42`
+
+>precision => standard
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 7 zero-length internal branches: `Node1, Node26, Node37, Node42, Node7, Node8, Node9`
+* Log(L) =  -527.62, AIC-c =  1174.95 (59 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.558
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -520.38, AIC-c =  1164.07 (59 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.640
+* non-synonymous/synonymous rate ratio for *test* =   0.6647
+
+>full-model => Yes
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) =  -520.27, AIC-c =  1163.84 (59 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.644
+* non-synonymous/synonymous rate ratio for *test* =   0.6437
+[2KWorking on site pattern 1/41 in partition 1[2KWorking on site pattern 2/41 in partition 1[2KWorking on site pattern 3/41 in partition 1[2KWorking on site pattern 4/41 in partition 1[2KWorking on site pattern 5/41 in partition 1[2KWorking on site pattern 6/41 in partition 1[2KWorking on site pattern 7/41 in partition 1[2KWorking on site pattern 8/41 in partition 1[2KWorking on site pattern 9/41 in partition 1[2KWorking on site pattern 10/41 in partition 1[2KWorking on site pattern 11/41 in partition 1[2KWorking on site pattern 12/41 in partition 1[2KWorking on site pattern 13/41 in partition 1[2KWorking on site pattern 14/41 in partition 1[2KWorking on site pattern 15/41 in partition 1[2KWorking on site pattern 16/41 in partition 1[2KWorking on site pattern 17/41 in partition 1[2KWorking on site pattern 18/41 in partition 1[2KWorking on site pattern 19/41 in partition 1[2KWorking on site pattern 20/41 in partition 1[2KWorking on site pattern 21/41 in partition 1[2KWorking on site pattern 22/41 in partition 1[2KWorking on site pattern 23/41 in partition 1[2KWorking on site pattern 24/41 in partition 1[2KWorking on site pattern 25/41 in partition 1[2KWorking on site pattern 26/41 in partition 1[2KWorking on site pattern 27/41 in partition 1[2KWorking on site pattern 28/41 in partition 1[2K                                            [2K
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |     alpha      |      beta      |      LRT       |Selection detected?|dN/dS with confidence intervals|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|:-----------------------------:|
+|       3        |       1        |        2.109   |        0.172   |        4.139   |  Neg. p = 0.0419  |     0.082(   0.00-   0.44)    |
+[2KWorking on site pattern 29/41 in partition 1[2KWorking on site pattern 30/41 in partition 1[2KWorking on site pattern 31/41 in partition 1[2KWorking on site pattern 32/41 in partition 1[2KWorking on site pattern 33/41 in partition 1[2KWorking on site pattern 34/41 in partition 1[2KWorking on site pattern 35/41 in partition 1[2K                                            [2K|       20       |       1        |        7.808   |        0.364   |        6.452   |  Neg. p = 0.0111  |     0.047(   0.01-   0.17)    |
+[2KWorking on site pattern 36/41 in partition 1[2K                                            [2K|       30       |       1        |        1.202   |        0.000   |        3.329   |  Neg. p = 0.0681  |     0.000(   0.00-   0.37)    |
+[2KWorking on site pattern 37/41 in partition 1[2KWorking on site pattern 38/41 in partition 1[2KWorking on site pattern 39/41 in partition 1[2KWorking on site pattern 40/41 in partition 1[2KWorking on site pattern 41/41 in partition 1[2K                                            [2K|       43       |       1        |        1.901   |        0.000   |        6.728   |  Neg. p = 0.0095  |     0.000(   0.00-   0.16)    |
+[2K                                            [2K
+### ** Found _0_ sites under pervasive positive diversifying and _4_ sites under negative selection at p <= 0.1**
+
+--------------------------------------------------------------------------
+A system call failed during shared memory initialization that should
+not have.  It is likely that your MPI job will now either abort or
+experience performance degradation.
+
+  Local host:  Alexs-MacBook-Pro-2.local
+  System call: unlink(2) /var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T/ompi.Alexs-MacBook-Pro-2.501/pid.92646/1/vader_segment.Alexs-MacBook-Pro-2.501.95e30001.1
+  Error:       No such file or directory (errno 2)
+--------------------------------------------------------------------------
+
+

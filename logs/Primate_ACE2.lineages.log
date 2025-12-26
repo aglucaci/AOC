@@ -1,0 +1,214 @@
+[normalize] 'NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA' -> 'NM_001371415.1' (underscore-version)
+[resolve] cand=NM_001371415.1 attempt=1/8 db=nuccore
+[efetch] db=nuccore id=NM_001371415.1
+[taxonomy] taxid=9606
+[resolved] cand=NM_001371415.1 taxid=9606 organism=Homo sapiens
+[normalize] 'XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_016942979.2' (underscore-version)
+[resolve] cand=XM_016942979.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.290s
+[efetch] db=nuccore id=XM_016942979.2
+[throttle] sleeping 0.239s
+[taxonomy] taxid=9598
+[resolved] cand=XM_016942979.2 taxid=9598 organism=Pan troglodytes
+[normalize] 'XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_008974180.2' (underscore-version)
+[resolve] cand=XM_008974180.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.228s
+[efetch] db=nuccore id=XM_008974180.2
+[throttle] sleeping 0.088s
+[taxonomy] taxid=9597
+[resolved] cand=XM_008974180.2 taxid=9597 organism=Pan paniscus
+[normalize] 'XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA' -> 'XM_019019204.1' (underscore-version)
+[resolve] cand=XM_019019204.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.279s
+[efetch] db=nuccore id=XM_019019204.1
+[throttle] sleeping 0.243s
+[taxonomy] taxid=9595
+[resolved] cand=XM_019019204.1 taxid=9595 organism=Gorilla gorilla gorilla
+[normalize] 'NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA' -> 'NM_001131132.2' (underscore-version)
+[resolve] cand=NM_001131132.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.165s
+[efetch] db=nuccore id=NM_001131132.2
+[throttle] sleeping 0.034s
+[taxonomy] taxid=9601
+[resolved] cand=NM_001131132.2 taxid=9601 organism=Pongo abelii
+[normalize] 'XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_054471966.1' (underscore-version)
+[resolve] cand=XM_054471966.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.284s
+[efetch] db=nuccore id=XM_054471966.1
+[throttle] sleeping 0.238s
+[taxonomy] taxid=9600
+[resolved] cand=XM_054471966.1 taxid=9600 organism=Pongo pygmaeus
+[normalize] 'XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA' -> 'XM_003261084.3' (underscore-version)
+[resolve] cand=XM_003261084.3 attempt=1/8 db=nuccore
+[throttle] sleeping 0.286s
+[efetch] db=nuccore id=XM_003261084.3
+[throttle] sleeping 0.237s
+[taxonomy] taxid=61853
+[resolved] cand=XM_003261084.3 taxid=61853 organism=Nomascus leucogenys
+[normalize] 'XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA' -> 'XM_032756617.1' (underscore-version)
+[resolve] cand=XM_032756617.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.313s
+[efetch] db=nuccore id=XM_032756617.1
+[throttle] sleeping 0.234s
+[taxonomy] taxid=81572
+[resolved] cand=XM_032756617.1 taxid=81572 organism=Hylobates moloch
+[normalize] 'NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA' -> 'NM_001135696.1' (underscore-version)
+[resolve] cand=NM_001135696.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.348s
+[efetch] db=nuccore id=NM_001135696.1
+[throttle] sleeping 0.218s
+[taxonomy] taxid=9544
+[resolved] cand=NM_001135696.1 taxid=9544 organism=Macaca mulatta
+[normalize] 'XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA' -> 'XM_005593037.3' (underscore-version)
+[resolve] cand=XM_005593037.3 attempt=1/8 db=nuccore
+[throttle] sleeping 0.326s
+[efetch] db=nuccore id=XM_005593037.3
+[throttle] sleeping 0.221s
+[taxonomy] taxid=9541
+[resolved] cand=XM_005593037.3 taxid=9541 organism=Macaca fascicularis
+[normalize] 'XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_011735203.2' (underscore-version)
+[resolve] cand=XM_011735203.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.358s
+[efetch] db=nuccore id=XM_011735203.2
+[throttle] sleeping 0.226s
+[taxonomy] taxid=9545
+[resolved] cand=XM_011735203.2 taxid=9545 organism=Macaca nemestrina
+[normalize] 'XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_050777627.1' (underscore-version)
+[resolve] cand=XM_050777627.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.309s
+[efetch] db=nuccore id=XM_050777627.1
+[throttle] sleeping 0.187s
+[taxonomy] taxid=257877
+[resolved] cand=XM_050777627.1 taxid=257877 organism=Macaca thibetana thibetana
+[normalize] 'XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_021933040.1' (underscore-version)
+[resolve] cand=XM_021933040.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.371s
+[efetch] db=nuccore id=XM_021933040.1
+[throttle] sleeping 0.030s
+[taxonomy] taxid=9555
+[resolved] cand=XM_021933040.1 taxid=9555 organism=Papio anubis
+[normalize] 'XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA' -> 'XM_025372062.1' (underscore-version)
+[resolve] cand=XM_025372062.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.239s
+[efetch] db=nuccore id=XM_025372062.1
+[throttle] sleeping 0.244s
+[taxonomy] taxid=9565
+[resolved] cand=XM_025372062.1 taxid=9565 organism=Theropithecus gelada
+[normalize] 'XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA' -> 'XM_011995533.1' (underscore-version)
+[resolve] cand=XM_011995533.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.328s
+[efetch] db=nuccore id=XM_011995533.1
+[throttle] sleeping 0.241s
+[taxonomy] taxid=9568
+[resolved] cand=XM_011995533.1 taxid=9568 organism=Mandrillus leucophaeus
+[normalize] 'XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_012035808.1' (underscore-version)
+[resolve] cand=XM_012035808.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.349s
+[efetch] db=nuccore id=XM_012035808.1
+[taxonomy] taxid=9531
+[resolved] cand=XM_012035808.1 taxid=9531 organism=Cercocebus atys
+[normalize] 'XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_007991113.2' (underscore-version)
+[resolve] cand=XM_007991113.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.340s
+[efetch] db=nuccore id=XM_007991113.2
+[throttle] sleeping 0.242s
+[taxonomy] taxid=60711
+[resolved] cand=XM_007991113.2 taxid=60711 organism=Chlorocebus sabaeus
+[normalize] 'XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA' -> 'XM_023199053.2' (underscore-version)
+[resolve] cand=XM_023199053.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.229s
+[efetch] db=nuccore id=XM_023199053.2
+[throttle] sleeping 0.052s
+[taxonomy] taxid=591936
+[resolved] cand=XM_023199053.2 taxid=591936 organism=Piliocolobus tephrosceles
+[normalize] 'XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA' -> 'XM_010366065.2' (underscore-version)
+[resolve] cand=XM_010366065.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.325s
+[efetch] db=nuccore id=XM_010366065.2
+[throttle] sleeping 0.231s
+[taxonomy] taxid=61622
+[resolved] cand=XM_010366065.2 taxid=61622 organism=Rhinopithecus roxellana
+[normalize] 'XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_017888580.1' (underscore-version)
+[resolve] cand=XM_017888580.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.282s
+[efetch] db=nuccore id=XM_017888580.1
+[throttle] sleeping 0.231s
+[taxonomy] taxid=61621
+[resolved] cand=XM_017888580.1 taxid=61621 organism=Rhinopithecus bieti
+[normalize] 'XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA' -> 'XM_008988993.4' (underscore-version)
+[resolve] cand=XM_008988993.4 attempt=1/8 db=nuccore
+[throttle] sleeping 0.274s
+[efetch] db=nuccore id=XM_008988993.4
+[throttle] sleeping 0.245s
+[taxonomy] taxid=9483
+[resolved] cand=XM_008988993.4 taxid=9483 organism=Callithrix jacchus
+[normalize] 'XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA' -> 'XM_012434682.2' (underscore-version)
+[resolve] cand=XM_012434682.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.305s
+[efetch] db=nuccore id=XM_012434682.2
+[throttle] sleeping 0.229s
+[taxonomy] taxid=37293
+[resolved] cand=XM_012434682.2 taxid=37293 organism=Aotus nancymaae
+[normalize] 'XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_017512376.2' (underscore-version)
+[resolve] cand=XM_017512376.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.345s
+[efetch] db=nuccore id=XM_017512376.2
+[throttle] sleeping 0.255s
+[taxonomy] taxid=2715852
+[resolved] cand=XM_017512376.2 taxid=2715852 organism=Cebus imitator
+[normalize] 'XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_032285963.1' (underscore-version)
+[resolve] cand=XM_032285963.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.328s
+[efetch] db=nuccore id=XM_032285963.1
+[throttle] sleeping 0.236s
+[taxonomy] taxid=9515
+[resolved] cand=XM_032285963.1 taxid=9515 organism=Sapajus apella
+[normalize] 'XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_010336623.2' (underscore-version)
+[resolve] cand=XM_010336623.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.327s
+[efetch] db=nuccore id=XM_010336623.2
+[throttle] sleeping 0.243s
+[taxonomy] taxid=39432
+[resolved] cand=XM_010336623.2 taxid=39432 organism=Saimiri boliviensis boliviensis
+[normalize] 'XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA' -> 'XM_020285237.1' (underscore-version)
+[resolve] cand=XM_020285237.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.311s
+[efetch] db=nuccore id=XM_020285237.1
+[throttle] sleeping 0.251s
+[taxonomy] taxid=30608
+[resolved] cand=XM_020285237.1 taxid=30608 organism=Microcebus murinus
+[normalize] 'XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA' -> 'XM_045538336.1' (underscore-version)
+[resolve] cand=XM_045538336.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.320s
+[efetch] db=nuccore id=XM_045538336.1
+[throttle] sleeping 0.246s
+[taxonomy] taxid=9447
+[resolved] cand=XM_045538336.1 taxid=9447 organism=Lemur catta
+[normalize] 'XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA' -> 'XM_012638731.1' (underscore-version)
+[resolve] cand=XM_012638731.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.344s
+[efetch] db=nuccore id=XM_012638731.1
+[throttle] sleeping 0.027s
+[taxonomy] taxid=379532
+[resolved] cand=XM_012638731.1 taxid=379532 organism=Propithecus coquereli
+[normalize] 'XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA' -> 'XM_053580366.1' (underscore-version)
+[resolve] cand=XM_053580366.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.348s
+[efetch] db=nuccore id=XM_053580366.1
+[throttle] sleeping 0.093s
+[taxonomy] taxid=9470
+[resolved] cand=XM_053580366.1 taxid=9470 organism=Nycticebus coucang
+[normalize] 'XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA' -> 'XM_003791864.2' (underscore-version)
+[resolve] cand=XM_003791864.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.344s
+[efetch] db=nuccore id=XM_003791864.2
+[throttle] sleeping 0.243s
+[taxonomy] taxid=30611
+[resolved] cand=XM_003791864.2 taxid=30611 organism=Otolemur garnettii
+[normalize] 'XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA' -> 'XM_008064619.1' (underscore-version)
+[resolve] cand=XM_008064619.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.341s
+[efetch] db=nuccore id=XM_008064619.1
+[throttle] sleeping 0.246s
+[taxonomy] taxid=1868482
+[resolved] cand=XM_008064619.1 taxid=1868482 organism=Carlito syrichta

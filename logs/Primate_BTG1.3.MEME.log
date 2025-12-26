@@ -1,0 +1,99 @@
+
+Analysis Description
+--------------------
+MEME (Mixed Effects Model of Evolution) estimates a site-wise synonymous
+(&alpha;) and a two-category mixture of non-synonymous (&beta;-, with
+Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. Version 3.0 adds a different format for
+ancestral state reconstruction, branch-site posterior storage, and
+site-level heterogeneity testing. Version 4 adds support for multiple
+hits and more than 2 rate classes on omega, as well as site-level
+imputation option. Version 4.1 fixes bugs with EBF computation for > 2
+more rates and MH reporting. 
+proportion p-, and &beta;+ with proportion [1-p-]) rates, and uses a
+likelihood ratio test to determine if &beta;+ > &alpha; at a site. The
+estimates aggregate information over a proportion of branches at a site,
+so the signal is derived from episodic diversification, which is a
+combination of strength of selection [effect size] and the proportion of
+the tree affected. A subset of branches can be selected for testing as
+well, in which case an additional (nuisance) parameter will be inferred
+-- the non-synonymous rate on branches NOT selected for testing.
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Detecting Individual Sites Subject to Episodic Diversifying Selection.
+_PLoS Genet_ 8(7): e1002764.
+
+- __Written by__: Sergei L. Kosakovsky Pond, Steven Weaver
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 4.1
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_BTG1/Primate_BTG1.3.codon.fas'
+contains 6 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_BTG1/Primate_BTG1.3.codon.fas.FastTree.treefile
+results/Primate_BTG1/Primate_BTG1.3.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **26** sequences, **135** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_BTG1/Primate_BTG1.3.codon.fas`
+
+>branches => All
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample => 0
+The number omega rate classes to include in the model [2 is the strongly recommended default] (permissible range = [2,4], default value = 2, integer): 
+>rates => 2
+
+>multiple-hits => None
+
+>impute-states => No
+
+>precision => standard
+
+
+### Branches to include in the MEME analysis
+Selected 46 branches to include in the MEME analysis: `XM_012469349_2_PREDICTED_Aotus_nancymaae_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_002752814_4_PREDICTED_Callithrix_jacchus_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_032297546_1_PREDICTED_Sapajus_apella_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_003927879_4_PREDICTED_Saimiri_boliviensis_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node6, Node4, Node2, NM_001731_3_Homo_sapiens_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_054444125_2_PREDICTED_Pongo_pygmaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_002823578_4_PREDICTED_Pongo_abelii_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_019038967_4_PREDICTED_Gorilla_gorilla_gorilla_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node10, XM_055237919_2_PREDICTED_Symphalangus_syndactylus_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_032170892_2_PREDICTED_Hylobates_moloch_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node15, Node9, Node1, XM_012031683_1_PREDICTED_Cercocebus_atys_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA, XM_012775241_1_PREDICTED_Microcebus_murinus_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_012664017_1_PREDICTED_Propithecus_coquereli_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA, Node22, XM_003783357_2_PREDICTED_Otolemur_garnettii_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_053582943_1_PREDICTED_Nycticebus_coucang_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node26, XM_069489666_1_PREDICTED_Eulemur_rufifrons_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_045553258_1_PREDICTED_Lemur_catta_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node29, Node25, Node21, Node19, XM_023223561_1_PREDICTED_Piliocolobus_tephrosceles_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node18, XM_011933701_1_PREDICTED_Colobus_angolensis_palliatus_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA, XM_025400855_1_PREDICTED_Theropithecus_gelada_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_003906945_4_PREDICTED_Papio_anubis_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node36, Node34, NM_001266672_1_Macaca_mulatta_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_008004234_3_PREDICTED_Chlorocebus_sabaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node40, XM_050750080_1_PREDICTED_Macaca_thibetana_thibetana_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_033221091_1_PREDICTED_Trachypithecus_francoisi_BTG_anti_proliferation_factor_1_BTG1_mRNA, XM_010383938_2_PREDICTED_Rhinopithecus_roxellana_BTG_anti_proliferation_factor_1_BTG1_mRNA, Node43, Node39, Node33`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 10 zero-length internal branches: `Node1, Node10, Node18, Node33, Node34, Node39, Node4, Node40, Node43, Node6`
+* Log(L) =  -806.02, AIC-c =  1720.60 (54 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.087
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -771.22, AIC-c =  1645.97 (51 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.089
+* non-synonymous/synonymous rate ratio for *test* =   0.0717
+
+>full-model => Yes
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) =  -769.91
+* Log(L) =  -769.91, AIC-c =  1643.35 (51 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.089
+* non-synonymous/synonymous rate ratio for *test* =   0.0624
+[2KWorking on site pattern 1/71 in partition 1[2KWorking on site pattern 2/71 in partition 1[2KWorking on site pattern 3/71 in partition 1[2KWorking on site pattern 4/71 in partition 1[2KWorking on site pattern 5/71 in partition 1[2KWorking on site pattern 6/71 in partition 1[2KWorking on site pattern 7/71 in partition 1[2KWorking on site pattern 8/71 in partition 1[2KWorking on site pattern 9/71 in partition 1[2KWorking on site pattern 10/71 in partition 1[2KWorking on site pattern 11/71 in partition 1[2KWorking on site pattern 12/71 in partition 1[2KWorking on site pattern 13/71 in partition 1[2KWorking on site pattern 14/71 in partition 1[2KWorking on site pattern 15/71 in partition 1[2KWorking on site pattern 16/71 in partition 1[2KWorking on site pattern 17/71 in partition 1[2KWorking on site pattern 18/71 in partition 1[2KWorking on site pattern 19/71 in partition 1[2KWorking on site pattern 20/71 in partition 1[2KWorking on site pattern 21/71 in partition 1[2KWorking on site pattern 22/71 in partition 1[2KWorking on site pattern 23/71 in partition 1[2KWorking on site pattern 24/71 in partition 1[2KWorking on site pattern 25/71 in partition 1[2KWorking on site pattern 26/71 in partition 1[2KWorking on site pattern 27/71 in partition 1[2KWorking on site pattern 28/71 in partition 1[2KWorking on site pattern 29/71 in partition 1[2KWorking on site pattern 30/71 in partition 1[2KWorking on site pattern 31/71 in partition 1[2KWorking on site pattern 32/71 in partition 1[2KWorking on site pattern 33/71 in partition 1[2KWorking on site pattern 34/71 in partition 1[2KWorking on site pattern 35/71 in partition 1[2KWorking on site pattern 36/71 in partition 1[2KWorking on site pattern 37/71 in partition 1[2KWorking on site pattern 38/71 in partition 1[2KWorking on site pattern 39/71 in partition 1[2KWorking on site pattern 40/71 in partition 1[2KWorking on site pattern 41/71 in partition 1[2KWorking on site pattern 42/71 in partition 1[2KWorking on site pattern 43/71 in partition 1[2KWorking on site pattern 44/71 in partition 1[2KWorking on site pattern 45/71 in partition 1[2KWorking on site pattern 46/71 in partition 1[2KWorking on site pattern 47/71 in partition 1[2KWorking on site pattern 48/71 in partition 1[2KWorking on site pattern 49/71 in partition 1[2KWorking on site pattern 50/71 in partition 1[2KWorking on site pattern 51/71 in partition 1[2KWorking on site pattern 52/71 in partition 1[2KWorking on site pattern 53/71 in partition 1[2KWorking on site pattern 54/71 in partition 1[2KWorking on site pattern 55/71 in partition 1[2KWorking on site pattern 56/71 in partition 1[2KWorking on site pattern 57/71 in partition 1[2KWorking on site pattern 58/71 in partition 1[2KWorking on site pattern 59/71 in partition 1[2KWorking on site pattern 60/71 in partition 1[2KWorking on site pattern 61/71 in partition 1[2KWorking on site pattern 62/71 in partition 1[2KWorking on site pattern 63/71 in partition 1[2KWorking on site pattern 64/71 in partition 1[2KWorking on site pattern 65/71 in partition 1[2KWorking on site pattern 66/71 in partition 1[2KWorking on site pattern 67/71 in partition 1[2KWorking on site pattern 68/71 in partition 1[2KWorking on site pattern 69/71 in partition 1[2KWorking on site pattern 70/71 in partition 1[2KWorking on site pattern 71/71 in partition 1[2K                                            [2K
+### ** Found _0_ sites under episodic diversifying positive selection at p <= 0.1**
+
+
+

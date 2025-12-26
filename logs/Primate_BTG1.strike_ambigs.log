@@ -1,0 +1,80 @@
+
+Analysis Description
+--------------------
+ Read an alignment of coding sequences and replace any ambiguous codons
+with ---. Write results to a new file in FASTA format, and report
+changed sequences to stdout 
+
+- __Requirements__: An MSA
+
+- __Citation__: TBD
+
+- __Written by__: Sergei L Kosakovsky Pond
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 0.1
+
+code: Universal
+
+Striking 89 codons that are incompletely resolved from NM_001731_3_Homo_sapiens_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_509262_6_PREDICTED_Pan_troglodytes_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_069489666_1_PREDICTED_Eulemur_rufifrons_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_055237919_2_PREDICTED_Symphalangus_syndactylus_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_054444125_2_PREDICTED_Pongo_pygmaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from NM_001266672_1_Macaca_mulatta_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_050750080_1_PREDICTED_Macaca_thibetana_thibetana_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_045553258_1_PREDICTED_Lemur_catta_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_033221091_1_PREDICTED_Trachypithecus_francoisi_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_032297546_1_PREDICTED_Sapajus_apella_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_032170892_2_PREDICTED_Hylobates_moloch_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_025400855_1_PREDICTED_Theropithecus_gelada_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_017548611_2_PREDICTED_Cebus_imitator_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_012775241_1_PREDICTED_Microcebus_murinus_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_012664017_1_PREDICTED_Propithecus_coquereli_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_012469349_2_PREDICTED_Aotus_nancymaae_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_012031683_1_PREDICTED_Cercocebus_atys_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_002823578_4_PREDICTED_Pongo_abelii_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_011744717_3_PREDICTED_Macaca_nemestrina_BTG_anti_proliferation_factor_1_LOC105483730_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_010383938_2_PREDICTED_Rhinopithecus_roxellana_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_008004234_3_PREDICTED_Chlorocebus_sabaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_005571849_4_PREDICTED_Macaca_fascicularis_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_019038967_4_PREDICTED_Gorilla_gorilla_gorilla_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_003927879_4_PREDICTED_Saimiri_boliviensis_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_003906945_4_PREDICTED_Papio_anubis_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_003846136_7_PREDICTED_Pan_paniscus_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_003783357_2_PREDICTED_Otolemur_garnettii_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_003259651_4_PREDICTED_Nomascus_leucogenys_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_053582943_1_PREDICTED_Nycticebus_coucang_BTG_anti_proliferation_factor_1_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_011933701_1_PREDICTED_Colobus_angolensis_palliatus_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA
+
+Striking 89 codons that are incompletely resolved from XM_023223561_1_PREDICTED_Piliocolobus_tephrosceles_BTG_anti_proliferation_factor_1_BTG1_mRNA

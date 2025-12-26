@@ -1,0 +1,311 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. v2.6 adds tree reports and ASCII
+art
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.1.codon.fas.FastTree.treefile
+results/Primate_ACE2/Primate_ACE2.1.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **31** sequences, **421** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.1.codon.fas`
+
+>branches => All
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 59 branches for testing: `XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node16, XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node21, Node19, Node15, Node13, XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node27, XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node30, Node26, Node24, Node12, XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA, NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA, XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node38, Node36, Node34, NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node42, XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node45, Node41, Node33, Node11, XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node50, Node48, Node10, Node8, XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node57, Node55, Node53, Node7, Node5, Node3`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 6 zero-length internal branches: `Node3, Node36, Node41, Node5, Node55, Node57`
+* Log(L) = -4897.08, AIC-c =  9928.40 (67 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.487
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) = -4767.07, AIC-c =  9776.38 (120 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.43, and 95% of the weight in  0.00 -  2.25
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|XM_008064619_1_PREDICTED_Carlito...|   0.08   |    2     |    3.74 (24.77%)   |   -4760.63    |    9767.58    |     9767.58     |
+|XM_008064619_1_PREDICTED_Carlito...|   0.08   |    3     |    3.76 (24.63%)   |   -4760.63    |    9771.66    |     9767.58     |
+|              Node16               |   0.04   |    2     |    0.54 (45.30%)   |   -4760.63    |    9771.66    |     9767.58     |
+|XM_003791864_2_PREDICTED_Otolemu...|   0.04   |    2     |    2.24 (21.80%)   |   -4759.72    |    9769.84    |     9767.58     |
+|              Node15               |   0.04   |    2     |   >1000 ( 0.60%)   |   -4753.72    |    9757.83    |     9757.83     |
+|              Node15               |   0.04   |    3     |   >1000 ( 0.59%)   |   -4753.72    |    9761.91    |     9757.83     |
+|XM_020285237_1_PREDICTED_Microce...|   0.03   |    2     |    3.51 (18.15%)   |   -4752.49    |    9759.46    |     9757.83     |
+|              Node13               |   0.03   |    2     |    8.00 ( 3.65%)   |   -4752.34    |    9759.16    |     9757.83     |
+|              Node24               |   0.02   |    2     |   30.69 ( 2.62%)   |   -4745.37    |    9745.22    |     9745.22     |
+|              Node24               |   0.02   |    3     |   33.01 ( 2.39%)   |   -4745.38    |    9749.31    |     9745.22     |
+|              Node19               |   0.02   |    2     |   43.58 ( 4.54%)   |   -4738.87    |    9736.29    |     9736.29     |
+|              Node19               |   0.02   |    3     |   45.69 ( 4.28%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_045538336_1_PREDICTED_Lemur_c...|   0.02   |    2     |   0.40 (100.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_053580366_1_PREDICTED_Nyctice...|   0.02   |    2     |    0.60 (88.68%)   |   -4738.86    |    9740.35    |     9736.29     |
+|XM_012638731_1_PREDICTED_Propith...|   0.02   |    2     |    0.36 (83.54%)   |   -4738.86    |    9740.36    |     9736.29     |
+|XM_010336623_2_PREDICTED_Saimiri...|   0.01   |    2     |    0.39 (98.83%)   |   -4738.86    |    9740.36    |     9736.29     |
+|XM_008988993_4_PREDICTED_Callith...|   0.01   |    2     |    0.49 (56.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|              Node12               |   0.01   |    2     |   43.97 ( 4.45%)   |   -4736.92    |    9736.48    |     9736.29     |
+|XM_012434682_2_PREDICTED_Aotus_n...|   0.01   |    2     |    0.11 (91.41%)   |   -4738.87    |    9740.37    |     9736.29     |
+|              Node11               |   0.01   |    2     |    0.73 (48.97%)   |   -4738.86    |    9740.37    |     9736.29     |
+|              Node33               |   0.01   |    2     |    1.83 (99.74%)   |   -4738.86    |    9740.36    |     9736.29     |
+|XM_023199053_2_PREDICTED_Pilioco...|   0.01   |    2     |   1.26 (100.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|              Node34               |   0.01   |    2     |    0.19 (34.42%)   |   -4738.87    |    9740.37    |     9736.29     |
+|              Node42               |   0.01   |    2     |    0.39 (51.09%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_019019204_1_PREDICTED_Gorilla...|   0.01   |    2     |    0.25 (24.25%)   |   -4738.87    |    9740.37    |     9736.29     |
+|              Node45               |   0.01   |    2     |    0.72 ( 9.08%)   |   -4738.87    |    9740.37    |     9736.29     |
+|              Node21               |   0.00   |    2     |    0.57 ( 2.00%)   |   -4738.86    |    9740.36    |     9736.29     |
+|              Node27               |   0.00   |    2     |    0.41 (76.70%)   |   -4738.87    |    9740.37    |     9736.29     |
+|              Node50               |   0.00   |    2     |  >1000 (100.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_003261084_3_PREDICTED_Nomascu...|   0.00   |    2     |    0.50 (24.63%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_032285963_1_PREDICTED_Sapajus...|   0.00   |    2     |    0.25 (25.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|              Node38               |   0.00   |    2     |    0.25 (25.06%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_007991113_2_PREDICTED_Chloroc...|   0.00   |    2     |    0.52 ( 4.20%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_032756617_1_PREDICTED_Hylobat...|   0.00   |    2     |  342.71 ( 0.29%)   |   -4737.98    |    9738.59    |     9736.29     |
+|NM_001135696_1_Macaca_mulatta_an...|   0.00   |    2     |   66.92 ( 0.99%)   |   -4738.85    |    9740.33    |     9736.29     |
+|              Node26               |   0.00   |    2     |    0.93 ( 0.00%)   |   -4738.84    |    9740.31    |     9736.29     |
+|XM_017888580_1_PREDICTED_Rhinopi...|   0.00   |    2     |   1.00 (100.00%)   |   -4739.58    |    9741.80    |     9736.29     |
+|              Node30               |   0.00   |    2     |    0.39 (94.68%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_011995533_1_PREDICTED_Mandril...|   0.00   |    2     |    0.00 ( 5.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|               Node8               |   0.00   |    2     |    0.00 ( 0.25%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_010366065_2_PREDICTED_Rhinopi...|   0.00   |    2     |    0.00 ( 0.25%)   |   -4738.87    |    9740.37    |     9736.29     |
+|              Node48               |   0.00   |    2     |    0.00 ( 0.25%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_017512376_2_PREDICTED_Cebus_i...|   0.00   |    2     |    0.75 ( 5.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_012035808_1_PREDICTED_Cercoce...|   0.00   |    2     |    0.75 (10.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_008974180_2_PREDICTED_Pan_pan...|   0.00   |    2     |   1.00 (100.00%)   |   -4739.59    |    9741.81    |     9736.29     |
+|NM_001371415_1_Homo_sapiens_angi...|   0.00   |    2     |  >1000 (100.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|              Node10               |   0.00   |    2     |    0.20 (27.66%)   |   -4744.04    |    9750.71    |     9736.29     |
+|               Node7               |   0.00   |    2     |    0.00 ( 0.25%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_054471966_1_PREDICTED_Pongo_p...|   0.00   |    2     |    0.00 ( 5.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_050777627_1_PREDICTED_Macaca_...|   0.00   |    2     |   1.00 (100.00%)   |   -4739.23    |    9741.09    |     9736.29     |
+|              Node53               |   0.00   |    2     |   1.00 (100.00%)   |   -4739.22    |    9741.08    |     9736.29     |
+|XM_005593037_3_PREDICTED_Macaca_...|   0.00   |    2     |   1.00 (100.00%)   |   -4739.23    |    9741.09    |     9736.29     |
+|XM_021933040_1_PREDICTED_Papio_a...|   0.00   |    2     |   1.00 (100.00%)   |   -4739.23    |    9741.09    |     9736.29     |
+|XM_011735203_2_PREDICTED_Macaca_...|   0.00   |    2     |    0.25 ( 2.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_025372062_1_PREDICTED_Theropi...|   0.00   |    2     |    0.29 ( 2.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|XM_016942979_2_PREDICTED_Pan_tro...|   0.00   |    2     |    0.25 ( 2.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+|NM_001131132_2_Pongo_abelii_angi...|   0.00   |    2     |    0.29 ( 2.00%)   |   -4738.87    |    9740.37    |     9736.29     |
+
+### Rate class analyses summary
+*  4 branches with **2** rate classes
+*  49 branches with **1** rate classes
+
+### Annotated Tree
+(XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA{1},XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1},XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1},NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA{1},((XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1},((((XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA{2},((XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA{1},XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA{1})Node16{1},(XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA{1},(XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA{1},XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1})Node21{1})Node19{2})Node15{2})Node13{1},(XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1},((XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1},XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1})Node27{1},(XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA{1},XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA{1})Node30{1})Node26{1})Node24{2})Node12{1},((XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA{1},NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA{1},(XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1},XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1})Node38{1})Node34{1},(NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA{1},XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1})Node42{1},(XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA{1},XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA{1})Node45{1})Node33{1})Node11{1},(XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA{1},(XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA{1},XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1})Node50{1})Node48{1})Node10{1})Node8{1},(XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA{1},XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA{1},XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1},XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA{1})Node53{1})Node7{1})
+
+----
+
+```
+|XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA (1)
+|XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+|XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+|NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA (1)
+| |XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+||+Node8 (1)
+|||   |XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA (2)
+|||  |+Node13 (1)
+|||  || |XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA (1)
+|||  |||+Node16 (1)
+|||  ||||XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA (1)
+|||  ||+Node15 (2)
+|||  | ||XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA (1)
+|||  | |+Node19 (2)
+|||  |  ||XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA (1)
+|||  |  |+Node21 (1)
+|||  |   |XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+||| |+Node12 (1)
+||| |||XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+||| ||+Node24 (2)
+||| | | |XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+||| | ||+Node27 (1)
+||| | |||XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+||| | |+Node26 (1)
+||| |  ||XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA (1)
+||| |  |+Node30 (1)
+||| |   |XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA (1)
+||||+Node11 (1)
+||||| |XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA (1)
+||||||+Node34 (1)
+|||||||NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA (1)
+||||||||XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+|||||||+Node38 (1)
+|||||| |XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+|||||+Node33 (1)
+|||| ||NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA (1)
+|||| |+Node42 (1)
+|||| ||XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+|||| ||XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA (1)
+|||| |+Node45 (1)
+||||  |XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA (1)
+|||+Node10 (1)
+|| ||XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA (1)
+|| |+Node48 (1)
+||  ||XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA (1)
+||  |+Node50 (1)
+||   |XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+|+Node7 (1)
+ ||XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA (1)
+ ||XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA (1)
+ |+Node53 (1)
+  |XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+  |XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (1)
+```
+
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) = -4737.72, AIC-c =  9734.00 (128 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|XM_008064619_1_PREDICTED_Carlito...|     2    |    3.42 (25.61%)   |         46       |        6.34        |       0.01497      |
+|              Node16               |     1    |   0.52 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_003791864_2_PREDICTED_Otolemu...|     1    |   0.44 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node15               |     2    |   >1000 ( 0.58%)   |          2       |       11.15        |       0.00131      |
+|XM_020285237_1_PREDICTED_Microce...|     1    |   0.53 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node13               |     1    |   0.40 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node24               |     2    |   30.26 ( 2.62%)   |          5       |       11.70        |       0.00099      |
+|              Node19               |     2    |   39.00 ( 4.63%)   |         10       |       11.34        |       0.00118      |
+|XM_045538336_1_PREDICTED_Lemur_c...|     1    |   0.39 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_053580366_1_PREDICTED_Nyctice...|     1    |   0.57 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012638731_1_PREDICTED_Propith...|     1    |   0.34 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_010336623_2_PREDICTED_Saimiri...|     1    |   0.39 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_008988993_4_PREDICTED_Callith...|     1    |   0.46 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node12               |     1    |   1.93 (100.00%)   |       N/A        |        0.67        |       0.29685      |
+|XM_012434682_2_PREDICTED_Aotus_n...|     1    |   0.10 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node11               |     1    |   0.65 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node33               |     1    |   1.75 (100.00%)   |       N/A        |        0.33        |       0.36854      |
+|XM_023199053_2_PREDICTED_Pilioco...|     1    |   1.22 (100.00%)   |       N/A        |        0.06        |       0.45283      |
+|              Node34               |     1    |   0.07 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node42               |     1    |   0.31 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_019019204_1_PREDICTED_Gorilla...|     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node45               |     1    |   0.42 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node21               |     1    |   0.20 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node27               |     1    |   0.30 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node50               |     1    |  >1000 (100.00%)   |       N/A        |        2.89        |       0.08868      |
+|XM_003261084_3_PREDICTED_Nomascu...|     1    |   0.42 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_032285963_1_PREDICTED_Sapajus...|     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node38               |     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_007991113_2_PREDICTED_Chloroc...|     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_032756617_1_PREDICTED_Hylobat...|     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|NM_001135696_1_Macaca_mulatta_an...|     1    |   0.84 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node26               |     1    |   0.74 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_017888580_1_PREDICTED_Rhinopi...|     1    |  >1000 (100.00%)   |       N/A        |        1.40        |       0.19664      |
+|              Node30               |     1    |   0.36 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_011995533_1_PREDICTED_Mandril...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node8               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_010366065_2_PREDICTED_Rhinopi...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node48               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_017512376_2_PREDICTED_Cebus_i...|     1    |   0.41 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012035808_1_PREDICTED_Cercoce...|     1    |   0.42 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_008974180_2_PREDICTED_Pan_pan...|     1    |  >1000 (100.00%)   |       N/A        |        1.41        |       0.19569      |
+|NM_001371415_1_Homo_sapiens_angi...|     1    |  >1000 (100.00%)   |       N/A        |        1.40        |       0.19591      |
+|              Node10               |     1    |  >1000 (100.00%)   |       N/A        |        0.82        |       0.27228      |
+|               Node7               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_054471966_1_PREDICTED_Pongo_p...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_050777627_1_PREDICTED_Macaca_...|     1    |  >1000 (100.00%)   |       N/A        |        7.04        |       0.01045      |
+|              Node53               |     1    |  >1000 (100.00%)   |       N/A        |        0.70        |       0.29254      |
+|XM_005593037_3_PREDICTED_Macaca_...|     1    |  >1000 (100.00%)   |       N/A        |        0.70        |       0.29152      |
+|XM_021933040_1_PREDICTED_Papio_a...|     1    |  >1000 (100.00%)   |       N/A        |        0.70        |       0.29197      |
+|XM_011735203_2_PREDICTED_Macaca_...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_025372062_1_PREDICTED_Theropi...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_016942979_2_PREDICTED_Pan_tro...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|NM_001131132_2_Pongo_abelii_angi...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+----
+### Adaptive branch site random effects likelihood test 
+Likelihood ratio test for episodic diversifying positive selection at Holm-Bonferroni corrected _p =   0.0500_ found **0** branches under selection among **53** tested.
+
+
+### Annotated Tree
+(XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA,XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA,((XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,((((XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA,((XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA,XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA)Node16,(XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA,(XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA,XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA)Node21)Node19)Node15)Node13,(XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,((XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA)Node27,(XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA,XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA)Node30)Node26)Node24)Node12,((XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA,NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA,(XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA)Node38)Node34,(NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA,XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA)Node42,(XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA,XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA)Node45)Node33)Node11,(XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA,(XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA,XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA)Node50)Node48)Node10)Node8,(XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA,XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA,XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA)Node53)Node7)
+
+----
+
+```
+|XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA (N.S)
+|XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+|XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+|NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA (N.S)
+| |XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+||+Node8 (N.S)
+|||   |XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA (N.S)
+|||  |+Node13 (N.S)
+|||  || |XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA (N.S)
+|||  |||+Node16 (N.S)
+|||  ||||XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA (N.S)
+|||  ||+Node15 (N.S)
+|||  | ||XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA (N.S)
+|||  | |+Node19 (N.S)
+|||  |  ||XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA (N.S)
+|||  |  |+Node21 (N.S)
+|||  |   |XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+||| |+Node12 (N.S)
+||| |||XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+||| ||+Node24 (N.S)
+||| | | |XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+||| | ||+Node27 (N.S)
+||| | |||XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+||| | |+Node26 (N.S)
+||| |  ||XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA (N.S)
+||| |  |+Node30 (N.S)
+||| |   |XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA (N.S)
+||||+Node11 (N.S)
+||||| |XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA (N.S)
+||||||+Node34 (N.S)
+|||||||NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA (N.S)
+||||||||XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+|||||||+Node38 (N.S)
+|||||| |XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+|||||+Node33 (N.S)
+|||| ||NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA (N.S)
+|||| |+Node42 (N.S)
+|||| ||XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+|||| ||XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA (N.S)
+|||| |+Node45 (N.S)
+||||  |XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA (N.S)
+|||+Node10 (N.S)
+|| ||XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA (N.S)
+|| |+Node48 (N.S)
+||  ||XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA (N.S)
+||  |+Node50 (N.S)
+||   |XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+|+Node7 (N.S)
+ ||XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA (N.S)
+ ||XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA (N.S)
+ |+Node53 (N.S)
+  |XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+  |XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA (N.S)
+```
+
+
+

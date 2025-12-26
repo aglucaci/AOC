@@ -1,0 +1,127 @@
+
+Analysis Description
+--------------------
+FEL (Fixed Effects Likelihood) estimates site-wise synonymous (&alpha;)
+and non-synonymous (&beta;) rates, and uses a likelihood ratio test to
+determine if beta &neq; alpha at a site. The estimates aggregate
+information over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well, in which case an additional (nuisance) parameter
+will be inferred -- the non-synonymous rate on branches NOT selected for
+testing. Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. Version 2.5 adds MH support. Version 2.6
+adds substitution mapping. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.3.codon.fas'
+contains 13 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.3.codon.fas.FastTree.treefile
+results/Primate_REM2/Primate_REM2.3.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **35** sequences, **77** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.3.codon.fas`
+
+>branches => All
+
+>srv => Yes
+
+>multiple-hits => None
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+>ci => Yes
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample => 0
+
+
+### Branches to include in the FEL analysis
+Selected 57 branches to include in FEL calculations: `XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA, XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node4, XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node21, Node19, NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node25, XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node30, Node24, Node18, XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node45, Node43, Node41, Node39, Node37, Node35, XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node34, XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node52, XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node55, Node51, Node49, Node33, Node17, Node15, Node3`
+
+>precision => standard
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 14 zero-length internal branches: `Node15, Node21, Node24, Node25, Node3, Node30, Node33, Node37, Node39, Node4, Node41, Node51, Node52, Node55`
+* Log(L) =  -949.04, AIC-c =  2029.15 (65 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.876
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -893.16, AIC-c =  1904.92 (58 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.402
+* non-synonymous/synonymous rate ratio for *test* =   0.1401
+
+>full-model => Yes
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) =  -881.71, AIC-c =  1882.01 (58 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  6.718
+* non-synonymous/synonymous rate ratio for *test* =   0.0516
+[2KWorking on site pattern 1/76 in partition 1[2KWorking on site pattern 2/76 in partition 1[2KWorking on site pattern 3/76 in partition 1[2KWorking on site pattern 4/76 in partition 1[2KWorking on site pattern 5/76 in partition 1[2KWorking on site pattern 6/76 in partition 1[2KWorking on site pattern 7/76 in partition 1[2KWorking on site pattern 8/76 in partition 1[2KWorking on site pattern 9/76 in partition 1[2KWorking on site pattern 10/76 in partition 1[2KWorking on site pattern 11/76 in partition 1[2KWorking on site pattern 12/76 in partition 1[2KWorking on site pattern 13/76 in partition 1[2KWorking on site pattern 14/76 in partition 1[2KWorking on site pattern 15/76 in partition 1[2KWorking on site pattern 16/76 in partition 1[2KWorking on site pattern 17/76 in partition 1[2KWorking on site pattern 18/76 in partition 1[2K                                            [2K
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |     alpha      |      beta      |      LRT       |Selection detected?|dN/dS with confidence intervals|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|:-----------------------------:|
+|       4        |       1        |        2.156   |        0.097   |        3.972   |  Neg. p = 0.0463  |     0.045(   0.00-   0.49)    |
+[2KWorking on site pattern 19/76 in partition 1[2KWorking on site pattern 20/76 in partition 1[2KWorking on site pattern 21/76 in partition 1[2K                                            [2K|       10       |       1        |        0.665   |        0.000   |        3.896   |  Neg. p = 0.0484  |     0.000(   0.00-   0.20)    |
+[2KWorking on site pattern 22/76 in partition 1[2KWorking on site pattern 23/76 in partition 1[2KWorking on site pattern 24/76 in partition 1[2KWorking on site pattern 25/76 in partition 1[2KWorking on site pattern 26/76 in partition 1[2KWorking on site pattern 27/76 in partition 1[2KWorking on site pattern 28/76 in partition 1[2KWorking on site pattern 29/76 in partition 1[2K                                            [2K|       22       |       1        |        0.892   |        0.000   |        6.782   |  Neg. p = 0.0092  |     0.000(   0.00-   0.09)    |
+[2KWorking on site pattern 30/76 in partition 1[2K                                            [2K|       21       |       1        |        4.613   |        0.373   |        5.028   |  Neg. p = 0.0249  |     0.081(   0.01-   0.36)    |
+[2KWorking on site pattern 31/76 in partition 1[2K                                            [2K|       26       |       1        |        0.203   |        0.000   |        2.979   |  Neg. p = 0.0844  |     0.000(   0.00-   0.59)    |
+[2KWorking on site pattern 32/76 in partition 1[2KWorking on site pattern 33/76 in partition 1[2KWorking on site pattern 34/76 in partition 1[2KWorking on site pattern 35/76 in partition 1[2K                                            [2K|       23       |       1        |        4.767   |        0.159   |        3.591   |  Neg. p = 0.0581  |     0.033(   0.00-   0.19)    |
+[2KWorking on site pattern 36/76 in partition 1[2KWorking on site pattern 37/76 in partition 1[2K                                            [2K|       27       |       1        |        1.855   |        0.000   |        3.648   |  Neg. p = 0.0561  |     0.000(   0.00-   0.34)    |
+[2KWorking on site pattern 38/76 in partition 1[2KWorking on site pattern 39/76 in partition 1[2K                                            [2K|       36       |       1        |        2.944   |        0.096   |        3.605   |  Neg. p = 0.0576  |     0.033(   0.00-   0.23)    |
+[2KWorking on site pattern 40/76 in partition 1[2K                                            [2K|       34       |       1        |        2.569   |        0.164   |        4.618   |  Neg. p = 0.0316  |     0.064(   0.00-   0.50)    |
+[2KWorking on site pattern 41/76 in partition 1[2KWorking on site pattern 42/76 in partition 1[2KWorking on site pattern 43/76 in partition 1[2KWorking on site pattern 44/76 in partition 1[2KWorking on site pattern 45/76 in partition 1[2K                                            [2K|       32       |       1        |        2.787   |        0.000   |       15.099   |  Neg. p = 0.0001  |     0.000(   0.00-   0.01)    |
+[2KWorking on site pattern 46/76 in partition 1[2KWorking on site pattern 47/76 in partition 1[2KWorking on site pattern 48/76 in partition 1[2KWorking on site pattern 49/76 in partition 1[2KWorking on site pattern 50/76 in partition 1[2K                                            [2K|       40       |       1        |        0.000   |        0.120   |        2.813   |  Pos. p = 0.0935  |  10000.000(3777.65-10000.00)  |
+[2KWorking on site pattern 51/76 in partition 1[2KWorking on site pattern 52/76 in partition 1[2K                                            [2K|       43       |       1        |        1.272   |        0.000   |        3.189   |  Neg. p = 0.0741  |     0.000(   0.00-   0.47)    |
+[2KWorking on site pattern 53/76 in partition 1[2KWorking on site pattern 54/76 in partition 1[2K                                            [2K|       46       |       1        |        4.159   |        0.471   |        3.643   |  Neg. p = 0.0563  |     0.113(   0.01-   0.54)    |
+[2KWorking on site pattern 55/76 in partition 1[2KWorking on site pattern 56/76 in partition 1|       51       |       1        |        0.922   |        0.000   |        5.260   |  Neg. p = 0.0218  |     0.000(   0.00-   0.09)    |
+[2K                                            [2K[2KWorking on site pattern 57/76 in partition 1[2K                                            [2K|       52       |       1        |        0.337   |        0.000   |        4.730   |  Neg. p = 0.0296  |     0.000(   0.00-   0.21)    |
+[2KWorking on site pattern 58/76 in partition 1[2KWorking on site pattern 59/76 in partition 1[2K                                            [2K|       56       |       1        |        3.211   |        0.000   |        4.348   |  Neg. p = 0.0370  |     0.000(   0.00-   0.21)    |
+[2KWorking on site pattern 60/76 in partition 1[2K                                            [2K|       49       |       1        |        0.793   |        0.000   |        6.632   |  Neg. p = 0.0100  |     0.000(   0.00-   0.09)    |
+[2KWorking on site pattern 61/76 in partition 1[2K                                            [2K|       47       |       1        |        2.343   |        0.000   |        8.774   |  Neg. p = 0.0031  |     0.000(   0.00-   0.05)    |
+[2KWorking on site pattern 62/76 in partition 1[2K                                            [2K|       55       |       1        |        5.456   |        0.000   |        8.074   |  Neg. p = 0.0045  |     0.000(   0.00-   0.12)    |
+[2KWorking on site pattern 63/76 in partition 1[2KWorking on site pattern 64/76 in partition 1[2KWorking on site pattern 65/76 in partition 1[2K                                            [2K|       61       |       1        |        1.246   |        0.000   |        6.583   |  Neg. p = 0.0103  |     0.000(   0.00-   0.10)    |
+[2KWorking on site pattern 66/76 in partition 1[2K                                            [2K|       60       |       1        |        1.539   |        0.000   |        3.400   |  Neg. p = 0.0652  |     0.000(   0.00-   0.42)    |
+[2KWorking on site pattern 67/76 in partition 1[2KWorking on site pattern 68/76 in partition 1[2K                                            [2K|       63       |       1        |        1.690   |        0.000   |        8.639   |  Neg. p = 0.0033  |     0.000(   0.00-   0.05)    |
+[2KWorking on site pattern 69/76 in partition 1[2K                                            [2K|       58       |       1        |        2.078   |        0.000   |        4.762   |  Neg. p = 0.0291  |     0.000(   0.00-   0.41)    |
+[2KWorking on site pattern 70/76 in partition 1[2K                                            [2K|       65       |       1        |        1.708   |        0.060   |        3.667   |  Neg. p = 0.0555  |     0.035(   0.00-   0.32)    |
+[2KWorking on site pattern 71/76 in partition 1[2K                                            [2K|       66       |       1        |        2.081   |        0.098   |        3.349   |  Neg. p = 0.0673  |     0.047(   0.01-   0.32)    |
+[2KWorking on site pattern 72/76 in partition 1[2K                                            [2K|       68       |       1        |        0.897   |        0.000   |        4.534   |  Neg. p = 0.0332  |     0.000(   0.00-   0.15)    |
+[2KWorking on site pattern 73/76 in partition 1[2KWorking on site pattern 74/76 in partition 1[2K                                            [2K|       69       |       1        |        2.982   |        0.025   |        7.761   |  Neg. p = 0.0053  |     0.008(   0.00-   0.14)    |
+[2KWorking on site pattern 75/76 in partition 1[2K                                            [2K|       70       |       1        |        2.469   |        0.169   |        4.137   |  Neg. p = 0.0420  |     0.068(   0.01-   0.45)    |
+[2KWorking on site pattern 76/76 in partition 1[2K                                            [2K|       67       |       1        |        4.112   |        0.000   |        9.457   |  Neg. p = 0.0021  |     0.000(   0.00-   0.01)    |
+[2K                                            [2K[2K                                            [2K|       72       |       1        |        1.749   |        0.088   |        3.584   |  Neg. p = 0.0583  |     0.050(   0.01-   0.61)    |
+[2K                                            [2K|       73       |       1        |        9.272   |        0.073   |       11.404   |  Neg. p = 0.0007  |     0.008(   0.00-   0.08)    |
+
+### ** Found _1_ sites under pervasive positive diversifying and _30_ sites under negative selection at p <= 0.1**
+
+
+

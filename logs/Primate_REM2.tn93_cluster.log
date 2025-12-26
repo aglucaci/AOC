@@ -1,0 +1,14 @@
+Read 35 sequences from input file 
+Will perform approximately 595 pairwise distance calculations
+Progress: 
+Created 21 clusters
+Read 21 sequences from input file 
+Will perform approximately 210 pairwise distance calculations
+Progress: 
+Created 18 clusters
+tn93-cluster -f -o results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.cluster.json -t 0.01 results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa
+# Saving to fasta: results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.cluster.fasta
+# Current number of sequences 21
+tn93-cluster -f -o results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.cluster.json -t 0.0125 results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.cluster.fasta
+# Saving to fasta: results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.cluster.fasta
+# Current number of sequences 18

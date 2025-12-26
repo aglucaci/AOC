@@ -1,0 +1,78 @@
+
+Analysis Description
+--------------------
+SLAC (Single Likelihood Ancestor Counting) uses a maximum likelihood
+ancestral state reconstruction and minimum path substitution counting to
+estimate site - level dS and dN, and applies a simple binomial - based
+test to test if dS differs drom dN. The estimates aggregate information
+over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well. Multiple partitions within a NEXUS file are also
+supported for recombination - aware analysis. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.00
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.3.codon.fas'
+contains 12 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.3.codon.fas.FastTree.treefile
+results/Primate_ACE2/Primate_ACE2.3.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **31** sequences, **45** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.3.codon.fas`
+
+>branches => All
+
+>Select the number of samples used to assess ancestral reconstruction uncertainty [select 0 to skip] (permissible range = [0,100000], default value = 100, integer): 
+>samples => 100
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+
+### Branches to include in the SLAC analysis
+Selected 51 branches to include in SLAC calculations: `XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node1, NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA, XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node11, XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node10, XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node9, XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node8, XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA, XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node27, XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node26, Node24, Node22, XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node34, XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA, Node37, Node33, XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node32, XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA, Node31, Node21, Node19, Node7, NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node43, NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA, XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA, Node49, Node42`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 7 zero-length internal branches: `Node1, Node26, Node37, Node42, Node7, Node8, Node9`
+* Log(L) =  -527.62, AIC-c =  1174.95 (59 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.558
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -520.38, AIC-c =  1164.07 (59 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.640
+* non-synonymous/synonymous rate ratio for *test* =   0.6647
+
+### Performing joint maximum likelihood ancestral state reconstruction
+
+### Ancestor sampling analysis
+
+>Generating 100 ancestral sequence samples to obtain confidence intervals
+
+[2K	Sample 1/100 for partition 1[2K	Sample 2/100 for partition 1[2K	Sample 3/100 for partition 1[2K	Sample 4/100 for partition 1[2K	Sample 5/100 for partition 1[2K	Sample 6/100 for partition 1[2K	Sample 7/100 for partition 1[2K	Sample 8/100 for partition 1[2K	Sample 9/100 for partition 1[2K	Sample 10/100 for partition 1[2K	Sample 11/100 for partition 1[2K	Sample 12/100 for partition 1[2K	Sample 13/100 for partition 1[2K	Sample 14/100 for partition 1[2K	Sample 15/100 for partition 1[2K	Sample 16/100 for partition 1[2K	Sample 17/100 for partition 1[2K	Sample 18/100 for partition 1[2K	Sample 19/100 for partition 1[2K	Sample 20/100 for partition 1[2K	Sample 21/100 for partition 1[2K	Sample 22/100 for partition 1[2K	Sample 23/100 for partition 1[2K	Sample 24/100 for partition 1[2K	Sample 25/100 for partition 1[2K	Sample 26/100 for partition 1[2K	Sample 27/100 for partition 1[2K	Sample 28/100 for partition 1[2K	Sample 29/100 for partition 1[2K	Sample 30/100 for partition 1[2K	Sample 31/100 for partition 1[2K	Sample 32/100 for partition 1[2K	Sample 33/100 for partition 1[2K	Sample 34/100 for partition 1[2K	Sample 35/100 for partition 1[2K	Sample 36/100 for partition 1[2K	Sample 37/100 for partition 1[2K	Sample 38/100 for partition 1[2K	Sample 39/100 for partition 1[2K	Sample 40/100 for partition 1[2K	Sample 41/100 for partition 1[2K	Sample 42/100 for partition 1[2K	Sample 43/100 for partition 1[2K	Sample 44/100 for partition 1[2K	Sample 45/100 for partition 1[2K	Sample 46/100 for partition 1[2K	Sample 47/100 for partition 1[2K	Sample 48/100 for partition 1[2K	Sample 49/100 for partition 1[2K	Sample 50/100 for partition 1[2K	Sample 51/100 for partition 1[2K	Sample 52/100 for partition 1[2K	Sample 53/100 for partition 1[2K	Sample 54/100 for partition 1[2K	Sample 55/100 for partition 1[2K	Sample 56/100 for partition 1[2K	Sample 57/100 for partition 1[2K	Sample 58/100 for partition 1[2K	Sample 59/100 for partition 1[2K	Sample 60/100 for partition 1[2K	Sample 61/100 for partition 1[2K	Sample 62/100 for partition 1[2K	Sample 63/100 for partition 1[2K	Sample 64/100 for partition 1[2K	Sample 65/100 for partition 1[2K	Sample 66/100 for partition 1[2K	Sample 67/100 for partition 1[2K	Sample 68/100 for partition 1[2K	Sample 69/100 for partition 1[2K	Sample 70/100 for partition 1[2K	Sample 71/100 for partition 1[2K	Sample 72/100 for partition 1[2K	Sample 73/100 for partition 1[2K	Sample 74/100 for partition 1[2K	Sample 75/100 for partition 1[2K	Sample 76/100 for partition 1[2K	Sample 77/100 for partition 1[2K	Sample 78/100 for partition 1[2K	Sample 79/100 for partition 1[2K	Sample 80/100 for partition 1[2K	Sample 81/100 for partition 1[2K	Sample 82/100 for partition 1[2K	Sample 83/100 for partition 1[2K	Sample 84/100 for partition 1[2K	Sample 85/100 for partition 1[2K	Sample 86/100 for partition 1[2K	Sample 87/100 for partition 1[2K	Sample 88/100 for partition 1[2K	Sample 89/100 for partition 1[2K	Sample 90/100 for partition 1[2K	Sample 91/100 for partition 1[2K	Sample 92/100 for partition 1[2K	Sample 93/100 for partition 1[2K	Sample 94/100 for partition 1[2K	Sample 95/100 for partition 1[2K	Sample 96/100 for partition 1[2K	Sample 97/100 for partition 1[2K	Sample 98/100 for partition 1[2K	Sample 99/100 for partition 1[2K	Sample 100/100 for partition 1[2KDone with ancestral sampling              
+
+### ** No sites found to be under positive or negative selection at p <= 0.1**
+
+
+

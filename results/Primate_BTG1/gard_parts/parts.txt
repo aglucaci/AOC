@@ -1,0 +1,3 @@
+results/Primate_BTG1/gard_parts/Primate_BTG1.1.codon.fas
+results/Primate_BTG1/gard_parts/Primate_BTG1.2.codon.fas
+results/Primate_BTG1/gard_parts/Primate_BTG1.3.codon.fas

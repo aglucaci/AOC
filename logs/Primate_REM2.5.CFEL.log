@@ -1,0 +1,97 @@
+
+Analysis Description
+--------------------
+Contrast-FEL (Fixed Effects Likelihood) investigates whether or not
+selective pressures differ between two or more sets of branches at a
+site. Site-specific synonymous (alpha) and non-synonymous (beta, one per
+branch set) substitution rates are estimated and then beta rates are
+tested for equality at each site. LRT and permutation tests ar used to
+assess significance at each site, and FDR is applied alignment wide to
+call sites with different selective profiles. Version 0.6 adds detailed
+ancestral state reconstruction. Version 0.61 adds storing root states in
+constant sites for ASR.
+
+- __Additional information__: http://www.hyphy.org/methods/other/contrast-fel/
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree; only single partition
+data are supported
+
+- __Citation__: Mol Biol Evol (2021), (38)3 1184–1198
+
+- __Written by__: Sergei L Kosakovsky Pond and Steven Weaver
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 0.61
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.5.codon.fas'
+contains 7 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.5.codon.fas.FastTree.treefile.labelled
+results/Primate_REM2/Primate_REM2.5.codon.fas.FastTree.treefile.labelled
+
+>Loaded a multiple sequence alignment with **35** sequences, **101** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.5.codon.fas`
+
+>branch-set => Haplorrhini
+
+>srv => Yes
+
+>permutations => Yes
+
+>Select nominal p-value threshold to use when testing for selection (FDR correction will be performed on all sites) (permissible range = [0,1], default value = 0.1): 
+>p-value => 0.05
+
+>Select nominal the q-value threshold to use when testing for selection (FDR reporting) (permissible range = [0,1], default value = 0.2): 
+>q-value => 0.20
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+
+### Branches to use as the test set in the FEL-contrast analysis
+Selected 2 sets of branches to test
+
+* Selected 47 branches in group _Haplorrhini_ : `XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node18, XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node23, Node21, Node17, XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node43, Node41, XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node46, Node40, Node2, XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node51, Node49, Node39, XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node55, XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node59, XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, Node62, Node58, Node54, XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA, XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node6`
+* 17 branches are in the background group : `XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node27, Node26, Node16, Node15, Node14, Node12, Node5, XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node31, XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node34, Node30, Node28, XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA`
+
+### **1** test will be performed at each site
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 10 zero-length internal branches: `Node12, Node15, Node21, Node23, Node30, Node5, Node51, Node55, Node59, Node6`
+* Log(L) = -1377.00, AIC-c =  2898.99 (72 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  6.283
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -1353.69, AIC-c =  2850.25 (70 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  8.045
+* non-synonymous/synonymous rate ratio for *Haplorrhini* =   0.1560
+* non-synonymous/synonymous rate ratio for *background* =   0.0697
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -1346.25
+* non-synonymous/synonymous rate ratio for *Haplorrhini* =   0.1055
+* non-synonymous/synonymous rate ratio for *background* =   0.0480
+
+### For partition 1 these sites are significant at p <=0.05
+
+| Codon  |     alpha      |             beta             |        substitutions         |                  test                  |LRT p-value|Permutation p-value|
+|:------:|:--------------:|:----------------------------:|:----------------------------:|:--------------------------------------:|:---------:|:-----------------:|
+|   8    |       11.211   |        0.000 -      1.179    |              5               |                overall                 |  0.0179   |      0.2500       |
+|   24   |        2.321   |        0.000 -      0.361    |              4               |                overall                 |  0.0095   |      0.5000       |
+## ASSERTION FAILED
+Non-constant site passed to ComputeCompressedSubstitutionConstantSite
+Check errors.log for execution error details.

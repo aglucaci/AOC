@@ -1,0 +1,241 @@
+[normalize] 'NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'NM_173527.3' (underscore-version)
+[resolve] cand=NM_173527.3 attempt=1/8 db=nuccore
+[efetch] db=nuccore id=NM_173527.3
+[throttle] sleeping 0.068s
+[taxonomy] taxid=9606
+[resolved] cand=NM_173527.3 taxid=9606 organism=Homo sapiens
+[normalize] 'XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_009427474.5' (underscore-version)
+[resolve] cand=XM_009427474.5 attempt=1/8 db=nuccore
+[throttle] sleeping 0.301s
+[efetch] db=nuccore id=XM_009427474.5
+[throttle] sleeping 0.242s
+[taxonomy] taxid=9598
+[resolved] cand=XM_009427474.5 taxid=9598 organism=Pan troglodytes
+[normalize] 'XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_008960213.4' (underscore-version)
+[resolve] cand=XM_008960213.4 attempt=1/8 db=nuccore
+[throttle] sleeping 0.065s
+[efetch] db=nuccore id=XM_008960213.4
+[throttle] sleeping 0.058s
+[taxonomy] taxid=9597
+[resolved] cand=XM_008960213.4 taxid=9597 organism=Pan paniscus
+[normalize] 'XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA' -> 'XM_011930962.1' (underscore-version)
+[resolve] cand=XM_011930962.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.281s
+[efetch] db=nuccore id=XM_011930962.1
+[throttle] sleeping 0.041s
+[taxonomy] taxid=336983
+[resolved] cand=XM_011930962.1 taxid=336983 organism=Colobus angolensis palliatus
+[normalize] 'XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_055362376.2' (underscore-version)
+[resolve] cand=XM_055362376.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.355s
+[efetch] db=nuccore id=XM_055362376.2
+[throttle] sleeping 0.255s
+[taxonomy] taxid=9595
+[resolved] cand=XM_055362376.2 taxid=9595 organism=Gorilla gorilla gorilla
+[normalize] 'XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_050796554.1' (underscore-version)
+[resolve] cand=XM_050796554.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.262s
+[efetch] db=nuccore id=XM_050796554.1
+[throttle] sleeping 0.249s
+[taxonomy] taxid=257877
+[resolved] cand=XM_050796554.1 taxid=257877 organism=Macaca thibetana thibetana
+[normalize] 'XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_001100692.4' (underscore-version)
+[resolve] cand=XM_001100692.4 attempt=1/8 db=nuccore
+[throttle] sleeping 0.319s
+[efetch] db=nuccore id=XM_001100692.4
+[taxonomy] taxid=9544
+[resolved] cand=XM_001100692.4 taxid=9544 organism=Macaca mulatta
+[normalize] 'XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA' -> 'XM_011990630.1' (underscore-version)
+[resolve] cand=XM_011990630.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.358s
+[efetch] db=nuccore id=XM_011990630.1
+[taxonomy] taxid=9568
+[resolved] cand=XM_011990630.1 taxid=9568 organism=Mandrillus leucophaeus
+[normalize] 'XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_005560816.4' (underscore-version)
+[resolve] cand=XM_005560816.4 attempt=1/8 db=nuccore
+[throttle] sleeping 0.287s
+[efetch] db=nuccore id=XM_005560816.4
+[throttle] sleeping 0.248s
+[taxonomy] taxid=9541
+[resolved] cand=XM_005560816.4 taxid=9541 organism=Macaca fascicularis
+[normalize] 'XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_003901565.5' (underscore-version)
+[resolve] cand=XM_003901565.5 attempt=1/8 db=nuccore
+[efetch] db=nuccore id=XM_003901565.5
+[throttle] sleeping 0.002s
+[taxonomy] taxid=9555
+[resolved] cand=XM_003901565.5 taxid=9555 organism=Papio anubis
+[normalize] 'XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_025392475.1' (underscore-version)
+[resolve] cand=XM_025392475.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.286s
+[efetch] db=nuccore id=XM_025392475.1
+[throttle] sleeping 0.242s
+[taxonomy] taxid=9565
+[resolved] cand=XM_025392475.1 taxid=9565 organism=Theropithecus gelada
+[normalize] 'XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA' -> 'XM_012088533.1' (underscore-version)
+[resolve] cand=XM_012088533.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.315s
+[efetch] db=nuccore id=XM_012088533.1
+[throttle] sleeping 0.227s
+[taxonomy] taxid=9531
+[resolved] cand=XM_012088533.1 taxid=9531 organism=Cercocebus atys
+[normalize] 'XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA' -> 'XM_011772352.3' (underscore-version)
+[resolve] cand=XM_011772352.3 attempt=1/8 db=nuccore
+[throttle] sleeping 0.320s
+[efetch] db=nuccore id=XM_011772352.3
+[throttle] sleeping 0.099s
+[taxonomy] taxid=9545
+[resolved] cand=XM_011772352.3 taxid=9545 organism=Macaca nemestrina
+[normalize] 'XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_007990787.3' (underscore-version)
+[resolve] cand=XM_007990787.3 attempt=1/8 db=nuccore
+[throttle] sleeping 0.310s
+[efetch] db=nuccore id=XM_007990787.3
+[throttle] sleeping 0.234s
+[taxonomy] taxid=60711
+[resolved] cand=XM_007990787.3 taxid=60711 organism=Chlorocebus sabaeus
+[normalize] 'XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_010378358.2' (underscore-version)
+[resolve] cand=XM_010378358.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.324s
+[efetch] db=nuccore id=XM_010378358.2
+[throttle] sleeping 0.238s
+[taxonomy] taxid=61622
+[resolved] cand=XM_010378358.2 taxid=61622 organism=Rhinopithecus roxellana
+[normalize] 'XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_017864286.1' (underscore-version)
+[resolve] cand=XM_017864286.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.311s
+[efetch] db=nuccore id=XM_017864286.1
+[throttle] sleeping 0.118s
+[taxonomy] taxid=61621
+[resolved] cand=XM_017864286.1 taxid=61621 organism=Rhinopithecus bieti
+[normalize] 'XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_033188604.1' (underscore-version)
+[resolve] cand=XM_033188604.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.337s
+[efetch] db=nuccore id=XM_033188604.1
+[throttle] sleeping 0.235s
+[taxonomy] taxid=54180
+[resolved] cand=XM_033188604.1 taxid=54180 organism=Trachypithecus francoisi
+[normalize] 'XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_023230440.1' (underscore-version)
+[resolve] cand=XM_023230440.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.349s
+[efetch] db=nuccore id=XM_023230440.1
+[throttle] sleeping 0.181s
+[taxonomy] taxid=591936
+[resolved] cand=XM_023230440.1 taxid=591936 organism=Piliocolobus tephrosceles
+[normalize] 'XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_035260095.2' (underscore-version)
+[resolve] cand=XM_035260095.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.248s
+[efetch] db=nuccore id=XM_035260095.2
+[throttle] sleeping 0.240s
+[taxonomy] taxid=9483
+[resolved] cand=XM_035260095.2 taxid=9483 organism=Callithrix jacchus
+[normalize] 'XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_064374774.1' (underscore-version)
+[resolve] cand=XM_064374774.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.306s
+[efetch] db=nuccore id=XM_064374774.1
+[throttle] sleeping 0.242s
+[taxonomy] taxid=37293
+[resolved] cand=XM_064374774.1 taxid=37293 organism=Aotus nancymaae
+[normalize] 'XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_032265550.1' (underscore-version)
+[resolve] cand=XM_032265550.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.194s
+[efetch] db=nuccore id=XM_032265550.1
+[throttle] sleeping 0.244s
+[taxonomy] taxid=9515
+[resolved] cand=XM_032265550.1 taxid=9515 organism=Sapajus apella
+[normalize] 'XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_017544499.2' (underscore-version)
+[resolve] cand=XM_017544499.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.356s
+[efetch] db=nuccore id=XM_017544499.2
+[throttle] sleeping 0.035s
+[taxonomy] taxid=2715852
+[resolved] cand=XM_017544499.2 taxid=2715852 organism=Cebus imitator
+[normalize] 'XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_003924335.4' (underscore-version)
+[resolve] cand=XM_003924335.4 attempt=1/8 db=nuccore
+[throttle] sleeping 0.352s
+[efetch] db=nuccore id=XM_003924335.4
+[throttle] sleeping 0.239s
+[taxonomy] taxid=27679
+[resolved] cand=XM_003924335.4 taxid=27679 organism=Saimiri boliviensis
+[normalize] 'XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_003801909.3' (underscore-version)
+[resolve] cand=XM_003801909.3 attempt=1/8 db=nuccore
+[throttle] sleeping 0.272s
+[efetch] db=nuccore id=XM_003801909.3
+[throttle] sleeping 0.008s
+[taxonomy] taxid=30611
+[resolved] cand=XM_003801909.3 taxid=30611 organism=Otolemur garnettii
+[normalize] 'XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_053595668.1' (underscore-version)
+[resolve] cand=XM_053595668.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.260s
+[efetch] db=nuccore id=XM_053595668.1
+[throttle] sleeping 0.095s
+[taxonomy] taxid=9470
+[resolved] cand=XM_053595668.1 taxid=9470 organism=Nycticebus coucang
+[normalize] 'XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA' -> 'XM_012649447.1' (underscore-version)
+[resolve] cand=XM_012649447.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.282s
+[efetch] db=nuccore id=XM_012649447.1
+[throttle] sleeping 0.080s
+[taxonomy] taxid=379532
+[resolved] cand=XM_012649447.1 taxid=379532 organism=Propithecus coquereli
+[normalize] 'XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_012752689.1' (underscore-version)
+[resolve] cand=XM_012752689.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.290s
+[efetch] db=nuccore id=XM_012752689.1
+[throttle] sleeping 0.234s
+[taxonomy] taxid=30608
+[resolved] cand=XM_012752689.1 taxid=30608 organism=Microcebus murinus
+[normalize] 'XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA' -> 'XM_045525960.1' (underscore-version)
+[resolve] cand=XM_045525960.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.240s
+[efetch] db=nuccore id=XM_045525960.1
+[throttle] sleeping 0.248s
+[taxonomy] taxid=9447
+[resolved] cand=XM_045525960.1 taxid=9447 organism=Lemur catta
+[normalize] 'XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_069463304.1' (underscore-version)
+[resolve] cand=XM_069463304.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.354s
+[efetch] db=nuccore id=XM_069463304.1
+[throttle] sleeping 0.230s
+[taxonomy] taxid=859984
+[resolved] cand=XM_069463304.1 taxid=859984 organism=Eulemur rufifrons
+[normalize] 'XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_008065271.2' (underscore-version)
+[resolve] cand=XM_008065271.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.343s
+[efetch] db=nuccore id=XM_008065271.2
+[throttle] sleeping 0.024s
+[taxonomy] taxid=1868482
+[resolved] cand=XM_008065271.2 taxid=1868482 organism=Carlito syrichta
+[normalize] 'XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_003260595.2' (underscore-version)
+[resolve] cand=XM_003260595.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.119s
+[efetch] db=nuccore id=XM_003260595.2
+[throttle] sleeping 0.245s
+[taxonomy] taxid=61853
+[resolved] cand=XM_003260595.2 taxid=61853 organism=Nomascus leucogenys
+[normalize] 'XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_055291876.2' (underscore-version)
+[resolve] cand=XM_055291876.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.001s
+[efetch] db=nuccore id=XM_055291876.2
+[throttle] sleeping 0.093s
+[taxonomy] taxid=9590
+[resolved] cand=XM_055291876.2 taxid=9590 organism=Symphalangus syndactylus
+[normalize] 'XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_032179928.2' (underscore-version)
+[resolve] cand=XM_032179928.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.279s
+[efetch] db=nuccore id=XM_032179928.2
+[throttle] sleeping 0.249s
+[taxonomy] taxid=81572
+[resolved] cand=XM_032179928.2 taxid=81572 organism=Hylobates moloch
+[normalize] 'XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_002824566.5' (underscore-version)
+[resolve] cand=XM_002824566.5 attempt=1/8 db=nuccore
+[throttle] sleeping 0.287s
+[efetch] db=nuccore id=XM_002824566.5
+[throttle] sleeping 0.065s
+[taxonomy] taxid=9601
+[resolved] cand=XM_002824566.5 taxid=9601 organism=Pongo abelii
+[normalize] 'XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA' -> 'XM_054448863.2' (underscore-version)
+[resolve] cand=XM_054448863.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.314s
+[efetch] db=nuccore id=XM_054448863.2
+[throttle] sleeping 0.073s
+[taxonomy] taxid=9600
+[resolved] cand=XM_054448863.2 taxid=9600 organism=Pongo pygmaeus

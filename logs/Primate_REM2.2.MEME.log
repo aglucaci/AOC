@@ -1,0 +1,106 @@
+
+Analysis Description
+--------------------
+MEME (Mixed Effects Model of Evolution) estimates a site-wise synonymous
+(&alpha;) and a two-category mixture of non-synonymous (&beta;-, with
+Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. Version 3.0 adds a different format for
+ancestral state reconstruction, branch-site posterior storage, and
+site-level heterogeneity testing. Version 4 adds support for multiple
+hits and more than 2 rate classes on omega, as well as site-level
+imputation option. Version 4.1 fixes bugs with EBF computation for > 2
+more rates and MH reporting. 
+proportion p-, and &beta;+ with proportion [1-p-]) rates, and uses a
+likelihood ratio test to determine if &beta;+ > &alpha; at a site. The
+estimates aggregate information over a proportion of branches at a site,
+so the signal is derived from episodic diversification, which is a
+combination of strength of selection [effect size] and the proportion of
+the tree affected. A subset of branches can be selected for testing as
+well, in which case an additional (nuisance) parameter will be inferred
+-- the non-synonymous rate on branches NOT selected for testing.
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Detecting Individual Sites Subject to Episodic Diversifying Selection.
+_PLoS Genet_ 8(7): e1002764.
+
+- __Written by__: Sergei L. Kosakovsky Pond, Steven Weaver
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 4.1
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.2.codon.fas'
+contains 4 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.2.codon.fas.FastTree.treefile
+results/Primate_REM2/Primate_REM2.2.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **35** sequences, **142** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.2.codon.fas`
+
+>branches => All
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample => 0
+The number omega rate classes to include in the model [2 is the strongly recommended default] (permissible range = [2,4], default value = 2, integer): 
+>rates => 2
+
+>multiple-hits => None
+
+>impute-states => No
+
+>precision => standard
+
+
+### Branches to include in the MEME analysis
+Selected 66 branches to include in the MEME analysis: `XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node1, XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA, XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node16, XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node23, Node21, Node19, Node15, Node13, XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node29, Node27, XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node32, Node26, Node12, XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node36, XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node42, Node40, XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node46, NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node49, Node45, Node39, Node35, Node11, XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node55, Node53, XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, Node58, Node52, Node10, Node8, Node6, XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node61, Node5, XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, Node64`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 7 zero-length internal branches: `Node1, Node5, Node52, Node55, Node6, Node61, Node64`
+* Log(L) = -1619.24, AIC-c =  3387.23 (74 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.428
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -1556.91, AIC-c =  3264.08 (74 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.431
+* non-synonymous/synonymous rate ratio for *test* =   0.2379
+
+>full-model => Yes
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -1554.05
+* Log(L) = -1554.05, AIC-c =  3258.36 (74 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.430
+* non-synonymous/synonymous rate ratio for *test* =   0.2185
+[2KWorking on site pattern 1/125 in partition 1[2KWorking on site pattern 2/125 in partition 1[2KWorking on site pattern 3/125 in partition 1[2KWorking on site pattern 4/125 in partition 1[2KWorking on site pattern 5/125 in partition 1[2KWorking on site pattern 6/125 in partition 1[2KWorking on site pattern 7/125 in partition 1[2KWorking on site pattern 8/125 in partition 1[2KWorking on site pattern 9/125 in partition 1[2KWorking on site pattern 10/125 in partition 1[2KWorking on site pattern 11/125 in partition 1[2KWorking on site pattern 12/125 in partition 1[2KWorking on site pattern 13/125 in partition 1[2KWorking on site pattern 14/125 in partition 1[2KWorking on site pattern 15/125 in partition 1[2KWorking on site pattern 16/125 in partition 1[2KWorking on site pattern 17/125 in partition 1[2KWorking on site pattern 18/125 in partition 1[2KWorking on site pattern 19/125 in partition 1[2KWorking on site pattern 20/125 in partition 1[2KWorking on site pattern 21/125 in partition 1[2KWorking on site pattern 22/125 in partition 1[2KWorking on site pattern 23/125 in partition 1[2KWorking on site pattern 24/125 in partition 1[2KWorking on site pattern 25/125 in partition 1[2K                                             [2K
+### For partition 1 these sites are significant at p <=0.1
+
+|   Codon    | Partition  |   alpha    |non-syn rate (beta) distribution, rates : weights|    LRT     |Episodic selection detected?| # branches |         List of most common codon substitutions at this site          |
+|:----------:|:----------:|:----------:|:-----------------------------------------------:|:----------:|:--------------------------:|:----------:|:---------------------------------------------------------------------:|
+|     15     |     1      |    0.019   |             0.01/161.42 : 0.00/1.00             |    3.636   |      Yes, p =  0.0765      |     3      |                         [2]Cca>Tca|[1]Cca>Aca                         |
+[2KWorking on site pattern 26/125 in partition 1[2KWorking on site pattern 27/125 in partition 1[2KWorking on site pattern 28/125 in partition 1[2KWorking on site pattern 29/125 in partition 1[2KWorking on site pattern 30/125 in partition 1[2KWorking on site pattern 31/125 in partition 1[2KWorking on site pattern 32/125 in partition 1[2KWorking on site pattern 33/125 in partition 1[2KWorking on site pattern 34/125 in partition 1[2KWorking on site pattern 35/125 in partition 1[2KWorking on site pattern 36/125 in partition 1[2KWorking on site pattern 37/125 in partition 1[2KWorking on site pattern 38/125 in partition 1[2KWorking on site pattern 39/125 in partition 1[2KWorking on site pattern 40/125 in partition 1[2KWorking on site pattern 41/125 in partition 1[2KWorking on site pattern 42/125 in partition 1[2KWorking on site pattern 43/125 in partition 1[2KWorking on site pattern 44/125 in partition 1[2KWorking on site pattern 45/125 in partition 1[2KWorking on site pattern 46/125 in partition 1[2KWorking on site pattern 47/125 in partition 1[2KWorking on site pattern 48/125 in partition 1[2KWorking on site pattern 49/125 in partition 1[2KWorking on site pattern 50/125 in partition 1[2KWorking on site pattern 51/125 in partition 1[2KWorking on site pattern 52/125 in partition 1[2KWorking on site pattern 53/125 in partition 1[2KWorking on site pattern 54/125 in partition 1[2KWorking on site pattern 55/125 in partition 1[2KWorking on site pattern 56/125 in partition 1[2KWorking on site pattern 57/125 in partition 1[2KWorking on site pattern 58/125 in partition 1[2KWorking on site pattern 59/125 in partition 1[2KWorking on site pattern 60/125 in partition 1[2KWorking on site pattern 61/125 in partition 1[2KWorking on site pattern 62/125 in partition 1[2KWorking on site pattern 63/125 in partition 1[2KWorking on site pattern 64/125 in partition 1[2KWorking on site pattern 65/125 in partition 1[2KWorking on site pattern 66/125 in partition 1[2KWorking on site pattern 67/125 in partition 1[2KWorking on site pattern 68/125 in partition 1[2KWorking on site pattern 69/125 in partition 1[2KWorking on site pattern 70/125 in partition 1[2KWorking on site pattern 71/125 in partition 1[2KWorking on site pattern 72/125 in partition 1[2KWorking on site pattern 73/125 in partition 1[2KWorking on site pattern 74/125 in partition 1[2KWorking on site pattern 75/125 in partition 1[2KWorking on site pattern 76/125 in partition 1[2KWorking on site pattern 77/125 in partition 1[2KWorking on site pattern 78/125 in partition 1[2KWorking on site pattern 79/125 in partition 1[2KWorking on site pattern 80/125 in partition 1[2KWorking on site pattern 81/125 in partition 1[2KWorking on site pattern 82/125 in partition 1[2KWorking on site pattern 83/125 in partition 1[2KWorking on site pattern 84/125 in partition 1[2KWorking on site pattern 85/125 in partition 1[2KWorking on site pattern 86/125 in partition 1[2KWorking on site pattern 87/125 in partition 1[2KWorking on site pattern 88/125 in partition 1[2KWorking on site pattern 89/125 in partition 1[2KWorking on site pattern 90/125 in partition 1[2KWorking on site pattern 91/125 in partition 1[2KWorking on site pattern 92/125 in partition 1[2KWorking on site pattern 93/125 in partition 1[2KWorking on site pattern 94/125 in partition 1[2KWorking on site pattern 95/125 in partition 1[2KWorking on site pattern 96/125 in partition 1[2KWorking on site pattern 97/125 in partition 1[2KWorking on site pattern 98/125 in partition 1[2KWorking on site pattern 99/125 in partition 1[2KWorking on site pattern 100/125 in partition 1[2KWorking on site pattern 101/125 in partition 1[2KWorking on site pattern 102/125 in partition 1[2K                                              [2K|     77     |     1      |    6.377   |             0.00/155.10 : 0.00/1.00             |    4.165   |      Yes, p =  0.0581      |     2      |                      [1]gCa>gAa,gcA>gcT,GCa>TTa                       |
+[2KWorking on site pattern 103/125 in partition 1[2KWorking on site pattern 104/125 in partition 1[2KWorking on site pattern 105/125 in partition 1[2KWorking on site pattern 106/125 in partition 1[2KWorking on site pattern 107/125 in partition 1[2KWorking on site pattern 108/125 in partition 1[2KWorking on site pattern 109/125 in partition 1[2KWorking on site pattern 110/125 in partition 1[2KWorking on site pattern 111/125 in partition 1[2KWorking on site pattern 112/125 in partition 1[2KWorking on site pattern 113/125 in partition 1[2KWorking on site pattern 114/125 in partition 1[2KWorking on site pattern 115/125 in partition 1[2KWorking on site pattern 116/125 in partition 1[2KWorking on site pattern 117/125 in partition 1[2KWorking on site pattern 118/125 in partition 1[2KWorking on site pattern 119/125 in partition 1[2KWorking on site pattern 120/125 in partition 1[2KWorking on site pattern 121/125 in partition 1[2KWorking on site pattern 122/125 in partition 1[2KWorking on site pattern 123/125 in partition 1[2KWorking on site pattern 124/125 in partition 1[2KWorking on site pattern 125/125 in partition 1[2K                                              [2K
+### ** Found _2_ sites under episodic diversifying positive selection at p <= 0.1**
+
+
+

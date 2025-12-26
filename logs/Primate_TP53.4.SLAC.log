@@ -1,0 +1,143 @@
+
+Analysis Description
+--------------------
+SLAC (Single Likelihood Ancestor Counting) uses a maximum likelihood
+ancestral state reconstruction and minimum path substitution counting to
+estimate site - level dS and dN, and applies a simple binomial - based
+test to test if dS differs drom dN. The estimates aggregate information
+over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well. Multiple partitions within a NEXUS file are also
+supported for recombination - aware analysis. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.00
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.4.codon.fas'
+contains 4 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.4.codon.fas.FastTree.treefile
+results/Primate_TP53/Primate_TP53.4.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **34** sequences, **277** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.4.codon.fas`
+
+>branches => All
+
+>Select the number of samples used to assess ancestral reconstruction uncertainty [select 0 to skip] (permissible range = [0,100000], default value = 100, integer): 
+>samples => 100
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+
+### Branches to include in the SLAC analysis
+Selected 65 branches to include in SLAC calculations: `XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node1, XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA, XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA, Node8, XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node7, XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA, XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node13, XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node16, Node12, Node6, Node4, XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node28, Node26, Node24, Node22, XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA, XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA, Node34, XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA, XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA, XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node41, Node39, Node37, Node33, Node31, Node21, XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA, XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA, Node45, XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA, XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA, Node51, Node49, XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node55, NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA, XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node58, Node54, Node48, Node44, Node20, XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA, XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node62, XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node61, Node19`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 6 zero-length internal branches: `Node16, Node19, Node26, Node4, Node48, Node8`
+* Log(L) = -3262.09, AIC-c =  6670.57 (73 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.443
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -3117.66, AIC-c =  6384.51 (74 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.455
+* non-synonymous/synonymous rate ratio for *test* =   0.1823
+
+### Performing joint maximum likelihood ancestral state reconstruction
+
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |       S        |       N        |       dS       |       dN       |Selection detected?|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|
+|       1        |       1        |     0.000      |     6.000      |     0.000      |     2.995      |  Pos. p = 0.089   |
+|       18       |       1        |     2.000      |     0.000      |     2.614      |     0.000      |  Neg. p = 0.077   |
+|       28       |       1        |     3.000      |     0.000      |     3.000      |     0.000      |  Neg. p = 0.038   |
+|       49       |       1        |     4.000      |     0.000      |     4.000      |     0.000      |  Neg. p = 0.012   |
+|       53       |       1        |     4.000      |     0.000      |     4.000      |     0.000      |  Neg. p = 0.012   |
+|       63       |       1        |     8.000      |     0.000      |     8.000      |     0.000      |  Neg. p = 0.000   |
+|       64       |       1        |     5.000      |     2.000      |     5.000      |     1.000      |  Neg. p = 0.045   |
+|       69       |       1        |     3.000      |     0.000      |     3.000      |     0.000      |  Neg. p = 0.037   |
+|       74       |       1        |     2.000      |     0.000      |     2.618      |     0.000      |  Neg. p = 0.076   |
+|       81       |       1        |     6.000      |     0.000      |     6.000      |     0.000      |  Neg. p = 0.001   |
+|       82       |       1        |     2.000      |     0.000      |     2.787      |     0.000      |  Neg. p = 0.061   |
+|       83       |       1        |     6.000      |     0.000      |     6.000      |     0.000      |  Neg. p = 0.001   |
+|       87       |       1        |     2.000      |     0.000      |     2.619      |     0.000      |  Neg. p = 0.070   |
+|       90       |       1        |     2.000      |     0.000      |     2.402      |     0.000      |  Neg. p = 0.077   |
+|       94       |       1        |     3.000      |     0.000      |     3.000      |     0.000      |  Neg. p = 0.046   |
+|      126       |       1        |     2.000      |     0.000      |     2.431      |     0.000      |  Neg. p = 0.075   |
+|      136       |       1        |     5.000      |     0.000      |     5.000      |     0.000      |  Neg. p = 0.004   |
+|      155       |       1        |     5.000      |     0.000      |     5.000      |     0.000      |  Neg. p = 0.004   |
+|      160       |       1        |     3.000      |     0.000      |     2.978      |     0.000      |  Neg. p = 0.043   |
+|      162       |       1        |     2.000      |     0.000      |     2.285      |     0.000      |  Neg. p = 0.085   |
+|      164       |       1        |     3.000      |     0.000      |     3.000      |     0.000      |  Neg. p = 0.037   |
+|      165       |       1        |     2.000      |     0.000      |     2.290      |     0.000      |  Neg. p = 0.085   |
+|      167       |       1        |     3.000      |     0.000      |     3.000      |     0.000      |  Neg. p = 0.037   |
+|      185       |       1        |     4.000      |     0.000      |     3.934      |     0.000      |  Neg. p = 0.015   |
+|      199       |       1        |     2.000      |     0.000      |     2.770      |     0.000      |  Neg. p = 0.062   |
+|      228       |       1        |     4.000      |     1.000      |     4.000      |     0.500      |  Neg. p = 0.045   |
+|      249       |       1        |     3.000      |     0.000      |     2.988      |     0.000      |  Neg. p = 0.037   |
+|      269       |       1        |     2.000      |     0.000      |     2.786      |     0.000      |  Neg. p = 0.062   |
+|      277       |       1        |     2.000      |     0.000      |     2.610      |     0.000      |  Neg. p = 0.065   |
+
+### Ancestor sampling analysis
+
+>Generating 100 ancestral sequence samples to obtain confidence intervals
+
+[2K	Sample 1/100 for partition 1[2K	Sample 2/100 for partition 1[2K	Sample 3/100 for partition 1[2K	Sample 4/100 for partition 1[2K	Sample 5/100 for partition 1[2K	Sample 6/100 for partition 1[2K	Sample 7/100 for partition 1[2K	Sample 8/100 for partition 1[2K	Sample 9/100 for partition 1[2K	Sample 10/100 for partition 1[2K	Sample 11/100 for partition 1[2K	Sample 12/100 for partition 1[2K	Sample 13/100 for partition 1[2K	Sample 14/100 for partition 1[2K	Sample 15/100 for partition 1[2K	Sample 16/100 for partition 1[2K	Sample 17/100 for partition 1[2K	Sample 18/100 for partition 1[2K	Sample 19/100 for partition 1[2K	Sample 20/100 for partition 1[2K	Sample 21/100 for partition 1[2K	Sample 22/100 for partition 1[2K	Sample 23/100 for partition 1[2K	Sample 24/100 for partition 1[2K	Sample 25/100 for partition 1[2K	Sample 26/100 for partition 1[2K	Sample 27/100 for partition 1[2K	Sample 28/100 for partition 1[2K	Sample 29/100 for partition 1[2K	Sample 30/100 for partition 1[2K	Sample 31/100 for partition 1[2K	Sample 32/100 for partition 1[2K	Sample 33/100 for partition 1[2K	Sample 34/100 for partition 1[2K	Sample 35/100 for partition 1[2K	Sample 36/100 for partition 1[2K	Sample 37/100 for partition 1[2K	Sample 38/100 for partition 1[2K	Sample 39/100 for partition 1[2K	Sample 40/100 for partition 1[2K	Sample 41/100 for partition 1[2K	Sample 42/100 for partition 1[2K	Sample 43/100 for partition 1[2K	Sample 44/100 for partition 1[2K	Sample 45/100 for partition 1[2K	Sample 46/100 for partition 1[2K	Sample 47/100 for partition 1[2K	Sample 48/100 for partition 1[2K	Sample 49/100 for partition 1[2K	Sample 50/100 for partition 1[2K	Sample 51/100 for partition 1[2K	Sample 52/100 for partition 1[2K	Sample 53/100 for partition 1[2K	Sample 54/100 for partition 1[2K	Sample 55/100 for partition 1[2K	Sample 56/100 for partition 1[2K	Sample 57/100 for partition 1[2K	Sample 58/100 for partition 1[2K	Sample 59/100 for partition 1[2K	Sample 60/100 for partition 1[2K	Sample 61/100 for partition 1[2K	Sample 62/100 for partition 1[2K	Sample 63/100 for partition 1[2K	Sample 64/100 for partition 1[2K	Sample 65/100 for partition 1[2K	Sample 66/100 for partition 1[2K	Sample 67/100 for partition 1[2K	Sample 68/100 for partition 1[2K	Sample 69/100 for partition 1[2K	Sample 70/100 for partition 1[2K	Sample 71/100 for partition 1[2K	Sample 72/100 for partition 1[2K	Sample 73/100 for partition 1[2K	Sample 74/100 for partition 1[2K	Sample 75/100 for partition 1[2K	Sample 76/100 for partition 1[2K	Sample 77/100 for partition 1[2K	Sample 78/100 for partition 1[2K	Sample 79/100 for partition 1[2K	Sample 80/100 for partition 1[2K	Sample 81/100 for partition 1[2K	Sample 82/100 for partition 1[2K	Sample 83/100 for partition 1[2K	Sample 84/100 for partition 1[2K	Sample 85/100 for partition 1[2K	Sample 86/100 for partition 1[2K	Sample 87/100 for partition 1[2K	Sample 88/100 for partition 1[2K	Sample 89/100 for partition 1[2K	Sample 90/100 for partition 1[2K	Sample 91/100 for partition 1[2K	Sample 92/100 for partition 1[2K	Sample 93/100 for partition 1[2K	Sample 94/100 for partition 1[2K	Sample 95/100 for partition 1[2K	Sample 96/100 for partition 1[2K	Sample 97/100 for partition 1[2K	Sample 98/100 for partition 1[2K	Sample 99/100 for partition 1[2K	Sample 100/100 for partition 1[2KDone with ancestral sampling              
+Resampling results for partition 1
+
+|     Codon      |   Partition    |    S [median, IQR]    |    N [median, IQR]    |    dS [median, IQR]    |    dN [median, IQR]    |  p-value [median, IQR]  |
+|:--------------:|:--------------:|:---------------------:|:---------------------:|:----------------------:|:----------------------:|:-----------------------:|
+|       1        |       1        |   0.00 [0.00-0.00]    |   6.00 [6.00-7.00]    |    0.00 [0.00-0.00]    |    2.99 [2.99-3.45]    |    0.09 [0.06-0.09]     |
+|       18       |       1        |   2.00 [2.00-2.16]    |   0.00 [0.00-0.00]    |    2.61 [2.61-2.82]    |    0.00 [0.00-0.00]    |    0.08 [0.07-0.08]     |
+|       28       |       1        |   3.00 [3.00-4.00]    |   0.00 [0.00-0.00]    |    3.00 [3.00-4.00]    |    0.00 [0.00-0.00]    |    0.04 [0.01-0.04]     |
+|       49       |       1        |   4.00 [4.00-5.00]    |   0.00 [0.00-0.00]    |    4.00 [4.00-5.00]    |    0.00 [0.00-0.00]    |    0.01 [0.00-0.01]     |
+|       53       |       1        |   4.00 [4.00-5.16]    |   0.00 [0.00-0.00]    |    4.00 [4.00-5.16]    |    0.00 [0.00-0.00]    |    0.01 [0.00-0.01]     |
+|       63       |       1        |   8.00 [8.00-9.00]    |   0.00 [0.00-0.00]    |    8.00 [8.00-9.00]    |    0.00 [0.00-0.00]    |    0.00 [0.00-0.00]     |
+|       64       |       1        |   5.00 [5.00-6.00]    |   2.00 [2.00-2.00]    |    5.00 [5.00-6.00]    |    1.00 [1.00-1.00]    |    0.05 [0.02-0.05]     |
+|       69       |       1        |   3.00 [3.00-3.00]    |   0.00 [0.00-0.00]    |    3.00 [3.00-3.00]    |    0.00 [0.00-0.00]    |    0.04 [0.04-0.04]     |
+|       74       |       1        |   2.00 [2.00-3.00]    |   0.00 [0.00-0.00]    |    2.62 [2.62-3.88]    |    0.00 [0.00-0.00]    |    0.08 [0.02-0.08]     |
+|       81       |       1        |   6.00 [6.00-7.00]    |   0.00 [0.00-0.00]    |    6.00 [6.00-7.00]    |    0.00 [0.00-0.00]    |    0.00 [0.00-0.00]     |
+|       82       |       1        |   2.00 [2.00-2.00]    |   0.00 [0.00-0.00]    |    2.79 [2.79-2.79]    |    0.00 [0.00-0.00]    |    0.06 [0.06-0.06]     |
+|       83       |       1        |   6.00 [6.00-7.00]    |   0.00 [0.00-0.00]    |    6.00 [6.00-7.00]    |    0.00 [0.00-0.00]    |    0.00 [0.00-0.00]     |
+|       87       |       1        |   2.00 [2.00-2.00]    |   0.00 [0.00-0.00]    |    2.62 [2.62-2.62]    |    0.00 [0.00-0.00]    |    0.07 [0.07-0.07]     |
+|       90       |       1        |   2.00 [2.00-3.00]    |   0.00 [0.00-0.00]    |    2.40 [2.40-3.64]    |    0.00 [0.00-0.00]    |    0.08 [0.02-0.08]     |
+|       94       |       1        |   3.00 [3.00-4.00]    |   0.00 [0.00-0.00]    |    3.00 [3.00-4.00]    |    0.00 [0.00-0.00]    |    0.05 [0.02-0.05]     |
+|      126       |       1        |   2.00 [2.00-3.16]    |   0.00 [0.00-0.00]    |    2.43 [2.43-3.89]    |    0.00 [0.00-0.00]    |    0.08 [0.02-0.08]     |
+|      136       |       1        |   5.00 [4.00-6.00]    |   0.00 [0.00-0.00]    |    5.00 [4.00-6.00]    |    0.00 [0.00-0.00]    |    0.00 [0.00-0.01]     |
+|      155       |       1        |   5.00 [5.00-6.00]    |   0.00 [0.00-0.00]    |    5.00 [5.00-6.00]    |    0.00 [0.00-0.00]    |    0.00 [0.00-0.00]     |
+|      160       |       1        |   3.00 [3.00-3.00]    |   0.00 [0.00-0.00]    |    2.98 [2.98-2.98]    |    0.00 [0.00-0.00]    |    0.04 [0.04-0.04]     |
+|      162       |       1        |   2.00 [2.00-3.00]    |   0.00 [0.00-0.00]    |    2.29 [2.29-3.43]    |    0.00 [0.00-0.00]    |    0.09 [0.02-0.09]     |
+|      164       |       1        |   3.00 [3.00-4.00]    |   0.00 [0.00-0.00]    |    3.00 [3.00-4.00]    |    0.00 [0.00-0.00]    |    0.04 [0.01-0.04]     |
+|      165       |       1        |   2.00 [2.00-2.00]    |   0.00 [0.00-0.00]    |    2.29 [2.29-2.29]    |    0.00 [0.00-0.00]    |    0.08 [0.08-0.08]     |
+|      167       |       1        |   3.00 [3.00-3.16]    |   0.00 [0.00-0.00]    |    3.00 [3.00-3.16]    |    0.00 [0.00-0.00]    |    0.04 [0.03-0.04]     |
+|      185       |       1        |   4.00 [4.00-6.00]    |   0.00 [0.00-0.00]    |    3.93 [3.93-5.90]    |    0.00 [0.00-0.00]    |    0.02 [0.00-0.02]     |
+|      199       |       1        |   2.00 [2.00-3.00]    |   0.00 [0.00-0.00]    |    2.77 [2.77-4.15]    |    0.00 [0.00-0.00]    |    0.06 [0.02-0.06]     |
+|      228       |       1        |   4.00 [4.00-5.00]    |   1.00 [1.00-1.00]    |    4.00 [4.00-5.00]    |    0.50 [0.50-0.50]    |    0.05 [0.02-0.05]     |
+|      249       |       1        |   3.00 [3.00-4.00]    |   0.00 [0.00-0.00]    |    2.99 [2.97-3.98]    |    0.00 [0.00-0.00]    |    0.04 [0.01-0.04]     |
+|      269       |       1        |   2.00 [2.00-2.00]    |   0.00 [0.00-0.00]    |    2.79 [2.79-2.79]    |    0.00 [0.00-0.00]    |    0.06 [0.06-0.06]     |
+|      277       |       1        |   2.00 [2.00-3.00]    |   0.00 [0.00-0.00]    |    2.61 [2.61-3.89]    |    0.00 [0.00-0.00]    |    0.07 [0.02-0.07]     |
+
+
+

@@ -1,0 +1,53 @@
+
+Analysis Description
+--------------------
+GARD : Genetic Algorithms for Recombination Detection. Implements a
+heuristic approach to screening alignments of sequences for
+recombination, by using the CHC genetic algorithm to search for
+phylogenetic incongruence among different partitions of the data. The
+number of partitions is determined using a step-up procedure, while the
+placement of breakpoints is searched for with the GA. The best fitting
+model (based on c-AIC) is returned; and additional post-hoc tests run to
+distinguish topological incongruence from rate-variation. v0.2 adds and
+spooling results to JSON after each breakpoint search conclusion
+
+- __Requirements__: A sequence alignment.
+
+- __Citation__: **Automated Phylogenetic Detection of Recombination Using a Genetic
+Algorithm**, _Mol Biol Evol 23(10), 1891–1901
+
+- __Written by__: Sergei L Kosakovsky Pond
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 0.2
+
+type: nucleotide
+rv: None
+>Maximum number of breakpoints to consider (permissible range = [1,100000], default value = 10000, integer): max-breakpoints: 10000
+mode: Faster
+>Loaded a nucleotide multiple sequence alignment with **20** sequences, **1773** sites (481 of which are variable) from `/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.RD.SA.codons.cln.fa.cluster.fasta`
+>Minimum size of a partition is set to be 37 sites
+
+
+### Fitting the baseline (single-partition; no breakpoints) model
+* Log(L) = -6844.41, AIC-c = 13781.21 (45 estimated parameters)
+
+### Performing an exhaustive single breakpoint analysis
+Done with single breakpoint analysis.
+   Best single break point location: 461
+   c-AIC  = 12946.48531898038
+
+### Performing multi breakpoint analysis using a genetic algorithm
+Done with 2 breakpoint analysis.
+    Best break point locations: 461, 1518
+    c-AIC = 12752.28714512354
+Done with 3 breakpoint analysis.
+    Best break point locations: 461, 674, 1518
+    c-AIC = 12696.05566330918
+Done with 4 breakpoint analysis.
+    Best break point locations: 261, 460, 687, 1518
+    c-AIC = 12671.73603691826
+Done with 5 breakpoint analysis.
+    Best break point locations: 261, 460, 548, 687, 1518
+    c-AIC = 12706.08571033585

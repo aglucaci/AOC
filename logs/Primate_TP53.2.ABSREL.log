@@ -1,0 +1,316 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. v2.6 adds tree reports and ASCII
+art
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas'
+contains 11 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas.FastTree.treefile
+results/Primate_TP53/Primate_TP53.2.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **34** sequences, **66** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas`
+
+>branches => All
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 60 branches for testing: `NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA, XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA, XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node1, XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node11, XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node10, XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA, XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA, Node18, Node16, XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA, XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA, Node25, Node23, Node21, Node15, Node9, XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA, XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node30, XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node29, XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA, XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA, Node36, XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node40, XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node45, Node43, Node39, Node35, Node28, Node8, XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA, XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA, XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA, Node51, XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node50, Node48, Node7, XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA, XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node57, XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, Node56`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 7 zero-length internal branches: `Node1, Node25, Node28, Node30, Node36, Node50, Node51`
+* Log(L) =  -735.68, AIC-c =  1608.77 (68 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.164
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) =  -703.05, AIC-c =  1659.77 (120 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.32, and 95% of the weight in  0.00 -  8.82
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|              Node40               |1440.49...|    2     |    0.04 (62.07%)   |    -701.33    |    1660.82    |     1659.77     |
+|              Node39               |   2.39   |    2     |   58.46 (14.06%)   |    -701.84    |    1661.83    |     1659.77     |
+|              Node43               |   0.39   |    2     |    0.27 (27.66%)   |    -748.62    |    1755.40    |     1659.77     |
+|              Node45               |   0.28   |    2     |  461.25 (100.00%)  |    -703.05    |    1664.25    |     1659.77     |
+|              Node18               |   0.08   |    2     |    0.23 (23.63%)   |    -703.05    |    1664.25    |     1659.77     |
+|XM_008010192_2_PREDICTED_Chloroc...|   0.05   |    2     |   >1000 (12.40%)   |    -701.70    |    1661.55    |     1659.77     |
+|              Node35               |   0.05   |    2     |   0.16 (100.00%)   |    -703.05    |    1664.25    |     1659.77     |
+|              Node15               |   0.04   |    2     |    0.00 ( 0.25%)   |    -703.05    |    1664.24    |     1659.77     |
+|              Node21               |   0.03   |    2     |    0.00 ( 5.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|              Node11               |   0.03   |    2     |    0.00 (10.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_012776058_2_PREDICTED_Microce...|   0.03   |    2     |    0.40 (51.26%)   |    -703.05    |    1664.25    |     1659.77     |
+|               Node9               |   0.03   |    2     |    0.40 (50.85%)   |    -703.05    |    1664.25    |     1659.77     |
+|XM_039476036_1_PREDICTED_Saimiri...|   0.02   |    2     |   1.00 (100.00%)   |    -703.72    |    1665.59    |     1659.77     |
+|              Node48               |   0.02   |    2     |   1.00 (100.00%)   |    -703.64    |    1665.43    |     1659.77     |
+|              Node10               |   0.02   |    2     |    0.00 ( 0.25%)   |    -703.05    |    1664.24    |     1659.77     |
+|              Node29               |   0.02   |    2     |    0.00 ( 0.25%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_069482023_1_PREDICTED_Eulemur...|   0.02   |    2     |    0.00 ( 0.25%)   |    -703.05    |    1664.24    |     1659.77     |
+|               Node8               |   0.02   |    2     |    0.00 ( 5.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|              Node16               |   0.02   |    2     |    0.00 ( 0.25%)   |    -703.05    |    1664.24    |     1659.77     |
+|              Node57               |   0.02   |    2     |    0.00 ( 5.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_012806041_2_PREDICTED_Otolemu...|   0.01   |    2     |    0.00 ( 5.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_017531594_2_PREDICTED_Cebus_i...|   0.01   |    2     |    2.93 (79.40%)   |    -703.05    |    1664.25    |     1659.77     |
+|XM_045570131_1_PREDICTED_Lemur_c...|   0.01   |    2     |    0.00 ( 5.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_055256596_2_PREDICTED_Symphal...|   0.01   |    2     |   1.00 (100.00%)   |    -703.34    |    1664.84    |     1659.77     |
+|XM_057300362_2_PREDICTED_Pan_pan...|   0.01   |    2     |    0.75 (25.00%)   |    -703.05    |    1664.25    |     1659.77     |
+|XM_016931470_3_PREDICTED_Pan_tro...|   0.01   |    2     |    0.50 (10.00%)   |    -703.05    |    1664.25    |     1659.77     |
+|               Node7               |   0.01   |    2     |    0.25 (51.00%)   |    -703.55    |    1665.25    |     1659.77     |
+|              Node23               |   0.00   |    2     |    0.00 ( 0.25%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_050765346_1_PREDICTED_Macaca_...|   0.00   |    2     |    0.25 (51.00%)   |    -703.10    |    1664.36    |     1659.77     |
+|              Node56               |   0.00   |    2     |    0.25 (51.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|NM_001047151_2_Macaca_mulatta_tu...|   0.00   |    2     |    0.25 (51.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|NM_000546_6_Homo_sapiens_tumor_p...|   0.00   |    2     |    0.25 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_011958558_1_PREDICTED_Colobus...|   0.00   |    2     |    0.29 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_010362387_1_PREDICTED_Rhinopi...|   0.00   |    2     |    0.29 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_002747948_5_PREDICTED_Callith...|   0.00   |    2     |    0.29 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_008062341_2_PREDICTED_Carlito...|   0.00   |    2     |    0.29 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_002826974_6_PREDICTED_Pongo_a...|   0.00   |    2     |    0.25 (51.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_032280430_1_PREDICTED_Sapajus...|   0.00   |    2     |    0.25 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_003912272_5_PREDICTED_Papio_a...|   0.00   |    2     |    0.25 (51.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_033184717_1_PREDICTED_Trachyp...|   0.00   |    2     |    0.25 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_063700589_1_PREDICTED_Gorilla...|   0.00   |    2     |    0.29 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_054457336_2_PREDICTED_Pongo_p...|   0.00   |    2     |    0.25 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_012655616_1_PREDICTED_Propith...|   0.00   |    2     |    0.29 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_053569948_1_PREDICTED_Nyctice...|   0.00   |    2     |    0.29 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_012052423_1_PREDICTED_Cercoce...|   0.00   |    2     |    0.25 (51.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_030800485_1_PREDICTED_Nomascu...|   0.00   |    2     |    0.25 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_011994540_1_PREDICTED_Mandril...|   0.00   |    2     |    0.29 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_025363515_1_PREDICTED_Theropi...|   0.00   |    2     |    0.25 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_023193314_2_PREDICTED_Pilioco...|   0.00   |    2     |    0.25 (51.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_064378361_1_PREDICTED_Aotus_n...|   0.00   |    2     |    0.25 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_017850544_1_PREDICTED_Rhinopi...|   0.00   |    2     |    0.29 ( 2.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_032139337_3_PREDICTED_Hylobat...|   0.00   |    2     |    0.25 (51.00%)   |    -703.05    |    1664.24    |     1659.77     |
+|XM_071082299_1_PREDICTED_Macaca_...|   0.00   |    2     |    0.25 (51.00%)   |    -703.05    |    1664.24    |     1659.77     |
+
+### Rate class analyses summary
+*  53 branches with **1** rate classes
+
+### Annotated Tree
+((((((XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1})Node11{1},XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1})Node10{1},((XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA{1},(XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA{1})Node18{1})Node16{1},(XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA{1},(XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA{1})Node23{1})Node21{1})Node15{1})Node9{1},(XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA{1},XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1})Node29{1},(((XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1})Node40{1},(XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},(XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1})Node45{1})Node43{1})Node39{1},XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA{1},XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA{1})Node35{1})Node8{1},(XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA{1},XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA{1},XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA{1})Node48{1})Node7{1},((XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA{1},XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1})Node57{1},XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1})Node56{1},NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA{1},XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1},XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA{1},XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA{1})
+
+----
+
+```
+     |XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+    |+Node11 (1)
+    ||XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+   |+Node10 (1)
+   ||XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+  |+Node9 (1)
+  || |XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA (1)
+  |||+Node16 (1)
+  |||||XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+  ||||+Node18 (1)
+  ||| |XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA (1)
+  ||+Node15 (1)
+  | ||XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA (1)
+  | |+Node21 (1)
+  |  ||XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+  |  |+Node23 (1)
+  |   |XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+  |   |XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA (1)
+ |+Node8 (1)
+ |||XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+ |||XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA (1)
+ ||+Node29 (1)
+ |||XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+ |||XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+ ||  |XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+ || |+Node40 (1)
+ || ||XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+ |||+Node39 (1)
+ |||||XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+ ||||+Node43 (1)
+ ||| ||XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+ ||| |+Node45 (1)
+ |||  |XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+ ||+Node35 (1)
+ | |XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA (1)
+ | |XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA (1)
+|+Node7 (1)
+|||XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+|||XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+||+Node48 (1)
+| |NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA (1)
+| |XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA (1)
+| |XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA (1)
+| |XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA (1)
+||+Node57 (1)
+|||XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+|+Node56 (1)
+||XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+|NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA (1)
+|XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+|XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+|XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA (1)
+|XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (1)
+```
+
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) =  -701.90, AIC-c =  1657.47 (120 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|              Node40               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node39               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node43               |     1    |  >1000 (100.00%)   |       N/A        |        0.58        |       0.31406      |
+|              Node45               |     1    |  >1000 (100.00%)   |       N/A        |        2.32        |       0.11936      |
+|              Node18               |     1    |   0.20 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_008010192_2_PREDICTED_Chloroc...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node35               |     1    |   0.15 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node15               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node21               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node11               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012776058_2_PREDICTED_Microce...|     1    |   0.30 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node9               |     1    |   0.29 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_039476036_1_PREDICTED_Saimiri...|     1    |  >1000 (100.00%)   |       N/A        |        1.29        |       0.20824      |
+|              Node48               |     1    |  >1000 (100.00%)   |       N/A        |        1.14        |       0.22672      |
+|              Node10               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node29               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_069482023_1_PREDICTED_Eulemur...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node8               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node16               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node57               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012806041_2_PREDICTED_Otolemu...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_017531594_2_PREDICTED_Cebus_i...|     1    |   0.44 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_045570131_1_PREDICTED_Lemur_c...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_055256596_2_PREDICTED_Symphal...|     1    |  >1000 (100.00%)   |       N/A        |        0.57        |       0.31603      |
+|XM_057300362_2_PREDICTED_Pan_pan...|     1    |   0.65 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_016931470_3_PREDICTED_Pan_tro...|     1    |   0.11 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node7               |     1    |  >1000 (100.00%)   |       N/A        |       -0.00        |       0.50000      |
+|              Node23               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_050765346_1_PREDICTED_Macaca_...|     1    |  >1000 (100.00%)   |       N/A        |       -0.00        |       0.50000      |
+|              Node56               |     1    |  >1000 (100.00%)   |       N/A        |       -0.00        |       0.50000      |
+|NM_001047151_2_Macaca_mulatta_tu...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|NM_000546_6_Homo_sapiens_tumor_p...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_011958558_1_PREDICTED_Colobus...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_010362387_1_PREDICTED_Rhinopi...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_002747948_5_PREDICTED_Callith...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_008062341_2_PREDICTED_Carlito...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_002826974_6_PREDICTED_Pongo_a...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_032280430_1_PREDICTED_Sapajus...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_003912272_5_PREDICTED_Papio_a...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_033184717_1_PREDICTED_Trachyp...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_063700589_1_PREDICTED_Gorilla...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_054457336_2_PREDICTED_Pongo_p...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012655616_1_PREDICTED_Propith...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_053569948_1_PREDICTED_Nyctice...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012052423_1_PREDICTED_Cercoce...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_030800485_1_PREDICTED_Nomascu...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_011994540_1_PREDICTED_Mandril...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_025363515_1_PREDICTED_Theropi...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_023193314_2_PREDICTED_Pilioco...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_064378361_1_PREDICTED_Aotus_n...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_017850544_1_PREDICTED_Rhinopi...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_032139337_3_PREDICTED_Hylobat...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_071082299_1_PREDICTED_Macaca_...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+----
+### Adaptive branch site random effects likelihood test 
+Likelihood ratio test for episodic diversifying positive selection at Holm-Bonferroni corrected _p =   0.0500_ found **0** branches under selection among **53** tested.
+
+
+### Annotated Tree
+((((((XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node11,XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node10,((XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA,(XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA)Node18)Node16,(XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA,(XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA)Node23)Node21)Node15)Node9,(XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA,XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node29,(((XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node40,(XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,(XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node45)Node43)Node39,XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA,XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA)Node35)Node8,(XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA,XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA,XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA)Node48)Node7,((XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA,XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node57,XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)Node56,NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA,XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA,XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA,XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA)
+
+----
+
+```
+     |XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+    |+Node11 (N.S)
+    ||XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+   |+Node10 (N.S)
+   ||XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+  |+Node9 (N.S)
+  || |XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA (N.S)
+  |||+Node16 (N.S)
+  |||||XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+  ||||+Node18 (N.S)
+  ||| |XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA (N.S)
+  ||+Node15 (N.S)
+  | ||XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA (N.S)
+  | |+Node21 (N.S)
+  |  ||XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+  |  |+Node23 (N.S)
+  |   |XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+  |   |XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA (N.S)
+ |+Node8 (N.S)
+ |||XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+ |||XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA (N.S)
+ ||+Node29 (N.S)
+ |||XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+ |||XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+ ||  |XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+ || |+Node40 (N.S)
+ || ||XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+ |||+Node39 (N.S)
+ |||||XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+ ||||+Node43 (N.S)
+ ||| ||XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+ ||| |+Node45 (N.S)
+ |||  |XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+ ||+Node35 (N.S)
+ | |XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA (N.S)
+ | |XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA (N.S)
+|+Node7 (N.S)
+|||XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+|||XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+||+Node48 (N.S)
+| |NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA (N.S)
+| |XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA (N.S)
+| |XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA (N.S)
+| |XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA (N.S)
+||+Node57 (N.S)
+|||XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+|+Node56 (N.S)
+||XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+|NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA (N.S)
+|XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+|XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+|XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA (N.S)
+|XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA (N.S)
+```
+
+
+

@@ -1,0 +1,320 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. v2.6 adds tree reports and ASCII
+art
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.5.codon.fas'
+contains 7 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.5.codon.fas.FastTree.treefile
+results/Primate_REM2/Primate_REM2.5.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **35** sequences, **101** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.5.codon.fas`
+
+>branches => All
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 64 branches for testing: `XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node2, XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA, XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node6, XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node18, XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node23, Node21, Node17, XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node31, XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node34, Node30, Node28, XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node27, XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node26, Node16, XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node43, Node41, XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node46, Node40, XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node51, Node49, Node39, Node15, XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, Node55, XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA, Node59, XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA, XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA, Node62, Node58, Node54, Node14, Node12, Node5`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 10 zero-length internal branches: `Node12, Node15, Node21, Node23, Node30, Node5, Node51, Node55, Node59, Node6`
+* Log(L) = -1377.00, AIC-c =  2898.99 (72 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  6.283
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) = -1332.46, AIC-c =  2917.72 (122 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.23, and 95% of the weight in  0.00 - 10000000000.00
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|XM_008960213_4_PREDICTED_Pan_pan...|  660.49  |    2     |    0.18 (95.95%)   |   -1332.12    |    2921.34    |     2917.72     |
+|              Node62               |   3.55   |    2     |   14.94 (47.84%)   |   -1332.30    |    2921.69    |     2917.72     |
+|              Node31               |   0.07   |    2     |   0.08 (100.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_011930962_1_PREDICTED_Colobus...|   0.06   |    2     |    0.27 (27.66%)   |   -1332.48    |    2922.05    |     2917.72     |
+|              Node26               |   0.05   |    2     |    4.97 ( 1.96%)   |   -1332.29    |    2921.67    |     2917.72     |
+|              Node17               |   0.04   |    2     |    0.05 (99.76%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_008065271_2_PREDICTED_Carlito...|   0.03   |    2     |   14.74 ( 7.01%)   |   -1331.25    |    2919.59    |     2917.72     |
+|XM_003801909_3_PREDICTED_Otolemu...|   0.03   |    2     |    0.00 ( 5.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_053595668_1_PREDICTED_Nyctice...|   0.03   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|              Node34               |   0.03   |    2     |    0.07 (99.56%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_012649447_1_PREDICTED_Propith...|   0.02   |    2     |    0.25 ( 5.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|              Node41               |   0.02   |    2     |    0.49 (24.44%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_035260095_2_PREDICTED_Callith...|   0.02   |    2     |    0.00 ( 5.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|              Node27               |   0.01   |    2     |    1.53 ( 0.11%)   |   -1332.46    |    2922.01    |     2917.72     |
+|              Node39               |   0.01   |    2     |    0.00 ( 5.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|              Node54               |   0.01   |    2     |    2.04 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_045525960_1_PREDICTED_Lemur_c...|   0.01   |    2     |    0.25 (50.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|              Node40               |   0.01   |    2     |    0.27 (51.49%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_069463304_1_PREDICTED_Eulemur...|   0.01   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_055362376_2_PREDICTED_Gorilla...|   0.01   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_054448863_2_PREDICTED_Pongo_p...|   0.01   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_003924335_4_PREDICTED_Saimiri...|   0.01   |    2     |    0.48 (23.23%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_009427474_5_PREDICTED_Pan_tro...|   0.01   |    2     |    0.49 (24.52%)   |   -1332.46    |    2922.01    |     2917.72     |
+|              Node28               |   0.01   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|              Node14               |   0.01   |    2     |    0.00 ( 5.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_012752689_1_PREDICTED_Microce...|   0.01   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_011990630_1_PREDICTED_Mandril...|   0.01   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_001100692_4_PREDICTED_Macaca_...|   0.01   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_055291876_2_PREDICTED_Symphal...|   0.01   |    2     |    0.00 ( 5.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_032179928_2_PREDICTED_Hylobat...|   0.01   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_032265550_1_PREDICTED_Sapajus...|   0.01   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|              Node46               |   0.01   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|              Node49               |   0.01   |    2     |   1.00 (100.00%)   |   -1332.69    |    2922.47    |     2917.72     |
+|              Node18               |   0.01   |    2     |   1.00 (100.00%)   |   -1332.70    |    2922.49    |     2917.72     |
+|               Node2               |   0.01   |    2     |   1.00 (100.00%)   |   -1332.69    |    2922.46    |     2917.72     |
+|              Node58               |   0.01   |    2     |   1.00 (100.00%)   |   -1332.68    |    2922.44    |     2917.72     |
+|              Node43               |   0.01   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|              Node16               |   0.00   |    2     |    0.00 ( 0.25%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_007990787_3_PREDICTED_Chloroc...|   0.00   |    2     |    0.25 (51.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|NM_173527_3_Homo_sapiens_RRAD_an...|   0.00   |    2     |    0.25 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_005560816_4_PREDICTED_Macaca_...|   0.00   |    2     |    0.29 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_002824566_5_PREDICTED_Pongo_a...|   0.00   |    2     |    0.25 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_003260595_2_PREDICTED_Nomascu...|   0.00   |    2     |    0.29 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_023230440_1_PREDICTED_Pilioco...|   0.00   |    2     |    0.25 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_003901565_5_PREDICTED_Papio_a...|   0.00   |    2     |    0.29 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_025392475_1_PREDICTED_Theropi...|   0.00   |    2     |    0.29 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_011772352_3_PREDICTED_Macaca_...|   0.00   |    2     |    0.25 (51.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_033188604_1_PREDICTED_Trachyp...|   0.00   |    2     |    0.25 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_010378358_2_PREDICTED_Rhinopi...|   0.00   |    2     |    0.29 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_017544499_2_PREDICTED_Cebus_i...|   0.00   |    2     |    0.25 (51.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_064374774_1_PREDICTED_Aotus_n...|   0.00   |    2     |    0.25 (51.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_017864286_1_PREDICTED_Rhinopi...|   0.00   |    2     |    0.25 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_012088533_1_PREDICTED_Cercoce...|   0.00   |    2     |    0.25 (51.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+|XM_050796554_1_PREDICTED_Macaca_...|   0.00   |    2     |    0.25 ( 2.00%)   |   -1332.46    |    2922.01    |     2917.72     |
+
+### Rate class analyses summary
+*  54 branches with **1** rate classes
+
+### Annotated Tree
+(XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1},(XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1},XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1})Node2{1},XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA{1},((((XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1},XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA{1})Node62{1},XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1},XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1})Node58{1},XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1},XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1})Node54{1},(((XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1},XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1})Node18{1},XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1},XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1},XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1})Node17{1},(((XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA{1},(XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1},XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1})Node31{1},(XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1},XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1})Node34{1})Node28{1},XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1})Node27{1},XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1})Node26{1})Node16{1},(((XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1},(NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1},XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1})Node43{1})Node41{1},(XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1},XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1})Node46{1})Node40{1},(XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1},XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1},XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1})Node49{1})Node39{1})Node14{1},XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1},XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA{1},XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA{1},XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA{1},XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA{1})
+
+----
+
+```
+|XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+||XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+|+Node2 (1)
+||XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+|XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA (1)
+|   |XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+|  |+Node62 (1)
+|  ||XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA (1)
+| |+Node58 (1)
+| ||XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+| ||XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+||+Node54 (1)
+|||XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+|||XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+|+Node14 (1)
+||  |XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+|| |+Node18 (1)
+|| ||XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+|| |XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+|||+Node17 (1)
+||||XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+||||XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+||+Node16 (1)
+|||  |XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA (1)
+||| |+Node28 (1)
+||| |||XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+||| ||+Node31 (1)
+||| |||XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+||| |||XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+||| ||+Node34 (1)
+||| | |XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+||||+Node27 (1)
+|||||XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+|||+Node26 (1)
+|| |XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+||  |XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+|| |+Node41 (1)
+|| |||NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+|| ||+Node43 (1)
+|| | |XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+|||+Node40 (1)
+|||||XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+||||+Node46 (1)
+||| |XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+||+Node39 (1)
+| ||XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+| |+Node49 (1)
+|  |XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+|  |XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+|XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+|XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (1)
+|XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA (1)
+|XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA (1)
+|XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (1)
+```
+
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) = -1327.83, AIC-c =  2908.45 (122 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|XM_008960213_4_PREDICTED_Pan_pan...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node62               |     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node31               |     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_011930962_1_PREDICTED_Colobus...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node26               |     1    |   0.02 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node17               |     1    |   0.04 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_008065271_2_PREDICTED_Carlito...|     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_003801909_3_PREDICTED_Otolemu...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_053595668_1_PREDICTED_Nyctice...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node34               |     1    |   0.05 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012649447_1_PREDICTED_Propith...|     1    |   0.15 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node41               |     1    |   0.40 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_035260095_2_PREDICTED_Callith...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node27               |     1    |  11.47 (100.00%)   |       N/A        |        0.04        |       0.45977      |
+|              Node39               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node54               |     1    |   0.19 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_045525960_1_PREDICTED_Lemur_c...|     1    |   0.23 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node40               |     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_069463304_1_PREDICTED_Eulemur...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_055362376_2_PREDICTED_Gorilla...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_054448863_2_PREDICTED_Pongo_p...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_003924335_4_PREDICTED_Saimiri...|     1    |   0.23 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_009427474_5_PREDICTED_Pan_tro...|     1    |   0.24 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node28               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node14               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012752689_1_PREDICTED_Microce...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_011990630_1_PREDICTED_Mandril...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_001100692_4_PREDICTED_Macaca_...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_055291876_2_PREDICTED_Symphal...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_032179928_2_PREDICTED_Hylobat...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_032265550_1_PREDICTED_Sapajus...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node46               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node49               |     1    |  >1000 (100.00%)   |       N/A        |        0.40        |       0.35151      |
+|              Node18               |     1    |  >1000 (100.00%)   |       N/A        |        0.42        |       0.34648      |
+|               Node2               |     1    |  >1000 (100.00%)   |       N/A        |        0.25        |       0.38722      |
+|              Node58               |     1    |  >1000 (100.00%)   |       N/A        |        0.37        |       0.35838      |
+|              Node43               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node16               |     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_007990787_3_PREDICTED_Chloroc...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|NM_173527_3_Homo_sapiens_RRAD_an...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_005560816_4_PREDICTED_Macaca_...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_002824566_5_PREDICTED_Pongo_a...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_003260595_2_PREDICTED_Nomascu...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_023230440_1_PREDICTED_Pilioco...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_003901565_5_PREDICTED_Papio_a...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_025392475_1_PREDICTED_Theropi...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_011772352_3_PREDICTED_Macaca_...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_033188604_1_PREDICTED_Trachyp...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_010378358_2_PREDICTED_Rhinopi...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_017544499_2_PREDICTED_Cebus_i...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_064374774_1_PREDICTED_Aotus_n...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_017864286_1_PREDICTED_Rhinopi...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012088533_1_PREDICTED_Cercoce...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_050796554_1_PREDICTED_Macaca_...|     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+----
+### Adaptive branch site random effects likelihood test 
+Likelihood ratio test for episodic diversifying positive selection at Holm-Bonferroni corrected _p =   0.0500_ found **0** branches under selection among **54** tested.
+
+
+### Annotated Tree
+(XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,(XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA)Node2,XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA,((((XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA)Node62,XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA)Node58,XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node54,(((XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node18,XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node17,(((XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA,(XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node31,(XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA)Node34)Node28,XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node27,XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA)Node26)Node16,(((XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,(NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node43)Node41,(XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA)Node46)Node40,(XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA)Node49)Node39)Node14,XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA,XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA,XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA)
+
+----
+
+```
+|XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+||XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+|+Node2 (N.S)
+||XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+|XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA (N.S)
+|   |XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+|  |+Node62 (N.S)
+|  ||XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA (N.S)
+| |+Node58 (N.S)
+| ||XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+| ||XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+||+Node54 (N.S)
+|||XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+|||XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+|+Node14 (N.S)
+||  |XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+|| |+Node18 (N.S)
+|| ||XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+|| |XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+|||+Node17 (N.S)
+||||XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+||||XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+||+Node16 (N.S)
+|||  |XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA (N.S)
+||| |+Node28 (N.S)
+||| |||XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+||| ||+Node31 (N.S)
+||| |||XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+||| |||XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+||| ||+Node34 (N.S)
+||| | |XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+||||+Node27 (N.S)
+|||||XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+|||+Node26 (N.S)
+|| |XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+||  |XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+|| |+Node41 (N.S)
+|| |||NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+|| ||+Node43 (N.S)
+|| | |XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+|||+Node40 (N.S)
+|||||XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+||||+Node46 (N.S)
+||| |XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+||+Node39 (N.S)
+| ||XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+| |+Node49 (N.S)
+|  |XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+|  |XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+|XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+|XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA (N.S)
+|XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA (N.S)
+|XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA (N.S)
+|XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA (N.S)
+```
+
+
+

@@ -1,24 +1,37 @@
-name: AOC
+name: AOC_develop
 channels:
   - conda-forge
   - bioconda
   - defaults
-  
+
 dependencies:
-  - snakemake=7.32.4
-  - hyphy=2.5.74
-  - iqtree=2.4.0
-  - tn93=1.0.14
-  - altair=5.2.0
-  - altair_saver=0.5.0
-  - biopython=1.83
-  - mafft=7.520
-  - python=3.11.0
-  - ete3=3.1.2
+  # Core language
+  - python=3.11
+
+  # Workflow engine
+  - snakemake=9.14.5
+
+  # Bioinformatics
+  - hyphy=2.5.86
+  #- mafft=7.520
   - macse=2.07
-  - statsmodels=0.14.2
-  - vl-convert-python=1.6.1
-  - networkx=3.3
-  - matplotlib=3.9.2
-  - yq=3.4.3
-  - fasttree=2.1.11
+  - biopython
+  - seqkit
+  - iqtree=3.0.1
+  - tn93=1.0.15
+
+  # Data handling
+  - pandas
+  - numpy
+
+  # Utilities
+  - pyyaml
+  - click
+  - tqdm
+  - pip
+  - ete3=3.1.2
+  - matplotlib=3.10.8
+
+  # Optional QoL
+  - ripgrep
+  - tree

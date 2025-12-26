@@ -1,0 +1,92 @@
+
+Analysis Description
+--------------------
+Perform a Fast Unbiased AppRoximate Bayesian (FUBAR) analysis of a
+coding sequence alignment to determine whether some sites have been
+will also exist FUBAR-generated files
+/home/sergei/FUBAR/data/pol.nex.FUBAR.json,
+/home/sergei/FUBAR/data/pol.nex.fubrar.cache. They also provide
+checkpointing so that a partially completed analysis can be restarted.
+subject to pervasive purifying or diversifying selection. v2.1
+introduces two more methods for estimating the posterior distribution of
+grid weights: collapsed Gibbs MCMC (faster) and 0-th order Variation
+Bayes approximation (fastest). Please note that a FUBAR analysis
+generates a cache and a results JSON file in the same directory as
+directory as the original alignment. HyPhy needs to have write
+privileges to this directory. For example if the original file is in
+/home/sergei/FUBAR/data/pol.nex then at the end of a FUBAR run, there
+
+- __Requirements__: in-frame codon alignment (possibly partitioned) and a phylogenetic tree
+(one per partition)
+
+- __Citation__: FUBAR: a fast, unconstrained bayesian approximation for inferring
+selection (2013), Mol Biol Evol. 30(5):1196-205
+
+- __Written by__: Sergei L Kosakovsky Pond
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.2
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.4.codon.fas'
+contains 1 duplicate sequence. Identical sequences do not contribute any
+information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.4.codon.fas.FastTree.treefile
+results/Primate_ACE2/Primate_ACE2.4.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **31** sequences, **301** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.4.codon.fas`
+Save FUBAR cache to : 
+>cache => /Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.4.codon.fas.FUBAR.cache
+> FUBAR will write cache and result files to _/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.4.codon.fas.FUBAR.cache_ and _/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.4.codon.fas.FUBAR.json_, respectively 
+
+
+> Number of grid points per dimension (total number is D^2) (permissible range = [5,50], default value = 20, integer): 
+>grid => 20
+
+>method => Variational-Bayes
+> The concentration parameter of the Dirichlet prior (permissible range = [0.001,1], default value = 0.5): 
+>concentration_parameter => 0.5
+
+>non-zero => No
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 4 zero-length internal branches: `Node3, Node4, Node44, Node52`
+* Log(L) = -3108.68, AIC-c =  6351.68 (67 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.795
+* Tree length (expected substitutions/site) for partition 1 :    0.795
+
+### Computing the phylogenetic likelihood function on the grid 
+* Determining appropriate tree scaling based on the best score from a  20 x 20 rate grid
+* Best scaling achieved for 
+	* synonymous rate =  1.227
+	* non-synonymous rate =  0.857
+* Computing conditional site likelihoods on a 20 x 20 rate grid
+
+### Running an iterative zeroth order variational Bayes procedure to estimate the posterior mean of rate weights
+* Using the following settings
+	* Dirichlet alpha  : 0.5
+[2K[mcmc] Posterior mean estimation step          1, error = 15.8798832[2K[mcmc] Posterior mean estimation step          2, error =  0.0015127[2K[mcmc] Posterior mean estimation step          3, error =  0.0010870[2K[mcmc] Posterior mean estimation step          4, error =  0.0008303[2K[mcmc] Posterior mean estimation step          5, error =  0.0006538[2K[mcmc] Posterior mean estimation step          6, error =  0.0005261[2K[mcmc] Posterior mean estimation step          7, error =  0.0004306[2K[mcmc] Posterior mean estimation step          8, error =  0.0003569[2K[mcmc] Posterior mean estimation step          9, error =  0.0002987[2K[mcmc] Posterior mean estimation step         10, error =  0.0002517[2K[mcmc] Posterior mean estimation step         11, error =  0.0002133[2K[mcmc] Posterior mean estimation step         12, error =  0.0001815[2K[mcmc] Posterior mean estimation step         13, error =  0.0001550[2K[mcmc] Posterior mean estimation step         14, error =  0.0001327[2K[mcmc] Posterior mean estimation step         15, error =  0.0001138[2K[mcmc] Posterior mean estimation step         16, error =  0.0000978[2K[mcmc] Posterior mean estimation step         17, error =  0.0000841[2K[mcmc] Posterior mean estimation step         18, error =  0.0000724[2K[mcmc] Posterior mean estimation step         19, error =  0.0000625[2K[mcmc] Posterior mean estimation step         20, error =  0.0000539[2K[mcmc] Posterior mean estimation step         21, error =  0.0000466[2K[mcmc] Posterior mean estimation step         22, error =  0.0000402[2K[mcmc] Posterior mean estimation step         23, error =  0.0000348[2K[mcmc] Posterior mean estimation step         24, error =  0.0000301[2K[mcmc] Posterior mean estimation step         25, error =  0.0000260[2K[mcmc] Posterior mean estimation step         26, error =  0.0000226[2K[mcmc] Posterior mean estimation step         27, error =  0.0000195[2K[mcmc] Posterior mean estimation step         28, error =  0.0000169[2K[mcmc] Posterior mean estimation step         29, error =  0.0000147[2K[mcmc] Posterior mean estimation step         30, error =  0.0000127[2K[mcmc] Posterior mean estimation step         31, error =  0.0000110[2K[mcmc] Posterior mean estimation step         32, error =  0.0000096[2K[mcmc] Posterior mean estimation step         33, error =  0.0000083[2K[mcmc] Posterior mean estimation step         34, error =  0.0000072[2K[mcmc] Posterior mean estimation step         35, error =  0.0000063[2K[mcmc] Posterior mean estimation step         36, error =  0.0000054[2K[mcmc] Posterior mean estimation step         37, error =  0.0000047[2K[mcmc] Posterior mean estimation step         38, error =  0.0000041[2K[mcmc] Posterior mean estimation step         39, error =  0.0000036[2K[mcmc] Posterior mean estimation step         40, error =  0.0000031[2K[mcmc] Posterior mean estimation step         41, error =  0.0000027[2K[mcmc] Posterior mean estimation step         42, error =  0.0000023[2K[mcmc] Posterior mean estimation step         43, error =  0.0000020[2K[mcmc] Posterior mean estimation step         44, error =  0.0000018[2K[mcmc] Posterior mean estimation step         45, error =  0.0000015[2K[mcmc] Posterior mean estimation step         46, error =  0.0000013[2K[mcmc] Posterior mean estimation step         47, error =  0.0000012[2K[mcmc] Posterior mean estimation step         48, error =  0.0000010[2K[mcmc] Posterior mean estimation step         49, error =  0.0000009[2K[mcmc] Posterior mean estimation step         50, error =  0.0000008[2K[mcmc] Posterior mean estimation step         51, error =  0.0000007[2K[mcmc] Posterior mean estimation step         52, error =  0.0000006[2K[mcmc] Posterior mean estimation step         53, error =  0.0000005[2K[mcmc] Posterior mean estimation step         54, error =  0.0000004[2K[mcmc] Posterior mean estimation step         55, error =  0.0000004[2K[mcmc] Posterior mean estimation step         56, error =  0.0000003[2K[mcmc] Posterior mean estimation step         57, error =  0.0000003[2K[mcmc] Posterior mean estimation step         58, error =  0.0000002[2K[mcmc] Posterior mean estimation step         59, error =  0.0000002[2K[mcmc] Posterior mean estimation step         60, error =  0.0000002[2K[mcmc] Posterior mean estimation step         61, error =  0.0000002[2K[mcmc] Posterior mean estimation step         62, error =  0.0000001[2K[mcmc] Posterior mean estimation step         63, error =  0.0000001[2K[mcmc] Posterior mean estimation step         64, error =  0.0000001[2K[mcmc] Posterior mean estimation step         65, error =  0.0000001[2K[mcmc] Posterior mean estimation step         66, error =  0.0000001[2K[mcmc] Posterior mean estimation step         67, error =  0.0000001[2K[mcmc] Posterior mean estimation step         68, error =  0.0000001[2K[mcmc] Posterior mean estimation step         69, error =  0.0000001[2K[mcmc] Posterior mean estimation step         70, error =  0.0000000[2K[mcmc] Posterior mean estimation step         71, error =  0.0000000[2K[mcmc] Posterior mean estimation step         72, error =  0.0000000[2K[mcmc] Posterior mean estimation step         73, error =  0.0000000[2K[mcmc] Posterior mean estimation step         74, error =  0.0000000[2K[mcmc] Posterior mean estimation step         75, error =  0.0000000[2K[mcmc] Posterior mean estimation step         76, error =  0.0000000[2K[mcmc] Posterior mean estimation step         77, error =  0.0000000[2K[mcmc] Posterior mean estimation step         78, error =  0.0000000[2K[mcmc] Posterior mean estimation step         79, error =  0.0000000[2K[mcmc] Posterior mean estimation step         80, error =  0.0000000[2K[mcmc] Posterior mean estimation step         81, error =  0.0000000[2K[mcmc] Posterior mean estimation step         82, error =  0.0000000[2K                                                                    [2K
+### Tabulating site-level results
+|     Codon      |   Partition    |     alpha      |      beta      |Posterior prob for positive selection|
+|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------------------------:|
+|       21       |       1        |        0.583   |        4.112   |       Pos. posterior = 0.9570       |
+|      282       |       1        |        0.608   |        5.128   |       Pos. posterior = 0.9663       |
+----
+## FUBAR inferred 2 sites subject to diversifying positive selection at posterior probability >= 0.9
+Of these,  0.08 are expected to be false positives (95% confidence interval of 0-1 )
+
+
+

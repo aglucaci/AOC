@@ -1,0 +1,14 @@
+file : results/Primate_REM2/Primate_REM2.codons.fa
+35	sequences with genetic code	The_Standard_Code
+compute initial pairwise distances
+...................................
+compute first alignment with guide tree
+++++++++++++++++++++++++++++++++++
+first alignment score : 972102.7
+
+start refining the alignment
+refine 2 cut : sum of pairs ========= 0 => 972102.7
+
+The file 'results/Primate_REM2/Primate_REM2.codons.raw.fa' was created.
+The file 'results/Primate_REM2/Primate_REM2.aa.fa' was created.
+PROGRAM HAS FINISHED SUCCESSFULLY

@@ -2,9 +2,9 @@
  "MLE":{
    "content":{
      "0":      [
-[0, 0, 0, 0, 1, 0, 0, 0, 0],
-      [3.186423010853731e-05, 2.165425067381224, 1.754580865326944, 1.961732871579784, 0.1613281122424529, 3.922208447683605, 6583.758058592045, 10000, 10000],
-      [2.091020331844286, 0.1705322877037292, 0.5643775607452858, 4.143297675107043, 0.04179966448805017, 1.261615511819543, 0.004549947575498288, 0.08155458132409418, 0.4377703943845842],
+[9.223379371599544e-09, 1.829607042945933, 1.569582270841374, 1.86946532732636, 0.171536328859594, 3.495915120174891, 7260.425254313413, 10000, 10000],
+      [1.221982074376559e-05, 2.178472815363503, 1.758658134095249, 1.960085945327783, 0.161504127136872, 3.917041926643604, 7008.89369332447, 10000, 10000],
+      [2.108671412175872, 0.1719376574451777, 0.5657891601828635, 4.138514650892638, 0.04191793562562318, 1.260176619384242, 0.004528800364858069, 0.08153838310339717, 0.4355047562199659],
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
@@ -18,11 +18,11 @@
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
-      [3.351907829711096, 0.3991046779779316, 0.7832656388587418, 1.727917415217199, 0.1886770815880867, 1.75092021474861, 0.006451290811998176, 0.1190679154242528, 0.6303285034690036],
-      [3.102693128987586, 1.904991665785724, 2.146480763828259, 0.2460594014937598, 0.6198635444678783, 4.798265586413311, 0.2060520395362783, 0.6139800446225006, 1.579007584182152],
-      [1.558665103777164e-05, 0.3456853449378923, 0.3347334739572832, 0.08465929597086763, 0.7710798428000822, 0.7482667144173467, 950.7136845105432, 10000, 10000],
-      [7.786466990788752, 0.36221020797138, 0.7939822988119015, 6.454098974855263, 0.01106966651547903, 1.774876348677725, 0.007407171050050999, 0.0465179147872672, 0.165300724228068],
-      [2.223732697699504, 0.7614612234934167, 0.9537187919752029, 0.5659616561593594, 0.4518681240125308, 2.131952978925663, 0.08040871816698404, 0.342424799653827, 1.028553554591717],
+      [3.384962493855588, 0.3985948857416199, 0.7869017044089659, 1.735974826170903, 0.1876496521697003, 1.752658409590759, 0.006406366668294992, 0.1177545944645333, 0.625647322263136],
+      [3.122652551666245, 1.902660499471895, 2.152585587203045, 0.2462303648571975, 0.6197419908083085, 4.794432659932985, 0.2053762546184057, 0.6093090627250977, 1.573036338579893],
+      [5.265765251487743e-07, 0.3476741378393148, 0.3361257312841784, 0.08453973470539111, 0.7712370404715849, 0.7486495280341727, 1444.628181847683, 10000, 10000],
+      [7.808355388663348, 0.3637639577553382, 0.7964265339499949, 6.451752648555846, 0.01108429452170823, 1.773872968539441, 0.007415100798997814, 0.04658650120913721, 0.1654212312493016],
+      [2.237950488928932, 0.7643627048377493, 0.9568462120277041, 0.5645551865700398, 0.4524306890130675, 2.131174136234733, 0.08019757276988455, 0.3415458512683934, 1.025550536396913],
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
@@ -31,22 +31,22 @@
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
-      [1.200191708284861, 5.220622391463847e-07, 0.1694913989535366, 3.329340684021592, 0.06805415010647908, 0.3788828488457273, 0, 4.34982374517851e-07, 0.3666710034669519],
-      [4.402237538954908e-07, 0.3612121724857072, 0.3109379008667215, 0.6237967325703409, 0.4296398857301253, 0.6950738410436347, 3796.229854869859, 10000, 10000],
-      [1.615413076253583, 0.3992692039579572, 0.6531625916718651, 0.6259943300622766, 0.4288284382308849, 1.460086500082138, 0.01272835681103134, 0.2471622954073952, 1.481339559839505],
-      [0.8428853334261722, 0.3652978856172152, 0.5241361086661004, 0.2769752050361802, 0.5986906629619666, 1.171659348264421, 0.02395831895589196, 0.4333897757270816, 2.336757855117201],
+      [1.201634301449681, 1.989272166845895e-07, 0.1701223296082728, 3.328592562388399, 0.06808511372055903, 0.3789117878084408, 0, 1.655472188540215e-07, 0.3675303753066781],
+      [1.692705850319255e-06, 0.3618300518546921, 0.3121582011595224, 0.6223409177840971, 0.4301787143049555, 0.6952668844400167, 3707.547702600395, 10000, 10000],
+      [1.605688466332478, 0.3983134017580792, 0.654988348534872, 0.626476952518523, 0.4286505433825272, 1.458849092347354, 0.0128496192785245, 0.2480639365043575, 1.493321441823281],
+      [0.8496983036516075, 0.3739046649611273, 0.525513698544152, 0.276588714236361, 0.5989458613514335, 1.170471480679203, 0.02384949078880024, 0.440044028985652, 2.323449956632569],
       [0, 0, 0, 0, 1, 0, 0, 0, 0],
-      [0.3821480968518506, 1.003861512504242, 0.7928761220608478, 0.7390874510488388, 0.3899533570118359, 1.772403589579896, 0.7736178553719077, 2.62689130411505, 7.348241272123236],
-      [0.05812700199759475, 1.656207439452216, 0.7342899170370074, 1.54974684321024, 0.2131728176242254, 1.641439373109081, 5.65117217309533, 28.49291005100777, 90.56975798049062],
-      [0.6790195682239685, 1.346437257722148, 1.145130813409657, 0.3035788016531029, 0.581647483634543, 2.559837416909955, 0.5622153619487592, 1.982913778529043, 5.249509342483204],
-      [0.8591324407117984, 1.354227778367723, 1.224519101495277, 0.1385756654551358, 0.7097011193346897, 2.737302827783755, 0.4137561978069208, 1.576273592050295, 4.234480973931048],
-      [0.350898993237951, 0.2585803348510717, 0.2945197923224076, 0.03160903507145818, 0.8588884511206243, 0.6583726292043642, 0.03947519794057041, 0.7369081696843846, 3.558392157036204],
-      [1.272871275793737, 1.063758421546373, 1.113805144411392, 0.009843089051219778, 0.9209696747300715, 2.489811688257408, 0.14124983975312, 0.8357156310900601, 2.983121259989975],
-      [0.9524130379524635, 0.5558694457571955, 0.669587375754344, 0.2546912640719157, 0.6137910145451222, 1.496802634489357, 0.1043641002503036, 0.5836432551912839, 1.799706498525979],
-      [0.0002060107595305342, 0.1509989723968447, 0.1491243844995533, 0.01168848954934276, 0.9139058037742249, 0.3333542113664725, 40.56657335955893, 732.9664370004139, 3701.413072192747],
-      [1.9051861417141, 1.131063269910535e-06, 0.2516068646574879, 6.732240936933362, 0.009468557113012199, 0.5624446211379933, 0, 5.936759905742935e-07, 0.1627337929287569],
-      [0.998452715131246, 3.638931983792054, 2.835364875370575, 1.014737246350421, 0.3137706101483704, 6.338204346239475, 1.140300437599986, 3.644571173622096, 10.12891105645953],
-      [3.987189923974861, 1.118948986264789, 1.634984321897541, 1.048786329558439, 0.3057867717615534, 3.654861081584778, 0.04939540242551479, 0.2806359886537084, 0.9479061122208011] 
+      [0.3810997217371641, 1.006542858958937, 0.7961358467341552, 0.7407099840888236, 0.3894335398401164, 1.773225523768961, 0.7789148511819446, 2.641153486995004, 7.393623156688739],
+      [0.05741108276067642, 1.662080126527566, 0.7370104573317794, 1.5478954137123, 0.2134464039787237, 1.641536126763227, 5.75409221142114, 28.9505100166131, 91.93529566320494],
+      [0.6841614726366584, 1.34842544493506, 1.148862042719061, 0.3030151107419172, 0.5819983623568031, 2.558849103197137, 0.5596989398477064, 1.970916952891874, 5.222280277844675],
+      [0.8631248108580254, 1.355579978262471, 1.228175113227282, 0.1390112870703391, 0.709265911718904, 2.735502323336117, 0.4132941326021297, 1.570549196604486, 4.229441075995647],
+      [0.3534778530115345, 0.2598551320641257, 0.2955732471168245, 0.03166890379090148, 0.8587562824246819, 0.6583273797817533, 0.03931185194590245, 0.7351383682180685, 3.542749510426594],
+      [1.278251518594046, 1.067927197516303, 1.11758918309455, 0.009904641785819734, 0.9207237680851814, 2.489195371217971, 0.1411125672709048, 0.8354593614650433, 2.97869880215309],
+      [0.9625225711833635, 0.54986188430036, 0.6717466179131484, 0.2535187293135195, 0.6146082577799938, 1.496174620544152, 0.1036293124214562, 0.5712716779455238, 1.787202376590761],
+      [0.006020591097489813, 0.1503181639856301, 0.1497252145785934, 0.01123160846888283, 0.9155987892191216, 0.3334814945610668, 1.393750301859018, 24.96734316474387, 127.0824526033526],
+      [1.900866362313649, 4.364278497445697e-08, 0.2526437131776275, 6.72751924123336, 0.009493654565545184, 0.5627108520035367, 0, 2.295941778954778e-08, 0.1637913822286761],
+      [0.983019364787138, 3.652417738694814, 2.84308915178773, 1.013421342891917, 0.3140845841308291, 6.332384442907868, 1.160399332988325, 3.71550944928303, 10.31895384219553],
+      [3.986940762564188, 1.122411952624649, 1.640338048170027, 1.049180314043141, 0.3056959434871322, 3.653508765565881, 0.04956734362602627, 0.2815221041565647, 0.9507934429531411] 
       ]
     },
    "headers":    [
@@ -65,7 +65,7 @@
    "authors":"Sergei L Kosakovsky Pond and Simon DW Frost",
    "citation":"Not So Different After All: A Comparison of Methods for Detecting Amino Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222",
    "contact":"spond@temple.edu",
-   "info":"FEL (Fixed Effects Likelihood)\n    estimates site-wise synonymous (&alpha;) and non-synonymous (&beta;) rates, and\n    uses a likelihood ratio test to determine if beta &neq; alpha at a site.\n    The estimates aggregate information over all branches,\n    so the signal is derived from\n    pervasive diversification or conservation. A subset of branches can be selected\n    for testing as well, in which case an additional (nuisance) parameter will be\n    inferred -- the non-synonymous rate on branches NOT selected for testing.\n    Multiple partitions within a NEXUS file are also supported\n    for recombination - aware analysis. Version 2.5 adds MH support.\n    ",
+   "info":"FEL (Fixed Effects Likelihood)\n    estimates site-wise synonymous (&alpha;) and non-synonymous (&beta;) rates, and\n    uses a likelihood ratio test to determine if beta &neq; alpha at a site.\n    The estimates aggregate information over all branches,\n    so the signal is derived from\n    pervasive diversification or conservation. A subset of branches can be selected\n    for testing as well, in which case an additional (nuisance) parameter will be\n    inferred -- the non-synonymous rate on branches NOT selected for testing.\n    Multiple partitions within a NEXUS file are also supported\n    for recombination - aware analysis. Version 2.5 adds MH support. Version 2.6 adds substitution mapping.\n    ",
    "requirements":"in-frame codon alignment and a phylogenetic tree",
    "settings":{
      "ci":1,
@@ -78,13 +78,13 @@
       },
      "srv":1
     },
-   "version":"2.5"
+   "version":"2.6"
   },
  "branch attributes":{
    "0":{
      "NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA":{
-       "Global MG94xREV":0.01357540952269212,
-       "Nucleotide GTR":0.01335473354955091,
+       "Global MG94xREV":0.01358908387888194,
+       "Nucleotide GTR":0.01332409507553819,
        "original name":"NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA"
       },
      "NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA":{
@@ -98,65 +98,65 @@
        "original name":"NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA"
       },
      "Node10":{
-       "Global MG94xREV":0.01408265855819944,
-       "Nucleotide GTR":0.01344011286656933
+       "Global MG94xREV":0.01406398845656026,
+       "Nucleotide GTR":0.01340336185363525
       },
      "Node11":{
-       "Global MG94xREV":0.01377375555143804,
-       "Nucleotide GTR":0.01356212433866976
+       "Global MG94xREV":0.01378923376228595,
+       "Nucleotide GTR":0.01355746343378905
       },
      "Node19":{
-       "Global MG94xREV":0.01395573879460762,
-       "Nucleotide GTR":0.01351593654448352
+       "Global MG94xREV":0.01396771944746059,
+       "Nucleotide GTR":0.01353500179114228
       },
      "Node21":{
-       "Global MG94xREV":0.02913308358085212,
-       "Nucleotide GTR":0.02827183006043971
+       "Global MG94xREV":0.02909278957204829,
+       "Nucleotide GTR":0.02830611790899172
       },
      "Node22":{
-       "Global MG94xREV":0.04250232722633035,
-       "Nucleotide GTR":0.04204262388935186
+       "Global MG94xREV":0.04248985792137495,
+       "Nucleotide GTR":0.04202322027480882
       },
      "Node24":{
-       "Global MG94xREV":0.0277084778322041,
-       "Nucleotide GTR":0.02724197802845994
+       "Global MG94xREV":0.02767717817164894,
+       "Nucleotide GTR":0.02726951591995748
       },
      "Node27":{
-       "Global MG94xREV":0.01368318438309279,
-       "Nucleotide GTR":0.01356744242906749
+       "Global MG94xREV":0.01364078352491832,
+       "Nucleotide GTR":0.01353075934031865
       },
      "Node31":{
-       "Global MG94xREV":0.01483291515378567,
-       "Nucleotide GTR":0.01933845284388783
+       "Global MG94xREV":0.01490798166268684,
+       "Nucleotide GTR":0.01930281104898385
       },
      "Node32":{
-       "Global MG94xREV":0.01563712592686508,
-       "Nucleotide GTR":0.01170628354046726
+       "Global MG94xREV":0.01546704119154645,
+       "Nucleotide GTR":0.01165040764378966
       },
      "Node33":{
-       "Global MG94xREV":0.03025947838461961,
-       "Nucleotide GTR":0.02679192150688984
+       "Global MG94xREV":0.03035903989696328,
+       "Nucleotide GTR":0.02676359445055403
       },
      "Node34":{
-       "Global MG94xREV":0.02961042087810513,
-       "Nucleotide GTR":0.02833928494660465
+       "Global MG94xREV":0.02964925053114511,
+       "Nucleotide GTR":0.02828975713541221
       },
      "Node43":{
-       "Global MG94xREV":0.01354909802358309,
-       "Nucleotide GTR":0.01333324084314526
+       "Global MG94xREV":0.01356668942336002,
+       "Nucleotide GTR":0.0133479335642605
       },
      "Node49":{
-       "Global MG94xREV":0.013663943353052,
-       "Nucleotide GTR":0.01337551495887396
+       "Global MG94xREV":0.01364774160737692,
+       "Nucleotide GTR":0.01334584474870009
       },
      "XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA":{
-       "Global MG94xREV":0.02742249778936065,
-       "Nucleotide GTR":0.02688438176607383,
+       "Global MG94xREV":0.02745679175109578,
+       "Nucleotide GTR":0.0268901901499957,
        "original name":"XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA":{
-       "Global MG94xREV":0.04623081433375271,
-       "Nucleotide GTR":0.04301137292040919,
+       "Global MG94xREV":0.04631405792153314,
+       "Nucleotide GTR":0.04291806214286448,
        "original name":"XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA":{
@@ -165,13 +165,13 @@
        "original name":"XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":{
-       "Global MG94xREV":0.04175788188498291,
-       "Nucleotide GTR":0.0405827761995932,
+       "Global MG94xREV":0.04170295340999374,
+       "Nucleotide GTR":0.0406551631464783,
        "original name":"XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA"
       },
      "XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA":{
-       "Global MG94xREV":0.2159556141559391,
-       "Nucleotide GTR":0.1966836482027875,
+       "Global MG94xREV":0.2161261529840618,
+       "Nucleotide GTR":0.1966182169300938,
        "original name":"XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":{
@@ -180,8 +180,8 @@
        "original name":"XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA"
       },
      "XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA":{
-       "Global MG94xREV":0.01361706133713755,
-       "Nucleotide GTR":0.01346104343877405,
+       "Global MG94xREV":0.01362830755428786,
+       "Nucleotide GTR":0.01342500387014535,
        "original name":"XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":{
@@ -210,13 +210,13 @@
        "original name":"XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA"
       },
      "XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA":{
-       "Global MG94xREV":0.01361551448199077,
-       "Nucleotide GTR":0.01346162844831889,
+       "Global MG94xREV":0.01362705357563933,
+       "Nucleotide GTR":0.01342594183535028,
        "original name":"XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":{
-       "Global MG94xREV":0.02870369001250234,
-       "Nucleotide GTR":0.02815861508733163,
+       "Global MG94xREV":0.02866371104870355,
+       "Nucleotide GTR":0.02816061780147522,
        "original name":"XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA"
       },
      "XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":{
@@ -240,8 +240,8 @@
        "original name":"XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":{
-       "Global MG94xREV":0.8870005218834423,
-       "Nucleotide GTR":0.8338931923606775,
+       "Global MG94xREV":0.8850573296332994,
+       "Nucleotide GTR":0.8357903044483553,
        "original name":"XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":{
@@ -255,8 +255,8 @@
        "original name":"XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA":{
-       "Global MG94xREV":0.01399887934263353,
-       "Nucleotide GTR":0.01368293894093119,
+       "Global MG94xREV":0.01407395579510298,
+       "Nucleotide GTR":0.01368981431513834,
        "original name":"XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":{
@@ -265,13 +265,13 @@
        "original name":"XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA"
       },
      "XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA":{
-       "Global MG94xREV":0.01368530906297202,
-       "Nucleotide GTR":0.01337230868150301,
+       "Global MG94xREV":0.01369072501228495,
+       "Nucleotide GTR":0.01336766338756626,
        "original name":"XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA":{
-       "Global MG94xREV":0.04427098257143788,
-       "Nucleotide GTR":0.04137379092218533,
+       "Global MG94xREV":0.04422030796348941,
+       "Nucleotide GTR":0.04138241827763533,
        "original name":"XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":{
@@ -280,8 +280,8 @@
        "original name":"XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA"
       },
      "XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA":{
-       "Global MG94xREV":0.01318634904928111,
-       "Nucleotide GTR":0.01358795395352175,
+       "Global MG94xREV":0.01314785195878597,
+       "Nucleotide GTR":0.01357913755189345,
        "original name":"XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA"
       },
      "XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":{
@@ -316,110 +316,269 @@
   },
  "fits":{
    "Global MG94xREV":{
-     "AIC-c":1163.88849792157,
+     "AIC-c":1163.844261474693,
      "Equilibrium frequencies":      [
-[0.04496820466178915],
-      [0.02676859703848955],
-      [0.03760242593616502],
-      [0.03130796618615302],
-      [0.01532959532820785],
-      [0.009125375655759639],
-      [0.01281861211261848],
-      [0.01067283997198934],
-      [0.01032501581591721],
-      [0.006146258003205827],
-      [0.008633781255618226],
-      [0.007188529061088155],
-      [0.01577511231664717],
-      [0.009390582257335784],
-      [0.01319115354910878],
-      [0.01098301981826787],
-      [0.01545855016510282],
-      [0.009202139673602205],
-      [0.01292644418507775],
-      [0.01076262148991771],
-      [0.00526979718612583],
-      [0.003136995982181956],
-      [0.004406605953701494],
-      [0.003668961955497103],
-      [0.003549391756826385],
-      [0.002112875939451431],
-      [0.002968002428789617],
-      [0.002471173531162928],
-      [0.005422950881431059],
-      [0.003228165055650991],
-      [0.004534673118665685],
-      [0.003775591311726992],
-      [0.05205314786028927],
-      [0.0309861100779281],
-      [0.04352685751815153],
-      [0.03624067728186505],
-      [0.01774484212254194],
-      [0.01056311969451532],
-      [0.01483824219090531],
-      [0.01235439398413961],
-      [0.01195176856554496],
-      [0.007114628636713514],
-      [0.009994072382301968],
-      [0.008321114194553669],
-      [0.01826055231928921],
-      [0.01087011079076201],
-      [0.01526947920878413],
-      [0.01271344406236828],
-      [0.04891995145639368],
-      [0.05721570629281818],
-      [0.02801503038145037],
-      [0.01667674004204397],
-      [0.02342617662726114],
-      [0.01950475075630029],
-      [0.01123236465187068],
-      [0.01577834502505543],
-      [0.01313712826285463],
-      [0.02882921834266899],
-      [0.0171614084785842],
-      [0.02410700083939285],
-      [0.02007160836937874] 
+[0.04498649975086649],
+      [0.02678818325602629],
+      [0.03763846966779515],
+      [0.03132271798317398],
+      [0.01533925396075202],
+      [0.009134090191212037],
+      [0.01283376230926371],
+      [0.01068025137642912],
+      [0.01031082803219959],
+      [0.00613980532776648],
+      [0.008626672230313296],
+      [0.007179112854170694],
+      [0.01580293378643806],
+      [0.009410198361694015],
+      [0.01322170533997963],
+      [0.01100309739678817],
+      [0.01548144987752771],
+      [0.009218763822144446],
+      [0.01295273214977331],
+      [0.01077925802562809],
+      [0.005278781249200808],
+      [0.003143364348308583],
+      [0.004416552722067323],
+      [0.003675453242178482],
+      [0.003548321568922041],
+      [0.002112924743333994],
+      [0.002968743833885034],
+      [0.002470587319139399],
+      [0.005438349920253968],
+      [0.003238382961131651],
+      [0.004550057676189678],
+      [0.003786556006563962],
+      [0.05210194542736989],
+      [0.03102522912058706],
+      [0.04359168869463794],
+      [0.03627698425158748],
+      [0.0177654402361961],
+      [0.010578815229163],
+      [0.01486365881249107],
+      [0.01236953035792886],
+      [0.01194167588987208],
+      [0.007110928920754776],
+      [0.009991139747540227],
+      [0.008314622124779261],
+      [0.01830245958883423],
+      [0.01089859500554416],
+      [0.01531296219744492],
+      [0.01274344043822727],
+      [0.04880221536226668],
+      [0.0570631466171757],
+      [0.02794476833813353],
+      [0.01664031608226429],
+      [0.02338031012177474],
+      [0.01945708384977487],
+      [0.0111853834589789],
+      [0.01571591145318622],
+      [0.01307877463248422],
+      [0.02878949164377902],
+      [0.01714332482572254],
+      [0.02408705753918424],
+      [0.02004523874119958] 
       ],
-     "Log Likelihood":-520.2925635675267,
+     "Log Likelihood":-520.2704453440883,
      "Rate Distributions":{
        "non-synonymous/synonymous rate ratio for *test*":        [
-[0.6410933068391419, 1] 
+[0.6436888883487826, 1] 
         ]
       },
      "display order":1,
      "estimated parameters":59
     },
    "Nucleotide GTR":{
-     "AIC-c":1174.954796826852,
+     "AIC-c":1174.954207400063,
      "Equilibrium frequencies":      [
 [0.3337526205450734],
       [0.1744234800838574],
       [0.2259958071278826],
       [0.2658280922431866] 
       ],
-     "Log Likelihood":-527.6192165952441,
+     "Log Likelihood":-527.6189218818498,
      "Rate Distributions":{
-       "Substitution rate from nucleotide A to nucleotide C":1.084045751522767,
+       "Substitution rate from nucleotide A to nucleotide C":1.089603423199041,
        "Substitution rate from nucleotide A to nucleotide G":1,
-       "Substitution rate from nucleotide A to nucleotide T":0.3136989918178194,
-       "Substitution rate from nucleotide C to nucleotide G":0.3843697144119766,
-       "Substitution rate from nucleotide C to nucleotide T":0.8294903417330888,
-       "Substitution rate from nucleotide G to nucleotide T":0.152180014541516
+       "Substitution rate from nucleotide A to nucleotide T":0.3139262752814682,
+       "Substitution rate from nucleotide C to nucleotide G":0.3855635593323973,
+       "Substitution rate from nucleotide C to nucleotide T":0.8304978894066578,
+       "Substitution rate from nucleotide G to nucleotide T":0.1534726350789331
       },
      "display order":0,
      "estimated parameters":59
     }
   },
  "input":{
-   "file name":"/Users/agl4001/Documents/AOC-develop/results/Primate_ACE2/Primate_ACE2.3.codon.fas",
+   "file name":"/Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.3.codon.fas",
    "number of sequences":31,
    "number of sites":45,
    "partition count":1,
    "trees":{
-     "0":"(XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA,XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA,XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA,XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,(NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA,XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA,XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA)Node43,(NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA,XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA)Node49,(XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA,((XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,(XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA,(XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA)Node27,XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA)Node24)Node22,((((XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA,XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA)Node34,XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA)Node33,XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA)Node32,XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA)Node31)Node21)Node19,XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA,((NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA,XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA,XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA)Node11,XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA)Node10,XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA)"
+     "0":"(XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA:1e-10,XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:1e-10,XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA:1e-10,XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA:1e-10,XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:1e-10,(NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA:1e-10,XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:1e-10,XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:1e-10,XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA:1e-10,XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:1e-10)Node43:0.013581395,(NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA:0.013587879,XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:5e-09)Node49:0.013603396,(XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA:0.014169298,((XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:5e-09,(XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA:0.013733839,(XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:1e-10,XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:1e-10)Node27:0.013797782,XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA:0.013729181)Node24:0.028003036)Node22:0.04349012,((((XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA:0.01419147,XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA:0.04397945)Node34:0.02921797,XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:0.028869193,XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA:0.042793072)Node33:0.027961529,XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA:0.205248495)Node32:1e-10,XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA:1e-10)Node31:1e-10)Node21:1e-10)Node19:1e-10,XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA:5e-09,((NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA:1e-10,XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:1e-10,XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:1e-10,XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA:1e-10)Node11:0.013983728,XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA:0.041369361)Node10:0.013333058,XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA:5e-09)"
     }
   },
- "runtime":"2.5.74",
+ "runtime":"2.5.86",
+ "substitutions":{
+   "0":{
+     "0":{
+       "Node49":"AAT",
+       "XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":"GCT",
+       "XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"GAA",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"ACT",
+       "XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA":"GAA",
+       "root":"GAT"
+      },
+     "1":{
+       "Node22":"CAA",
+       "XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"GAA",
+       "XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":"AAC",
+       "XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"AAT",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"AAC",
+       "XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA":"GAA",
+       "root":"AAA"
+      },
+     "10":null,
+     "11":null,
+     "12":null,
+     "13":null,
+     "14":null,
+     "15":null,
+     "16":{
+       "Node32":"TAC",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"TTT",
+       "root":"TAT"
+      },
+     "17":{
+       "Node34":"GAG",
+       "XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":"AAA",
+       "XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"ACG",
+       "XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA":"AAA",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"ACA",
+       "root":"GAA"
+      },
+     "18":{
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"TGC",
+       "root":"TGG"
+      },
+     "19":{
+       "Node19":"AAT",
+       "Node24":"AAC",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"AGA",
+       "root":"AAC"
+      },
+     "2":{
+       "Node33":"GCC",
+       "Node34":"GCT",
+       "XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"CCT",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"GCC",
+       "root":"GCA"
+      },
+     "20":{
+       "XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"GAT",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"CCA",
+       "XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA":"GCC",
+       "root":"GAC"
+      },
+     "21":null,
+     "22":null,
+     "23":null,
+     "24":null,
+     "25":null,
+     "26":null,
+     "27":null,
+     "28":null,
+     "29":{
+       "XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"GAG",
+       "root":"GAA"
+      },
+     "3":null,
+     "30":{
+       "NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA":"ATA",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"CTG",
+       "root":"ATG"
+      },
+     "31":{
+       "Node27":"TAT",
+       "XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":"TTC",
+       "root":"TAC"
+      },
+     "32":{
+       "Node31":"TTG",
+       "XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"TTC",
+       "root":"CTG"
+      },
+     "33":null,
+     "34":{
+       "Node21":"CGG",
+       "XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"CAG",
+       "XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"CAG",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"CCG",
+       "XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA":"CAG",
+       "root":"CGA"
+      },
+     "35":{
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"GTC",
+       "root":"TCA"
+      },
+     "36":{
+       "XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"AGT",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"ATC",
+       "root":"TCT"
+      },
+     "37":{
+       "Node33":"GTG",
+       "XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"ATT",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"TGT",
+       "root":"GTT"
+      },
+     "38":{
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"GGC",
+       "root":"GCA"
+      },
+     "39":{
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"ATA",
+       "root":"TAT"
+      },
+     "4":null,
+     "40":{
+       "Node11":"GCT",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"TGC",
+       "XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"GCA",
+       "root":"GCC"
+      },
+     "41":{
+       "XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"CTG",
+       "root":"ATG"
+      },
+     "42":{
+       "Node22":"AGA",
+       "XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"AGA",
+       "root":"AGG"
+      },
+     "43":{
+       "Node10":"CAG",
+       "Node22":"AAA",
+       "Node24":"GAA",
+       "Node43":"ACG",
+       "XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"CAG",
+       "XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA":"GAG",
+       "XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"GAG",
+       "root":"AAG"
+      },
+     "44":{
+       "Node21":"TAT",
+       "XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA":"GTA",
+       "root":"TAC"
+      },
+     "5":null,
+     "6":null,
+     "7":null,
+     "8":null,
+     "9":null
+    }
+  },
  "tested":{
    "0":{
      "NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA":"test",
@@ -471,15 +630,15 @@
  "timers":{
    "FEL analysis":{
      "order":2,
-     "timer":12
+     "timer":9
     },
    "Model fitting":{
      "order":1,
-     "timer":7
+     "timer":2
     },
    "Total time":{
      "order":0,
-     "timer":19
+     "timer":11
     }
   }
 }

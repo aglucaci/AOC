@@ -1,0 +1,437 @@
+multiple-files: No
+
+Analysis Description
+--------------------
+RELAX (a random effects test of selection relaxation) uses a random
+effects branch-site model framework to test whether a set of 'Test'
+for convergence diagnostics. Version 4.5 adds support for multiple
+datasets for joint testing. Version 4.6 adds support for branch- and
+site-level evidence ratio calculation.
+branches evolves under relaxed selection relative to a set of
+'Reference' branches (R), as measured by the relaxation parameter (K).
+Version 2.1 adds a check for stability in K estimates to try to mitigate
+convergence problems. Version 3 provides support for >2 branch sets.
+Version 3.1 adds LHC + Nedler-Mead initial fit phase and keyword
+support. Version 3.1.1 adds some bug fixes for better convergence.
+Version 4.0 adds support for synonymous rate variation. Version 4.1 adds
+further support for multiple hit models. Version 4.1.1 adds reporting
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree, with at least two
+groups of branches defined using the {} notation (one group can be
+defined as all unlabeled branches)
+
+- __Citation__: RELAX: Detecting Relaxed Selection in a Phylogenetic Framework (2015).
+Mol Biol Evol 32 (3): 820-832
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution g
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 4.5
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.1.codon.fas'
+contains 30 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.1.codon.fas.FastTree.treefile.labelled
+results/Primate_TP53/Primate_TP53.1.codon.fas.FastTree.treefile.labelled
+
+>Loaded a multiple sequence alignment with **34** sequences, **87** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.1.codon.fas`
+
+>mode => Group mode
+The number of points in the initial distributional guess for likelihood fitting (permissible range = [1,10000], default value = 250, integer): 
+>grid-size => 250
+The number of initial random guesses to 'seed' rate values optimization (permissible range = [1,25], default value = 1, integer): 
+>starting-points => 25
+
+
+### Branch sets for RELAX analysis
+
+>multiple-hits => None
+
+* Selected 29 branches as the _Haplorrhini_ set: `NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA, NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA, Node34, XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA, XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA, XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA, XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA, XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA, XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA, XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA, XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA`
+
+* Selected 6 branches as the _Strepsirrhini_ set: `XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA, XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA, XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA, XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA`
+
+>reference-group => Haplorrhini
+* 1 branches are in the unclassified (nuisance) set: `Node1`
+The number omega rate classes to include in the model (permissible range = [2,10], default value = 3, integer): 
+>rates => 3
+
+>models => All
+
+>srv => Yes
+The number omega rate classes to include in the model (permissible range = [1,10], default value = 3, integer): 
+>syn-rates => 3
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) =  -410.23, AIC-c =   908.92 (44 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site) 19489.536
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -403.96, AIC-c =   915.88 (53 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site) 19983.873
+* non-synonymous/synonymous rate ratio for *Haplorrhini* =   2.0016
+* non-synonymous/synonymous rate ratio for *Strepsirrhini* =   1.9390
+* non-synonymous/synonymous rate ratio for *Unclassified* =   0.2498
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) =  -403.18, AIC-c =   914.33 (53 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site) 4334.694
+* non-synonymous/synonymous rate ratio for *Haplorrhini* =  29.3216
+* non-synonymous/synonymous rate ratio for *Strepsirrhini* =   1.7194
+* non-synonymous/synonymous rate ratio for *Unclassified* =   0.1203
+
+### Fitting the general descriptive (separate k per branch) model
+
+### * Log(L) =  -404.12, AIC-c =   996.07 (91 estimated parameters)
+* The following baseline rate distribution for branch-site combinations was inferred
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|         Neutral evolution         |     1.000     |   38.960    |                                   |
+|         Neutral evolution         |     1.000     |   61.040    |       Collapsed rate class        |
+|      Diversifying selection       |     6.043     |    0.000    |       Not supported by data       |
+
+* Branch-level relaxation or intensification parameter distribution has mean  0.27, median  0.21, and 95% of the weight in  0.21 -  0.41
+
+### Fitting the alternative model with individual K parameters for 2 branch groups
+* Log(L) =  -404.12, AIC-c =   943.29 (66 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|         Neutral evolution         |     1.000     |   31.602    |                                   |
+|         Neutral evolution         |     1.000     |   68.398    |       Collapsed rate class        |
+|      Diversifying selection       |     1.739     |    0.000    |       Not supported by data       |
+
+* Relaxation/intensification parameter (K) for branch set Strepsirrhini =     0.44
+* The following rate distribution was inferred for **Strepsirrhini** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|         Neutral evolution         |     1.000     |   31.602    |                                   |
+|         Neutral evolution         |     1.000     |   68.398    |       Collapsed rate class        |
+|      Diversifying selection       |     1.277     |    0.000    |       Not supported by data       |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |    33.268     |                                   |
+|               1.000               |    33.301     |       Collapsed rate class        |
+|               1.000               |    33.431     |       Collapsed rate class        |
+
+
+### Fitting the null (K := 1) model
+* Log(L) =  -404.12, AIC-c =   941.20 (65 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|         Neutral evolution         |     1.000     |   27.376    |                                   |
+|         Neutral evolution         |     1.000     |   72.624    |       Collapsed rate class        |
+|      Diversifying selection       |     4.573     |    0.000    |       Not supported by data       |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |    26.628     |                                   |
+|               1.000               |    36.477     |       Collapsed rate class        |
+|               1.000               |    36.895     |       Collapsed rate class        |
+
+----
+## Test for relaxation (or intensification) of selection [RELAX]
+Likelihood ratio test **p =   1.0000**.
+>>No significant evidence for differences of selective pressures among the test groups at P<=0.05
+----
+
+
+### * Detected convergence issues (negative LRT). Refitting the alterative/null model pair from a new starting point
+* Log(L) =  -403.63, AIC-c =   942.32 (66 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.970     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.976     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    11.038     |   100.000   |                                   |
+
+* Relaxation/intensification parameter (K) for branch set Strepsirrhini =     0.40
+* The following rate distribution was inferred for **Strepsirrhini** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.988     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.990     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |     2.614     |   100.000   |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |    21.802     |                                   |
+|               1.000               |    37.724     |       Collapsed rate class        |
+|               1.000               |    40.474     |       Collapsed rate class        |
+
+Fitting the null (K := 1) model
+* Log(L) =  -403.63, AIC-c =   940.23 (65 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.775     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.798     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    11.153     |   100.000   |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |    17.450     |                                   |
+|               1.000               |    47.713     |       Collapsed rate class        |
+|               1.000               |    34.836     |       Collapsed rate class        |
+
+----
+## Test for relaxation (or intensification) of selection [RELAX]
+Likelihood ratio test **p =   1.0000**.
+>>No significant evidence for differences of selective pressures among the test groups at P<=0.05
+----
+
+* Detected convergence issues (negative LRT). Refitting the alterative/null model pair from a new starting point
+* Log(L) =  -403.63, AIC-c =   942.32 (66 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.619     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.637     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    11.268     |   100.000   |                                   |
+
+* Relaxation/intensification parameter (K) for branch set Strepsirrhini =     0.44
+* The following rate distribution was inferred for **Strepsirrhini** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.809     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.819     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |     2.919     |   100.000   |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |    13.940     |                                   |
+|               1.000               |    39.735     |       Collapsed rate class        |
+|               1.000               |    46.325     |       Collapsed rate class        |
+
+Fitting the null (K := 1) model
+* Log(L) =  -403.18, AIC-c =   939.33 (65 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.435     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.453     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    26.839     |   100.000   |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |    10.200     |                                   |
+|               1.000               |    30.112     |       Collapsed rate class        |
+|               1.000               |    59.688     |       Collapsed rate class        |
+
+----
+## Test for relaxation (or intensification) of selection [RELAX]
+Likelihood ratio test **p =   1.0000**.
+>>No significant evidence for differences of selective pressures among the test groups at P<=0.05
+----
+
+* Detected convergence issues (negative LRT). Refitting the alterative/null model pair from a new starting point
+* Log(L) =  -403.18, AIC-c =   941.42 (66 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.362     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.434     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    27.370     |   100.000   |                                   |
+
+* Relaxation/intensification parameter (K) for branch set Strepsirrhini =     0.44
+* The following rate distribution was inferred for **Strepsirrhini** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.638     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.691     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |     4.322     |   100.000   |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |     8.148     |                                   |
+|               1.000               |    30.718     |       Collapsed rate class        |
+|               1.000               |    61.135     |       Collapsed rate class        |
+
+Fitting the null (K := 1) model
+* Log(L) =  -403.18, AIC-c =   939.33 (65 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.289     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.433     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    27.902     |   100.000   |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |     5.449     |                                   |
+|               1.000               |    24.257     |       Collapsed rate class        |
+|               1.000               |    70.293     |       Collapsed rate class        |
+
+----
+## Test for relaxation (or intensification) of selection [RELAX]
+Likelihood ratio test **p =   1.0000**.
+>>No significant evidence for differences of selective pressures among the test groups at P<=0.05
+----
+
+* Detected convergence issues (negative LRT). Refitting the alterative/null model pair from a new starting point
+* Log(L) =  -403.18, AIC-c =   941.42 (66 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.231     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.346     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    28.405     |   100.000   |                                   |
+
+* Relaxation/intensification parameter (K) for branch set Strepsirrhini =     0.44
+* The following rate distribution was inferred for **Strepsirrhini** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.523     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.625     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |     4.393     |   100.000   |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |     4.353     |                                   |
+|               1.000               |    19.602     |       Collapsed rate class        |
+|               1.000               |    76.045     |       Collapsed rate class        |
+
+Fitting the null (K := 1) model
+* Log(L) =  -403.18, AIC-c =   939.32 (65 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.185     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.276     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    28.928     |   100.000   |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |     3.477     |                                   |
+|               1.000               |    15.801     |       Collapsed rate class        |
+|               1.000               |    80.721     |       Collapsed rate class        |
+
+----
+## Test for relaxation (or intensification) of selection [RELAX]
+Likelihood ratio test **p =   1.0000**.
+>>No significant evidence for differences of selective pressures among the test groups at P<=0.05
+----
+
+* Detected convergence issues (negative LRT). Refitting the alterative/null model pair from a new starting point
+* Log(L) =  -403.18, AIC-c =   941.41 (66 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.147     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.220     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    30.027     |   100.000   |                                   |
+
+* Relaxation/intensification parameter (K) for branch set Strepsirrhini =     0.44
+* The following rate distribution was inferred for **Strepsirrhini** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.428     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.512     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |     4.513     |   100.000   |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |     2.771     |                                   |
+|               1.000               |    12.686     |       Collapsed rate class        |
+|               1.000               |    84.543     |       Collapsed rate class        |
+
+Fitting the null (K := 1) model
+* Log(L) =  -403.18, AIC-c =   939.32 (65 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.118     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.176     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    30.552     |   100.000   |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               1.000               |     2.214     |                                   |
+|               1.000               |    10.192     |       Collapsed rate class        |
+|               1.000               |    87.595     |       Collapsed rate class        |
+
+----
+## Test for relaxation (or intensification) of selection [RELAX]
+Likelihood ratio test **p =   1.0000**.
+>>No significant evidence for differences of selective pressures among the test groups at P<=0.05
+----
+
+* Detected convergence issues (negative LRT). Refitting the alterative/null model pair from a new starting point
+
+### Fitting the partitioned descriptive model (completely separate rate distributions for branch sets)
+* Log(L) =  -403.18, AIC-c =   951.89 (71 estimated parameters)
+* The following rate distribution was inferred for **Haplorrhini** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.094     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.141     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    31.062     |   100.000   |                                   |
+
+* The following rate distribution was inferred for **Strepsirrhini** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.094     |    0.001    |       Not supported by data       |
+|        Negative selection         |     0.141     |    0.001    |       Not supported by data       |
+|      Diversifying selection       |     5.346     |   99.998    |                                   |
+

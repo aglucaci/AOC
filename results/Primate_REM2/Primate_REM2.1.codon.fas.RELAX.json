@@ -1,14 +1,30 @@
 {
+ "Evidence Ratios":{
+   "0":{
+     "By Branch":{
+      }
+    }
+  },
+ "Site Log Likelihood":{
+   "0":{
+     "constrained":      [
+[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] 
+      ]
+    },
+   "unconstrained":    [
+[-6.945972826838004, -14.438932969766, -11.994449933128, -16.24186710801051, -26.96318245735718, -14.46650017095757, -21.96277724968939, -15.59220091939781, -10.54690402377649, -7.301411291094176, -20.91952527491704, -13.53286459271981, -8.990360919351156, -9.198136479219601, -14.20611391494272, -9.038539027823248, -6.226757695906409, -4.473178115146797, -5.25708548585269, -5.507487395663226, -4.110994663263808, -5.065575323158048, -8.850697884790526, -17.01950707228499, -15.35682214560911, -13.06890266158042, -8.19611886518342, -19.79666487272056, -18.00031391776849, -34.42675653822645, -5.591820445928581, -4.77720355095266, -14.76471437651683, -13.90115616255851, -16.91251815660327, -4.693832477614881, -4.77720355095266, -4.693832477614881, -4.194365736601587, -4.110994663263808, -15.4862380477186, -12.89731604206265, -21.7473558093951, -2.662679778758252, -5.839923300203763, -4.693832477614881, -5.25708548585269, -4.610035061659179, -5.825985882991252, -4.445729623339701, -5.25708548585269, -3.988446795250567, -6.105289759360051, -23.08230967351538, -4.707343552209469, -3.354128043910055, -3.739808306665733, -6.833254412155541, -5.507487395663226, -5.687163589566659, -6.187814329433396] 
+    ]
+  },
  "Synonymous site-posteriors":  [
-[0.3268209413391905, 0.8842481851828191, 0.9164197113113485, 0.8624928035255102, 0.3735007329922461, 0.8754929167988914, 0.5999219401521315, 0.8706329432624186, 0.3296719482164515, 0.4624445606120525, 0.8517427353167653, 0.8959488424187145, 0.2763148345946239, 0.2558235144328436, 0.8988298678426647, 0.5640665949451595, 0.4494039396152384, 0.6305004840349223, 0.6305004840349223, 0.6305004840349223, 0.6305004840349221, 0.6305004840349224, 0.201517856641762, 0.9284886540384488, 0.8924656189115767, 0.1089688186003324, 0.3918750311081926, 0.6369546275564346, 0.7441896274840862, 0.145228175311054, 0.6305004840349225, 0.6305004840349224, 0.8409807975456784, 0.9459634776778945, 0.9366148925077332, 0.6305004840349225, 0.6305004840349224, 0.6305004840349225, 0.6305004840349224, 0.6305004840349221, 0.9214064065796231, 0.9041093377178554, 0.6238168175015646, 0.6305004840349224, 0.6305004840349224, 0.6305004840349225, 0.6305004840349223, 0.6305004840349223, 0.6305004840349225, 0.6305004840349223, 0.6305004840349223, 0.6305004840349224, 0.4646691726497647, 0.6341856590833422, 0.6305004840349224, 0.6305004840349225, 0.6305004840349224, 0.6305004840349224, 0.6305004840349223, 0.6305004840349223, 0.428428628531335],
-  [0.006607074961762587, 0.1150322674115934, 0.08240958405409736, 0.1372547359967087, 0.6264992670076206, 0.1238920371265541, 0.4000780575882253, 0.1288674710089904, 0.006670689291892257, 0.02649709131786818, 0.1482562485122197, 0.1010786487806066, 0.009122740841612896, 0.01130684085759667, 0.099990321517149, 0.01862303404374625, 0.01445136342371739, 0.1458141044113303, 0.1458141044113303, 0.1458141044113302, 0.1458141044113305, 0.1458141044113302, 0.002844393564283958, 0.07109971647226858, 0.1069660780906764, 9.472410821587166e-05, 0.01895557334449546, 0.3630451050319612, 0.2558085664989603, 0.8547718246889456, 0.1458141044113303, 0.1458141044113303, 0.1590166269121906, 0.05350799820315631, 0.06337903398195265, 0.1458141044113302, 0.1458141044113303, 0.1458141044113302, 0.1458141044113303, 0.1458141044113305, 0.07715897011665522, 0.0940944992397019, 0.3761831811082806, 0.1458141044113302, 0.1458141044113304, 0.1458141044113302, 0.1458141044113303, 0.1458141044113304, 0.1458141044113303, 0.1458141044113303, 0.1458141044113303, 0.1458141044113303, 0.02173379813719356, 0.3658143401594233, 0.1458141044113305, 0.1458141044113303, 0.1458141044113304, 0.1458141044113302, 0.1458141044113302, 0.1458141044113304, 0.01416201856516226],
-  [0.6665719836990469, 0.0007195474055874713, 0.001170704634554177, 0.0002524604777811346, 1.333480603881152e-13, 0.0006150460745544716, 2.259643098548066e-09, 0.0004995857285908571, 0.6636573624916563, 0.5110583480700792, 1.016171014965107e-06, 0.002972508800678944, 0.7145624245637632, 0.7328696447095596, 0.001179810640186197, 0.4173103710110943, 0.5361446969610443, 0.2236854115537474, 0.2236854115537474, 0.2236854115537474, 0.2236854115537474, 0.2236854115537473, 0.795637749793954, 0.0004116294892825726, 0.0005683029977468771, 0.8909364572914517, 0.589169395547312, 2.674116041266966e-07, 1.806016953614543e-06, 1.603424172294594e-16, 0.2236854115537471, 0.2236854115537473, 2.575542130859552e-06, 0.0005285241189492357, 6.073510314282522e-06, 0.2236854115537472, 0.2236854115537473, 0.2236854115537472, 0.2236854115537472, 0.2236854115537474, 0.00143462330372167, 0.001796163042442635, 1.39015472213277e-09, 0.2236854115537474, 0.2236854115537472, 0.2236854115537472, 0.2236854115537474, 0.2236854115537474, 0.2236854115537473, 0.2236854115537472, 0.2236854115537474, 0.2236854115537472, 0.5135970292130416, 7.572344499163024e-10, 0.2236854115537471, 0.2236854115537473, 0.2236854115537473, 0.2236854115537474, 0.2236854115537474, 0.2236854115537473, 0.5574093529035029] 
+[0.3260548547560363, 0.8824733312358631, 0.9150039464344386, 0.8606508429075049, 0.371696619931598, 0.8736703532411091, 0.597826675579303, 0.8687835267978035, 0.3290390906444466, 0.4611476523111394, 0.8495591892818649, 0.8942737825661462, 0.2754411525236632, 0.2548725600821254, 0.8971838460806477, 0.5627080746747485, 0.4474638404542159, 0.6289102717735432, 0.6289102717735434, 0.6289102717735432, 0.6289102717735432, 0.6289102717735433, 0.2011580681649386, 0.9270613891531249, 0.8907243638282973, 0.1081708019621029, 0.3908145137596759, 0.634290098087866, 0.7417826513402191, 0.1456899322998871, 0.6289102717735433, 0.6289102717735435, 0.8386291182199022, 0.9447375020237052, 0.9353416810203082, 0.6289102717735434, 0.6289102717735435, 0.6289102717735434, 0.6289102717735435, 0.6289102717735432, 0.9200037794348658, 0.9027312994059916, 0.6227522394472316, 0.6289102717735428, 0.6289102717735433, 0.6289102717735434, 0.6289102717735434, 0.6289102717735434, 0.6289102717735432, 0.6289102717735433, 0.6289102717735434, 0.6289102717735434, 0.4630267850824231, 0.632069613669885, 0.6289102717735433, 0.6289102717735432, 0.6289102717735431, 0.6289102717735434, 0.6289102717735432, 0.6289102717735434, 0.4265509519272824],
+  [0.006789346244992544, 0.1167904003033732, 0.08379490284835882, 0.1390907091216709, 0.6283033800682615, 0.1257005853528868, 0.4021733220259819, 0.1307062065907659, 0.006855146602519371, 0.02698133268277421, 0.1504397497334817, 0.102688607344342, 0.009305230981948279, 0.0115028951681619, 0.1016113127962387, 0.01900995519488172, 0.01472791127256074, 0.1469996538685997, 0.1469996538685998, 0.1469996538685997, 0.1469996538685997, 0.1469996538685997, 0.002931991159105961, 0.07251660697844402, 0.1086950906901993, 9.829921409159846e-05, 0.01930494091163151, 0.3657096290204342, 0.2582154703807003, 0.8543100677001128, 0.1469996538685996, 0.1469996538685996, 0.1613682053045829, 0.05472071358804664, 0.0646519807207228, 0.1469996538685995, 0.1469996538685996, 0.1469996538685995, 0.1469996538685996, 0.1469996538685997, 0.07852530412375368, 0.09543105161845947, 0.3772477590715558, 0.1469996538685998, 0.1469996538685995, 0.1469996538685995, 0.1469996538685998, 0.1469996538685997, 0.1469996538685996, 0.1469996538685997, 0.1469996538685998, 0.1469996538685996, 0.0221556802369146, 0.3679303855240555, 0.1469996538685998, 0.1469996538685996, 0.1469996538685998, 0.1469996538685996, 0.1469996538685997, 0.1469996538685996, 0.01443571611717933],
+  [0.6671557989989712, 0.0007362684607636811, 0.001201150717202584, 0.0002584479708241389, 1.405842059158227e-13, 0.0006290614060040034, 2.394714871496313e-09, 0.0005102666114307681, 0.664105762753034, 0.5118710150060866, 1.06098465336853e-06, 0.003037610089511846, 0.7152536164943885, 0.7336245447497126, 0.001204841123113511, 0.4182819701303698, 0.5378082482732235, 0.224090074357857, 0.224090074357857, 0.2240900743578569, 0.224090074357857, 0.2240900743578571, 0.7959099406759556, 0.0004220038684311745, 0.0005805454815033606, 0.8917308988238056, 0.5898805453286926, 2.728916998523135e-07, 1.878279080511745e-06, 1.781542942709608e-16, 0.224090074357857, 0.2240900743578568, 2.676475514841292e-06, 0.0005417843882481095, 6.338258968957475e-06, 0.2240900743578571, 0.2240900743578568, 0.2240900743578571, 0.2240900743578569, 0.224090074357857, 0.001470916441380537, 0.001837648975548777, 1.481212709091047e-09, 0.2240900743578575, 0.2240900743578571, 0.2240900743578571, 0.224090074357857, 0.2240900743578569, 0.2240900743578572, 0.224090074357857, 0.224090074357857, 0.2240900743578569, 0.5148175346806624, 8.060595622700061e-10, 0.2240900743578569, 0.224090074357857, 0.2240900743578571, 0.224090074357857, 0.2240900743578569, 0.2240900743578569, 0.5590133319555384] 
   ],
  "analysis":{
    "authors":"Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM / UCSD viral evolution g",
    "citation":"RELAX: Detecting Relaxed Selection in a Phylogenetic Framework (2015). Mol Biol Evol 32 (3): 820-832",
    "contact":"spond@temple.edu",
-   "info":"RELAX (a random effects test of selection relaxation) uses a random effects branch-site model framework to test whether a set of 'Test' branches evolves under relaxed selection relative to a set of 'Reference' branches (R), as measured by the relaxation parameter (K).\n                                                Version 2.1 adds a check for stability in K estimates to try to mitigate convergence problems. \n                                                Version 3 provides support for >2 branch sets.\n                                                Version 3.1 adds LHC + Nedler-Mead initial fit phase and keyword support.\n                                                Version 3.1.1 adds some bug fixes for better convergence.\n                                                Version 4.0 adds support for synonymous rate variation.\n                                                Version 4.1 adds further support for multiple hit models.\n                                                Version 4.1.1 adds reporting for convergence diagnostics.\n                                                Version 4.5 adds support for multiple datasets for joint testing.",
+   "info":"RELAX (a random effects test of selection relaxation) uses a random effects branch-site model framework to test whether a set of 'Test' branches evolves under relaxed selection relative to a set of 'Reference' branches (R), as measured by the relaxation parameter (K).\n                                                Version 2.1 adds a check for stability in K estimates to try to mitigate convergence problems. \n                                                Version 3 provides support for >2 branch sets.\n                                                Version 3.1 adds LHC + Nedler-Mead initial fit phase and keyword support.\n                                                Version 3.1.1 adds some bug fixes for better convergence.\n                                                Version 4.0 adds support for synonymous rate variation.\n                                                Version 4.1 adds further support for multiple hit models.\n                                                Version 4.1.1 adds reporting for convergence diagnostics.\n                                                Version 4.5 adds support for multiple datasets for joint testing.\n                                                Version 4.6 adds support for branch- and site-level evidence ratio calculation.",
    "requirements":"in-frame codon alignment and a phylogenetic tree, with at least two groups of branches defined using the {} notation (one group can be defined as all unlabeled branches)",
    "settings":{
     },
@@ -22,153 +38,153 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":5.472322001461832e-18,
-       "k (general descriptive)":0.3882601966199379,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4752790214599186,
        "original name":"NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "Node11":{
-       "General descriptive":0.01083912220031583,
-       "MG94xREV with separate rates for branch sets":0.0201466305473572,
-       "Nucleotide GTR":0.01972865884582046,
-       "RELAX alternative":0.01675123640793125,
-       "RELAX null":0.01513071469369755,
-       "RELAX partitioned descriptive":0.01342249909435275,
-       "k (general descriptive)":0.4432053873584667
+       "General descriptive":0.01113725579698457,
+       "MG94xREV with separate rates for branch sets":0.02014867148499142,
+       "Nucleotide GTR":0.0197399069273736,
+       "RELAX alternative":0.01896640014429606,
+       "RELAX null":0.01639475028603753,
+       "RELAX partitioned descriptive":0.01606243540527206,
+       "k (general descriptive)":0.4148473723817186
       },
      "Node14":{
        "General descriptive":1e+26,
-       "MG94xREV with separate rates for branch sets":0.0100959440045593,
-       "Nucleotide GTR":0.01011425516238184,
-       "RELAX alternative":0.01088297154722905,
-       "RELAX null":0.01088520570099686,
-       "RELAX partitioned descriptive":0.01088329903711319,
-       "k (general descriptive)":50
+       "MG94xREV with separate rates for branch sets":0.01010165488771342,
+       "Nucleotide GTR":0.01013130834285044,
+       "RELAX alternative":0.01088555829123655,
+       "RELAX null":0.0108929226593946,
+       "RELAX partitioned descriptive":0.01088305363812486,
+       "k (general descriptive)":47.04660114121656
       },
      "Node17":{
-       "General descriptive":1e+26,
-       "MG94xREV with separate rates for branch sets":0.01060275313328416,
-       "Nucleotide GTR":0.01005082544372665,
-       "RELAX alternative":0.01117603157681605,
-       "RELAX null":0.01119225604071315,
-       "RELAX partitioned descriptive":0.01125148137905357,
-       "k (general descriptive)":31.25982888508231
+       "General descriptive":4.051090667702499e+24,
+       "MG94xREV with separate rates for branch sets":0.01060753209295506,
+       "Nucleotide GTR":0.0100417405241493,
+       "RELAX alternative":0.01114756500560307,
+       "RELAX null":0.01120538500948218,
+       "RELAX partitioned descriptive":0.01125798088036673,
+       "k (general descriptive)":14.09738156607867
       },
      "Node19":{
-       "General descriptive":0.1204690263940809,
-       "MG94xREV with separate rates for branch sets":0.0339673453561366,
-       "Nucleotide GTR":0.03142181715447938,
-       "RELAX alternative":0.03704977721057258,
-       "RELAX null":0.03727537465318373,
-       "RELAX partitioned descriptive":0.03721221006975341,
-       "k (general descriptive)":1.159391630231826
+       "General descriptive":0.2130884245101319,
+       "MG94xREV with separate rates for branch sets":0.03396901043639978,
+       "Nucleotide GTR":0.03140403658839034,
+       "RELAX alternative":0.03715104640328298,
+       "RELAX null":0.03720999491183947,
+       "RELAX partitioned descriptive":0.03723584680024746,
+       "k (general descriptive)":1.426192708257235
       },
      "Node21":{
-       "General descriptive":0.01019488574115558,
-       "MG94xREV with separate rates for branch sets":0.01076247631633775,
-       "Nucleotide GTR":0.01024722503687066,
-       "RELAX alternative":0.01110772142442924,
-       "RELAX null":0.01114537208913669,
-       "RELAX partitioned descriptive":0.01118693374807814,
+       "General descriptive":0.01018807002376484,
+       "MG94xREV with separate rates for branch sets":0.01077163758281079,
+       "Nucleotide GTR":0.01022615956747289,
+       "RELAX alternative":0.01114016652253334,
+       "RELAX null":0.01116268813682527,
+       "RELAX partitioned descriptive":0.01119517766641956,
        "k (general descriptive)":0
       },
      "Node23":{
-       "General descriptive":1e+26,
-       "MG94xREV with separate rates for branch sets":0.009022669193455258,
-       "Nucleotide GTR":0.009300459418859651,
-       "RELAX alternative":0.001522936977376859,
-       "RELAX null":0.004614507038758086,
-       "RELAX partitioned descriptive":0.003715184519894645,
-       "k (general descriptive)":17.57084266948801
+       "General descriptive":1.53421136190779e+23,
+       "MG94xREV with separate rates for branch sets":0.009026222584177237,
+       "Nucleotide GTR":0.009305381332158207,
+       "RELAX alternative":0.0014790449785468,
+       "RELAX null":0.004295989876291339,
+       "RELAX partitioned descriptive":0.00406130004317184,
+       "k (general descriptive)":13.4653511172004
       },
      "Node25":{
-       "General descriptive":0.01282226428157413,
-       "MG94xREV with separate rates for branch sets":0.01355419362800914,
-       "Nucleotide GTR":0.01192729735209172,
-       "RELAX alternative":0.0224553771901338,
-       "RELAX null":0.0194915379669938,
-       "RELAX partitioned descriptive":0.02044122810562427,
+       "General descriptive":0.01265555877553318,
+       "MG94xREV with separate rates for branch sets":0.01354171460498235,
+       "Nucleotide GTR":0.01191460821183414,
+       "RELAX alternative":0.02249146600544864,
+       "RELAX null":0.01981255344900556,
+       "RELAX partitioned descriptive":0.02011602514271855,
        "k (general descriptive)":0
       },
      "Node27":{
-       "General descriptive":0.011371720193903,
-       "MG94xREV with separate rates for branch sets":0.01217993304239263,
-       "Nucleotide GTR":0.01121458181727153,
-       "RELAX alternative":0.01727714306946448,
-       "RELAX null":0.01616331350531382,
-       "RELAX partitioned descriptive":0.01665258436553794,
+       "General descriptive":0.01130640709612303,
+       "MG94xREV with separate rates for branch sets":0.01218699266112581,
+       "Nucleotide GTR":0.01123072081687058,
+       "RELAX alternative":0.0172610961316068,
+       "RELAX null":0.01620605833700402,
+       "RELAX partitioned descriptive":0.01652707135607516,
        "k (general descriptive)":0
       },
      "Node29":{
-       "General descriptive":0.02258290786390392,
-       "MG94xREV with separate rates for branch sets":0.02583714503513608,
-       "Nucleotide GTR":0.02290620057557038,
-       "RELAX alternative":0.03635936354662265,
-       "RELAX null":0.03366337742047035,
-       "RELAX partitioned descriptive":0.035071792795785,
+       "General descriptive":0.02351998211618526,
+       "MG94xREV with separate rates for branch sets":0.02583318643700772,
+       "Nucleotide GTR":0.02287222908220434,
+       "RELAX alternative":0.03643747789657997,
+       "RELAX null":0.03376082207665346,
+       "RELAX partitioned descriptive":0.03480752102162105,
        "k (general descriptive)":0
       },
      "Node35":{
-       "General descriptive":0.00986125742616363,
-       "MG94xREV with separate rates for branch sets":0.01014329493249222,
-       "Nucleotide GTR":0.009939354064816835,
-       "RELAX alternative":0.01086204554327131,
-       "RELAX null":0.01085862719514379,
-       "RELAX partitioned descriptive":0.01084860501638905,
+       "General descriptive":0.009851440630639193,
+       "MG94xREV with separate rates for branch sets":0.01014995687608492,
+       "Nucleotide GTR":0.009940957052261019,
+       "RELAX alternative":0.01086507294311358,
+       "RELAX null":0.01087707592895654,
+       "RELAX partitioned descriptive":0.0108535360770204,
        "k (general descriptive)":0
       },
      "Node40":{
        "General descriptive":1e+26,
-       "MG94xREV with separate rates for branch sets":0.01031772971283032,
-       "Nucleotide GTR":0.01011675991108726,
-       "RELAX alternative":0.01143130726967485,
-       "RELAX null":0.01138603158287091,
-       "RELAX partitioned descriptive":0.0113847196899545,
-       "k (general descriptive)":50
+       "MG94xREV with separate rates for branch sets":0.01032820531572617,
+       "Nucleotide GTR":0.01010416416925657,
+       "RELAX alternative":0.01142184877503459,
+       "RELAX null":0.011372647220814,
+       "RELAX partitioned descriptive":0.01138527483242129,
+       "k (general descriptive)":30.78482368155163
       },
      "Node46":{
-       "General descriptive":0.0101472305703498,
-       "MG94xREV with separate rates for branch sets":0.01037941186638049,
-       "Nucleotide GTR":0.01021397248485192,
-       "RELAX alternative":0.01138356187482399,
-       "RELAX null":0.01133852682439541,
-       "RELAX partitioned descriptive":0.01133685888106948,
+       "General descriptive":0.01015118605535933,
+       "MG94xREV with separate rates for branch sets":0.01037920668338227,
+       "Nucleotide GTR":0.01024132361439697,
+       "RELAX alternative":0.0113577227056322,
+       "RELAX null":0.01132288315651886,
+       "RELAX partitioned descriptive":0.01133763793421248,
        "k (general descriptive)":0
       },
      "Node57":{
-       "General descriptive":0.01005039285854687,
-       "MG94xREV with separate rates for branch sets":0.01032470447862921,
-       "Nucleotide GTR":0.0101430580139868,
-       "RELAX alternative":0.0113561554944535,
-       "RELAX null":0.01131075225873609,
-       "RELAX partitioned descriptive":0.01130614972118203,
-       "k (general descriptive)":0
+       "General descriptive":0.02629631672700796,
+       "MG94xREV with separate rates for branch sets":0.01032203864364024,
+       "Nucleotide GTR":0.01011716704470008,
+       "RELAX alternative":0.01133999727641275,
+       "RELAX null":0.0112966105687118,
+       "RELAX partitioned descriptive":0.01130492266307253,
+       "k (general descriptive)":1.935209919571402
       },
      "Node6":{
-       "General descriptive":0.009923330557670879,
-       "MG94xREV with separate rates for branch sets":0.01050420185186855,
-       "Nucleotide GTR":0.01002914218841439,
-       "RELAX alternative":0.01121549347225657,
-       "RELAX null":0.01124089262810498,
-       "RELAX partitioned descriptive":0.01123095663630451,
+       "General descriptive":0.009925686152566301,
+       "MG94xREV with separate rates for branch sets":0.01051682729329032,
+       "Nucleotide GTR":0.01001507298590041,
+       "RELAX alternative":0.01123135311780085,
+       "RELAX null":0.01123500233242434,
+       "RELAX partitioned descriptive":0.01123842643152883,
        "k (general descriptive)":0
       },
      "Node7":{
-       "General descriptive":0.02319869519194608,
-       "MG94xREV with separate rates for branch sets":0.02201513859133237,
-       "Nucleotide GTR":0.02036704276341284,
-       "RELAX alternative":0.02377898751177752,
-       "RELAX null":0.02386680450580182,
-       "RELAX partitioned descriptive":0.02387547362488092,
-       "k (general descriptive)":0.6061925937976134
+       "General descriptive":0.02374197730914912,
+       "MG94xREV with separate rates for branch sets":0.02205021574975846,
+       "Nucleotide GTR":0.020387315478566,
+       "RELAX alternative":0.02383250865922305,
+       "RELAX null":0.02385976661557554,
+       "RELAX partitioned descriptive":0.02389369974250137,
+       "k (general descriptive)":0.6245868750926168
       },
      "Node8":{
        "General descriptive":1e+26,
-       "MG94xREV with separate rates for branch sets":0.01002786686316199,
-       "Nucleotide GTR":0.009979010543087315,
-       "RELAX alternative":0.01083327146307963,
-       "RELAX null":0.01083933883340247,
-       "RELAX partitioned descriptive":0.01078572908935002,
-       "k (general descriptive)":23.03537390004208
+       "MG94xREV with separate rates for branch sets":0.01002323552049592,
+       "Nucleotide GTR":0.009990907531446235,
+       "RELAX alternative":0.01082448814431618,
+       "RELAX null":0.01083281831097781,
+       "RELAX partitioned descriptive":0.01076415041337199,
+       "k (general descriptive)":47.61664467434103
       },
      "XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
        "General descriptive":0,
@@ -176,8 +192,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":6.2476158860475e-18,
-       "k (general descriptive)":0.388742064853425,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2062743557729535,
        "original name":"XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
@@ -186,28 +202,28 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":2.095656790772424e-16,
-       "k (general descriptive)":0.5337974827230454,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4698024829864323,
        "original name":"XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
        "General descriptive":1e+26,
-       "MG94xREV with separate rates for branch sets":0.01031770905888907,
-       "Nucleotide GTR":0.0101174755885879,
-       "RELAX alternative":0.01143862485359937,
-       "RELAX null":0.01139208813575647,
-       "RELAX partitioned descriptive":0.01138511609397483,
-       "k (general descriptive)":42.23965139875567,
+       "MG94xREV with separate rates for branch sets":0.01032818464191835,
+       "Nucleotide GTR":0.01010422492326252,
+       "RELAX alternative":0.01142209838464,
+       "RELAX null":0.0113733306835991,
+       "RELAX partitioned descriptive":0.01138106549289278,
+       "k (general descriptive)":50,
        "original name":"XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "General descriptive":1e+26,
-       "MG94xREV with separate rates for branch sets":0.007416071906306221,
-       "Nucleotide GTR":0.008929468487147638,
-       "RELAX alternative":0.002370098726731757,
-       "RELAX null":0.004441973877805877,
-       "RELAX partitioned descriptive":0.003370548307580146,
-       "k (general descriptive)":49.12291533956039,
+       "General descriptive":2.236409447261868e+21,
+       "MG94xREV with separate rates for branch sets":0.007443746477792213,
+       "Nucleotide GTR":0.008918235233957694,
+       "RELAX alternative":0.002319928849648614,
+       "RELAX null":0.004367451927901375,
+       "RELAX partitioned descriptive":0.003542294825473438,
+       "k (general descriptive)":12.58097676934261,
        "original name":"XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
@@ -216,8 +232,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":2.55686558153402e-16,
-       "k (general descriptive)":0.388742064853425,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.455712452624124,
        "original name":"XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
@@ -226,8 +242,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":2.095653879784726e-16,
-       "k (general descriptive)":0.3892251210158315,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.449378540682015,
        "original name":"XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
      "XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
@@ -236,28 +252,28 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":6.2476158860475e-18,
-       "k (general descriptive)":0.388742064853425,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4755006149418113,
        "original name":"XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
      "XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "General descriptive":0.01014723045708119,
-       "MG94xREV with separate rates for branch sets":0.01037920926187251,
-       "Nucleotide GTR":0.01022080671927743,
-       "RELAX alternative":0.011295779028807,
-       "RELAX null":0.01127366413122487,
-       "RELAX partitioned descriptive":0.01127169862539838,
+       "General descriptive":0.01015118391750588,
+       "MG94xREV with separate rates for branch sets":0.01037888022860241,
+       "Nucleotide GTR":0.01024238776161758,
+       "RELAX alternative":0.01129517408912058,
+       "RELAX null":0.01125535241425357,
+       "RELAX partitioned descriptive":0.01127407634517483,
        "k (general descriptive)":0,
        "original name":"XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "General descriptive":0.06296951884925142,
-       "MG94xREV with separate rates for branch sets":0.05972289776656815,
-       "Nucleotide GTR":0.056665313035377,
-       "RELAX alternative":0.08451415566863663,
-       "RELAX null":0.08121469928018826,
-       "RELAX partitioned descriptive":0.08182935538145064,
-       "k (general descriptive)":0.4147428199541223,
+       "General descriptive":0.06272726090450788,
+       "MG94xREV with separate rates for branch sets":0.05971800346505254,
+       "Nucleotide GTR":0.05665296259224763,
+       "RELAX alternative":0.08445057562129614,
+       "RELAX null":0.08147121374950674,
+       "RELAX partitioned descriptive":0.0812897467508787,
+       "k (general descriptive)":0.3857304029782062,
        "original name":"XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
@@ -266,8 +282,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":6.247565624401431e-18,
-       "k (general descriptive)":0.3882601966199379,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2038819428759536,
        "original name":"XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
      "XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
@@ -276,8 +292,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":2.095653879784726e-16,
-       "k (general descriptive)":0.3882601966199379,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4752789841722385,
        "original name":"XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
      "XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
@@ -286,8 +302,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":2.55686558153402e-16,
-       "k (general descriptive)":0.3882601966199379,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4755004283988222,
        "original name":"XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA":{
@@ -296,8 +312,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":2.55686558153402e-16,
-       "k (general descriptive)":0.388742064853425,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2192049780677742,
        "original name":"XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA"
       },
      "XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA":{
@@ -306,8 +322,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":6.247565624401431e-18,
-       "k (general descriptive)":0.3882601966199379,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4792391412831251,
        "original name":"XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA"
       },
      "XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA":{
@@ -316,8 +332,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":6.2476158860475e-18,
-       "k (general descriptive)":0.3884439638948385,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4557123640013492,
        "original name":"XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA"
       },
      "XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA":{
@@ -326,18 +342,18 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":6.2476158860475e-18,
-       "k (general descriptive)":0.388742064853425,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2141375136332492,
        "original name":"XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA"
       },
      "XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA":{
-       "General descriptive":0.3433561060866581,
-       "MG94xREV with separate rates for branch sets":0.03275051284622282,
-       "Nucleotide GTR":0.03199335274440435,
-       "RELAX alternative":0.0393439602695138,
-       "RELAX null":0.03874651595857873,
-       "RELAX partitioned descriptive":0.03818667375839909,
-       "k (general descriptive)":1.329161475913611,
+       "General descriptive":0.09886904551888827,
+       "MG94xREV with separate rates for branch sets":0.03270688002988638,
+       "Nucleotide GTR":0.0319783197778726,
+       "RELAX alternative":0.03938643872080026,
+       "RELAX null":0.03886333533862229,
+       "RELAX partitioned descriptive":0.03811411301885548,
+       "k (general descriptive)":1.085825644904928,
        "original name":"XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA"
       },
      "XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
@@ -346,17 +362,17 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":9.415311371788564e-18,
-       "k (general descriptive)":0.3882601966199379,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4493784535365946,
        "original name":"XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
      "XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "General descriptive":0.009615032894669664,
-       "MG94xREV with separate rates for branch sets":0.009765413363009342,
-       "Nucleotide GTR":0.009560905592971031,
-       "RELAX alternative":0.01028352118117459,
-       "RELAX null":0.01029077282620218,
-       "RELAX partitioned descriptive":0.01027771974078102,
+       "General descriptive":0.009612295424494755,
+       "MG94xREV with separate rates for branch sets":0.009761455921716698,
+       "Nucleotide GTR":0.009564542544783295,
+       "RELAX alternative":0.01027312363239725,
+       "RELAX null":0.01030503212364594,
+       "RELAX partitioned descriptive":0.01026872205473118,
        "k (general descriptive)":0,
        "original name":"XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
@@ -366,18 +382,18 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":6.247565624401431e-18,
-       "k (general descriptive)":0.3882601966199379,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2141374822348091,
        "original name":"XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "General descriptive":554450.7659096236,
-       "MG94xREV with separate rates for branch sets":5.023539040953413,
-       "Nucleotide GTR":4.314340893226638,
-       "RELAX alternative":2578.953255284352,
-       "RELAX null":2493.373719769776,
-       "RELAX partitioned descriptive":2592.859586130658,
-       "k (general descriptive)":2.434040619746934,
+       "General descriptive":269450.907228403,
+       "MG94xREV with separate rates for branch sets":5.053330251167108,
+       "Nucleotide GTR":4.305183019117126,
+       "RELAX alternative":2538.023229459879,
+       "RELAX null":2490.491426640629,
+       "RELAX partitioned descriptive":2599.882965678214,
+       "k (general descriptive)":2.473298991999675,
        "original name":"XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
      "XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
@@ -386,8 +402,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":2.55686558153402e-16,
-       "k (general descriptive)":0.388742064853425,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4755005030160098,
        "original name":"XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
@@ -396,17 +412,17 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":2.305598092780859e-17,
-       "k (general descriptive)":0.3897081265934538,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4557125412469147,
        "original name":"XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "General descriptive":0.009706075295321089,
-       "MG94xREV with separate rates for branch sets":0.0100417196607233,
-       "Nucleotide GTR":0.01001143176858059,
-       "RELAX alternative":0.01068690561144569,
-       "RELAX null":0.01067777900110659,
-       "RELAX partitioned descriptive":0.01067167398935979,
+       "General descriptive":0.009715751787285504,
+       "MG94xREV with separate rates for branch sets":0.01004810142375298,
+       "Nucleotide GTR":0.009992777853487773,
+       "RELAX alternative":0.01068638386654685,
+       "RELAX null":0.01069657255008453,
+       "RELAX partitioned descriptive":0.01066269247384963,
        "k (general descriptive)":0,
        "original name":"XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
@@ -416,17 +432,17 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":4.145407045045988e-16,
-       "k (general descriptive)":0.3882601966199379,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4552661736114232,
        "original name":"XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "General descriptive":0.01013415229354455,
-       "MG94xREV with separate rates for branch sets":0.01046436573709004,
-       "Nucleotide GTR":0.01001886890077472,
-       "RELAX alternative":0.01141401905320932,
-       "RELAX null":0.01142988841268185,
-       "RELAX partitioned descriptive":0.01137610498766866,
+       "General descriptive":0.01004857741192038,
+       "MG94xREV with separate rates for branch sets":0.01045610074866484,
+       "Nucleotide GTR":0.01001546553292542,
+       "RELAX alternative":0.01141976438264047,
+       "RELAX null":0.01140317664668361,
+       "RELAX partitioned descriptive":0.01136838780892036,
        "k (general descriptive)":0,
        "original name":"XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
@@ -436,8 +452,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":9.519873924336901e-17,
-       "k (general descriptive)":0.3895150456910282,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2024324702935883,
        "original name":"XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
      "XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
@@ -446,28 +462,28 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":2.393731765134479e-16,
-       "k (general descriptive)":0.388742064853425,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4755006895590254,
        "original name":"XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "General descriptive":0.03453039349073213,
-       "MG94xREV with separate rates for branch sets":0.03674357515145783,
-       "Nucleotide GTR":0.03312738301048786,
-       "RELAX alternative":0.04978874027223497,
-       "RELAX null":0.04643266536029839,
-       "RELAX partitioned descriptive":0.04769287632854424,
-       "k (general descriptive)":0.2350472809101929,
+       "General descriptive":0.0357691201706699,
+       "MG94xREV with separate rates for branch sets":0.03680253080660762,
+       "Nucleotide GTR":0.03313202896999802,
+       "RELAX alternative":0.04974654648368414,
+       "RELAX null":0.04654965563198395,
+       "RELAX partitioned descriptive":0.04753822413955618,
+       "k (general descriptive)":0.269803160560329,
        "original name":"XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
      "XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "General descriptive":1e+26,
-       "MG94xREV with separate rates for branch sets":0.01012857804372597,
-       "Nucleotide GTR":0.01001240255616359,
-       "RELAX alternative":0.01101313601564014,
-       "RELAX null":0.01099579485716592,
-       "RELAX partitioned descriptive":0.0109922139052833,
-       "k (general descriptive)":42.07551972452838,
+       "General descriptive":1.824799003697025e+22,
+       "MG94xREV with separate rates for branch sets":0.01011448492910497,
+       "Nucleotide GTR":0.01000381696777021,
+       "RELAX alternative":0.01099510100904741,
+       "RELAX null":0.01101117178019662,
+       "RELAX partitioned descriptive":0.01098169830745862,
+       "k (general descriptive)":12.94311942511374,
        "original name":"XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
@@ -476,28 +492,28 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":2.305598092780859e-17,
-       "k (general descriptive)":0.3897081265934538,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.2890243387199666,
        "original name":"XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":{
-       "General descriptive":0.009833250619029357,
-       "MG94xREV with separate rates for branch sets":0.0101072093232098,
-       "Nucleotide GTR":0.009939256502566529,
-       "RELAX alternative":0.01073523355465463,
-       "RELAX null":0.01073741861183218,
-       "RELAX partitioned descriptive":0.0107310093003117,
+       "General descriptive":0.009825107223843981,
+       "MG94xREV with separate rates for branch sets":0.01010353251469087,
+       "Nucleotide GTR":0.009940633379023395,
+       "RELAX alternative":0.01073645549643235,
+       "RELAX null":0.01075977367661174,
+       "RELAX partitioned descriptive":0.0107355273568121,
        "k (general descriptive)":0,
        "original name":"XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA"
       },
      "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
-       "General descriptive":0.009582031945856818,
+       "General descriptive":0.009184451874549748,
        "MG94xREV with separate rates for branch sets":0,
-       "Nucleotide GTR":1e-06,
-       "RELAX alternative":0.004701953804149474,
-       "RELAX null":0.006314870023660159,
-       "RELAX partitioned descriptive":0.007973854776140396,
-       "k (general descriptive)":0.4561883486936598,
+       "Nucleotide GTR":2.025729317285665e-08,
+       "RELAX alternative":0.002509002307112161,
+       "RELAX null":0.005081681731736551,
+       "RELAX partitioned descriptive":0.00532012903398245,
+       "k (general descriptive)":0.4319694255632684,
        "original name":"XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       },
      "XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":{
@@ -506,8 +522,8 @@
        "Nucleotide GTR":1e-06,
        "RELAX alternative":0,
        "RELAX null":0,
-       "RELAX partitioned descriptive":4.448361809809436e-17,
-       "k (general descriptive)":0.3882601966199379,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.4752791146791313,
        "original name":"XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA"
       }
     },
@@ -556,21 +572,21 @@
   },
  "fits":{
    "General descriptive":{
-     "AIC-c":1493.117493482453,
-     "Log Likelihood":-618.2254134078934,
+     "AIC-c":1493.763539358621,
+     "Log Likelihood":-618.5484363459771,
      "Rate Distributions":{
        "Shared":{
          "0":{
-           "omega":1.465757666582046e-08,
-           "proportion":0.2862047088643305
+           "omega":1.363330554244608e-08,
+           "proportion":0.2863019717851046
           },
          "1":{
-           "omega":0.3137678466908903,
-           "proportion":0.7109215299996841
+           "omega":0.2811242005681816,
+           "proportion":0.706229871579422
           },
          "2":{
-           "omega":270.3549952158127,
-           "proportion":0.002873761135985463
+           "omega":107.3172038498385,
+           "proportion":0.007468156635473405
           }
         }
       },
@@ -578,149 +594,149 @@
      "estimated parameters":121
     },
    "MG94xREV with separate rates for branch sets":{
-     "AIC-c":1412.204906484936,
+     "AIC-c":1412.287447022569,
      "Equilibrium frequencies":      [
-[0.01613511757602299],
-      [0.03313411906304883],
-      [0.01779367541827674],
-      [0.005664896896600593],
-      [0.03397521559711261],
-      [0.06976948469593718],
-      [0.037467589297233],
-      [0.0119283973290301],
-      [0.01141243281826408],
-      [0.02343589416177112],
-      [0.0125855373748775],
-      [0.004006804099829934],
-      [0.009030028139366224],
-      [0.01854352942286954],
-      [0.009958241021345696],
-      [0.003170362914425091],
-      [0.01484656102388042],
-      [0.03048801586503995],
-      [0.01637266581367428],
-      [0.005212496101940502],
-      [0.03126194211386436],
-      [0.06419766743331268],
-      [0.03447541353808763],
-      [0.01097579103642258],
-      [0.01050103164535203],
-      [0.0215642948483366],
-      [0.01158045163129838],
-      [0.003686819218922722],
-      [0.008308886699262746],
-      [0.01706263619571423],
-      [0.009162972151725674],
-      [0.002917176540864175],
-      [0.01504447825256481],
-      [0.03089444693001107],
-      [0.01659092731132386],
-      [0.005281983088277936],
-      [0.03167869027099757],
-      [0.06505347669486264],
-      [0.03493499999007686],
-      [0.01112210762388373],
-      [0.01064101928816253],
-      [0.02185176515664914],
-      [0.01173482885644121],
-      [0.003735967640654587],
-      [0.008419651193904004],
-      [0.0172900955827382],
-      [0.009285122328582444],
-      [0.00295606497405906],
-      [0.01128387583992538],
-      [0.001929189458925604],
-      [0.01157031257426885],
-      [0.02376010665098662],
-      [0.01275964587580595],
-      [0.004062234284060913],
-      [0.007981130248728104],
-      [0.00428602434990438],
-      [0.001364523375175702],
-      [0.003075190143481821],
-      [0.006315027819013626],
-      [0.003391294485756491],
-      [0.001079672027066863] 
+[0.01617148556627309],
+      [0.03318660391908108],
+      [0.01782421688248876],
+      [0.005665908255039663],
+      [0.03399381999578168],
+      [0.06976102691823001],
+      [0.03746799994261354],
+      [0.01191021471373827],
+      [0.0114109927127414],
+      [0.02341727319542378],
+      [0.01257720004280816],
+      [0.003998002381683423],
+      [0.009028730104175851],
+      [0.01852847028998224],
+      [0.009951469386703594],
+      [0.003163343047250084],
+      [0.0148715817271476],
+      [0.03051898295963619],
+      [0.01639146242959701],
+      [0.005210468594739099],
+      [0.03126131301997134],
+      [0.06415346375770814],
+      [0.03445622982599947],
+      [0.01095284232097019],
+      [0.0104937490139645],
+      [0.02153493510076738],
+      [0.01156621372654832],
+      [0.003676633103426022],
+      [0.00830297854123203],
+      [0.0170391062136662],
+      [0.009151545767583853],
+      [0.002909065742005641],
+      [0.01508030431446561],
+      [0.03094731675778365],
+      [0.01662151653621473],
+      [0.005283597499665729],
+      [0.0317000654174097],
+      [0.06505385735313031],
+      [0.03493982286744295],
+      [0.01110656541711845],
+      [0.01064102873746978],
+      [0.02183717782480476],
+      [0.01172854548780753],
+      [0.003728234633649621],
+      [0.008419510810318668],
+      [0.0172782499980836],
+      [0.009279987674141942],
+      [0.002949894467523196],
+      [0.01130243026366057],
+      [0.001929650080768425],
+      [0.01157734551069398],
+      [0.02375865707100273],
+      [0.01276055415319983],
+      [0.004056286432787191],
+      [0.007975269114661907],
+      [0.004283443004368856],
+      [0.001361607931414302],
+      [0.003074933265864764],
+      [0.006310279408385745],
+      [0.00338919248978956],
+      [0.001077346277394255] 
       ],
-     "Log Likelihood":-635.8313980633782,
+     "Log Likelihood":-635.8726683321943,
      "Rate Distributions":{
        "non-synonymous/synonymous rate ratio for *Haplorrhini*":        [
-[0.4896003829545846, 1] 
+[0.4873070461941784, 1] 
         ],
        "non-synonymous/synonymous rate ratio for *Strepsirrhini*":        [
-[0.4781361012645843, 1] 
+[0.4767105955510626, 1] 
         ],
        "non-synonymous/synonymous rate ratio for *Unclassified*":        [
-[0.2636798289389545, 1] 
+[0.2626549672704427, 1] 
         ]
       },
      "display order":1,
      "estimated parameters":68
     },
    "Nucleotide GTR":{
-     "AIC-c":1412.0862968307,
+     "AIC-c":1412.086802319969,
      "Equilibrium frequencies":      [
 [0.2517118597644481],
       [0.4146809093399068],
       [0.2330868255272528],
       [0.1005204053683922] 
       ],
-     "Log Likelihood":-638.3241962297731,
+     "Log Likelihood":-638.3244489744079,
      "Rate Distributions":{
-       "Substitution rate from nucleotide A to nucleotide C":0.1566201309572156,
+       "Substitution rate from nucleotide A to nucleotide C":0.1571393755969973,
        "Substitution rate from nucleotide A to nucleotide G":1,
-       "Substitution rate from nucleotide A to nucleotide T":0,
-       "Substitution rate from nucleotide C to nucleotide G":0.08597188964508289,
-       "Substitution rate from nucleotide C to nucleotide T":2.048868428152511,
-       "Substitution rate from nucleotide G to nucleotide T":0.1828664976418055
+       "Substitution rate from nucleotide A to nucleotide T":6.055290838337745e-19,
+       "Substitution rate from nucleotide C to nucleotide G":0.08616153299887039,
+       "Substitution rate from nucleotide C to nucleotide T":2.054350345861871,
+       "Substitution rate from nucleotide G to nucleotide T":0.1835450972879084
       },
      "display order":0,
      "estimated parameters":67
     },
    "RELAX alternative":{
-     "AIC-c":1416.45551624521,
-     "Log Likelihood":-623.9924926574322,
+     "AIC-c":1416.531643426209,
+     "Log Likelihood":-624.0305562479315,
      "Rate Distributions":{
        "Haplorrhini":{
          "0":{
            "omega":0,
-           "proportion":0.27387085136329
+           "proportion":0.2734448189293404
           },
          "1":{
-           "omega":0.6921419732655972,
-           "proportion":0.7261291486367101
+           "omega":0.6892335024204416,
+           "proportion":0.7265551810706596
           },
          "2":{
-           "omega":66.79588817031332,
+           "omega":1.917499422500478,
            "proportion":0
           }
         },
        "Strepsirrhini":{
          "0":{
            "omega":0,
-           "proportion":0.27387085136329
+           "proportion":0.2734448189293404
           },
          "1":{
-           "omega":0.5369884677988338,
-           "proportion":0.7261291486367101
+           "omega":0.5350377190301038,
+           "proportion":0.7265551810706596
           },
          "2":{
-           "omega":1211.787097684519,
+           "omega":2.986204928717329,
            "proportion":0
           }
         },
        "Synonymous site-to-site rates":{
          "0":{
-           "proportion":0.223685411553747,
-           "rate":0.001180532361498212
+           "proportion":0.2240900743578567,
+           "rate":0.001203827458171511
           },
          "1":{
-           "proportion":0.6305004840349226,
-           "rate":0.9974275426443004
+           "proportion":0.6289102717735435,
+           "rate":0.9976851716572118
           },
          "2":{
-           "proportion":0.1458141044113303,
-           "rate":2.543357415272468
+           "proportion":0.1469996538685997,
+           "rate":2.532494274420422
           }
         }
       },
@@ -728,35 +744,35 @@
      "estimated parameters":81
     },
    "RELAX null":{
-     "AIC-c":1414.379644774757,
-     "Log Likelihood":-624.035002523698,
+     "AIC-c":1414.454780300486,
+     "Log Likelihood":-624.0725702865626,
      "Rate Distributions":{
        "Haplorrhini":{
          "0":{
            "omega":0,
-           "proportion":0.2732075698886662
+           "proportion":0.2732233698501363
           },
          "1":{
-           "omega":0.6630634737009102,
-           "proportion":0.7267924301113338
+           "omega":0.6607937975851899,
+           "proportion":0.7267766301498637
           },
          "2":{
-           "omega":31.72900037363594,
+           "omega":3.807752809133007,
            "proportion":0
           }
         },
        "Synonymous site-to-site rates":{
          "0":{
-           "proportion":0.2256364056013271,
-           "rate":0.001213149230278519
+           "proportion":0.225386615207331,
+           "rate":0.00121679573150639
           },
          "1":{
-           "proportion":0.656751114262012,
-           "rate":1.041570037058698
+           "proportion":0.6525364669355926,
+           "rate":1.034089494659722
           },
          "2":{
-           "proportion":0.1176124801366609,
-           "rate":2.684017772443847
+           "proportion":0.1220769178570763,
+           "rate":2.66180250036001
           }
         }
       },
@@ -764,34 +780,34 @@
      "estimated parameters":80
     },
    "RELAX partitioned descriptive":{
-     "AIC-c":1425.076756729742,
-     "Log Likelihood":-623.9707844166035,
+     "AIC-c":1425.151602592279,
+     "Log Likelihood":-624.008207347872,
      "Rate Distributions":{
        "Haplorrhini":{
          "0":{
            "omega":0,
-           "proportion":0.2743256816486715
+           "proportion":0.2740735370419606
           },
          "1":{
-           "omega":0.7108901102762234,
-           "proportion":0.7256743183513285
+           "omega":0.7132962459020483,
+           "proportion":0.7259264629580394
           },
          "2":{
-           "omega":16.78263655067894,
+           "omega":1.059247630633722,
            "proportion":0
           }
         },
        "Strepsirrhini":{
          "0":{
-           "omega":0.271133620389003,
-           "proportion":0.08873089726109472
+           "omega":0.2827409943911883,
+           "proportion":0.01502666941518371
           },
          "1":{
-           "omega":0.4152427182981812,
-           "proportion":0.9112691027389053
+           "omega":0.4101633169449542,
+           "proportion":0.9849733305848163
           },
          "2":{
-           "omega":16.78263655067894,
+           "omega":1.059247630633723,
            "proportion":0
           }
         }
@@ -801,21 +817,619 @@
     }
   },
  "input":{
-   "file name":"/Users/agl4001/Documents/AOC-develop/results/Primate_REM2/Primate_REM2.1.codon.fas",
+   "file name":"/Users/alex/Documents/AOC-dev/results/Primate_REM2/Primate_REM2.1.codon.fas",
    "number of sequences":35,
    "number of sites":61,
    "partition count":1,
    "trees":{
-     "0":"(XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,((XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA,XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA,XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA)Node46,XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA)Node40,(XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA)Node57,XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,(((XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,(XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node11,(XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node14)Node8,(XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,(XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,(XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,(XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,(XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA,(XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,(XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node29)Node27)Node25)Node23)Node21)Node19)Node17)Node7,NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA,(XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA,XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node35,XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA)Node6)"
+     "0":"(XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,((XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.013109961,XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.013109961,XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:1e-10,XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA:1e-10,XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA:1e-10,XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA:1e-10)Node46:0.013083664,XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.013109961,XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:1e-10,XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA:1e-10)Node40:0.012992045,(XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:5e-09,XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.012853728)Node57:0.012997222,XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.012993569,(((XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:5e-09,(XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:5e-09,XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:1.809996725)Node11:0.025813842,(XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:0.012945468,XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:0.012590695)Node14:0.013220538)Node8:0.013034212,(XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:0.013168101,(XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:5e-09,(XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:5e-09,(XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.072038414,(XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA:0.041160336,(XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:5e-09,(XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:0.011694637,XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:0.042037751)Node29:0.028984735)Node27:0.014550859)Node25:0.014361698)Node23:0.012745326)Node21:0.013198871)Node19:0.040579948)Node17:0.013034997)Node7:0.026501542,NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA:5e-09,(XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:1e-10,XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:1e-10)Node35:0.012861453,XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA:1e-10)Node6:1e-10)"
     }
   },
- "runtime":"2.5.74",
+ "runtime":"2.5.86",
+ "substitutions":{
+   "0":{
+     "0":{
+       "root":"ATG"
+      },
+     "1":{
+       "Node14":"CAT",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"TCA",
+       "root":"CAC"
+      },
+     "10":{
+       "Node21":"ACG",
+       "Node46":"ACG",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"TTT",
+       "root":"ATG"
+      },
+     "11":{
+       "XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"GAT",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"AGT",
+       "root":"GAC"
+      },
+     "12":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GTA",
+       "root":"ACA"
+      },
+     "13":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"AGA",
+       "root":"GAA"
+      },
+     "14":{
+       "Node11":"ACT",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GGT",
+       "root":"ACC"
+      },
+     "15":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CAG",
+       "root":"ACA"
+      },
+     "16":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GCC",
+       "root":"GCA"
+      },
+     "17":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"AGA",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"AGG"
+      },
+     "18":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CAT",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"CAC"
+      },
+     "19":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"TCT",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"TCC"
+      },
+     "2":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"ACT",
+       "XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"ATG",
+       "root":"ACG"
+      },
+     "20":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"CAG"
+      },
+     "21":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"TTC"
+      },
+     "22":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CTT",
+       "root":"CTC"
+      },
+     "23":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GTG",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"TAC",
+       "root":"TGC"
+      },
+     "24":{
+       "XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"TCC",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GGT",
+       "root":"CCC"
+      },
+     "25":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"AAT",
+       "root":"TCT"
+      },
+     "26":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GGT",
+       "root":"GGC"
+      },
+     "27":{
+       "Node29":"AGT",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CAT",
+       "XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"AGC",
+       "XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"AGT",
+       "root":"AGC"
+      },
+     "28":{
+       "Node7":"CAC",
+       "XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"CGC",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CAA",
+       "root":"CGC"
+      },
+     "29":{
+       "Node25":"CAG",
+       "Node35":"CAG",
+       "XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"GGG",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GTG",
+       "XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CAG",
+       "XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CGG",
+       "root":"CGG"
+      },
+     "3":{
+       "Node27":"GAG",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CCA",
+       "root":"GAC"
+      },
+     "30":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GGT",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"GGC"
+      },
+     "31":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GTA",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"GTC"
+      },
+     "32":{
+       "Node29":"GTC",
+       "XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"GTC",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GCT",
+       "root":"GCC"
+      },
+     "33":{
+       "XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA":"TCT",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GGG",
+       "root":"TCC"
+      },
+     "34":{
+       "Node19":"CCC",
+       "XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CCA",
+       "root":"CCT"
+      },
+     "35":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"CTG"
+      },
+     "36":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GTA",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"GTC"
+      },
+     "37":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"CTG"
+      },
+     "38":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GAA",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"GAG"
+      },
+     "39":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"CAG"
+      },
+     "4":{
+       "Node19":"CCT",
+       "Node23":"CCC",
+       "Node6":"CTG",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GTT",
+       "root":"CCG"
+      },
+     "40":{
+       "Node57":"ACA",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CCT",
+       "root":"CCA"
+      },
+     "41":{
+       "Node29":"GAG",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GGA",
+       "root":"GGG"
+      },
+     "42":{
+       "Node11":"ATG",
+       "Node17":"ACA",
+       "XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"ACG",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"TTG",
+       "root":"ACG"
+      },
+     "43":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"ACC"
+      },
+     "44":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CTT",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"CTC"
+      },
+     "45":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"CTG"
+      },
+     "46":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CAT",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"CAC"
+      },
+     "47":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"ATG"
+      },
+     "48":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GTT",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"GTC"
+      },
+     "49":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"GGG"
+      },
+     "5":{
+       "XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA":"GCC",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CAG",
+       "root":"GAC"
+      },
+     "50":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CAT",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"CAC"
+      },
+     "51":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"ATC"
+      },
+     "52":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CCA",
+       "root":"CCC"
+      },
+     "53":{
+       "Node40":"ACG",
+       "Node8":"ACG",
+       "XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"ATG",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CTC",
+       "root":"ACA"
+      },
+     "54":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"ATA"
+      },
+     "55":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GCG",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"GCC"
+      },
+     "56":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"TCC"
+      },
+     "57":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"TTT",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"TTC"
+      },
+     "58":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"TCT",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"TCC"
+      },
+     "59":{
+       "NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "Node14":"---",
+       "Node17":"---",
+       "Node35":"---",
+       "Node40":"---",
+       "Node57":"---",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"TTG",
+       "XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"---",
+       "XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"---",
+       "root":"CTG"
+      },
+     "6":{
+       "Node7":"ACC",
+       "XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA":"ACG",
+       "XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA":"ACT",
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GCT",
+       "root":"ACA"
+      },
+     "60":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"CCC",
+       "root":"CCA"
+      },
+     "7":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"TCT",
+       "XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"AAC",
+       "root":"GAC"
+      },
+     "8":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GGA",
+       "root":"ATG"
+      },
+     "9":{
+       "XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA":"GAT",
+       "root":"GAC"
+      }
+    }
+  },
  "test results":{
-   "LRT":0.08501973253169126,
-   "p-value":0.7706066725738914,
+   "LRT":0.08402807726224637,
+   "p-value":0.7719111268431821,
    "relaxation or intensification parameter":{
      "Haplorrhini":1,
-     "Strepsirrhini":1.689780398480319
+     "Strepsirrhini":1.680439993492028
     }
   },
  "tested":{
@@ -876,27 +1490,27 @@
  "timers":{
    "General descriptive model fitting":{
      "order":2,
-     "timer":345
+     "timer":130
     },
    "Overall":{
      "order":0,
-     "timer":657
+     "timer":307
     },
    "Preliminary model fitting":{
      "order":1,
-     "timer":7
+     "timer":3
     },
    "RELAX alternative model fitting":{
      "order":3,
-     "timer":167
+     "timer":85
     },
    "RELAX null model fitting":{
      "order":4,
-     "timer":37
+     "timer":38
     },
    "RELAX partitioned descriptive":{
      "order":5,
-     "timer":101
+     "timer":49
     }
   }
 }

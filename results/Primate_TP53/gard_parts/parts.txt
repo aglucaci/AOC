@@ -1,0 +1,5 @@
+results/Primate_TP53/gard_parts/Primate_TP53.1.codon.fas
+results/Primate_TP53/gard_parts/Primate_TP53.2.codon.fas
+results/Primate_TP53/gard_parts/Primate_TP53.3.codon.fas
+results/Primate_TP53/gard_parts/Primate_TP53.4.codon.fas
+results/Primate_TP53/gard_parts/Primate_TP53.5.codon.fas

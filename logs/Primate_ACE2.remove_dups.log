@@ -1,0 +1,22 @@
+
+Analysis Description
+--------------------
+ Read an alignment (and, optionally, a tree) remove duplicate sequences,
+and prune the tree accordingly. 
+
+- __Requirements__: An MSA and, optionally, a tree. v0.2 adds support for --preserve.
+
+- __Citation__: TBD
+
+- __Written by__: Sergei L Kosakovsky Pond
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 0.2
+
+A comma-separated list of sequences to use representatives of duplicate sequence clusters (or None) : preserve: None
+> Loaded an alignment with 31 sequences and 3003 sites from /Users/alex/Documents/AOC-dev/results/Primate_ACE2/Primate_ACE2.SA.codons.cln.fa
+
+There are **31** unique sequences in alignment 
+### No duplicate sequences found
+An optional tree file to trim : tree: None

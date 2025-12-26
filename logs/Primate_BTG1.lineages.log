@@ -1,0 +1,180 @@
+[normalize] 'NM_001731_3_Homo_sapiens_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'NM_001731.3' (underscore-version)
+[resolve] cand=NM_001731.3 attempt=1/8 db=nuccore
+[efetch] db=nuccore id=NM_001731.3
+[throttle] sleeping 0.215s
+[taxonomy] taxid=9606
+[resolved] cand=NM_001731.3 taxid=9606 organism=Homo sapiens
+[normalize] 'XM_069489666_1_PREDICTED_Eulemur_rufifrons_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_069489666.1' (underscore-version)
+[resolve] cand=XM_069489666.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.301s
+[efetch] db=nuccore id=XM_069489666.1
+[throttle] sleeping 0.235s
+[taxonomy] taxid=859984
+[resolved] cand=XM_069489666.1 taxid=859984 organism=Eulemur rufifrons
+[normalize] 'XM_045553258_1_PREDICTED_Lemur_catta_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_045553258.1' (underscore-version)
+[resolve] cand=XM_045553258.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.212s
+[efetch] db=nuccore id=XM_045553258.1
+[throttle] sleeping 0.239s
+[taxonomy] taxid=9447
+[resolved] cand=XM_045553258.1 taxid=9447 organism=Lemur catta
+[normalize] 'XM_003783357_2_PREDICTED_Otolemur_garnettii_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_003783357.2' (underscore-version)
+[resolve] cand=XM_003783357.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.283s
+[efetch] db=nuccore id=XM_003783357.2
+[throttle] sleeping 0.093s
+[taxonomy] taxid=30611
+[resolved] cand=XM_003783357.2 taxid=30611 organism=Otolemur garnettii
+[normalize] 'XM_053582943_1_PREDICTED_Nycticebus_coucang_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_053582943.1' (underscore-version)
+[resolve] cand=XM_053582943.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.157s
+[efetch] db=nuccore id=XM_053582943.1
+[throttle] sleeping 0.075s
+[taxonomy] taxid=9470
+[resolved] cand=XM_053582943.1 taxid=9470 organism=Nycticebus coucang
+[normalize] 'XM_012775241_1_PREDICTED_Microcebus_murinus_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_012775241.1' (underscore-version)
+[resolve] cand=XM_012775241.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.344s
+[efetch] db=nuccore id=XM_012775241.1
+[throttle] sleeping 0.224s
+[taxonomy] taxid=30608
+[resolved] cand=XM_012775241.1 taxid=30608 organism=Microcebus murinus
+[normalize] 'XM_012664017_1_PREDICTED_Propithecus_coquereli_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA' -> 'XM_012664017.1' (underscore-version)
+[resolve] cand=XM_012664017.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.360s
+[efetch] db=nuccore id=XM_012664017.1
+[throttle] sleeping 0.156s
+[taxonomy] taxid=379532
+[resolved] cand=XM_012664017.1 taxid=379532 organism=Propithecus coquereli
+[normalize] 'XM_012031683_1_PREDICTED_Cercocebus_atys_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA' -> 'XM_012031683.1' (underscore-version)
+[resolve] cand=XM_012031683.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.280s
+[efetch] db=nuccore id=XM_012031683.1
+[throttle] sleeping 0.219s
+[taxonomy] taxid=9531
+[resolved] cand=XM_012031683.1 taxid=9531 organism=Cercocebus atys
+[normalize] 'NM_001266672_1_Macaca_mulatta_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'NM_001266672.1' (underscore-version)
+[resolve] cand=NM_001266672.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.309s
+[efetch] db=nuccore id=NM_001266672.1
+[throttle] sleeping 0.123s
+[taxonomy] taxid=9544
+[resolved] cand=NM_001266672.1 taxid=9544 organism=Macaca mulatta
+[normalize] 'XM_050750080_1_PREDICTED_Macaca_thibetana_thibetana_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_050750080.1' (underscore-version)
+[resolve] cand=XM_050750080.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.338s
+[efetch] db=nuccore id=XM_050750080.1
+[throttle] sleeping 0.229s
+[taxonomy] taxid=257877
+[resolved] cand=XM_050750080.1 taxid=257877 organism=Macaca thibetana thibetana
+[normalize] 'XM_011933701_1_PREDICTED_Colobus_angolensis_palliatus_B_cell_translocation_gene_1_anti_proliferative_BTG1_mRNA' -> 'XM_011933701.1' (underscore-version)
+[resolve] cand=XM_011933701.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.316s
+[efetch] db=nuccore id=XM_011933701.1
+[throttle] sleeping 0.242s
+[taxonomy] taxid=336983
+[resolved] cand=XM_011933701.1 taxid=336983 organism=Colobus angolensis palliatus
+[normalize] 'XM_033221091_1_PREDICTED_Trachypithecus_francoisi_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_033221091.1' (underscore-version)
+[resolve] cand=XM_033221091.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.320s
+[efetch] db=nuccore id=XM_033221091.1
+[throttle] sleeping 0.217s
+[taxonomy] taxid=54180
+[resolved] cand=XM_033221091.1 taxid=54180 organism=Trachypithecus francoisi
+[normalize] 'XM_023223561_1_PREDICTED_Piliocolobus_tephrosceles_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_023223561.1' (underscore-version)
+[resolve] cand=XM_023223561.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.322s
+[efetch] db=nuccore id=XM_023223561.1
+[throttle] sleeping 0.237s
+[taxonomy] taxid=591936
+[resolved] cand=XM_023223561.1 taxid=591936 organism=Piliocolobus tephrosceles
+[normalize] 'XM_010383938_2_PREDICTED_Rhinopithecus_roxellana_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_010383938.2' (underscore-version)
+[resolve] cand=XM_010383938.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.305s
+[efetch] db=nuccore id=XM_010383938.2
+[throttle] sleeping 0.234s
+[taxonomy] taxid=61622
+[resolved] cand=XM_010383938.2 taxid=61622 organism=Rhinopithecus roxellana
+[normalize] 'XM_025400855_1_PREDICTED_Theropithecus_gelada_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_025400855.1' (underscore-version)
+[resolve] cand=XM_025400855.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.342s
+[efetch] db=nuccore id=XM_025400855.1
+[throttle] sleeping 0.231s
+[taxonomy] taxid=9565
+[resolved] cand=XM_025400855.1 taxid=9565 organism=Theropithecus gelada
+[normalize] 'XM_003906945_4_PREDICTED_Papio_anubis_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_003906945.4' (underscore-version)
+[resolve] cand=XM_003906945.4 attempt=1/8 db=nuccore
+[throttle] sleeping 0.264s
+[efetch] db=nuccore id=XM_003906945.4
+[taxonomy] taxid=9555
+[resolved] cand=XM_003906945.4 taxid=9555 organism=Papio anubis
+[normalize] 'XM_008004234_3_PREDICTED_Chlorocebus_sabaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_008004234.3' (underscore-version)
+[resolve] cand=XM_008004234.3 attempt=1/8 db=nuccore
+[throttle] sleeping 0.278s
+[efetch] db=nuccore id=XM_008004234.3
+[throttle] sleeping 0.248s
+[taxonomy] taxid=60711
+[resolved] cand=XM_008004234.3 taxid=60711 organism=Chlorocebus sabaeus
+[normalize] 'XM_032297546_1_PREDICTED_Sapajus_apella_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_032297546.1' (underscore-version)
+[resolve] cand=XM_032297546.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.092s
+[efetch] db=nuccore id=XM_032297546.1
+[throttle] sleeping 0.232s
+[taxonomy] taxid=9515
+[resolved] cand=XM_032297546.1 taxid=9515 organism=Sapajus apella
+[normalize] 'XM_002752814_4_PREDICTED_Callithrix_jacchus_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_002752814.4' (underscore-version)
+[resolve] cand=XM_002752814.4 attempt=1/8 db=nuccore
+[throttle] sleeping 0.337s
+[efetch] db=nuccore id=XM_002752814.4
+[throttle] sleeping 0.051s
+[taxonomy] taxid=9483
+[resolved] cand=XM_002752814.4 taxid=9483 organism=Callithrix jacchus
+[normalize] 'XM_012469349_2_PREDICTED_Aotus_nancymaae_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_012469349.2' (underscore-version)
+[resolve] cand=XM_012469349.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.345s
+[efetch] db=nuccore id=XM_012469349.2
+[throttle] sleeping 0.230s
+[taxonomy] taxid=37293
+[resolved] cand=XM_012469349.2 taxid=37293 organism=Aotus nancymaae
+[normalize] 'XM_003927879_4_PREDICTED_Saimiri_boliviensis_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_003927879.4' (underscore-version)
+[resolve] cand=XM_003927879.4 attempt=1/8 db=nuccore
+[throttle] sleeping 0.330s
+[efetch] db=nuccore id=XM_003927879.4
+[throttle] sleeping 0.234s
+[taxonomy] taxid=27679
+[resolved] cand=XM_003927879.4 taxid=27679 organism=Saimiri boliviensis
+[normalize] 'XM_054444125_2_PREDICTED_Pongo_pygmaeus_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_054444125.2' (underscore-version)
+[resolve] cand=XM_054444125.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.369s
+[efetch] db=nuccore id=XM_054444125.2
+[throttle] sleeping 0.111s
+[taxonomy] taxid=9600
+[resolved] cand=XM_054444125.2 taxid=9600 organism=Pongo pygmaeus
+[normalize] 'XM_002823578_4_PREDICTED_Pongo_abelii_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_002823578.4' (underscore-version)
+[resolve] cand=XM_002823578.4 attempt=1/8 db=nuccore
+[throttle] sleeping 0.331s
+[efetch] db=nuccore id=XM_002823578.4
+[throttle] sleeping 0.240s
+[taxonomy] taxid=9601
+[resolved] cand=XM_002823578.4 taxid=9601 organism=Pongo abelii
+[normalize] 'XM_019038967_4_PREDICTED_Gorilla_gorilla_gorilla_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_019038967.4' (underscore-version)
+[resolve] cand=XM_019038967.4 attempt=1/8 db=nuccore
+[throttle] sleeping 0.293s
+[efetch] db=nuccore id=XM_019038967.4
+[throttle] sleeping 0.238s
+[taxonomy] taxid=9595
+[resolved] cand=XM_019038967.4 taxid=9595 organism=Gorilla gorilla gorilla
+[normalize] 'XM_055237919_2_PREDICTED_Symphalangus_syndactylus_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_055237919.2' (underscore-version)
+[resolve] cand=XM_055237919.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.339s
+[efetch] db=nuccore id=XM_055237919.2
+[throttle] sleeping 0.249s
+[taxonomy] taxid=9590
+[resolved] cand=XM_055237919.2 taxid=9590 organism=Symphalangus syndactylus
+[normalize] 'XM_032170892_2_PREDICTED_Hylobates_moloch_BTG_anti_proliferation_factor_1_BTG1_mRNA' -> 'XM_032170892.2' (underscore-version)
+[resolve] cand=XM_032170892.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.293s
+[efetch] db=nuccore id=XM_032170892.2
+[throttle] sleeping 0.057s
+[taxonomy] taxid=81572
+[resolved] cand=XM_032170892.2 taxid=81572 organism=Hylobates moloch
