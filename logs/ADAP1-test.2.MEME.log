@@ -1,0 +1,89 @@
+
+Analysis Description
+--------------------
+MEME (Mixed Effects Model of Evolution) estimates a site-wise synonymous
+(&alpha;) and a two-category mixture of non-synonymous (&beta;-, with
+Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. Version 3.0 adds a different format for
+ancestral state reconstruction, branch-site posterior storage, and
+site-level heterogeneity testing. Version 4 adds support for multiple
+hits and more than 2 rate classes on omega, as well as site-level
+imputation option. Version 4.1 fixes bugs with EBF computation for > 2
+more rates and MH reporting. 
+proportion p-, and &beta;+ with proportion [1-p-]) rates, and uses a
+likelihood ratio test to determine if &beta;+ > &alpha; at a site. The
+estimates aggregate information over a proportion of branches at a site,
+so the signal is derived from episodic diversification, which is a
+combination of strength of selection [effect size] and the proportion of
+the tree affected. A subset of branches can be selected for testing as
+well, in which case an additional (nuisance) parameter will be inferred
+-- the non-synonymous rate on branches NOT selected for testing.
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Detecting Individual Sites Subject to Episodic Diversifying Selection.
+_PLoS Genet_ 8(7): e1002764.
+
+- __Written by__: Sergei L. Kosakovsky Pond, Steven Weaver
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 4.1
+
+
+>code => Universal
+/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.2.codon.fas.FastTree.treefile
+results/ADAP1-test/ADAP1-test.2.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **11** sequences, **38** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.2.codon.fas`
+
+>branches => All
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample => 0
+The number omega rate classes to include in the model [2 is the strongly recommended default] (permissible range = [2,4], default value = 2, integer): 
+>rates => 2
+
+>multiple-hits => None
+
+>impute-states => No
+
+>precision => standard
+
+
+### Branches to include in the MEME analysis
+Selected 19 branches to include in the MEME analysis: `XP_011885129_1_XM_01202_53ecb0, XP_012614566_2_XM_01275_945ab4, XP_041604521_1_XM_04174_7e8d4b, XP_062041590_1_XM_06218_d11611, Node4, Node2, XP_054352982_1_XM_05449_233884, XP_054499394_1_XM_05464_33d08b, XP_069726565_1_XM_06987_381d08, XP_032626897_1_XM_03277_f6b30e, XP_025939132_1_XM_02608_6aec63, NP_001090758_1_NM_00109_c9f23c, Node16, Node14, XP_047919596_1_XM_04806_0c6d33, Node13, Node11, Node9, Node7`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 2 zero-length internal branches: `Node16, Node4`
+* Log(L) =  -582.83, AIC-c =  1220.89 (27 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.838
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -527.72, AIC-c =  1124.93 (32 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.387
+* non-synonymous/synonymous rate ratio for *test* =   0.1191
+
+>full-model => Yes
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) =  -521.64
+* Log(L) =  -521.64, AIC-c =  1112.76 (32 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  3.170
+* non-synonymous/synonymous rate ratio for *test* =   0.0793
+[2KWorking on site pattern 1/38 in partition 1[2KWorking on site pattern 2/38 in partition 1[2KWorking on site pattern 3/38 in partition 1[2KWorking on site pattern 4/38 in partition 1[2KWorking on site pattern 5/38 in partition 1[2KWorking on site pattern 6/38 in partition 1[2KWorking on site pattern 7/38 in partition 1[2KWorking on site pattern 8/38 in partition 1[2KWorking on site pattern 9/38 in partition 1[2KWorking on site pattern 10/38 in partition 1[2KWorking on site pattern 11/38 in partition 1[2KWorking on site pattern 12/38 in partition 1[2KWorking on site pattern 13/38 in partition 1[2KWorking on site pattern 14/38 in partition 1[2KWorking on site pattern 15/38 in partition 1[2KWorking on site pattern 16/38 in partition 1[2KWorking on site pattern 17/38 in partition 1[2KWorking on site pattern 18/38 in partition 1[2KWorking on site pattern 19/38 in partition 1[2KWorking on site pattern 20/38 in partition 1[2KWorking on site pattern 21/38 in partition 1[2KWorking on site pattern 22/38 in partition 1[2KWorking on site pattern 23/38 in partition 1[2KWorking on site pattern 24/38 in partition 1[2KWorking on site pattern 25/38 in partition 1[2KWorking on site pattern 26/38 in partition 1[2KWorking on site pattern 27/38 in partition 1[2KWorking on site pattern 28/38 in partition 1[2KWorking on site pattern 29/38 in partition 1[2KWorking on site pattern 30/38 in partition 1[2KWorking on site pattern 31/38 in partition 1[2KWorking on site pattern 32/38 in partition 1[2KWorking on site pattern 33/38 in partition 1[2KWorking on site pattern 34/38 in partition 1[2KWorking on site pattern 35/38 in partition 1[2KWorking on site pattern 36/38 in partition 1[2KWorking on site pattern 37/38 in partition 1[2KWorking on site pattern 38/38 in partition 1[2K                                            [2K
+### ** Found _0_ sites under episodic diversifying positive selection at p <= 0.1**
+
+
+

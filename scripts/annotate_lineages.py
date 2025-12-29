@@ -15,13 +15,7 @@ from Bio.SeqIO import SeqRecord
 
 ACCESSION_COL_DEFAULT = "RefSeq Transcript accessions"
 
-# Recognize accessions embedded in messy leaf labels.
-# Handles:
-#   NM_000546.6
-#   NM_173527_3_Homo_sapiens_...   -> NM_173527.3
-#   ref|NM_000546.6|TP53
 ACCESSION_DOTTED = re.compile(r'([A-Z]{1,3}_[0-9]+\.[0-9]+)')
-# Version encoded as underscore and followed by underscore or end (IMPORTANT: not a word boundary)
 ACCESSION_UNDERSCORE_VER = re.compile(r'([A-Z]{1,3}_[0-9]+)_([0-9]+)(?=(_|$))')
 ACCESSION_BASE = re.compile(r'([A-Z]{1,3}_[0-9]+)')
 
@@ -35,7 +29,6 @@ def eprint(msg: str):
     print(msg, file=sys.stderr)
 
 def throttle(min_interval_s: float, verbose: bool):
-    """Global throttle to avoid hammering NCBI (esp. when no API key)."""
     global _last_entrez_call_t
     if min_interval_s <= 0:
         return
@@ -48,17 +41,6 @@ def throttle(min_interval_s: float, verbose: bool):
     _last_entrez_call_t = time.time()
 
 def normalize_accession(label: str, verbose: bool=False) -> str:
-    """
-    Extract a valid accession from a tree leaf label.
-
-    Critical fix:
-      The prior regex used a trailing \\b, which FAILS on strings like
-      'NM_001731_3_Homo_sapiens_...' because '_' is a word character,
-      so there's no word boundary after the version digit.
-
-    This version correctly converts:
-      NM_173527_3_Homo_sapiens_... -> NM_173527.3
-    """
     s = str(label).strip()
     if not s or s.lower() == "nan":
         return ""
@@ -81,7 +63,6 @@ def normalize_accession(label: str, verbose: bool=False) -> str:
         log(f"[normalize] '{label}' -> '{acc}' (base)", verbose)
         return acc
 
-    # Last resort: sanitize first token
     tok = s.split()[0].strip().strip(",;|")
     tok = re.sub(r"[^A-Za-z0-9_.]", "", tok)
     log(f"[normalize] '{label}' -> '{tok}' (fallback)", verbose)
@@ -162,18 +143,10 @@ def fetch_lineage_from_taxid(taxid: str, verbose: bool, min_interval_s: float) -
     return lineage or None
 
 def resolve_accession(accession: str, db: str, retries: int, sleep_s: float, verbose: bool, min_interval_s: float) -> Tuple[Optional[str], Optional[str], Optional[List[str]]]:
-    """
-    Resolve accession -> (organism, taxid, lineage)
-
-    Candidates tried:
-      - as given (e.g., NM_173527.3)
-      - without version suffix (NM_173527)
-    """
     candidates = [accession]
     if "." in accession:
         candidates.append(accession.split(".", 1)[0])
 
-    # De-dup preserve order
     seen = set()
     candidates = [c for c in candidates if c and not (c in seen or seen.add(c))]
 
@@ -204,10 +177,9 @@ def resolve_accession(accession: str, db: str, retries: int, sleep_s: float, ver
 
             except HTTPError as e:
                 last_err = e
-                # 429: too many requests -> back off harder
                 if e.code == 429:
                     backoff = max(5.0, sleep_s * attempt * 5)
-                    eprint(f"[WARN] resolve failed for {cand} (attempt {attempt}/{retries}) HTTP 429: Too Many Requests; backing off {backoff:.1f}s")
+                    eprint(f"[WARN] resolve failed for {cand} (attempt {attempt}/{retries}) HTTP 429; backing off {backoff:.1f}s")
                     time.sleep(backoff)
                     continue
                 eprint(f"[WARN] resolve failed for {cand} (attempt {attempt}/{retries}) HTTP {e.code}: {e.reason}")
@@ -220,45 +192,133 @@ def resolve_accession(accession: str, db: str, retries: int, sleep_s: float, ver
     eprint(f"[ERROR] could not resolve {accession}. last error: {last_err}")
     return None, None, None
 
+def load_map_id_to_transcript(map_tsv: str) -> Dict[str, str]:
+    """
+    map.tsv must contain columns:
+      - id30
+      - transcript_id
+
+    Tree software often sanitizes leaf names (replacing '.' and '|' with '_').
+    So we build a lookup that accepts BOTH:
+      - id30 as-is
+      - sanitized(id30): '.'->'_' and '|'->'_'
+    """
+    df = pd.read_csv(map_tsv, sep="\t", dtype=str).fillna("")
+    if "id30" not in df.columns:
+        raise ValueError(f"--map_tsv missing 'id30'. Columns={list(df.columns)}")
+    if "transcript_id" not in df.columns:
+        raise ValueError(f"--map_tsv missing 'transcript_id'. Columns={list(df.columns)}")
+
+    m: Dict[str, str] = {}
+
+    for _, r in df.iterrows():
+        id30 = str(r["id30"]).strip()
+        txid = str(r["transcript_id"]).strip()
+        if not id30 or not txid:
+            continue
+
+        # 1) exact key
+        if id30 not in m:
+            m[id30] = txid
+
+        # 2) sanitized key (matches IQ-TREE/others)
+        safe = id30.replace("|", "_").replace(".", "_")
+        if safe not in m:
+            m[safe] = txid
+
+    return m
+
+
+
+def read_orthologs_robust(path: str, verbose: bool) -> Optional[pd.DataFrame]:
+    """
+    Orthologs is optional when --map_tsv is used.
+    When provided, read it robustly to avoid crashing on bad lines.
+    """
+    if not path:
+        return None
+
+    try:
+        df = pd.read_csv(
+            path,
+            dtype=str,
+            engine="python",         # more tolerant than C engine
+            on_bad_lines="warn"      # or "skip" if you prefer silence
+        )
+        return df
+    except Exception as e:
+        eprint(f"[WARN] Failed to read --orthologs='{path}': {e}")
+        eprint("[WARN] Continuing without orthologs table (it is optional when --map_tsv is provided).")
+        if verbose:
+            eprint("[HINT] If orthologs is TSV, try converting or pass a clean delimiter.")
+        return None
+
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("--orthologs", required=True)
+
+    # orthologs becomes optional
+    ap.add_argument("--orthologs", default="",
+                    help="Optional. A CSV/TSV ortholog table. Not required if --map_tsv is provided.")
     ap.add_argument("--tree", required=True)
     ap.add_argument("--out", required=True)
     ap.add_argument("--accession_col", default=ACCESSION_COL_DEFAULT)
+
+    ap.add_argument("--map_tsv", default="",
+                    help="Optional: codons output .map.tsv with columns 'id30' and 'transcript_id'. "
+                         "If provided, tree leaf labels are interpreted as id30 and mapped to transcript_id.")
+
     ap.add_argument("--db", default="nuccore")
     ap.add_argument("--email", default="")
     ap.add_argument("--api_key", default="")
     ap.add_argument("--retries", type=int, default=8)
     ap.add_argument("--sleep", type=float, default=0.6)
-    ap.add_argument("--min_interval", type=float, default=0.4,
-                    help="Minimum seconds between Entrez requests (throttle). "
-                         "Use ~0.4 without API key; with API key you can lower (e.g., 0.12).")
+    ap.add_argument("--min_interval", type=float, default=0.4)
     ap.add_argument("--allow_unknown", action="store_true")
     ap.add_argument("--verbose", action="store_true")
     args = ap.parse_args()
 
     Entrez.tool = "annotate_lineages"
     if not args.email:
-        eprint("[WARN] --email not provided. NCBI may reject or throttle anonymous requests; provide --email (and ideally --api_key).")
+        eprint("[WARN] --email not provided. NCBI may throttle/reject; provide --email (and ideally --api_key).")
     else:
         Entrez.email = args.email
     if args.api_key:
         Entrez.api_key = args.api_key
 
-    df = pd.read_csv(args.orthologs)
-    if args.accession_col not in df.columns:
-        raise ValueError(f"Accession column '{args.accession_col}' not found. Columns={list(df.columns)}")
+    # orthologs is optional now
+    df_orth = read_orthologs_robust(args.orthologs, args.verbose)
+    if df_orth is not None and args.accession_col not in df_orth.columns:
+        eprint(f"[WARN] --accession_col '{args.accession_col}' not found in orthologs columns={list(df_orth.columns)}")
+        eprint("[WARN] Ortholog table will not be used for accession extraction (tree/map will drive accessions).")
 
     with open(args.tree, "r") as f:
         newick = f.read().strip()
     leaves = parse_tree_leaves(newick)
 
+    id_to_tx: Dict[str, str] = {}
+    if args.map_tsv:
+        id_to_tx = load_map_id_to_transcript(args.map_tsv)
+        log(f"[map] loaded {len(id_to_tx)} id30->transcript_id mappings", args.verbose)
+
+    if not args.map_tsv and not leaves:
+        raise RuntimeError("No leaves found in tree and no --map_tsv provided.")
+
     cache: Dict[str, Tuple[Optional[str], Optional[str], Optional[List[str]]]] = {}
     rows = []
 
     for leaf in leaves:
-        acc = normalize_accession(leaf, verbose=args.verbose)
+        if args.map_tsv:
+            acc = id_to_tx.get(leaf, "")
+            if not acc:
+                msg = f"No transcript_id mapping for leaf '{leaf}' in map file {args.map_tsv}"
+                if args.allow_unknown:
+                    rows.append({"leaf": leaf, "accession": "", "organism": "Unknown", "taxid": "", "lineage": "Unknown"})
+                    continue
+                raise RuntimeError(msg)
+            acc = normalize_accession(acc, verbose=args.verbose)
+        else:
+            acc = normalize_accession(leaf, verbose=args.verbose)
+
         if not acc:
             msg = f"Empty accession after normalization for leaf '{leaf}'"
             if args.allow_unknown:
@@ -274,7 +334,7 @@ def main():
 
         organism, taxid, lineage = cache[acc]
         if not taxid or not lineage:
-            msg = f"Failed to resolve lineage for accession {acc}. Provide --email/--api_key or fix IDs."
+            msg = f"Failed to resolve lineage for accession {acc}."
             if args.allow_unknown:
                 rows.append({"leaf": leaf, "accession": acc, "organism": organism or "Unknown", "taxid": taxid or "", "lineage": "Unknown"})
                 continue

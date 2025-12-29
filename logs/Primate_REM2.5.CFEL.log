@@ -90,8 +90,50 @@ Selected 2 sets of branches to test
 
 | Codon  |     alpha      |             beta             |        substitutions         |                  test                  |LRT p-value|Permutation p-value|
 |:------:|:--------------:|:----------------------------:|:----------------------------:|:--------------------------------------:|:---------:|:-----------------:|
-|   8    |       11.211   |        0.000 -      1.179    |              5               |                overall                 |  0.0179   |      0.2500       |
-|   24   |        2.321   |        0.000 -      0.361    |              4               |                overall                 |  0.0095   |      0.5000       |
-## ASSERTION FAILED
-Non-constant site passed to ComputeCompressedSubstitutionConstantSite
-Check errors.log for execution error details.
+|   8    |       11.169   |        0.000 -      1.178    |              5               |                overall                 |  0.0179   |      0.2000       |
+|   24   |        2.322   |        0.000 -      0.362    |              4               |                overall                 |  0.0095   |      0.3333       |
+Error:
+HyPhy suspended.
+
+Function call stack
+1 :  [namespace = yMvUGXOt] Optimize(results, ^lf, {"OPTIMIZATION_METHOD":"nedler-mead","OPTIMIZATION_PRECISION":1e-5,"OPTIMIZATION_START_GRID":start.grid});
+-------
+2 :  [namespace = mpi.x_NjdwQI] Call(result_callback,0,Eval(job+'('+Join(",",utility.Map(arguments,"_value_","utility.convertToArgumentString (_value_)"))+')'),arguments);
+-------
+3 :  mpi.QueueJob(fel.queue,"fel.handle_a_site",{"0":"fel.site_likelihood","1":alignments.serialize_site_filter((fel.filter_specification[fel.partition_index])[terms.data.name],(_pattern_info_[utility.getGlobalValue("terms.data.sites")])[0]),"2":fel.partition_index,"3":_pattern_info_,"4":fel.site_model_mapping,"5":fel.selected_branches[fel.partition_index],"6":fel.scaler_parameter_names,"7":FALSE},"fel.store_results");
+-------
+4 :  Call("utility.ForEachPair.CB",utility.ForEachPair.key,object[utility.ForEachPair.key]);
+-------
+5 :  utility.ForEachPair(fel.site_patterns,"_pattern_","_pattern_info_",'
+        fel.pattern_count_this += 1;
+        io.ReportProgressBar("", "Working on site pattern " + (fel.pattern_count_this) + "/" +  fel.pattern_count_all + " in partition " + (1+fel.partition_index));
+
+        fel.run_site = selection.io.sitelist_matches_pattern (_pattern_info_[terms.data.sites], fel.site_filter["site-filter"], FALSE, 0);
+
+ 
+        if (_pattern_info_[terms.data.is_constant] || (!fel.run_site)) {
+            fel.store_results (-1,None,{"0" : "fel.site_likelihood",
+                                                            "1" : None,
+                                                            "2" : fel.partition_index,
+                                                            "3" : _pattern_info_,
+                                                            "4" : fel.site_model_mapping,
+                                                            "5" : fel.selected_branches[fel.partition_index],
+                                                            "6" : fel.scaler_parameter_names,
+                                                            "7" : FALSE
+                                                             });
+        } else {
+            mpi.QueueJob (fel.queue, "fel.handle_a_site", {"0" : "fel.site_likelihood",
+                                                            "1" : alignments.serialize_site_filter
+                                                               ((fel.filter_specification[fel.partition_index])[terms.data.name],
+                                                               (_pattern_info_[utility.getGlobalValue("terms.data.sites")])[0]),
+                                                            "2" : fel.partition_index,
+                                                            "3" : _pattern_info_,
+                                                            "4" : fel.site_model_mapping,
+                                                            "5" : fel.selected_branches[fel.partition_index],
+                                                            "6" : fel.scaler_parameter_names,
+                                                            "7" : FALSE
+                                                            },
+                                                            "fel.store_results");
+        }
+    ');
+-------

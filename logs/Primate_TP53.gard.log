@@ -41,13 +41,13 @@ Done with single breakpoint analysis.
 ### Performing multi breakpoint analysis using a genetic algorithm
 Done with 2 breakpoint analysis.
     Best break point locations: 461, 1518
-    c-AIC = 12752.28714512354
+    c-AIC = 12752.28696659667
 Done with 3 breakpoint analysis.
-    Best break point locations: 461, 674, 1518
-    c-AIC = 12696.05566330918
+    Best break point locations: 461, 687, 1518
+    c-AIC = 12690.68186038064
 Done with 4 breakpoint analysis.
-    Best break point locations: 261, 460, 687, 1518
-    c-AIC = 12671.73603691826
+    Best break point locations: 261, 461, 687, 1518
+    c-AIC = 12670.19432615348
 Done with 5 breakpoint analysis.
-    Best break point locations: 261, 460, 548, 687, 1518
-    c-AIC = 12706.08571033585
+    Best break point locations: 261, 461, 596, 688, 1518
+    c-AIC = 12705.79096583636

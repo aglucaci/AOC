@@ -1,0 +1,7 @@
+Read 11 sequences from input file 
+Will perform approximately 55 pairwise distance calculations
+Progress: 
+Created 11 clusters
+tn93-cluster -f -o results/ADAP1-test/ADAP1-test.RD.SA.codons.cln.fa.cluster.json -t 0.01 results/ADAP1-test/ADAP1-test.RD.SA.codons.cln.fa
+# Saving to fasta: results/ADAP1-test/ADAP1-test.RD.SA.codons.cln.fa.cluster.fasta
+# Current number of sequences 11

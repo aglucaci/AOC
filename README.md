@@ -52,9 +52,7 @@ AOC/
 
 We recommend using **conda** for environment management.
 
-```
-git clone https://github.com/aglucaci/Analysis-of-Orthologous-Collections.git
-cd https://github.com/aglucaci/Analysis-of-Orthologous-Collections.git
+```bash
 conda env create -f config/environment.yml
 conda activate AOC
 ```

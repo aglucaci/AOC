@@ -1,0 +1,966 @@
+
+Analysis Description
+--------------------
+ Read an alignment of coding sequences and replace any ambiguous codons
+with ---. Write results to a new file in FASTA format, and report
+changed sequences to stdout 
+
+- __Requirements__: An MSA
+
+- __Citation__: TBD
+
+- __Written by__: Sergei L Kosakovsky Pond
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 0.1
+
+code: Universal
+
+Striking 1602 codons that are incompletely resolved from XP_019493019_1_XM_01963_936400
+
+Striking 1614 codons that are incompletely resolved from XP_010136317_1_XM_01013_0a0244
+
+Striking 1564 codons that are incompletely resolved from XP_019675876_1_XM_01982_a0d289
+
+Striking 1530 codons that are incompletely resolved from XP_011812315_1_XM_01195_da2644
+
+Striking 1547 codons that are incompletely resolved from XP_020737984_1_XM_02088_28aeaa
+
+Striking 1530 codons that are incompletely resolved from NP_001271237_2_NM_00128_28427a
+
+Striking 1558 codons that are incompletely resolved from XP_012614566_2_XM_01275_945ab4
+
+Striking 1541 codons that are incompletely resolved from XP_053411257_1_XM_05355_506de2
+
+Striking 1534 codons that are incompletely resolved from XP_058013656_1_XM_05815_f590d2
+
+Striking 1449 codons that are incompletely resolved from XP_014390755_1_XM_01453_56b13e
+
+Striking 1543 codons that are incompletely resolved from XP_040311563_1_XM_04045_58f190
+
+Striking 1605 codons that are incompletely resolved from XP_060505665_1_XM_06064_415ed3
+
+Striking 1536 codons that are incompletely resolved from XP_058141664_1_XM_05828_5cc19a
+
+Striking 1540 codons that are incompletely resolved from XP_030434599_1_XM_03057_115ba5
+
+Striking 1529 codons that are incompletely resolved from XP_072692766_1_XM_07283_b561fc
+
+Striking 1499 codons that are incompletely resolved from XP_059934497_1_XM_06007_ef191f
+
+Striking 1541 codons that are incompletely resolved from XP_059754313_1_XM_05989_f58d2f
+
+Striking 1541 codons that are incompletely resolved from XP_043771440_1_XM_04391_f45f5a
+
+Striking 1558 codons that are incompletely resolved from XP_024619315_1_XM_02476_27b9a4
+
+Striking 1614 codons that are incompletely resolved from XP_061258398_1_XM_06140_548f8a
+
+Striking 1571 codons that are incompletely resolved from XP_025130879_2_XM_02527_b99c58
+
+Striking 1613 codons that are incompletely resolved from XP_004688400_1_XM_00468_fab3f6
+
+Striking 1613 codons that are incompletely resolved from XP_040086726_1_XM_04023_833d44
+
+Striking 1445 codons that are incompletely resolved from XP_029075621_1_XM_02921_88cd2e
+
+Striking 1602 codons that are incompletely resolved from XP_060539985_1_XM_06068_908adc
+
+Striking 1613 codons that are incompletely resolved from XP_009947137_1_XM_00994_a65091
+
+Striking 1613 codons that are incompletely resolved from XP_064449518_1_XM_06459_aca8e4
+
+Striking 1518 codons that are incompletely resolved from XP_040490573_1_XM_04063_449f2a
+
+Striking 1541 codons that are incompletely resolved from XP_055195757_1_XM_05533_b8bd5d
+
+Striking 1541 codons that are incompletely resolved from XP_059009817_1_XM_05915_ce14c9
+
+Striking 1540 codons that are incompletely resolved from XP_054430040_1_XM_05457_e2a57f
+
+Striking 1541 codons that are incompletely resolved from XP_028384004_1_XM_02852_08db50
+
+Striking 1541 codons that are incompletely resolved from XP_033050324_1_XM_03319_92c572
+
+Striking 1541 codons that are incompletely resolved from XP_023510839_1_XM_02365_477cb8
+
+Striking 1541 codons that are incompletely resolved from XP_036993758_2_XM_03713_83d290
+
+Striking 1541 codons that are incompletely resolved from XP_066129670_1_XM_06627_66ae6a
+
+Striking 1613 codons that are incompletely resolved from XP_070270340_1_XM_07041_03f645
+
+Striking 1552 codons that are incompletely resolved from XP_019397701_1_XM_01954_259d1b
+
+Striking 1472 codons that are incompletely resolved from XP_011832971_1_XM_01197_5b04c0
+
+Striking 1537 codons that are incompletely resolved from XP_033696867_1_XM_03384_f89262
+
+Striking 1540 codons that are incompletely resolved from XP_032053197_1_XM_03219_70e223
+
+Striking 1540 codons that are incompletely resolved from XP_061329263_1_XM_06147_cf5500
+
+Striking 1434 codons that are incompletely resolved from XP_062041590_1_XM_06218_d11611
+
+Striking 1598 codons that are incompletely resolved from XP_025939132_1_XM_02608_6aec63
+
+Striking 1785 codons that are incompletely resolved from XP_009696747_1_XM_00969_473ac4
+
+Striking 1540 codons that are incompletely resolved from XP_039587847_1_XM_03973_709927
+
+Striking 1540 codons that are incompletely resolved from XP_072205814_1_XM_07234_4678bd
+
+Striking 1540 codons that are incompletely resolved from XP_041893090_1_XM_04203_865ce4
+
+Striking 1540 codons that are incompletely resolved from XP_048817445_1_XM_04896_fb45cd
+
+Striking 1540 codons that are incompletely resolved from XP_031982110_1_XM_03212_232742
+
+Striking 1540 codons that are incompletely resolved from XP_051637964_1_XM_05178_84c5ae
+
+Striking 1540 codons that are incompletely resolved from XP_030338426_1_XM_03048_d87091
+
+Striking 1540 codons that are incompletely resolved from XP_052628889_1_XM_05277_dbc62f
+
+Striking 1540 codons that are incompletely resolved from XP_027539392_1_XM_02768_0e493e
+
+Striking 1540 codons that are incompletely resolved from XP_032559846_1_XM_03270_f6c965
+
+Striking 1540 codons that are incompletely resolved from XP_017668941_1_XM_01781_0e4a49
+
+Striking 1502 codons that are incompletely resolved from XP_072734044_1_XM_07287_212d3a
+
+Striking 1540 codons that are incompletely resolved from XP_063270577_1_XM_06341_8df52a
+
+Striking 1540 codons that are incompletely resolved from XP_071427462_1_XM_07157_b32d63
+
+Striking 1540 codons that are incompletely resolved from XP_075293022_1_XM_07543_70a263
+
+Striking 1540 codons that are incompletely resolved from XP_014466176_1_XM_01461_9a0dc6
+
+Striking 1540 codons that are incompletely resolved from XP_060116513_1_XM_06026_27c50c
+
+Striking 1477 codons that are incompletely resolved from XP_039216462_1_XM_03936_711786
+
+Striking 1523 codons that are incompletely resolved from XP_061456454_1_XM_06160_2d3e8c
+
+Striking 1518 codons that are incompletely resolved from XP_020664389_2_XM_02080_a469fd
+
+Striking 1540 codons that are incompletely resolved from XP_038618606_1_XM_03876_ffc701
+
+Striking 1540 codons that are incompletely resolved from XP_028913568_1_XM_02905_45e6a3
+
+Striking 1522 codons that are incompletely resolved from XP_032115772_1_XM_03225_1a870d
+
+Striking 1540 codons that are incompletely resolved from XP_069920368_1_XM_07006_ee238a
+
+Striking 1541 codons that are incompletely resolved from XP_044516027_1_XM_04466_534866
+
+Striking 1541 codons that are incompletely resolved from XP_056660296_1_XM_05680_edeae8
+
+Striking 1541 codons that are incompletely resolved from XP_039082052_1_XM_03922_36c64d
+
+Striking 1478 codons that are incompletely resolved from XP_046522226_1_XM_04666_d87870
+
+Striking 1541 codons that are incompletely resolved from NP_999391_1_NM_214226_1_3e728d
+
+Striking 1541 codons that are incompletely resolved from XP_067561369_1_XM_06770_e3e642
+
+Striking 1541 codons that are incompletely resolved from XP_058894514_1_XM_05903_02c238
+
+Striking 1541 codons that are incompletely resolved from XP_061064343_1_XM_06120_ded7ef
+
+Striking 1541 codons that are incompletely resolved from XP_057384401_1_XM_05752_17074e
+
+Striking 1541 codons that are incompletely resolved from XP_007467132_1_XM_00746_9a5015
+
+Striking 1451 codons that are incompletely resolved from XP_028355683_1_XM_02849_fd6fb3
+
+Striking 1542 codons that are incompletely resolved from XP_054573033_1_XM_05471_82d3cf
+
+Striking 1381 codons that are incompletely resolved from XP_055266467_1_XM_05541_ffa06d
+
+Striking 1198 codons that are incompletely resolved from XP_023378145_1_XM_02352_1d120a
+
+Striking 1583 codons that are incompletely resolved from XP_058425428_1_XM_05856_644167
+
+Striking 1538 codons that are incompletely resolved from XP_068100688_1_XM_06824_779ba0
+
+Striking 1511 codons that are incompletely resolved from XP_057604317_1_XM_05774_360ca6
+
+Striking 1596 codons that are incompletely resolved from XP_025779022_1_XM_02592_c23dfb
+
+Striking 1541 codons that are incompletely resolved from XP_051017094_1_XM_05116_5aebe1
+
+Striking 1429 codons that are incompletely resolved from XP_052024088_1_XM_05216_5622ce
+
+Striking 1444 codons that are incompletely resolved from XP_047635334_1_XM_04777_92b87e
+
+Striking 1541 codons that are incompletely resolved from XP_036680864_1_XM_03682_6cbb45
+
+Striking 1541 codons that are incompletely resolved from XP_068380534_1_XM_06852_0dd51c
+
+Striking 1541 codons that are incompletely resolved from XP_036028580_1_XM_03617_f778bb
+
+Striking 1541 codons that are incompletely resolved from XP_074201580_1_XM_07434_0ca5f5
+
+Striking 1530 codons that are incompletely resolved from XP_059717703_1_XM_05986_29abf8
+
+Striking 1540 codons that are incompletely resolved from XP_058671927_1_XM_05881_94e450
+
+Striking 1614 codons that are incompletely resolved from XP_019842931_2_XM_01998_4bfb31
+
+Striking 1613 codons that are incompletely resolved from XP_021395387_1_XM_02153_5082b3
+
+Striking 1524 codons that are incompletely resolved from XP_005054543_1_XM_00505_816e41
+
+Striking 1541 codons that are incompletely resolved from XP_043310793_1_XM_04345_201161
+
+Striking 1541 codons that are incompletely resolved from XP_059888576_1_XM_06003_6a98f0
+
+Striking 1541 codons that are incompletely resolved from XP_027817058_1_XM_02796_5ee938
+
+Striking 1535 codons that are incompletely resolved from XP_055418344_1_XM_05556_f1b2fe
+
+Striking 1614 codons that are incompletely resolved from XP_022419183_1_XM_02256_dfe738
+
+Striking 1541 codons that are incompletely resolved from XP_065748097_1_XM_06589_91aa2e
+
+Striking 1654 codons that are incompletely resolved from XP_019368456_1_XM_01951_ccb1d9
+
+Striking 1602 codons that are incompletely resolved from XP_007440189_1_XM_00744_81c502
+
+Striking 1538 codons that are incompletely resolved from XP_044289189_1_XM_04443_05a007
+
+Striking 1613 codons that are incompletely resolved from XP_005339898_2_XM_00533_ebf7c5
+
+Striking 1634 codons that are incompletely resolved from XP_053782776_1_XM_05392_264bf4
+
+Striking 1542 codons that are incompletely resolved from XP_059555446_1_XM_05969_f3f9fd
+
+Striking 1613 codons that are incompletely resolved from XP_010212995_1_XM_01021_9a1bcd
+
+Striking 1540 codons that are incompletely resolved from XP_005289208_2_XM_00528_385d76
+
+Striking 1613 codons that are incompletely resolved from XP_009466046_1_XM_00946_acf972
+
+Striking 1540 codons that are incompletely resolved from XP_050822311_1_XM_05096_543b1e
+
+Striking 1613 codons that are incompletely resolved from XP_009284655_1_XM_00928_4d14a0
+
+Striking 1613 codons that are incompletely resolved from XP_016068447_1_XM_01621_6f63bd
+
+Striking 1542 codons that are incompletely resolved from XP_036171356_1_XM_03631_651b0b
+
+Striking 1487 codons that are incompletely resolved from XP_029432494_1_XM_02957_2a6d08
+
+Striking 1541 codons that are incompletely resolved from XP_030067722_1_XM_03021_39189e
+
+Striking 1613 codons that are incompletely resolved from XP_009640115_2_XM_00964_0eba13
+
+Striking 1541 codons that are incompletely resolved from XP_074137207_1_XM_07428_019c63
+
+Striking 1541 codons that are incompletely resolved from XP_072453880_1_XM_07259_658691
+
+Striking 1541 codons that are incompletely resolved from XP_001084174_2_XM_00108_63d438
+
+Striking 1541 codons that are incompletely resolved from XP_039326137_1_XM_03947_a4c052
+
+Striking 1541 codons that are incompletely resolved from XP_076695857_1_XM_07683_af7a39
+
+Striking 1541 codons that are incompletely resolved from XP_047389165_1_XM_04753_611e77
+
+Striking 1541 codons that are incompletely resolved from XP_042542906_1_XM_04268_6f0231
+
+Striking 1541 codons that are incompletely resolved from NP_598251_1_NM_133567_2_e40852
+
+Striking 1541 codons that are incompletely resolved from XP_021496393_1_XM_02164_8d7801
+
+Striking 1541 codons that are incompletely resolved from XP_021078365_1_XM_02122_c718f1
+
+Striking 1613 codons that are incompletely resolved from XP_048292896_1_XM_04843_559079
+
+Striking 1613 codons that are incompletely resolved from XP_008849659_1_XM_00885_cfe47e
+
+Striking 1541 codons that are incompletely resolved from XP_076779571_1_XM_07692_75cc8e
+
+Striking 1541 codons that are incompletely resolved from XP_075384315_1_XM_07552_f8a2f6
+
+Striking 1541 codons that are incompletely resolved from XP_031797302_1_XM_03194_a6ae83
+
+Striking 1541 codons that are incompletely resolved from XP_068940973_1_XM_06908_56946e
+
+Striking 1531 codons that are incompletely resolved from XP_027382473_1_XM_02752_129304
+
+Striking 1537 codons that are incompletely resolved from XP_059981207_1_XM_06012_20c38b
+
+Striking 1540 codons that are incompletely resolved from XP_048722982_1_XM_04886_3da4d8
+
+Striking 1540 codons that are incompletely resolved from XP_061213050_1_XM_06135_a59e09
+
+Striking 1541 codons that are incompletely resolved from XP_020834339_1_XM_02097_ffe8f7
+
+Striking 1540 codons that are incompletely resolved from XP_033770807_1_XM_03391_5813ab
+
+Striking 1540 codons that are incompletely resolved from XP_039349222_1_XM_03949_e706cd
+
+Striking 1540 codons that are incompletely resolved from XP_067406998_1_XM_06755_e44515
+
+Striking 1613 codons that are incompletely resolved from XP_014801718_1_XM_01494_dbba1e
+
+Striking 1540 codons that are incompletely resolved from XP_034640302_1_XM_03478_d98092
+
+Striking 1613 codons that are incompletely resolved from XP_051488584_1_XM_05163_d5f37d
+
+Striking 1605 codons that are incompletely resolved from XP_025719430_1_XM_02586_cce633
+
+Striking 1613 codons that are incompletely resolved from XP_049494990_1_XM_04963_950907
+
+Striking 1541 codons that are incompletely resolved from XP_054352982_1_XM_05449_233884
+
+Striking 1541 codons that are incompletely resolved from XP_011885129_1_XM_01202_53ecb0
+
+Striking 1541 codons that are incompletely resolved from XP_035146051_1_XM_03529_9a17ab
+
+Striking 1541 codons that are incompletely resolved from XP_021524496_1_XM_02166_668537
+
+Striking 1541 codons that are incompletely resolved from XP_062947585_1_XM_06309_03f3dd
+
+Striking 1541 codons that are incompletely resolved from XP_008562397_1_XM_00856_dc1921
+
+Striking 1541 codons that are incompletely resolved from XP_027778597_1_XM_02792_702417
+
+Striking 1541 codons that are incompletely resolved from XP_026261473_1_XM_02640_8f64c7
+
+Striking 1541 codons that are incompletely resolved from XP_073931549_1_XM_07407_179db7
+
+Striking 1541 codons that are incompletely resolved from XP_069889487_1_XM_07003_7b0c26
+
+Striking 1613 codons that are incompletely resolved from XP_059105260_1_XM_05924_a15e8a
+
+Striking 1613 codons that are incompletely resolved from XP_055454594_1_XM_05559_11f5e3
+
+Striking 1541 codons that are incompletely resolved from XP_021018433_2_XM_02116_348380
+
+Striking 1541 codons that are incompletely resolved from XP_005367155_1_XM_00536_d08166
+
+Striking 1613 codons that are incompletely resolved from XP_010633845_1_XM_01063_a86da7
+
+Striking 1613 codons that are incompletely resolved from XP_006889665_1_XM_00688_00d697
+
+Striking 1541 codons that are incompletely resolved from XP_006859860_1_XM_00685_9b122f
+
+Striking 1541 codons that are incompletely resolved from XP_003416676_1_XM_00341_dc86a3
+
+Striking 1541 codons that are incompletely resolved from XP_049759763_1_XM_04990_ffaf48
+
+Striking 1541 codons that are incompletely resolved from XP_069341965_1_XM_06948_0050ab
+
+Striking 1720 codons that are incompletely resolved from XP_021565723_1_XM_02171_7aea02
+
+Striking 1541 codons that are incompletely resolved from XP_058536421_1_XM_05868_2cd141
+
+Striking 1541 codons that are incompletely resolved from XP_040846001_1_XM_04099_3f5c24
+
+Striking 1541 codons that are incompletely resolved from XP_047693572_1_XM_04783_5dcfcf
+
+Striking 1540 codons that are incompletely resolved from XP_053898610_1_XM_05404_3d0573
+
+Striking 1613 codons that are incompletely resolved from XP_012433366_1_XM_01257_ccab10
+
+Striking 1613 codons that are incompletely resolved from XP_026714908_1_XM_02685_1eda06
+
+Striking 1540 codons that are incompletely resolved from XP_034987378_1_XM_03513_1792e9
+
+Striking 1540 codons that are incompletely resolved from XP_015676419_1_XM_01582_6dded7
+
+Striking 1540 codons that are incompletely resolved from XP_032086725_1_XM_03223_4fe96f
+
+Striking 1505 codons that are incompletely resolved from XP_013930078_1_XM_01407_603eee
+
+Striking 1540 codons that are incompletely resolved from XP_030813952_1_XM_03095_75fbd6
+
+Striking 1540 codons that are incompletely resolved from XP_054127011_1_XM_05427_57ac00
+
+Striking 1530 codons that are incompletely resolved from XP_055116831_1_XM_05526_c2b8e1
+
+Striking 1613 codons that are incompletely resolved from XP_015357555_1_XM_01550_3042d0
+
+Striking 1613 codons that are incompletely resolved from XP_027295599_1_XM_02743_01fbb1
+
+Striking 1540 codons that are incompletely resolved from XP_007065422_1_XM_00706_0a16d0
+
+Striking 1540 codons that are incompletely resolved from XP_071300124_1_XM_07144_bf3739
+
+Striking 1540 codons that are incompletely resolved from XP_064581713_1_XM_06472_aa2662
+
+Striking 1540 codons that are incompletely resolved from XP_054849031_1_XM_05499_6b849e
+
+Striking 1533 codons that are incompletely resolved from XP_053132211_1_XM_05327_224a28
+
+Striking 1541 codons that are incompletely resolved from XP_050640218_1_XM_05078_9eb0c6
+
+Striking 1535 codons that are incompletely resolved from XP_040607182_1_XM_04075_236309
+
+Striking 1541 codons that are incompletely resolved from XP_045850090_1_XM_04599_390a78
+
+Striking 1715 codons that are incompletely resolved from XP_041318380_1_XM_04146_78e9f0
+
+Striking 1538 codons that are incompletely resolved from XP_065779721_1_XM_06592_85140e
+
+Striking 1541 codons that are incompletely resolved from XP_042777138_1_XM_04292_b0bef5
+
+Striking 1613 codons that are incompletely resolved from XP_055202714_1_XM_05534_8eef64
+
+Striking 1541 codons that are incompletely resolved from XP_025271785_1_XM_02541_253994
+
+Striking 1541 codons that are incompletely resolved from XP_004776374_1_XM_00477_8686fc
+
+Striking 1613 codons that are incompletely resolved from XP_004705595_1_XM_00470_9cd616
+
+Striking 1540 codons that are incompletely resolved from XP_044836999_1_XM_04498_8454f4
+
+Striking 1540 codons that are incompletely resolved from XP_074866933_1_XM_07501_2c2c45
+
+Striking 1540 codons that are incompletely resolved from XP_054499394_1_XM_05464_33d08b
+
+Striking 1613 codons that are incompletely resolved from XP_030912379_1_XM_03105_347eab
+
+Striking 1540 codons that are incompletely resolved from XP_064245947_1_XM_06438_310557
+
+Striking 1613 codons that are incompletely resolved from XP_009884100_1_XM_00988_b6a374
+
+Striking 1540 codons that are incompletely resolved from XP_033921292_1_XM_03406_888e25
+
+Striking 1540 codons that are incompletely resolved from XP_066054630_1_XM_06619_8d371a
+
+Striking 1540 codons that are incompletely resolved from XP_038007122_1_XM_03815_7b03eb
+
+Striking 1540 codons that are incompletely resolved from XP_054246955_1_XM_05439_c32dc5
+
+Striking 1540 codons that are incompletely resolved from XP_054036351_1_XM_05418_ec686d
+
+Striking 1540 codons that are incompletely resolved from XP_064009799_1_XM_06415_dc4fdd
+
+Striking 1540 codons that are incompletely resolved from XP_068002818_1_XM_06814_72b154
+
+Striking 1540 codons that are incompletely resolved from XP_068764545_1_XM_06890_a12862
+
+Striking 1540 codons that are incompletely resolved from XP_061848703_1_XM_06199_12a312
+
+Striking 1540 codons that are incompletely resolved from XP_056359725_1_XM_05650_f60dbc
+
+Striking 1540 codons that are incompletely resolved from XP_030315438_1_XM_03045_1ebd23
+
+Striking 1613 codons that are incompletely resolved from XP_071616919_1_XM_07176_cfad9e
+
+Striking 1540 codons that are incompletely resolved from XP_057891158_1_XM_05803_5a4394
+
+Striking 1540 codons that are incompletely resolved from XP_068278593_1_XM_06842_64b830
+
+Striking 1641 codons that are incompletely resolved from XP_025909942_1_XM_02605_c06dab
+
+Striking 1540 codons that are incompletely resolved from XP_077172889_1_XM_07731_29e782
+
+Striking 1578 codons that are incompletely resolved from XP_015272788_1_XM_01541_50459c
+
+Striking 1540 codons that are incompletely resolved from XP_056722349_1_XM_05686_343c5d
+
+Striking 1563 codons that are incompletely resolved from XP_026540877_1_XM_02668_c0641e
+
+Striking 1540 codons that are incompletely resolved from XP_063171258_1_XM_06331_fc4cab
+
+Striking 1540 codons that are incompletely resolved from XP_032626897_1_XM_03277_f6b30e
+
+Striking 1613 codons that are incompletely resolved from XP_010158511_1_XM_01016_09b08a
+
+Striking 1540 codons that are incompletely resolved from XP_069065957_1_XM_06920_810a8b
+
+Striking 1540 codons that are incompletely resolved from XP_069503320_1_XM_06964_4b52d0
+
+Striking 1613 codons that are incompletely resolved from XP_010001570_1_XM_01000_f10eb2
+
+Striking 1540 codons that are incompletely resolved from XP_053220646_1_XM_05336_b1870d
+
+Striking 1540 codons that are incompletely resolved from XP_028561186_1_XM_02870_ef35dd
+
+Striking 1602 codons that are incompletely resolved from XP_070811003_1_XM_07095_038de4
+
+Striking 1705 codons that are incompletely resolved from XP_025071585_1_XM_02521_3bb77e
+
+Striking 1613 codons that are incompletely resolved from XP_042336816_1_XM_04248_e0be84
+
+Striking 1540 codons that are incompletely resolved from XP_033023146_1_XM_03316_0b8c3e
+
+Striking 1540 codons that are incompletely resolved from XP_066496746_1_XM_06664_3e126a
+
+Striking 1540 codons that are incompletely resolved from XP_062998985_1_XM_06314_170dca
+
+Striking 1540 codons that are incompletely resolved from XP_003226562_3_XM_00322_6848b3
+
+Striking 1613 codons that are incompletely resolved from XP_009072312_1_XM_00907_88c771
+
+Striking 1541 codons that are incompletely resolved from XP_032001764_1_XM_03214_e4bc3c
+
+Striking 1613 codons that are incompletely resolved from XP_012878937_1_XM_01302_1dda31
+
+Striking 1541 codons that are incompletely resolved from XP_041504809_1_XM_04164_de3816
+
+Striking 1541 codons that are incompletely resolved from XP_057619785_1_XM_05776_f5a898
+
+Striking 1613 codons that are incompletely resolved from XP_004385989_1_XM_00438_cbc870
+
+Striking 1613 codons that are incompletely resolved from XP_007939453_1_XM_00794_00d3ea
+
+Striking 1541 codons that are incompletely resolved from XP_074062230_1_XM_07420_4c0586
+
+Striking 1541 codons that are incompletely resolved from XP_043842793_1_XM_04398_9acfea
+
+Striking 1541 codons that are incompletely resolved from XP_051856531_1_XM_05200_47e143
+
+Striking 1541 codons that are incompletely resolved from XP_036597230_1_XM_03674_68546b
+
+Striking 1540 codons that are incompletely resolved from XP_026506512_1_XM_02665_4eb374
+
+Striking 1540 codons that are incompletely resolved from XP_038276065_1_XM_03842_5f7c52
+
+Striking 1540 codons that are incompletely resolved from XP_049647566_1_XM_04979_79eabd
+
+Striking 1540 codons that are incompletely resolved from XP_065268127_1_XM_06541_c8678f
+
+Striking 1540 codons that are incompletely resolved from XP_006112902_1_XM_00611_291011
+
+Striking 1540 codons that are incompletely resolved from XP_066417269_1_XM_06656_daf2d0
+
+Striking 1540 codons that are incompletely resolved from XP_075574747_1_XM_07571_0d6d65
+
+Striking 1540 codons that are incompletely resolved from XP_063027882_1_XM_06317_6c96a3
+
+Striking 1623 codons that are incompletely resolved from XP_017749667_1_XM_01789_e84b58
+
+Striking 1541 codons that are incompletely resolved from XP_046945332_1_XM_04708_6c9d7e
+
+Striking 1541 codons that are incompletely resolved from XP_076996514_1_XM_07714_6c134c
+
+Striking 1540 codons that are incompletely resolved from XP_032896422_1_XM_03304_b4e425
+
+Striking 1540 codons that are incompletely resolved from XP_074821345_1_XM_07496_7b89e3
+
+Striking 1540 codons that are incompletely resolved from XP_073218163_1_XM_07336_304c61
+
+Striking 1540 codons that are incompletely resolved from XP_036248676_1_XM_03639_ccc64d
+
+Striking 1540 codons that are incompletely resolved from XP_009090085_1_XM_00909_17d2f3
+
+Striking 1540 codons that are incompletely resolved from XP_074014433_1_XM_07415_782903
+
+Striking 1540 codons that are incompletely resolved from XP_065540513_1_XM_06568_49be7a
+
+Striking 1540 codons that are incompletely resolved from XP_005487430_1_XM_00548_e919a0
+
+Striking 1540 codons that are incompletely resolved from XP_059340707_1_XM_05948_dba713
+
+Striking 1540 codons that are incompletely resolved from XP_048350579_1_XM_04849_ed2c2b
+
+Striking 1540 codons that are incompletely resolved from XP_054698458_1_XM_05484_3cf21a
+
+Striking 1540 codons that are incompletely resolved from XP_053936413_1_XM_05408_40c914
+
+Striking 1540 codons that are incompletely resolved from XP_050173385_1_XM_05031_e871c5
+
+Striking 1540 codons that are incompletely resolved from XP_027324695_1_XM_02746_be6c6b
+
+Striking 1540 codons that are incompletely resolved from XP_055564820_1_XM_05570_9a6953
+
+Striking 1540 codons that are incompletely resolved from XP_056190735_1_XM_05633_2c93f6
+
+Striking 1540 codons that are incompletely resolved from XP_039934724_1_XM_04007_7a5ffa
+
+Striking 1540 codons that are incompletely resolved from XP_054069008_1_XM_05421_0035e4
+
+Striking 1614 codons that are incompletely resolved from XP_010163243_1_XM_01016_52f41a
+
+Striking 1541 codons that are incompletely resolved from XP_005549028_1_XM_00554_9e4491
+
+Striking 1541 codons that are incompletely resolved from XP_025236704_1_XM_02538_c3de55
+
+Striking 1541 codons that are incompletely resolved from XP_024097024_1_XM_02424_8146d4
+
+Striking 1541 codons that are incompletely resolved from XP_072868988_1_XM_07301_7fe4ae
+
+Striking 1541 codons that are incompletely resolved from XP_003895681_1_XM_00389_f63961
+
+Striking 1541 codons that are incompletely resolved from XP_011742619_1_XM_01174_6cc720
+
+Striking 1541 codons that are incompletely resolved from XP_030788269_1_XM_03093_741ca0
+
+Striking 1541 codons that are incompletely resolved from XP_030656909_1_XM_03080_e3940a
+
+Striking 1541 codons that are incompletely resolved from XP_001175350_3_XM_00117_5a52fd
+
+Striking 1541 codons that are incompletely resolved from XP_034819364_1_XM_03496_e45475
+
+Striking 1613 codons that are incompletely resolved from XP_017363752_2_XM_01750_6a7990
+
+Striking 1541 codons that are incompletely resolved from XP_046276947_1_XM_04642_c0ef50
+
+Striking 1541 codons that are incompletely resolved from XP_006167951_1_XM_00616_28f543
+
+Striking 1541 codons that are incompletely resolved from XP_048186564_1_XM_04833_d14c1a
+
+Striking 1541 codons that are incompletely resolved from XP_052610249_1_XM_05275_32aa30
+
+Striking 1542 codons that are incompletely resolved from XP_028711830_1_XM_02885_336177
+
+Striking 1541 codons that are incompletely resolved from XP_076417509_1_XM_07656_a1cedc
+
+Striking 1541 codons that are incompletely resolved from XP_032742331_1_XM_03288_71cb18
+
+Striking 1541 codons that are incompletely resolved from XP_031194343_1_XM_03133_e47662
+
+Striking 1541 codons that are incompletely resolved from NP_766311_2_NM_172723_4_216696
+
+Striking 1541 codons that are incompletely resolved from XP_051061350_1_XM_05120_abb583
+
+Striking 1541 codons that are incompletely resolved from XP_075830925_1_XM_07597_643ce5
+
+Striking 1541 codons that are incompletely resolved from XP_038201288_1_XM_03834_e07aca
+
+Striking 1541 codons that are incompletely resolved from XP_050019200_1_XM_05016_361b61
+
+Striking 1541 codons that are incompletely resolved from XP_028611867_1_XM_02875_3d7be5
+
+Striking 1541 codons that are incompletely resolved from XP_044999006_1_XM_04514_fd4be2
+
+Striking 1541 codons that are incompletely resolved from XP_004629643_1_XM_00462_cbdd6f
+
+Striking 1541 codons that are incompletely resolved from XP_013008093_2_XM_01315_2044e7
+
+Striking 1541 codons that are incompletely resolved from XP_005397851_1_XM_00539_4b1d69
+
+Striking 1541 codons that are incompletely resolved from NP_001297239_1_NM_00131_a0e55e
+
+Striking 1541 codons that are incompletely resolved from XP_045398886_1_XM_04554_6e55ed
+
+Striking 1541 codons that are incompletely resolved from XP_012494514_1_XM_01263_bf6d21
+
+Striking 1541 codons that are incompletely resolved from XP_003795507_2_XM_00379_3c93f7
+
+Striking 1541 codons that are incompletely resolved from XP_036096223_1_XM_03624_70e6df
+
+Striking 1541 codons that are incompletely resolved from XP_041604521_1_XM_04174_7e8d4b
+
+Striking 1541 codons that are incompletely resolved from XP_072609457_1_XM_07275_7e3a5b
+
+Striking 1541 codons that are incompletely resolved from XP_038334368_1_XM_03847_749450
+
+Striking 1533 codons that are incompletely resolved from XP_035961467_1_XM_03610_004c92
+
+Striking 1533 codons that are incompletely resolved from XP_045669204_1_XM_04581_bb816a
+
+Striking 1541 codons that are incompletely resolved from XP_032249910_1_XM_03239_6660b1
+
+Striking 1533 codons that are incompletely resolved from XP_048080755_1_XM_04822_edb483
+
+Striking 1533 codons that are incompletely resolved from XP_027468463_1_XM_02761_ed7df6
+
+Striking 1533 codons that are incompletely resolved from XP_027947641_1_XM_02809_4486fd
+
+Striking 1541 codons that are incompletely resolved from XP_004414511_1_XM_00441_3037b9
+
+Striking 1541 codons that are incompletely resolved from XP_047568775_1_XM_04771_1f910e
+
+Striking 1541 codons that are incompletely resolved from XP_022356204_1_XM_02250_6f68dd
+
+Striking 1541 codons that are incompletely resolved from XP_032728725_1_XM_03287_23ee57
+
+Striking 1541 codons that are incompletely resolved from XP_044089550_1_XM_04423_bd2e8a
+
+Striking 1541 codons that are incompletely resolved from XP_032183642_1_XM_03232_eda37f
+
+Striking 1541 codons that are incompletely resolved from XP_059270237_1_XM_05941_42a864
+
+Striking 1613 codons that are incompletely resolved from XP_030888037_1_XM_03103_abc566
+
+Striking 1533 codons that are incompletely resolved from XP_034844110_1_XM_03498_b90047
+
+Striking 1541 codons that are incompletely resolved from XP_021535839_1_XM_02168_cfb773
+
+Striking 1605 codons that are incompletely resolved from XP_034525538_1_XM_03466_8fd1bd
+
+Striking 1541 codons that are incompletely resolved from XP_045316661_1_XM_04546_1d476e
+
+Striking 1541 codons that are incompletely resolved from XP_053069124_1_XM_05321_3549b5
+
+Striking 1541 codons that are incompletely resolved from XP_058566999_1_XM_05871_340643
+
+Striking 1541 codons that are incompletely resolved from XP_042826915_1_XM_04297_2879ec
+
+Striking 1614 codons that are incompletely resolved from XP_030157440_1_XM_03030_e4cfbc
+
+Striking 1489 codons that are incompletely resolved from XP_019277942_2_XM_01942_a34ffb
+
+Striking 1541 codons that are incompletely resolved from XP_044602562_2_XM_04474_aa7841
+
+Striking 1541 codons that are incompletely resolved from XP_070423444_1_XM_07056_49eed1
+
+Striking 1541 codons that are incompletely resolved from XP_004440960_1_XM_00444_93fb07
+
+Striking 1541 codons that are incompletely resolved from XP_037362639_1_XM_03750_181941
+
+Striking 1541 codons that are incompletely resolved from XP_072799596_1_XM_07294_cbc2b3
+
+Striking 1541 codons that are incompletely resolved from XP_068823223_1_XM_06896_8c9ee6
+
+Striking 1541 codons that are incompletely resolved from XP_061009822_1_XM_06115_cd2e55
+
+Striking 1542 codons that are incompletely resolved from NP_776938_1_NM_174513_2_3ca80c
+
+Striking 1541 codons that are incompletely resolved from XP_070219270_1_XM_07036_6f34c6
+
+Striking 1541 codons that are incompletely resolved from XP_052518682_1_XM_05266_1c59a4
+
+Striking 1541 codons that are incompletely resolved from XP_069425834_1_XM_06956_424e97
+
+Striking 1541 codons that are incompletely resolved from XP_017895406_1_XM_01803_0efb25
+
+Striking 1541 codons that are incompletely resolved from XP_026981342_1_XM_02712_104b38
+
+Striking 1541 codons that are incompletely resolved from XP_004269038_1_XM_00426_5d9797
+
+Striking 1541 codons that are incompletely resolved from XP_032462184_1_XM_03260_e2c5bf
+
+Striking 1541 codons that are incompletely resolved from XP_036913872_1_XM_03705_3a1ba3
+
+Striking 1541 codons that are incompletely resolved from XP_045680778_1_XM_04582_be08c0
+
+Striking 1541 codons that are incompletely resolved from XP_066198181_1_XM_06634_565767
+
+Striking 1541 codons that are incompletely resolved from XP_036288481_1_XM_03643_b3a4f1
+
+Striking 1517 codons that are incompletely resolved from XP_032951615_1_XM_03309_dc03f9
+
+Striking 1525 codons that are incompletely resolved from XP_074170167_1_XM_07431_1f61c6
+
+Striking 1476 codons that are incompletely resolved from XP_036864770_2_XM_03700_6ff315
+
+Striking 1476 codons that are incompletely resolved from XP_036788792_2_XM_03693_2e8b63
+
+Striking 1541 codons that are incompletely resolved from XP_055984538_1_XM_05612_c984f7
+
+Striking 1541 codons that are incompletely resolved from XP_049644618_1_XM_04978_408e28
+
+Striking 1540 codons that are incompletely resolved from XP_039735144_1_XM_03987_67e1a9
+
+Striking 1541 codons that are incompletely resolved from XP_006915938_1_XM_00691_fac806
+
+Striking 1541 codons that are incompletely resolved from XP_015974577_2_XM_01611_60286e
+
+Striking 1540 codons that are incompletely resolved from NP_001090758_1_NM_00109_c9f23c
+
+Striking 1540 codons that are incompletely resolved from XP_066432452_1_XM_06657_624b2f
+
+Striking 1540 codons that are incompletely resolved from XP_069839961_1_XM_06998_1c9bba
+
+Striking 1540 codons that are incompletely resolved from XP_044149673_1_XM_04429_7b471c
+
+Striking 1540 codons that are incompletely resolved from XP_056392998_1_XM_05653_bba315
+
+Striking 1540 codons that are incompletely resolved from XP_071976552_1_XM_07212_1c38b4
+
+Striking 1540 codons that are incompletely resolved from XP_075141186_1_XM_07528_993b2a
+
+Striking 1540 codons that are incompletely resolved from XP_073399219_1_XM_07354_b92ea8
+
+Striking 1540 codons that are incompletely resolved from XP_073504146_1_XM_07364_e1e1f3
+
+Striking 1540 codons that are incompletely resolved from XP_077130971_1_XM_07727_e2aaa7
+
+Striking 1540 codons that are incompletely resolved from XP_069590367_1_XM_06973_d5bbec
+
+Striking 1540 codons that are incompletely resolved from XP_075174187_1_XM_07531_ddec34
+
+Striking 1540 codons that are incompletely resolved from XP_075686412_1_XM_07583_35db51
+
+Striking 1541 codons that are incompletely resolved from XP_040296620_1_XM_04044_a7b1ed
+
+Striking 1540 codons that are incompletely resolved from XP_018423773_1_XM_01856_0332fd
+
+Striking 1540 codons that are incompletely resolved from XP_073492937_1_XM_07363_3997ad
+
+Striking 1540 codons that are incompletely resolved from XP_040212696_1_XM_04035_d1fc89
+
+Striking 1540 codons that are incompletely resolved from XP_072273922_1_XM_07241_a055db
+
+Striking 1540 codons that are incompletely resolved from XP_075035731_1_XM_07517_5ae786
+
+Striking 1540 codons that are incompletely resolved from XP_063790599_1_XM_06393_adda62
+
+Striking 1540 codons that are incompletely resolved from XP_063286456_1_XM_06343_57a47a
+
+Striking 1540 codons that are incompletely resolved from XP_075421615_1_XM_07556_976378
+
+Striking 1540 codons that are incompletely resolved from XP_053327739_1_XM_05347_306f98
+
+Striking 1540 codons that are incompletely resolved from XP_053551263_1_XM_05369_6b54d0
+
+Striking 1502 codons that are incompletely resolved from XP_060029164_1_XM_06017_05542d
+
+Striking 1538 codons that are incompletely resolved from XP_043945455_1_XM_04408_ff1512
+
+Striking 1569 codons that are incompletely resolved from XP_037670006_1_XM_03781_495a54
+
+Striking 1541 codons that are incompletely resolved from XP_057238208_1_XM_05738_d4a9ca
+
+Striking 1540 codons that are incompletely resolved from XP_058705813_1_XM_05884_1196db
+
+Striking 1540 codons that are incompletely resolved from XP_042684051_1_XM_04282_62d517
+
+Striking 1540 codons that are incompletely resolved from XP_014725407_1_XM_01486_56adc5
+
+Striking 1540 codons that are incompletely resolved from XP_015732009_1_XM_01587_fb4b83
+
+Striking 1540 codons that are incompletely resolved from XP_068063121_1_XM_06820_2b06b6
+
+Striking 1540 codons that are incompletely resolved from XP_039416061_1_XM_03956_656f13
+
+Striking 1540 codons that are incompletely resolved from XP_075623799_1_XM_07576_5aad44
+
+Striking 1540 codons that are incompletely resolved from XP_065500795_1_XM_06564_115008
+
+Striking 1540 codons that are incompletely resolved from XP_074741967_1_XM_07488_7ddfb8
+
+Striking 1540 codons that are incompletely resolved from XP_074961091_1_XM_07510_2e98a7
+
+Striking 1540 codons that are incompletely resolved from XP_050761793_1_XM_05090_37d3c5
+
+Striking 1540 codons that are incompletely resolved from XP_040445916_1_XM_04058_e6026d
+
+Striking 1540 codons that are incompletely resolved from XP_062463966_1_XM_06260_fa301a
+
+Striking 1540 codons that are incompletely resolved from XP_047919596_1_XM_04806_0c6d33
+
+Striking 1540 codons that are incompletely resolved from XP_037239201_1_XM_03738_751bf4
+
+Striking 1540 codons that are incompletely resolved from XP_041257410_1_XM_04140_177a9d
+
+Striking 1447 codons that are incompletely resolved from XP_075021350_1_XM_07516_a1cf12
+
+Striking 1529 codons that are incompletely resolved from XP_008631707_1_XM_00863_7b5281
+
+Striking 1480 codons that are incompletely resolved from XP_009318336_1_XM_00932_521248
+
+Striking 1526 codons that are incompletely resolved from XP_023792548_1_XM_02393_eb449f
+
+Striking 1525 codons that are incompletely resolved from XP_029804529_1_XM_02994_7b5038
+
+Striking 1609 codons that are incompletely resolved from XP_010852655_1_XM_01085_760d93
+
+Striking 1538 codons that are incompletely resolved from XP_026551721_1_XM_02669_443782
+
+Striking 1537 codons that are incompletely resolved from XP_067971880_1_XM_06811_e999e3
+
+Striking 1540 codons that are incompletely resolved from XP_075371332_1_XM_07551_9a2d0d
+
+Striking 1468 codons that are incompletely resolved from XP_054991892_1_XM_05513_4623e3
+
+Striking 1540 codons that are incompletely resolved from XP_032839588_2_XM_03298_2018ad
+
+Striking 1540 codons that are incompletely resolved from XP_076206829_1_XM_07635_52bc21
+
+Striking 1540 codons that are incompletely resolved from XP_027734004_1_XM_02787_9212e6
+
+Striking 1540 codons that are incompletely resolved from XP_065588953_1_XM_06573_f88270
+
+Striking 1540 codons that are incompletely resolved from XP_069726565_1_XM_06987_381d08
+
+Striking 1540 codons that are incompletely resolved from XP_064529176_1_XM_06467_45f1e7
+
+Striking 1540 codons that are incompletely resolved from XP_048176467_1_XM_04832_319cf7
+
+Striking 1540 codons that are incompletely resolved from XP_063200074_1_XM_06334_92a423
+
+Striking 1540 codons that are incompletely resolved from XP_062359372_1_XM_06250_93a596
+
+Striking 1540 codons that are incompletely resolved from XP_064376294_1_XM_06452_2e41fc
+
+Striking 1540 codons that are incompletely resolved from XP_062444128_1_XM_06258_ead449
+
+Striking 1540 codons that are incompletely resolved from XP_040430626_1_XM_04057_50fa9b
+
+Striking 1540 codons that are incompletely resolved from XP_015498512_1_XM_01564_646ea0
+
+Striking 1544 codons that are incompletely resolved from XP_010568566_1_XM_01057_d80c33
+
+Striking 1540 codons that are incompletely resolved from XP_064887648_1_XM_06503_e4c715
+
+Striking 1525 codons that are incompletely resolved from XP_068885812_1_XM_06902_04e907
+
+Striking 1535 codons that are incompletely resolved from XP_042719971_1_XM_04286_4ca45c
+
+Striking 1540 codons that are incompletely resolved from XP_005523043_1_XM_00552_a506a2
+
+Striking 1540 codons that are incompletely resolved from XP_055661657_1_XM_05580_8d1ac2
+
+Striking 1540 codons that are incompletely resolved from XP_059682207_1_XM_05982_e8845d
+
+Striking 1540 codons that are incompletely resolved from XP_035195142_1_XM_03533_9794fc
+
+Striking 1537 codons that are incompletely resolved from XP_008944487_1_XM_00894_201f35
+
+Striking 1537 codons that are incompletely resolved from XP_009583001_1_XM_00958_54f4ba
+
+Striking 1537 codons that are incompletely resolved from XP_009864288_1_XM_00986_e096fa
+
+Striking 1539 codons that are incompletely resolved from XP_010085911_1_XM_01008_b7bedb
+
+Striking 1541 codons that are incompletely resolved from XP_043415443_1_XM_04355_ff4084
+
+Striking 1541 codons that are incompletely resolved from XP_030706935_1_XM_03085_6c39c5
+
+Striking 1540 codons that are incompletely resolved from XP_053847823_1_XM_05399_37b5dd
+
+Striking 1540 codons that are incompletely resolved from XP_074775125_1_XM_07491_a83eb1
+
+Striking 1540 codons that are incompletely resolved from XP_053813584_1_XM_05395_705fe2
+
+Striking 1540 codons that are incompletely resolved from XP_032929820_1_XM_03307_1deef5
+
+Striking 1540 codons that are incompletely resolved from XP_052535847_1_XM_05267_3e3561
+
+Striking 1540 codons that are incompletely resolved from XP_031462692_1_XM_03160_6b7758
+
+Striking 1540 codons that are incompletely resolved from XP_066185798_1_XM_06632_f8b936
+
+Striking 1540 codons that are incompletely resolved from XP_065706496_1_XM_06585_8b1377
+
+Striking 1540 codons that are incompletely resolved from XP_057272887_1_XM_05741_03f6fa
+
+Striking 1540 codons that are incompletely resolved from XP_074453671_1_XM_07459_ccc66f
+
+Striking 1540 codons that are incompletely resolved from XP_074696873_1_XM_07484_2cd62f
+
+Striking 1540 codons that are incompletely resolved from XP_067162694_1_XM_06730_7d2a58
+
+Striking 1540 codons that are incompletely resolved from XP_027582022_1_XM_02772_be8fe0
+
+Striking 1540 codons that are incompletely resolved from XP_069666315_1_XM_06981_d56b9f
+
+Striking 1540 codons that are incompletely resolved from XP_027512355_1_XM_02765_5038f0
+
+Striking 1540 codons that are incompletely resolved from XP_074914418_1_XM_07505_c8e6d3
+
+Striking 1540 codons that are incompletely resolved from XP_064317736_1_XM_06446_4902a0
+
+Striking 1540 codons that are incompletely resolved from XP_029857367_1_XM_03000_0fa9db
+
+Striking 1540 codons that are incompletely resolved from XP_068555102_1_XM_06869_20e60e
+
+Striking 1540 codons that are incompletely resolved from XP_035404657_1_XM_03554_8b3746
+
+Striking 1540 codons that are incompletely resolved from XP_040539443_1_XM_04068_b6acee
+
+Striking 1540 codons that are incompletely resolved from XP_021266791_1_XM_02141_894ae2
+
+Striking 1529 codons that are incompletely resolved from XP_008926278_1_XM_00892_9461b2

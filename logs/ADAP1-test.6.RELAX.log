@@ -1,0 +1,122 @@
+multiple-files: No
+
+Analysis Description
+--------------------
+RELAX (a random effects test of selection relaxation) uses a random
+effects branch-site model framework to test whether a set of 'Test'
+for convergence diagnostics. Version 4.5 adds support for multiple
+datasets for joint testing. Version 4.6 adds support for branch- and
+site-level evidence ratio calculation.
+branches evolves under relaxed selection relative to a set of
+'Reference' branches (R), as measured by the relaxation parameter (K).
+Version 2.1 adds a check for stability in K estimates to try to mitigate
+convergence problems. Version 3 provides support for >2 branch sets.
+Version 3.1 adds LHC + Nedler-Mead initial fit phase and keyword
+support. Version 3.1.1 adds some bug fixes for better convergence.
+Version 4.0 adds support for synonymous rate variation. Version 4.1 adds
+further support for multiple hit models. Version 4.1.1 adds reporting
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree, with at least two
+groups of branches defined using the {} notation (one group can be
+defined as all unlabeled branches)
+
+- __Citation__: RELAX: Detecting Relaxed Selection in a Phylogenetic Framework (2015).
+Mol Biol Evol 32 (3): 820-832
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution g
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 4.5
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.6.codon.fas'
+contains 1 duplicate sequence. Identical sequences do not contribute any
+information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.6.codon.fas.FastTree.treefile.labelled
+results/ADAP1-test/ADAP1-test.6.codon.fas.FastTree.treefile.labelled
+
+>Loaded a multiple sequence alignment with **11** sequences, **35** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.6.codon.fas`
+
+>mode => Group mode
+The number of points in the initial distributional guess for likelihood fitting (permissible range = [1,10000], default value = 250, integer): 
+>grid-size => 250
+The number of initial random guesses to 'seed' rate values optimization (permissible range = [1,25], default value = 1, integer): 
+>starting-points => 25
+
+
+### Branch sets for RELAX analysis
+
+>multiple-hits => None
+
+* Selected 8 branches as the _Mammalia_ set: `Node12, Node15, Node17, XP_011885129_1_XM_01202_53ecb0, XP_012614566_2_XM_01275_945ab4, XP_041604521_1_XM_04174_7e8d4b, XP_054352982_1_XM_05449_233884, XP_062041590_1_XM_06218_d11611`
+
+* Selected 9 branches as the _Sauropsida_ set: `Node3, Node4, Node6, Node9, XP_025939132_1_XM_02608_6aec63, XP_032626897_1_XM_03277_f6b30e, XP_047919596_1_XM_04806_0c6d33, XP_054499394_1_XM_05464_33d08b, XP_069726565_1_XM_06987_381d08`
+
+>reference-group => Mammalia
+* 2 branches are in the unclassified (nuisance) set: `NP_001090758_1_NM_00109_c9f23c, Node1`
+The number omega rate classes to include in the model (permissible range = [2,10], default value = 3, integer): 
+>rates => 3
+
+>models => All
+
+>srv => Yes
+The number omega rate classes to include in the model (permissible range = [1,10], default value = 3, integer): 
+>syn-rates => 3
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) =  -568.17, AIC-c =  1191.68 (27 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.187
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -517.12, AIC-c =  1113.89 (36 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.610
+* non-synonymous/synonymous rate ratio for *Mammalia* =   0.1460
+* non-synonymous/synonymous rate ratio for *Sauropsida* =   0.0859
+* non-synonymous/synonymous rate ratio for *Unclassified* =   0.1229
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) =  -512.26, AIC-c =  1104.18 (36 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  3.028
+* non-synonymous/synonymous rate ratio for *Mammalia* =   0.1658
+* non-synonymous/synonymous rate ratio for *Sauropsida* =   0.0568
+* non-synonymous/synonymous rate ratio for *Unclassified* =   0.0301
+
+### Fitting the general descriptive (separate k per branch) model
+
+### * Log(L) =  -557.36, AIC-c =  1248.95 (57 estimated parameters)
+* The following baseline rate distribution for branch-site combinations was inferred
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.003     |   92.268    |                                   |
+|        Negative selection         |     0.920     |    0.000    |       Not supported by data       |
+|      Diversifying selection       |    12.902     |    7.732    |                                   |
+
+
+ ### Because some of the rate classes were collapsed to 0, the model is likely overparameterized. RELAX will reduce the number of site rate classes by one and repeat the fit now.
+----
+
+Fitting the general descriptive (separate k per branch) model
+Error:
+relax.ge.theta_GT evaluated to a NaN; this can cause all kinds of odd behavior downstream, therefore it is safer to quit now
+
+Function call stack
+1 :  [namespace = FmJoxfqO] Optimize(mles, likelihoodFunction);
+-------
+2 :  relax.general_descriptive.fit=estimators.FitLF(relax.filter_names,relax.trees,relax.ge_model_map,relax.final_partitioned_mg_results,relax.model_object_map,{terms.run_options.apply_user_constraints:"relax.init.k",terms.run_options.retain_lf_object:TRUE,terms.run_options.run_options.optimization_log:relax.optimization_log_file(".GE-log.json")});
+-------
+
+Check errors.log for execution error details.

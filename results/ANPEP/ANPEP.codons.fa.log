@@ -1,0 +1,2722 @@
+# HDR_MODE=auto
+# USE_X1=True
+# UNIQUE_TX=True
+# ID_MAXLEN=30
+# PROT_FA=/Users/alex/Documents/AOC-dev/data/ANPEP/ncbi_dataset/data/protein.faa
+# CDS_FA=/Users/alex/Documents/AOC-dev/data/ANPEP/ncbi_dataset/data/cds.fna
+# OUT_FA=results/ANPEP/ANPEP.codons.fa
+
+# XP_059951303.1 org=Mesoplodon densirostris
+# match XP_059951303.1|XM_06009_fb4163
+
+# XP_034640800.1 org=Trachemys scripta elegans
+# match XP_034640800.1|XM_03478_9f48c1
+
+# XP_005424368.1 org=Geospiza fortis
+# match XP_005424368.1|XM_00542_3af469
+
+# XP_029095245.1 org=Monodon monoceros
+# match XP_029095245.1|XM_02923_70770a
+
+# XP_015494977.1 org=Parus major
+# match XP_015494977.1|XM_01563_410734
+
+# XP_015494979.1 org=Parus major
+# no match
+
+# XP_015494981.1 org=Parus major
+# no match
+
+# XP_076401733.1 org=Peromyscus maniculatus bairdii
+# match XP_076401733.1|XM_07654_b43b87
+
+# XP_076401734.1 org=Peromyscus maniculatus bairdii
+# no match
+
+# XP_039579472.1 org=Passer montanus
+# match XP_039579472.1|XM_03972_38d1a3
+
+# XP_039579473.1 org=Passer montanus
+# no match
+
+# XP_039579476.1 org=Passer montanus
+# no match
+
+# XP_039579477.1 org=Passer montanus
+# no match
+
+# XP_039579478.1 org=Passer montanus
+# no match
+
+# XP_039579479.1 org=Passer montanus
+# no match
+
+# XP_039579480.1 org=Passer montanus
+# no match
+
+# XP_039579481.1 org=Passer montanus
+# no match
+
+# XP_039217944.1 org=Crotalus tigris
+# match XP_039217944.1|XM_03936_b3fe5e
+
+# XP_039217945.1 org=Crotalus tigris
+# no match
+
+# XP_064312014.1 org=Phalacrocorax carbo
+# match XP_064312014.1|XM_06445_ed26d7
+
+# XP_064312015.1 org=Phalacrocorax carbo
+# no match
+
+# XP_064312016.1 org=Phalacrocorax carbo
+# no match
+
+# XP_033708027.1 org=Tursiops truncatus
+# match XP_033708027.1|XM_03385_495709
+
+# XP_073657508.1 org=Tursiops truncatus
+# no match
+
+# XP_073657509.1 org=Tursiops truncatus
+# no match
+
+# XP_073657510.1 org=Tursiops truncatus
+# no match
+
+# XP_026712274.1 org=Athene cunicularia
+# match XP_026712274.1|XM_02685_fce65b
+
+# XP_032926292.1 org=Catharus ustulatus
+# match XP_032926292.1|XM_03307_49a3c1
+
+# NP_001075795.1 org=Oryctolagus cuniculus
+# match NP_001075795.1|NM_00108_f9e4e8
+
+# XP_069909348.1 org=Oryctolagus cuniculus
+# no match
+
+# XP_069909349.1 org=Oryctolagus cuniculus
+# no match
+
+# XP_053934149.1 org=Cuculus canorus
+# match XP_053934149.1|XM_05407_fb0556
+
+# XP_053128379.1 org=Hemicordylus capensis
+# match XP_053128379.1|XM_05327_2a747f
+
+# XP_053128380.1 org=Hemicordylus capensis
+# no match
+
+# XP_026945036.1 org=Sagmatias obliquidens
+# match XP_026945036.1|XM_02708_a13646
+
+# XP_003788672.1 org=Otolemur garnettii
+# match XP_003788672.1|XM_00378_b26296
+
+# XP_008851029.1 org=Nannospalax galili
+# match XP_008851029.1|XM_00885_9377ce
+
+# XP_026540484.1 org=Notechis scutatus
+# match XP_026540484.1|XM_02668_85ccb6
+
+# XP_026540485.1 org=Notechis scutatus
+# no match
+
+# XP_054692375.1 org=Grus americana
+# match XP_054692375.1|XM_05483_dabc2b
+
+# XP_054692376.1 org=Grus americana
+# no match
+
+# XP_032692708.1 org=Lontra canadensis
+# match XP_032692708.1|XM_03283_e49a4d
+
+# XP_058521574.1 org=Ochotona princeps
+# match XP_058521574.1|XM_05866_a21838
+
+# XP_058521576.1 org=Ochotona princeps
+# no match
+
+# XP_023566128.1 org=Octodon degus
+# match XP_023566128.1|XM_02371_5b1378
+
+# XP_023566133.1 org=Octodon degus
+# no match
+
+# XP_017372828.1 org=Cebus imitator
+# match XP_017372828.1|XM_01751_e66ee0
+
+# XP_072656036.1 org=Canis lupus baileyi
+# match XP_072656036.1|XM_07279_d80ff9
+
+# XP_054070985.1 org=Rissa tridactyla
+# match XP_054070985.1|XM_05421_91c974
+
+# XP_054070986.1 org=Rissa tridactyla
+# no match
+
+# XP_054070987.1 org=Rissa tridactyla
+# no match
+
+# XP_054070988.1 org=Rissa tridactyla
+# no match
+
+# XP_040498731.1 org=Ursus maritimus
+# match XP_040498731.1|XM_04064_4911d1
+
+# XP_020820815.1 org=Phascolarctos cinereus
+# match XP_020820815.1|XM_02096_690ab7
+
+# XP_020820824.1 org=Phascolarctos cinereus
+# no match
+
+# XP_020820833.1 org=Phascolarctos cinereus
+# no match
+
+# XP_020820843.1 org=Phascolarctos cinereus
+# no match
+
+# XP_040349594.1 org=Herpailurus yagouaroundi
+# match XP_040349594.1|XM_04049_73d00d
+
+# NP_999442.1 org=Sus scrofa
+# match NP_999442.1|NM_214277.1_7d2144
+
+# XP_005653580.1 org=Sus scrofa
+# no match
+
+# XP_005653581.1 org=Sus scrofa
+# no match
+
+# XP_020953963.1 org=Sus scrofa
+# no match
+
+# XP_006198515.2 org=Vicugna pacos
+# match XP_006198515.2|XM_00619_712f52
+
+# XP_072806871.1 org=Vicugna pacos
+# no match
+
+# XP_072806872.1 org=Vicugna pacos
+# no match
+
+# XP_072806873.1 org=Vicugna pacos
+# no match
+
+# XP_072806874.1 org=Vicugna pacos
+# no match
+
+# XP_006905412.1 org=Pteropus alecto
+# match XP_006905412.1|XM_00690_1a002b
+
+# XP_060116224.1 org=Heteronotia binoei
+# match XP_060116224.1|XM_06026_46bfae
+
+# XP_045668966.1 org=Ursus americanus
+# match XP_045668966.1|XM_04581_3fb096
+
+# XP_005052191.1 org=Ficedula albicollis
+# match XP_005052191.1|XM_00505_5ff4d4
+
+# XP_070809550.1 org=Pituophis catenifer annectens
+# match XP_070809550.1|XM_07095_a426f1
+
+# XP_070809551.1 org=Pituophis catenifer annectens
+# no match
+
+# XP_070809553.1 org=Pituophis catenifer annectens
+# no match
+
+# XP_070809554.1 org=Pituophis catenifer annectens
+# no match
+
+# XP_070809555.1 org=Pituophis catenifer annectens
+# no match
+
+# XP_059035981.1 org=Mustela lutreola
+# match XP_059035981.1|XM_05917_7199bf
+
+# XP_059035982.1 org=Mustela lutreola
+# no match
+
+# XP_059109285.1 org=Peromyscus eremicus
+# match XP_059109285.1|XM_05925_302c3d
+
+# XP_012588137.1 org=Condylura cristata
+# match XP_012588137.1|XM_01273_fac6c7
+
+# XP_027522565.1 org=Corapipo altera
+# match XP_027522565.1|XM_02766_228811
+
+# XP_036909514.1 org=Sturnira hondurensis
+# match XP_036909514.1|XM_03705_6f1013
+
+# XP_042526365.1 org=Dipodomys spectabilis
+# match XP_042526365.1|XM_04267_1139f4
+
+# XP_031979152.1 org=Corvus moneduloides
+# match XP_031979152.1|XM_03212_44b545
+
+# XP_063170496.1 org=Candoia aspera
+# match XP_063170496.1|XM_06331_e7c13b
+
+# XP_029814580.1 org=Manacus vitellinus
+# match XP_029814580.1|XM_02995_4cbf8a
+
+# XP_031296423.1 org=Camelus dromedarius
+# match XP_031296423.1|XM_03144_068dad
+
+# XP_022366845.1 org=Enhydra lutris kenyoni
+# match XP_022366845.1|XM_02251_eb743e
+
+# XP_022366846.1 org=Enhydra lutris kenyoni
+# no match
+
+# XP_034987243.2 org=Zootoca vivipara
+# match XP_034987243.2|XM_03513_71f64f
+
+# XP_060138605.1 org=Zootoca vivipara
+# no match
+
+# XP_060138606.1 org=Zootoca vivipara
+# no match
+
+# XP_044086346.1 org=Neogale vison
+# match XP_044086346.1|XM_04423_c3d452
+
+# XP_073738346.1 org=Callorhinus ursinus
+# match XP_073738346.1|XM_07388_764ff0
+
+# XP_073738347.1 org=Callorhinus ursinus
+# no match
+
+# XP_048812411.1 org=Lagopus muta
+# match XP_048812411.1|XM_04895_612f1f
+
+# XP_048812412.1 org=Lagopus muta
+# no match
+
+# XP_048812414.1 org=Lagopus muta
+# no match
+
+# XP_048812415.1 org=Lagopus muta
+# no match
+
+# XP_074210021.1 org=Camelus bactrianus
+# match XP_074210021.1|XM_07435_c6c907
+
+# XP_074210022.1 org=Camelus bactrianus
+# no match
+
+# XP_036026619.1 org=Onychomys torridus
+# match XP_036026619.1|XM_03617_5dce16
+
+# XP_041608942.1 org=Vulpes lagopus
+# match XP_041608942.1|XM_04175_519c41
+
+# XP_001093727.3 org=Macaca mulatta
+# match XP_001093727.3|XM_00109_55bc31
+
+# XP_018866310.3 org=Gorilla gorilla gorilla
+# match XP_018866310.3|XM_01901_55ae40
+
+# XP_063554909.1 org=Gorilla gorilla gorilla
+# no match
+
+# XP_063554910.1 org=Gorilla gorilla gorilla
+# no match
+
+# XP_063554911.1 org=Gorilla gorilla gorilla
+# no match
+
+# XP_063554912.1 org=Gorilla gorilla gorilla
+# no match
+
+# XP_043346230.1 org=Cervus canadensis
+# match XP_043346230.1|XM_04349_9cab8d
+
+# XP_043346231.1 org=Cervus canadensis
+# no match
+
+# XP_010001125.1 org=Chaetura pelagica
+# match XP_010001125.1|XM_01000_7346fa
+
+# XP_074900837.1 org=Buteo buteo
+# match XP_074900837.1|XM_07504_32c6c0
+
+# XP_074900838.1 org=Buteo buteo
+# no match
+
+# XP_010014852.1 org=Nestor notabilis
+# match XP_010014852.1|XM_01001_ca8565
+
+# XP_044300849.1 org=Varanus komodoensis
+# match XP_044300849.1|XM_04444_52dc37
+
+# XP_048174136.1 org=Corvus hawaiiensis
+# match XP_048174136.1|XM_04831_063219
+
+# XP_052016126.1 org=Apodemus sylvaticus
+# match XP_052016126.1|XM_05216_0f271f
+
+# XP_052016132.1 org=Apodemus sylvaticus
+# no match
+
+# XP_069322718.1 org=Eulemur rufifrons
+# match XP_069322718.1|XM_06946_f6f7ef
+
+# XP_069322719.1 org=Eulemur rufifrons
+# no match
+
+# XP_059570461.1 org=Alligator mississippiensis
+# match XP_059570461.1|XM_05971_1840b8
+
+# XP_059570462.1 org=Alligator mississippiensis
+# no match
+
+# XP_054128757.1 org=Melozone crissalis
+# match XP_054128757.1|XM_05427_6ab69e
+
+# XP_055273796.1 org=Moschus berezovskii
+# match XP_055273796.1|XM_05541_d84c65
+
+# XP_055273797.1 org=Moschus berezovskii
+# no match
+
+# XP_073509326.1 org=Phyllobates terribilis
+# match XP_073509326.1|XM_07365_e0c47c
+
+# XP_076980301.1 org=Tamandua tetradactyla
+# match XP_076980301.1|XM_07712_87e5df
+
+# XP_076980302.1 org=Tamandua tetradactyla
+# no match
+
+# XP_076980303.1 org=Tamandua tetradactyla
+# no match
+
+# XP_076980304.1 org=Tamandua tetradactyla
+# no match
+
+# XP_033258743.1 org=Orcinus orca
+# match XP_033258743.1|XM_03340_c59ce3
+
+# XP_049561877.1 org=Orcinus orca
+# no match
+
+# XP_049561878.1 org=Orcinus orca
+# no match
+
+# XP_027978012.1 org=Eumetopias jubatus
+# match XP_027978012.1|XM_02812_8c4b99
+
+# XP_028729561.1 org=Peromyscus leucopus
+# match XP_028729561.1|XM_02887_598a05
+
+# XP_065762777.1 org=Muntiacus reevesi
+# match XP_065762777.1|XM_06590_801ea4
+
+# XP_066448867.1 org=Eleutherodactylus coqui
+# match XP_066448867.1|XM_06659_631fd0
+
+# XP_066448868.1 org=Eleutherodactylus coqui
+# no match
+
+# XP_066448869.1 org=Eleutherodactylus coqui
+# no match
+
+# XP_071424308.1 org=Pithys albifrons albifrons
+# match XP_071424308.1|XM_07156_238c9c
+
+# XP_071424309.1 org=Pithys albifrons albifrons
+# no match
+
+# XP_071424310.1 org=Pithys albifrons albifrons
+# no match
+
+# NP_112274.1 org=Rattus norvegicus
+# match NP_112274.1|NM_031012.1_823d40
+
+# XP_006229469.1 org=Rattus norvegicus
+# no match
+
+# XP_006229470.1 org=Rattus norvegicus
+# no match
+
+# XP_006229471.1 org=Rattus norvegicus
+# no match
+
+# XP_032749267.1 org=Rattus rattus
+# match XP_032749267.1|XM_03289_f4e09e
+
+# XP_059679769.1 org=Gavia stellata
+# match XP_059679769.1|XM_05982_758e38
+
+# XP_059679770.1 org=Gavia stellata
+# no match
+
+# XP_052515650.1 org=Budorcas taxicolor
+# match XP_052515650.1|XM_05265_ce6625
+
+# XP_037766646.2 org=Chelonia mydas
+# match XP_037766646.2|XM_03791_f40929
+
+# XP_037766647.1 org=Chelonia mydas
+# no match
+
+# XP_037766648.1 org=Chelonia mydas
+# no match
+
+# XP_043379791.1 org=Chelonia mydas
+# no match
+
+# XP_005381598.1 org=Chinchilla lanigera
+# match XP_005381598.1|XM_00538_0f7d77
+
+# XP_005381599.1 org=Chinchilla lanigera
+# no match
+
+# XP_013368083.1 org=Chinchilla lanigera
+# no match
+
+# XP_007516437.1 org=Erinaceus europaeus
+# match XP_007516437.1|XM_00751_a8eb35
+
+# XP_007988571.3 org=Chlorocebus sabaeus
+# match XP_007988571.3|XM_00799_c5d2af
+
+# XP_072869131.1 org=Chlorocebus sabaeus
+# no match
+
+# XP_072869132.1 org=Chlorocebus sabaeus
+# no match
+
+# XP_075288117.1 org=Opisthocomus hoazin
+# match XP_075288117.1|XM_07543_9dd2a3
+
+# XP_075288118.1 org=Opisthocomus hoazin
+# no match
+
+# XP_076204306.1 org=Aptenodytes patagonicus
+# match XP_076204306.1|XM_07634_1fd2e7
+
+# XP_076204307.1 org=Aptenodytes patagonicus
+# no match
+
+# XP_076204308.1 org=Aptenodytes patagonicus
+# no match
+
+# XP_053898785.1 org=Malaclemys terrapin pileata
+# match XP_053898785.1|XM_05404_8ac81c
+
+# XP_053898786.1 org=Malaclemys terrapin pileata
+# no match
+
+# XP_053898787.1 org=Malaclemys terrapin pileata
+# no match
+
+# XP_053898789.1 org=Malaclemys terrapin pileata
+# no match
+
+# XP_023789512.1 org=Cyanistes caeruleus
+# match XP_023789512.1|XM_02393_5b3059
+
+# XP_043778070.1 org=Cervus elaphus
+# match XP_043778070.1|XM_04392_a7b932
+
+# XP_043778071.1 org=Cervus elaphus
+# no match
+
+# XP_066094449.1 org=Saccopteryx bilineata
+# match XP_066094449.1|XM_06623_fa2ebf
+
+# XP_005521863.1 org=Pseudopodoces humilis
+# match XP_005521863.1|XM_00552_edc95f
+
+# XP_053744647.1 org=Panthera pardus
+# match XP_053744647.1|XM_05388_362a11
+
+# XP_053744648.1 org=Panthera pardus
+# no match
+
+# XP_069622290.1 org=Ranitomeya imitator
+# match XP_069622290.1|XM_06976_5a7e29
+
+# XP_069622291.1 org=Ranitomeya imitator
+# no match
+
+# XP_069622292.1 org=Ranitomeya imitator
+# no match
+
+# XP_035424824.1 org=Cygnus atratus
+# match XP_035424824.1|XM_03556_073e75
+
+# XP_050568986.1 org=Cygnus atratus
+# no match
+
+# XP_044521383.1 org=Gracilinanus agilis
+# match XP_044521383.1|XM_04466_6de5f8
+
+# XP_061232551.1 org=Neopsephotus bourkii
+# match XP_061232551.1|XM_06137_730673
+
+# XP_074011907.1 org=Numenius arquata
+# no match
+
+# XP_033921827.1 org=Melopsittacus undulatus
+# match XP_033921827.1|XM_03406_b7139f
+
+# XP_033921828.1 org=Melopsittacus undulatus
+# no match
+
+# XP_006152874.1 org=Tupaia chinensis
+# match XP_006152874.1|XM_00615_a4d688
+
+# XP_075774142.1 org=Pelodiscus sinensis
+# match XP_075774142.1|XM_07591_537367
+
+# XP_030433469.1 org=Gopherus evgoodei
+# match XP_030433469.1|XM_03057_ffe3e0
+
+# XP_030433470.1 org=Gopherus evgoodei
+# no match
+
+# XP_042665183.1 org=Centrocercus urophasianus
+# match XP_042665183.1|XM_04280_504356
+
+# XP_046505469.1 org=Equus quagga
+# match XP_046505469.1|XM_04664_62bf4b
+
+# XP_074090187.1 org=Macrotis lagotis
+# match XP_074090187.1|XM_07423_9b8859
+
+# XP_005239470.3 org=Falco peregrinus
+# match XP_005239470.3|XM_00523_cf5d70
+
+# XP_010570630.1 org=Haliaeetus leucocephalus
+# match XP_010570630.1|XM_01057_26ba04
+
+# XP_014743328.1 org=Sturnus vulgaris
+# match XP_014743328.1|XM_01488_ab7877
+
+# XP_047651886.1 org=Phacochoerus africanus
+# match XP_047651886.1|XM_04779_4c5759
+
+# XP_049470239.1 org=Panthera uncia
+# match XP_049470239.1|XM_04961_56399a
+
+# XP_074736753.1 org=Strix uralensis
+# match XP_074736753.1|XM_07488_49bb27
+
+# XP_074736754.1 org=Strix uralensis
+# no match
+
+# XP_074736755.1 org=Strix uralensis
+# no match
+
+# XP_077173794.1 org=Paroedura picta
+# match XP_077173794.1|XM_07731_68e69e
+
+# XP_077173795.1 org=Paroedura picta
+# no match
+
+# XP_003755570.1 org=Sarcophilus harrisii
+# match XP_003755570.1|XM_00375_4cfa33
+
+# XP_031811454.1 org=Sarcophilus harrisii
+# no match
+
+# XP_031811455.1 org=Sarcophilus harrisii
+# no match
+
+# XP_031811456.1 org=Sarcophilus harrisii
+# no match
+
+# XP_017691744.1 org=Lepidothrix coronata
+# match XP_017691744.1|XM_01783_1583f7
+
+# XP_047395220.1 org=Sciurus carolinensis
+# match XP_047395220.1|XM_04753_f921d0
+
+# XP_058912630.1 org=Kogia breviceps
+# match XP_058912630.1|XM_05905_a8447d
+
+# XP_066885995.1 org=Kogia breviceps
+# no match
+
+# XP_066885996.1 org=Kogia breviceps
+# no match
+
+# XP_066885997.1 org=Kogia breviceps
+# no match
+
+# XP_066885998.1 org=Kogia breviceps
+# no match
+
+# XP_066885999.1 org=Kogia breviceps
+# no match
+
+# XP_066886000.1 org=Kogia breviceps
+# no match
+
+# XP_066886001.1 org=Kogia breviceps
+# no match
+
+# XP_066886002.1 org=Kogia breviceps
+# no match
+
+# XP_066886003.1 org=Kogia breviceps
+# no match
+
+# XP_066886004.1 org=Kogia breviceps
+# no match
+
+# XP_066886005.1 org=Kogia breviceps
+# no match
+
+# XP_066886006.1 org=Kogia breviceps
+# no match
+
+# XP_066886007.1 org=Kogia breviceps
+# no match
+
+# XP_066886008.1 org=Kogia breviceps
+# no match
+
+# XP_066886009.1 org=Kogia breviceps
+# no match
+
+# XP_066886010.1 org=Kogia breviceps
+# no match
+
+# XP_065757080.1 org=Phocoena phocoena
+# match XP_065757080.1|XM_06590_df0d97
+
+# NP_001139506.1 org=Canis lupus familiaris
+# match NP_001139506.1|NM_00114_9ee93b
+
+# XP_036787845.2 org=Manis pentadactyla
+# match XP_036787845.2|XM_03693_1262da
+
+# XP_075015741.1 org=Calonectris borealis
+# match XP_075015741.1|XM_07515_959d30
+
+# XP_075015742.1 org=Calonectris borealis
+# no match
+
+# XP_004617569.1 org=Sorex araneus
+# match XP_004617569.1|XM_00461_dd0f30
+
+# XP_053079524.1 org=Acinonyx jubatus
+# match XP_053079524.1|XM_05322_d87a62
+
+# XP_036245184.1 org=Molothrus ater
+# match XP_036245184.1|XM_03638_740dac
+
+# XP_068881923.1 org=Aphelocoma coerulescens
+# match XP_068881923.1|XM_06902_c785cb
+
+# XP_058703141.1 org=Poecile atricapillus
+# match XP_058703141.1|XM_05884_cfde7f
+
+# XP_058703142.1 org=Poecile atricapillus
+# no match
+
+# XP_058703143.1 org=Poecile atricapillus
+# no match
+
+# XP_037688971.1 org=Choloepus didactylus
+# match XP_037688971.1|XM_03783_a2e325
+
+# XP_039073382.1 org=Hyaena hyaena
+# match XP_039073382.1|XM_03921_2b7c47
+
+# XP_052664631.1 org=Harpia harpyja
+# match XP_052664631.1|XM_05280_ed30e4
+
+# XP_052664632.1 org=Harpia harpyja
+# no match
+
+# XP_052664633.1 org=Harpia harpyja
+# no match
+
+# XP_055133220.2 org=Symphalangus syndactylus
+# match XP_055133220.2|XM_05527_9160fe
+
+# XP_030734494.1 org=Globicephala melas
+# match XP_030734494.1|XM_03087_bdeda0
+
+# XP_060149500.1 org=Globicephala melas
+# no match
+
+# XP_060149501.1 org=Globicephala melas
+# no match
+
+# XP_062498654.1 org=Pezoporus occidentalis
+# match XP_062498654.1|XM_06264_34f649
+
+# XP_062498655.1 org=Pezoporus occidentalis
+# no match
+
+# NP_001009252.2 org=Felis catus
+# match NP_001009252.2|NM_00100_072831
+
+# XP_014304588.1 org=Myotis lucifugus
+# match XP_014304588.1|XM_01444_344150
+
+# XP_075431252.1 org=Ascaphus truei
+# match XP_075431252.1|XM_07557_475fe2
+
+# XP_075431253.1 org=Ascaphus truei
+# no match
+
+# XP_074822794.1 org=Natator depressus
+# match XP_074822794.1|XM_07496_441536
+
+# XP_074822795.1 org=Natator depressus
+# no match
+
+# XP_028351549.1 org=Physeter macrocephalus
+# match XP_028351549.1|XM_02849_03b5c7
+
+# XP_028351550.1 org=Physeter macrocephalus
+# no match
+
+# XP_028351551.1 org=Physeter macrocephalus
+# no match
+
+# XP_028351552.1 org=Physeter macrocephalus
+# no match
+
+# XP_028351553.1 org=Physeter macrocephalus
+# no match
+
+# XP_028351554.1 org=Physeter macrocephalus
+# no match
+
+# XP_054943909.1 org=Physeter macrocephalus
+# no match
+
+# XP_054943910.1 org=Physeter macrocephalus
+# no match
+
+# XP_075860867.1 org=Microcebus murinus
+# match XP_075860867.1|XM_07600_b42123
+
+# XP_014808157.1 org=Calidris pugnax
+# match XP_014808157.1|XM_01495_38bcb9
+
+# XP_014808158.1 org=Calidris pugnax
+# no match
+
+# XP_014808159.1 org=Calidris pugnax
+# no match
+
+# XP_074457163.1 org=Larus michahellis
+# match XP_074457163.1|XM_07460_917594
+
+# XP_074457164.1 org=Larus michahellis
+# no match
+
+# XP_074457165.1 org=Larus michahellis
+# no match
+
+# XP_005320197.1 org=Ictidomys tridecemlineatus
+# match XP_005320197.1|XM_00532_a1b512
+
+# XP_040131041.1 org=Ictidomys tridecemlineatus
+# no match
+
+# XP_040131042.1 org=Ictidomys tridecemlineatus
+# no match
+
+# XP_040131043.1 org=Ictidomys tridecemlineatus
+# no match
+
+# XP_030312796.1 org=Calypte anna
+# match XP_030312796.1|XM_03045_a86159
+
+# XP_030312797.1 org=Calypte anna
+# no match
+
+# XP_065703836.1 org=Patagioenas fasciata
+# match XP_065703836.1|XM_06584_eb611e
+
+# XP_065703840.1 org=Patagioenas fasciata
+# no match
+
+# XP_071670013.1 org=Patagioenas fasciata
+# no match
+
+# XP_071670014.1 org=Patagioenas fasciata
+# no match
+
+# XP_024088297.1 org=Pongo abelii
+# match XP_024088297.1|XM_02423_d7a500
+
+# XP_063572373.1 org=Pongo abelii
+# no match
+
+# XP_063572374.1 org=Pongo abelii
+# no match
+
+# XP_008561571.1 org=Galeopterus variegatus
+# match XP_008561571.1|XM_00856_842a14
+
+# XP_012861931.1 org=Echinops telfairi
+# match XP_012861931.1|XM_01300_84006d
+
+# XP_008068818.1 org=Carlito syrichta
+# match XP_008068818.1|XM_00807_bda992
+
+# XP_044836807.1 org=Mauremys mutica
+# match XP_044836807.1|XM_04498_d9f686
+
+# XP_044836808.1 org=Mauremys mutica
+# no match
+
+# XP_027707196.1 org=Vombatus ursinus
+# match XP_027707196.1|XM_02785_70c3c6
+
+# XP_027707197.1 org=Vombatus ursinus
+# no match
+
+# XP_027707198.1 org=Vombatus ursinus
+# no match
+
+# XP_027707199.1 org=Vombatus ursinus
+# no match
+
+# XP_027707200.1 org=Vombatus ursinus
+# no match
+
+# XP_027707201.1 org=Vombatus ursinus
+# no match
+
+# XP_049761895.1 org=Elephas maximus indicus
+# match XP_049761895.1|XM_04990_acaabe
+
+# XP_049761896.1 org=Elephas maximus indicus
+# no match
+
+# XP_049761897.1 org=Elephas maximus indicus
+# no match
+
+# XP_049761898.1 org=Elephas maximus indicus
+# no match
+
+# XP_075063900.1 org=Mixophyes fleayi
+# match XP_075063900.1|XM_07520_20f479
+
+# XP_075063901.1 org=Mixophyes fleayi
+# no match
+
+# XP_053844825.1 org=Vidua macroura
+# match XP_053844825.1|XM_05398_122231
+
+# XP_063781891.1 org=Pseudophryne corroboree
+# match XP_063781891.1|XM_06392_8356ce
+
+# XP_063781892.1 org=Pseudophryne corroboree
+# no match
+
+# XP_063781893.1 org=Pseudophryne corroboree
+# no match
+
+# XP_036700980.1 org=Balaenoptera musculus
+# match XP_036700980.1|XM_03684_11e52f
+
+# XP_054243768.1 org=Indicator indicator
+# match XP_054243768.1|XM_05438_bb76ad
+
+# XP_075362623.1 org=Mycteria americana
+# match XP_075362623.1|XM_07550_de8e6b
+
+# XP_075362625.1 org=Mycteria americana
+# no match
+
+# XP_040113489.1 org=Oryx dammah
+# match XP_040113489.1|XM_04025_8e4de6
+
+# XP_040113490.1 org=Oryx dammah
+# no match
+
+# XP_047718795.1 org=Prionailurus viverrinus
+# match XP_047718795.1|XM_04786_4e5d49
+
+# XP_047902278.2 org=Anser cygnoides
+# match XP_047902278.2|XM_04804_ec93bd
+
+# XP_047902279.2 org=Anser cygnoides
+# no match
+
+# XP_021536217.1 org=Neomonachus schauinslandi
+# match XP_021536217.1|XM_02168_1df81d
+
+# XP_024417425.1 org=Desmodus rotundus
+# match XP_024417425.1|XM_02456_188e96
+
+# XP_071075560.1 org=Desmodus rotundus
+# no match
+
+# XP_027428691.2 org=Zalophus californianus
+# match XP_027428691.2|XM_02757_217c18
+
+# XP_048721830.1 org=Caretta caretta
+# match XP_048721830.1|XM_04886_60886e
+
+# XP_048721832.1 org=Caretta caretta
+# no match
+
+# XP_048721833.1 org=Caretta caretta
+# no match
+
+# XP_048721834.1 org=Caretta caretta
+# no match
+
+# NP_032512.2 org=Mus musculus
+# match NP_032512.2|NM_008486.3_a3accc
+
+# XP_036008613.1 org=Mus musculus
+# no match
+
+# NP_990192.2 org=Gallus gallus
+# match NP_990192.2|NM_204861.2_f74b55
+
+# XP_005357770.1 org=Microtus ochrogaster
+# match XP_005357770.1|XM_00535_53cf14
+
+# XP_066491470.1 org=Tiliqua scincoides
+# match XP_066491470.1|XM_06663_76b754
+
+# XP_071610143.1 org=Heliangelus exortis
+# match XP_071610143.1|XM_07175_594524
+
+# XP_071610144.1 org=Heliangelus exortis
+# no match
+
+# XP_027775590.2 org=Marmota flaviventris
+# match XP_027775590.2|XM_02791_7f8850
+
+# XP_055970076.1 org=Sorex fumeus
+# match XP_055970076.1|XM_05611_7317ce
+
+# XP_067327470.1 org=Anolis sagrei
+# match XP_067327470.1|XM_06747_4aceb8
+
+# XP_014957374.3 org=Ovis aries
+# match XP_014957374.3|XM_01510_c49c7b
+
+# XP_048225372.1 org=Perognathus longimembris pacificus
+# match XP_048225372.1|XM_04836_72b525
+
+# XP_059771361.1 org=Balaenoptera ricei
+# match XP_059771361.1|XM_05991_6e84de
+
+# XP_061037750.1 org=Eubalaena glacialis
+# match XP_061037750.1|XM_06118_c115c2
+
+# XP_066414870.1 org=Molothrus aeneus
+# match XP_066414870.1|XM_06655_66b247
+
+# NP_001141.2 org=Homo sapiens
+# match NP_001141.2|NM_001150.3_9cc4c7
+
+# NP_001368852.1 org=Homo sapiens
+# no match
+
+# NP_001368853.1 org=Homo sapiens
+# no match
+
+# XP_011929737.1 org=Cercocebus atys
+# match XP_011929737.1|XM_01207_328bef
+
+# XP_052527852.1 org=Tympanuchus pallidicinctus
+# match XP_052527852.1|XM_05267_fd4dfa
+
+# XP_067999717.1 org=Melanerpes formicivorus
+# match XP_067999717.1|XM_06814_e2f366
+
+# XP_025774907.1 org=Puma concolor
+# no match
+
+# XP_050653589.1 org=Macaca thibetana thibetana
+# match XP_050653589.1|XM_05079_b12823
+
+# XP_067963765.1 org=Myxine glutinosa
+# match XP_067963765.1|XM_06810_025e68
+
+# XP_046942620.1 org=Lynx rufus
+# match XP_046942620.1|XM_04708_ea60c2
+
+# XP_054025111.1 org=Dryobates pubescens
+# match XP_054025111.1|XM_05416_1943eb
+
+# XP_032089164.1 org=Thamnophis elegans
+# match XP_032089164.1|XM_03223_314ab0
+
+# XP_072726253.1 org=Ciconia boyciana
+# match XP_072726253.1|XM_07287_29e9b9
+
+# XP_039933695.1 org=Hirundo rustica
+# match XP_039933695.1|XM_04007_9ab0ec
+
+# XP_056427950.1 org=Hyla sarda
+# match XP_056427950.1|XM_05657_9d1dfb
+
+# XP_056427951.1 org=Hyla sarda
+# no match
+
+# XP_056427952.1 org=Hyla sarda
+# no match
+
+# XP_057278677.1 org=Pezoporus wallicus
+# match XP_057278677.1|XM_05742_c54547
+
+# XP_077041426.1 org=Agelaius phoeniceus
+# match XP_077041426.1|XM_07718_b4255e
+
+# XP_058150673.1 org=Dasypus novemcinctus
+# match XP_058150673.1|XM_05829_85fb47
+
+# XP_058150674.1 org=Dasypus novemcinctus
+# no match
+
+# XP_071070478.1 org=Dasypus novemcinctus
+# no match
+
+# XP_071070479.1 org=Dasypus novemcinctus
+# no match
+
+# XP_071070480.1 org=Dasypus novemcinctus
+# no match
+
+# XP_029766638.1 org=Terrapene triunguis
+# match XP_029766638.1|XM_02991_f0b3a2
+
+# XP_027752999.1 org=Empidonax traillii
+# match XP_027752999.1|XM_02789_a52e3e
+
+# XP_035925809.1 org=Halichoerus grypus
+# match XP_035925809.1|XM_03606_934540
+
+# XP_035925810.1 org=Halichoerus grypus
+# no match
+
+# XP_035925811.1 org=Halichoerus grypus
+# no match
+
+# XP_035925812.1 org=Halichoerus grypus
+# no match
+
+# XP_064245550.1 org=Passer domesticus
+# match XP_064245550.1|XM_06438_3c58ec
+
+# XP_066052338.1 org=Chamaea fasciata
+# match XP_066052338.1|XM_06619_d99b64
+
+# XP_066052339.1 org=Chamaea fasciata
+# no match
+
+# XP_027322377.2 org=Anas platyrhynchos
+# match XP_027322377.2|XM_02746_796a28
+
+# XP_027322378.2 org=Anas platyrhynchos
+# no match
+
+# XP_010619371.1 org=Fukomys damarensis
+# match XP_010619371.1|XM_01062_8bb1e6
+
+# XP_040198387.1 org=Rana temporaria
+# match XP_040198387.1|XM_04034_75a795
+
+# XP_068814489.1 org=Struthio camelus
+# match XP_068814489.1|XM_06895_2c51e3
+
+# XP_068814490.1 org=Struthio camelus
+# no match
+
+# XP_068814491.1 org=Struthio camelus
+# no match
+
+# XP_068814492.1 org=Struthio camelus
+# no match
+
+# XP_068814493.1 org=Struthio camelus
+# no match
+
+# XP_061250428.1 org=Bos javanicus
+# match XP_061250428.1|XM_06139_1db05c
+
+# XP_067412180.1 org=Emydura macquarii macquarii
+# match XP_067412180.1|XM_06755_351a94
+
+# XP_043409877.1 org=Prionailurus bengalensis
+# match XP_043409877.1|XM_04355_f2757e
+
+# XP_034880025.1 org=Mirounga leonina
+# match XP_034880025.1|XM_03502_bf7538
+
+# XP_034880026.1 org=Mirounga leonina
+# no match
+
+# XP_034880027.1 org=Mirounga leonina
+# no match
+
+# XP_046293381.1 org=Marmota monax
+# match XP_046293381.1|XM_04643_f6d1be
+
+# XP_074956970.1 org=Phalacrocorax aristotelis
+# match XP_074956970.1|XM_07510_a280ce
+
+# XP_023042997.1 org=Piliocolobus tephrosceles
+# match XP_023042997.1|XM_02318_d890b1
+
+# XP_025248041.1 org=Theropithecus gelada
+# match XP_025248041.1|XM_02539_4527c7
+
+# XP_050009996.1 org=Alexandromys fortis
+# match XP_050009996.1|XM_05015_2ff50d
+
+# XP_050009997.1 org=Alexandromys fortis
+# no match
+
+# XP_050009998.1 org=Alexandromys fortis
+# no match
+
+# XP_022419728.1 org=Delphinapterus leucas
+# match XP_022419728.1|XM_02256_44b00c
+
+# XP_004398356.1 org=Odobenus rosmarus divergens
+# match XP_004398356.1|XM_00439_27db33
+
+# XP_007943359.1 org=Orycteropus afer afer
+# match XP_007943359.1|XM_00794_c04a66
+
+# XP_011803693.1 org=Colobus angolensis palliatus
+# match XP_011803693.1|XM_01194_b78887
+
+# XP_059714792.1 org=Haemorhous mexicanus
+# match XP_059714792.1|XM_05985_aa5ec0
+
+# XP_059714793.1 org=Haemorhous mexicanus
+# no match
+
+# XP_059714794.1 org=Haemorhous mexicanus
+# no match
+
+# XP_059714795.1 org=Haemorhous mexicanus
+# no match
+
+# XP_015348557.1 org=Marmota marmota marmota
+# match XP_015348557.1|XM_01549_b3f0af
+
+# XP_026565035.1 org=Pseudonaja textilis
+# match XP_026565035.1|XM_02670_6e9cd2
+
+# XP_026565036.1 org=Pseudonaja textilis
+# no match
+
+# XP_026565037.1 org=Pseudonaja textilis
+# no match
+
+# XP_068266131.1 org=Nyctibius grandis
+# match XP_068266131.1|XM_06841_9a42ed
+
+# XP_068266132.1 org=Nyctibius grandis
+# no match
+
+# XP_068266133.1 org=Nyctibius grandis
+# no match
+
+# XP_063026135.1 org=Melospiza melodia melodia
+# match XP_063026135.1|XM_06317_664430
+
+# XP_005885265.1 org=Myotis brandtii
+# match XP_005885265.1|XM_00588_d78992
+
+# XP_032650172.1 org=Chelonoidis abingdonii
+# match XP_032650172.1|XM_03279_381816
+
+# XP_045680750.1 org=Phyllostomus hastatus
+# match XP_045680750.1|XM_04582_98e789
+
+# XP_021514607.1 org=Meriones unguiculatus
+# match XP_021514607.1|XM_02165_eda174
+
+# XP_053810268.1 org=Vidua chalybeata
+# match XP_053810268.1|XM_05395_1d35e9
+
+# XP_055411577.1 org=Bubalus kerabau
+# match XP_055411577.1|XM_05555_ef37ab
+
+# XP_073160671.1 org=Lepidochelys kempii
+# match XP_073160671.1|XM_07330_98831c
+
+# XP_073160672.1 org=Lepidochelys kempii
+# no match
+
+# XP_012917463.1 org=Mustela putorius furo
+# match XP_012917463.1|XM_01306_67409b
+
+# XP_015418719.1 org=Myotis davidii
+# match XP_015418719.1|XM_01556_add864
+
+# XP_010376924.2 org=Rhinopithecus roxellana
+# match XP_010376924.2|XM_01037_18129b
+
+# XP_042796394.1 org=Panthera leo
+# match XP_042796394.1|XM_04294_53f6d3
+
+# XP_069415778.1 org=Ovis canadensis
+# match XP_069415778.1|XM_06955_39ccb8
+
+# XP_069415779.1 org=Ovis canadensis
+# no match
+
+# XP_069415781.1 org=Ovis canadensis
+# no match
+
+# XP_069415782.1 org=Ovis canadensis
+# no match
+
+# XP_074151252.1 org=Sminthopsis crassicaudata
+# match XP_074151252.1|XM_07429_17d6a4
+
+# XP_074151253.1 org=Sminthopsis crassicaudata
+# no match
+
+# XP_074151254.1 org=Sminthopsis crassicaudata
+# no match
+
+# XP_064932981.1 org=Columba livia
+# match XP_064932981.1|XM_06507_456e19
+
+# XP_064932982.1 org=Columba livia
+# no match
+
+# XP_043934235.1 org=Protopterus annectens
+# match XP_043934235.1|XM_04407_7397d3
+
+# XP_043934236.1 org=Protopterus annectens
+# no match
+
+# XP_043934237.1 org=Protopterus annectens
+# no match
+
+# XP_014378754.1 org=Alligator sinensis
+# match XP_014378754.1|XM_01452_5fafa8
+
+# XP_025068250.1 org=Alligator sinensis
+# no match
+
+# XP_025068251.1 org=Alligator sinensis
+# no match
+
+# XP_025068252.1 org=Alligator sinensis
+# no match
+
+# XP_062819141.1 org=Anolis carolinensis
+# match XP_062819141.1|XM_06296_adb8fe
+
+# XP_062819142.1 org=Anolis carolinensis
+# no match
+
+# XP_019327917.1 org=Aptenodytes forsteri
+# no match
+
+# XP_027377051.1 org=Bos indicus x Bos taurus
+# match XP_027377051.1|XM_02752_016aee
+
+# XP_048290846.1 org=Myodes glareolus
+# match XP_048290846.1|XM_04843_2a0c2a
+
+# XP_008508865.2 org=Equus przewalskii
+# match XP_008508865.2|XM_00851_9eff84
+
+# XP_027544364.1 org=Neopelma chrysocephalum
+# match XP_027544364.1|XM_02768_f6b99b
+
+# XP_042732127.1 org=Lagopus leucura
+# match XP_042732127.1|XM_04287_d76b8c
+
+# XP_042732128.1 org=Lagopus leucura
+# no match
+
+# XP_042732129.1 org=Lagopus leucura
+# no match
+
+# XP_042732130.1 org=Lagopus leucura
+# no match
+
+# XP_076704914.1 org=Callospermophilus lateralis
+# match XP_076704914.1|XM_07684_1f72cc
+
+# XP_074405078.1 org=Zonotrichia albicollis
+# match XP_074405078.1|XM_07454_fd18b1
+
+# XP_074405079.1 org=Zonotrichia albicollis
+# no match
+
+# XP_033022913.1 org=Lacerta agilis
+# match XP_033022913.1|XM_03316_66576d
+
+# XP_072474516.1 org=Notamacropus eugenii
+# match XP_072474516.1|XM_07261_b7883f
+
+# XP_064013910.1 org=Pogoniulus pusillus
+# match XP_064013910.1|XM_06415_69fa5e
+
+# XP_074693116.1 org=Strix aluco
+# match XP_074693116.1|XM_07483_ebbfd3
+
+# XP_074693117.1 org=Strix aluco
+# no match
+
+# XP_074693118.1 org=Strix aluco
+# no match
+
+# XP_005895210.2 org=Bos mutus
+# match XP_005895210.2|XM_00589_bbced9
+
+# XP_057612121.1 org=Chionomys nivalis
+# match XP_057612121.1|XM_05775_f94d4d
+
+# XP_017716719.1 org=Rhinopithecus bieti
+# match XP_017716719.1|XM_01786_5b12e4
+
+# XP_050759431.1 org=Gymnogyps californianus
+# match XP_050759431.1|XM_05090_a67397
+
+# XP_064578227.1 org=Zonotrichia leucophrys gambelii
+# match XP_064578227.1|XM_06472_467c2f
+
+# XP_064578228.1 org=Zonotrichia leucophrys gambelii
+# no match
+
+# XP_065268125.1 org=Emys orbicularis
+# match XP_065268125.1|XM_06541_8fbfcc
+
+# XP_028610640.1 org=Grammomys surdaster
+# match XP_028610640.1|XM_02875_6fca0f
+
+# XP_031443802.1 org=Phasianus colchicus
+# match XP_031443802.1|XM_03158_074d02
+
+# XP_032556366.1 org=Chiroxiphia lanceolata
+# match XP_032556366.1|XM_03270_fdaa48
+
+# XP_036271433.1 org=Pipistrellus kuhlii
+# match XP_036271433.1|XM_03641_773078
+
+# XP_009468467.1 org=Nipponia nippon
+# match XP_009468467.1|XM_00947_845799
+
+# XP_012319279.2 org=Aotus nancymaae
+# match XP_012319279.2|XM_01246_f8b280
+
+# XP_063268446.1 org=Prinia subflava
+# match XP_063268446.1|XM_06341_15e87f
+
+# XP_063268447.1 org=Prinia subflava
+# no match
+
+# XP_066210647.1 org=Saccopteryx leptura
+# match XP_066210647.1|XM_06635_b2a9b9
+
+# XP_068847144.1 org=Capricornis sumatraensis
+# match XP_068847144.1|XM_06899_de8b1e
+
+# XP_058012695.1 org=Ahaetulla prasina
+# match XP_058012695.1|XM_05815_b6e9d6
+
+# XP_058012696.1 org=Ahaetulla prasina
+# no match
+
+# XP_058012697.1 org=Ahaetulla prasina
+# no match
+
+# XP_058012698.1 org=Ahaetulla prasina
+# no match
+
+# XP_074862607.1 org=Carettochelys insculpta
+# match XP_074862607.1|XM_07500_337e8e
+
+# XP_074862608.1 org=Carettochelys insculpta
+# no match
+
+# XP_074862609.1 org=Carettochelys insculpta
+# no match
+
+# XP_074862610.1 org=Carettochelys insculpta
+# no match
+
+# XP_074862611.1 org=Carettochelys insculpta
+# no match
+
+# XP_013909252.1 org=Thamnophis sirtalis
+# match XP_013909252.1|XM_01405_a11648
+
+# XP_025293362.3 org=Canis lupus dingo
+# match XP_025293362.3|XM_02543_4006ad
+
+# XP_041320991.1 org=Pyrgilauda ruficollis
+# match XP_041320991.1|XM_04146_1a581e
+
+# XP_041320992.1 org=Pyrgilauda ruficollis
+# no match
+
+# XP_041320993.1 org=Pyrgilauda ruficollis
+# no match
+
+# XP_041320994.1 org=Pyrgilauda ruficollis
+# no match
+
+# XP_041320995.1 org=Pyrgilauda ruficollis
+# no match
+
+# XP_041320996.1 org=Pyrgilauda ruficollis
+# no match
+
+# XP_041320997.1 org=Pyrgilauda ruficollis
+# no match
+
+# XP_041320998.1 org=Pyrgilauda ruficollis
+# no match
+
+# XP_041320999.1 org=Pyrgilauda ruficollis
+# no match
+
+# XP_041321002.1 org=Pyrgilauda ruficollis
+# no match
+
+# XP_028562045.1 org=Podarcis muralis
+# match XP_028562045.1|XM_02870_00c04c
+
+# XP_040457144.1 org=Falco naumanni
+# match XP_040457144.1|XM_04060_4b9dce
+
+# XP_061014681.1 org=Dama dama
+# match XP_061014681.1|XM_06115_5ec8ab
+
+# XP_032956109.1 org=Rhinolophus ferrumequinum
+# match XP_032956109.1|XM_03310_7497af
+
+# XP_034291427.1 org=Pantherophis guttatus
+# match XP_034291427.1|XM_03443_4d65d4
+
+# XP_034291428.1 org=Pantherophis guttatus
+# no match
+
+# XP_034291429.1 org=Pantherophis guttatus
+# no match
+
+# XP_034291430.1 org=Pantherophis guttatus
+# no match
+
+# XP_060550709.1 org=Pantherophis guttatus
+# no match
+
+# XP_047594603.1 org=Lutra lutra
+# match XP_047594603.1|XM_04773_65dc31
+
+# XP_047594604.1 org=Lutra lutra
+# no match
+
+# XP_047594605.1 org=Lutra lutra
+# no match
+
+# XP_047594607.1 org=Lutra lutra
+# no match
+
+# XP_003515343.3 org=Cricetulus griseus
+# match XP_003515343.3|XM_00351_e0adcd
+
+# XP_035297261.1 org=Cricetulus griseus
+# no match
+
+# XP_035297262.1 org=Cricetulus griseus
+# no match
+
+# XP_011841723.1 org=Mandrillus leucophaeus
+# match XP_011841723.1|XM_01198_89336d
+
+# XP_032031531.1 org=Hylobates moloch
+# match XP_032031531.1|XM_03217_8bff63
+
+# XP_038275226.1 org=Dermochelys coriacea
+# match XP_038275226.1|XM_03841_9fce87
+
+# XP_005077849.1 org=Mesocricetus auratus
+# match XP_005077849.1|XM_00507_dee5eb
+
+# XP_063203100.1 org=Chroicocephalus ridibundus
+# match XP_063203100.1|XM_06334_a80ba5
+
+# XP_063203101.1 org=Chroicocephalus ridibundus
+# no match
+
+# XP_063203102.1 org=Chroicocephalus ridibundus
+# no match
+
+# XP_063203103.1 org=Chroicocephalus ridibundus
+# no match
+
+# XP_075570285.1 org=Pelecanus crispus
+# match XP_075570285.1|XM_07571_1c4663
+
+# XP_006885282.1 org=Elephantulus edwardii
+# match XP_006885282.1|XM_00688_e7e215
+
+# XP_032201393.1 org=Mustela erminea
+# match XP_032201393.1|XM_03234_8b125b
+
+# XP_068413781.1 org=Eschrichtius robustus
+# match XP_068413781.1|XM_06855_45fe53
+
+# XP_042331729.1 org=Sceloporus undulatus
+# match XP_042331729.1|XM_04247_554736
+
+# XP_042331730.1 org=Sceloporus undulatus
+# no match
+
+# XP_028017811.2 org=Balaenoptera acutorostrata
+# match XP_028017811.2|XM_02816_ec378c
+
+# XP_015284404.1 org=Gekko japonicus
+# match XP_015284404.1|XM_01542_866d12
+
+# XP_015284412.1 org=Gekko japonicus
+# no match
+
+# XP_040426085.1 org=Cygnus olor
+# match XP_040426085.1|XM_04057_67a51b
+
+# XP_019495552.1 org=Hipposideros armiger
+# match XP_019495552.1|XM_01964_9f21e0
+
+# XP_019495554.1 org=Hipposideros armiger
+# no match
+
+# XP_030811468.1 org=Camarhynchus parvulus
+# match XP_030811468.1|XM_03095_0a3fca
+
+# XP_030811469.1 org=Camarhynchus parvulus
+# no match
+
+# XP_041508649.1 org=Microtus oregoni
+# match XP_041508649.1|XM_04165_bc1160
+
+# XP_062998822.1 org=Elgaria multicarinata webbii
+# match XP_062998822.1|XM_06314_00ed8c
+
+# XP_062998823.1 org=Elgaria multicarinata webbii
+# no match
+
+# XP_062998824.1 org=Elgaria multicarinata webbii
+# no match
+
+# XP_045308307.1 org=Leopardus geoffroyi
+# match XP_045308307.1|XM_04545_24b0f7
+
+# XP_053437851.1 org=Nycticebus coucang
+# match XP_053437851.1|XM_05358_5a045c
+
+# XP_036133941.1 org=Molossus molossus
+# match XP_036133941.1|XM_03627_139beb
+
+# XP_051837055.1 org=Antechinus flavipes
+# match XP_051837055.1|XM_05198_24bb18
+
+# XP_065590210.1 org=Cyrtonyx montezumae
+# match XP_065590210.1|XM_06573_5b6b20
+
+# XP_004852832.1 org=Heterocephalus glaber
+# match XP_004852832.1|XM_00485_1154a8
+
+# XP_029335742.1 org=Mus caroli
+# match XP_029335742.1|XM_02947_c53bf6
+
+# XP_032905953.1 org=Amblyraja radiata
+# match XP_032905953.1|XM_03305_791255
+
+# XP_026243931.1 org=Urocitellus parryii
+# match XP_026243931.1|XM_02638_afedd3
+
+# XP_041895440.1 org=Corvus kubaryi
+# match XP_041895440.1|XM_04203_8bcad3
+
+# XP_069654845.1 org=Haliaeetus albicilla
+# match XP_069654845.1|XM_06979_ffdc02
+
+# XP_069654847.1 org=Haliaeetus albicilla
+# no match
+
+# XP_069654848.1 org=Haliaeetus albicilla
+# no match
+
+# XP_051062574.1 org=Phodopus roborovskii
+# match XP_051062574.1|XM_05120_dde653
+
+# XP_070619155.1 org=Erythrolamprus reginae
+# match XP_070619155.1|XM_07076_e89539
+
+# XP_070619156.1 org=Erythrolamprus reginae
+# no match
+
+# XP_075202029.1 org=Anomaloglossus baeobatrachus
+# match XP_075202029.1|XM_07534_6aed55
+
+# XP_049668552.1 org=Astur gentilis
+# match XP_049668552.1|XM_04981_5e3b6a
+
+# XP_049668553.1 org=Astur gentilis
+# no match
+
+# XP_049668554.1 org=Astur gentilis
+# no match
+
+# XP_074772925.1 org=Athene noctua
+# match XP_074772925.1|XM_07491_0d3fbf
+
+# XP_074772926.1 org=Athene noctua
+# no match
+
+# XP_074772927.1 org=Athene noctua
+# no match
+
+# XP_010715973.1 org=Meleagris gallopavo
+# match XP_010715973.1|XM_01071_ad1228
+
+# XP_011377952.1 org=Pteropus vampyrus
+# match XP_011377952.1|XM_01137_27c128
+
+# XP_032051196.1 org=Aythya fuligula
+# match XP_032051196.1|XM_03219_796c67
+
+# XP_032051198.1 org=Aythya fuligula
+# no match
+
+# XP_011750546.2 org=Macaca nemestrina
+# match XP_011750546.2|XM_01175_26c051
+
+# XP_045864142.1 org=Meles meles
+# match XP_045864142.1|XM_04600_eedf36
+
+# XP_061450868.1 org=Rhineura floridana
+# match XP_061450868.1|XM_06159_aa02e5
+
+# XP_061450869.1 org=Rhineura floridana
+# no match
+
+# XP_061450870.1 org=Rhineura floridana
+# no match
+
+# XP_061450871.1 org=Rhineura floridana
+# no match
+
+# XP_041274984.1 org=Onychostruthus taczanowskii
+# match XP_041274984.1|XM_04141_ad1745
+
+# XP_041274985.1 org=Onychostruthus taczanowskii
+# no match
+
+# XP_041274986.1 org=Onychostruthus taczanowskii
+# no match
+
+# XP_041274987.1 org=Onychostruthus taczanowskii
+# no match
+
+# XP_041274988.1 org=Onychostruthus taczanowskii
+# no match
+
+# XP_041274989.1 org=Onychostruthus taczanowskii
+# no match
+
+# XP_041274990.1 org=Onychostruthus taczanowskii
+# no match
+
+# XP_041274991.1 org=Onychostruthus taczanowskii
+# no match
+
+# XP_041274992.1 org=Onychostruthus taczanowskii
+# no match
+
+# XP_025896398.1 org=Nothoprocta perdicaria
+# match XP_025896398.1|XM_02604_44a65b
+
+# XP_035168096.1 org=Oxyura jamaicensis
+# match XP_035168096.1|XM_03531_633c5e
+
+# XP_035168097.1 org=Oxyura jamaicensis
+# no match
+
+# XP_035168098.1 org=Oxyura jamaicensis
+# no match
+
+# XP_072790070.1 org=Taeniopygia guttata
+# match XP_072790070.1|XM_07293_1d44c8
+
+# XP_032247934.1 org=Phoca vitulina
+# match XP_032247934.1|XM_03239_f39138
+
+# XP_006867240.1 org=Chrysochloris asiatica
+# match XP_006867240.1|XM_00686_e7fc68
+
+# XP_067161786.1 org=Apteryx mantelli
+# match XP_067161786.1|XM_06730_f8a5f4
+
+# XP_016007055.1 org=Rousettus aegyptiacus
+# match XP_016007055.1|XM_01615_c90c5c
+
+# XP_016007056.1 org=Rousettus aegyptiacus
+# no match
+
+# XP_075413562.1 org=Tenrec ecaudatus
+# match XP_075413562.1|XM_07555_9cf6a9
+
+# XP_031755081.1 org=Xenopus tropicalis
+# match XP_031755081.1|XM_03189_154812
+
+# XP_031755082.1 org=Xenopus tropicalis
+# no match
+
+# XP_013014240.1 org=Cavia porcellus
+# match XP_013014240.1|XM_01315_0ec92b
+
+# XP_013014241.1 org=Cavia porcellus
+# no match
+
+# XP_036591148.1 org=Trichosurus vulpecula
+# match XP_036591148.1|XM_03673_85c143
+
+# XP_034795302.2 org=Pan paniscus
+# match XP_034795302.2|XM_03493_12cc7b
+
+# XP_063452989.1 org=Pan paniscus
+# no match
+
+# XP_063452990.1 org=Pan paniscus
+# no match
+
+# XP_063452991.1 org=Pan paniscus
+# no match
+
+# XP_056721981.1 org=Euleptes europaea
+# match XP_056721981.1|XM_05686_7e621c
+
+# XP_072201535.1 org=Excalfactoria chinensis
+# match XP_072201535.1|XM_07234_a7edfe
+
+# XP_072201536.1 org=Excalfactoria chinensis
+# no match
+
+# XP_049639894.1 org=Suncus etruscus
+# match XP_049639894.1|XM_04978_3ecd9a
+
+# XP_017592419.1 org=Corvus brachyrhynchos
+# match XP_017592419.1|XM_01773_118269
+
+# XP_029871688.1 org=Aquila chrysaetos chrysaetos
+# match XP_029871688.1|XM_03001_66c5cf
+
+# XP_029871689.1 org=Aquila chrysaetos chrysaetos
+# no match
+
+# XP_029871690.1 org=Aquila chrysaetos chrysaetos
+# no match
+
+# XP_040979701.1 org=Aquila chrysaetos chrysaetos
+# no match
+
+# XP_037365785.1 org=Talpa occidentalis
+# match XP_037365785.1|XM_03750_9b9040
+
+# XP_048337980.1 org=Sphaerodactylus townsendi
+# match XP_048337980.1|XM_04848_43a976
+
+# XP_048337981.1 org=Sphaerodactylus townsendi
+# no match
+
+# XP_048337982.1 org=Sphaerodactylus townsendi
+# no match
+
+# XP_048337983.1 org=Sphaerodactylus townsendi
+# no match
+
+# XP_057889445.1 org=Melospiza georgiana
+# match XP_057889445.1|XM_05803_b6d619
+
+# XP_065544673.1 org=Lathamus discolor
+# match XP_065544673.1|XM_06568_2e2ff2
+
+# XP_065544674.1 org=Lathamus discolor
+# no match
+
+# XP_065544675.1 org=Lathamus discolor
+# no match
+
+# XP_016782899.1 org=Pan troglodytes
+# match XP_016782899.1|XM_01692_6db594
+
+# XP_016782900.1 org=Pan troglodytes
+# no match
+
+# XP_020765004.2 org=Odocoileus virginianus
+# match XP_020765004.2|XM_02090_170547
+
+# XP_028358239.1 org=Phyllostomus discolor
+# match XP_028358239.1|XM_02850_7adeb6
+
+# XP_035868221.1 org=Phyllostomus discolor
+# no match
+
+# XP_015728942.1 org=Coturnix japonica
+# match XP_015728942.1|XM_01587_8144a8
+
+# XP_069722798.1 org=Phaenicophaeus curvirostris
+# match XP_069722798.1|XM_06986_e40d0f
+
+# XP_062357403.1 org=Cinclus cinclus
+# match XP_062357403.1|XM_06250_142178
+
+# XP_006740755.1 org=Leptonychotes weddellii
+# match XP_006740755.1|XM_00674_cc2ef2
+
+# XP_039349050.1 org=Mauremys reevesii
+# match XP_039349050.1|XM_03949_ad64e5
+
+# XP_039349051.1 org=Mauremys reevesii
+# no match
+
+# XP_039349052.1 org=Mauremys reevesii
+# no match
+
+# XP_039349053.1 org=Mauremys reevesii
+# no match
+
+# XP_039349054.1 org=Mauremys reevesii
+# no match
+
+# XP_009080345.1 org=Acanthisitta chloris
+# match XP_009080345.1|XM_00908_6e764c
+
+# XP_052616234.1 org=Peromyscus californicus insignis
+# match XP_052616234.1|XM_05276_71264f
+
+# XP_075620558.1 org=Balearica regulorum gibbericeps
+# match XP_075620558.1|XM_07576_d0925b
+
+# XP_075620559.1 org=Balearica regulorum gibbericeps
+# no match
+
+# XP_030353729.1 org=Strigops habroptila
+# match XP_030353729.1|XM_03049_383c54
+
+# XP_059227561.1 org=Mustela nigripes
+# match XP_059227561.1|XM_05937_69b176
+
+# XP_060014743.1 org=Lagenorhynchus albirostris
+# match XP_060014743.1|XM_06015_cac948
+
+# XP_060014754.1 org=Lagenorhynchus albirostris
+# no match
+
+# XP_060014764.1 org=Lagenorhynchus albirostris
+# no match
+
+# XP_060014774.1 org=Lagenorhynchus albirostris
+# no match
+
+# XP_060014784.1 org=Lagenorhynchus albirostris
+# no match
+
+# XP_028907451.1 org=Ornithorhynchus anatinus
+# match XP_028907451.1|XM_02905_7153cf
+
+# XP_012867324.1 org=Dipodomys ordii
+# match XP_012867324.1|XM_01301_bed19e
+
+# XP_002929974.1 org=Ailuropoda melanoleuca
+# match XP_002929974.1|XM_00292_58dfd7
+
+# XP_056355550.1 org=Oenanthe melanoleuca
+# match XP_056355550.1|XM_05649_7633a8
+
+# XP_056355551.1 org=Oenanthe melanoleuca
+# no match
+
+# XP_068954709.1 org=Petaurus breviceps papuanus
+# match XP_068954709.1|XM_06909_2982d8
+
+# XP_068954710.1 org=Petaurus breviceps papuanus
+# no match
+
+# XP_068954711.1 org=Petaurus breviceps papuanus
+# no match
+
+# XP_068954712.1 org=Petaurus breviceps papuanus
+# no match
+
+# XP_068954713.1 org=Petaurus breviceps papuanus
+# no match
+
+# XP_068954714.1 org=Petaurus breviceps papuanus
+# no match
+
+# XP_062060815.1 org=Lepus europaeus
+# match XP_062060815.1|XM_06220_3caccf
+
+# XP_045001175.1 org=Jaculus jaculus
+# match XP_045001175.1|XM_04514_b89b6e
+
+# XP_027601194.2 org=Pipra filicauda
+# match XP_027601194.2|XM_02774_70af4d
+
+# XP_039242390.1 org=Pipra filicauda
+# no match
+
+# XP_034376252.1 org=Arvicanthis niloticus
+# match XP_034376252.1|XM_03452_d3fe76
+
+# XP_060473634.1 org=Panthera onca
+# match XP_060473634.1|XM_06061_d2e40f
+
+# NP_001068612.1 org=Bos taurus
+# match NP_001068612.1|NM_00107_56415a
+
+# XP_024837385.1 org=Bos taurus
+# no match
+
+# XP_042843592.1 org=Panthera tigris
+# match XP_042843592.1|XM_04298_2a1d2a
+
+# XP_030174598.1 org=Lynx canadensis
+# match XP_030174598.1|XM_03031_6eae5b
+
+# XP_061855431.1 org=Colius striatus
+# match XP_061855431.1|XM_06199_65dce2
+
+# XP_061855432.1 org=Colius striatus
+# no match
+
+# XP_061855433.1 org=Colius striatus
+# no match
+
+# XP_003921666.1 org=Saimiri boliviensis
+# match XP_003921666.1|XM_00392_0d11fb
+
+# XP_062947896.1 org=Cynocephalus volans
+# match XP_062947896.1|XM_06309_8bd2f3
+
+# XP_021397454.1 org=Lonchura striata
+# match XP_021397454.1|XM_02154_01d7ce
+
+# XP_068552170.1 org=Anas acuta
+# match XP_068552170.1|XM_06869_8159a1
+
+# XP_068552171.1 org=Anas acuta
+# no match
+
+# XP_004432004.1 org=Ceratotherium simum simum
+# match XP_004432004.1|XM_00443_633427
+
+# XP_009319778.1 org=Pygoscelis adeliae
+# match XP_009319778.1|XM_00932_95717f
+
+# XP_019839426.2 org=Bos indicus
+# match XP_019839426.2|XM_01998_398c64
+
+# XP_070631227.1 org=Bos indicus
+# no match
+
+# XP_058398431.1 org=Diceros bicornis minor
+# match XP_058398431.1|XM_05854_2c06ab
+
+# XP_055182557.1 org=Nyctereutes procyonoides
+# match XP_055182557.1|XM_05532_289453
+
+# XP_059534043.1 org=Myotis daubentonii
+# match XP_059534043.1|XM_05967_566d4d
+
+# XP_070256863.1 org=Myotis yumanensis
+# match XP_070256863.1|XM_07040_dc8cb1
+
+# XP_019574804.2 org=Rhinolophus sinicus
+# match XP_019574804.2|XM_01971_7b95b6
+
+# XP_074173478.1 org=Rhinolophus sinicus
+# no match
+
+# XP_074173479.1 org=Rhinolophus sinicus
+# no match
+
+# XP_074173480.1 org=Rhinolophus sinicus
+# no match
+
+# XP_074173481.1 org=Rhinolophus sinicus
+# no match
+
+# XP_074173482.1 org=Rhinolophus sinicus
+# no match
+
+# XP_029388975.1 org=Mus pahari
+# match XP_029388975.1|XM_02953_e11e4d
+
+# XP_032480172.1 org=Phocoena sinus
+# match XP_032480172.1|XM_03262_fe063e
+
+# XP_071297162.1 org=Agelaius tricolor
+# match XP_071297162.1|XM_07144_8791c1
+
+# XP_077119628.1 org=Ranitomeya variabilis
+# match XP_077119628.1|XM_07726_3f43cd
+
+# XP_023581504.1 org=Trichechus manatus latirostris
+# match XP_023581504.1|XM_02372_1589d2
+
+# XP_025856768.1 org=Vulpes vulpes
+# match XP_025856768.1|XM_02600_c5d033
+
+# XP_054369286.1 org=Mirounga angustirostris
+# match XP_054369286.1|XM_05451_d3f510
+
+# XP_064425951.1 org=Mirounga angustirostris
+# no match
+
+# XP_064425952.1 org=Mirounga angustirostris
+# no match
+
+# XP_064425953.1 org=Mirounga angustirostris
+# no match
+
+# XP_064425955.1 org=Mirounga angustirostris
+# no match
+
+# XP_064425956.1 org=Mirounga angustirostris
+# no match
+
+# XP_062439841.1 org=Rhea pennata
+# match XP_062439841.1|XM_06258_9b52ee
+
+# XP_037000911.2 org=Artibeus jamaicensis
+# match XP_037000911.2|XM_03714_cd2885
+
+# XP_050165703.1 org=Myiozetetes cayanensis
+# match XP_050165703.1|XM_05030_7237c8
+
+# XP_051652620.1 org=Manacus candei
+# match XP_051652620.1|XM_05179_1aa326
+
+# XP_057579852.1 org=Hippopotamus amphibius kiboko
+# match XP_057579852.1|XM_05772_e223cc
+
+# XP_057579853.1 org=Hippopotamus amphibius kiboko
+# no match
+
+# XP_059338091.1 org=Ammospiza nelsoni
+# match XP_059338091.1|XM_05948_618fba
+
+# XP_059338092.1 org=Ammospiza nelsoni
+# no match
+
+# XP_010592130.2 org=Loxodonta africana
+# match XP_010592130.2|XM_01059_88a335
+
+# XP_012499229.1 org=Propithecus coquereli
+# match XP_012499229.1|XM_01264_3edfc1
+
+# XP_031242945.1 org=Mastomys coucha
+# match XP_031242945.1|XM_03138_de9f0a
+
+# XP_031242946.1 org=Mastomys coucha
+# no match
+
+# XP_031242947.1 org=Mastomys coucha
+# no match
+
+# XP_021262833.1 org=Numida meleagris
+# match XP_021262833.1|XM_02140_9259bf
+
+# XP_021262834.1 org=Numida meleagris
+# no match
+
+# XP_021262835.1 org=Numida meleagris
+# no match
+
+# XP_030670870.1 org=Nomascus leucogenys
+# match XP_030670870.1|XM_03081_e77e06
+
+# XP_039413908.1 org=Corvus cornix cornix
+# match XP_039413908.1|XM_03955_075a09
+
+# XP_072837715.1 org=Pogona vitticeps
+# match XP_072837715.1|XM_07298_178038
+
+# XP_072837716.1 org=Pogona vitticeps
+# no match
+
+# XP_072837717.1 org=Pogona vitticeps
+# no match
+
+# XP_036211683.1 org=Myotis myotis
+# match XP_036211683.1|XM_03635_1ec2bf
+
+# XP_005695088.3 org=Capra hircus
+# match XP_005695088.3|XM_00569_2f13c1
+
+# XP_054569256.1 org=Eptesicus fuscus
+# match XP_054569256.1|XM_05471_5f47f2
+
+# XP_015667388.1 org=Protobothrops mucrosquamatus
+# match XP_015667388.1|XM_01581_bc9218
+
+# XP_007470589.1 org=Lipotes vexillifer
+# match XP_007470589.1|XM_00747_7eda75
+
+# XP_042660314.1 org=Tyto alba
+# match XP_042660314.1|XM_04280_939fde
+
+# XP_042660315.1 org=Tyto alba
+# no match
+
+# XP_059861410.1 org=Delphinus delphis
+# match XP_059861410.1|XM_06000_6f267d
+
+# XP_024622283.1 org=Neophocaena asiaeorientalis asiaeorientalis
+# match XP_024622283.1|XM_02476_592341
+
+# XP_050823289.1 org=Gopherus flavomarginatus
+# match XP_050823289.1|XM_05096_490c46
+
+# XP_050823290.1 org=Gopherus flavomarginatus
+# no match
+
+# XP_054858173.1 org=Eublepharis macularius
+# match XP_054858173.1|XM_05500_fbe815
+
+# XP_053220823.1 org=Podarcis raffonei
+# match XP_053220823.1|XM_05336_7588b4
+
+# XP_053220824.1 org=Podarcis raffonei
+# no match
+
+# XP_061302450.1 org=Pezoporus flaviventris
+# match XP_061302450.1|XM_06144_c777fb
+
+# XP_005560552.3 org=Macaca fascicularis
+# match XP_005560552.3|XM_00556_cc999c
+
+# XP_006192640.2 org=Camelus ferus
+# match XP_006192640.2|XM_00619_0cfc58
+
+# XP_016072651.1 org=Miniopterus natalensis
+# match XP_016072651.1|XM_01621_d8167d
+
+# XP_066184231.1 org=Sylvia atricapilla
+# match XP_066184231.1|XM_06632_3d2c14
+
+# XP_038623185.1 org=Tachyglossus aculeatus
+# match XP_038623185.1|XM_03876_3e77b0
+
+# XP_038623186.1 org=Tachyglossus aculeatus
+# no match
+
+# XP_038623187.1 org=Tachyglossus aculeatus
+# no match
+
+# XP_045417664.1 org=Lemur catta
+# match XP_045417664.1|XM_04556_1d55f8
+
+# XP_054306369.1 org=Pongo pygmaeus
+# match XP_054306369.1|XM_05445_3fdf66
+
+# XP_063509006.1 org=Pongo pygmaeus
+# no match
+
+# XP_063509007.1 org=Pongo pygmaeus
+# no match
+
+# XP_056203478.1 org=Falco biarmicus
+# match XP_056203478.1|XM_05634_c3c43b
+
+# XP_058667410.1 org=Ammospiza caudacuta
+# match XP_058667410.1|XM_05881_1bba30
+
+# XP_058667411.1 org=Ammospiza caudacuta
+# no match
+
+# XP_015745309.1 org=Python bivittatus
+# match XP_015745309.1|XM_01588_e7bce6
+
+# XP_010839339.1 org=Bison bison bison
+# match XP_010839339.1|XM_01084_5b7722
+
+# XP_025916522.1 org=Apteryx rowi
+# match XP_025916522.1|XM_02606_c83132
+
+# XP_069899366.1 org=Dipodomys merriami
+# match XP_069899366.1|XM_07004_99e77c
+
+# XP_069899367.1 org=Dipodomys merriami
+# no match
+
+# XP_069899368.1 org=Dipodomys merriami
+# no match
+
+# XP_069899369.1 org=Dipodomys merriami
+# no match
+
+# XP_031524840.1 org=Papio anubis
+# match XP_031524840.1|XM_03166_09d4cc
+
+# XP_005446233.2 org=Falco cherrug
+# match XP_005446233.2|XM_00544_bb5475
+
+# XP_033044929.1 org=Trachypithecus francoisi
+# match XP_033044929.1|XM_03318_700c61
+
+# XP_072255237.1 org=Pyxicephalus adspersus
+# match XP_072255237.1|XM_07239_6d7582
+
+# XP_001369428.2 org=Monodelphis domestica
+# match XP_001369428.2|XM_00136_3d7d17
+
+# XP_056662349.1 org=Monodelphis domestica
+# no match
+
+# XP_075808869.1 org=Microtus pennsylvanicus
+# match XP_075808869.1|XM_07595_6433f4
+
+# XP_035159712.1 org=Callithrix jacchus
+# match XP_035159712.1|XM_03530_c6539b
+
+# XP_054113208.1 org=Callithrix jacchus
+# no match
+
+# XP_029807980.1 org=Suricata suricatta
+# match XP_029807980.1|XM_02995_75a7b3
+
+# XP_055479167.1 org=Psammomys obesus
+# match XP_055479167.1|XM_05562_27c116
+
+# XP_037251452.1 org=Falco rusticolus
+# match XP_037251452.1|XM_03739_95de55
+
+# XP_039714358.1 org=Pteropus medius
+# match XP_039714358.1|XM_03985_019ed4
+
+# XP_054433561.1 org=Pteronotus mesoamericanus
+# match XP_054433561.1|XM_05457_8f539f
+
+# XP_043845494.1 org=Dromiciops gliroides
+# match XP_043845494.1|XM_04398_49a985
+
+# XP_057225957.1 org=Malurus melanocephalus
+# match XP_057225957.1|XM_05736_5b96d7
+
+# XP_057225958.1 org=Malurus melanocephalus
+# no match
+
+# XP_064525447.1 org=Pseudopipra pipra
+# match XP_064525447.1|XM_06466_76661c
+
+# XP_067552801.1 org=Pseudorca crassidens
+# match XP_067552801.1|XM_06769_e7607d
+
+# XP_067552811.1 org=Pseudorca crassidens
+# no match
+
+# XP_073424761.1 org=Dendrobates tinctorius
+# match XP_073424761.1|XM_07356_c9d0df
+
+# XP_009088472.2 org=Serinus canaria
+# match XP_009088472.2|XM_00909_311afc
+
+# XP_017506854.3 org=Manis javanica
+# match XP_017506854.3|XM_01765_38dc4e
+
+# XP_048076802.1 org=Ursus arctos
+# match XP_048076802.1|XM_04822_a3699a
+
+# XP_057159707.1 org=Ursus arctos
+# no match
+
+# XP_025126752.2 org=Bubalus bubalis
+# match XP_025126752.2|XM_02527_5fe151
+
+# XP_032119707.1 org=Sapajus apella
+# match XP_032119707.1|XM_03226_cfb93d
+
+# XP_051004723.1 org=Acomys russatus
+# match XP_051004723.1|XM_05114_8c4cd6
+
+# XP_058592560.1 org=Neofelis nebulosa
+# match XP_058592560.1|XM_05873_3fc8a2
+
+# XP_065497586.1 org=Caloenas nicobarica
+# match XP_065497586.1|XM_06564_2c3c24
+
+# XP_065497587.1 org=Caloenas nicobarica
+# no match
+
+# XP_020036767.2 org=Castor canadensis
+# match XP_020036767.2|XM_02018_696177
+
+# XP_073918143.1 org=Castor canadensis
+# no match
+
+# XP_064373858.1 org=Dromaius novaehollandiae
+# match XP_064373858.1|XM_06451_60d7a0
+
+# XP_038170189.1 org=Arvicola amphibius
+# match XP_038170189.1|XM_03831_b2587b
+
+# NO MATCH
+XP_015494979.1 ANPEP [organism=Parus major] [GeneID=107209592]
+XP_015494981.1 ANPEP [organism=Parus major] [GeneID=107209592]
+XP_076401734.1 Anpep [organism=Peromyscus maniculatus bairdii] [GeneID=102917991] [isoform=X2]
+XP_039579473.1 ANPEP [organism=Passer montanus] [GeneID=120509173] [isoform=X2]
+XP_039579476.1 ANPEP [organism=Passer montanus] [GeneID=120509173] [isoform=X2]
+XP_039579477.1 ANPEP [organism=Passer montanus] [GeneID=120509173] [isoform=X3]
+XP_039579478.1 ANPEP [organism=Passer montanus] [GeneID=120509173] [isoform=X3]
+XP_039579479.1 ANPEP [organism=Passer montanus] [GeneID=120509173] [isoform=X4]
+XP_039579480.1 ANPEP [organism=Passer montanus] [GeneID=120509173] [isoform=X4]
+XP_039579481.1 ANPEP [organism=Passer montanus] [GeneID=120509173] [isoform=X4]
+XP_039217945.1 ANPEP [organism=Crotalus tigris] [GeneID=120316420]
+XP_064312015.1 ANPEP [organism=Phalacrocorax carbo] [GeneID=135314236]
+XP_064312016.1 ANPEP [organism=Phalacrocorax carbo] [GeneID=135314236]
+XP_073657508.1 ANPEP [organism=Tursiops truncatus] [GeneID=101323895]
+XP_073657509.1 ANPEP [organism=Tursiops truncatus] [GeneID=101323895]
+XP_073657510.1 ANPEP [organism=Tursiops truncatus] [GeneID=101323895]
+XP_069909348.1 ANPEP [organism=Oryctolagus cuniculus] [GeneID=100009167] [isoform=X1]
+XP_069909349.1 ANPEP [organism=Oryctolagus cuniculus] [GeneID=100009167] [isoform=X1]
+XP_053128380.1 ANPEP [organism=Hemicordylus capensis] [GeneID=128334885]
+XP_026540485.1 ANPEP [organism=Notechis scutatus] [GeneID=113423349] [isoform=X2]
+XP_054692376.1 ANPEP [organism=Grus americana] [GeneID=129210564]
+XP_058521576.1 ANPEP [organism=Ochotona princeps] [GeneID=101536306] [isoform=X2]
+XP_023566133.1 Anpep [organism=Octodon degus] [GeneID=101563833]
+XP_054070986.1 ANPEP [organism=Rissa tridactyla] [GeneID=128915119]
+XP_054070987.1 ANPEP [organism=Rissa tridactyla] [GeneID=128915119]
+XP_054070988.1 ANPEP [organism=Rissa tridactyla] [GeneID=128915119]
+XP_020820824.1 ANPEP [organism=Phascolarctos cinereus] [GeneID=110193396]
+XP_020820833.1 ANPEP [organism=Phascolarctos cinereus] [GeneID=110193396]
+XP_020820843.1 ANPEP [organism=Phascolarctos cinereus] [GeneID=110193396]
+XP_005653580.1 ANPEP [organism=Sus scrofa] [GeneID=397520] [isoform=X2]
+XP_005653581.1 ANPEP [organism=Sus scrofa] [GeneID=397520] [isoform=X2]
+XP_020953963.1 ANPEP [organism=Sus scrofa] [GeneID=397520] [isoform=X1]
+XP_072806871.1 ANPEP [organism=Vicugna pacos] [GeneID=102524836] [isoform=X1]
+XP_072806872.1 ANPEP [organism=Vicugna pacos] [GeneID=102524836] [isoform=X1]
+XP_072806873.1 ANPEP [organism=Vicugna pacos] [GeneID=102524836] [isoform=X2]
+XP_072806874.1 ANPEP [organism=Vicugna pacos] [GeneID=102524836] [isoform=X2]
+XP_070809551.1 ANPEP [organism=Pituophis catenifer annectens] [GeneID=139323901] [isoform=X1]
+XP_070809553.1 ANPEP [organism=Pituophis catenifer annectens] [GeneID=139323901] [isoform=X1]
+XP_070809554.1 ANPEP [organism=Pituophis catenifer annectens] [GeneID=139323901] [isoform=X2]
+XP_070809555.1 ANPEP [organism=Pituophis catenifer annectens] [GeneID=139323901] [isoform=X3]
+XP_059035982.1 ANPEP [organism=Mustela lutreola] [GeneID=131835601] [isoform=X2]
+XP_022366846.1 ANPEP [organism=Enhydra lutris kenyoni] [GeneID=111152611] [isoform=X2]
+XP_060138605.1 ANPEP [organism=Zootoca vivipara] [GeneID=118092799] [isoform=X1]
+XP_060138606.1 ANPEP [organism=Zootoca vivipara] [GeneID=118092799] [isoform=X2]
+XP_073738347.1 ANPEP [organism=Callorhinus ursinus] [GeneID=112839947]
+XP_048812412.1 ANPEP [organism=Lagopus muta] [GeneID=125698291]
+XP_048812414.1 ANPEP [organism=Lagopus muta] [GeneID=125698291]
+XP_048812415.1 ANPEP [organism=Lagopus muta] [GeneID=125698291]
+XP_074210022.1 ANPEP [organism=Camelus bactrianus] [GeneID=105069244]
+XP_063554909.1 ANPEP [organism=Gorilla gorilla gorilla] [GeneID=101149005]
+XP_063554910.1 ANPEP [organism=Gorilla gorilla gorilla] [GeneID=101149005]
+XP_063554911.1 ANPEP [organism=Gorilla gorilla gorilla] [GeneID=101149005]
+XP_063554912.1 ANPEP [organism=Gorilla gorilla gorilla] [GeneID=101149005]
+XP_043346231.1 ANPEP [organism=Cervus canadensis] [GeneID=122455289]
+XP_074900838.1 ANPEP [organism=Buteo buteo] [GeneID=142038857]
+XP_052016132.1 Anpep [organism=Apodemus sylvaticus] [GeneID=127667229]
+XP_069322719.1 ANPEP [organism=Eulemur rufifrons] [GeneID=138381941] [isoform=X2]
+XP_059570462.1 ANPEP [organism=Alligator mississippiensis] [GeneID=102563875]
+XP_055273797.1 ANPEP [organism=Moschus berezovskii] [GeneID=129550288]
+XP_076980302.1 ANPEP [organism=Tamandua tetradactyla] [GeneID=143652530]
+XP_076980303.1 ANPEP [organism=Tamandua tetradactyla] [GeneID=143652530]
+XP_076980304.1 ANPEP [organism=Tamandua tetradactyla] [GeneID=143652530]
+XP_049561877.1 ANPEP [organism=Orcinus orca] [GeneID=101276539]
+XP_049561878.1 ANPEP [organism=Orcinus orca] [GeneID=101276539]
+XP_066448868.1 ANPEP [organism=Eleutherodactylus coqui] [GeneID=136612424]
+XP_066448869.1 ANPEP [organism=Eleutherodactylus coqui] [GeneID=136612424]
+XP_071424309.1 ANPEP [organism=Pithys albifrons albifrons] [GeneID=139677852]
+XP_071424310.1 ANPEP [organism=Pithys albifrons albifrons] [GeneID=139677852]
+XP_006229469.1 Anpep [organism=Rattus norvegicus] [GeneID=81641] [isoform=X1]
+XP_006229470.1 Anpep [organism=Rattus norvegicus] [GeneID=81641] [isoform=X1]
+XP_006229471.1 Anpep [organism=Rattus norvegicus] [GeneID=81641] [isoform=X1]
+XP_059679770.1 ANPEP [organism=Gavia stellata] [GeneID=132317989] [isoform=X2]
+XP_037766647.1 ANPEP [organism=Chelonia mydas] [GeneID=102939786] [isoform=X2]
+XP_037766648.1 ANPEP [organism=Chelonia mydas] [GeneID=102939786] [isoform=X2]
+XP_043379791.1 ANPEP [organism=Chelonia mydas] [GeneID=102939786] [isoform=X2]
+XP_005381599.1 Anpep [organism=Chinchilla lanigera] [GeneID=102025000]
+XP_013368083.1 Anpep [organism=Chinchilla lanigera] [GeneID=102025000]
+XP_072869131.1 ANPEP [organism=Chlorocebus sabaeus] [GeneID=103231162]
+XP_072869132.1 ANPEP [organism=Chlorocebus sabaeus] [GeneID=103231162]
+XP_075288118.1 ANPEP [organism=Opisthocomus hoazin] [GeneID=142362597]
+XP_076204307.1 ANPEP [organism=Aptenodytes patagonicus] [GeneID=143165006]
+XP_076204308.1 ANPEP [organism=Aptenodytes patagonicus] [GeneID=143165006]
+XP_053898786.1 ANPEP [organism=Malaclemys terrapin pileata] [GeneID=128844807]
+XP_053898787.1 ANPEP [organism=Malaclemys terrapin pileata] [GeneID=128844807]
+XP_053898789.1 ANPEP [organism=Malaclemys terrapin pileata] [GeneID=128844807]
+XP_043778071.1 ANPEP [organism=Cervus elaphus] [GeneID=122706727]
+XP_053744648.1 ANPEP [organism=Panthera pardus] [GeneID=109273443] [isoform=X2]
+XP_069622291.1 ANPEP [organism=Ranitomeya imitator] [GeneID=138676673]
+XP_069622292.1 ANPEP [organism=Ranitomeya imitator] [GeneID=138676673]
+XP_050568986.1 ANPEP [organism=Cygnus atratus] [GeneID=118259417]
+XP_074011907.1 ANPEP [organism=Numenius arquata] [GeneID=141469955]
+XP_033921828.1 ANPEP [organism=Melopsittacus undulatus] [GeneID=101875807]
+XP_030433470.1 ANPEP [organism=Gopherus evgoodei] [GeneID=115658523]
+XP_074736754.1 ANPEP [organism=Strix uralensis] [GeneID=141948348] [isoform=X1]
+XP_074736755.1 ANPEP [organism=Strix uralensis] [GeneID=141948348] [isoform=X2]
+XP_077173795.1 ANPEP [organism=Paroedura picta] [GeneID=143827783]
+XP_031811454.1 ANPEP [organism=Sarcophilus harrisii] [GeneID=100924074]
+XP_031811455.1 ANPEP [organism=Sarcophilus harrisii] [GeneID=100924074]
+XP_031811456.1 ANPEP [organism=Sarcophilus harrisii] [GeneID=100924074]
+XP_066885995.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066885996.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066885997.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066885998.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066885999.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066886000.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066886001.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066886002.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066886003.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066886004.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066886005.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066886006.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X1]
+XP_066886007.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X2]
+XP_066886008.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X3]
+XP_066886009.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X3]
+XP_066886010.1 ANPEP [organism=Kogia breviceps] [GeneID=131752358] [isoform=X3]
+XP_075015742.1 ANPEP [organism=Calonectris borealis] [GeneID=142086538]
+XP_058703142.1 ANPEP [organism=Poecile atricapillus] [GeneID=131583255]
+XP_058703143.1 ANPEP [organism=Poecile atricapillus] [GeneID=131583255]
+XP_052664632.1 ANPEP [organism=Harpia harpyja] [GeneID=128151333]
+XP_052664633.1 ANPEP [organism=Harpia harpyja] [GeneID=128151333]
+XP_060149500.1 ANPEP [organism=Globicephala melas] [GeneID=115864674]
+XP_060149501.1 ANPEP [organism=Globicephala melas] [GeneID=115864674]
+XP_062498655.1 ANPEP [organism=Pezoporus occidentalis] [GeneID=134176052]
+XP_075431253.1 ANPEP [organism=Ascaphus truei] [GeneID=142468708] [isoform=X2]
+XP_074822795.1 ANPEP [organism=Natator depressus] [GeneID=141995451]
+XP_028351550.1 ANPEP [organism=Physeter macrocephalus] [GeneID=102974845] [isoform=X4]
+XP_028351551.1 ANPEP [organism=Physeter macrocephalus] [GeneID=102974845] [isoform=X5]
+XP_028351552.1 ANPEP [organism=Physeter macrocephalus] [GeneID=102974845] [isoform=X6]
+XP_028351553.1 ANPEP [organism=Physeter macrocephalus] [GeneID=102974845] [isoform=X8]
+XP_028351554.1 ANPEP [organism=Physeter macrocephalus] [GeneID=102974845] [isoform=X7]
+XP_054943909.1 ANPEP [organism=Physeter macrocephalus] [GeneID=102974845] [isoform=X2]
+XP_054943910.1 ANPEP [organism=Physeter macrocephalus] [GeneID=102974845] [isoform=X3]
+XP_014808158.1 ANPEP [organism=Calidris pugnax] [GeneID=106894152]
+XP_014808159.1 ANPEP [organism=Calidris pugnax] [GeneID=106894152]
+XP_074457164.1 ANPEP [organism=Larus michahellis] [GeneID=141748653]
+XP_074457165.1 ANPEP [organism=Larus michahellis] [GeneID=141748653]
+XP_040131041.1 Anpep [organism=Ictidomys tridecemlineatus] [GeneID=101972738]
+XP_040131042.1 Anpep [organism=Ictidomys tridecemlineatus] [GeneID=101972738]
+XP_040131043.1 Anpep [organism=Ictidomys tridecemlineatus] [GeneID=101972738]
+XP_030312797.1 ANPEP [organism=Calypte anna] [GeneID=103536009]
+XP_065703840.1 ANPEP [organism=Patagioenas fasciata] [GeneID=136106998]
+XP_071670013.1 ANPEP [organism=Patagioenas fasciata] [GeneID=136106998]
+XP_071670014.1 ANPEP [organism=Patagioenas fasciata] [GeneID=136106998]
+XP_063572373.1 ANPEP [organism=Pongo abelii] [GeneID=100440397]
+XP_063572374.1 ANPEP [organism=Pongo abelii] [GeneID=100440397]
+XP_044836808.1 ANPEP [organism=Mauremys mutica] [GeneID=123344536]
+XP_027707197.1 ANPEP [organism=Vombatus ursinus] [GeneID=114035334]
+XP_027707198.1 ANPEP [organism=Vombatus ursinus] [GeneID=114035334]
+XP_027707199.1 ANPEP [organism=Vombatus ursinus] [GeneID=114035334]
+XP_027707200.1 ANPEP [organism=Vombatus ursinus] [GeneID=114035334]
+XP_027707201.1 ANPEP [organism=Vombatus ursinus] [GeneID=114035334]
+XP_049761896.1 ANPEP [organism=Elephas maximus indicus] [GeneID=126087974]
+XP_049761897.1 ANPEP [organism=Elephas maximus indicus] [GeneID=126087974]
+XP_049761898.1 ANPEP [organism=Elephas maximus indicus] [GeneID=126087974]
+XP_075063901.1 ANPEP [organism=Mixophyes fleayi] [GeneID=142151790]
+XP_063781892.1 ANPEP [organism=Pseudophryne corroboree] [GeneID=134931933]
+XP_063781893.1 ANPEP [organism=Pseudophryne corroboree] [GeneID=134931933]
+XP_075362625.1 ANPEP [organism=Mycteria americana] [GeneID=142411882] [isoform=X2]
+XP_040113490.1 ANPEP [organism=Oryx dammah] [GeneID=120875628]
+XP_047902279.2 ANPEP [organism=Anser cygnoides] [GeneID=106048649]
+XP_071075560.1 ANPEP [organism=Desmodus rotundus] [GeneID=112305894]
+XP_048721832.1 ANPEP [organism=Caretta caretta] [GeneID=125643388]
+XP_048721833.1 ANPEP [organism=Caretta caretta] [GeneID=125643388]
+XP_048721834.1 ANPEP [organism=Caretta caretta] [GeneID=125643388]
+XP_036008613.1 Anpep [organism=Mus musculus] [GeneID=16790] [isoform=X1]
+XP_071610144.1 ANPEP [organism=Heliangelus exortis] [GeneID=139800683]
+NP_001368852.1 ANPEP [organism=Homo sapiens] [GeneID=290]
+NP_001368853.1 ANPEP [organism=Homo sapiens] [GeneID=290]
+XP_025774907.1 ANPEP [organism=Puma concolor] [GeneID=112855456]
+XP_056427951.1 ANPEP [organism=Hyla sarda] [GeneID=130368389]
+XP_056427952.1 ANPEP [organism=Hyla sarda] [GeneID=130368389]
+XP_058150674.1 ANPEP [organism=Dasypus novemcinctus] [GeneID=101433954]
+XP_071070478.1 ANPEP [organism=Dasypus novemcinctus] [GeneID=101433954]
+XP_071070479.1 ANPEP [organism=Dasypus novemcinctus] [GeneID=101433954]
+XP_071070480.1 ANPEP [organism=Dasypus novemcinctus] [GeneID=101433954]
+XP_035925810.1 ANPEP [organism=Halichoerus grypus] [GeneID=118521405]
+XP_035925811.1 ANPEP [organism=Halichoerus grypus] [GeneID=118521405]
+XP_035925812.1 ANPEP [organism=Halichoerus grypus] [GeneID=118521405]
+XP_066052339.1 ANPEP [organism=Chamaea fasciata] [GeneID=136296812]
+XP_027322378.2 ANPEP [organism=Anas platyrhynchos] [GeneID=101804534]
+XP_068814490.1 ANPEP [organism=Struthio camelus] [GeneID=104151511]
+XP_068814491.1 ANPEP [organism=Struthio camelus] [GeneID=104151511]
+XP_068814492.1 ANPEP [organism=Struthio camelus] [GeneID=104151511]
+XP_068814493.1 ANPEP [organism=Struthio camelus] [GeneID=104151511]
+XP_034880026.1 ANPEP [organism=Mirounga leonina] [GeneID=118023053]
+XP_034880027.1 ANPEP [organism=Mirounga leonina] [GeneID=118023053]
+XP_050009997.1 Anpep [organism=Alexandromys fortis] [GeneID=126508678]
+XP_050009998.1 Anpep [organism=Alexandromys fortis] [GeneID=126508678]
+XP_059714793.1 ANPEP [organism=Haemorhous mexicanus] [GeneID=132333565]
+XP_059714794.1 ANPEP [organism=Haemorhous mexicanus] [GeneID=132333565]
+XP_059714795.1 ANPEP [organism=Haemorhous mexicanus] [GeneID=132333565]
+XP_026565036.1 ANPEP [organism=Pseudonaja textilis] [GeneID=113441976] [isoform=X1]
+XP_026565037.1 ANPEP [organism=Pseudonaja textilis] [GeneID=113441976] [isoform=X2]
+XP_068266132.1 ANPEP [organism=Nyctibius grandis] [GeneID=137668482]
+XP_068266133.1 ANPEP [organism=Nyctibius grandis] [GeneID=137668482]
+XP_073160672.1 ANPEP [organism=Lepidochelys kempii] [GeneID=140895163]
+XP_069415779.1 ANPEP [organism=Ovis canadensis] [GeneID=138423595] [isoform=X1]
+XP_069415781.1 ANPEP [organism=Ovis canadensis] [GeneID=138423595] [isoform=X2]
+XP_069415782.1 ANPEP [organism=Ovis canadensis] [GeneID=138423595] [isoform=X2]
+XP_074151253.1 ANPEP [organism=Sminthopsis crassicaudata] [GeneID=141558245]
+XP_074151254.1 ANPEP [organism=Sminthopsis crassicaudata] [GeneID=141558245]
+XP_064932982.1 ANPEP [organism=Columba livia] [GeneID=102086737]
+XP_043934236.1 ANPEP [organism=Protopterus annectens] [GeneID=122807225]
+XP_043934237.1 ANPEP [organism=Protopterus annectens] [GeneID=122807225]
+XP_025068250.1 ANPEP [organism=Alligator sinensis] [GeneID=102384126] [isoform=X1]
+XP_025068251.1 ANPEP [organism=Alligator sinensis] [GeneID=102384126] [isoform=X1]
+XP_025068252.1 ANPEP [organism=Alligator sinensis] [GeneID=102384126] [isoform=X1]
+XP_062819142.1 anpep [organism=Anolis carolinensis] [GeneID=100562984]
+XP_019327917.1 ANPEP [organism=Aptenodytes forsteri] [GeneID=103899896]
+XP_042732128.1 ANPEP [organism=Lagopus leucura] [GeneID=122182695] [isoform=X1]
+XP_042732129.1 ANPEP [organism=Lagopus leucura] [GeneID=122182695] [isoform=X1]
+XP_042732130.1 ANPEP [organism=Lagopus leucura] [GeneID=122182695] [isoform=X2]
+XP_074405079.1 ANPEP [organism=Zonotrichia albicollis] [GeneID=102069211]
+XP_074693117.1 ANPEP [organism=Strix aluco] [GeneID=141928578] [isoform=X1]
+XP_074693118.1 ANPEP [organism=Strix aluco] [GeneID=141928578] [isoform=X2]
+XP_064578228.1 ANPEP [organism=Zonotrichia leucophrys gambelii] [GeneID=135452234]
+XP_063268447.1 ANPEP [organism=Prinia subflava] [GeneID=134558477]
+XP_058012696.1 ANPEP [organism=Ahaetulla prasina] [GeneID=131184887]
+XP_058012697.1 ANPEP [organism=Ahaetulla prasina] [GeneID=131184887]
+XP_058012698.1 ANPEP [organism=Ahaetulla prasina] [GeneID=131184887]
+XP_074862608.1 ANPEP [organism=Carettochelys insculpta] [GeneID=142019504] [isoform=X2]
+XP_074862609.1 ANPEP [organism=Carettochelys insculpta] [GeneID=142019504] [isoform=X2]
+XP_074862610.1 ANPEP [organism=Carettochelys insculpta] [GeneID=142019504] [isoform=X3]
+XP_074862611.1 ANPEP [organism=Carettochelys insculpta] [GeneID=142019504] [isoform=X4]
+XP_041320992.1 ANPEP [organism=Pyrgilauda ruficollis] [GeneID=121352265] [isoform=X1]
+XP_041320993.1 ANPEP [organism=Pyrgilauda ruficollis] [GeneID=121352265] [isoform=X1]
+XP_041320994.1 ANPEP [organism=Pyrgilauda ruficollis] [GeneID=121352265] [isoform=X2]
+XP_041320995.1 ANPEP [organism=Pyrgilauda ruficollis] [GeneID=121352265] [isoform=X3]
+XP_041320996.1 ANPEP [organism=Pyrgilauda ruficollis] [GeneID=121352265] [isoform=X4]
+XP_041320997.1 ANPEP [organism=Pyrgilauda ruficollis] [GeneID=121352265] [isoform=X5]
+XP_041320998.1 ANPEP [organism=Pyrgilauda ruficollis] [GeneID=121352265] [isoform=X5]
+XP_041320999.1 ANPEP [organism=Pyrgilauda ruficollis] [GeneID=121352265] [isoform=X5]
+XP_041321002.1 ANPEP [organism=Pyrgilauda ruficollis] [GeneID=121352265] [isoform=X5]
+XP_034291428.1 ANPEP [organism=Pantherophis guttatus] [GeneID=117676213] [isoform=X1]
+XP_034291429.1 ANPEP [organism=Pantherophis guttatus] [GeneID=117676213] [isoform=X1]
+XP_034291430.1 ANPEP [organism=Pantherophis guttatus] [GeneID=117676213] [isoform=X2]
+XP_060550709.1 ANPEP [organism=Pantherophis guttatus] [GeneID=117676213] [isoform=X1]
+XP_047594604.1 ANPEP [organism=Lutra lutra] [GeneID=125105296] [isoform=X2]
+XP_047594605.1 ANPEP [organism=Lutra lutra] [GeneID=125105296] [isoform=X3]
+XP_047594607.1 ANPEP [organism=Lutra lutra] [GeneID=125105296] [isoform=X4]
+XP_035297261.1 Anpep [organism=Cricetulus griseus] [GeneID=100751632] [isoform=X2]
+XP_035297262.1 Anpep [organism=Cricetulus griseus] [GeneID=100751632] [isoform=X3]
+XP_063203101.1 ANPEP [organism=Chroicocephalus ridibundus] [GeneID=134521012]
+XP_063203102.1 ANPEP [organism=Chroicocephalus ridibundus] [GeneID=134521012]
+XP_063203103.1 ANPEP [organism=Chroicocephalus ridibundus] [GeneID=134521012]
+XP_042331730.1 ANPEP [organism=Sceloporus undulatus] [GeneID=121934885]
+XP_015284412.1 ANPEP [organism=Gekko japonicus] [GeneID=107125496]
+XP_019495554.1 ANPEP [organism=Hipposideros armiger] [GeneID=109381406]
+XP_030811469.1 ANPEP [organism=Camarhynchus parvulus] [GeneID=115907617]
+XP_062998823.1 ANPEP [organism=Elgaria multicarinata webbii] [GeneID=134409812]
+XP_062998824.1 ANPEP [organism=Elgaria multicarinata webbii] [GeneID=134409812]
+XP_069654847.1 ANPEP [organism=Haliaeetus albicilla] [GeneID=138688103]
+XP_069654848.1 ANPEP [organism=Haliaeetus albicilla] [GeneID=138688103]
+XP_070619156.1 ANPEP [organism=Erythrolamprus reginae] [GeneID=139173326]
+XP_049668553.1 ANPEP [organism=Astur gentilis] [GeneID=126043762] [isoform=X2]
+XP_049668554.1 ANPEP [organism=Astur gentilis] [GeneID=126043762] [isoform=X2]
+XP_074772926.1 ANPEP [organism=Athene noctua] [GeneID=141965357] [isoform=X1]
+XP_074772927.1 ANPEP [organism=Athene noctua] [GeneID=141965357] [isoform=X2]
+XP_032051198.1 ANPEP [organism=Aythya fuligula] [GeneID=116493737]
+XP_061450869.1 ANPEP [organism=Rhineura floridana] [GeneID=133369587]
+XP_061450870.1 ANPEP [organism=Rhineura floridana] [GeneID=133369587]
+XP_061450871.1 ANPEP [organism=Rhineura floridana] [GeneID=133369587]
+XP_041274985.1 ANPEP [organism=Onychostruthus taczanowskii] [GeneID=121343668] [isoform=X2]
+XP_041274986.1 ANPEP [organism=Onychostruthus taczanowskii] [GeneID=121343668] [isoform=X3]
+XP_041274987.1 ANPEP [organism=Onychostruthus taczanowskii] [GeneID=121343668] [isoform=X4]
+XP_041274988.1 ANPEP [organism=Onychostruthus taczanowskii] [GeneID=121343668] [isoform=X5]
+XP_041274989.1 ANPEP [organism=Onychostruthus taczanowskii] [GeneID=121343668] [isoform=X5]
+XP_041274990.1 ANPEP [organism=Onychostruthus taczanowskii] [GeneID=121343668] [isoform=X6]
+XP_041274991.1 ANPEP [organism=Onychostruthus taczanowskii] [GeneID=121343668] [isoform=X6]
+XP_041274992.1 ANPEP [organism=Onychostruthus taczanowskii] [GeneID=121343668] [isoform=X7]
+XP_035168097.1 ANPEP [organism=Oxyura jamaicensis] [GeneID=118157742]
+XP_035168098.1 ANPEP [organism=Oxyura jamaicensis] [GeneID=118157742]
+XP_016007056.1 ANPEP [organism=Rousettus aegyptiacus] [GeneID=107514149]
+XP_031755082.1 anpep [organism=Xenopus tropicalis] [GeneID=100492262]
+XP_013014241.1 Anpep [organism=Cavia porcellus] [GeneID=100727522]
+XP_063452989.1 ANPEP [organism=Pan paniscus] [GeneID=100977702]
+XP_063452990.1 ANPEP [organism=Pan paniscus] [GeneID=100977702]
+XP_063452991.1 ANPEP [organism=Pan paniscus] [GeneID=100977702]
+XP_072201536.1 ANPEP [organism=Excalfactoria chinensis] [GeneID=140256702]
+XP_029871689.1 ANPEP [organism=Aquila chrysaetos chrysaetos] [GeneID=115342058]
+XP_029871690.1 ANPEP [organism=Aquila chrysaetos chrysaetos] [GeneID=115342058]
+XP_040979701.1 ANPEP [organism=Aquila chrysaetos chrysaetos] [GeneID=115342058]
+XP_048337981.1 ANPEP [organism=Sphaerodactylus townsendi] [GeneID=125424628] [isoform=X1]
+XP_048337982.1 ANPEP [organism=Sphaerodactylus townsendi] [GeneID=125424628] [isoform=X1]
+XP_048337983.1 ANPEP [organism=Sphaerodactylus townsendi] [GeneID=125424628] [isoform=X2]
+XP_065544674.1 ANPEP [organism=Lathamus discolor] [GeneID=136018924]
+XP_065544675.1 ANPEP [organism=Lathamus discolor] [GeneID=136018924]
+XP_016782900.1 ANPEP [organism=Pan troglodytes] [GeneID=107968418]
+XP_035868221.1 ANPEP [organism=Phyllostomus discolor] [GeneID=114488677] [isoform=X1]
+XP_039349051.1 ANPEP [organism=Mauremys reevesii] [GeneID=120373987] [isoform=X2]
+XP_039349052.1 ANPEP [organism=Mauremys reevesii] [GeneID=120373987] [isoform=X2]
+XP_039349053.1 ANPEP [organism=Mauremys reevesii] [GeneID=120373987] [isoform=X2]
+XP_039349054.1 ANPEP [organism=Mauremys reevesii] [GeneID=120373987] [isoform=X2]
+XP_075620559.1 ANPEP [organism=Balearica regulorum gibbericeps] [GeneID=142603484]
+XP_060014754.1 ANPEP [organism=Lagenorhynchus albirostris] [GeneID=132525672]
+XP_060014764.1 ANPEP [organism=Lagenorhynchus albirostris] [GeneID=132525672]
+XP_060014774.1 ANPEP [organism=Lagenorhynchus albirostris] [GeneID=132525672]
+XP_060014784.1 ANPEP [organism=Lagenorhynchus albirostris] [GeneID=132525672]
+XP_056355551.1 ANPEP [organism=Oenanthe melanoleuca] [GeneID=130257242]
+XP_068954710.1 ANPEP [organism=Petaurus breviceps papuanus] [GeneID=138169281] [isoform=X1]
+XP_068954711.1 ANPEP [organism=Petaurus breviceps papuanus] [GeneID=138169281] [isoform=X1]
+XP_068954712.1 ANPEP [organism=Petaurus breviceps papuanus] [GeneID=138169281] [isoform=X1]
+XP_068954713.1 ANPEP [organism=Petaurus breviceps papuanus] [GeneID=138169281] [isoform=X1]
+XP_068954714.1 ANPEP [organism=Petaurus breviceps papuanus] [GeneID=138169281] [isoform=X2]
+XP_039242390.1 ANPEP [organism=Pipra filicauda] [GeneID=114000803] [isoform=X2]
+XP_024837385.1 ANPEP [organism=Bos taurus] [GeneID=404191] [isoform=X1]
+XP_061855432.1 ANPEP [organism=Colius striatus] [GeneID=104552833]
+XP_061855433.1 ANPEP [organism=Colius striatus] [GeneID=104552833]
+XP_068552171.1 ANPEP [organism=Anas acuta] [GeneID=137863153]
+XP_070631227.1 ANPEP [organism=Bos indicus] [GeneID=109575620]
+XP_074173478.1 ANPEP [organism=Rhinolophus sinicus] [GeneID=109439060]
+XP_074173479.1 ANPEP [organism=Rhinolophus sinicus] [GeneID=109439060]
+XP_074173480.1 ANPEP [organism=Rhinolophus sinicus] [GeneID=109439060]
+XP_074173481.1 ANPEP [organism=Rhinolophus sinicus] [GeneID=109439060]
+XP_074173482.1 ANPEP [organism=Rhinolophus sinicus] [GeneID=109439060]
+XP_064425951.1 ANPEP [organism=Mirounga angustirostris] [GeneID=123860883]
+XP_064425952.1 ANPEP [organism=Mirounga angustirostris] [GeneID=123860883]
+XP_064425953.1 ANPEP [organism=Mirounga angustirostris] [GeneID=123860883]
+XP_064425955.1 ANPEP [organism=Mirounga angustirostris] [GeneID=123860883]
+XP_064425956.1 ANPEP [organism=Mirounga angustirostris] [GeneID=123860883]
+XP_057579853.1 ANPEP [organism=Hippopotamus amphibius kiboko] [GeneID=130845966]
+XP_059338092.1 ANPEP [organism=Ammospiza nelsoni] [GeneID=132079467]
+XP_031242946.1 Anpep [organism=Mastomys coucha] [GeneID=116102445]
+XP_031242947.1 Anpep [organism=Mastomys coucha] [GeneID=116102445]
+XP_021262834.1 ANPEP [organism=Numida meleagris] [GeneID=110403644]
+XP_021262835.1 ANPEP [organism=Numida meleagris] [GeneID=110403644]
+XP_072837716.1 ANPEP [organism=Pogona vitticeps] [GeneID=110091459]
+XP_072837717.1 ANPEP [organism=Pogona vitticeps] [GeneID=110091459]
+XP_042660315.1 ANPEP [organism=Tyto alba] [GeneID=116961509]
+XP_050823290.1 ANPEP [organism=Gopherus flavomarginatus] [GeneID=127057998]
+XP_053220824.1 ANPEP [organism=Podarcis raffonei] [GeneID=128401601]
+XP_038623186.1 ANPEP [organism=Tachyglossus aculeatus] [GeneID=119945949]
+XP_038623187.1 ANPEP [organism=Tachyglossus aculeatus] [GeneID=119945949]
+XP_063509006.1 ANPEP [organism=Pongo pygmaeus] [GeneID=129013742]
+XP_063509007.1 ANPEP [organism=Pongo pygmaeus] [GeneID=129013742]
+XP_058667411.1 ANPEP [organism=Ammospiza caudacuta] [GeneID=131561918]
+XP_069899367.1 Anpep [organism=Dipodomys merriami] [GeneID=138842075] [isoform=X1]
+XP_069899368.1 Anpep [organism=Dipodomys merriami] [GeneID=138842075] [isoform=X1]
+XP_069899369.1 Anpep [organism=Dipodomys merriami] [GeneID=138842075] [isoform=X2]
+XP_056662349.1 ANPEP [organism=Monodelphis domestica] [GeneID=100015326]
+XP_054113208.1 ANPEP [organism=Callithrix jacchus] [GeneID=100406342]
+XP_057225958.1 ANPEP [organism=Malurus melanocephalus] [GeneID=130575816]
+XP_067552811.1 ANPEP [organism=Pseudorca crassidens] [GeneID=137201965]
+XP_057159707.1 ANPEP [organism=Ursus arctos] [GeneID=113263695]
+XP_065497587.1 ANPEP [organism=Caloenas nicobarica] [GeneID=135992390]
+XP_073918143.1 Anpep [organism=Castor canadensis] [GeneID=109697521]

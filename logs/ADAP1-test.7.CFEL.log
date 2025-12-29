@@ -1,0 +1,90 @@
+
+Analysis Description
+--------------------
+Contrast-FEL (Fixed Effects Likelihood) investigates whether or not
+selective pressures differ between two or more sets of branches at a
+site. Site-specific synonymous (alpha) and non-synonymous (beta, one per
+branch set) substitution rates are estimated and then beta rates are
+tested for equality at each site. LRT and permutation tests ar used to
+assess significance at each site, and FDR is applied alignment wide to
+call sites with different selective profiles. Version 0.6 adds detailed
+ancestral state reconstruction. Version 0.61 adds storing root states in
+constant sites for ASR.
+
+- __Additional information__: http://www.hyphy.org/methods/other/contrast-fel/
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree; only single partition
+data are supported
+
+- __Citation__: Mol Biol Evol (2021), (38)3 1184–1198
+
+- __Written by__: Sergei L Kosakovsky Pond and Steven Weaver
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 0.61
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.7.codon.fas'
+contains 2 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.7.codon.fas.FastTree.treefile.labelled
+results/ADAP1-test/ADAP1-test.7.codon.fas.FastTree.treefile.labelled
+
+>Loaded a multiple sequence alignment with **11** sequences, **194** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.7.codon.fas`
+
+>branch-set => Mammalia
+
+>srv => Yes
+
+>permutations => Yes
+
+>Select nominal p-value threshold to use when testing for selection (FDR correction will be performed on all sites) (permissible range = [0,1], default value = 0.1): 
+>p-value => 0.05
+
+>Select nominal the q-value threshold to use when testing for selection (FDR reporting) (permissible range = [0,1], default value = 0.2): 
+>q-value => 0.20
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+
+### Branches to use as the test set in the FEL-contrast analysis
+Selected 2 sets of branches to test
+
+* Selected 5 branches in group _Mammalia_ : `XP_011885129_1_XM_01202_53ecb0, XP_054352982_1_XM_05449_233884, XP_012614566_2_XM_01275_945ab4, XP_062041590_1_XM_06218_d11611, XP_041604521_1_XM_04174_7e8d4b`
+* 14 branches are in the background group : `NP_001090758_1_NM_00109_c9f23c, Node2, XP_025939132_1_XM_02608_6aec63, Node16, Node15, Node5, XP_032626897_1_XM_03277_f6b30e, XP_047919596_1_XM_04806_0c6d33, Node9, XP_054499394_1_XM_05464_33d08b, XP_069726565_1_XM_06987_381d08, Node12, Node8, Node6`
+
+### **1** test will be performed at each site
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 2 zero-length internal branches: `Node15, Node9`
+* Log(L) =  -852.79, AIC-c =  1759.81 (27 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.394
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -832.82, AIC-c =  1732.71 (33 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.719
+* non-synonymous/synonymous rate ratio for *Mammalia* =   0.0000
+* non-synonymous/synonymous rate ratio for *background* =   0.0865
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) =  -826.49
+* non-synonymous/synonymous rate ratio for *Mammalia* =   0.0000
+* non-synonymous/synonymous rate ratio for *background* =   0.0016
+## ASSERTION FAILED
+Non-constant site passed to ComputeCompressedSubstitutionConstantSite
+Check errors.log for execution error details.

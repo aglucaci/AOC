@@ -120,6 +120,8 @@ rule all:
     input:
         # Preprocessing / recombination (kept from your AOC Snakefile)
         expand("results/{gene}/{gene}.codons.fa", gene=GENES),
+        # ADAP1-test.codons.fa.map.tsv
+        expand("results/{gene}/{gene}.codons.fa.map.tsv", gene=GENES),
         expand("results/{gene}/{gene}.aa.fa", gene=GENES),
         expand("results/{gene}/{gene}.codons.cln.fa", gene=GENES),
         expand("results/{gene}/{gene}.SA.codons.cln.fa", gene=GENES),
@@ -180,7 +182,8 @@ rule get_codons:
         nuc=cds_for_gene,
         prot=protein_for_gene
     output:
-        codons="results/{gene}/{gene}.codons.fa"
+        codons="results/{gene}/{gene}.codons.fa",
+        map="results/{gene}/{gene}.codons.fa.map.tsv"
     params:
         Prot=protein_for_gene,
         Nuc=cds_for_gene,
@@ -203,13 +206,17 @@ rule macse:
         MACSE_CMD=config.get("MACSE_CMD", "macse"),
     log:
         os.path.join(LOG_DIR, "{gene}.macse.log")
-    shell:
+    shell:        
         r"""
         mkdir -p results/{wildcards.gene}
-        {params.MACSE_CMD} -prog alignSequences -seq {input.codons} \
-          -out_NT {output.codons} \
-          -out_AA {output.aa} \
-          > {log} 2>&1
+        {params.MACSE_CMD} -prog alignSequences \
+          -seq {input.codons} \
+          -local_realign_init 1 \
+          -local_realign_dec 1 \
+          -out_NT {output.codons}.tmp \
+          -out_AA {output.aa} && \
+        sed 's/!/N/g' {output.codons}.tmp > {output.codons} && \
+        rm {output.codons}.tmp
         """
 
 # -----------------------------------------------------------------------------
@@ -484,7 +491,8 @@ def expand_parts(pattern, gene):
 rule annotate_lineages:
     input:
         orthologs=orthologs_for_gene,
-        tree=rules.iqtree.output.tree
+        tree=rules.iqtree.output.tree,
+        map=rules.get_codons.output.map
     output:
         out="results/{gene}/{gene}.lineages.tsv"
     log:
@@ -495,9 +503,9 @@ rule annotate_lineages:
     shell:
         r"""
         python3 scripts/annotate_lineages.py \
-          --orthologs {input.orthologs} \
           --tree {input.tree} \
           --out {output.out} \
+          --map_tsv {input.map} \
           --email {params.email} \
           --verbose \
           --min_interval 0.5 \

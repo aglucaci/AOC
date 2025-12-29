@@ -1,0 +1,77 @@
+[map] loaded 22 id30->transcript_id mappings
+[normalize] 'XM_062185606.1:133-1581' -> 'XM_062185606.1' (dotted)
+[resolve] cand=XM_062185606.1 attempt=1/8 db=nuccore
+[efetch] db=nuccore id=XM_062185606.1
+[throttle] sleeping 0.187s
+[taxonomy] taxid=9983
+[resolved] cand=XM_062185606.1 taxid=9983 organism=Lepus europaeus
+[normalize] 'XM_026083347.1:935-1888' -> 'XM_026083347.1' (dotted)
+[resolve] cand=XM_026083347.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.273s
+[efetch] db=nuccore id=XM_026083347.1
+[throttle] sleeping 0.223s
+[taxonomy] taxid=308060
+[resolved] cand=XM_026083347.1 taxid=308060 organism=Apteryx rowi
+[normalize] 'XM_032771006.2:323-1450' -> 'XM_032771006.2' (dotted)
+[resolve] cand=XM_032771006.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.146s
+[efetch] db=nuccore id=XM_032771006.2
+[throttle] sleeping 0.059s
+[taxonomy] taxid=106734
+[resolved] cand=XM_032771006.2 taxid=106734 organism=Chelonoidis abingdonii
+[normalize] 'NM_001097289.1:215-1342' -> 'NM_001097289.1' (dotted)
+[resolve] cand=NM_001097289.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.250s
+[efetch] db=nuccore id=NM_001097289.1
+[throttle] sleeping 0.196s
+[taxonomy] taxid=8364
+[resolved] cand=NM_001097289.1 taxid=8364 organism=Xenopus tropicalis
+[normalize] 'XM_048063639.2:215-1342' -> 'XM_048063639.2' (dotted)
+[resolve] cand=XM_048063639.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.323s
+[efetch] db=nuccore id=XM_048063639.2
+[throttle] sleeping 0.211s
+[taxonomy] taxid=8845
+[resolved] cand=XM_048063639.2 taxid=8845 organism=Anser cygnoides
+[normalize] 'XM_069870464.1:129-1256' -> 'XM_069870464.1' (dotted)
+[resolve] cand=XM_069870464.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.286s
+[efetch] db=nuccore id=XM_069870464.1
+[throttle] sleeping 0.232s
+[taxonomy] taxid=33595
+[resolved] cand=XM_069870464.1 taxid=33595 organism=Phaenicophaeus curvirostris
+[normalize] 'XM_054643419.2:208-1335' -> 'XM_054643419.2' (dotted)
+[resolve] cand=XM_054643419.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.295s
+[efetch] db=nuccore id=XM_054643419.2
+[throttle] sleeping 0.222s
+[taxonomy] taxid=39638
+[resolved] cand=XM_054643419.2 taxid=39638 organism=Agelaius phoeniceus
+[normalize] 'XM_041748587.1:186-1310' -> 'XM_041748587.1' (dotted)
+[resolve] cand=XM_041748587.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.223s
+[efetch] db=nuccore id=XM_041748587.1
+[throttle] sleeping 0.219s
+[taxonomy] taxid=494514
+[resolved] cand=XM_041748587.1 taxid=494514 organism=Vulpes lagopus
+[normalize] 'XM_012759112.3:164-1237' -> 'XM_012759112.3' (dotted)
+[resolve] cand=XM_012759112.3 attempt=1/8 db=nuccore
+[throttle] sleeping 0.262s
+[efetch] db=nuccore id=XM_012759112.3
+[throttle] sleeping 0.205s
+[taxonomy] taxid=30608
+[resolved] cand=XM_012759112.3 taxid=30608 organism=Microcebus murinus
+[normalize] 'XM_054497007.2:249-1373' -> 'XM_054497007.2' (dotted)
+[resolve] cand=XM_054497007.2 attempt=1/8 db=nuccore
+[throttle] sleeping 0.261s
+[efetch] db=nuccore id=XM_054497007.2
+[throttle] sleeping 0.213s
+[taxonomy] taxid=9600
+[resolved] cand=XM_054497007.2 taxid=9600 organism=Pongo pygmaeus
+[normalize] 'XM_012029739.1:214-1338' -> 'XM_012029739.1' (dotted)
+[resolve] cand=XM_012029739.1 attempt=1/8 db=nuccore
+[throttle] sleeping 0.277s
+[efetch] db=nuccore id=XM_012029739.1
+[throttle] sleeping 0.222s
+[taxonomy] taxid=9531
+[resolved] cand=XM_012029739.1 taxid=9531 organism=Cercocebus atys

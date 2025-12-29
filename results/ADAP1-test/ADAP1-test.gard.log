@@ -1,0 +1,7 @@
+Partition 1: start=0, stop=120, length=120, remainder=0
+Partition 2: start=120, stop=234, length=114, remainder=0
+Partition 3: start=234, stop=399, length=165, remainder=0
+Partition 4: start=399, stop=711, length=312, remainder=0
+Partition 5: start=711, stop=1005, length=294, remainder=0
+Partition 6: start=1005, stop=1110, length=105, remainder=0
+Partition 7: start=1110, stop=1692, length=582, remainder=0

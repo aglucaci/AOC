@@ -1,0 +1,40 @@
+
+Analysis Description
+--------------------
+ Read an alignment of coding sequences and replace any ambiguous codons
+with ---. Write results to a new file in FASTA format, and report
+changed sequences to stdout 
+
+- __Requirements__: An MSA
+
+- __Citation__: TBD
+
+- __Written by__: Sergei L Kosakovsky Pond
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 0.1
+
+code: Universal
+
+Striking 83 codons that are incompletely resolved from XP_062041590_1_XM_06218_d11611
+
+Striking 247 codons that are incompletely resolved from XP_025939132_1_XM_02608_6aec63
+
+Striking 189 codons that are incompletely resolved from XP_032626897_1_XM_03277_f6b30e
+
+Striking 189 codons that are incompletely resolved from XP_054499394_1_XM_05464_33d08b
+
+Striking 189 codons that are incompletely resolved from XP_069726565_1_XM_06987_381d08
+
+Striking 189 codons that are incompletely resolved from XP_047919596_1_XM_04806_0c6d33
+
+Striking 190 codons that are incompletely resolved from XP_054352982_1_XM_05449_233884
+
+Striking 190 codons that are incompletely resolved from XP_011885129_1_XM_01202_53ecb0
+
+Striking 207 codons that are incompletely resolved from XP_012614566_2_XM_01275_945ab4
+
+Striking 190 codons that are incompletely resolved from XP_041604521_1_XM_04174_7e8d4b
+
+Striking 189 codons that are incompletely resolved from NP_001090758_1_NM_00109_c9f23c

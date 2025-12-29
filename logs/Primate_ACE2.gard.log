@@ -39,12 +39,253 @@ Done with single breakpoint analysis.
    c-AIC  = 20756.62163087438
 
 ### Performing multi breakpoint analysis using a genetic algorithm
-Done with 2 breakpoint analysis.
-    Best break point locations: 1964, 2099
-    c-AIC = 20669.07464974766
-Done with 3 breakpoint analysis.
-    Best break point locations: 1262, 1964, 2099
-    c-AIC = 20642.79067137712
-Done with 4 breakpoint analysis.
-    Best break point locations: 500, 1262, 1964, 2099
-    c-AIC = 20659.85612121229
+Error:
+HyPhy suspended.
+
+Function call stack
+1 :  [namespace = bUzdqfDA] Optimize(mles, ^lf_id);
+-------
+2 :  [namespace = RWubneAQ] res=estimators.FitExistingLF(&likelihoodFunction,modelObjects);
+-------
+3 :  [namespace = rgWNPIeJ] fit=gard.fitPartitionedModel(breakPoints,model,initialValues,null,FALSE);
+-------
+4 :  [namespace = mpi.pODWCzxm] Call(result_callback,0,Eval(job+'('+Join(",",utility.Map(arguments,"_value_","utility.convertToArgumentString (_value_)"))+')'),arguments);
+-------
+5 :  mpi.QueueJob(gard.queue,"gard.obtainModel_cAIC",{"0":breakPoints__,"1":gard.model,"2":gard.baseLikelihoodInfo},"gard.GA.storeMultiBreakPointModelResults");
+-------
+6 :  [namespace = gard] gard.GA.evaluateModels(interGenerationalModels);
+-------
+7 :  namespace 
+
+Step 0.populationSize=32;
+
+Step 1.Branch under condition 'populationSize<mpi.NodeCount()-1'
+	to
+		populationSize=mpi.NodeCount()+1;
+	else
+		mutationRate=0.2;
+
+Step 2.populationSize=mpi.NodeCount()+1;
+
+Step 3.mutationRate=0.2;
+
+Step 4.rateOfMutationsTharAreSmallShifts=0.8;
+
+Step 5.maxFailedAttemptsToMakeNewModel=7;
+
+Step 6.cAIC_diversityThreshold=0.01;
+
+Step 7.Branch under condition 'fastRunMode'
+	to
+		maxGenerationsAllowedAtStagnant_cAIC=Min(populationSize,40);
+	else
+		maxGenerationsAllowedAtStagnant_cAIC=100;
+
+Step 8.maxGenerationsAllowedAtStagnant_cAIC=Min(populationSize,40);
+
+Step 9.cAIC_improvementThreshold=2;
+
+Step 10.Go to step 13
+
+Step 11.maxGenerationsAllowedAtStagnant_cAIC=100;
+
+Step 12.cAIC_improvementThreshold=0.01;
+
+Step 13.maxGenerationsAllowedWithNoNewModelsAdded=maxGenerationsAllowedAtStagnant_cAIC$4;
+
+Step 14.addingBreakPointsImproves_cAIC=TRUE;
+
+Step 15.Branch under condition 'startWithBP>0'
+	to
+		numberOfBreakPointsBeingEvaluated=startWithBP;
+	else
+		numberOfBreakPointsBeingEvaluated=1;
+
+Step 16.numberOfBreakPointsBeingEvaluated=startWithBP;
+
+Step 17.bestOverallModelSoFar={1,startWithBP};
+
+Step 18.Initialize iterator on json["breakpointData"];
+
+Step 19.Advance iterator into i,v;
+
+Step 20.Branch under condition ''__iterator_end__loop__'!=v'
+	to
+		Branch under condition '+i<startWithBP'
+	to
+		bestOverallModelSoFar[+i]=+(v['bps'])[1];
+	else
+		Advance iterator into i,v;
+	else
+		Go to step 27
+
+Step 21.Branch under condition '+i<startWithBP'
+	to
+		bestOverallModelSoFar[+i]=+(v['bps'])[1];
+	else
+		Advance iterator into i,v;
+
+Step 22.bestOverallModelSoFar[+i]=+(v['bps'])[1];
+
+Step 23.Advance iterator into i,v;
+
+Step 24.Go to step 20
+
+Step 25.Go to step 27
+
+Step 26.numberOfBreakPointsBeingEvaluated=1;
+
+Step 27.Branch under condition 'addingBreakPointsImproves_cAIC&&numberOfBreakPointsBeingEvaluated<max_breakpoints'
+	to
+		numberOfBreakPointsBeingEvaluated+=1;
+	else
+		<END EXECUTION>
+
+Step 28.numberOfBreakPointsBeingEvaluated+=1;
+
+Step 29.generationsAtCurrentBest_cAIC=0;
+
+Step 30.generationsNoNewModelsAdded=0;
+
+Step 31.parentModels=gard.GA.initializeModels(numberOfBreakPointsBeingEvaluated,populationSize,numberOfPotentialBreakPoints,bestOverallModelSoFar);
+
+Step 32.terminationCondition=FALSE;
+
+Step 33.generation=0;
+
+Step 34.previousBest_cAIC=^"math.Infinity";
+
+Step 35.Branch under condition 'terminationCondition==FALSE'
+	to
+		childModels=gard.GA.recombineModels(parentModels,populationSize);
+	else
+		io.ClearProgressBar();
+
+Step 36.childModels=gard.GA.recombineModels(parentModels,populationSize);
+
+Step 37.interGenerationalModels=parentModels;
+
+Step 38.interGenerationalModels*childModels;
+
+Step 39.gard.GA.evaluateModels(interGenerationalModels);
+
+Step 40.selectedModels=gard.GA.selectModels(interGenerationalModels,populationSize);
+
+Step 41.Branch under condition 'gard.GA.modelSetsAreTheSame(selectedModels,parentModels)'
+	to
+		generationsNoNewModelsAdded+=1;
+	else
+		generationsNoNewModelsAdded=0;
+
+Step 42.generationsNoNewModelsAdded+=1;
+
+Step 43.Go to step 45
+
+Step 44.generationsNoNewModelsAdded=0;
+
+Step 45.currentBest_individual=Min(interGenerationalModels,1);
+
+Step 46.currentBest_cAIC=currentBest_individual["value"];
+
+Step 47.currentBest_model=Eval(currentBest_individual["key"]);
+
+Step 48.Branch under condition '(math.minNormalizedRange(selectedModels)<cAIC_diversityThreshold)||(generationsNoNewModelsAdded>maxGenerationsAllowedWithNoNewModelsAdded)'
+	to
+		parentModels=gard.GA.generateNewGenerationOfModelsByMutatingModelSet(selectedModels,numberOfPotentialBreakPoints,mutationRate,rateOfMutationsTharAreSmallShifts);
+	else
+		parentModels=selectedModels;
+
+Step 49.parentModels=gard.GA.generateNewGenerationOfModelsByMutatingModelSet(selectedModels,numberOfPotentialBreakPoints,mutationRate,rateOfMutationsTharAreSmallShifts);
+
+Step 50.Branch under condition 'Abs(parentModels)==1'
+	to
+		parentModels=gard.GA.initializeModels(numberOfBreakPointsBeingEvaluated,populationSize-1,numberOfPotentialBreakPoints,bestOverallModelSoFar);
+	else
+		differenceThreshold=numberOfBreakPointsBeingEvaluated/4;
+
+Step 51.parentModels=gard.GA.initializeModels(numberOfBreakPointsBeingEvaluated,populationSize-1,numberOfPotentialBreakPoints,bestOverallModelSoFar);
+
+Step 52.parentModels[currentBest_model]=currentBest_cAIC;
+
+Step 53.differenceThreshold=numberOfBreakPointsBeingEvaluated/4;
+
+Step 54.Go to step 56
+
+Step 55.parentModels=selectedModels;
+
+Step 56.Branch under condition 'previousBest_cAIC-currentBest_cAIC<cAIC_improvementThreshold'
+	to
+		generationsAtCurrentBest_cAIC+=1;
+	else
+		generationsAtCurrentBest_cAIC=0;
+
+Step 57.generationsAtCurrentBest_cAIC+=1;
+
+Step 58.Branch under condition 'generationsAtCurrentBest_cAIC>=maxGenerationsAllowedAtStagnant_cAIC'
+	to
+		terminationCondition=TRUE;
+	else
+		Go to step 62
+
+Step 59.terminationCondition=TRUE;
+
+Step 60.Go to step 62
+
+Step 61.generationsAtCurrentBest_cAIC=0;
+
+Step 62.Branch under condition 'previousBest_cAIC>0&&previousBest_cAIC<currentBest_cAIC'
+	to
+		io.CheckAssertion("gard.previousBest_cAIC >= gard.currentBest_cAIC","Internal error in GARD -- c-AIC INCREASED between two consecutive generations");
+	else
+		previousBest_cAIC=currentBest_cAIC;
+
+Step 63.io.CheckAssertion("gard.previousBest_cAIC >= gard.currentBest_cAIC","Internal error in GARD -- c-AIC INCREASED between two consecutive generations");
+
+Step 64.previousBest_cAIC=currentBest_cAIC;
+
+Step 65.generation+=1;
+
+Step 66.Branch under condition 'bestOverall_cAIC_soFar-currentBest_cAIC>0'
+	to
+		io.ReportProgressBar("GARD",Format(numberOfBreakPointsBeingEvaluated,3,0)+' breakpoints [ generation '+Format(generation,6,0)+", total models "+Format(Abs(masterList),8,0)+", "+Format(generationsAtCurrentBest_cAIC/maxGenerationsAllowedAtStagnant_cAIC*100,4,0)+"% converged, "+Format(Abs(masterList)/(Time(1)-startTime),5,2)+"/sec]"+". Min (c-AIC) = "+Format(currentBest_cAIC,12,4)+" [ delta = "+Format(bestOverall_cAIC_soFar-currentBest_cAIC,8,2)+"], breakpoints at "+Join(", ",currentBest_model));
+	else
+		io.ReportProgressBar("GARD",Format(numberOfBreakPointsBeingEvaluated,3,0)+' breakpoints [ generation '+Format(generation,6,0)+", total models "+Format(Abs(masterList),8,0)+", "+Format(generationsAtCurrentBest_cAIC/maxGenerationsAllowedAtStagnant_cAIC*100,4,0)+"% converged, "+Format(Abs(masterList)/(Time(1)-startTime),5,2)+"/sec]"+". Min (c-AIC) = "+Format(currentBest_cAIC,12,4)+" [no improvement], breakpoints at "+Join(", ",currentBest_model));
+
+Step 67.io.ReportProgressBar("GARD",Format(numberOfBreakPointsBeingEvaluated,3,0)+' breakpoints [ generation '+Format(generation,6,0)+", total models "+Format(Abs(masterList),8,0)+", "+Format(generationsAtCurrentBest_cAIC/maxGenerationsAllowedAtStagnant_cAIC*100,4,0)+"% converged, "+Format(Abs(masterList)/(Time(1)-startTime),5,2)+"/sec]"+". Min (c-AIC) = "+Format(currentBest_cAIC,12,4)+" [ delta = "+Format(bestOverall_cAIC_soFar-currentBest_cAIC,8,2)+"], breakpoints at "+Join(", ",currentBest_model));
+
+Step 68.Go to step 70
+
+Step 69.io.ReportProgressBar("GARD",Format(numberOfBreakPointsBeingEvaluated,3,0)+' breakpoints [ generation '+Format(generation,6,0)+", total models "+Format(Abs(masterList),8,0)+", "+Format(generationsAtCurrentBest_cAIC/maxGenerationsAllowedAtStagnant_cAIC*100,4,0)+"% converged, "+Format(Abs(masterList)/(Time(1)-startTime),5,2)+"/sec]"+". Min (c-AIC) = "+Format(currentBest_cAIC,12,4)+" [no improvement], breakpoints at "+Join(", ",currentBest_model));
+
+Step 70.Go to step 35
+
+Step 71.io.ClearProgressBar();
+
+Step 72.statusString=("Done with "+numberOfBreakPointsBeingEvaluated+" breakpoint analysis.\n"+gard.GA.getMultiBreakPointStatusString(selectedModels,variableSiteMap));
+
+Step 73.io.ReportProgressMessageMD('GARD','multi-breakpoint',statusString);
+
+Step 74.Branch under condition 'previousBest_cAIC<bestOverall_cAIC_soFar'
+	to
+		bestModel=gard.Helper.convertMatrixStringToMatrix(utility.Keys(selectedModels)[Min(utility.Values(selectedModels),1)[1]]);
+	else
+		addingBreakPointsImproves_cAIC=FALSE;
+
+Step 75.bestModel=gard.Helper.convertMatrixStringToMatrix(utility.Keys(selectedModels)[Min(utility.Values(selectedModels),1)[1]]);
+
+Step 76.improvements[numberOfBreakPointsBeingEvaluated-1]={"deltaAICc":bestOverall_cAIC_soFar-previousBest_cAIC,"breakpoints":bestModel};
+
+Step 77.bestOverall_cAIC_soFar=previousBest_cAIC;
+
+Step 78.bestModel=gard.Helper.convertMatrixStringToMatrix(utility.Keys(selectedModels)[Min(utility.Values(selectedModels),1)[1]]);
+
+Step 79.bestOverallModelSoFar=bestModel;
+
+Step 80.Go to step 82
+
+Step 81.addingBreakPointsImproves_cAIC=FALSE;
+
+Step 82.gard.concludeAnalysis(bestOverallModelSoFar,addingBreakPointsImproves_cAIC);
+
+Step 83.Go to step 27;
+-------

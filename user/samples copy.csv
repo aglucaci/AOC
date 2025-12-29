@@ -1,0 +1,6 @@
+gene,cds_file,protein_file,orthologs_file
+Primate_ACE2,/Users/alex/Documents/AOC-develop/data/Primate_ACE2/ACE2_refseq_transcript.fasta,/Users/alex/Documents/AOC-develop/data/Primate_ACE2/ACE2_refseq_protein.fasta,/Users/alex/Documents/AOC-develop/data/Primate_ACE2/ACE2_orthologs.csv
+Primate_BTG1,/Users/alex/Documents/AOC-develop/data/Primate_BTG1/BTG1_refseq_transcript.fasta,/Users/alex/Documents/AOC-develop/data/Primate_BTG1/BTG1_refseq_protein.fasta,/Users/alex/Documents/AOC-develop/data/Primate_BTG1/BTG1_orthologs.csv
+Primate_REM2,/Users/alex/Documents/AOC-develop/data/Primate_REM2/REM2_refseq_transcript.fasta,/Users/alex/Documents/AOC-develop/data/Primate_REM2/REM2_refseq_protein.fasta,/Users/alex/Documents/AOC-develop/data/Primate_REM2/REM2_orthologs.csv
+Primate_TP53,/Users/alex/Documents/AOC-develop/data/Primate_TP53/TP53_refseq_transcript.fasta,/Users/alex/Documents/AOC-develop/data/Primate_TP53/TP53_refseq_protein.fasta,/Users/alex/Documents/AOC-develop/data/Primate_TP53/TP53_orthologs.csv
+ADAM7,/Users/alex/Documents/AOC-dev/data/ADAM7/ncbi_dataset/data/cds.fna,/Users/alex/Documents/AOC-dev/data/ADAM7/ncbi_dataset/data/protein.faa,/Users/alex/Documents/AOC-dev/data/ADAM7/ncbi_dataset/data/data_report.jsonl

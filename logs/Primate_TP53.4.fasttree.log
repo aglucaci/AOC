@@ -19,6 +19,6 @@ ML-NNI round 2: LogLk = -3096.332 NNIs 2 max delta 0.55 Time 0.18
 ML-NNI round 3: LogLk = -3096.331 NNIs 0 max delta 0.00 Time 0.19
 Turning off heuristics for final round of ML NNIs (converged)
 ML-NNI round 4: LogLk = -3096.322 NNIs 0 max delta 0.00 Time 0.22 (final)
-      0.22 seconds: ML Lengths 1 of 28 splits
-Optimize all lengths: LogLk = -3096.319 Time 0.23
-Total time: 0.29 seconds Unique: 30/34 Bad splits: 0/27
+      0.21 seconds: ML Lengths 1 of 28 splits
+Optimize all lengths: LogLk = -3096.319 Time 0.22
+Total time: 0.28 seconds Unique: 30/34 Bad splits: 0/27

@@ -5,76 +5,65 @@ Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
 
 Host:    Alexs-MacBook-Pro-2.local (SSE4.2, 16 GB RAM)
 Command: iqtree -s results/Primate_ACE2/Primate_ACE2.RD.SA.codons.cln.fa -T AUTO -B 1000 --redo-tree
-Seed:    294504 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Fri Dec 26 13:23:45 2025
+Seed:    406127 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Dec 27 15:33:42 2025
 Kernel:  SSE2 - auto-detect threads (10 CPU cores detected)
 
 Reading alignment file results/Primate_ACE2/Primate_ACE2.RD.SA.codons.cln.fa ... Fasta format detected
-Reading fasta file: done in 0.000971079 secs using 90.62% CPU
+Reading fasta file: done in 0.0011189 secs using 82.49% CPU
 Alignment most likely contains DNA/RNA sequences
-Constructing alignment: done in 0.00131798 secs using 62.52% CPU
+Constructing alignment: done in 0.00137901 secs using 62.22% CPU
 Alignment has 31 sequences with 3003 columns, 576 distinct patterns
 462 parsimony-informative, 329 singleton sites, 2212 constant sites
-                                                                                                                          Gap/Ambiguity  Composition  p-value
-Analyzing sequences: done in 2.59876e-05 secs using 84.66% CPU
-   1  NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA                                 19.58%    passed     99.70%
-   2  XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA                   19.58%    passed     99.93%
-   3  XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA                    19.58%    passed     99.47%
-   4  XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA                               19.58%    passed     99.96%
-   5  NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA                                                      19.58%    passed     97.05%
-   6  XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA                    19.58%    passed     95.54%
-   7  XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA                                   19.58%    passed     99.78%
-   8  XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA                                      19.58%    passed     99.98%
-   9  NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA                                                    19.58%    passed     99.40%
-  10  XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA               19.58%    passed     97.69%
-  11  XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA        19.58%    passed     97.39%
-  12  XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA                                     19.58%    passed     95.45%
-  13  XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA                    19.58%    passed     99.60%
-  14  XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA                                  19.58%    passed     98.68%
-  15  XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA                                19.58%    passed     98.99%
-  16  XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA                 19.58%    passed     99.38%
-  17  XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA             19.58%    passed     95.36%
-  18  XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA                             19.58%    passed     97.25%
-  19  XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA                               19.58%    passed     95.36%
-  20  XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA             27.67%    passed     96.41%
-  21  XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA                                      19.58%    passed     85.32%
-  22  XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA                  19.68%    passed     96.07%
-  23  XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA                  19.58%    passed     95.21%
-  24  XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA                                       19.58%    passed     87.44%
-  25  XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA   19.58%    passed     93.20%
-  26  XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA                                    14.99%    passed     99.21%
-  27  XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA           17.48%    passed     55.40%
-  28  XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA                                              2.00%    passed     90.14%
-  29  XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA                                      19.58%    passed     55.70%
-  30  XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA                                    19.58%    failed      3.29%
-  31  XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA                                      19.58%    passed     87.68%
-****  TOTAL                                                                                                                      19.06%  1 sequences failed composition chi2 test (p-value<5%; df=3)
-Checking for duplicate sequences: done in 6.00815e-05 secs using 81.56% CPU
+                                                                                                                                                                                                                                                                                                             Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 2.38419e-05 secs using 96.47% CPU
+   1  NP_001358344_1_NM_001371415_1_protein_NP_001358344_1_angiotensin_converting_enzyme_2_isoform_1_precursor_Homo_sapiens_transcript_NM_001371415_1_Homo_sapiens_angiotensin_converting_enzyme_2_ACE2_transcript_variant_1_mRNA_species_Homo_sapiens                                                              19.58%    passed     99.70%
+   2  XP_016798468_1_XM_016942979_2_protein_XP_016798468_1_angiotensin_converting_enzyme_2_isoform_X1_Pan_troglodytes_transcript_XM_016942979_2_PREDICTED_Pan_troglodytes_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Pan_troglodytes                                                   19.58%    passed     99.93%
+   3  XP_008972428_2_XM_008974180_2_protein_XP_008972428_2_angiotensin_converting_enzyme_2_isoform_X1_Pan_paniscus_transcript_XM_008974180_2_PREDICTED_Pan_paniscus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Pan_paniscus                                                          19.58%    passed     99.47%
+   4  XP_018874749_1_XM_019019204_1_protein_XP_018874749_1_angiotensin_converting_enzyme_2_Gorilla_gorilla_gorilla_transcript_XM_019019204_1_PREDICTED_Gorilla_gorilla_gorilla_angiotensin_I_converting_enzyme_2_ACE2_mRNA_species_Gorilla_gorilla_gorilla                                                          19.58%    passed     99.96%
+   5  NP_001124604_1_NM_001131132_2_protein_NP_001124604_1_angiotensin_converting_enzyme_2_precursor_Pongo_abelii_transcript_NM_001131132_2_Pongo_abelii_angiotensin_converting_enzyme_2_ACE2_mRNA_species_Pongo_abelii                                                                                             19.58%    passed     97.05%
+   6  XP_054327941_1_XM_054471966_1_protein_XP_054327941_1_angiotensin_converting_enzyme_2_isoform_X1_Pongo_pygmaeus_transcript_XM_054471966_1_PREDICTED_Pongo_pygmaeus_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Pongo_pygmaeus                                                      19.58%    passed     95.54%
+   7  XP_003261132_2_XM_003261084_3_protein_XP_003261132_2_angiotensin_converting_enzyme_2_Nomascus_leucogenys_transcript_XM_003261084_3_PREDICTED_Nomascus_leucogenys_angiotensin_I_converting_enzyme_2_ACE2_mRNA_species_Nomascus_leucogenys                                                                      19.58%    passed     99.78%
+   8  XP_032612508_1_XM_032756617_1_protein_XP_032612508_1_angiotensin_converting_enzyme_2_Hylobates_moloch_transcript_XM_032756617_1_PREDICTED_Hylobates_moloch_angiotensin_I_converting_enzyme_2_ACE2_mRNA_species_Hylobates_moloch                                                                               19.58%    passed     99.98%
+   9  NP_001129168_1_NM_001135696_1_protein_NP_001129168_1_angiotensin_converting_enzyme_2_precursor_Macaca_mulatta_transcript_NM_001135696_1_Macaca_mulatta_angiotensin_converting_enzyme_2_ACE2_mRNA_species_Macaca_mulatta                                                                                       19.58%    passed     99.40%
+  10  XP_011733505_1_XM_011735203_2_protein_XP_011733505_1_angiotensin_converting_enzyme_2_Macaca_nemestrina_transcript_XM_011735203_2_PREDICTED_Macaca_nemestrina_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Macaca_nemestrina                                                      19.58%    passed     97.69%
+  11  XP_050633584_1_XM_050777627_1_protein_XP_050633584_1_angiotensin_converting_enzyme_2_Macaca_thibetana_thibetana_transcript_XM_050777627_1_PREDICTED_Macaca_thibetana_thibetana_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Macaca_thibetana_thibetana                             19.58%    passed     97.39%
+  12  XP_005593094_2_XM_005593037_3_protein_XP_005593094_2_angiotensin_converting_enzyme_2_Macaca_fascicularis_transcript_XM_005593037_3_PREDICTED_Macaca_fascicularis_angiotensin_converting_enzyme_2_ACE2_mRNA_species_Macaca_fascicularis                                                                        19.58%    passed     95.45%
+  13  XP_021788732_1_XM_021933040_1_protein_XP_021788732_1_angiotensin_converting_enzyme_2_Papio_anubis_transcript_XM_021933040_1_PREDICTED_Papio_anubis_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Papio_anubis                                                                     19.58%    passed     99.60%
+  14  XP_025227847_1_XM_025372062_1_protein_XP_025227847_1_angiotensin_converting_enzyme_2_Theropithecus_gelada_transcript_XM_025372062_1_PREDICTED_Theropithecus_gelada_angiotensin_I_converting_enzyme_2_ACE2_mRNA_species_Theropithecus_gelada                                                                   19.58%    passed     98.68%
+  15  XP_011850923_1_XM_011995533_1_protein_XP_011850923_1_PREDICTED_angiotensin_converting_enzyme_2_Mandrillus_leucophaeus_transcript_XM_011995533_1_PREDICTED_Mandrillus_leucophaeus_angiotensin_I_converting_enzyme_2_ACE2_mRNA_species_Mandrillus_leucophaeus                                                   19.58%    passed     98.99%
+  16  XP_011891198_1_XM_012035808_1_protein_XP_011891198_1_PREDICTED_angiotensin_converting_enzyme_2_Cercocebus_atys_transcript_XM_012035808_1_PREDICTED_Cercocebus_atys_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Cercocebus_atys                                                  19.58%    passed     99.38%
+  17  XP_007989304_2_XM_007991113_2_protein_XP_007989304_2_angiotensin_converting_enzyme_2_Chlorocebus_sabaeus_transcript_XM_007991113_2_PREDICTED_Chlorocebus_sabaeus_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Chlorocebus_sabaeus                                                19.58%    passed     95.36%
+  18  XP_023054821_1_XM_023199053_2_protein_XP_023054821_1_angiotensin_converting_enzyme_2_Piliocolobus_tephrosceles_transcript_XM_023199053_2_PREDICTED_Piliocolobus_tephrosceles_angiotensin_I_converting_enzyme_2_ACE2_mRNA_species_Piliocolobus_tephrosceles                                                    19.58%    passed     97.25%
+  19  XP_010364367_2_XM_010366065_2_protein_XP_010364367_2_angiotensin_converting_enzyme_2_Rhinopithecus_roxellana_transcript_XM_010366065_2_PREDICTED_Rhinopithecus_roxellana_angiotensin_I_converting_enzyme_2_ACE2_mRNA_species_Rhinopithecus_roxellana                                                          19.58%    passed     95.36%
+  20  XP_017744069_1_XM_017888580_1_protein_XP_017744069_1_PREDICTED_angiotensin_converting_enzyme_2_Rhinopithecus_bieti_transcript_XM_017888580_1_PREDICTED_Rhinopithecus_bieti_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Rhinopithecus_bieti                                      27.67%    passed     96.41%
+  21  XP_008987241_1_XM_008988993_4_protein_XP_008987241_1_angiotensin_converting_enzyme_2_Callithrix_jacchus_transcript_XM_008988993_4_PREDICTED_Callithrix_jacchus_angiotensin_converting_enzyme_2_ACE2_mRNA_species_Callithrix_jacchus                                                                           19.58%    passed     85.32%
+  22  XP_017367865_1_XM_017512376_2_protein_XP_017367865_1_angiotensin_converting_enzyme_2_Cebus_imitator_transcript_XM_017512376_2_PREDICTED_Cebus_imitator_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Cebus_imitator                                                               19.68%    passed     96.07%
+  23  XP_032141854_1_XM_032285963_1_protein_XP_032141854_1_angiotensin_converting_enzyme_2_Sapajus_apella_transcript_XM_032285963_1_PREDICTED_Sapajus_apella_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Sapajus_apella                                                               19.58%    passed     95.21%
+  24  XP_012290105_1_XM_012434682_2_protein_XP_012290105_1_angiotensin_converting_enzyme_2_Aotus_nancymaae_transcript_XM_012434682_2_PREDICTED_Aotus_nancymaae_angiotensin_I_converting_enzyme_2_ACE2_mRNA_species_Aotus_nancymaae                                                                                  19.58%    passed     87.44%
+  25  XP_010334925_2_XM_010336623_2_protein_XP_010334925_2_angiotensin_converting_enzyme_2_isoform_X1_Saimiri_boliviensis_boliviensis_transcript_XM_010336623_2_PREDICTED_Saimiri_boliviensis_boliviensis_angiotensin_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Saimiri_boliviensis_boliviensis   19.58%    passed     93.20%
+  26  XP_020140826_1_XM_020285237_1_protein_XP_020140826_1_angiotensin_converting_enzyme_2_Microcebus_murinus_transcript_XM_020285237_1_PREDICTED_Microcebus_murinus_angiotensin_I_converting_enzyme_2_ACE2_mRNA_species_Microcebus_murinus                                                                         14.99%    passed     99.21%
+  27  XP_012494185_1_XM_012638731_1_protein_XP_012494185_1_PREDICTED_angiotensin_converting_enzyme_2_Propithecus_coquereli_transcript_XM_012638731_1_PREDICTED_Propithecus_coquereli_angiotensin_I_converting_enzyme_2_ACE2_transcript_variant_X1_mRNA_species_Propithecus_coquereli                                17.48%    passed     55.40%
+  28  XP_045394292_1_XM_045538336_1_protein_XP_045394292_1_angiotensin_converting_enzyme_2_Lemur_catta_transcript_XM_045538336_1_PREDICTED_Lemur_catta_angiotensin_converting_enzyme_2_ACE2_mRNA_species_Lemur_catta                                                                                                 2.00%    passed     90.14%
+  29  XP_053436341_1_XM_053580366_1_protein_XP_053436341_1_angiotensin_converting_enzyme_2_Nycticebus_coucang_transcript_XM_053580366_1_PREDICTED_Nycticebus_coucang_angiotensin_converting_enzyme_2_ACE2_mRNA_species_Nycticebus_coucang                                                                           19.58%    passed     55.70%
+  30  XP_003791912_1_XM_003791864_2_protein_XP_003791912_1_angiotensin_converting_enzyme_2_Otolemur_garnettii_transcript_XM_003791864_2_PREDICTED_Otolemur_garnettii_angiotensin_I_converting_enzyme_2_ACE2_mRNA_species_Otolemur_garnettii                                                                         19.58%    failed      3.29%
+  31  XP_008062810_1_XM_008064619_1_protein_XP_008062810_1_angiotensin_converting_enzyme_2_Carlito_syrichta_transcript_XM_008064619_1_PREDICTED_Carlito_syrichta_angiotensin_I_converting_enzyme_2_ACE2_mRNA_species_Carlito_syrichta                                                                               19.58%    passed     87.68%
+****  TOTAL                                                                                                                                                                                                                                                                                                         19.06%  1 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 6.10352e-05 secs using 83.56% CPU
 
+NOTE: Restoring information from model checkpoint file results/Primate_ACE2/Primate_ACE2.RD.SA.codons.cln.fa.model.gz
 
-Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
+CHECKPOINT: Initial tree restored
 Measuring multi-threading efficiency up to 10 CPU cores
 Increase to 10 rounds for branch lengths
-510 trees examined
-Threads: 1 / Time: 10.005 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -15449
-Threads: 2 / Time: 15.323 sec / Speedup: 0.653 / Efficiency: 33% / LogL: -15449
-Determining AUTO threadcount: done in 25.3282 secs using 92.66% CPU
+514 trees examined
+Threads: 1 / Time: 10.002 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -14710
+Threads: 2 / Time: 15.222 sec / Speedup: 0.657 / Efficiency: 33% / LogL: -14710
+Determining AUTO threadcount: done in 25.2247 secs using 91.9% CPU
 BEST NUMBER OF THREADS: 1
 
 Perform fast likelihood tree search using GTR+I+G model...
-Estimate model parameters (epsilon = 5.000)
-Perform nearest neighbor interchange...
-Optimizing NNI: done in 0.016156 secs using 98.31% CPU
-Estimate model parameters (epsilon = 1.000)
-1. Initial log-likelihood: -10967.483
-Optimal log-likelihood: -10967.461
-Rate parameters:  A-C: 1.98363  A-G: 5.17109  A-T: 0.76536  C-G: 1.86620  C-T: 6.48294  G-T: 1.00000
-Base frequencies:  A: 0.307  C: 0.202  G: 0.230  T: 0.261
-Proportion of invariable sites: 0.360
-Gamma shape alpha: 1.691
-Parameters optimization took 1 rounds (0.014 sec)
-Time for fast ML tree search: 0.143 seconds
-
+CHECKPOINT: Tree restored, LogL: -10967.313
 NOTE: ModelFinder requires 8 MB RAM!
 ModelFinder will test up to 968 DNA models (sample size: 3003 epsilon: 0.100) ...
  No. Model         -LnL         df  AIC          AICc         BIC
@@ -153,10 +142,10 @@ ModelFinder will test up to 968 DNA models (sample size: 3003 epsilon: 0.100) ..
 729  TIM3e+G4      11009.348    63  22144.697    22147.440    22523.161
 730  TIM3e+I+G4    11009.316    64  22146.631    22149.463    22531.103
 751  TIM3+G4       11009.348    63  22144.696    22147.440    22523.161
-752  TIM3+I+G4     11009.309    64  22146.619    22149.451    22531.090
+752  TIM3+I+G4     11009.309    64  22146.619    22149.450    22531.090
 773  TIM3+F+G4     10968.279    66  22068.559    22071.571    22465.045
 774  TIM3+F+I+G4   10968.436    67  22070.871    22073.976    22473.365
-795  TVMe+G4       11007.834    64  22143.668    22146.500    22528.139
+795  TVMe+G4       11007.834    64  22143.668    22146.499    22528.139
 796  TVMe+I+G4     11007.780    65  22145.560    22148.481    22536.039
 817  TVMe+G4       11007.834    64  22143.668    22146.499    22528.139
 818  TVMe+I+G4     11007.780    65  22145.560    22148.481    22536.039
@@ -178,9 +167,9 @@ Bayesian Information Criterion:         TPM3u+F+G4
 Best-fit model: TPM3u+F+G4 chosen according to BIC
 
 All model information printed to results/Primate_ACE2/Primate_ACE2.RD.SA.codons.cln.fa.model.gz
-CPU time for ModelFinder: 25.532 seconds (0h:0m:25s)
-Wall-clock time for ModelFinder: 27.432 seconds (0h:0m:27s)
-Generating 1000 samples for ultrafast bootstrap (seed: 294504)...
+CPU time for ModelFinder: 23.193 seconds (0h:0m:23s)
+Wall-clock time for ModelFinder: 25.239 seconds (0h:0m:25s)
+Generating 1000 samples for ultrafast bootstrap (seed: 406127)...
 
 NOTE: 4 MB RAM (0 GB) is required!
 Estimate model parameters (epsilon = 0.100)
@@ -189,153 +178,153 @@ Optimal log-likelihood: -10971.911
 Rate parameters:  A-C: 2.19728  A-G: 6.55194  A-T: 1.00000  C-G: 2.19728  C-T: 6.55194  G-T: 1.00000
 Base frequencies:  A: 0.307  C: 0.202  G: 0.230  T: 0.261
 Gamma shape alpha: 0.505
-Parameters optimization took 1 rounds (0.010 sec)
+Parameters optimization took 1 rounds (0.009 sec)
 Wrote distance file to... 
 Computing ML distances based on estimated model parameters...
-Calculating distance matrix: done in 0.00490713 secs using 95.19% CPU
-Computing ML distances took 0.004995 sec (of wall-clock time) 0.004731 sec (of CPU time)
-Setting up auxiliary I and S matrices: done in 2.59876e-05 secs using 80.81% CPU
-Constructing RapidNJ tree: done in 6.79493e-05 secs using 83.89% CPU
-Computing RapidNJ tree took 0.000119 sec (of wall-clock time) 0.000089 sec (of CPU time)
+Calculating distance matrix: done in 0.00463891 secs using 99.31% CPU
+Computing ML distances took 0.004712 sec (of wall-clock time) 0.004665 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 2.59876e-05 secs using 84.66% CPU
+Constructing RapidNJ tree: done in 5.6982e-05 secs using 91.26% CPU
+Computing RapidNJ tree took 0.000104 sec (of wall-clock time) 0.000084 sec (of CPU time)
 Log-likelihood of RapidNJ tree: -10987.922
 --------------------------------------------------------------------
 |             INITIALIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-Generating 98 parsimony trees... 0.129 second
-Computing log-likelihood of 98 initial trees ... 0.262 seconds
+Generating 98 parsimony trees... 0.134 second
+Computing log-likelihood of 98 initial trees ... 0.259 seconds
 Current best score: -10971.911
 
 Do NNI search on 20 best initial trees
-Optimizing NNI: done in 0.0183289 secs using 98.06% CPU
+Optimizing NNI: done in 0.0180328 secs using 99.56% CPU
 Estimate model parameters (epsilon = 0.100)
 BETTER TREE FOUND at iteration 1: -10971.910
-Optimizing NNI: done in 0.026299 secs using 98.53% CPU
+Optimizing NNI: done in 0.026015 secs using 99.67% CPU
 BETTER TREE FOUND at iteration 2: -10971.909
-Optimizing NNI: done in 0.026433 secs using 98.24% CPU
+Optimizing NNI: done in 0.0259011 secs using 99.41% CPU
 UPDATE BEST LOG-LIKELIHOOD: -10971.909
-Optimizing NNI: done in 0.0289099 secs using 98.18% CPU
-Optimizing NNI: done in 0.0287969 secs using 98.24% CPU
+Optimizing NNI: done in 0.028657 secs using 99.17% CPU
+Optimizing NNI: done in 0.0286629 secs using 99.2% CPU
 UPDATE BEST LOG-LIKELIHOOD: -10971.909
-Optimizing NNI: done in 0.028295 secs using 98.51% CPU
-Optimizing NNI: done in 0.030879 secs using 99.25% CPU
-Optimizing NNI: done in 0.0323381 secs using 99.36% CPU
-Optimizing NNI: done in 0.0283151 secs using 99.7% CPU
-Optimizing NNI: done in 0.031709 secs using 98.26% CPU
+Optimizing NNI: done in 0.0284121 secs using 99.59% CPU
+Optimizing NNI: done in 0.031703 secs using 99.56% CPU
+Optimizing NNI: done in 0.033668 secs using 99.33% CPU
+Optimizing NNI: done in 0.0332499 secs using 99.75% CPU
+Optimizing NNI: done in 0.0294728 secs using 99.69% CPU
+Iteration 10 / LogL: -10971.910 / Time: 0h:0m:25s
+Optimizing NNI: done in 0.0318859 secs using 98.14% CPU
 UPDATE BEST LOG-LIKELIHOOD: -10971.909
-Iteration 10 / LogL: -10971.909 / Time: 0h:0m:28s
-Optimizing NNI: done in 0.03039 secs using 99.22% CPU
-Optimizing NNI: done in 0.0353849 secs using 98.85% CPU
-Optimizing NNI: done in 0.030642 secs using 99.03% CPU
-Optimizing NNI: done in 0.0302181 secs using 99.3% CPU
-Optimizing NNI: done in 0.0343699 secs using 97.86% CPU
-Optimizing NNI: done in 0.0342691 secs using 97.95% CPU
+Optimizing NNI: done in 0.0369718 secs using 97.13% CPU
+Optimizing NNI: done in 0.0316758 secs using 97.62% CPU
+Optimizing NNI: done in 0.0349319 secs using 96.94% CPU
+Optimizing NNI: done in 0.0335221 secs using 98.91% CPU
 UPDATE BEST LOG-LIKELIHOOD: -10971.909
-Optimizing NNI: done in 0.0341351 secs using 98.22% CPU
-Optimizing NNI: done in 0.033993 secs using 98.42% CPU
-Optimizing NNI: done in 0.034106 secs using 98.36% CPU
-Optimizing NNI: done in 0.0378768 secs using 98.74% CPU
-Iteration 20 / LogL: -10976.511 / Time: 0h:0m:28s
+Optimizing NNI: done in 0.0350571 secs using 96.27% CPU
+Optimizing NNI: done in 0.0340488 secs using 98.85% CPU
+Optimizing NNI: done in 0.033838 secs using 99.24% CPU
+Optimizing NNI: done in 0.03336 secs using 99.09% CPU
+Optimizing NNI: done in 0.0381801 secs using 98.89% CPU
+Iteration 20 / LogL: -10976.511 / Time: 0h:0m:26s
 Finish initializing candidate tree set (3)
-Current best tree score: -10971.909 / CPU time: 1.032
+Current best tree score: -10971.909 / CPU time: 1.046
 Number of iterations: 20
 --------------------------------------------------------------------
 |               OPTIMIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-Optimizing NNI: done in 0.0428729 secs using 99.02% CPU
-Optimizing NNI: done in 0.0406249 secs using 99.43% CPU
-Optimizing NNI: done in 0.0603161 secs using 98.49% CPU
-Optimizing NNI: done in 0.051759 secs using 98.91% CPU
-Optimizing NNI: done in 0.054975 secs using 99.17% CPU
-Optimizing NNI: done in 0.0368102 secs using 98.33% CPU
-Optimizing NNI: done in 0.0422859 secs using 98.8% CPU
-Optimizing NNI: done in 0.0471849 secs using 98.17% CPU
-Optimizing NNI: done in 0.046083 secs using 98.23% CPU
-Optimizing NNI: done in 0.0574 secs using 98.43% CPU
-Iteration 30 / LogL: -10976.515 / Time: 0h:0m:29s (0h:0m:3s left)
-Optimizing NNI: done in 0.0450661 secs using 98.1% CPU
-Optimizing NNI: done in 0.0538011 secs using 97.9% CPU
-Optimizing NNI: done in 0.0445921 secs using 98.09% CPU
-Optimizing NNI: done in 0.0679951 secs using 98.48% CPU
-Optimizing NNI: done in 0.0621362 secs using 98.83% CPU
-Optimizing NNI: done in 0.046052 secs using 98.16% CPU
-Optimizing NNI: done in 0.0332019 secs using 98.24% CPU
-Optimizing NNI: done in 0.0532389 secs using 98.2% CPU
-Optimizing NNI: done in 0.040333 secs using 98.19% CPU
-Optimizing NNI: done in 0.0546782 secs using 98.25% CPU
-Iteration 40 / LogL: -10971.913 / Time: 0h:0m:29s (0h:0m:3s left)
-Optimizing NNI: done in 0.0447469 secs using 98.34% CPU
-Optimizing NNI: done in 0.0548 secs using 98.18% CPU
-Optimizing NNI: done in 0.0493779 secs using 98.34% CPU
-Optimizing NNI: done in 0.0552189 secs using 99.44% CPU
-Optimizing NNI: done in 0.069032 secs using 99.47% CPU
-Optimizing NNI: done in 0.0400908 secs using 99.41% CPU
-Optimizing NNI: done in 0.0527329 secs using 99.12% CPU
-Optimizing NNI: done in 0.059521 secs using 98.95% CPU
-Optimizing NNI: done in 0.0532889 secs using 98.13% CPU
-Optimizing NNI: done in 0.0540829 secs using 98.24% CPU
-Iteration 50 / LogL: -10971.909 / Time: 0h:0m:30s (0h:0m:2s left)
-Log-likelihood cutoff on original alignment: -11016.106
-Optimizing NNI: done in 0.0477729 secs using 99.63% CPU
-Optimizing NNI: done in 0.0534191 secs using 98.37% CPU
-Optimizing NNI: done in 0.0623651 secs using 99.17% CPU
-Optimizing NNI: done in 0.0511 secs using 98.73% CPU
-Optimizing NNI: done in 0.0505571 secs using 98.59% CPU
-Optimizing NNI: done in 0.0547202 secs using 99.2% CPU
-Optimizing NNI: done in 0.072876 secs using 99.37% CPU
-Optimizing NNI: done in 0.051317 secs using 99.57% CPU
-Optimizing NNI: done in 0.0633659 secs using 98.36% CPU
-Optimizing NNI: done in 0.0500679 secs using 98.5% CPU
-Iteration 60 / LogL: -10971.932 / Time: 0h:0m:30s (0h:0m:2s left)
-Optimizing NNI: done in 0.05762 secs using 98.36% CPU
-Optimizing NNI: done in 0.056035 secs using 98.66% CPU
-Optimizing NNI: done in 0.0711932 secs using 98.73% CPU
-Optimizing NNI: done in 0.0430198 secs using 98.21% CPU
-Optimizing NNI: done in 0.052026 secs using 98.23% CPU
-Optimizing NNI: done in 0.021163 secs using 98.13% CPU
-Optimizing NNI: done in 0.051296 secs using 98.21% CPU
-Optimizing NNI: done in 0.0627551 secs using 98.45% CPU
-Optimizing NNI: done in 0.050983 secs using 98.85% CPU
-Optimizing NNI: done in 0.0623999 secs using 99.7% CPU
-Iteration 70 / LogL: -10976.548 / Time: 0h:0m:31s (0h:0m:1s left)
-Optimizing NNI: done in 0.038522 secs using 98.63% CPU
-Optimizing NNI: done in 0.0490179 secs using 98.86% CPU
-Optimizing NNI: done in 0.0466092 secs using 99.75% CPU
-Optimizing NNI: done in 0.0586259 secs using 98.48% CPU
-Optimizing NNI: done in 0.0407741 secs using 99.49% CPU
-Optimizing NNI: done in 0.050493 secs using 99.5% CPU
-Optimizing NNI: done in 0.0452471 secs using 99.73% CPU
-Optimizing NNI: done in 0.04656 secs using 99.36% CPU
-Optimizing NNI: done in 0.0456131 secs using 99.22% CPU
-Optimizing NNI: done in 0.0438142 secs using 98.3% CPU
-Iteration 80 / LogL: -10976.550 / Time: 0h:0m:31s (0h:0m:1s left)
-Optimizing NNI: done in 0.0518219 secs using 98.85% CPU
-Optimizing NNI: done in 0.042778 secs using 99.14% CPU
-Optimizing NNI: done in 0.0592539 secs using 98.44% CPU
-Optimizing NNI: done in 0.0619171 secs using 98.16% CPU
-Optimizing NNI: done in 0.0673392 secs using 98.13% CPU
-Optimizing NNI: done in 0.055608 secs using 98.47% CPU
-Optimizing NNI: done in 0.0358479 secs using 99.54% CPU
-Optimizing NNI: done in 0.0337811 secs using 99.24% CPU
-Optimizing NNI: done in 0.0587029 secs using 98.79% CPU
-Optimizing NNI: done in 0.040931 secs using 98.34% CPU
-Iteration 90 / LogL: -11011.059 / Time: 0h:0m:32s (0h:0m:0s left)
-Optimizing NNI: done in 0.0496111 secs using 98.16% CPU
-Optimizing NNI: done in 0.0541382 secs using 98.63% CPU
-Optimizing NNI: done in 0.0499022 secs using 99.21% CPU
-Optimizing NNI: done in 0.0505171 secs using 98.49% CPU
-Optimizing NNI: done in 0.0379219 secs using 98.82% CPU
-Optimizing NNI: done in 0.045002 secs using 98.54% CPU
-Optimizing NNI: done in 0.06674 secs using 99.16% CPU
-Optimizing NNI: done in 0.0565469 secs using 98.75% CPU
-Optimizing NNI: done in 0.0530789 secs using 98.36% CPU
-Optimizing NNI: done in 0.047297 secs using 98.77% CPU
-Iteration 100 / LogL: -10976.511 / Time: 0h:0m:32s (0h:0m:0s left)
-Log-likelihood cutoff on original alignment: -11016.106
-NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 1.000
-Optimizing NNI: done in 0.0556641 secs using 98.66% CPU
-Optimizing NNI: done in 0.04533 secs using 98.37% CPU
-Optimizing NNI: done in 0.036166 secs using 98.36% CPU
-TREE SEARCH COMPLETED AFTER 103 ITERATIONS / Time: 0h:0m:32s
+Optimizing NNI: done in 0.0439801 secs using 98.83% CPU
+Optimizing NNI: done in 0.0563772 secs using 98.52% CPU
+Optimizing NNI: done in 0.0441298 secs using 97.95% CPU
+Optimizing NNI: done in 0.0456989 secs using 98.84% CPU
+Optimizing NNI: done in 0.052295 secs using 98.02% CPU
+Optimizing NNI: done in 0.0540001 secs using 98.23% CPU
+Optimizing NNI: done in 0.042141 secs using 98.24% CPU
+Optimizing NNI: done in 0.048903 secs using 98.51% CPU
+Optimizing NNI: done in 0.0429139 secs using 97.32% CPU
+Optimizing NNI: done in 0.0518351 secs using 98.84% CPU
+Iteration 30 / LogL: -10971.909 / Time: 0h:0m:26s (0h:0m:3s left)
+Optimizing NNI: done in 0.0373569 secs using 99.18% CPU
+Optimizing NNI: done in 0.053251 secs using 98.48% CPU
+Optimizing NNI: done in 0.0530832 secs using 98.65% CPU
+Optimizing NNI: done in 0.0487301 secs using 99.23% CPU
+Optimizing NNI: done in 0.0558681 secs using 98.26% CPU
+Optimizing NNI: done in 0.0433381 secs using 98.74% CPU
+Optimizing NNI: done in 0.066359 secs using 98.95% CPU
+Optimizing NNI: done in 0.04058 secs using 98.63% CPU
+Optimizing NNI: done in 0.0417392 secs using 97.96% CPU
+Optimizing NNI: done in 0.037776 secs using 98.21% CPU
+Iteration 40 / LogL: -10976.557 / Time: 0h:0m:27s (0h:0m:3s left)
+Optimizing NNI: done in 0.051188 secs using 99.43% CPU
+Optimizing NNI: done in 0.0373321 secs using 98.64% CPU
+Optimizing NNI: done in 0.044625 secs using 98.98% CPU
+Optimizing NNI: done in 0.0378599 secs using 98.15% CPU
+Optimizing NNI: done in 0.0357101 secs using 99.1% CPU
+Optimizing NNI: done in 0.054913 secs using 98.49% CPU
+Optimizing NNI: done in 0.0621021 secs using 98.94% CPU
+Optimizing NNI: done in 0.0394552 secs using 98.42% CPU
+Optimizing NNI: done in 0.0508878 secs using 98.87% CPU
+Optimizing NNI: done in 0.0478349 secs using 98.64% CPU
+Iteration 50 / LogL: -10971.935 / Time: 0h:0m:27s (0h:0m:2s left)
+Log-likelihood cutoff on original alignment: -11004.262
+Optimizing NNI: done in 0.0434921 secs using 99.63% CPU
+Optimizing NNI: done in 0.0539479 secs using 98.84% CPU
+Optimizing NNI: done in 0.039458 secs using 98.8% CPU
+Optimizing NNI: done in 0.036412 secs using 98.55% CPU
+Optimizing NNI: done in 0.0481091 secs using 99.67% CPU
+Optimizing NNI: done in 0.04707 secs using 99.44% CPU
+Optimizing NNI: done in 0.0544269 secs using 98.24% CPU
+Optimizing NNI: done in 0.0525441 secs using 98.03% CPU
+Optimizing NNI: done in 0.044486 secs using 97.22% CPU
+Optimizing NNI: done in 0.0338311 secs using 99.02% CPU
+Iteration 60 / LogL: -10975.323 / Time: 0h:0m:28s (0h:0m:2s left)
+Optimizing NNI: done in 0.046489 secs using 98.28% CPU
+Optimizing NNI: done in 0.0482521 secs using 98.86% CPU
+Optimizing NNI: done in 0.04564 secs using 98.53% CPU
+Optimizing NNI: done in 0.048908 secs using 99.54% CPU
+Optimizing NNI: done in 0.0556769 secs using 98.12% CPU
+Optimizing NNI: done in 0.052783 secs using 98.99% CPU
+Optimizing NNI: done in 0.0479419 secs using 98.92% CPU
+Optimizing NNI: done in 0.0493238 secs using 99.26% CPU
+Optimizing NNI: done in 0.0356388 secs using 99.69% CPU
+Optimizing NNI: done in 0.0471089 secs using 99.29% CPU
+Iteration 70 / LogL: -10971.914 / Time: 0h:0m:28s (0h:0m:1s left)
+Optimizing NNI: done in 0.047282 secs using 98.33% CPU
+Optimizing NNI: done in 0.053443 secs using 99.27% CPU
+Optimizing NNI: done in 0.0436711 secs using 98.08% CPU
+Optimizing NNI: done in 0.0479181 secs using 98.67% CPU
+Optimizing NNI: done in 0.0645649 secs using 98.98% CPU
+Optimizing NNI: done in 0.0521719 secs using 99.27% CPU
+Optimizing NNI: done in 0.043134 secs using 99.14% CPU
+Optimizing NNI: done in 0.047225 secs using 98.9% CPU
+Optimizing NNI: done in 0.060878 secs using 98.4% CPU
+Optimizing NNI: done in 0.0443861 secs using 98.68% CPU
+Iteration 80 / LogL: -10976.511 / Time: 0h:0m:29s (0h:0m:1s left)
+Optimizing NNI: done in 0.0564308 secs using 98.61% CPU
+Optimizing NNI: done in 0.051054 secs using 99.23% CPU
+Optimizing NNI: done in 0.053251 secs using 98.63% CPU
+Optimizing NNI: done in 0.0432401 secs using 99.82% CPU
+Optimizing NNI: done in 0.052151 secs using 99.3% CPU
+Optimizing NNI: done in 0.0365388 secs using 99.2% CPU
+Optimizing NNI: done in 0.052089 secs using 99.52% CPU
+Optimizing NNI: done in 0.07778 secs using 98.51% CPU
+Optimizing NNI: done in 0.053381 secs using 99.69% CPU
+Optimizing NNI: done in 0.045517 secs using 99.38% CPU
+Iteration 90 / LogL: -10971.909 / Time: 0h:0m:29s (0h:0m:0s left)
+Optimizing NNI: done in 0.0339701 secs using 99.23% CPU
+Optimizing NNI: done in 0.0336909 secs using 99.51% CPU
+Optimizing NNI: done in 0.049633 secs using 99.52% CPU
+Optimizing NNI: done in 0.046025 secs using 99.47% CPU
+Optimizing NNI: done in 0.0510349 secs using 99.7% CPU
+Optimizing NNI: done in 0.0506361 secs using 99.71% CPU
+Optimizing NNI: done in 0.033838 secs using 99.71% CPU
+Optimizing NNI: done in 0.045187 secs using 99.76% CPU
+Optimizing NNI: done in 0.0457749 secs using 99.85% CPU
+Optimizing NNI: done in 0.0462492 secs using 99.56% CPU
+Iteration 100 / LogL: -10971.919 / Time: 0h:0m:30s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -11004.800
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.998
+Optimizing NNI: done in 0.0655179 secs using 99.79% CPU
+Optimizing NNI: done in 0.0339401 secs using 99.81% CPU
+Optimizing NNI: done in 0.0450609 secs using 99.38% CPU
+TREE SEARCH COMPLETED AFTER 103 ITERATIONS / Time: 0h:0m:30s
 
 --------------------------------------------------------------------
 |                    FINALIZING TREE SEARCH                        |
@@ -347,21 +336,21 @@ Optimal log-likelihood: -10971.909
 Rate parameters:  A-C: 2.20132  A-G: 6.56543  A-T: 1.00000  C-G: 2.20132  C-T: 6.56543  G-T: 1.00000
 Base frequencies:  A: 0.307  C: 0.202  G: 0.230  T: 0.261
 Gamma shape alpha: 0.505
-Parameters optimization took 1 rounds (0.009 sec)
+Parameters optimization took 1 rounds (0.008 sec)
 BEST SCORE FOUND : -10971.909
 Creating bootstrap support values...
 Split supports printed to NEXUS file results/Primate_ACE2/Primate_ACE2.RD.SA.codons.cln.fa.splits.nex
 Total tree length: 0.558
 
 Total number of iterations: 103
-CPU time used for tree search: 5.402 sec (0h:0m:5s)
-Wall-clock time used for tree search: 5.483 sec (0h:0m:5s)
-Total CPU time used: 31.031 sec (0h:0m:31s)
-Total wall-clock time used: 33.019 sec (0h:0m:33s)
+CPU time used for tree search: 5.208 sec (0h:0m:5s)
+Wall-clock time used for tree search: 5.275 sec (0h:0m:5s)
+Total CPU time used: 28.517 sec (0h:0m:28s)
+Total wall-clock time used: 30.635 sec (0h:0m:30s)
 
 Computing bootstrap consensus tree...
 Reading input file results/Primate_ACE2/Primate_ACE2.RD.SA.codons.cln.fa.splits.nex...
-31 taxa and 118 splits.
+31 taxa and 114 splits.
 Consensus tree written to results/Primate_ACE2/Primate_ACE2.RD.SA.codons.cln.fa.contree
 Reading input trees file results/Primate_ACE2/Primate_ACE2.RD.SA.codons.cln.fa.contree
 Log-likelihood of consensus tree: -10971.915
@@ -376,4 +365,4 @@ Ultrafast bootstrap approximation results written to:
   Consensus tree:                results/Primate_ACE2/Primate_ACE2.RD.SA.codons.cln.fa.contree
   Screen log file:               results/Primate_ACE2/Primate_ACE2.RD.SA.codons.cln.fa.log
 
-Date and Time: Fri Dec 26 13:24:18 2025
+Date and Time: Sat Dec 27 15:34:13 2025

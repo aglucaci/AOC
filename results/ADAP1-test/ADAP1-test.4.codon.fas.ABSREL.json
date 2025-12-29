@@ -1,0 +1,1129 @@
+{
+ "Site Log Likelihood":{
+   "tested":{
+     "NP_001090758_1_NM_00109_c9f23c":      [
+[-6.377272025850438, -20.45086426534542, -8.02491846747826, -11.43251580741095, -20.94188407424778, -16.91593329412824, -4.543146160319322, -6.900463739936235, -15.56052765458901, -8.720788525245718, -15.30284033004029, -4.973293134122436, -11.18891887472388, -13.23486566813161, -8.902173391146965, -9.060830004393434, -18.03594277415833, -5.821919400622559, -14.60679888555795, -5.860590372203702, -11.12174608185527, -7.077691641194161, -17.64730113431684, -23.45127219967241, -11.06498999731655, -15.2896326432107, -8.02491846747826, -16.29922125255836, -24.54658372064564, -13.67601594487656, -9.184258914534555, -9.763741416629758, -7.032558074991696, -4.935759517194607, -18.35441850160261, -16.96878918743552, -14.09004783125001, -9.046018332885287, -6.211502181055207, -9.536627681548769, -8.023122164877577, -5.860590372203702, -17.99333344054139, -22.65666001226917, -4.111025058148233, -4.999233195055976, -15.21011709614772, -7.713913320467359, -15.66168095028859, -22.40639819220478, -9.95508505442991, -17.06151147653036, -10.79137657734122, -8.498453323210764, -7.841007804889618, -14.6147168660912, -15.44459846211461, -6.211502181055207, -14.8564290544744, -7.968091967649161, -10.28753777064919, -16.58283462546886, -17.22526779643984, -10.87820489407795, -13.54945573064609, -7.855477278237518, -18.00863151187772, -13.01281549489083, -8.504006927564895, -8.944255211335669, -4.999233195055976, -6.173756562029252, -9.393527926019797, -7.022383573103811, -12.94255198713836, -15.9519638593858, -7.506259840933932, -6.360020086971529, -9.662887907216435, -26.45500621053217, -6.852622300459669, -13.78478648130266, -14.55381535363402, -10.60936609496899, -11.14086696736087, -4.999233195055976, -6.260012181080663, -29.41796799110622, -8.394407790488206, -6.554843465155852, -4.543146160319322, -5.832092513260239, -11.80237721929082, -11.50571269984611, -19.88939497283038, -18.37616859996486, -17.04953780593374, -13.93884256224447, -13.55171940270719, -10.32517449290626, -6.823302559520386, -7.42524335343121, -11.56690147797722, -6.128330213557813] 
+      ],
+     "XP_041604521_1_XM_04174_7e8d4b":      [
+[-6.379923178734042, -20.46891618572893, -8.030554695217754, -11.42784990800771, -20.93228501683905, -16.91757496609693, -4.543366725983772, -6.901387228785107, -15.53398619817315, -8.717081383831092, -15.29965509221939, -4.972935340921463, -11.19053195413586, -13.232521772115, -8.903156899512529, -9.059736783948782, -18.05259410407463, -5.821538162097936, -14.6208286274063, -5.858522302911443, -11.12286054915338, -7.080178725475949, -17.6570896947245, -23.44858962344502, -11.06871817483173, -15.29405533893743, -8.030554695217754, -16.30887532402898, -24.55846639236037, -13.68453417794383, -9.190801681204553, -9.765260788302706, -7.035438793927193, -4.935356869965864, -18.35972169236167, -16.96838513454409, -14.08971872113101, -9.042252808013963, -6.207968267845213, -9.533723624106916, -8.022234358543367, -5.858522302911443, -17.99337070302011, -22.64871309816115, -4.111174827763452, -4.999169714836483, -15.21189057783062, -7.71189027416779, -15.6575195863089, -22.39791092778076, -9.954409403074221, -17.05689835550375, -10.79232160159205, -8.49775939660725, -7.838274048327468, -14.61085549292013, -15.43632040979048, -6.207968267845213, -14.84947308492115, -7.964827126704417, -10.28920393829008, -16.58312268238785, -17.2220621624008, -10.87259607350156, -13.54802944109773, -7.855532329655088, -18.01357522693913, -13.01183182107505, -8.507494050431264, -8.943864973794977, -4.999169714836483, -6.176438092960134, -9.394817020313518, -7.025041652908462, -12.93936710367389, -15.9464858332875, -7.506347612257688, -6.35903751993393, -9.665342139646832, -26.47279050471062, -6.851198853256086, -13.78353553307247, -14.55301003882616, -10.60904490993299, -11.13361231637844, -4.999169714836483, -6.256510055882381, -29.41371106264062, -8.402170032066344, -6.554107778276376, -4.543366725983772, -5.831934114448541, -11.80563171583009, -11.50247652591042, -19.89606535648347, -18.37488961831842, -17.03979389536573, -13.93160188059396, -13.5433319164323, -10.32616471455647, -6.822453897909975, -7.424692128055191, -11.56424778284847, -6.126257419345001] 
+      ]
+    },
+   "unconstrained":    [
+[-6.379124735541116, -20.45931755970725, -8.028208768909231, -11.42690727404923, -20.93355236414695, -16.92120222052555, -4.543510620393403, -6.902343841714814, -15.53866782922486, -8.71650178991068, -15.29587824963137, -4.973427075177272, -11.18965102880208, -13.23045586024332, -8.903341473775393, -9.060169531297937, -18.05414171299359, -5.822161936808921, -14.61122857897833, -5.859010834517976, -11.12414087351201, -7.0816977356841, -17.65689661477532, -23.44234980783289, -11.06709194538871, -15.29304975493213, -8.028208768909231, -16.31031163802411, -24.5362755361246, -13.68140945691951, -9.188539299890108, -9.766248810890733, -7.03463522139545, -4.935878092816885, -18.35509358754377, -16.96644773649621, -14.09278261820831, -9.041522929108574, -6.208855339549724, -9.532248434882238, -8.021465389195912, -5.859010834517976, -17.99421481365111, -22.64530035581592, -4.111628746598907, -5.001711677531188, -15.21269660188302, -7.710638700874815, -15.65656743120733, -22.39551904025905, -9.95438327982218, -17.05969712624672, -10.79100288648177, -8.499042644748227, -7.840292670800658, -14.61006100826472, -15.43828915537886, -6.208855339549724, -14.84925077328116, -7.96343873850587, -10.28979022245388, -16.58012939728038, -17.22150465631891, -10.87162470506587, -13.54582301205706, -7.854009646198584, -18.01045441548107, -13.0120247017224, -8.507182317183627, -8.945101442342827, -5.001711677531188, -6.175658404825942, -9.39584006532394, -7.024394002322006, -12.93912902353341, -15.94872679652594, -7.506172145953695, -6.358936834281876, -9.66494111793002, -26.47194092266228, -6.850966815880025, -13.78292547815789, -14.55917221043978, -10.60959422042476, -11.13594796953261, -5.001711677531188, -6.257407048162658, -29.41756399342552, -8.400076580259498, -6.553968378076008, -4.543510620393403, -5.832401964124755, -11.80631306810304, -11.49806271907817, -19.89789717324718, -18.38334437369821, -17.05238944791944, -13.93210580741721, -13.54692874639083, -10.32711727278512, -6.822251509068684, -7.426258571395654, -11.56320891990828, -6.126586033229611] 
+    ]
+  },
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM / UCSD viral evolution group",
+   "citation":"\n                                Less Is More: An Adaptive Branch-Site Random Effects Model for Efficient Detection of Episodic Diversifying Selection (2015). \n                                Mol Biol Evol 32 (5): 1342-1353. \n                            ",
+   "contact":"spond@temple.edu",
+   "info":"aBSREL (Adaptive branch-site random effects likelihood)\n                            uses an adaptive random effects branch-site model framework\n                            to test whether each branch has evolved under positive selection,\n                            using a procedure which infers an optimal number of rate categories per branch. v2.2 adds support for multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for ancestral state reconstruction, identification of sites contributing to selection signal, and some diagnostics. v2.6 adds tree reports and ASCII art",
+   "requirements":"in-frame codon alignment and a phylogenetic tree",
+   "settings":{
+     "multiple-hit":"None",
+     "srv":0
+    },
+   "version":"2.6"
+  },
+ "branch attributes":{
+   "0":{
+     "NP_001090758_1_NM_00109_c9f23c":{
+       "Baseline MG94xREV":0.01674134488361617,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":1,
+       "Full adaptive model":0.01636748131663835,
+       "Full adaptive model (non-synonymous subs/site)":0.01636748131663835,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":0.06402315276318404,
+       "Nucleotide GTR":0.08690399778745803,
+       "Rate Distributions":        [
+[10000000000, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":0.4505979312363438,
+       "original name":"NP_001090758_1_NM_00109_c9f23c"
+      },
+     "Node1":{
+       "Baseline MG94xREV":0.01790726636813953,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.01629462885347379,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.01629462885347379,
+       "LRT":0,
+       "Nucleotide GTR":0.01767059815579365,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1
+      },
+     "Node11":{
+       "Baseline MG94xREV":0.006412087533385828,
+       "Baseline MG94xREV omega ratio":0.4984245935774384,
+       "Corrected P-value":1,
+       "Full adaptive model":0.007440988438942485,
+       "Full adaptive model (non-synonymous subs/site)":0.003273035757651895,
+       "Full adaptive model (synonymous subs/site)":0.004167952681290589,
+       "LRT":0,
+       "Nucleotide GTR":0.01326857318364894,
+       "Rate Distributions":        [
+[0.2831722136750687, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1
+      },
+     "Node13":{
+       "Baseline MG94xREV":0.02499686694301433,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.02307231696320599,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.02307231696320599,
+       "LRT":0,
+       "Nucleotide GTR":0.01516742696641697,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1
+      },
+     "Node17":{
+       "Baseline MG94xREV":0.02244179617779252,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.02123961970875782,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.02123961970875782,
+       "LRT":0,
+       "Nucleotide GTR":0.02300270995656279,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1
+      },
+     "Node3":{
+       "Baseline MG94xREV":0.06770409434608962,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.06457078627945943,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.06457078627945943,
+       "LRT":0,
+       "Nucleotide GTR":0.04520176776927062,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1
+      },
+     "Node5":{
+       "Baseline MG94xREV":0.3283132119563178,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.2378953691052985,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.2378953691052985,
+       "LRT":0,
+       "Nucleotide GTR":0.09690334031485474,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1
+      },
+     "Node7":{
+       "Baseline MG94xREV":0.7697326905201342,
+       "Baseline MG94xREV omega ratio":0.01073727076418554,
+       "Corrected P-value":1,
+       "Full adaptive model":0.5005993052481701,
+       "Full adaptive model (non-synonymous subs/site)":0.01645015572518729,
+       "Full adaptive model (synonymous subs/site)":0.4841491495229825,
+       "LRT":0,
+       "Nucleotide GTR":0.1640607874415519,
+       "Rate Distributions":        [
+[0.01225218387742585, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1
+      },
+     "Node9":{
+       "Baseline MG94xREV":0.05618052558052833,
+       "Baseline MG94xREV omega ratio":0.02960310029679258,
+       "Corrected P-value":1,
+       "Full adaptive model":0.05419628134793354,
+       "Full adaptive model (non-synonymous subs/site)":0.003254060369195617,
+       "Full adaptive model (synonymous subs/site)":0.05094222097873796,
+       "LRT":0,
+       "Nucleotide GTR":0.02703087603534994,
+       "Rate Distributions":        [
+[0.02303405481331282, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1
+      },
+     "XP_011885129_1_XM_01202_53ecb0":{
+       "Baseline MG94xREV":0.02065843585804975,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.02130205235933203,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.02130205235933203,
+       "LRT":0,
+       "Nucleotide GTR":0.01970679255013504,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XP_011885129_1_XM_01202_53ecb0"
+      },
+     "XP_012614566_2_XM_01275_945ab4":{
+       "Baseline MG94xREV":0.07087929586651438,
+       "Baseline MG94xREV omega ratio":0.02331976369575909,
+       "Corrected P-value":1,
+       "Full adaptive model":0.0684100114226861,
+       "Full adaptive model (non-synonymous subs/site)":0.003262706589177007,
+       "Full adaptive model (synonymous subs/site)":0.06514730483350901,
+       "LRT":0,
+       "Nucleotide GTR":0.05209391898689211,
+       "Rate Distributions":        [
+[0.01805943804312523, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XP_012614566_2_XM_01275_945ab4"
+      },
+     "XP_025939132_1_XM_02608_6aec63":{
+       "Baseline MG94xREV":0.003245118650603204,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.002538902941031978,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.002538902941031978,
+       "LRT":0,
+       "Nucleotide GTR":0.004114582634392213,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XP_025939132_1_XM_02608_6aec63"
+      },
+     "XP_032626897_1_XM_03277_f6b30e":{
+       "Baseline MG94xREV":0.03250616846798129,
+       "Baseline MG94xREV omega ratio":0.2120579287468495,
+       "Corrected P-value":1,
+       "Full adaptive model":0.02743625842027587,
+       "Full adaptive model (non-synonymous subs/site)":0.00966539727363575,
+       "Full adaptive model (synonymous subs/site)":0.01777086114664012,
+       "LRT":0,
+       "Nucleotide GTR":0.04646187767792714,
+       "Rate Distributions":        [
+[0.1961254267512919, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XP_032626897_1_XM_03277_f6b30e"
+      },
+     "XP_041604521_1_XM_04174_7e8d4b":{
+       "Baseline MG94xREV":0.003274966945216503,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":1,
+       "Full adaptive model":0.003265099092157305,
+       "Full adaptive model (non-synonymous subs/site)":0.003265099092157305,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":0.04353646946492518,
+       "Nucleotide GTR":0.01967514462852449,
+       "Rate Distributions":        [
+[10000000000, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":0.4604837738262802,
+       "original name":"XP_041604521_1_XM_04174_7e8d4b"
+      },
+     "XP_047919596_1_XM_04806_0c6d33":{
+       "Baseline MG94xREV":0.02054489223305242,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.02117941185318775,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.02117941185318775,
+       "LRT":0,
+       "Nucleotide GTR":0.01924379796299485,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XP_047919596_1_XM_04806_0c6d33"
+      },
+     "XP_054352982_1_XM_05449_233884":{
+       "Baseline MG94xREV":0.03432973336941449,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.03412925725657203,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.03412925725657203,
+       "LRT":0,
+       "Nucleotide GTR":0.02914078798872378,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XP_054352982_1_XM_05449_233884"
+      },
+     "XP_054499394_1_XM_05464_33d08b":{
+       "Baseline MG94xREV":0.07873471140706327,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.0718963766555272,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.0718963766555272,
+       "LRT":0,
+       "Nucleotide GTR":0.06322153585801821,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XP_054499394_1_XM_05464_33d08b"
+      },
+     "XP_062041590_1_XM_06218_d11611":{
+       "Baseline MG94xREV":0.1180421279192623,
+       "Baseline MG94xREV omega ratio":0.0798515027063518,
+       "Corrected P-value":1,
+       "Full adaptive model":0.1108478622706864,
+       "Full adaptive model (non-synonymous subs/site)":0.0168025529200676,
+       "Full adaptive model (synonymous subs/site)":0.09404530935061887,
+       "LRT":0,
+       "Nucleotide GTR":0.081619697549283,
+       "Rate Distributions":        [
+[0.06442594511074173, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XP_062041590_1_XM_06218_d11611"
+      },
+     "XP_069726565_1_XM_06987_381d08":{
+       "Baseline MG94xREV":0.03350850830415324,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.03236152069299058,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.03236152069299058,
+       "LRT":0,
+       "Nucleotide GTR":0.03094334523214338,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XP_069726565_1_XM_06987_381d08"
+      }
+    },
+   "attributes":{
+     "Baseline MG94xREV":{
+       "attribute type":"branch length",
+       "display order":1
+      },
+     "Baseline MG94xREV omega ratio":{
+       "attribute type":"branch label",
+       "display order":1
+      },
+     "Corrected P-value":{
+       "attribute type":"branch label",
+       "display order":6
+      },
+     "Full adaptive model":{
+       "attribute type":"branch length",
+       "display order":2
+      },
+     "Full adaptive model (non-synonymous subs/site)":{
+       "attribute type":"branch label",
+       "display order":10
+      },
+     "Full adaptive model (synonymous subs/site)":{
+       "attribute type":"branch label",
+       "display order":9
+      },
+     "LRT":{
+       "attribute type":"branch label",
+       "display order":4
+      },
+     "Nucleotide GTR":{
+       "attribute type":"branch length",
+       "display order":0
+      },
+     "Rate Distributions":{
+       "attribute type":"branch label",
+       "display order":3
+      },
+     "Rate classes":{
+       "attribute type":"branch label",
+       "display order":2
+      },
+     "Uncorrected P-value":{
+       "attribute type":"branch label",
+       "display order":5
+      },
+     "original name":{
+       "attribute type":"node label",
+       "display order":-1
+      },
+     "posterior":{
+       "attribute type":"branch annotations",
+       "display order":-1
+      }
+    }
+  },
+ "data partitions":{
+   "0":{
+     "coverage":      [
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103] 
+      ],
+     "name":"absrel.filter.default"
+    }
+  },
+ "fits":{
+   "Baseline MG94xREV":{
+     "AIC-c":2572.304803240776,
+     "Equilibrium frequencies":      [
+[0.02901136602155825],
+      [0.04345244368789561],
+      [0.03923611203896463],
+      [0.02162120567543158],
+      [0.009124794985416341],
+      [0.01366687249310363],
+      [0.01234073149517791],
+      [0.00680040605393171],
+      [0.01235804375139838],
+      [0.01850954552781674],
+      [0.01671350424698994],
+      [0.009210038765372649],
+      [0.01626693122535634],
+      [0.02436417204620486],
+      [0.02200003735135847],
+      [0.0121232025224243],
+      [0.02156725112547794],
+      [0.03230284862616054],
+      [0.02916839837541323],
+      [0.01607335456355721],
+      [0.006783436008243701],
+      [0.0101600479942799],
+      [0.009174185559922185],
+      [0.005055469122390811],
+      [0.009187055611514307],
+      [0.01376012478420515],
+      [0.01242493521379566],
+      [0.006846806826695907],
+      [0.01209294972589143],
+      [0.0181124948268336],
+      [0.01635498066426992],
+      [0.009012473009780352],
+      [0.02753181480251587],
+      [0.04123641166854767],
+      [0.03723510879924833],
+      [0.02051854538737485],
+      [0.00865943938878045],
+      [0.01296987539746042],
+      [0.01171136629003738],
+      [0.00645359201354488],
+      [0.01172779563816671],
+      [0.01756557685604682],
+      [0.01586113191937433],
+      [0.0087403358195476],
+      [0.01543733368394206],
+      [0.02312162316294534],
+      [0.02087805701930542],
+      [0.01150493108158895],
+      [0.0334202586520029],
+      [0.01662935901214607],
+      [0.007018086502786557],
+      [0.01051150119344617],
+      [0.00949153611442694],
+      [0.005230346327434612],
+      [0.01423611071252544],
+      [0.01285473468253642],
+      [0.007083649424749627],
+      [0.01251126525657733],
+      [0.01873903657696678],
+      [0.01692072703475914],
+      [0.009324229654381859] 
+      ],
+     "Log Likelihood":-1231.62627879729,
+     "Rate Distributions":{
+       "Per-branch omega":{
+         "2.5%":0,
+         "97.5%":10000000000,
+         "Mean":1250000000.106749,
+         "Median":0.05472730150157219
+        }
+      },
+     "display order":1,
+     "estimated parameters":52
+    },
+   "Full adaptive model":{
+     "AIC-c":2550.388967265183,
+     "Log Likelihood":-1220.668360809493,
+     "Rate Distributions":{
+      },
+     "display order":2,
+     "estimated parameters":52
+    },
+   "Nucleotide GTR":{
+     "AIC-c":3067.451464262105,
+     "Equilibrium frequencies":      [
+[0.3050699300699301],
+      [0.2398018648018648],
+      [0.2534965034965035],
+      [0.2016317016317016] 
+      ],
+     "Log Likelihood":-1506.503640474178,
+     "Rate Distributions":{
+       "Substitution rate from nucleotide A to nucleotide C":0.4644057826667432,
+       "Substitution rate from nucleotide A to nucleotide G":1,
+       "Substitution rate from nucleotide A to nucleotide T":0.2178778836819802,
+       "Substitution rate from nucleotide C to nucleotide G":0.3164350710169661,
+       "Substitution rate from nucleotide C to nucleotide T":2.46548918343745,
+       "Substitution rate from nucleotide G to nucleotide T":0.1432769595898123
+      },
+     "display order":0,
+     "estimated parameters":27
+    }
+  },
+ "input":{
+   "file name":"/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.4.codon.fas",
+   "number of sequences":11,
+   "number of sites":104,
+   "partition count":1,
+   "trees":{
+     "0":"((XP_025939132_1_XM_02608_6aec63:0.003956516,(XP_032626897_1_XM_03277_f6b30e:0.048177548,(NP_001090758_1_NM_00109_c9f23c:0.096077812,(XP_041604521_1_XM_04174_7e8d4b:0.017479721,(XP_012614566_2_XM_01275_945ab4:0.054964055,(XP_062041590_1_XM_06218_d11611:0.08663091000000001,(XP_054352982_1_XM_05449_233884:0.030116957,XP_011885129_1_XM_01202_53ecb0:0.020192801)Node13:0.017194365)Node11:0.011969596)Node9:0.031780908)Node7:0.180203537)Node5:0.10771375)Node3:0.049815163)Node1:0.019049344,XP_047919596_1_XM_04806_0c6d33:0.019978122,(XP_069726565_1_XM_06987_381d08:0.032647737,XP_054499394_1_XM_05464_33d08b:0.06780156900000001)Node17:0.024053133)"
+    }
+  },
+ "runtime":"2.5.86",
+ "substitutions":{
+   "0":{
+     "0":{
+       "Node5":"TAT",
+       "Node7":"TAC",
+       "root":"TAC"
+      },
+     "1":{
+       "Node3":"AGA",
+       "Node7":"CGA",
+       "Node9":"CGC",
+       "XP_054352982_1_XM_05449_233884":"CGT",
+       "XP_054499394_1_XM_05464_33d08b":"AGA",
+       "root":"CGA"
+      },
+     "10":{
+       "Node5":"CGA",
+       "Node7":"CGG",
+       "XP_054352982_1_XM_05449_233884":"CGA",
+       "XP_054499394_1_XM_05464_33d08b":"CGC",
+       "root":"CGT"
+      },
+     "100":{
+       "Node5":"CAC",
+       "root":"CAT"
+      },
+     "101":{
+       "Node3":"TAT",
+       "Node5":"TAC",
+       "root":"TAC"
+      },
+     "102":{
+       "Node7":"CTG",
+       "XP_054499394_1_XM_05464_33d08b":"CTA",
+       "root":"TTA"
+      },
+     "103":{
+       "Node7":"CAG",
+       "root":"CAA"
+      },
+     "11":{
+       "root":"GAC"
+      },
+     "12":{
+       "Node17":"AAT",
+       "XP_011885129_1_XM_01202_53ecb0":"AAT",
+       "root":"AAC"
+      },
+     "13":{
+       "Node5":"GGG",
+       "XP_047919596_1_XM_04806_0c6d33":"GGG",
+       "XP_054499394_1_XM_05464_33d08b":"GGG",
+       "root":"GGA"
+      },
+     "14":{
+       "Node1":"CAG",
+       "root":"CAA"
+      },
+     "15":{
+       "Node5":"TTT",
+       "XP_062041590_1_XM_06218_d11611":"TTC",
+       "root":"TTC"
+      },
+     "16":{
+       "Node5":"CTA",
+       "Node7":"TTA",
+       "XP_012614566_2_XM_01275_945ab4":"CTA",
+       "XP_047919596_1_XM_04806_0c6d33":"CTA",
+       "XP_062041590_1_XM_06218_d11611":"CTG",
+       "root":"TTA"
+      },
+     "17":{
+       "root":"AGC"
+      },
+     "18":{
+       "Node3":"AGA",
+       "Node7":"AGG",
+       "Node9":"CGG",
+       "root":"CGA"
+      },
+     "19":{
+       "Node7":"AAG",
+       "root":"AAA"
+      },
+     "2":{
+       "Node9":"GAG",
+       "root":"GAA"
+      },
+     "20":{
+       "XP_012614566_2_XM_01275_945ab4":"TTC",
+       "XP_054499394_1_XM_05464_33d08b":"TTC",
+       "root":"TTT"
+      },
+     "21":{
+       "root":"GTG"
+      },
+     "22":{
+       "Node5":"CTT",
+       "Node7":"CTG",
+       "XP_069726565_1_XM_06987_381d08":"CTG",
+       "root":"TTA"
+      },
+     "23":{
+       "Node1":"TCA",
+       "Node7":"ACG",
+       "XP_012614566_2_XM_01275_945ab4":"ACA",
+       "XP_054352982_1_XM_05449_233884":"ACA",
+       "XP_054499394_1_XM_05464_33d08b":"TCA",
+       "root":"TCG"
+      },
+     "24":{
+       "Node3":"GAA",
+       "XP_012614566_2_XM_01275_945ab4":"GAG",
+       "XP_062041590_1_XM_06218_d11611":"GAG",
+       "root":"GAG"
+      },
+     "25":{
+       "Node3":"CGG",
+       "Node5":"CGT",
+       "Node7":"CGA",
+       "XP_062041590_1_XM_06218_d11611":"CGG",
+       "root":"AGG"
+      },
+     "26":{
+       "Node9":"GAG",
+       "root":"GAA"
+      },
+     "27":{
+       "Node3":"GGC",
+       "Node5":"GGA",
+       "Node7":"GGT",
+       "XP_012614566_2_XM_01275_945ab4":"GGC",
+       "XP_062041590_1_XM_06218_d11611":"GGG",
+       "root":"GGT"
+      },
+     "28":{
+       "Node7":"GCC",
+       "XP_041604521_1_XM_04174_7e8d4b":"TCC",
+       "XP_047919596_1_XM_04806_0c6d33":"GCG",
+       "XP_054352982_1_XM_05449_233884":"GCT",
+       "XP_054499394_1_XM_05464_33d08b":"GCT",
+       "root":"GCA"
+      },
+     "29":{
+       "Node5":"TTA",
+       "Node7":"CTG",
+       "XP_069726565_1_XM_06987_381d08":"TTG",
+       "root":"CTG"
+      },
+     "3":{
+       "Node7":"GGC",
+       "XP_054352982_1_XM_05449_233884":"GGT",
+       "root":"GGA"
+      },
+     "30":{
+       "Node5":"AAA",
+       "Node7":"AAG",
+       "XP_069726565_1_XM_06987_381d08":"AAA",
+       "root":"AAG"
+      },
+     "31":{
+       "Node3":"TAT",
+       "XP_062041590_1_XM_06218_d11611":"TAC",
+       "root":"TAC"
+      },
+     "32":{
+       "Node5":"TTT",
+       "Node7":"TTC",
+       "root":"TTC"
+      },
+     "33":{
+       "root":"AAC"
+      },
+     "34":{
+       "Node7":"AGA",
+       "XP_012614566_2_XM_01275_945ab4":"AGG",
+       "XP_062041590_1_XM_06218_d11611":"AAG",
+       "root":"AAA"
+      },
+     "35":{
+       "Node5":"AAC",
+       "Node9":"AAT",
+       "XP_012614566_2_XM_01275_945ab4":"AGT",
+       "XP_054499394_1_XM_05464_33d08b":"AAC",
+       "root":"AAT"
+      },
+     "36":{
+       "Node3":"GAT",
+       "Node5":"GAC",
+       "Node7":"GAT",
+       "Node9":"GAC",
+       "XP_054352982_1_XM_05449_233884":"GAT",
+       "XP_054499394_1_XM_05464_33d08b":"GAT",
+       "root":"GAC"
+      },
+     "37":{
+       "Node7":"GCC",
+       "root":"GCA"
+      },
+     "38":{
+       "Node5":"AAG",
+       "root":"AAA"
+      },
+     "39":{
+       "Node5":"GAG",
+       "XP_011885129_1_XM_01202_53ecb0":"GAA",
+       "root":"GAA"
+      },
+     "4":{
+       "NP_001090758_1_NM_00109_c9f23c":"CTT",
+       "XP_032626897_1_XM_03277_f6b30e":"CTT",
+       "XP_047919596_1_XM_04806_0c6d33":"TTC",
+       "XP_062041590_1_XM_06218_d11611":"TTC",
+       "root":"TTT"
+      },
+     "40":{
+       "root":"CCC"
+      },
+     "41":{
+       "Node7":"AAG",
+       "root":"AAA"
+      },
+     "42":{
+       "Node3":"GCT",
+       "Node5":"GCA",
+       "Node7":"GCC",
+       "XP_011885129_1_XM_01202_53ecb0":"GCT",
+       "XP_069726565_1_XM_06987_381d08":"GCG",
+       "root":"GCA"
+      },
+     "43":{
+       "NP_001090758_1_NM_00109_c9f23c":"GTT",
+       "Node11":"GTC",
+       "Node13":"GTG",
+       "Node7":"ATC",
+       "root":"ATT"
+      },
+     "44":{
+       "root":"ATG"
+      },
+     "45":{
+       "root":"AAG"
+      },
+     "46":{
+       "Node7":"ATC",
+       "XP_011885129_1_XM_01202_53ecb0":"ATT",
+       "XP_012614566_2_XM_01275_945ab4":"ATA",
+       "XP_054499394_1_XM_05464_33d08b":"ATC",
+       "root":"ATT"
+      },
+     "47":{
+       "Node7":"GAG",
+       "XP_054499394_1_XM_05464_33d08b":"GAG",
+       "root":"GAA"
+      },
+     "48":{
+       "NP_001090758_1_NM_00109_c9f23c":"TAT",
+       "Node13":"CAC",
+       "XP_054499394_1_XM_05464_33d08b":"CAC",
+       "XP_062041590_1_XM_06218_d11611":"CAC",
+       "root":"CAT"
+      },
+     "49":{
+       "NP_001090758_1_NM_00109_c9f23c":"ATA",
+       "Node17":"CTA",
+       "Node7":"CTG",
+       "XP_011885129_1_XM_01202_53ecb0":"CTA",
+       "XP_012614566_2_XM_01275_945ab4":"CTA",
+       "root":"TTA"
+      },
+     "5":{
+       "Node3":"CTC",
+       "XP_054352982_1_XM_05449_233884":"CTG",
+       "XP_062041590_1_XM_06218_d11611":"CTG",
+       "root":"CTG"
+      },
+     "50":{
+       "Node7":"AAC",
+       "XP_012614566_2_XM_01275_945ab4":"AAT",
+       "XP_054499394_1_XM_05464_33d08b":"AAC",
+       "root":"AAT"
+      },
+     "51":{
+       "Node3":"GCG",
+       "Node5":"GCT",
+       "Node7":"GCC",
+       "XP_012614566_2_XM_01275_945ab4":"GCG",
+       "XP_054499394_1_XM_05464_33d08b":"GCC",
+       "root":"GCA"
+      },
+     "52":{
+       "Node7":"ACC",
+       "XP_054499394_1_XM_05464_33d08b":"ACC",
+       "root":"ACT"
+      },
+     "53":{
+       "XP_069726565_1_XM_06987_381d08":"TTT",
+       "root":"TTC"
+      },
+     "54":{
+       "Node3":"CAA",
+       "Node5":"CAG",
+       "root":"CAG"
+      },
+     "55":{
+       "Node5":"CCG",
+       "Node7":"CCA",
+       "Node9":"CCG",
+       "XP_012614566_2_XM_01275_945ab4":"CCA",
+       "root":"CCT"
+      },
+     "56":{
+       "Node5":"GCC",
+       "XP_032626897_1_XM_03277_f6b30e":"TCA",
+       "root":"GCA"
+      },
+     "57":{
+       "Node5":"AAG",
+       "root":"AAA"
+      },
+     "58":{
+       "Node1":"ATA",
+       "Node5":"ATT",
+       "Node7":"ATC",
+       "XP_069726565_1_XM_06987_381d08":"ATC",
+       "root":"ATT"
+      },
+     "59":{
+       "Node7":"GGC",
+       "root":"GGG"
+      },
+     "6":{
+       "root":"TGG"
+      },
+     "60":{
+       "Node7":"CAC",
+       "root":"AAC"
+      },
+     "61":{
+       "Node17":"CCA",
+       "Node3":"CCA",
+       "Node7":"CCC",
+       "XP_062041590_1_XM_06218_d11611":"CCG",
+       "root":"CCG"
+      },
+     "62":{
+       "NP_001090758_1_NM_00109_c9f23c":"AAC",
+       "Node1":"CAT",
+       "Node13":"CAT",
+       "Node5":"CAC",
+       "root":"CAC"
+      },
+     "63":{
+       "Node5":"GGC",
+       "XP_054499394_1_XM_05464_33d08b":"GGG",
+       "root":"GGA"
+      },
+     "64":{
+       "Node17":"CTG",
+       "Node5":"CTG",
+       "root":"CTA"
+      },
+     "65":{
+       "Node3":"CAA",
+       "Node7":"CAG",
+       "root":"CAG"
+      },
+     "66":{
+       "Node5":"ATT",
+       "Node7":"GTC",
+       "XP_062041590_1_XM_06218_d11611":"CTC",
+       "root":"ATC"
+      },
+     "67":{
+       "Node5":"ACC",
+       "XP_054352982_1_XM_05449_233884":"ACG",
+       "root":"ACT"
+      },
+     "68":{
+       "Node5":"TAT",
+       "Node7":"TAC",
+       "XP_012614566_2_XM_01275_945ab4":"TAT",
+       "root":"TAC"
+      },
+     "69":{
+       "Node7":"CTG",
+       "root":"TTG"
+      },
+     "7":{
+       "XP_062041590_1_XM_06218_d11611":"AAA",
+       "root":"AAG"
+      },
+     "70":{
+       "root":"AAG"
+      },
+     "71":{
+       "Node5":"GAT",
+       "Node7":"GAC",
+       "root":"GAC"
+      },
+     "72":{
+       "Node3":"AAC",
+       "XP_012614566_2_XM_01275_945ab4":"AAT",
+       "root":"AAT"
+      },
+     "73":{
+       "Node5":"AGT",
+       "Node7":"AGC",
+       "root":"AGC"
+      },
+     "74":{
+       "Node13":"ACG",
+       "Node7":"ACC",
+       "root":"ACA"
+      },
+     "75":{
+       "Node7":"CGC",
+       "XP_012614566_2_XM_01275_945ab4":"CGA",
+       "XP_069726565_1_XM_06987_381d08":"CGG",
+       "root":"AGG"
+      },
+     "76":{
+       "Node3":"AAT",
+       "Node7":"AAC",
+       "root":"AAC"
+      },
+     "77":{
+       "root":"ATC"
+      },
+     "78":{
+       "Node9":"TTC",
+       "root":"TTT"
+      },
+     "79":{
+       "Node5":"GTG",
+       "Node7":"GTC",
+       "Node9":"ATC",
+       "XP_047919596_1_XM_04806_0c6d33":"GTT",
+       "XP_062041590_1_XM_06218_d11611":"CTG",
+       "root":"GTC"
+      },
+     "8":{
+       "Node5":"CGA",
+       "Node7":"CGC",
+       "Node9":"CGT",
+       "XP_012614566_2_XM_01275_945ab4":"CGA",
+       "root":"AGA"
+      },
+     "80":{
+       "Node7":"TAC",
+       "root":"TAT"
+      },
+     "81":{
+       "Node1":"CAT",
+       "Node7":"CAC",
+       "XP_011885129_1_XM_01202_53ecb0":"CAT",
+       "XP_054499394_1_XM_05464_33d08b":"CAT",
+       "root":"CAC"
+      },
+     "82":{
+       "Node5":"GAG",
+       "Node7":"GAA",
+       "Node9":"GAG",
+       "XP_062041590_1_XM_06218_d11611":"GAT",
+       "root":"GAA"
+      },
+     "83":{
+       "XP_054352982_1_XM_05449_233884":"GAC",
+       "XP_062041590_1_XM_06218_d11611":"GAC",
+       "root":"GAT"
+      },
+     "84":{
+       "Node5":"GGG",
+       "XP_062041590_1_XM_06218_d11611":"GGC",
+       "root":"GGC"
+      },
+     "85":{
+       "root":"AAG"
+      },
+     "86":{
+       "Node5":"GAG",
+       "root":"GAA"
+      },
+     "87":{
+       "Node17":"ATA",
+       "Node3":"ATA",
+       "Node5":"ATT",
+       "Node7":"ATC",
+       "Node9":"ATT",
+       "XP_012614566_2_XM_01275_945ab4":"ATC",
+       "XP_032626897_1_XM_03277_f6b30e":"ACA",
+       "XP_047919596_1_XM_04806_0c6d33":"ATC",
+       "XP_062041590_1_XM_06218_d11611":"GTT",
+       "root":"ATT"
+      },
+     "88":{
+       "Node5":"GTA",
+       "Node7":"GTG",
+       "root":"GTG"
+      },
+     "89":{
+       "Node5":"GAC",
+       "root":"GAT"
+      },
+     "9":{
+       "Node7":"GGC",
+       "root":"GGA"
+      },
+     "90":{
+       "root":"TGG"
+      },
+     "91":{
+       "root":"TTC"
+      },
+     "92":{
+       "Node17":"AAC",
+       "XP_012614566_2_XM_01275_945ab4":"AAC",
+       "XP_062041590_1_XM_06218_d11611":"AAC",
+       "root":"AAT"
+      },
+     "93":{
+       "Node13":"GCA",
+       "Node7":"GCG",
+       "root":"GCC"
+      },
+     "94":{
+       "Node17":"ATC",
+       "Node3":"ATC",
+       "Node5":"ATT",
+       "Node7":"CTC",
+       "XP_062041590_1_XM_06218_d11611":"CTG",
+       "root":"ATT"
+      },
+     "95":{
+       "Node3":"CGT",
+       "Node5":"CGA",
+       "Node7":"CGT",
+       "Node9":"CGA",
+       "XP_062041590_1_XM_06218_d11611":"CGG",
+       "root":"CGG"
+      },
+     "96":{
+       "Node3":"GCC",
+       "Node5":"GCT",
+       "Node7":"GCA",
+       "Node9":"GCT",
+       "XP_062041590_1_XM_06218_d11611":"GCC",
+       "root":"GCA"
+      },
+     "97":{
+       "Node5":"GCC",
+       "XP_025939132_1_XM_02608_6aec63":"GCG",
+       "root":"GCA"
+      },
+     "98":{
+       "Node3":"CGG",
+       "Node5":"CGC",
+       "XP_054499394_1_XM_05464_33d08b":"CGC",
+       "root":"CGT"
+      },
+     "99":{
+       "Node3":"TTC",
+       "Node5":"TTT",
+       "Node7":"TTC",
+       "XP_054499394_1_XM_05464_33d08b":"TTC",
+       "root":"TTT"
+      }
+    }
+  },
+ "test results":{
+   "P-value threshold":0.05,
+   "positive test results":0,
+   "tested":19
+  },
+ "tested":{
+   "0":{
+     "NP_001090758_1_NM_00109_c9f23c":"test",
+     "Node1":"test",
+     "Node11":"test",
+     "Node13":"test",
+     "Node17":"test",
+     "Node3":"test",
+     "Node5":"test",
+     "Node7":"test",
+     "Node9":"test",
+     "XP_011885129_1_XM_01202_53ecb0":"test",
+     "XP_012614566_2_XM_01275_945ab4":"test",
+     "XP_025939132_1_XM_02608_6aec63":"test",
+     "XP_032626897_1_XM_03277_f6b30e":"test",
+     "XP_041604521_1_XM_04174_7e8d4b":"test",
+     "XP_047919596_1_XM_04806_0c6d33":"test",
+     "XP_054352982_1_XM_05449_233884":"test",
+     "XP_054499394_1_XM_05464_33d08b":"test",
+     "XP_062041590_1_XM_06218_d11611":"test",
+     "XP_069726565_1_XM_06987_381d08":"test"
+    }
+  },
+ "timers":{
+   "Baseline model fitting":{
+     "order":2,
+     "timer":1
+    },
+   "Complexity analysis":{
+     "order":3,
+     "timer":1766967540
+    },
+   "Full adaptive model fitting":{
+     "order":4,
+     "timer":4
+    },
+   "Overall":{
+     "order":0,
+     "timer":21
+    },
+   "Preliminary model fitting":{
+     "order":1,
+     "timer":0
+    },
+   "Testing for selection":{
+     "order":5,
+     "timer":3
+    }
+  }
+}

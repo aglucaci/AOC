@@ -43,7 +43,7 @@ prior to running selection analyses
 /Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas.FastTree.treefile
 results/Primate_TP53/Primate_TP53.2.codon.fas.FastTree.treefile
 
->Loaded a multiple sequence alignment with **34** sequences, **66** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas`
+>Loaded a multiple sequence alignment with **34** sequences, **67** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas`
 Save FUBAR cache to : 
 >cache => /Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas.FUBAR.cache
 > FUBAR will write cache and result files to _/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas.FUBAR.cache_ and _/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas.FUBAR.json_, respectively 
@@ -63,10 +63,10 @@ Save FUBAR cache to :
 
 >kill-zero-lengths => Yes
 
-### Deleted 7 zero-length internal branches: `Node1, Node25, Node28, Node30, Node36, Node50, Node51`
-* Log(L) =  -735.68, AIC-c =  1608.77 (68 estimated parameters)
-* 1 partition. Total tree length by partition (subs/site)  2.164
-* Tree length (expected substitutions/site) for partition 1 :    2.164
+### Deleted 8 zero-length internal branches: `Node1, Node23, Node25, Node28, Node30, Node36, Node50, Node51`
+* Log(L) =  -747.65, AIC-c =  1632.69 (68 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.200
+* Tree length (expected substitutions/site) for partition 1 :    2.200
 
 ### Computing the phylogenetic likelihood function on the grid 
 * Determining appropriate tree scaling based on the best score from a  20 x 20 rate grid
@@ -78,7 +78,7 @@ Save FUBAR cache to :
 ### Running an iterative zeroth order variational Bayes procedure to estimate the posterior mean of rate weights
 * Using the following settings
 	* Dirichlet alpha  : 0.5
-[2K[mcmc] Posterior mean estimation step          1, error =  3.4904255[2K[mcmc] Posterior mean estimation step          2, error =  0.0015597[2K[mcmc] Posterior mean estimation step          3, error =  0.0003109[2K[mcmc] Posterior mean estimation step          4, error =  0.0000826[2K[mcmc] Posterior mean estimation step          5, error =  0.0000251[2K[mcmc] Posterior mean estimation step          6, error =  0.0000083[2K[mcmc] Posterior mean estimation step          7, error =  0.0000030[2K[mcmc] Posterior mean estimation step          8, error =  0.0000011[2K[mcmc] Posterior mean estimation step          9, error =  0.0000004[2K[mcmc] Posterior mean estimation step         10, error =  0.0000002[2K[mcmc] Posterior mean estimation step         11, error =  0.0000001[2K[mcmc] Posterior mean estimation step         12, error =  0.0000000[2K[mcmc] Posterior mean estimation step         13, error =  0.0000000[2K[mcmc] Posterior mean estimation step         14, error =  0.0000000[2K                                                                    [2K
+[2K[mcmc] Posterior mean estimation step          1, error =  3.5263079[2K[mcmc] Posterior mean estimation step          2, error =  0.0015326[2K[mcmc] Posterior mean estimation step          3, error =  0.0003102[2K[mcmc] Posterior mean estimation step          4, error =  0.0000826[2K[mcmc] Posterior mean estimation step          5, error =  0.0000250[2K[mcmc] Posterior mean estimation step          6, error =  0.0000082[2K[mcmc] Posterior mean estimation step          7, error =  0.0000029[2K[mcmc] Posterior mean estimation step          8, error =  0.0000011[2K[mcmc] Posterior mean estimation step          9, error =  0.0000004[2K[mcmc] Posterior mean estimation step         10, error =  0.0000002[2K[mcmc] Posterior mean estimation step         11, error =  0.0000001[2K[mcmc] Posterior mean estimation step         12, error =  0.0000000[2K[mcmc] Posterior mean estimation step         13, error =  0.0000000[2K[mcmc] Posterior mean estimation step         14, error =  0.0000000[2K                                                                    [2K
 ### Tabulating site-level results
 ----
 ## FUBAR inferred no sites under subject to positive selection at posterior probability >= 0.9

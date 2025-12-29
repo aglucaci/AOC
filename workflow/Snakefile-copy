@@ -1,0 +1,1205 @@
+"""
+Snakemake workflow for AOC: preprocessing + recombination + (optional) selection analyses
+Multi-gene manifest-driven workflow, updated for Snakemake >= 8.
+
+- Keeps the same preprocessing rules from your AOC Snakefile (get_codons -> macse -> cln -> strike_ambigs -> remove_duplicates -> iqtree -> tn93_cluster -> GARD -> parse_gard -> annotate_lineages)
+- Adds the SelectionAnalysis workflow (TN93 distances, FastTree, HyPhy selection suite, tree labelling, RELAX/CFEL, executive summary)
+  in a per-gene / per-partition fashion.
+
+Author: Alexander G. Lucaci (original), merged/modernized.
+"""
+
+import os
+import json
+import glob
+import pandas as pd
+from snakemake.utils import min_version
+min_version("8.0")
+#import matplotlib.pyplot as plt
+
+# -----------------------------------------------------------------------------
+# Configuration
+# -----------------------------------------------------------------------------
+configfile: os.path.join("config", "config.yml")
+
+BASEDIR = os.getcwd()
+LOG_DIR = config.get("log_dir", "logs")
+EMAIL  = config.get("Email", "aoc-user@example.com")
+MTC = config.get("multitestcorr", "fdr")
+NCBI_API_KEY = config.get("NCBI_API_KEY", "XXXXXXXXXX")
+os.makedirs(LOG_DIR, exist_ok=True)
+
+# Optional cluster settings (for ppn etc.)
+cluster_json = os.path.join("config", "cluster.json")
+cluster = {}
+if os.path.exists(cluster_json):
+    with open(cluster_json) as fh:
+        cluster = json.load(fh)
+
+# How many MPI ranks to use for HyPhy MPI analyses
+PPN = int(config.get("ppn", cluster.get("__default__", {}).get("ppn", 1)))
+
+# -----------------------------------------------------------------------------
+# Manifest: each row is one gene dataset
+# -----------------------------------------------------------------------------
+MANIFEST = config.get("MANIFEST")
+if not MANIFEST:
+    raise ValueError(
+        "config.yml must define MANIFEST pointing to a CSV with columns: "
+        "gene,cds_file,protein_file,orthologs_file"
+    )
+
+manifest_df = pd.read_csv(MANIFEST)
+required_cols = {"gene", "cds_file", "protein_file", "orthologs_file"}
+missing = required_cols - set(manifest_df.columns)
+if missing:
+    raise ValueError(f"Manifest is missing required columns: {sorted(missing)}. Found: {list(manifest_df.columns)}")
+
+GENES = manifest_df["gene"].dropna().astype(str).unique().tolist()
+if not GENES:
+    raise ValueError("No genes found in MANIFEST (column 'gene').")
+
+# Constrain wildcards so typos fail fast
+wildcard_constraints:
+    gene="(" + "|".join(map(lambda s: s.replace("(", r"\(").replace(")", r"\)"), GENES)) + ")",
+    part=r"\d+"
+
+# -----------------------------------------------------------------------------
+# Helper path/lookup functions
+# -----------------------------------------------------------------------------
+def _row_for_gene(gene: str):
+    rows = manifest_df.loc[manifest_df["gene"].astype(str) == str(gene)]
+    if rows.shape[0] != 1:
+        raise ValueError(f"Expected exactly one row for gene={gene}, found {rows.shape[0]}")
+    return rows.iloc[0]
+
+def cds_for_gene(wc):
+    return str(_row_for_gene(wc.gene)["cds_file"])
+
+def protein_for_gene(wc):
+    return str(_row_for_gene(wc.gene)["protein_file"])
+
+def orthologs_for_gene(wc):
+    return str(_row_for_gene(wc.gene)["orthologs_file"])
+
+def outdir_for_gene(wc):
+    return os.path.join("results", wc.gene)
+
+# -----------------------------------------------------------------------------
+# Tools / scripts (kept configurable)
+# -----------------------------------------------------------------------------
+HYPHY    = config.get("HYPHY", "hyphy")
+HYPHYMPI = config.get("HYPHYMPI", "HYPHYMPI")
+
+STRIKE_AMBIGS_BF = config.get("STRIKE_AMBIGS_BF", "scripts/strike-ambigs.bf")
+REMOVE_DUPS_BF   = config.get("REMOVE_DUPS_BF", "software/hyphy-analyses/remove-duplicates/remove-duplicates.bf")
+FITMG94_BF       = config.get("FITMG94_BF", "software/hyphy-analyses/FitMG94/FitMG94.bf")
+
+TN93_CLUSTER_SCRIPT = os.path.join(BASEDIR, "scripts", "tn93_cluster.py")
+ANNOTATE_LINEAGES_SCRIPT = os.path.join(BASEDIR, "scripts", "annotate_lineages.py")
+LABEL_TREE_BF = config.get("LABEL_TREE_BF", "software/hyphy-analyses/LabelTrees/label-tree.bf")
+
+# -----------------------------------------------------------------------------
+# GARD partition handling
+# -----------------------------------------------------------------------------
+# If your custom gard_parser exists (e.g. defined below or imported), it will be used.
+# Otherwise, we copy the full MSA as partition 1 so downstream doesn't crash.
+def _fallback_gard_parser(bestgard_path, msa_path, out_fas_path, log_path):
+    with open(msa_path, "r") as fin, open(out_fas_path, "w") as fout:
+        fout.write(fin.read())
+    with open(log_path, "w") as flog:
+        flog.write(f"Fallback parser used; copied {msa_path} -> {out_fas_path}\n")
+
+# For now, we standardize on part=1 unless your gard_parser writes more.
+PARTS = [int(x) for x in config.get("PARTS", [1])] if isinstance(config.get("PARTS", [1]), list) else [1]
+
+# -----------------------------------------------------------------------------
+# Rule all
+# -----------------------------------------------------------------------------
+rule all:
+    input:
+        # Preprocessing / recombination (kept from your AOC Snakefile)
+        expand("results/{gene}/{gene}.codons.fa", gene=GENES),
+        expand("results/{gene}/{gene}.aa.fa", gene=GENES),
+        expand("results/{gene}/{gene}.codons.cln.fa", gene=GENES),
+        expand("results/{gene}/{gene}.SA.codons.cln.fa", gene=GENES),
+        expand("results/{gene}/{gene}.RD.SA.codons.cln.fa", gene=GENES),
+        expand("results/{gene}/{gene}.RD.SA.codons.cln.fa.treefile", gene=GENES),
+        expand("results/{gene}/{gene}.RD.SA.codons.cln.fa.cluster.json", gene=GENES),
+        expand("results/{gene}/{gene}.RD.SA.codons.cln.fa.cluster.fasta", gene=GENES),
+        expand("results/{gene}/{gene}.RD.SA.codons.cln.fa.cluster.fasta.GARD.json", gene=GENES),
+        expand("results/{gene}/{gene}.RD.SA.codons.cln.fa.cluster.fasta.best-gard", gene=GENES),
+        # GARD partitions
+        #expand("results/{gene}/{gene}.{part}.codon.fas", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.gard.log", gene=GENES),
+        expand("results/{gene}/gard_parts", gene=GENES),
+        expand("results/{gene}/gard_parts/parts.txt", gene=GENES),
+        # Lineages TSV
+        expand("results/{gene}/{gene}.lineages.tsv", gene=GENES),
+        
+        # Selection analyses (ALL parts, ALL analyses)
+        expand("results/{gene}/.selection.done", gene=GENES),
+
+        # SelectionAnalysis outputs (per gene, per part)
+        #expand("results/{gene}/{gene}.{part}.codon.fas.dst", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.FastTree.treefile", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.FEL.json", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.FUBAR.json", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.BUSTEDS.json", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.MEME.json", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.ABSREL.json", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.SLAC.json", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.BGM.json", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.BUSTEDS-MH.json", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.FMM.json", gene=GENES, part=PARTS),
+
+        # Group-level selection outputs (need clade labels)
+        #expand("results/{gene}/{gene}.{part}.codon.fas.FastTree.treefile.labelled", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.RELAX.json", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.CFEL.json", gene=GENES, part=PARTS),
+        #expand("results/{gene}/{gene}.{part}.codon.fas.executiveSummary.csv", gene=GENES, part=PARTS),
+        
+        # Run the full pipeline + all parts + all selection analyses first (your existing sentinel)
+        #expand("results/{gene}/.selection.done", gene=GENES),
+
+        # Summarize artifacts (per gene)
+        expand("results/{gene}/Tables/{gene}.AOC.merged_FEL_Results.csv", gene=GENES),
+        expand("results/{gene}/Tables/{gene}.AOC.merged_MEME_Results.csv", gene=GENES),
+        expand("results/{gene}/Visualizations/{gene}.FEL.merged.png", gene=GENES),
+        expand("results/{gene}/Visualizations/{gene}.FEL.merged.svg", gene=GENES),
+        expand("results/{gene}/Tables/{gene}.AOC.executiveSummary.csv", gene=GENES),
+
+        # Optional: strongest single target that implies all summarize rules ran
+        expand("results/{gene}/.summaries.done", gene=GENES),
+
+# -----------------------------------------------------------------------------
+# 1) Extract codons per gene (uses your existing scripts/codons.py which expects `snakemake`)
+# -----------------------------------------------------------------------------
+rule get_codons:
+    input:
+        nuc=cds_for_gene,
+        prot=protein_for_gene
+    output:
+        codons="results/{gene}/{gene}.codons.fa"
+    params:
+        Prot=protein_for_gene,
+        Nuc=cds_for_gene,
+        Out="results/{gene}/{gene}.codons.fa"
+    log:
+        os.path.join(LOG_DIR, "{gene}.codons.log")
+    script:
+        os.path.join(BASEDIR, "scripts", "codons.py")
+
+# -----------------------------------------------------------------------------
+# 2) Align sequences with MACSE
+# -----------------------------------------------------------------------------
+rule macse:
+    input:
+        codons=rules.get_codons.output.codons
+    output:
+        codons="results/{gene}/{gene}.codons.raw.fa",
+        aa="results/{gene}/{gene}.aa.fa"
+    params:
+        MACSE_CMD=config.get("MACSE_CMD", "macse"),
+    log:
+        os.path.join(LOG_DIR, "{gene}.macse.log")
+    shell:
+        r"""
+        mkdir -p results/{wildcards.gene}
+        {params.MACSE_CMD} -prog alignSequences -seq {input.codons} \
+          -out_NT {output.codons} \
+          -out_AA {output.aa} \
+          > {log} 2>&1
+        """
+
+# -----------------------------------------------------------------------------
+# 3) Clean alignment (HyPhy CLN)
+# -----------------------------------------------------------------------------
+rule cln:
+    input:
+        msa=rules.macse.output.codons
+    output:
+        out="results/{gene}/{gene}.codons.cln.fa"
+    log:
+        os.path.join(LOG_DIR, "{gene}.cln.log")
+    shell:
+        r"""
+        mkdir -p results/{wildcards.gene}
+        {HYPHY} CLN Universal {input.msa} 'No/No' {output.out} > {log} 2>&1
+        """
+
+# -----------------------------------------------------------------------------
+# 4) Strike ambiguous sequences
+# -----------------------------------------------------------------------------
+rule strike_ambigs_msa:
+    input:
+        msa=rules.cln.output.out
+    output:
+        out="results/{gene}/{gene}.SA.codons.cln.fa"
+    log:
+        os.path.join(LOG_DIR, "{gene}.strike_ambigs.log")
+    shell:
+        r"""
+        {HYPHY} {STRIKE_AMBIGS_BF} --alignment {input.msa} --output {output.out} > {log} 2>&1
+        """
+
+# -----------------------------------------------------------------------------
+# 5) Remove duplicates
+# -----------------------------------------------------------------------------
+rule remove_duplicates_msa:
+    input:
+        msa=rules.strike_ambigs_msa.output.out
+    output:
+        out="results/{gene}/{gene}.RD.SA.codons.cln.fa"
+    log:
+        os.path.join(LOG_DIR, "{gene}.remove_dups.log")
+    shell:
+        r"""
+        {HYPHY} {REMOVE_DUPS_BF} --msa {input.msa} --output {output.out} ENV='DATA_FILE_PRINT_FORMAT=9' > {log} 2>&1
+        """
+
+# -----------------------------------------------------------------------------
+# 6) IQ-TREE
+# -----------------------------------------------------------------------------
+rule iqtree:
+    input:
+        msa=rules.remove_duplicates_msa.output.out
+    output:
+        tree="results/{gene}/{gene}.RD.SA.codons.cln.fa.treefile"
+    log:
+        os.path.join(LOG_DIR, "{gene}.iqtree.log")
+    shell:
+        r"""
+        iqtree -s {input.msa} -T AUTO -B 1000 --redo-tree > {log} 2>&1
+        """
+
+# -----------------------------------------------------------------------------
+# 7) TN93 clustering (your custom script)
+# -----------------------------------------------------------------------------
+rule tn93_cluster:
+    params:
+        threshold=float(config.get("tn93_threshold", 0.01)),
+        max_seqs=int(config.get("tn93_max_seqs", 20))
+    input:
+        msa=rules.remove_duplicates_msa.output.out
+    output:
+        output_json="results/{gene}/{gene}.RD.SA.codons.cln.fa.cluster.json",
+        output_fasta="results/{gene}/{gene}.RD.SA.codons.cln.fa.cluster.fasta"
+    log:
+        os.path.join(LOG_DIR, "{gene}.tn93_cluster.log")
+    shell:
+        r"""
+        python3 {TN93_CLUSTER_SCRIPT} \
+          --input {input.msa} \
+          --output_fasta {output.output_fasta} \
+          --output_json {output.output_json} \
+          --threshold {params.threshold} \
+          --max_retain {params.max_seqs} \
+          > {log} 2>&1
+        """
+
+# -----------------------------------------------------------------------------
+# 8) Recombination (GARD)
+# -----------------------------------------------------------------------------
+rule recombination:
+    input:
+        msa=rules.tn93_cluster.output.output_fasta
+    output:
+        json="results/{gene}/{gene}.RD.SA.codons.cln.fa.cluster.fasta.GARD.json",
+        bestgard="results/{gene}/{gene}.RD.SA.codons.cln.fa.cluster.fasta.best-gard"
+    log:
+        os.path.join(LOG_DIR, "{gene}.gard.log")
+    params:
+        mode=config.get("gard_mode", "Faster"),
+        use_mpi=bool(config.get("gard_use_mpi", False)),
+    shell:
+        r"""
+        mkdir -p results/{wildcards.gene}
+        if [ "{params.use_mpi}" = "True" ]; then
+          mpirun --use-hwthread-cpus {HYPHYMPI} GARD --alignment {input.msa} --output {output.json} --mode {params.mode} \
+            ENV=TOLERATE_NUMERICAL_ERRORS=1 > {log} 2>&1
+        else
+          {HYPHY} GARD --alignment {input.msa} --output {output.json} --mode {params.mode} \
+            ENV=TOLERATE_NUMERICAL_ERRORS=1 > {log} 2>&1
+        fi
+        # HyPhy typically writes *.best-gard next to output; if not, keep the output target satisfied
+        if [ -f "{output.bestgard}" ]; then
+          true
+        elif ls results/{wildcards.gene}/*.best-gard 1>/dev/null 2>&1; then
+          cp results/{wildcards.gene}/*.best-gard "{output.bestgard}"
+        else
+          touch "{output.bestgard}"
+        fi
+        """
+
+# -----------------------------------------------------------------------------
+# 9) Parse GARD partitions (part=1 by default)
+# -----------------------------------------------------------------------------
+"""
+rule parse_gard:
+    input:
+        gard_json="results/{gene}/{gene}.RD.SA.codons.cln.fa.cluster.fasta.GARD.json",
+        msa="results/{gene}/{gene}.RD.SA.codons.cln.fa.cluster.fasta"
+    output:
+        codon_fas="results/{gene}/{gene}.{part}.codon.fas"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.parse_gard.log")
+    run:
+        # Prefer your original gard_parser if you have it defined/imported
+        if "gard_parser" in globals() and callable(globals()["gard_parser"]):
+            globals()["gard_parser"](wildcards.gene, input.bestgard, input.msa)
+            if not os.path.exists(output.codon_partition):
+                _fallback_gard_parser(input.bestgard, input.msa, output.codon_partition, output.log)
+        else:
+            _fallback_gard_parser(input.bestgard, input.msa, output.codon_partition, output.log)
+"""
+
+# -----------------------------------------------------------------------------
+# GARD parsing: ALL partitions (checkpoint) using your carryover logic
+# -----------------------------------------------------------------------------
+checkpoint parse_gard:
+    input:
+        bestgard=rules.recombination.output.bestgard,
+        msa=rules.remove_duplicates_msa.output.out
+    output:
+        parts_dir=directory("results/{gene}/gard_parts"),
+        parts_txt="results/{gene}/gard_parts/parts.txt",
+        #"results/{gene}/{gene}.gard.log"
+        log="results/{gene}/{gene}.gard.log"
+        #os.path.join(LOG_DIR, "{gene}.parse_gard.log")
+    run:
+        import os
+        from Bio import SeqIO
+
+        best_gard_path = input.bestgard
+        codon_msa_input = input.msa
+
+        out_dir = output.parts_dir
+        os.makedirs(out_dir, exist_ok=True)
+        os.makedirs(os.path.join("results", wildcards.gene), exist_ok=True)
+
+        if not os.path.exists(best_gard_path):
+            raise FileNotFoundError(f"GARD results file does not exist: {best_gard_path}")
+
+        data = [line.strip() for line in open(best_gard_path) if "CHARSET" in line]
+        if not data:
+            raise ValueError(
+                "GARD best-gard file has no CHARSET spans. "
+                "Ensure your .best-gard is the NEXUS-like file containing CHARSET lines."
+            )
+
+        # Parse spans like: CHARSET span_1 = 1-262;
+        data_parsed = [[int(x) for x in line.split('=')[1].strip(' ;').split('-')] for line in data]
+        data_adjusted = [[start - 1, end] for start, end in data_parsed]
+
+        records = list(SeqIO.parse(codon_msa_input, "fasta"))
+        if not records:
+            raise ValueError(f"No FASTA records found in {codon_msa_input}")
+
+        first_seq = str(records[0].seq)
+
+        # CarryOver codon-boundary enforcement across consecutive partitions
+        data_adjusted_coords = []
+        carryOver = 0
+        for start, end in data_adjusted:
+            start2 = start - carryOver
+            seg_len = len(first_seq[int(start2): int(end)])
+            remainder = seg_len % 3
+            data_adjusted_coords.append([start2, end - remainder])
+            carryOver = remainder
+
+        written = []
+        with open(output.log, "w") as log_file:
+            for i, (start, stop) in enumerate(data_adjusted_coords, start=1):
+                part_name = f"{wildcards.gene}.{i}.codon.fas"
+                out_path = os.path.join(out_dir, part_name)
+                with open(out_path, "w") as out_f:
+                    for record in records:
+                        part = record[int(start):int(stop)]
+                        out_f.write(f">{record.id}\n{part.seq}\n")
+                written.append(out_path)
+
+                adjusted_len = len(records[0][int(start):int(stop)].seq)
+                log_file.write(
+                    f"Partition {i}: start={start}, stop={stop}, length={adjusted_len}, remainder={adjusted_len % 3}\n"
+                )
+
+                # Compatibility: also copy into results/{gene}/{gene}.{i}.codon.fas
+                compat_path = os.path.join("results", wildcards.gene, f"{wildcards.gene}.{i}.codon.fas")
+                with open(compat_path, "w") as out_f:
+                    for record in records:
+                        part = record[int(start):int(stop)]
+                        out_f.write(f">{record.id}\n{part.seq}\n")
+
+        with open(output.parts_txt, "w") as fh:
+            for p in written:
+                fh.write(p + "\n")
+
+
+# -----------------------------------------------------------------------------
+# Dynamic PARTS discovery from the GARD checkpoint
+# -----------------------------------------------------------------------------
+import os as _os
+import re as _re
+
+_PART_INDEX_RE = _re.compile(r"\.(\d+)\.codon\.fas$")
+
+def parts_for_gene(gene):
+    """Return a list of partition indices (as strings) for a given gene.
+
+    parse_gard writes parts.txt containing full paths like:
+      results/<gene>/gard_parts/<gene>.<i>.codon.fas
+    We extract <i> robustly.
+    """
+    ckpt = checkpoints.parse_gard.get(gene=gene)
+    parts_txt = ckpt.output.parts_txt
+    parts = []
+    with open(parts_txt) as fh:
+        for ln in fh:
+            p = ln.strip()
+            if not p:
+                continue
+            base = _os.path.basename(p)
+            m = _PART_INDEX_RE.search(base)
+            if m:
+                parts.append(m.group(1))
+            else:
+                # If parts.txt contains only indices, accept them
+                if p.isdigit():
+                    parts.append(p)
+    # De-dup preserving order
+    seen=set()
+    parts=[x for x in parts if not (x in seen or seen.add(x))]
+    if not parts:
+        raise ValueError(f"No partitions discovered for {gene}. parts.txt={parts_txt}")
+    return parts
+
+def expand_parts(pattern, gene):
+    """Helper to expand a {part}-pattern over dynamic parts for a single gene."""
+    return expand(pattern, gene=gene, part=parts_for_gene(gene))
+
+# -----------------------------------------------------------------------------
+# 10) Annotate lineages (produces a TSV used for clade construction below)
+# -----------------------------------------------------------------------------
+rule annotate_lineages:
+    input:
+        orthologs=orthologs_for_gene,
+        tree=rules.iqtree.output.tree
+    output:
+        out="results/{gene}/{gene}.lineages.tsv"
+    log:
+        os.path.join(LOG_DIR, "{gene}.lineages.log")
+    params:
+        email=EMAIL,
+        api_key=NCBI_API_KEY
+    shell:
+        r"""
+        python3 scripts/annotate_lineages.py \
+          --orthologs {input.orthologs} \
+          --tree {input.tree} \
+          --out {output.out} \
+          --email {params.email} \
+          --verbose \
+          --min_interval 0.5 \
+          > {log} 2>&1
+        """
+
+# -----------------------------------------------------------------------------
+# 11) Build clade label files from the lineages TSV
+#     Produces:
+#       - results/{gene}/reference_clade.txt
+#       - results/{gene}/<CladeName>.clade (at least 2 clades)
+#
+# This is the glue needed to run RELAX / CFEL / labelled trees in the SelectionAnalysis Snakefile.
+# -----------------------------------------------------------------------------
+rule build_clades:
+    input:
+        lineages="results/{gene}/{gene}.lineages.tsv"
+    output:
+        ref="results/{gene}/reference_clade.txt",
+        sentinel="results/{gene}/.clades.done"
+    log:
+        os.path.join(LOG_DIR, "{gene}.clades.log")
+    run:
+        import pandas as _pd
+        import os as _os
+
+        df = _pd.read_csv(input.lineages, sep="\t")
+
+        # Accept either schema:
+        # - old: LEAFNAME, LINEAGE
+        # - new: leaf, lineage
+        col_leaf = "LEAFNAME" if "LEAFNAME" in df.columns else ("leaf" if "leaf" in df.columns else None)
+        col_lin  = "LINEAGE"  if "LINEAGE"  in df.columns else ("lineage" if "lineage" in df.columns else None)
+        if not col_leaf or not col_lin:
+            raise ValueError(
+                f"Expected (LEAFNAME, LINEAGE) or (leaf, lineage) columns in {input.lineages}. Found: {list(df.columns)}"
+            )
+
+        # LINEAGE is semicolon-joined; split to lists
+        lineage_lists = []
+        for v in df[col_lin].fillna("Unknown").astype(str).tolist():
+            lineage_lists.append([x.strip() for x in v.split(";") if x.strip()] if v != "Unknown" else ["Unknown"])
+        df["_LINEAGE_LIST"] = lineage_lists
+
+        # Find best depth with >=2 clades and >=N members each (configurable)
+        min_members = int(config.get("clade_min_members", 3))
+        min_clades  = int(config.get("clade_min_clades", 2))
+
+        max_depth = max((len(x) for x in lineage_lists if isinstance(x, list)), default=0)
+        best_depth = None
+        best_lineages = None
+
+        for depth in range(max_depth):
+            col = [x[depth] if isinstance(x, list) and len(x) > depth else "Unknown" for x in df["_LINEAGE_LIST"]]
+            counts = _pd.Series(col).value_counts()
+            valid = counts[counts >= min_members]
+            if len(valid) >= min_clades:
+                best_depth = depth
+                best_lineages = list(valid.index)
+                break
+
+        if not best_lineages:
+            # Fallback: take top-2 labels at depth 0 (often broad taxa)
+            col0 = [x[0] if isinstance(x, list) and len(x) else "Unknown" for x in df["_LINEAGE_LIST"]]
+            counts0 = _pd.Series(col0).value_counts()
+            best_lineages = [x for x in counts0.index if x != "Unknown"][:2]
+            best_depth = 0
+
+        if not best_lineages or len(best_lineages) < 2:
+            raise ValueError(
+                f"Could not derive >=2 clades from {input.lineages}. "
+                f"Try lowering clade_min_members in config.yml."
+            )
+
+        # Deterministic clade order
+        best_lineages_sorted = sorted(best_lineages)
+
+        # Pick reference clade: config override, else first (sorted)
+        ref_clade = config.get("reference_clade", best_lineages_sorted[0])
+
+        outdir = _os.path.dirname(output.ref)
+        _os.makedirs(outdir, exist_ok=True)
+
+        # IMPORTANT: prevent appending across reruns by truncating each clade file first
+        for label in best_lineages_sorted:
+            clade_path = _os.path.join(outdir, f"{label}.clade")
+            open(clade_path, "w").close()
+
+        # Write .clade files
+        written = set()
+        for _, row in df.iterrows():
+            leaf = str(row[col_leaf])
+            lin = row["_LINEAGE_LIST"]
+            label = "Unknown"
+            if isinstance(lin, list) and best_depth is not None and len(lin) > best_depth:
+                candidate = lin[best_depth]
+                if candidate in best_lineages_sorted:
+                    label = candidate
+
+            if label != "Unknown":
+                clade_path = _os.path.join(outdir, f"{label}.clade")
+                with open(clade_path, "a") as fh:
+                    fh.write(f"{leaf}\n")
+                written.add(label)
+
+        if len(written) < 2:
+            raise ValueError(f"Only {len(written)} clade file(s) written for {wildcards.gene}. Need >=2.")
+
+        with open(output.ref, "w") as fh:
+            fh.write(str(ref_clade).strip() + "\n")
+
+        with open(output.sentinel, "w") as fh:
+            fh.write("ok\n")
+
+        # Log info
+        #os.makedirs(_os.path.dirname(log), exist_ok=True)
+        #with open(log, "w") as fh:
+        #    fh.write(f"best_depth={best_depth}\n")
+        #    fh.write(f"clades={best_lineages_sorted}\n")
+        #    fh.write(f"reference_clade={ref_clade}\n")
+        #    fh.write(f"min_members={min_members}\n")
+        #    fh.write(f"min_clades={min_clades}\n")
+
+
+# =============================================================================
+# Selection Analysis (merged from Snakefile_SelectionAnalysis)
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+# Aggregate: run ALL selection analyses for ALL parts (per gene)
+# Produces: results/{gene}/.selection.done
+# -----------------------------------------------------------------------------
+def selection_outputs_for_gene(wc):
+    g = wc.gene
+    parts = parts_for_gene(g)
+    outs = []
+    # Core per-part selection outputs
+    patterns = [
+        "results/{gene}/{gene}.{part}.codon.fas.dst",
+        "results/{gene}/{gene}.{part}.codon.fas.FastTree.treefile",
+        "results/{gene}/{gene}.{part}.codon.fas.FEL.json",
+        "results/{gene}/{gene}.{part}.codon.fas.FUBAR.json",
+        "results/{gene}/{gene}.{part}.codon.fas.BUSTEDS.json",
+        "results/{gene}/{gene}.{part}.codon.fas.MEME.json",
+        "results/{gene}/{gene}.{part}.codon.fas.ABSREL.json",
+        "results/{gene}/{gene}.{part}.codon.fas.SLAC.json",
+        "results/{gene}/{gene}.{part}.codon.fas.RELAX.json",
+        "results/{gene}/{gene}.{part}.codon.fas.CFEL.json",
+    ]
+    for pat in patterns:
+        outs.extend(expand(pat, gene=g, part=parts))
+    return outs
+
+rule selection_all_parts:
+    input:
+        selection_outputs_for_gene,
+        # clades needed for labelled-tree methods
+        rules.build_clades.output.sentinel
+    output:
+        "results/{gene}/.selection.done"
+    shell:
+        "echo ok > {output}"
+
+# -----------------------------------------------------------------------------
+# TN93 distances (per gene, per part)
+# -----------------------------------------------------------------------------
+rule tn93_distance:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        clades=rules.build_clades.output.sentinel
+    output:
+        dst="results/{gene}/{gene}.{part}.codon.fas.dst"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.tn93.log")
+    shell:
+        r"""
+        tn93 -t 1 -o {output.dst} {input.aln} > {log} 2>&1
+        """
+
+# -----------------------------------------------------------------------------
+# FastTree (per gene, per part)
+# -----------------------------------------------------------------------------
+rule fasttree:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas"
+    output:
+        tree="results/{gene}/{gene}.{part}.codon.fas.FastTree.treefile"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.fasttree.log")
+    shell:
+        r"""
+        FastTree -nt -gtr {input.aln} > {output.tree} 2> {log}
+        """
+
+# -----------------------------------------------------------------------------
+# Selection suite (per gene, per part)
+# -----------------------------------------------------------------------------
+rule FEL:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        tree=rules.fasttree.output.tree
+    output:
+        results="results/{gene}/{gene}.{part}.codon.fas.FEL.json"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.FEL.log")
+    shell:
+        r"""
+        mpirun -np {PPN} {HYPHYMPI} FEL --alignment {input.aln} --tree {input.tree} --output {output.results} --ci Yes > {log} 2>&1
+        """
+
+rule FUBAR:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        tree=rules.fasttree.output.tree
+    output:
+        results="results/{gene}/{gene}.{part}.codon.fas.FUBAR.json"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.FUBAR.log")
+    shell:
+        r"""
+        mpirun -np {PPN} {HYPHYMPI} FUBAR --alignment {input.aln} --tree {input.tree} --output {output.results} > {log} 2>&1
+        """
+
+rule BUSTEDS:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        tree=rules.fasttree.output.tree
+    output:
+        results="results/{gene}/{gene}.{part}.codon.fas.BUSTEDS.json"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.BUSTEDS.log")
+    shell:
+        r"""
+        {HYPHYMPI} BUSTED --alignment {input.aln} --tree {input.tree} --output {output.results} --srv Yes --starting-points 25 > {log} 2>&1
+        """
+
+rule MEME:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        tree=rules.fasttree.output.tree
+    output:
+        results="results/{gene}/{gene}.{part}.codon.fas.MEME.json"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.MEME.log")
+    shell:
+        r"""
+        mpirun -np {PPN} {HYPHYMPI} MEME --alignment {input.aln} --tree {input.tree} --output {output.results} > {log} 2>&1
+        """
+
+rule ABSREL:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        tree=rules.fasttree.output.tree
+    output:
+        results="results/{gene}/{gene}.{part}.codon.fas.ABSREL.json"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.ABSREL.log")
+    shell:
+        r"""
+        mpirun -np {PPN} {HYPHYMPI} ABSREL --alignment {input.aln} --tree {input.tree} --output {output.results} > {log} 2>&1
+        """
+
+rule SLAC:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        tree=rules.fasttree.output.tree
+    output:
+        results="results/{gene}/{gene}.{part}.codon.fas.SLAC.json"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.SLAC.log")
+    shell:
+        r"""
+        mpirun -np {PPN} {HYPHYMPI} SLAC --alignment {input.aln} --tree {input.tree} --output {output.results} > {log} 2>&1
+        """
+
+rule BGM:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        tree=rules.fasttree.output.tree
+    output:
+        results="results/{gene}/{gene}.{part}.codon.fas.BGM.json"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.BGM.log")
+    shell:
+        r"""
+        {HYPHY} BGM --alignment {input.aln} --tree {input.tree} --output {output.results} > {log} 2>&1
+        """
+
+rule BUSTEDSMH:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        tree=rules.fasttree.output.tree
+    output:
+        results="results/{gene}/{gene}.{part}.codon.fas.BUSTEDS-MH.json"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.BUSTEDS-MH.log")
+    shell:
+        r"""
+        {HYPHY} BUSTED --alignment {input.aln} --tree {input.tree} --output {output.results} --srv Yes --multiple-hits Double+Triple --starting-points 25 > {log} 2>&1
+        """
+
+rule FMM:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        tree=rules.fasttree.output.tree
+    output:
+        results="results/{gene}/{gene}.{part}.codon.fas.FMM.json"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.FMM.log")
+    shell:
+        r"""
+        mpirun -np {PPN} {HYPHYMPI} FMM --alignment {input.aln} --tree {input.tree} --output {output.results} --triple-islands Yes > {log} 2>&1
+        """
+
+# -----------------------------------------------------------------------------
+# Label tree with clade labels (per gene, per part)
+# -----------------------------------------------------------------------------
+rule AssignLineages:
+    input:
+        tree=rules.fasttree.output.tree,
+        clades_done=rules.build_clades.output.sentinel
+    output:
+        output="results/{gene}/{gene}.{part}.codon.fas.FastTree.treefile.labelled"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.label_tree.log")
+    run:
+        import os as _os
+
+        outdir = _os.path.dirname(output.output)
+        clade_files = sorted(glob.glob(_os.path.join(outdir, "*.clade")))
+        if not clade_files:
+            raise ValueError(f"No .clade files found in {outdir}. build_clades should have created them.")
+
+        first_time = True
+        for clade_file in clade_files:
+            label = _os.path.basename(clade_file).split(".")[0]
+
+            if first_time:
+                cmd = " ".join([HYPHY, LABEL_TREE_BF,
+                                "--tree", input.tree,
+                                "--list", clade_file,
+                                "--output", output.output,
+                                "--label", label])
+                first_time = False
+            else:
+                cmd = " ".join([HYPHY, LABEL_TREE_BF,
+                                "--tree", output.output,
+                                "--list", clade_file,
+                                "--output", output.output,
+                                "--label", label])
+
+            os.system(cmd)
+
+        #with open(log, "w") as fh:
+        #    fh.write("label-tree completed\n")
+
+# -----------------------------------------------------------------------------
+# Group-level selection analyses (RELAX / CFEL) per gene, per part
+# -----------------------------------------------------------------------------
+rule RELAX:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        tree=rules.AssignLineages.output.output,
+        ref=rules.build_clades.output.ref
+    output:
+        output="results/{gene}/{gene}.{part}.codon.fas.RELAX.json"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.RELAX.log")
+    params:
+        RefClade=lambda wc, input: open(input.ref).read().strip()
+    shell:
+        r"""
+        {HYPHY} RELAX --alignment {input.aln} --tree {input.tree} --output {output.output} \
+          --reference-group {params.RefClade} --models All --mode 'Group mode' --starting-points 25 --srv Yes \
+          > {log} 2>&1
+        """
+
+rule CFEL:
+    input:
+        aln="results/{gene}/{gene}.{part}.codon.fas",
+        tree=rules.AssignLineages.output.output,
+        ref=rules.build_clades.output.ref
+    output:
+        output="results/{gene}/{gene}.{part}.codon.fas.CFEL.json"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.CFEL.log")
+    params:
+        RefClade=lambda wc, input: open(input.ref).read().strip()
+    shell:
+        r"""
+        {HYPHY} contrast-fel --alignment {input.aln} --tree {input.tree} --output {output.output} \
+          --branch-set {params.RefClade} \
+          > {log} 2>&1
+        """
+
+# -----------------------------------------------------------------------------
+# Executive summary (per gene, per part)
+# -----------------------------------------------------------------------------
+"""
+rule executiveSummary:
+    input:
+        inputFEL   = rules.FEL.output.results,
+        inputFUBAR = rules.FUBAR.output.results,
+        inputMEME  = rules.MEME.output.results,
+        inputBGM   = rules.BGM.output.results,
+        inputABSREL = rules.ABSREL.output.results,
+        inputSLAC  = rules.SLAC.output.results,
+        inputRELAX = rules.RELAX.output.output,
+        inputCFEL  = rules.CFEL.output.output
+    output:
+        output="results/{gene}/{gene}.{part}.codon.fas.executiveSummary.csv"
+    log:
+        os.path.join(LOG_DIR, "{gene}.{part}.executiveSummary.log")
+    script:
+        os.path.join("scripts", "executiveSummary.py")
+        
+"""
+
+# =============================================================================
+# Summarize results (integrated from workflow/Snakefile_SummarizeResults)
+# - NO nested snakemake calls
+# - Runs per gene and across ALL parts (via parts_for_gene)
+# =============================================================================
+
+import json
+import glob
+import math
+
+# ---- per-gene output dirs ----
+def OUTDIR(gene):      return os.path.join("results", gene)
+def OUTDIR_TABLES(gene): return os.path.join(OUTDIR(gene), "Tables")
+def OUTDIR_VIZ(gene):    return os.path.join(OUTDIR(gene), "Visualizations")
+
+# ---- summarize helpers ----
+def get_JSON(path):
+    with open(path, "r") as fh:
+        return json.load(fh)
+
+def _safe_get(d, path, default=None):
+    cur = d
+    for k in path:
+        try:
+            cur = cur[k]
+        except Exception:
+            return default
+    return cur
+
+# Build expected per-part basenames (the .codon.fas file is used as the "root" name)
+def recombinant_roots_for_gene(gene):
+    """
+    Returns basenames like:
+      {gene}.{part}.codon.fas
+    located in results/{gene}/
+    """
+    roots = []
+    for p in parts_for_gene(gene):
+        roots.append(f"{gene}.{p}.codon.fas")
+    return roots
+
+def fel_json_basenames(gene):
+    return [f"{gene}.{p}.codon.fas.FEL.json" for p in parts_for_gene(gene)]
+
+def meme_json_basenames(gene):
+    return [f"{gene}.{p}.codon.fas.MEME.json" for p in parts_for_gene(gene)]
+
+def bgm_json_basenames(gene):
+    return [f"{gene}.{p}.codon.fas.BGM.json" for p in parts_for_gene(gene)]
+
+# -----------------------------------------------------------------------------
+# PlotFEL: turn per-part FEL JSON into a CSV (and optionally plots)
+# NOTE: This is a minimal extraction CSV writer (keeps pipeline robust).
+# If you want the exact Altair plotting from the original summarize Snakefile,
+# we can drop that full block in—this version keeps dependencies light/stable.
+# -----------------------------------------------------------------------------
+rule TableFEL:
+    input:
+        json="results/{gene}/{sample}"
+    output:
+        csv="results/{gene}/Tables/{sample}.FEL.csv"
+    run:
+        import pandas as pd
+        os.makedirs(os.path.dirname(output.csv), exist_ok=True)
+        data = get_JSON(input.json)
+
+        # HyPhy FEL JSON schema varies; try common fields.
+        # Prefer "MLE" results table if present.
+        rows = _safe_get(data, ["MLE", "content", "0"], default=None)
+        headers = _safe_get(data, ["MLE", "headers"], default=None)
+
+        if rows is None:
+            # fallback: sometimes "branch attributes"/"site results"
+            rows = _safe_get(data, ["site results"], default=None)
+
+        if rows is None:
+            raise ValueError(f"Could not find FEL rows in {input.json}")
+
+        if headers and isinstance(headers, list):
+            cols = [h[0] if isinstance(h, (list, tuple)) and h else str(h) for h in headers]
+            df = pd.DataFrame(rows, columns=cols)
+        else:
+            df = pd.DataFrame(rows)
+
+        df.to_csv(output.csv, index=False)
+
+# -----------------------------------------------------------------------------
+# PlotMEME: JSON -> CSV (minimal, robust)
+# -----------------------------------------------------------------------------
+rule TableMEME:
+    input:
+        json="results/{gene}/{sample}"
+    output:
+        csv="results/{gene}/Tables/{sample}.MEME.csv"
+    run:
+        import pandas as pd
+        os.makedirs(os.path.dirname(output.csv), exist_ok=True)
+        data = get_JSON(input.json)
+
+        rows = _safe_get(data, ["MLE", "content", "0"], default=None)
+        headers = _safe_get(data, ["MLE", "headers"], default=None)
+
+        if rows is None:
+            rows = _safe_get(data, ["site results"], default=None)
+
+        if rows is None:
+            raise ValueError(f"Could not find MEME rows in {input.json}")
+
+        if headers and isinstance(headers, list):
+            cols = [h[0] if isinstance(h, (list, tuple)) and h else str(h) for h in headers]
+            df = pd.DataFrame(rows, columns=cols)
+        else:
+            df = pd.DataFrame(rows)
+
+        df.to_csv(output.csv, index=False)
+
+# -----------------------------------------------------------------------------
+# PlotBGM: JSON -> CSV (minimal)
+# -----------------------------------------------------------------------------
+rule TableBGM:
+    input:
+        json="results/{gene}/{sample}"
+    output:
+        csv="results/{gene}/Tables/{sample}.BGM.csv"
+    run:
+        import pandas as pd
+        os.makedirs(os.path.dirname(output.csv), exist_ok=True)
+        data = get_JSON(input.json)
+        # BGM often has "pairs" or "edges"
+        rows = _safe_get(data, ["pairs"], default=None) or _safe_get(data, ["edges"], default=None)
+        if rows is None:
+            # last resort dump whole json as 1 row
+            df = pd.DataFrame([data])
+        else:
+            df = pd.DataFrame(rows)
+        df.to_csv(output.csv, index=False)
+
+# -----------------------------------------------------------------------------
+# MergeFELCSVs: merge per-part FEL CSVs -> per-gene merged CSV
+# -----------------------------------------------------------------------------
+def _fel_csvs_for_gene(wc):
+    g = wc.gene
+    return [os.path.join(OUTDIR_TABLES(g), f"{bn}.FEL.csv") for bn in fel_json_basenames(g)]
+
+rule MergeFELCSVs:
+    input:
+        _fel_csvs_for_gene
+    output:
+        merged_csv="results/{gene}/Tables/{gene}.AOC.merged_FEL_Results.csv"
+    run:
+        import pandas as pd
+        os.makedirs(os.path.dirname(output.merged_csv), exist_ok=True)
+        all_dfs = []
+        for f in input:
+            df = pd.read_csv(f)
+            sample_name = os.path.basename(f).replace(".FEL.csv", "")
+            df.insert(0, "Sample", sample_name)
+            all_dfs.append(df)
+        merged_df = pd.concat(all_dfs, ignore_index=True) if all_dfs else pd.DataFrame()
+        merged_df.to_csv(output.merged_csv, index=False)
+
+# -----------------------------------------------------------------------------
+# MergeMEMECSVs: merge per-part MEME CSVs -> per-gene merged CSV
+# -----------------------------------------------------------------------------
+def _meme_csvs_for_gene(wc):
+    g = wc.gene
+    return [os.path.join(OUTDIR_TABLES(g), f"{bn}.MEME.csv") for bn in meme_json_basenames(g)]
+
+rule MergeMEMECSVs:
+    input:
+        _meme_csvs_for_gene
+    output:
+        merged_csv="results/{gene}/Tables/{gene}.AOC.merged_MEME_Results.csv"
+    run:
+        import pandas as pd
+        os.makedirs(os.path.dirname(output.merged_csv), exist_ok=True)
+        all_dfs = []
+        for f in input:
+            df = pd.read_csv(f)
+            sample_name = os.path.basename(f).replace(".MEME.csv", "")
+            df.insert(0, "Sample", sample_name)
+            all_dfs.append(df)
+        merged_df = pd.concat(all_dfs, ignore_index=True) if all_dfs else pd.DataFrame()
+        merged_df.to_csv(output.merged_csv, index=False)
+
+# -----------------------------------------------------------------------------
+# PlotFELMerge: minimal merged FEL plot placeholders (png/svg) to satisfy downstream
+# (If you want the original Altair plots, we can swap this for that full block.)
+# -----------------------------------------------------------------------------
+rule PlotFELMerge:
+    input:
+        merged="results/{gene}/Tables/{gene}.AOC.merged_FEL_Results.csv"
+    output:
+        png="results/{gene}/Visualizations/{gene}.FEL.merged.png",
+        svg="results/{gene}/Visualizations/{gene}.FEL.merged.svg"
+    run:
+        import os
+        import pandas as pd
+
+        # Force headless backend BEFORE importing pyplot
+        import matplotlib
+        matplotlib.use("Agg")
+        import matplotlib.pyplot as plt
+
+        os.makedirs(os.path.dirname(output.png), exist_ok=True)
+
+        df = pd.read_csv(input.merged)
+
+        plt.figure()
+        if "p-value" in df.columns and "dN/dS MLE" in df.columns:
+            plt.scatter(df["dN/dS MLE"], df["p-value"])
+            plt.xlabel("dN/dS MLE")
+            plt.ylabel("p-value")
+        else:
+            plt.text(0.1, 0.5, "Merged FEL results created\n(no standard columns found for plot)")
+            plt.axis("off")
+
+        plt.savefig(output.png)
+        plt.savefig(output.svg)
+        plt.close()
+
+
+# -----------------------------------------------------------------------------
+# executiveSummary: per-gene executive summary table
+# -----------------------------------------------------------------------------
+rule executiveSummary:
+    input:
+        selection_done="results/{gene}/.selection.done"
+    output:
+        csv="results/{gene}/Tables/{gene}.AOC.executiveSummary.csv"
+    run:
+        import pandas as pd
+        os.makedirs(os.path.dirname(output.csv), exist_ok=True)
+
+        gene = wildcards.gene
+        working_dir = OUTDIR(gene)
+
+        rows = []
+        for root in recombinant_roots_for_gene(gene):
+            rec = {"Recombinant": root}
+
+            def load_p(path, keys, default="NA"):
+                fp = os.path.join(working_dir, path)
+                if not os.path.exists(fp):
+                    return default
+                try:
+                    data = get_JSON(fp)
+                    v = _safe_get(data, keys, default=default)
+                    return v if v is not None else default
+                except Exception:
+                    return default
+
+            rec["BUSTEDS_p"]   = load_p(root + ".BUSTEDS.json", ["test results", "p-value"])
+            rec["MEME_sites"]  = load_p(root + ".MEME.json", ["tested", "sites"])
+            rec["FEL_sites"]   = load_p(root + ".FEL.json", ["tested", "sites"])
+            rec["FUBAR_p"]     = load_p(root + ".FUBAR.json", ["posterior", "Pr(w>1)"])
+            rec["ABSREL_p"]    = load_p(root + ".ABSREL.json", ["test results", "p-value"])
+            rec["RELAX_p"]     = load_p(root + ".RELAX.json", ["test results", "p-value"])
+            rec["CFEL_p"]      = load_p(root + ".CFEL.json", ["test results", "p-value"])
+            rows.append(rec)
+
+        pd.DataFrame(rows).to_csv(output.csv, index=False)
+
+# -----------------------------------------------------------------------------
+# Summaries driver: produce all summarize artifacts per gene
+# -----------------------------------------------------------------------------
+rule summarize_all:
+    input:
+        selection_done="results/{gene}/.selection.done",
+        clades_done="results/{gene}/.clades.done",
+        # per-part conversions
+        fel_csvs=lambda wc: [f"results/{wc.gene}/Tables/{bn}.FEL.csv" for bn in fel_json_basenames(wc.gene)],
+        meme_csvs=lambda wc: [f"results/{wc.gene}/Tables/{bn}.MEME.csv" for bn in meme_json_basenames(wc.gene)],
+        # merged + plots + executive summary
+        merged_fel="results/{gene}/Tables/{gene}.AOC.merged_FEL_Results.csv",
+        merged_meme="results/{gene}/Tables/{gene}.AOC.merged_MEME_Results.csv",
+        fel_merge_png="results/{gene}/Visualizations/{gene}.FEL.merged.png",
+        fel_merge_svg="results/{gene}/Visualizations/{gene}.FEL.merged.svg",
+        exec_csv="results/{gene}/Tables/{gene}.AOC.executiveSummary.csv"
+    output:
+        "results/{gene}/.summaries.done"
+    shell:
+        "echo ok > {output}"    
+# end rule
+    
+        

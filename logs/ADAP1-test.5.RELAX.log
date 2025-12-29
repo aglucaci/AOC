@@ -1,0 +1,222 @@
+multiple-files: No
+
+Analysis Description
+--------------------
+RELAX (a random effects test of selection relaxation) uses a random
+effects branch-site model framework to test whether a set of 'Test'
+for convergence diagnostics. Version 4.5 adds support for multiple
+datasets for joint testing. Version 4.6 adds support for branch- and
+site-level evidence ratio calculation.
+branches evolves under relaxed selection relative to a set of
+'Reference' branches (R), as measured by the relaxation parameter (K).
+Version 2.1 adds a check for stability in K estimates to try to mitigate
+convergence problems. Version 3 provides support for >2 branch sets.
+Version 3.1 adds LHC + Nedler-Mead initial fit phase and keyword
+support. Version 3.1.1 adds some bug fixes for better convergence.
+Version 4.0 adds support for synonymous rate variation. Version 4.1 adds
+further support for multiple hit models. Version 4.1.1 adds reporting
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree, with at least two
+groups of branches defined using the {} notation (one group can be
+defined as all unlabeled branches)
+
+- __Citation__: RELAX: Detecting Relaxed Selection in a Phylogenetic Framework (2015).
+Mol Biol Evol 32 (3): 820-832
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution g
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 4.5
+
+
+>code => Universal
+/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.5.codon.fas.FastTree.treefile.labelled
+results/ADAP1-test/ADAP1-test.5.codon.fas.FastTree.treefile.labelled
+
+>Loaded a multiple sequence alignment with **11** sequences, **98** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.5.codon.fas`
+
+>mode => Group mode
+The number of points in the initial distributional guess for likelihood fitting (permissible range = [1,10000], default value = 250, integer): 
+>grid-size => 250
+The number of initial random guesses to 'seed' rate values optimization (permissible range = [1,25], default value = 1, integer): 
+>starting-points => 25
+
+
+### Branch sets for RELAX analysis
+
+>multiple-hits => None
+
+* Selected 9 branches as the _Mammalia_ set: `Node10, Node12, Node14, Node8, XP_011885129_1_XM_01202_53ecb0, XP_012614566_2_XM_01275_945ab4, XP_041604521_1_XM_04174_7e8d4b, XP_054352982_1_XM_05449_233884, XP_062041590_1_XM_06218_d11611`
+
+* Selected 6 branches as the _Sauropsida_ set: `Node2, XP_025939132_1_XM_02608_6aec63, XP_032626897_1_XM_03277_f6b30e, XP_047919596_1_XM_04806_0c6d33, XP_054499394_1_XM_05464_33d08b, XP_069726565_1_XM_06987_381d08`
+
+>reference-group => Mammalia
+* 4 branches are in the unclassified (nuisance) set: `NP_001090758_1_NM_00109_c9f23c, Node17, Node5, Node7`
+The number omega rate classes to include in the model (permissible range = [2,10], default value = 3, integer): 
+>rates => 3
+
+>models => All
+
+>srv => Yes
+The number omega rate classes to include in the model (permissible range = [1,10], default value = 3, integer): 
+>syn-rates => 3
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) = -1443.87, AIC-c =  2942.20 (27 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.906
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -1230.47, AIC-c =  2535.51 (36 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.181
+* non-synonymous/synonymous rate ratio for *Mammalia* =   0.0567
+* non-synonymous/synonymous rate ratio for *Sauropsida* =   0.0057
+* non-synonymous/synonymous rate ratio for *Unclassified* =   0.0756
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -1219.60, AIC-c =  2513.76 (36 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.233
+* non-synonymous/synonymous rate ratio for *Mammalia* =   0.0405
+* non-synonymous/synonymous rate ratio for *Sauropsida* =   0.0054
+* non-synonymous/synonymous rate ratio for *Unclassified* =   0.0624
+
+### Fitting the general descriptive (separate k per branch) model
+
+### * Log(L) = -1217.81, AIC-c =  2556.10 (57 estimated parameters)
+* The following baseline rate distribution for branch-site combinations was inferred
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.814     |   27.261    |                                   |
+|        Negative selection         |     0.876     |   72.550    |                                   |
+|      Diversifying selection       |    75.385     |    0.189    |                                   |
+
+* Branch-level relaxation or intensification parameter distribution has mean 18.96, median 22.88, and 95% of the weight in 13.61 - 50.00
+
+### Fitting the alternative model with individual K parameters for 2 branch groups
+* Log(L) = -1220.66, AIC-c =  2544.09 (49 estimated parameters)
+* The following rate distribution was inferred for **Mammalia** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.028     |   42.737    |                                   |
+|        Negative selection         |     0.030     |   57.126    |                                   |
+|      Diversifying selection       |  354141.787   |    0.138    |                                   |
+
+* Relaxation/intensification parameter (K) for branch set Sauropsida =     1.54
+* The following rate distribution was inferred for **Sauropsida** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.004     |   42.737    |                                   |
+|        Negative selection         |     0.004     |   57.126    |                                   |
+|      Diversifying selection       |347321335.97...|    0.138    |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               0.335               |    27.710     |                                   |
+|               1.255               |    72.290     |                                   |
+|               1.537               |     0.000     |       Not supported by data       |
+
+
+### Fitting the null (K := 1) model
+* Log(L) = -1213.53, AIC-c =  2527.64 (48 estimated parameters)
+* The following rate distribution was inferred for **Mammalia** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.023     |   91.231    |                                   |
+|        Negative selection         |     0.023     |    8.602    |       Collapsed rate class        |
+|      Diversifying selection       |    67.489     |    0.167    |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               0.284               |     0.300     |                                   |
+|               0.289               |    21.739     |       Collapsed rate class        |
+|               1.201               |    77.961     |                                   |
+
+----
+## Test for relaxation (or intensification) of selection [RELAX]
+Likelihood ratio test **p =   1.0000**.
+>>No significant evidence for differences of selective pressures among the test groups at P<=0.05
+----
+
+
+### * Detected convergence issues (negative LRT). Refitting the alterative/null model pair from a new starting point
+* Log(L) = -1212.72, AIC-c =  2528.20 (49 estimated parameters)
+* The following rate distribution was inferred for **Mammalia** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.028     |   77.832    |                                   |
+|        Negative selection         |     0.029     |   22.017    |       Collapsed rate class        |
+|      Diversifying selection       |    139.476    |    0.151    |                                   |
+
+* Relaxation/intensification parameter (K) for branch set Sauropsida =     1.36
+* The following rate distribution was inferred for **Sauropsida** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.008     |   77.832    |                                   |
+|        Negative selection         |     0.008     |   22.017    |       Collapsed rate class        |
+|      Diversifying selection       |    805.557    |    0.151    |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               0.291               |    21.543     |                                   |
+|               0.292               |     0.344     |       Collapsed rate class        |
+|               1.199               |    78.113     |                                   |
+
+Fitting the null (K := 1) model
+* Log(L) = -1213.53, AIC-c =  2527.64 (48 estimated parameters)
+* The following rate distribution was inferred for **Mammalia** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.023     |   99.830    |                                   |
+|        Negative selection         |     0.024     |    0.004    |       Not supported by data       |
+|      Diversifying selection       |    68.145     |    0.167    |                                   |
+
+* The following rate distribution for site-to-site **synonymous** rate variation was inferred
+
+|               Rate                | Proportion, % |               Notes               |
+|-----------------------------------|---------------|-----------------------------------|
+|               0.284               |     0.800     |                                   |
+|               0.290               |    21.231     |       Collapsed rate class        |
+|               1.201               |    77.969     |                                   |
+
+----
+## Test for relaxation (or intensification) of selection [RELAX]
+Likelihood ratio test **p =   0.2012**.
+>>No significant evidence for differences of selective pressures among the test groups at P<=0.05
+----
+
+
+### Fitting the partitioned descriptive model (completely separate rate distributions for branch sets)
+* Log(L) = -1210.60, AIC-c =  2532.78 (53 estimated parameters)
+* The following rate distribution was inferred for **Mammalia** (reference) branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.016     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.028     |   99.653    |                                   |
+|      Diversifying selection       |    87.558     |    0.347    |                                   |
+
+* The following rate distribution was inferred for **Sauropsida** branches
+
+|          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
+|-----------------------------------|---------------|-------------|-----------------------------------|
+|        Negative selection         |     0.000     |   22.369    |                                   |
+|        Negative selection         |     0.000     |   77.402    |       Collapsed rate class        |
+|      Diversifying selection       |     6.876     |    0.229    |                                   |
+

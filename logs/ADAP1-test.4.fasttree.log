@@ -1,0 +1,22 @@
+FastTree Version 2.1.11 Double precision (No SSE3), OpenMP (1 threads)
+Alignment: results/ADAP1-test/ADAP1-test.4.codon.fas
+Nucleotide distances: Jukes-Cantor Joins: balanced Support: SH-like 1000
+Search: Normal +NNI +SPR (2 rounds range 10) +ML-NNI opt-each=1
+TopHits: 1.00*sqrtN close=default refresh=0.80
+ML Model: Generalized Time-Reversible, CAT approximation with 20 rate categories
+Initial topology in 0.00 seconds
+Refining topology: 14 rounds ME-NNIs, 2 rounds ME-SPRs, 7 rounds ML-NNIs
+Total branch-length 0.730 after 0.00 sec
+ML-NNI round 1: LogLk = -1596.650 NNIs 1 max delta 0.31 Time 0.01
+GTR Frequencies: 0.3050 0.2398 0.2535 0.2017
+GTR rates(ac ag at cg ct gt) 3.3290 6.9089 1.5738 2.2855 17.0310 1.0000
+Switched to using 20 rate categories (CAT approximation)
+Rate categories were divided by 0.771 so that average rate = 1.0
+CAT-based log-likelihoods may not be comparable across runs
+Use -gamma for approximate but comparable Gamma(20) log-likelihoods
+ML-NNI round 2: LogLk = -1381.371 NNIs 1 max delta 2.62 Time 0.02
+ML-NNI round 3: LogLk = -1381.369 NNIs 0 max delta 0.00 Time 0.02
+Turning off heuristics for final round of ML NNIs (converged)
+ML-NNI round 4: LogLk = -1381.369 NNIs 0 max delta 0.00 Time 0.03 (final)
+Optimize all lengths: LogLk = -1381.369 Time 0.03
+Total time: 0.04 seconds Unique: 11/11 Bad splits: 0/8

@@ -1,4 +1,0 @@
-results/Primate_ACE2/gard_parts/Primate_ACE2.1.codon.fas
-results/Primate_ACE2/gard_parts/Primate_ACE2.2.codon.fas
-results/Primate_ACE2/gard_parts/Primate_ACE2.3.codon.fas
-results/Primate_ACE2/gard_parts/Primate_ACE2.4.codon.fas

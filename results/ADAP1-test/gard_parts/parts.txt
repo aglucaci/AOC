@@ -1,0 +1,7 @@
+results/ADAP1-test/gard_parts/ADAP1-test.1.codon.fas
+results/ADAP1-test/gard_parts/ADAP1-test.2.codon.fas
+results/ADAP1-test/gard_parts/ADAP1-test.3.codon.fas
+results/ADAP1-test/gard_parts/ADAP1-test.4.codon.fas
+results/ADAP1-test/gard_parts/ADAP1-test.5.codon.fas
+results/ADAP1-test/gard_parts/ADAP1-test.6.codon.fas
+results/ADAP1-test/gard_parts/ADAP1-test.7.codon.fas

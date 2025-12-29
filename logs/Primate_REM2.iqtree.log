@@ -5,81 +5,70 @@ Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
 
 Host:    Alexs-MacBook-Pro-2.local (SSE4.2, 16 GB RAM)
 Command: iqtree -s results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa -T AUTO -B 1000 --redo-tree
-Seed:    176492 (Using SPRNG - Scalable Parallel Random Number Generator)
-Time:    Fri Dec 26 13:23:03 2025
+Seed:    979558 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Sat Dec 27 15:33:08 2025
 Kernel:  SSE2 - auto-detect threads (10 CPU cores detected)
 
 Reading alignment file results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa ... Fasta format detected
-Reading fasta file: done in 0.000727892 secs using 63.61% CPU
+Reading fasta file: done in 0.000510931 secs using 88.86% CPU
 Alignment most likely contains DNA/RNA sequences
-Constructing alignment: done in 0.000603914 secs using 64.41% CPU
+Constructing alignment: done in 0.000571012 secs using 64.62% CPU
 WARNING: 3 sites contain only gaps or ambiguous characters.
 Alignment has 35 sequences with 1290 columns, 330 distinct patterns
 200 parsimony-informative, 364 singleton sites, 726 constant sites
-                                                                                                               Gap/Ambiguity  Composition  p-value
-Analyzing sequences: done in 2.59876e-05 secs using 53.87% CPU
-   1  NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                                                   20.93%    passed     98.65%
-   2  XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA             20.70%    passed     99.05%
-   3  XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA     20.70%    passed     97.80%
-   4  XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA                10.23%    passed     49.70%
-   5  XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                        20.93%    passed     99.77%
-   6  XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                                    20.93%    passed     99.97%
-   7  XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                                      20.93%    passed     99.39%
-   8  XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA         20.93%    passed     98.62%
-   9  XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA                         20.93%    passed     99.79%
-  10  XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA                    20.93%    passed     98.62%
-  11  XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                              20.93%    passed     98.62%
-  12  XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA                           20.93%    passed     98.62%
-  13  XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                           20.93%    passed     99.14%
-  14  XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                               20.93%    passed     98.50%
-  15  XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                          20.93%    passed     98.77%
-  16  XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                               20.93%    passed     99.96%
-  17  XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                                      20.93%    passed     98.70%
-  18  XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                                    20.93%    passed     98.58%
-  19  XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                               20.93%    passed     97.11%
-  20  XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                          20.93%    passed     99.34%
-  21  XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                                  20.93%    passed     98.68%
-  22  XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA          20.93%    passed     84.21%
-  23  XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                                   20.93%    passed     99.90%
-  24  XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA              20.93%    passed     99.51%
-  25  XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA              20.93%    passed     99.04%
-  26  XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA         20.93%    passed     99.89%
-  27  XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA   13.49%    failed      1.34%
-  28  XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                                20.93%    passed     74.32%
-  29  XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA          20.93%    passed     75.67%
-  30  XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA                     20.93%    passed     84.46%
-  31  XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA          20.93%    passed     94.73%
-  32  XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA                 20.93%    passed     96.25%
-  33  XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                                 20.93%    passed     98.80%
-  34  XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA                                  20.93%    passed     49.97%
-  35  XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA              25.12%    passed     22.73%
-****  TOTAL                                                                                                           20.52%  1 sequences failed composition chi2 test (p-value<5%; df=3)
-Checking for duplicate sequences: done in 5.10216e-05 secs using 72.52% CPU
+                                                                                                                                                                                                                                                                                Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 1.4782e-05 secs using 94.71% CPU
+   1  NP_775798_2_NM_173527_3_protein_NP_775798_2_GTP_binding_protein_REM_2_Homo_sapiens_transcript_NM_173527_3_Homo_sapiens_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Homo_sapiens                                                                                                 20.93%    passed     98.65%
+   2  XP_009425749_1_XM_009427474_5_protein_XP_009425749_1_GTP_binding_protein_REM_2_isoform_X1_Pan_troglodytes_transcript_XM_009427474_5_PREDICTED_Pan_troglodytes_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Pan_troglodytes                                 20.70%    passed     99.05%
+   3  XP_055218351_1_XM_055362376_2_protein_XP_055218351_1_GTP_binding_protein_REM_2_isoform_X1_Gorilla_gorilla_gorilla_transcript_XM_055362376_2_PREDICTED_Gorilla_gorilla_gorilla_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Gorilla_gorilla_gorilla         20.70%    passed     97.80%
+   4  XP_008958461_3_XM_008960213_4_protein_XP_008958461_3_GTP_binding_protein_REM_2_isoform_X1_Pan_paniscus_transcript_XM_008960213_4_PREDICTED_Pan_paniscus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Pan_paniscus                                          10.23%    passed     49.70%
+   5  XP_050652511_1_XM_050796554_1_protein_XP_050652511_1_GTP_binding_protein_REM_2_Macaca_thibetana_thibetana_transcript_XM_050796554_1_PREDICTED_Macaca_thibetana_thibetana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Macaca_thibetana_thibetana                                 20.93%    passed     99.77%
+   6  XP_001100692_1_XM_001100692_4_protein_XP_001100692_1_GTP_binding_protein_REM_2_Macaca_mulatta_transcript_XM_001100692_4_PREDICTED_Macaca_mulatta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Macaca_mulatta                                                                     20.93%    passed     99.97%
+   7  XP_003901614_1_XM_003901565_5_protein_XP_003901614_1_GTP_binding_protein_REM_2_Papio_anubis_transcript_XM_003901565_5_PREDICTED_Papio_anubis_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Papio_anubis                                                                           20.93%    passed     99.39%
+   8  XP_005560873_1_XM_005560816_4_protein_XP_005560873_1_GTP_binding_protein_REM_2_Macaca_fascicularis_transcript_XM_005560816_4_PREDICTED_Macaca_fascicularis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Macaca_fascicularis                                20.93%    passed     98.62%
+   9  XP_011770654_1_XM_011772352_3_protein_XP_011770654_1_GTP_binding_protein_REM_2_Macaca_nemestrina_transcript_XM_011772352_3_PREDICTED_Macaca_nemestrina_RRAD_and_GEM_like_GTPase_2_LOC105499627_mRNA_species_Macaca_nemestrina                                                    20.93%    passed     99.79%
+  10  XP_011846020_1_XM_011990630_1_protein_XP_011846020_1_PREDICTED_GTP_binding_protein_REM_2_Mandrillus_leucophaeus_transcript_XM_011990630_1_PREDICTED_Mandrillus_leucophaeus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA_species_Mandrillus_leucophaeus                           20.93%    passed     98.62%
+  11  XP_025248260_1_XM_025392475_1_protein_XP_025248260_1_GTP_binding_protein_REM_2_Theropithecus_gelada_transcript_XM_025392475_1_PREDICTED_Theropithecus_gelada_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Theropithecus_gelada                                                   20.93%    passed     98.62%
+  12  XP_011943923_1_XM_012088533_1_protein_XP_011943923_1_PREDICTED_GTP_binding_protein_REM_2_Cercocebus_atys_transcript_XM_012088533_1_PREDICTED_Cercocebus_atys_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA_species_Cercocebus_atys                                                20.93%    passed     98.62%
+  13  XP_010376660_2_XM_010378358_2_protein_XP_010376660_2_GTP_binding_protein_REM_2_Rhinopithecus_roxellana_transcript_XM_010378358_2_PREDICTED_Rhinopithecus_roxellana_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Rhinopithecus_roxellana                                          20.93%    passed     99.14%
+  14  XP_017719775_1_XM_017864286_1_protein_XP_017719775_1_PREDICTED_GTP_binding_protein_REM_2_Rhinopithecus_bieti_transcript_XM_017864286_1_PREDICTED_Rhinopithecus_bieti_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Rhinopithecus_bieti                                            20.93%    passed     98.50%
+  15  XP_033044495_1_XM_033188604_1_protein_XP_033044495_1_GTP_binding_protein_REM_2_Trachypithecus_francoisi_transcript_XM_033188604_1_PREDICTED_Trachypithecus_francoisi_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Trachypithecus_francoisi                                       20.93%    passed     98.77%
+  16  XP_007988978_3_XM_007990787_3_protein_XP_007988978_3_GTP_binding_protein_REM_2_Chlorocebus_sabaeus_transcript_XM_007990787_3_PREDICTED_Chlorocebus_sabaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Chlorocebus_sabaeus                                                      20.93%    passed     99.96%
+  17  XP_002824612_1_XM_002824566_5_protein_XP_002824612_1_GTP_binding_protein_REM_2_Pongo_abelii_transcript_XM_002824566_5_PREDICTED_Pongo_abelii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Pongo_abelii                                                                           20.93%    passed     98.70%
+  18  XP_054304838_1_XM_054448863_2_protein_XP_054304838_1_GTP_binding_protein_REM_2_Pongo_pygmaeus_transcript_XM_054448863_2_PREDICTED_Pongo_pygmaeus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Pongo_pygmaeus                                                                     20.93%    passed     98.58%
+  19  XP_003260643_2_XM_003260595_2_protein_XP_003260643_2_GTP_binding_protein_REM_2_Nomascus_leucogenys_transcript_XM_003260595_2_PREDICTED_Nomascus_leucogenys_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Nomascus_leucogenys                                                      20.93%    passed     97.11%
+  20  XP_055147851_1_XM_055291876_2_protein_XP_055147851_1_GTP_binding_protein_REM_2_Symphalangus_syndactylus_transcript_XM_055291876_2_PREDICTED_Symphalangus_syndactylus_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Symphalangus_syndactylus                                       20.93%    passed     99.34%
+  21  XP_032035819_1_XM_032179928_2_protein_XP_032035819_1_GTP_binding_protein_REM_2_Hylobates_moloch_transcript_XM_032179928_2_PREDICTED_Hylobates_moloch_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Hylobates_moloch                                                               20.93%    passed     98.68%
+  22  XP_035115986_1_XM_035260095_2_protein_XP_035115986_1_GTP_binding_protein_REM_2_isoform_X1_Callithrix_jacchus_transcript_XM_035260095_2_PREDICTED_Callithrix_jacchus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Callithrix_jacchus                        20.93%    passed     84.21%
+  23  XP_064230844_1_XM_064374774_1_protein_XP_064230844_1_GTP_binding_protein_REM_2_Aotus_nancymaae_transcript_XM_064374774_1_PREDICTED_Aotus_nancymaae_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Aotus_nancymaae                                                                  20.93%    passed     99.90%
+  24  XP_032121441_1_XM_032265550_1_protein_XP_032121441_1_GTP_binding_protein_REM_2_isoform_X1_Sapajus_apella_transcript_XM_032265550_1_PREDICTED_Sapajus_apella_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Sapajus_apella                                    20.93%    passed     99.51%
+  25  XP_017399988_1_XM_017544499_2_protein_XP_017399988_1_GTP_binding_protein_REM_2_isoform_X1_Cebus_imitator_transcript_XM_017544499_2_PREDICTED_Cebus_imitator_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Cebus_imitator                                    20.93%    passed     99.04%
+  26  XP_003924384_1_XM_003924335_4_protein_XP_003924384_1_GTP_binding_protein_REM_2_isoform_X1_Saimiri_boliviensis_transcript_XM_003924335_4_PREDICTED_Saimiri_boliviensis_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Saimiri_boliviensis                     20.93%    passed     99.89%
+  27  XP_023086208_1_XM_023230440_1_protein_XP_023086208_1_GTP_binding_protein_REM_2_isoform_X1_Piliocolobus_tephrosceles_transcript_XM_023230440_1_PREDICTED_Piliocolobus_tephrosceles_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Piliocolobus_tephrosceles   13.49%    failed      1.34%
+  28  XP_003801957_1_XM_003801909_3_protein_XP_003801957_1_GTP_binding_protein_REM_2_Otolemur_garnettii_transcript_XM_003801909_3_PREDICTED_Otolemur_garnettii_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Otolemur_garnettii                                                         20.93%    passed     74.32%
+  29  XP_053451643_1_XM_053595668_1_protein_XP_053451643_1_GTP_binding_protein_REM_2_isoform_X1_Nycticebus_coucang_transcript_XM_053595668_1_PREDICTED_Nycticebus_coucang_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Nycticebus_coucang                        20.93%    passed     75.67%
+  30  XP_012504901_1_XM_012649447_1_protein_XP_012504901_1_PREDICTED_GTP_binding_protein_REM_2_Propithecus_coquereli_transcript_XM_012649447_1_PREDICTED_Propithecus_coquereli_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA_species_Propithecus_coquereli                              20.93%    passed     84.46%
+  31  XP_012608143_1_XM_012752689_1_protein_XP_012608143_1_GTP_binding_protein_REM_2_isoform_X1_Microcebus_murinus_transcript_XM_012752689_1_PREDICTED_Microcebus_murinus_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Microcebus_murinus                        20.93%    passed     94.73%
+  32  XP_045381916_1_XM_045525960_1_protein_XP_045381916_1_GTP_binding_protein_REM_2_isoform_X1_Lemur_catta_transcript_XM_045525960_1_PREDICTED_Lemur_catta_RRAD_and_GEM_like_GTPase_2_REM2_transcript_variant_X1_mRNA_species_Lemur_catta                                             20.93%    passed     96.25%
+  33  XP_069319405_1_XM_069463304_1_protein_XP_069319405_1_GTP_binding_protein_REM_2_Eulemur_rufifrons_transcript_XM_069463304_1_PREDICTED_Eulemur_rufifrons_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Eulemur_rufifrons                                                            20.93%    passed     98.80%
+  34  XP_008063462_1_XM_008065271_2_protein_XP_008063462_1_GTP_binding_protein_REM_2_Carlito_syrichta_transcript_XM_008065271_2_PREDICTED_Carlito_syrichta_RRAD_and_GEM_like_GTPase_2_REM2_mRNA_species_Carlito_syrichta                                                               20.93%    passed     49.97%
+  35  XP_011786352_1_XM_011930962_1_protein_XP_011786352_1_PREDICTED_GTP_binding_protein_REM_2_Colobus_angolensis_palliatus_transcript_XM_011930962_1_PREDICTED_Colobus_angolensis_palliatus_RAS_RAD_and_GEM_like_GTP_binding_2_REM2_mRNA_species_Colobus_angolensis_palliatus         25.12%    passed     22.73%
+****  TOTAL                                                                                                                                                                                                                                                                            20.52%  1 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 4.91142e-05 secs using 75.33% CPU
 
+NOTE: Restoring information from model checkpoint file results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.model.gz
 
-Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.001 seconds
+CHECKPOINT: Initial tree restored
 Measuring multi-threading efficiency up to 10 CPU cores
 Increase to 10 rounds for branch lengths
-702 trees examined
-Threads: 1 / Time: 10.012 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -7963
-Threads: 2 / Time: 19.973 sec / Speedup: 0.501 / Efficiency: 25% / LogL: -7963
-Determining AUTO threadcount: done in 29.9862 secs using 82.15% CPU
+915 trees examined
+Threads: 1 / Time: 10.002 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -8096
+Threads: 2 / Time: 23.590 sec / Speedup: 0.424 / Efficiency: 21% / LogL: -8096
+Determining AUTO threadcount: done in 33.5928 secs using 76.83% CPU
 BEST NUMBER OF THREADS: 1
 
 Perform fast likelihood tree search using GTR+I+G model...
-Estimate model parameters (epsilon = 5.000)
-Perform nearest neighbor interchange...
-Optimizing NNI: done in 0.0133121 secs using 99.68% CPU
-Estimate model parameters (epsilon = 1.000)
-1. Initial log-likelihood: -6052.695
-Optimal log-likelihood: -6052.146
-Rate parameters:  A-C: 1.08769  A-G: 2.21851  A-T: 0.56880  C-G: 0.93387  C-T: 3.13518  G-T: 1.00000
-Base frequencies:  A: 0.213  C: 0.321  G: 0.306  T: 0.160
-Proportion of invariable sites: 0.245
-Gamma shape alpha: 5.014
-Parameters optimization took 1 rounds (0.011 sec)
-Time for fast ML tree search: 0.075 seconds
-
+CHECKPOINT: Tree restored, LogL: -6050.299
 NOTE: ModelFinder requires 5 MB RAM!
 ModelFinder will test up to 968 DNA models (sample size: 1290 epsilon: 0.100) ...
  No. Model         -LnL         df  AIC          AICc         BIC
@@ -140,9 +129,9 @@ Bayesian Information Criterion:         TN+F+G4
 Best-fit model: TN+F+G4 chosen according to BIC
 
 All model information printed to results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.model.gz
-CPU time for ModelFinder: 25.961 seconds (0h:0m:25s)
-Wall-clock time for ModelFinder: 31.324 seconds (0h:0m:31s)
-Generating 1000 samples for ultrafast bootstrap (seed: 176492)...
+CPU time for ModelFinder: 25.818 seconds (0h:0m:25s)
+Wall-clock time for ModelFinder: 33.603 seconds (0h:0m:33s)
+Generating 1000 samples for ultrafast bootstrap (seed: 979558)...
 
 NOTE: 2 MB RAM (0 GB) is required!
 Estimate model parameters (epsilon = 0.100)
@@ -155,175 +144,182 @@ Gamma shape alpha: 1.254
 Parameters optimization took 2 rounds (0.012 sec)
 Wrote distance file to... 
 Computing ML distances based on estimated model parameters...
-Calculating distance matrix: done in 0.00556588 secs using 99.91% CPU
-Computing ML distances took 0.005617 sec (of wall-clock time) 0.005601 sec (of CPU time)
-Setting up auxiliary I and S matrices: done in 3.00407e-05 secs using 83.22% CPU
-Constructing RapidNJ tree: done in 6.91414e-05 secs using 91.12% CPU
-Computing RapidNJ tree took 0.000118 sec (of wall-clock time) 0.000096 sec (of CPU time)
+Calculating distance matrix: done in 0.00555992 secs using 99.82% CPU
+Computing ML distances took 0.005612 sec (of wall-clock time) 0.005590 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 3.40939e-05 secs using 79.19% CPU
+Constructing RapidNJ tree: done in 6.91414e-05 secs using 92.56% CPU
+Computing RapidNJ tree took 0.000130 sec (of wall-clock time) 0.000100 sec (of CPU time)
 Log-likelihood of RapidNJ tree: -6064.930
 --------------------------------------------------------------------
 |             INITIALIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-Generating 98 parsimony trees... 0.116 second
-Computing log-likelihood of 98 initial trees ... 0.182 seconds
+Generating 98 parsimony trees... 0.123 second
+Computing log-likelihood of 98 initial trees ... 0.187 seconds
 Current best score: -6050.692
 
 Do NNI search on 20 best initial trees
-Optimizing NNI: done in 0.010951 secs using 99.45% CPU
+Optimizing NNI: done in 0.0115261 secs using 97.14% CPU
 Estimate model parameters (epsilon = 0.100)
 BETTER TREE FOUND at iteration 1: -6050.692
-Optimizing NNI: done in 0.0247722 secs using 98.6% CPU
+Optimizing NNI: done in 0.0257859 secs using 98.87% CPU
 BETTER TREE FOUND at iteration 2: -6050.691
-Optimizing NNI: done in 0.025399 secs using 99.74% CPU
-Optimizing NNI: done in 0.024585 secs using 99.62% CPU
-Optimizing NNI: done in 0.025491 secs using 99.91% CPU
-Optimizing NNI: done in 0.0250049 secs using 99.66% CPU
-Optimizing NNI: done in 0.0255339 secs using 99.79% CPU
-Optimizing NNI: done in 0.0252669 secs using 99.75% CPU
-Optimizing NNI: done in 0.0248761 secs using 99.92% CPU
-Optimizing NNI: done in 0.024833 secs using 99.96% CPU
-BETTER TREE FOUND at iteration 10: -6050.691
-Iteration 10 / LogL: -6050.691 / Time: 0h:0m:31s
-Optimizing NNI: done in 0.0247009 secs using 99.93% CPU
-Optimizing NNI: done in 0.025367 secs using 99.96% CPU
-Optimizing NNI: done in 0.0248551 secs using 99.94% CPU
-Optimizing NNI: done in 0.0253592 secs using 99.96% CPU
-Optimizing NNI: done in 0.027266 secs using 93.34% CPU
-Optimizing NNI: done in 0.0252049 secs using 99.75% CPU
-Optimizing NNI: done in 0.025599 secs using 99.72% CPU
-Optimizing NNI: done in 0.025352 secs using 99.72% CPU
-Optimizing NNI: done in 0.0244009 secs using 99.87% CPU
-Optimizing NNI: done in 0.0255601 secs using 99.73% CPU
-Iteration 20 / LogL: -6050.691 / Time: 0h:0m:32s
-Finish initializing candidate tree set (18)
-Current best tree score: -6050.691 / CPU time: 0.807
+Optimizing NNI: done in 0.0251331 secs using 98.26% CPU
+Optimizing NNI: done in 0.0252352 secs using 98.47% CPU
+BETTER TREE FOUND at iteration 4: -6050.691
+Optimizing NNI: done in 0.025568 secs using 98.78% CPU
+Optimizing NNI: done in 0.0245769 secs using 99.69% CPU
+Optimizing NNI: done in 0.0256221 secs using 98.7% CPU
+BETTER TREE FOUND at iteration 7: -6050.691
+Optimizing NNI: done in 0.025243 secs using 99.08% CPU
+BETTER TREE FOUND at iteration 8: -6050.691
+Optimizing NNI: done in 0.0261562 secs using 98.26% CPU
+Optimizing NNI: done in 0.025882 secs using 98.85% CPU
+Iteration 10 / LogL: -6050.691 / Time: 0h:0m:34s
+Optimizing NNI: done in 0.025661 secs using 98.78% CPU
+Optimizing NNI: done in 0.0243919 secs using 99.89% CPU
+Optimizing NNI: done in 0.024946 secs using 99.45% CPU
+Optimizing NNI: done in 0.0243731 secs using 99.77% CPU
+Optimizing NNI: done in 0.024823 secs using 99.89% CPU
+Optimizing NNI: done in 0.0260131 secs using 98.82% CPU
+Optimizing NNI: done in 0.0255408 secs using 98.13% CPU
+Optimizing NNI: done in 0.0255768 secs using 98.58% CPU
+BETTER TREE FOUND at iteration 18: -6050.691
+Optimizing NNI: done in 0.0244431 secs using 99.38% CPU
+Optimizing NNI: done in 0.0251579 secs using 98.42% CPU
+BETTER TREE FOUND at iteration 20: -6050.691
+Iteration 20 / LogL: -6050.691 / Time: 0h:0m:34s
+Finish initializing candidate tree set (20)
+Current best tree score: -6050.691 / CPU time: 0.821
 Number of iterations: 20
 --------------------------------------------------------------------
 |               OPTIMIZING CANDIDATE TREE SET                      |
 --------------------------------------------------------------------
-Optimizing NNI: done in 0.0329211 secs using 99.61% CPU
+Optimizing NNI: done in 0.0370481 secs using 99.37% CPU
 Estimate model parameters (epsilon = 0.100)
-BETTER TREE FOUND at iteration 21: -6047.273
-Optimizing NNI: done in 0.031152 secs using 99.76% CPU
-BETTER TREE FOUND at iteration 22: -6047.270
-Optimizing NNI: done in 0.0314341 secs using 99.84% CPU
-BETTER TREE FOUND at iteration 23: -6047.269
-Optimizing NNI: done in 0.037225 secs using 99.93% CPU
-Optimizing NNI: done in 0.0246739 secs using 99.78% CPU
-Optimizing NNI: done in 0.036799 secs using 99.91% CPU
-Optimizing NNI: done in 0.0364609 secs using 99.95% CPU
-Optimizing NNI: done in 0.0350921 secs using 99.91% CPU
-Optimizing NNI: done in 0.0406048 secs using 99.78% CPU
-Optimizing NNI: done in 0.027915 secs using 99.92% CPU
-Iteration 30 / LogL: -6047.271 / Time: 0h:0m:32s (0h:0m:3s left)
-Optimizing NNI: done in 0.0375249 secs using 99.93% CPU
-Optimizing NNI: done in 0.0344448 secs using 99.94% CPU
-Optimizing NNI: done in 0.0270591 secs using 99.94% CPU
-Optimizing NNI: done in 0.0342309 secs using 99.73% CPU
-Optimizing NNI: done in 0.0270751 secs using 99.9% CPU
-Optimizing NNI: done in 0.0276721 secs using 99.93% CPU
+BETTER TREE FOUND at iteration 21: -6047.270
+Optimizing NNI: done in 0.0390458 secs using 99.36% CPU
+Optimizing NNI: done in 0.034287 secs using 99.33% CPU
+BETTER TREE FOUND at iteration 23: -6047.270
+Optimizing NNI: done in 0.0431719 secs using 99.04% CPU
+Optimizing NNI: done in 0.03562 secs using 98.88% CPU
+Optimizing NNI: done in 0.0401161 secs using 98.81% CPU
+Optimizing NNI: done in 0.0363111 secs using 98.24% CPU
+Optimizing NNI: done in 0.028383 secs using 99.44% CPU
+Optimizing NNI: done in 0.0432189 secs using 98.62% CPU
+Optimizing NNI: done in 0.03335 secs using 98.25% CPU
+Iteration 30 / LogL: -6047.271 / Time: 0h:0m:34s (0h:0m:4s left)
+Optimizing NNI: done in 0.03035 secs using 99.12% CPU
+Optimizing NNI: done in 0.0430241 secs using 98.56% CPU
+Optimizing NNI: done in 0.034338 secs using 98.79% CPU
+Optimizing NNI: done in 0.0345891 secs using 99.5% CPU
+Optimizing NNI: done in 0.0380058 secs using 98.16% CPU
+Optimizing NNI: done in 0.0286932 secs using 98.61% CPU
+Optimizing NNI: done in 0.0353332 secs using 98.19% CPU
+Optimizing NNI: done in 0.0510979 secs using 98.39% CPU
+Optimizing NNI: done in 0.0274122 secs using 98.67% CPU
+Optimizing NNI: done in 0.0285659 secs using 98.9% CPU
+Iteration 40 / LogL: -6047.271 / Time: 0h:0m:35s (0h:0m:3s left)
+Optimizing NNI: done in 0.036366 secs using 98.48% CPU
+Optimizing NNI: done in 0.035533 secs using 98.22% CPU
+Optimizing NNI: done in 0.0373609 secs using 98.54% CPU
+Optimizing NNI: done in 0.028486 secs using 97.86% CPU
+Optimizing NNI: done in 0.0321038 secs using 99.1% CPU
+Optimizing NNI: done in 0.0257621 secs using 99.3% CPU
+Optimizing NNI: done in 0.035815 secs using 99.09% CPU
+Optimizing NNI: done in 0.031919 secs using 99.42% CPU
+Optimizing NNI: done in 0.0333941 secs using 97.89% CPU
+Optimizing NNI: done in 0.0317519 secs using 98.72% CPU
+Iteration 50 / LogL: -6048.276 / Time: 0h:0m:35s (0h:0m:2s left)
+Log-likelihood cutoff on original alignment: -6072.573
+Optimizing NNI: done in 0.0391469 secs using 84.12% CPU
+Optimizing NNI: done in 0.047761 secs using 92.16% CPU
+Optimizing NNI: done in 0.0316689 secs using 98.45% CPU
+Optimizing NNI: done in 0.026896 secs using 99.91% CPU
+Optimizing NNI: done in 0.035553 secs using 98.56% CPU
+Optimizing NNI: done in 0.036025 secs using 98.15% CPU
+Optimizing NNI: done in 0.0359051 secs using 98.31% CPU
+Optimizing NNI: done in 0.028986 secs using 98.4% CPU
+Optimizing NNI: done in 0.0333531 secs using 99.18% CPU
+Optimizing NNI: done in 0.0335 secs using 99.6% CPU
+Iteration 60 / LogL: -6047.927 / Time: 0h:0m:36s (0h:0m:2s left)
+Optimizing NNI: done in 0.026638 secs using 99.26% CPU
+Optimizing NNI: done in 0.0308509 secs using 98.43% CPU
+Optimizing NNI: done in 0.035496 secs using 98.28% CPU
+Optimizing NNI: done in 0.031553 secs using 98.48% CPU
+Optimizing NNI: done in 0.028223 secs using 98.58% CPU
+Optimizing NNI: done in 0.0417809 secs using 98.06% CPU
+Optimizing NNI: done in 0.0388522 secs using 99.29% CPU
+Optimizing NNI: done in 0.0353889 secs using 99.9% CPU
 UPDATE BEST LOG-LIKELIHOOD: -6047.269
-Optimizing NNI: done in 0.025842 secs using 99.93% CPU
-Optimizing NNI: done in 0.0430598 secs using 99.93% CPU
-Optimizing NNI: done in 0.0371909 secs using 99.84% CPU
-Optimizing NNI: done in 0.0385189 secs using 99.92% CPU
-Iteration 40 / LogL: -6047.270 / Time: 0h:0m:32s (0h:0m:3s left)
-Optimizing NNI: done in 0.039367 secs using 99.91% CPU
-Optimizing NNI: done in 0.0323091 secs using 99.93% CPU
-Optimizing NNI: done in 0.0382199 secs using 95.11% CPU
-Optimizing NNI: done in 0.0362051 secs using 98.87% CPU
-Optimizing NNI: done in 0.030277 secs using 99.17% CPU
-Optimizing NNI: done in 0.0349011 secs using 98.07% CPU
-Optimizing NNI: done in 0.0320439 secs using 90% CPU
-Optimizing NNI: done in 0.029068 secs using 99.46% CPU
-Optimizing NNI: done in 0.0300188 secs using 99.69% CPU
-Optimizing NNI: done in 0.0373919 secs using 99.68% CPU
-Iteration 50 / LogL: -6047.929 / Time: 0h:0m:33s (0h:0m:2s left)
-Log-likelihood cutoff on original alignment: -6069.151
-Optimizing NNI: done in 0.0393238 secs using 99.55% CPU
-Optimizing NNI: done in 0.024821 secs using 99.64% CPU
-Optimizing NNI: done in 0.0307779 secs using 99.56% CPU
-Optimizing NNI: done in 0.0318801 secs using 99.93% CPU
-Optimizing NNI: done in 0.033442 secs using 99.81% CPU
-Optimizing NNI: done in 0.029233 secs using 99.93% CPU
-Optimizing NNI: done in 0.0373499 secs using 99.93% CPU
-Optimizing NNI: done in 0.056695 secs using 66.74% CPU
-Optimizing NNI: done in 0.041559 secs using 99.58% CPU
-Optimizing NNI: done in 0.0285408 secs using 99.6% CPU
-Iteration 60 / LogL: -6047.270 / Time: 0h:0m:33s (0h:0m:2s left)
-Optimizing NNI: done in 0.0335279 secs using 99.47% CPU
-Optimizing NNI: done in 0.0331709 secs using 99.95% CPU
-Optimizing NNI: done in 0.0562851 secs using 99.91% CPU
-Optimizing NNI: done in 0.0351071 secs using 99.96% CPU
-Optimizing NNI: done in 0.025876 secs using 99.94% CPU
-Optimizing NNI: done in 0.031734 secs using 99.95% CPU
-Optimizing NNI: done in 0.041106 secs using 99.94% CPU
-Optimizing NNI: done in 0.0317001 secs using 99.64% CPU
-Optimizing NNI: done in 0.0383039 secs using 99.93% CPU
-Optimizing NNI: done in 0.037647 secs using 99.93% CPU
-Iteration 70 / LogL: -6047.270 / Time: 0h:0m:34s (0h:0m:2s left)
-Optimizing NNI: done in 0.0261569 secs using 99.95% CPU
-Optimizing NNI: done in 0.03281 secs using 99.73% CPU
-Optimizing NNI: done in 0.0385308 secs using 99.86% CPU
-Optimizing NNI: done in 0.0297489 secs using 99.67% CPU
-Optimizing NNI: done in 0.0272629 secs using 99.88% CPU
-Optimizing NNI: done in 0.029676 secs using 99.84% CPU
-Optimizing NNI: done in 0.0297041 secs using 99.93% CPU
-Optimizing NNI: done in 0.0317228 secs using 99.93% CPU
-Optimizing NNI: done in 0.0369701 secs using 99.89% CPU
-Optimizing NNI: done in 0.031971 secs using 99.92% CPU
-Iteration 80 / LogL: -6047.270 / Time: 0h:0m:34s (0h:0m:1s left)
-Optimizing NNI: done in 0.043087 secs using 99.93% CPU
-Optimizing NNI: done in 0.0378079 secs using 99.75% CPU
-Optimizing NNI: done in 0.0386798 secs using 99.93% CPU
-Optimizing NNI: done in 0.0256538 secs using 99.89% CPU
-Optimizing NNI: done in 0.0339589 secs using 99.9% CPU
-Optimizing NNI: done in 0.036938 secs using 99.92% CPU
-Optimizing NNI: done in 0.0450909 secs using 99.83% CPU
-Optimizing NNI: done in 0.0312028 secs using 99.71% CPU
-Optimizing NNI: done in 0.0394111 secs using 99.83% CPU
-Optimizing NNI: done in 0.0416 secs using 99.95% CPU
-Iteration 90 / LogL: -6047.272 / Time: 0h:0m:34s (0h:0m:1s left)
-Optimizing NNI: done in 0.0349429 secs using 99.94% CPU
-Optimizing NNI: done in 0.0277221 secs using 99.92% CPU
-Optimizing NNI: done in 0.0336649 secs using 99.92% CPU
-Optimizing NNI: done in 0.0368669 secs using 99.8% CPU
-Optimizing NNI: done in 0.037075 secs using 99.78% CPU
-Optimizing NNI: done in 0.04024 secs using 99.94% CPU
-Optimizing NNI: done in 0.0428531 secs using 99.93% CPU
-Optimizing NNI: done in 0.0322299 secs using 99.92% CPU
-Optimizing NNI: done in 0.0303481 secs using 99.49% CPU
-Optimizing NNI: done in 0.0332551 secs using 99.49% CPU
-Iteration 100 / LogL: -6047.272 / Time: 0h:0m:35s (0h:0m:0s left)
-Log-likelihood cutoff on original alignment: -6071.873
-NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.991
-Optimizing NNI: done in 0.0328312 secs using 99.75% CPU
-Optimizing NNI: done in 0.0503399 secs using 99.81% CPU
-Optimizing NNI: done in 0.0269821 secs using 99.82% CPU
-Optimizing NNI: done in 0.0290859 secs using 99.95% CPU
-Optimizing NNI: done in 0.0318279 secs using 99.93% CPU
-Optimizing NNI: done in 0.0378909 secs using 99.91% CPU
-Optimizing NNI: done in 0.0285959 secs using 99.9% CPU
-Optimizing NNI: done in 0.033428 secs using 99.86% CPU
-Optimizing NNI: done in 0.0345829 secs using 99.95% CPU
-Optimizing NNI: done in 0.0413361 secs using 99.9% CPU
-Iteration 110 / LogL: -6047.269 / Time: 0h:0m:35s (0h:0m:3s left)
-Optimizing NNI: done in 0.0279608 secs using 99.94% CPU
-Optimizing NNI: done in 0.0333331 secs using 99.93% CPU
-Optimizing NNI: done in 0.0274899 secs using 99.92% CPU
-Optimizing NNI: done in 0.0318961 secs using 99.72% CPU
-Optimizing NNI: done in 0.0325189 secs using 99.92% CPU
-Optimizing NNI: done in 0.0277851 secs using 99.93% CPU
-Optimizing NNI: done in 0.0283952 secs using 99.89% CPU
-Optimizing NNI: done in 0.027724 secs using 99.96% CPU
-Optimizing NNI: done in 0.0330091 secs using 99.96% CPU
-Optimizing NNI: done in 0.031487 secs using 99.93% CPU
-Iteration 120 / LogL: -6047.272 / Time: 0h:0m:35s (0h:0m:3s left)
-Optimizing NNI: done in 0.029984 secs using 99.93% CPU
-Optimizing NNI: done in 0.0427692 secs using 99.94% CPU
-Optimizing NNI: done in 0.0243719 secs using 99.94% CPU
-Optimizing NNI: done in 0.0367322 secs using 99.87% CPU
-TREE SEARCH COMPLETED AFTER 124 ITERATIONS / Time: 0h:0m:36s
+Optimizing NNI: done in 0.0375431 secs using 98.84% CPU
+Optimizing NNI: done in 0.0355909 secs using 99.11% CPU
+Iteration 70 / LogL: -6047.272 / Time: 0h:0m:36s (0h:0m:2s left)
+Optimizing NNI: done in 0.0554092 secs using 99.3% CPU
+Optimizing NNI: done in 0.0295119 secs using 99.54% CPU
+Optimizing NNI: done in 0.0235879 secs using 98.54% CPU
+Optimizing NNI: done in 0.031615 secs using 98.15% CPU
+Optimizing NNI: done in 0.0313699 secs using 98.15% CPU
+Optimizing NNI: done in 0.030412 secs using 99.07% CPU
+Optimizing NNI: done in 0.037909 secs using 96.75% CPU
+Optimizing NNI: done in 0.0371718 secs using 98.39% CPU
+Optimizing NNI: done in 0.024004 secs using 98.51% CPU
+Optimizing NNI: done in 0.036839 secs using 98.56% CPU
+Iteration 80 / LogL: -6047.270 / Time: 0h:0m:36s (0h:0m:1s left)
+Optimizing NNI: done in 0.0343292 secs using 98.54% CPU
+Optimizing NNI: done in 0.03971 secs using 96.36% CPU
+UPDATE BEST LOG-LIKELIHOOD: -6047.269
+Optimizing NNI: done in 0.0265009 secs using 98.91% CPU
+Optimizing NNI: done in 0.032897 secs using 98.58% CPU
+Optimizing NNI: done in 0.036154 secs using 98.93% CPU
+Optimizing NNI: done in 0.0357161 secs using 98.96% CPU
+Optimizing NNI: done in 0.02878 secs using 98.43% CPU
+Optimizing NNI: done in 0.039952 secs using 98.12% CPU
+Optimizing NNI: done in 0.0336568 secs using 98.33% CPU
+Optimizing NNI: done in 0.0313048 secs using 99.12% CPU
+Iteration 90 / LogL: -6048.276 / Time: 0h:0m:37s (0h:0m:1s left)
+Optimizing NNI: done in 0.0359468 secs using 98.92% CPU
+Optimizing NNI: done in 0.0366862 secs using 99.3% CPU
+Optimizing NNI: done in 0.0307112 secs using 99.18% CPU
+Optimizing NNI: done in 0.030988 secs using 98.16% CPU
+Optimizing NNI: done in 0.030329 secs using 98.39% CPU
+Optimizing NNI: done in 0.044373 secs using 99.82% CPU
+Optimizing NNI: done in 0.03631 secs using 99.53% CPU
+Optimizing NNI: done in 0.0355721 secs using 98.66% CPU
+Optimizing NNI: done in 0.042592 secs using 98.41% CPU
+Optimizing NNI: done in 0.05022 secs using 99.81% CPU
+Iteration 100 / LogL: -6047.270 / Time: 0h:0m:37s (0h:0m:0s left)
+Log-likelihood cutoff on original alignment: -6073.345
+NOTE: Bootstrap correlation coefficient of split occurrence frequencies: 0.992
+Optimizing NNI: done in 0.0386472 secs using 99.09% CPU
+Optimizing NNI: done in 0.033967 secs using 98.45% CPU
+Optimizing NNI: done in 0.034718 secs using 98.82% CPU
+Optimizing NNI: done in 0.0412412 secs using 97.99% CPU
+UPDATE BEST LOG-LIKELIHOOD: -6047.269
+Optimizing NNI: done in 0.0409691 secs using 95.92% CPU
+Optimizing NNI: done in 0.036788 secs using 91.52% CPU
+Optimizing NNI: done in 0.051053 secs using 98.76% CPU
+Optimizing NNI: done in 0.0317209 secs using 99.33% CPU
+Optimizing NNI: done in 0.0458279 secs using 98.35% CPU
+Optimizing NNI: done in 0.0371661 secs using 99.81% CPU
+Iteration 110 / LogL: -6047.270 / Time: 0h:0m:37s (0h:0m:3s left)
+Optimizing NNI: done in 0.0308759 secs using 98.13% CPU
+Optimizing NNI: done in 0.029542 secs using 98.39% CPU
+Optimizing NNI: done in 0.0295489 secs using 97.78% CPU
+UPDATE BEST LOG-LIKELIHOOD: -6047.269
+Optimizing NNI: done in 0.043566 secs using 98.04% CPU
+Optimizing NNI: done in 0.0336959 secs using 98.34% CPU
+UPDATE BEST LOG-LIKELIHOOD: -6047.269
+Optimizing NNI: done in 0.0276651 secs using 98.71% CPU
+Optimizing NNI: done in 0.0336101 secs using 99.28% CPU
+Optimizing NNI: done in 0.0294111 secs using 98.95% CPU
+Optimizing NNI: done in 0.035923 secs using 98.39% CPU
+Optimizing NNI: done in 0.0318201 secs using 98.5% CPU
+Iteration 120 / LogL: -6047.269 / Time: 0h:0m:38s (0h:0m:3s left)
+Optimizing NNI: done in 0.0256329 secs using 99.73% CPU
+Optimizing NNI: done in 0.03405 secs using 99.56% CPU
+Optimizing NNI: done in 0.0348511 secs using 99.4% CPU
+Optimizing NNI: done in 0.03771 secs using 98.27% CPU
+TREE SEARCH COMPLETED AFTER 124 ITERATIONS / Time: 0h:0m:38s
 
 --------------------------------------------------------------------
 |                    FINALIZING TREE SEARCH                        |
@@ -331,25 +327,25 @@ TREE SEARCH COMPLETED AFTER 124 ITERATIONS / Time: 0h:0m:36s
 Performs final model parameters optimization
 Estimate model parameters (epsilon = 0.010)
 1. Initial log-likelihood: -6047.269
-Optimal log-likelihood: -6047.269
-Rate parameters:  A-C: 1.00000  A-G: 2.33239  A-T: 1.00000  C-G: 1.00000  C-T: 3.29363  G-T: 1.00000
+Optimal log-likelihood: -6047.268
+Rate parameters:  A-C: 1.00000  A-G: 2.33239  A-T: 1.00000  C-G: 1.00000  C-T: 3.29362  G-T: 1.00000
 Base frequencies:  A: 0.213  C: 0.321  G: 0.306  T: 0.160
 Gamma shape alpha: 1.252
 Parameters optimization took 1 rounds (0.006 sec)
-BEST SCORE FOUND : -6047.269
+BEST SCORE FOUND : -6047.268
 Creating bootstrap support values...
 Split supports printed to NEXUS file results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.splits.nex
 Total tree length: 1.146
 
 Total number of iterations: 124
-CPU time used for tree search: 4.596 sec (0h:0m:4s)
-Wall-clock time used for tree search: 4.647 sec (0h:0m:4s)
-Total CPU time used: 30.640 sec (0h:0m:30s)
-Total wall-clock time used: 36.060 sec (0h:0m:36s)
+CPU time used for tree search: 4.713 sec (0h:0m:4s)
+Wall-clock time used for tree search: 4.809 sec (0h:0m:4s)
+Total CPU time used: 30.638 sec (0h:0m:30s)
+Total wall-clock time used: 38.526 sec (0h:0m:38s)
 
 Computing bootstrap consensus tree...
 Reading input file results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.splits.nex...
-35 taxa and 281 splits.
+35 taxa and 258 splits.
 Consensus tree written to results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.contree
 Reading input trees file results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.contree
 Log-likelihood of consensus tree: -6047.280
@@ -364,4 +360,4 @@ Ultrafast bootstrap approximation results written to:
   Consensus tree:                results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.contree
   Screen log file:               results/Primate_REM2/Primate_REM2.RD.SA.codons.cln.fa.log
 
-Date and Time: Fri Dec 26 13:23:39 2025
+Date and Time: Sat Dec 27 15:33:47 2025

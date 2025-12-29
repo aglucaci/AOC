@@ -1,0 +1,75 @@
+
+Analysis Description
+--------------------
+Perform a Fast Unbiased AppRoximate Bayesian (FUBAR) analysis of a
+coding sequence alignment to determine whether some sites have been
+will also exist FUBAR-generated files
+/home/sergei/FUBAR/data/pol.nex.FUBAR.json,
+/home/sergei/FUBAR/data/pol.nex.fubrar.cache. They also provide
+checkpointing so that a partially completed analysis can be restarted.
+subject to pervasive purifying or diversifying selection. v2.1
+introduces two more methods for estimating the posterior distribution of
+grid weights: collapsed Gibbs MCMC (faster) and 0-th order Variation
+Bayes approximation (fastest). Please note that a FUBAR analysis
+generates a cache and a results JSON file in the same directory as
+directory as the original alignment. HyPhy needs to have write
+privileges to this directory. For example if the original file is in
+/home/sergei/FUBAR/data/pol.nex then at the end of a FUBAR run, there
+
+- __Requirements__: in-frame codon alignment (possibly partitioned) and a phylogenetic tree
+(one per partition)
+
+- __Citation__: FUBAR: a fast, unconstrained bayesian approximation for inferring
+selection (2013), Mol Biol Evol. 30(5):1196-205
+
+- __Written by__: Sergei L Kosakovsky Pond
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.2
+
+
+>code => Universal
+/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.5.codon.fas.FastTree.treefile
+results/ADAP1-test/ADAP1-test.5.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **11** sequences, **98** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.5.codon.fas`
+Save FUBAR cache to : 
+>cache => /Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.5.codon.fas.FUBAR.cache
+> FUBAR will write cache and result files to _/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.5.codon.fas.FUBAR.cache_ and _/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.5.codon.fas.FUBAR.json_, respectively 
+
+
+> Number of grid points per dimension (total number is D^2) (permissible range = [5,50], default value = 20, integer): 
+>grid => 20
+
+>method => Variational-Bayes
+> The concentration parameter of the Dirichlet prior (permissible range = [0.001,1], default value = 0.5): 
+>concentration_parameter => 0.5
+
+>non-zero => No
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) = -1443.87, AIC-c =  2942.20 (27 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  0.906
+* Tree length (expected substitutions/site) for partition 1 :    0.906
+
+### Computing the phylogenetic likelihood function on the grid 
+* Determining appropriate tree scaling based on the best score from a  20 x 20 rate grid
+* Best scaling achieved for 
+	* synonymous rate =  2.815
+	* non-synonymous rate =  0.214
+* Computing conditional site likelihoods on a 20 x 20 rate grid
+
+### Running an iterative zeroth order variational Bayes procedure to estimate the posterior mean of rate weights
+* Using the following settings
+	* Dirichlet alpha  : 0.5
+[2K[mcmc] Posterior mean estimation step          1, error =  7.1259214[2K[mcmc] Posterior mean estimation step          2, error =  0.0034793[2K[mcmc] Posterior mean estimation step          3, error =  0.0026488[2K[mcmc] Posterior mean estimation step          4, error =  0.0022661[2K[mcmc] Posterior mean estimation step          5, error =  0.0019482[2K[mcmc] Posterior mean estimation step          6, error =  0.0016911[2K[mcmc] Posterior mean estimation step          7, error =  0.0014820[2K[mcmc] Posterior mean estimation step          8, error =  0.0013088[2K[mcmc] Posterior mean estimation step          9, error =  0.0011627[2K[mcmc] Posterior mean estimation step         10, error =  0.0010375[2K[mcmc] Posterior mean estimation step         11, error =  0.0009289[2K[mcmc] Posterior mean estimation step         12, error =  0.0008339[2K[mcmc] Posterior mean estimation step         13, error =  0.0007502[2K[mcmc] Posterior mean estimation step         14, error =  0.0006760[2K[mcmc] Posterior mean estimation step         15, error =  0.0006100[2K[mcmc] Posterior mean estimation step         16, error =  0.0005512[2K[mcmc] Posterior mean estimation step         17, error =  0.0004985[2K[mcmc] Posterior mean estimation step         18, error =  0.0004513[2K[mcmc] Posterior mean estimation step         19, error =  0.0004089[2K[mcmc] Posterior mean estimation step         20, error =  0.0003707[2K[mcmc] Posterior mean estimation step         21, error =  0.0003363[2K[mcmc] Posterior mean estimation step         22, error =  0.0003053[2K[mcmc] Posterior mean estimation step         23, error =  0.0002773[2K[mcmc] Posterior mean estimation step         24, error =  0.0002520[2K[mcmc] Posterior mean estimation step         25, error =  0.0002291[2K[mcmc] Posterior mean estimation step         26, error =  0.0002084[2K[mcmc] Posterior mean estimation step         27, error =  0.0001896[2K[mcmc] Posterior mean estimation step         28, error =  0.0001726[2K[mcmc] Posterior mean estimation step         29, error =  0.0001572[2K[mcmc] Posterior mean estimation step         30, error =  0.0001431[2K[mcmc] Posterior mean estimation step         31, error =  0.0001304[2K[mcmc] Posterior mean estimation step         32, error =  0.0001188[2K[mcmc] Posterior mean estimation step         33, error =  0.0001083[2K[mcmc] Posterior mean estimation step         34, error =  0.0000987[2K[mcmc] Posterior mean estimation step         35, error =  0.0000900[2K[mcmc] Posterior mean estimation step         36, error =  0.0000821[2K[mcmc] Posterior mean estimation step         37, error =  0.0000749[2K[mcmc] Posterior mean estimation step         38, error =  0.0000683[2K[mcmc] Posterior mean estimation step         39, error =  0.0000624[2K[mcmc] Posterior mean estimation step         40, error =  0.0000569[2K[mcmc] Posterior mean estimation step         41, error =  0.0000519[2K[mcmc] Posterior mean estimation step         42, error =  0.0000474[2K[mcmc] Posterior mean estimation step         43, error =  0.0000433[2K[mcmc] Posterior mean estimation step         44, error =  0.0000395[2K[mcmc] Posterior mean estimation step         45, error =  0.0000361[2K[mcmc] Posterior mean estimation step         46, error =  0.0000330[2K[mcmc] Posterior mean estimation step         47, error =  0.0000301[2K[mcmc] Posterior mean estimation step         48, error =  0.0000275[2K[mcmc] Posterior mean estimation step         49, error =  0.0000251[2K[mcmc] Posterior mean estimation step         50, error =  0.0000229[2K[mcmc] Posterior mean estimation step         51, error =  0.0000209[2K[mcmc] Posterior mean estimation step         52, error =  0.0000191[2K[mcmc] Posterior mean estimation step         53, error =  0.0000175[2K[mcmc] Posterior mean estimation step         54, error =  0.0000160[2K[mcmc] Posterior mean estimation step         55, error =  0.0000146[2K[mcmc] Posterior mean estimation step         56, error =  0.0000133[2K[mcmc] Posterior mean estimation step         57, error =  0.0000122[2K[mcmc] Posterior mean estimation step         58, error =  0.0000111[2K[mcmc] Posterior mean estimation step         59, error =  0.0000102[2K[mcmc] Posterior mean estimation step         60, error =  0.0000093[2K[mcmc] Posterior mean estimation step         61, error =  0.0000085[2K[mcmc] Posterior mean estimation step         62, error =  0.0000078[2K[mcmc] Posterior mean estimation step         63, error =  0.0000071[2K[mcmc] Posterior mean estimation step         64, error =  0.0000065[2K[mcmc] Posterior mean estimation step         65, error =  0.0000059[2K[mcmc] Posterior mean estimation step         66, error =  0.0000054[2K[mcmc] Posterior mean estimation step         67, error =  0.0000049[2K[mcmc] Posterior mean estimation step         68, error =  0.0000045[2K[mcmc] Posterior mean estimation step         69, error =  0.0000041[2K[mcmc] Posterior mean estimation step         70, error =  0.0000038[2K[mcmc] Posterior mean estimation step         71, error =  0.0000035[2K[mcmc] Posterior mean estimation step         72, error =  0.0000032[2K[mcmc] Posterior mean estimation step         73, error =  0.0000029[2K[mcmc] Posterior mean estimation step         74, error =  0.0000026[2K[mcmc] Posterior mean estimation step         75, error =  0.0000024[2K[mcmc] Posterior mean estimation step         76, error =  0.0000022[2K[mcmc] Posterior mean estimation step         77, error =  0.0000020[2K[mcmc] Posterior mean estimation step         78, error =  0.0000018[2K[mcmc] Posterior mean estimation step         79, error =  0.0000017[2K[mcmc] Posterior mean estimation step         80, error =  0.0000015[2K[mcmc] Posterior mean estimation step         81, error =  0.0000014[2K[mcmc] Posterior mean estimation step         82, error =  0.0000013[2K[mcmc] Posterior mean estimation step         83, error =  0.0000012[2K[mcmc] Posterior mean estimation step         84, error =  0.0000011[2K[mcmc] Posterior mean estimation step         85, error =  0.0000010[2K[mcmc] Posterior mean estimation step         86, error =  0.0000009[2K[mcmc] Posterior mean estimation step         87, error =  0.0000008[2K[mcmc] Posterior mean estimation step         88, error =  0.0000008[2K[mcmc] Posterior mean estimation step         89, error =  0.0000007[2K[mcmc] Posterior mean estimation step         90, error =  0.0000006[2K[mcmc] Posterior mean estimation step         91, error =  0.0000006[2K[mcmc] Posterior mean estimation step         92, error =  0.0000005[2K[mcmc] Posterior mean estimation step         93, error =  0.0000005[2K[mcmc] Posterior mean estimation step         94, error =  0.0000004[2K[mcmc] Posterior mean estimation step         95, error =  0.0000004[2K[mcmc] Posterior mean estimation step         96, error =  0.0000004[2K[mcmc] Posterior mean estimation step         97, error =  0.0000003[2K[mcmc] Posterior mean estimation step         98, error =  0.0000003[2K[mcmc] Posterior mean estimation step         99, error =  0.0000003[2K[mcmc] Posterior mean estimation step        100, error =  0.0000003[2K[mcmc] Posterior mean estimation step        101, error =  0.0000002[2K[mcmc] Posterior mean estimation step        102, error =  0.0000002[2K[mcmc] Posterior mean estimation step        103, error =  0.0000002[2K[mcmc] Posterior mean estimation step        104, error =  0.0000002[2K[mcmc] Posterior mean estimation step        105, error =  0.0000002[2K[mcmc] Posterior mean estimation step        106, error =  0.0000001[2K[mcmc] Posterior mean estimation step        107, error =  0.0000001[2K[mcmc] Posterior mean estimation step        108, error =  0.0000001[2K[mcmc] Posterior mean estimation step        109, error =  0.0000001[2K[mcmc] Posterior mean estimation step        110, error =  0.0000001[2K[mcmc] Posterior mean estimation step        111, error =  0.0000001[2K[mcmc] Posterior mean estimation step        112, error =  0.0000001[2K[mcmc] Posterior mean estimation step        113, error =  0.0000001[2K[mcmc] Posterior mean estimation step        114, error =  0.0000001[2K[mcmc] Posterior mean estimation step        115, error =  0.0000001[2K[mcmc] Posterior mean estimation step        116, error =  0.0000001[2K[mcmc] Posterior mean estimation step        117, error =  0.0000001[2K[mcmc] Posterior mean estimation step        118, error =  0.0000001[2K[mcmc] Posterior mean estimation step        119, error =  0.0000000[2K[mcmc] Posterior mean estimation step        120, error =  0.0000000[2K[mcmc] Posterior mean estimation step        121, error =  0.0000000[2K[mcmc] Posterior mean estimation step        122, error =  0.0000000[2K[mcmc] Posterior mean estimation step        123, error =  0.0000000[2K[mcmc] Posterior mean estimation step        124, error =  0.0000000[2K[mcmc] Posterior mean estimation step        125, error =  0.0000000[2K[mcmc] Posterior mean estimation step        126, error =  0.0000000[2K[mcmc] Posterior mean estimation step        127, error =  0.0000000[2K[mcmc] Posterior mean estimation step        128, error =  0.0000000[2K[mcmc] Posterior mean estimation step        129, error =  0.0000000[2K[mcmc] Posterior mean estimation step        130, error =  0.0000000[2K[mcmc] Posterior mean estimation step        131, error =  0.0000000[2K[mcmc] Posterior mean estimation step        132, error =  0.0000000[2K[mcmc] Posterior mean estimation step        133, error =  0.0000000[2K[mcmc] Posterior mean estimation step        134, error =  0.0000000[2K[mcmc] Posterior mean estimation step        135, error =  0.0000000[2K[mcmc] Posterior mean estimation step        136, error =  0.0000000[2K[mcmc] Posterior mean estimation step        137, error =  0.0000000[2K                                                                    [2K
+### Tabulating site-level results
+----
+## FUBAR inferred no sites under subject to positive selection at posterior probability >= 0.9
+
+
+

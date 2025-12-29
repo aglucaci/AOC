@@ -34,20 +34,69 @@ mode: Faster
 * Log(L) = -5732.92, AIC-c = 11550.59 (41 estimated parameters)
 
 ### Performing an exhaustive single breakpoint analysis
-Done with single breakpoint analysis.
-   Best single break point location: 608
-   c-AIC  = 10632.66894754097
+Error:
+HyPhy suspended.
 
-### Performing multi breakpoint analysis using a genetic algorithm
-Done with 2 breakpoint analysis.
-    Best break point locations: 608, 909
-    c-AIC = 10388.42712942603
-Done with 3 breakpoint analysis.
-    Best break point locations: 182, 608, 909
-    c-AIC = 10184.96274743193
-Done with 4 breakpoint analysis.
-    Best break point locations: 182, 608, 839, 988
-    c-AIC = 10138.08019004235
-Done with 5 breakpoint analysis.
-    Best break point locations: 182, 467, 608, 839, 989
-    c-AIC = 10164.47108649834
+Function call stack
+1 :  [namespace = fJqCkwTb] GetDataInfo(count, ^filter, s1, s2, RESOLVE_AMBIGUITIES);
+-------
+2 :  [namespace = fJqCkwTb] ExecuteCommands("GetDataInfo (count, ^filter, s1, s2, `resolution`)", /Users/Shared/anaconda3/envs/AOC_develop/share/hyphy/TemplateBatchFiles/libv3/tasks/);
+-------
+3 :  [namespace = HhhAAcAQ] distances=distances.nucleotide.tn93(datafilter,null,null);
+-------
+4 :  [namespace = LvRouPRC] trees[p]=trees.ExtractTreeInfo(tree.infer.NJ(lfComponents[2*p],null));
+-------
+5 :  [namespace = EWAlYfHs] fit=gard.fitPartitionedModel(breakPoints,model,initialValues,null,FALSE);
+-------
+6 :  [namespace = mpi.iNFpQuZA] Call(result_callback,0,Eval(job+'('+Join(",",utility.Map(arguments,"_value_","utility.convertToArgumentString (_value_)"))+')'),arguments);
+-------
+7 :  [namespace = gard] mpi.QueueJob(queue,"gard.obtainModel_cAIC",{"0":{{siteIndex__}},"1":model,"2":baseLikelihoodInfo},"gard.storeSingleBreakPointModelResults");
+-------
+8 :  namespace 
+
+Step 0.singleBreakPointBest_cAIC=^"math.Infinity";
+
+Step 1.breakPointIndex=0;
+
+Step 2.Branch under condition 'breakPointIndex<variableSites-1'
+	to
+		siteIndex=variableSiteMap[breakPointIndex];
+	else
+		mpi.QueueComplete(queue);
+
+Step 3.siteIndex=variableSiteMap[breakPointIndex];
+
+Step 4.Branch under condition 'singleBreakPointBest_cAIC<baseline_cAIC'
+	to
+		io.ReportProgressBar("GARD","Breakpoint "+Format(1+breakPointIndex,10,0)+" of "+(variableSites-1)+". Best cAIC = "+Format(singleBreakPointBest_cAIC,12,4)+" [delta = "+Format(baseline_cAIC-singleBreakPointBest_cAIC,12,4)+"] with breakpoint at site "+Format(singleBreakPointBestLocation,10,0));
+	else
+		io.ReportProgressBar("GARD","Breakpoint "+Format(1+breakPointIndex,10,0)+" of "+(variableSites-1)+". Best cAIC = "+Format(baseline_cAIC,12,4)+" with no breakpoints.");
+
+Step 5.io.ReportProgressBar("GARD","Breakpoint "+Format(1+breakPointIndex,10,0)+" of "+(variableSites-1)+". Best cAIC = "+Format(singleBreakPointBest_cAIC,12,4)+" [delta = "+Format(baseline_cAIC-singleBreakPointBest_cAIC,12,4)+"] with breakpoint at site "+Format(singleBreakPointBestLocation,10,0));
+
+Step 6.Go to step 8
+
+Step 7.io.ReportProgressBar("GARD","Breakpoint "+Format(1+breakPointIndex,10,0)+" of "+(variableSites-1)+". Best cAIC = "+Format(baseline_cAIC,12,4)+" with no breakpoints.");
+
+Step 8.Branch under condition 'gard.validatePartititon({{siteIndex}},minPartitionSize,numSites)'
+	to
+		mpi.QueueJob(queue,"gard.obtainModel_cAIC",{"0":{{siteIndex__}},"1":model,"2":baseLikelihoodInfo},"gard.storeSingleBreakPointModelResults");
+	else
+		breakPointIndex+=1;
+
+Step 9.mpi.QueueJob(queue,"gard.obtainModel_cAIC",{"0":{{siteIndex__}},"1":model,"2":baseLikelihoodInfo},"gard.storeSingleBreakPointModelResults");
+
+Step 10.breakPointIndex+=1;
+
+Step 11.Go to step 2
+
+Step 12.mpi.QueueComplete(queue);
+
+Step 13.io.ClearProgressBar();
+
+Step 14.io.ReportProgressMessageMD('GARD','single-breakpoint','Done with single breakpoint analysis.');
+
+Step 15.io.ReportProgressMessageMD('GARD','single-breakpoint',("   Best single break point location: "+singleBreakPointBestLocation));
+
+Step 16.io.ReportProgressMessageMD('GARD','single-breakpoint',("   c-AIC  = "+singleBreakPointBest_cAIC));;
+-------

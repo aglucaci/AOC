@@ -1,0 +1,93 @@
+
+Analysis Description
+--------------------
+SLAC (Single Likelihood Ancestor Counting) uses a maximum likelihood
+ancestral state reconstruction and minimum path substitution counting to
+estimate site - level dS and dN, and applies a simple binomial - based
+test to test if dS differs drom dN. The estimates aggregate information
+over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well. Multiple partitions within a NEXUS file are also
+supported for recombination - aware analysis. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.00
+
+
+>code => Universal
+/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.3.codon.fas.FastTree.treefile
+results/ADAP1-test/ADAP1-test.3.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **11** sequences, **55** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.3.codon.fas`
+
+>branches => All
+
+>Select the number of samples used to assess ancestral reconstruction uncertainty [select 0 to skip] (permissible range = [0,100000], default value = 100, integer): 
+>samples => 100
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+
+### Branches to include in the SLAC analysis
+Selected 19 branches to include in SLAC calculations: `XP_025939132_1_XM_02608_6aec63, XP_032626897_1_XM_03277_f6b30e, Node1, XP_047919596_1_XM_04806_0c6d33, XP_054499394_1_XM_05464_33d08b, XP_041604521_1_XM_04174_7e8d4b, XP_012614566_2_XM_01275_945ab4, XP_062041590_1_XM_06218_d11611, XP_054352982_1_XM_05449_233884, XP_011885129_1_XM_01202_53ecb0, Node15, Node13, Node11, Node9, NP_001090758_1_NM_00109_c9f23c, Node8, Node6, XP_069726565_1_XM_06987_381d08, Node5`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) =  -878.86, AIC-c =  1812.56 (27 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.674
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -815.60, AIC-c =  1703.37 (34 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.974
+* non-synonymous/synonymous rate ratio for *test* =   0.1824
+
+### Performing joint maximum likelihood ancestral state reconstruction
+
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |       S        |       N        |       dS       |       dN       |Selection detected?|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|
+|       6        |       1        |     3.000      |     0.000      |     3.000      |     0.000      |  Neg. p = 0.037   |
+|       10       |       1        |     3.000      |     1.000      |     4.723      |     0.470      |  Neg. p = 0.040   |
+|       15       |       1        |     3.000      |     0.000      |     3.000      |     0.000      |  Neg. p = 0.037   |
+|       26       |       1        |     2.000      |     0.000      |     3.650      |     0.000      |  Neg. p = 0.039   |
+|       30       |       1        |     3.000      |     0.000      |     2.478      |     0.000      |  Neg. p = 0.069   |
+|       35       |       1        |     4.000      |     0.000      |     3.898      |     0.000      |  Neg. p = 0.014   |
+|       38       |       1        |     2.000      |     0.000      |     3.775      |     0.000      |  Neg. p = 0.044   |
+|       39       |       1        |     2.000      |     0.000      |     3.305      |     0.000      |  Neg. p = 0.043   |
+|       40       |       1        |     6.000      |     0.000      |     6.008      |     0.000      |  Neg. p = 0.001   |
+|       49       |       1        |     2.000      |     0.000      |     3.305      |     0.000      |  Neg. p = 0.059   |
+
+### Ancestor sampling analysis
+
+>Generating 100 ancestral sequence samples to obtain confidence intervals
+
+[2K	Sample 1/100 for partition 1[2K	Sample 2/100 for partition 1[2K	Sample 3/100 for partition 1[2K	Sample 4/100 for partition 1[2K	Sample 5/100 for partition 1[2K	Sample 6/100 for partition 1[2K	Sample 7/100 for partition 1[2K	Sample 8/100 for partition 1[2K	Sample 9/100 for partition 1[2K	Sample 10/100 for partition 1[2K	Sample 11/100 for partition 1[2K	Sample 12/100 for partition 1[2K	Sample 13/100 for partition 1[2K	Sample 14/100 for partition 1[2K	Sample 15/100 for partition 1[2K	Sample 16/100 for partition 1[2K	Sample 17/100 for partition 1[2K	Sample 18/100 for partition 1[2K	Sample 19/100 for partition 1[2K	Sample 20/100 for partition 1[2K	Sample 21/100 for partition 1[2K	Sample 22/100 for partition 1[2K	Sample 23/100 for partition 1[2K	Sample 24/100 for partition 1[2K	Sample 25/100 for partition 1[2K	Sample 26/100 for partition 1[2K	Sample 27/100 for partition 1[2K	Sample 28/100 for partition 1[2K	Sample 29/100 for partition 1[2K	Sample 30/100 for partition 1[2K	Sample 31/100 for partition 1[2K	Sample 32/100 for partition 1[2K	Sample 33/100 for partition 1[2K	Sample 34/100 for partition 1[2K	Sample 35/100 for partition 1[2K	Sample 36/100 for partition 1[2K	Sample 37/100 for partition 1[2K	Sample 38/100 for partition 1[2K	Sample 39/100 for partition 1[2K	Sample 40/100 for partition 1[2K	Sample 41/100 for partition 1[2K	Sample 42/100 for partition 1[2K	Sample 43/100 for partition 1[2K	Sample 44/100 for partition 1[2K	Sample 45/100 for partition 1[2K	Sample 46/100 for partition 1[2K	Sample 47/100 for partition 1[2K	Sample 48/100 for partition 1[2K	Sample 49/100 for partition 1[2K	Sample 50/100 for partition 1[2K	Sample 51/100 for partition 1[2K	Sample 52/100 for partition 1[2K	Sample 53/100 for partition 1[2K	Sample 54/100 for partition 1[2K	Sample 55/100 for partition 1[2K	Sample 56/100 for partition 1[2K	Sample 57/100 for partition 1[2K	Sample 58/100 for partition 1[2K	Sample 59/100 for partition 1[2K	Sample 60/100 for partition 1[2K	Sample 61/100 for partition 1[2K	Sample 62/100 for partition 1[2K	Sample 63/100 for partition 1[2K	Sample 64/100 for partition 1[2K	Sample 65/100 for partition 1[2K	Sample 66/100 for partition 1[2K	Sample 67/100 for partition 1[2K	Sample 68/100 for partition 1[2K	Sample 69/100 for partition 1[2K	Sample 70/100 for partition 1[2K	Sample 71/100 for partition 1[2K	Sample 72/100 for partition 1[2K	Sample 73/100 for partition 1[2K	Sample 74/100 for partition 1[2K	Sample 75/100 for partition 1[2K	Sample 76/100 for partition 1[2K	Sample 77/100 for partition 1[2K	Sample 78/100 for partition 1[2K	Sample 79/100 for partition 1[2K	Sample 80/100 for partition 1[2K	Sample 81/100 for partition 1[2K	Sample 82/100 for partition 1[2K	Sample 83/100 for partition 1[2K	Sample 84/100 for partition 1[2K	Sample 85/100 for partition 1[2K	Sample 86/100 for partition 1[2K	Sample 87/100 for partition 1[2K	Sample 88/100 for partition 1[2K	Sample 89/100 for partition 1[2K	Sample 90/100 for partition 1[2K	Sample 91/100 for partition 1[2K	Sample 92/100 for partition 1[2K	Sample 93/100 for partition 1[2K	Sample 94/100 for partition 1[2K	Sample 95/100 for partition 1[2K	Sample 96/100 for partition 1[2K	Sample 97/100 for partition 1[2K	Sample 98/100 for partition 1[2K	Sample 99/100 for partition 1[2K	Sample 100/100 for partition 1[2KDone with ancestral sampling              
+Resampling results for partition 1
+
+|     Codon      |   Partition    |    S [median, IQR]    |    N [median, IQR]    |    dS [median, IQR]    |    dN [median, IQR]    |  p-value [median, IQR]  |
+|:--------------:|:--------------:|:---------------------:|:---------------------:|:----------------------:|:----------------------:|:-----------------------:|
+|       6        |       1        |   3.00 [3.00-4.00]    |   0.00 [0.00-0.00]    |    3.00 [3.00-4.00]    |    0.00 [0.00-0.00]    |    0.04 [0.01-0.04]     |
+|       10       |       1        |   3.00 [3.00-4.00]    |   1.00 [1.00-2.00]    |    4.72 [4.72-6.80]    |    0.47 [0.47-0.91]    |    0.04 [0.01-0.08]     |
+|       15       |       1        |   3.00 [3.00-5.00]    |   0.00 [0.00-0.00]    |    3.00 [3.00-5.00]    |    0.00 [0.00-0.00]    |    0.04 [0.00-0.04]     |
+|       26       |       1        |   3.00 [2.00-5.00]    |   0.00 [0.00-0.00]    |    5.14 [3.65-7.36]    |    0.00 [0.00-0.00]    |    0.01 [0.00-0.04]     |
+|       30       |       1        |   3.00 [3.00-6.00]    |   0.00 [0.00-0.00]    |    2.48 [2.48-4.96]    |    0.00 [0.00-0.00]    |    0.07 [0.01-0.07]     |
+|       35       |       1        |   5.00 [4.00-6.00]    |   0.00 [0.00-1.00]    |    4.87 [3.90-6.00]    |    0.00 [0.00-0.51]    |    0.01 [0.00-0.04]     |
+|       38       |       1        |   2.00 [2.00-3.16]    |   0.00 [0.00-0.00]    |    3.77 [3.77-5.68]    |    0.00 [0.00-0.00]    |    0.04 [0.01-0.04]     |
+|       39       |       1        |   2.00 [2.00-3.00]    |   0.00 [0.00-0.00]    |    3.30 [3.30-4.95]    |    0.00 [0.00-0.00]    |    0.04 [0.01-0.04]     |
+|       40       |       1        |   7.00 [6.00-8.00]    |   0.00 [0.00-0.00]    |    6.84 [6.01-8.07]    |    0.00 [0.00-0.00]    |    0.00 [0.00-0.00]     |
+|       49       |       1        |   2.00 [1.00-2.00]    |   0.00 [0.00-0.00]    |    3.30 [1.65-3.30]    |    0.00 [0.00-0.00]    |    0.06 [0.06-0.24]     |
+
+
+

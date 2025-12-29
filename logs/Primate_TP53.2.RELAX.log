@@ -45,7 +45,7 @@ prior to running selection analyses
 /Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas.FastTree.treefile.labelled
 results/Primate_TP53/Primate_TP53.2.codon.fas.FastTree.treefile.labelled
 
->Loaded a multiple sequence alignment with **34** sequences, **66** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas`
+>Loaded a multiple sequence alignment with **34** sequences, **67** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/Primate_TP53/Primate_TP53.2.codon.fas`
 
 >mode => Group mode
 The number of points in the initial distributional guess for likelihood fitting (permissible range = [1,10000], default value = 250, integer): 
@@ -58,9 +58,9 @@ The number of initial random guesses to 'seed' rate values optimization (permiss
 
 >multiple-hits => None
 
-* Selected 45 branches as the _Haplorrhini_ set: `NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA, NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA, Node1, Node10, Node11, Node28, Node29, Node30, Node35, Node36, Node39, Node40, Node43, Node45, Node48, Node50, Node51, Node56, Node57, XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA, XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA, XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA, XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA, XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA, XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA, XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA, XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA`
+* Selected 45 branches as the _Haplorrhini_ set: `NM_000546_6_protein_NP_000537_3_cellular_tumor_antigen_p53_isoform_a_Homo_sapiens_transcript_NM_000546_6_Homo_sapiens_tumor_protein_p53_TP53_transcript_variant_1_mRNA_organism_Homo_sapiens, NM_001047151_2_protein_NP_001040616_1_cellular_tumor_antigen_p53_Macaca_mulatta_transcript_NM_001047151_2_Macaca_mulatta_tumor_protein_p53_TP53_mRNA_organism_Macaca_mulatta, Node1, Node10, Node11, Node28, Node29, Node30, Node35, Node36, Node39, Node40, Node43, Node45, Node48, Node50, Node51, Node56, Node57, XM_002747948_5_protein_XP_002747994_1_cellular_tumor_antigen_p53_isoform_X1_Callithrix_jacchus_transcript_XM_002747948_5_PREDICTED_Callithrix_jacchus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Callithrix_jacchus, XM_002826974_6_protein_XP_002827020_3_cellular_tumor_antigen_p53_Pongo_abelii_transcript_XM_002826974_6_PREDICTED_Pongo_abelii_tumor_protein_p53_TP53_mRNA_organism_Pongo_abelii, XM_003912272_5_protein_XP_003912321_1_cellular_tumor_antigen_p53_Papio_anubis_transcript_XM_003912272_5_PREDICTED_Papio_anubis_tumor_protein_p53_TP53_mRNA_organism_Papio_anubis, XM_008010192_2_protein_XP_008008383_2_cellular_tumor_antigen_p53_isoform_X1_Chlorocebus_sabaeus_transcript_XM_008010192_2_PREDICTED_Chlorocebus_sabaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Chlorocebus_sabaeus, XM_008062341_2_protein_XP_008060532_1_cellular_tumor_antigen_p53_Carlito_syrichta_transcript_XM_008062341_2_PREDICTED_Carlito_syrichta_tumor_protein_p53_TP53_mRNA_organism_Carlito_syrichta, XM_010362387_1_protein_XP_010360689_1_cellular_tumor_antigen_p53_Rhinopithecus_roxellana_transcript_XM_010362387_1_PREDICTED_Rhinopithecus_roxellana_tumor_protein_p53_TP53_mRNA_organism_Rhinopithecus_roxellana, XM_011958558_1_protein_XP_011813948_1_PREDICTED_cellular_tumor_antigen_p53_isoform_X1_Colobus_angolensis_palliatus_transcript_XM_011958558_1_PREDICTED_Colobus_angolensis_palliatus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Colobus_angolensis, XM_011994540_1_protein_XP_011849930_1_PREDICTED_cellular_tumor_antigen_p53_isoform_X1_Mandrillus_leucophaeus_transcript_XM_011994540_1_PREDICTED_Mandrillus_leucophaeus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Mandrillus_leucophaeus, XM_012052423_1_protein_XP_011907813_1_PREDICTED_cellular_tumor_antigen_p53_isoform_X1_Cercocebus_atys_transcript_XM_012052423_1_PREDICTED_Cercocebus_atys_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Cercocebus_atys, XM_016931470_3_protein_XP_016786959_2_cellular_tumor_antigen_p53_isoform_X1_Pan_troglodytes_transcript_XM_016931470_3_PREDICTED_Pan_troglodytes_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Pan_troglodytes, XM_017531594_2_protein_XP_017387083_1_cellular_tumor_antigen_p53_isoform_X1_Cebus_imitator_transcript_XM_017531594_2_PREDICTED_Cebus_imitator_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Cebus_imitator, XM_017850544_1_protein_XP_017706033_1_PREDICTED_cellular_tumor_antigen_p53_isoform_X1_Rhinopithecus_bieti_transcript_XM_017850544_1_PREDICTED_Rhinopithecus_bieti_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Rhinopithecus_bieti, XM_023193314_2_protein_XP_023049082_1_cellular_tumor_antigen_p53_isoform_X1_Piliocolobus_tephrosceles_transcript_XM_023193314_2_PREDICTED_Piliocolobus_tephrosceles_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Piliocolobus_tephrosceles, XM_025363515_1_protein_XP_025219300_1_cellular_tumor_antigen_p53_isoform_X1_Theropithecus_gelada_transcript_XM_025363515_1_PREDICTED_Theropithecus_gelada_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Theropithecus_gelada, XM_030800485_1_protein_XP_030656345_1_cellular_tumor_antigen_p53_Nomascus_leucogenys_transcript_XM_030800485_1_PREDICTED_Nomascus_leucogenys_tumor_protein_p53_TP53_mRNA_organism_Nomascus_leucogenys, XM_032139337_3_protein_XP_031995228_1_cellular_tumor_antigen_p53_Hylobates_moloch_transcript_XM_032139337_3_PREDICTED_Hylobates_moloch_tumor_protein_p53_TP53_mRNA_organism_Hylobates_moloch, XM_032280430_1_protein_XP_032136321_1_cellular_tumor_antigen_p53_isoform_X1_Sapajus_apella_transcript_XM_032280430_1_PREDICTED_Sapajus_apella_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Sapajus_apella, XM_033184717_1_protein_XP_033040608_1_cellular_tumor_antigen_p53_isoform_X1_Trachypithecus_francoisi_transcript_XM_033184717_1_PREDICTED_Trachypithecus_francoisi_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Trachypithecus_francoisi, XM_039476036_1_protein_XP_039331970_1_cellular_tumor_antigen_p53_isoform_X1_Saimiri_boliviensis_boliviensis_transcript_XM_039476036_1_PREDICTED_Saimiri_boliviensis_boliviensis_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Saimiri_boliviensis, XM_050765346_1_protein_XP_050621303_1_cellular_tumor_antigen_p53_isoform_X1_Macaca_thibetana_thibetana_transcript_XM_050765346_1_PREDICTED_Macaca_thibetana_thibetana_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Macaca_thibetana, XM_054457336_2_protein_XP_054313311_2_cellular_tumor_antigen_p53_Pongo_pygmaeus_transcript_XM_054457336_2_PREDICTED_Pongo_pygmaeus_tumor_protein_p53_TP53_mRNA_organism_Pongo_pygmaeus, XM_055256596_2_protein_XP_055112571_1_cellular_tumor_antigen_p53_isoform_X1_Symphalangus_syndactylus_transcript_XM_055256596_2_PREDICTED_Symphalangus_syndactylus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Symphalangus_syndactylus, XM_057300362_2_protein_XP_057156345_1_cellular_tumor_antigen_p53_isoform_X1_Pan_paniscus_transcript_XM_057300362_2_PREDICTED_Pan_paniscus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Pan_paniscus, XM_063700589_1_protein_XP_063556659_1_cellular_tumor_antigen_p53_isoform_X1_Gorilla_gorilla_gorilla_transcript_XM_063700589_1_PREDICTED_Gorilla_gorilla_gorilla_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Gorilla_gorilla, XM_064378361_1_protein_XP_064234431_1_cellular_tumor_antigen_p53_isoform_X1_Aotus_nancymaae_transcript_XM_064378361_1_PREDICTED_Aotus_nancymaae_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Aotus_nancymaae, XM_071082299_1_protein_XP_070938400_1_cellular_tumor_antigen_p53_Macaca_nemestrina_transcript_XM_071082299_1_PREDICTED_Macaca_nemestrina_tumor_protein_p53_LOC105473688_mRNA_organism_Macaca_nemestrina`
 
-* Selected 10 branches as the _Strepsirrhini_ set: `Node18, Node21, Node23, Node25, XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA, XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA, XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA, XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA, XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA`
+* Selected 10 branches as the _Strepsirrhini_ set: `Node18, Node21, Node23, Node25, XM_012655616_1_protein_XP_012511070_1_PREDICTED_cellular_tumor_antigen_p53_Propithecus_coquereli_transcript_XM_012655616_1_PREDICTED_Propithecus_coquereli_tumor_protein_p53_TP53_mRNA_organism_Propithecus_coquereli, XM_012776058_2_protein_XP_012631512_1_cellular_tumor_antigen_p53_Microcebus_murinus_transcript_XM_012776058_2_PREDICTED_Microcebus_murinus_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Microcebus_murinus, XM_012806041_2_protein_XP_012661495_1_cellular_tumor_antigen_p53_Otolemur_garnettii_transcript_XM_012806041_2_PREDICTED_Otolemur_garnettii_tumor_protein_p53_TP53_mRNA_organism_Otolemur_garnettii, XM_045570131_1_protein_XP_045426087_1_cellular_tumor_antigen_p53_Lemur_catta_transcript_XM_045570131_1_PREDICTED_Lemur_catta_tumor_protein_p53_TP53_mRNA_organism_Lemur_catta, XM_053569948_1_protein_XP_053425923_1_cellular_tumor_antigen_p53_Nycticebus_coucang_transcript_XM_053569948_1_PREDICTED_Nycticebus_coucang_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Nycticebus_coucang, XM_069482023_1_protein_XP_069338124_1_cellular_tumor_antigen_p53_isoform_X1_Eulemur_rufifrons_transcript_XM_069482023_1_PREDICTED_Eulemur_rufifrons_tumor_protein_p53_TP53_transcript_variant_X1_mRNA_organism_Eulemur_rufifrons`
 
 >reference-group => Haplorrhini
 * 5 branches are in the unclassified (nuisance) set: `Node15, Node16, Node7, Node8, Node9`
@@ -78,105 +78,105 @@ The number omega rate classes to include in the model (permissible range = [1,10
 
 >kill-zero-lengths => Yes
 
-### Deleted 7 zero-length internal branches: `Node1, Node25, Node28, Node30, Node36, Node50, Node51`
-* Log(L) =  -735.68, AIC-c =  1608.77 (68 estimated parameters)
-* 1 partition. Total tree length by partition (subs/site)  2.164
+### Deleted 8 zero-length internal branches: `Node1, Node23, Node25, Node28, Node30, Node36, Node50, Node51`
+* Log(L) =  -747.65, AIC-c =  1632.69 (68 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.200
 
 ### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
-* Log(L) =  -722.10, AIC-c =  1588.77 (70 estimated parameters)
-* 1 partition. Total tree length by partition (subs/site)  2.527
-* non-synonymous/synonymous rate ratio for *Haplorrhini* =   0.3489
-* non-synonymous/synonymous rate ratio for *Strepsirrhini* =   0.1469
-* non-synonymous/synonymous rate ratio for *Unclassified* =   0.1082
+* Log(L) =  -733.74, AIC-c =  1609.86 (69 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.577
+* non-synonymous/synonymous rate ratio for *Haplorrhini* =   0.3454
+* non-synonymous/synonymous rate ratio for *Strepsirrhini* =   0.1451
+* non-synonymous/synonymous rate ratio for *Unclassified* =   0.0957
 
 ### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
-* Log(L) =  -718.72, AIC-c =  1582.01 (70 estimated parameters)
-* 1 partition. Total tree length by partition (subs/site)  2.381
-* non-synonymous/synonymous rate ratio for *Haplorrhini* =   0.3925
-* non-synonymous/synonymous rate ratio for *Strepsirrhini* =   0.0913
-* non-synonymous/synonymous rate ratio for *Unclassified* =   0.0476
+* Log(L) =  -730.43, AIC-c =  1603.23 (69 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.444
+* non-synonymous/synonymous rate ratio for *Haplorrhini* =   0.3886
+* non-synonymous/synonymous rate ratio for *Strepsirrhini* =   0.0903
+* non-synonymous/synonymous rate ratio for *Unclassified* =   0.0467
 
 ### Fitting the general descriptive (separate k per branch) model
 
-### * Log(L) =  -694.93, AIC-c =  1654.73 (125 estimated parameters)
+### * Log(L) =  -705.34, AIC-c =  1670.84 (123 estimated parameters)
 * The following baseline rate distribution for branch-site combinations was inferred
 
 |          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
 |-----------------------------------|---------------|-------------|-----------------------------------|
-|        Negative selection         |     0.000     |   54.477    |                                   |
-|        Negative selection         |     0.000     |   27.613    |                                   |
-|      Diversifying selection       |     5.583     |   17.910    |                                   |
+|        Negative selection         |     0.000     |   51.020    |                                   |
+|        Negative selection         |     0.000     |   30.583    |                                   |
+|      Diversifying selection       |     5.436     |   18.397    |                                   |
 
-* Branch-level relaxation or intensification parameter distribution has mean  0.73, median  0.21, and 95% of the weight in  0.08 -  5.33
+* Branch-level relaxation or intensification parameter distribution has mean  0.80, median  0.24, and 95% of the weight in  0.09 -  5.52
 
 ### Fitting the alternative model with individual K parameters for 2 branch groups
-* Log(L) =  -704.33, AIC-c =  1581.11 (83 estimated parameters)
+* Log(L) =  -715.39, AIC-c =  1600.98 (82 estimated parameters)
 * The following rate distribution was inferred for **Haplorrhini** (reference) branches
 
 |          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
 |-----------------------------------|---------------|-------------|-----------------------------------|
-|        Negative selection         |     0.000     |   53.173    |                                   |
-|        Negative selection         |     0.004     |   16.684    |                                   |
-|      Diversifying selection       |     2.774     |   30.143    |                                   |
+|        Negative selection         |     0.000     |   53.203    |                                   |
+|        Negative selection         |     0.004     |   16.872    |                                   |
+|      Diversifying selection       |     2.886     |   29.925    |                                   |
 
 * Relaxation/intensification parameter (K) for branch set Strepsirrhini =     0.22
 * The following rate distribution was inferred for **Strepsirrhini** branches
 
 |          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
 |-----------------------------------|---------------|-------------|-----------------------------------|
-|        Negative selection         |     0.000     |   53.173    |                                   |
-|        Negative selection         |     0.297     |   16.684    |                                   |
-|      Diversifying selection       |     1.245     |   30.143    |                                   |
+|        Negative selection         |     0.000     |   53.203    |                                   |
+|        Negative selection         |     0.293     |   16.872    |                                   |
+|      Diversifying selection       |     1.261     |   29.925    |                                   |
 
 * The following rate distribution for site-to-site **synonymous** rate variation was inferred
 
 |               Rate                | Proportion, % |               Notes               |
 |-----------------------------------|---------------|-----------------------------------|
-|               0.321               |    16.897     |                                   |
-|               0.322               |    46.260     |       Collapsed rate class        |
-|               2.163               |    36.843     |                                   |
+|               0.273               |     0.416     |                                   |
+|               0.274               |    59.345     |       Collapsed rate class        |
+|               2.078               |    40.239     |                                   |
 
 
 ### Fitting the null (K := 1) model
-* Log(L) =  -705.12, AIC-c =  1580.54 (82 estimated parameters)
+* Log(L) =  -716.23, AIC-c =  1600.52 (81 estimated parameters)
 * The following rate distribution was inferred for **Haplorrhini** (reference) branches
 
 |          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
 |-----------------------------------|---------------|-------------|-----------------------------------|
-|        Negative selection         |     0.000     |   51.457    |                                   |
-|        Negative selection         |     0.005     |   10.977    |                                   |
-|      Diversifying selection       |     1.171     |   37.566    |                                   |
+|        Negative selection         |     0.000     |   51.695    |                                   |
+|        Negative selection         |     0.004     |   10.569    |                                   |
+|      Diversifying selection       |     1.185     |   37.736    |                                   |
 
 * The following rate distribution for site-to-site **synonymous** rate variation was inferred
 
 |               Rate                | Proportion, % |               Notes               |
 |-----------------------------------|---------------|-----------------------------------|
-|               0.362               |    25.376     |                                   |
-|               0.364               |    42.442     |       Collapsed rate class        |
-|               2.342               |    32.182     |                                   |
+|               0.317               |    52.674     |                                   |
+|               0.320               |    11.587     |       Collapsed rate class        |
+|               2.226               |    35.738     |                                   |
 
 ----
 ## Test for relaxation (or intensification) of selection [RELAX]
-Likelihood ratio test **p =   0.2086**.
+Likelihood ratio test **p =   0.1934**.
 >>No significant evidence for differences of selective pressures among the test groups at P<=0.05
 ----
 
 
 ### Fitting the partitioned descriptive model (completely separate rate distributions for branch sets)
-* Log(L) =  -702.51, AIC-c =  1586.12 (87 estimated parameters)
+* Log(L) =  -713.59, AIC-c =  1606.01 (86 estimated parameters)
 * The following rate distribution was inferred for **Haplorrhini** (reference) branches
 
 |          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
 |-----------------------------------|---------------|-------------|-----------------------------------|
-|        Negative selection         |     0.000     |   52.237    |                                   |
-|        Negative selection         |     0.005     |   10.997    |                                   |
-|      Diversifying selection       |     2.386     |   36.765    |                                   |
+|        Negative selection         |     0.000     |   53.012    |                                   |
+|        Negative selection         |     0.006     |    9.896    |                                   |
+|      Diversifying selection       |     2.388     |   37.092    |                                   |
 
 * The following rate distribution was inferred for **Strepsirrhini** branches
 
 |          Selection mode           |     dN/dS     |Proportion, %|               Notes               |
 |-----------------------------------|---------------|-------------|-----------------------------------|
-|        Negative selection         |     0.001     |    0.000    |       Not supported by data       |
-|        Negative selection         |     0.110     |   100.000   |                                   |
-|      Diversifying selection       |     1.008     |    0.000    |       Not supported by data       |
+|        Negative selection         |     0.000     |   73.517    |                                   |
+|        Negative selection         |     0.000     |   12.211    |       Collapsed rate class        |
+|         Neutral evolution         |     1.000     |   14.273    |                                   |
 

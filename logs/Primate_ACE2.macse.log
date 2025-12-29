@@ -1,14 +1,4 @@
 file : results/Primate_ACE2/Primate_ACE2.codons.fa
 31	sequences with genetic code	The_Standard_Code
 compute initial pairwise distances
-...............................
-compute first alignment with guide tree
-++++++++++++++++++++++++++++++
-first alignment score : 1808643.6
-
-start refining the alignment
-refine 2 cut : sum of pairs ========= 0 => 1808643.6
-
-The file 'results/Primate_ACE2/Primate_ACE2.codons.raw.fa' was created.
-The file 'results/Primate_ACE2/Primate_ACE2.aa.fa' was created.
-PROGRAM HAS FINISHED SUCCESSFULLY
+......

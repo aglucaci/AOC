@@ -1,0 +1,170 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. v2.6 adds tree reports and ASCII
+art
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.6
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.3.codon.fas.FastTree.treefile
+results/ADAP1-test/ADAP1-test.3.codon.fas.FastTree.treefile
+
+>Loaded a multiple sequence alignment with **11** sequences, **55** codons, and **1** partitions from `/Users/alex/Documents/AOC-dev/results/ADAP1-test/ADAP1-test.3.codon.fas`
+
+>branches => All
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 19 branches for testing: `XP_025939132_1_XM_02608_6aec63, XP_032626897_1_XM_03277_f6b30e, Node1, XP_047919596_1_XM_04806_0c6d33, XP_054499394_1_XM_05464_33d08b, XP_041604521_1_XM_04174_7e8d4b, XP_012614566_2_XM_01275_945ab4, XP_062041590_1_XM_06218_d11611, XP_054352982_1_XM_05449_233884, XP_011885129_1_XM_01202_53ecb0, Node15, Node13, Node11, Node9, NP_001090758_1_NM_00109_c9f23c, Node8, Node6, XP_069726565_1_XM_06987_381d08, Node5`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+* Log(L) =  -878.86, AIC-c =  1812.56 (27 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  1.674
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) =  -796.16, AIC-c =  1706.31 (52 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.22, and 95% of the weight in  0.00 - 20877101.97
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|               Node9               |   4.37   |    2     |    0.02 (24.38%)   |    -795.83    |    1710.46    |     1706.31     |
+|  XP_025939132_1_XM_02608_6aec63   |   0.67   |    2     |   28.52 (31.33%)   |    -792.80    |    1704.41    |     1704.41     |
+|  XP_025939132_1_XM_02608_6aec63   |   0.67   |    3     |   28.50 (31.36%)   |    -792.80    |    1709.26    |     1704.41     |
+|  NP_001090758_1_NM_00109_c9f23c   |   0.18   |    2     |  159.01 ( 4.27%)   |    -791.80    |    1707.24    |     1704.41     |
+|  XP_062041590_1_XM_06218_d11611   |   0.12   |    2     |   66.18 ( 4.79%)   |    -791.82    |    1707.28    |     1704.41     |
+|  XP_041604521_1_XM_04174_7e8d4b   |   0.09   |    2     |   0.08 (100.00%)   |    -792.80    |    1709.26    |     1704.41     |
+|              Node15               |   0.07   |    2     |   0.13 (100.00%)   |    -792.80    |    1709.26    |     1704.41     |
+|  XP_054499394_1_XM_05464_33d08b   |   0.05   |    2     |    0.24 (23.43%)   |    -792.81    |    1709.26    |     1704.41     |
+|              Node13               |   0.05   |    2     |    7.62 ( 3.79%)   |    -790.74    |    1705.13    |     1704.41     |
+|  XP_032626897_1_XM_03277_f6b30e   |   0.03   |    2     |   1.00 (100.00%)   |    -793.42    |    1710.49    |     1704.41     |
+|               Node8               |   0.03   |    2     |    0.20 (27.66%)   |    -798.32    |    1720.28    |     1704.41     |
+|  XP_069726565_1_XM_06987_381d08   |   0.03   |    2     |    0.00 ( 0.25%)   |    -792.80    |    1709.26    |     1704.41     |
+|  XP_012614566_2_XM_01275_945ab4   |   0.03   |    2     |    0.66 (30.36%)   |    -792.80    |    1709.26    |     1704.41     |
+|               Node1               |   0.03   |    2     |    0.00 ( 5.00%)   |    -792.80    |    1709.26    |     1704.41     |
+|  XP_054352982_1_XM_05449_233884   |   0.02   |    2     |    0.00 ( 0.25%)   |    -792.80    |    1709.26    |     1704.41     |
+|              Node11               |   0.02   |    2     |   57.08 (50.00%)   |    -799.99    |    1723.62    |     1704.41     |
+|               Node6               |   0.01   |    2     |    0.00 ( 5.00%)   |    -792.80    |    1709.26    |     1704.41     |
+|  XP_047919596_1_XM_04806_0c6d33   |   0.01   |    2     |    0.00 ( 5.00%)   |    -792.80    |    1709.26    |     1704.41     |
+|  XP_011885129_1_XM_01202_53ecb0   |   0.00   |    2     |    0.29 ( 2.00%)   |    -792.80    |    1709.26    |     1704.41     |
+|               Node5               |   0.00   |    2     |    0.25 (51.00%)   |    -792.80    |    1709.26    |     1704.41     |
+
+### Rate class analyses summary
+*  18 branches with **1** rate classes
+*  1 branches with **2** rate classes
+
+### Annotated Tree
+((XP_025939132_1_XM_02608_6aec63{2},XP_032626897_1_XM_03277_f6b30e{1})Node1{1},XP_047919596_1_XM_04806_0c6d33{1},((XP_054499394_1_XM_05464_33d08b{1},((XP_041604521_1_XM_04174_7e8d4b{1},(XP_012614566_2_XM_01275_945ab4{1},(XP_062041590_1_XM_06218_d11611{1},(XP_054352982_1_XM_05449_233884{1},XP_011885129_1_XM_01202_53ecb0{1})Node15{1})Node13{1})Node11{1})Node9{1},NP_001090758_1_NM_00109_c9f23c{1})Node8{1})Node6{1},XP_069726565_1_XM_06987_381d08{1})Node5{1})
+
+----
+
+```
+ |XP_025939132_1_XM_02608_6aec63 (2)
+|+Node1 (1)
+||XP_032626897_1_XM_03277_f6b30e (1)
+|XP_047919596_1_XM_04806_0c6d33 (1)
+| |XP_054499394_1_XM_05464_33d08b (1)
+||+Node6 (1)
+||| |XP_041604521_1_XM_04174_7e8d4b (1)
+||||+Node9 (1)
+||||||XP_012614566_2_XM_01275_945ab4 (1)
+|||||+Node11 (1)
+|||| ||XP_062041590_1_XM_06218_d11611 (1)
+|||| |+Node13 (1)
+||||  ||XP_054352982_1_XM_05449_233884 (1)
+||||  |+Node15 (1)
+||||   |XP_011885129_1_XM_01202_53ecb0 (1)
+|||+Node8 (1)
+|| |NP_001090758_1_NM_00109_c9f23c (1)
+|+Node5 (1)
+ |XP_069726565_1_XM_06987_381d08 (1)
+```
+
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) =  -791.76, AIC-c =  1702.32 (54 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|               Node9               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|  XP_025939132_1_XM_02608_6aec63   |     2    |   22.28 (30.10%)   |          1       |        5.47        |       0.02331      |
+|  NP_001090758_1_NM_00109_c9f23c   |     1    |   0.21 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|  XP_062041590_1_XM_06218_d11611   |     1    |   0.22 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|  XP_041604521_1_XM_04174_7e8d4b   |     1    |   0.07 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node15               |     1    |   0.13 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|  XP_054499394_1_XM_05464_33d08b   |     1    |   0.05 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node13               |     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|  XP_032626897_1_XM_03277_f6b30e   |     1    |  >1000 (100.00%)   |       N/A        |        0.87        |       0.26423      |
+|               Node8               |     1    |  >1000 (100.00%)   |       N/A        |        0.17        |       0.41023      |
+|  XP_069726565_1_XM_06987_381d08   |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|  XP_012614566_2_XM_01275_945ab4   |     1    |   0.75 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node1               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|  XP_054352982_1_XM_05449_233884   |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node11               |     1    |  >1000 (100.00%)   |       N/A        |        0.03        |       0.46856      |
+|               Node6               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|  XP_047919596_1_XM_04806_0c6d33   |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|  XP_011885129_1_XM_01202_53ecb0   |     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node5               |     1    |   1.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+----
+### Adaptive branch site random effects likelihood test 
+Likelihood ratio test for episodic diversifying positive selection at Holm-Bonferroni corrected _p =   0.0500_ found **0** branches under selection among **19** tested.
+
+
+### Annotated Tree
+((XP_025939132_1_XM_02608_6aec63,XP_032626897_1_XM_03277_f6b30e)Node1,XP_047919596_1_XM_04806_0c6d33,((XP_054499394_1_XM_05464_33d08b,((XP_041604521_1_XM_04174_7e8d4b,(XP_012614566_2_XM_01275_945ab4,(XP_062041590_1_XM_06218_d11611,(XP_054352982_1_XM_05449_233884,XP_011885129_1_XM_01202_53ecb0)Node15)Node13)Node11)Node9,NP_001090758_1_NM_00109_c9f23c)Node8)Node6,XP_069726565_1_XM_06987_381d08)Node5)
+
+----
+
+```
+ |XP_025939132_1_XM_02608_6aec63 (N.S)
+|+Node1 (N.S)
+||XP_032626897_1_XM_03277_f6b30e (N.S)
+|XP_047919596_1_XM_04806_0c6d33 (N.S)
+| |XP_054499394_1_XM_05464_33d08b (N.S)
+||+Node6 (N.S)
+||| |XP_041604521_1_XM_04174_7e8d4b (N.S)
+||||+Node9 (N.S)
+||||||XP_012614566_2_XM_01275_945ab4 (N.S)
+|||||+Node11 (N.S)
+|||| ||XP_062041590_1_XM_06218_d11611 (N.S)
+|||| |+Node13 (N.S)
+||||  ||XP_054352982_1_XM_05449_233884 (N.S)
+||||  |+Node15 (N.S)
+||||   |XP_011885129_1_XM_01202_53ecb0 (N.S)
+|||+Node8 (N.S)
+|| |NP_001090758_1_NM_00109_c9f23c (N.S)
+|+Node5 (N.S)
+ |XP_069726565_1_XM_06987_381d08 (N.S)
+```
+
+
+
