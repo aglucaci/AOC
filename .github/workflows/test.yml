@@ -1,28 +1,30 @@
-name: AOC CI
 
-on:
-  push:
-    branches: [main]
-  pull_request:
-    branches: [main]
+---
+
+# GitHub Actions CI
+
+`.github/workflows/test.yml`
+
+```yaml
+name: AOC Tests
+
+on: [push, pull_request]
 
 jobs:
-  build:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-    - name: Set up Conda
-      uses: conda-incubator/setup-miniconda@v2
-      with:
-        activate-environment: aoc
-        environment-file: config/environment.yml
-        auto-activate-base: false
+      - name: Install Conda
+        uses: conda-incubator/setup-miniconda@v3
+        with:
+          activate-environment: aoc
+          environment-file: envs/aoc.yaml
 
-    - name: Test Snakemake dry-run
-      shell: bash -l {0}
-      run: |
-        snakemake --cores 1 --use-conda --dry-run
+      - name: Install pytest
+        run: pip install pytest
 
+      - name: Run tests
+        run: pytest

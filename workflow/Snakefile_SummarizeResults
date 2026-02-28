@@ -2,7 +2,7 @@
 
 Snakemakefile that runs the AOC application - Summarize results...
 
-Written by Alexander G Lucaci 
+Written by Alexander G Lucaci
 
 # AOC ---
 
@@ -37,40 +37,104 @@ from os.path import exists
 # Configuration
 # =============================================================================
 
-configfile: os.path.join("config", "config.yml")
+configfile: os.path.join("config", "config.yaml")
 
 with open(os.path.join("config", "cluster.json"), "r") as fh:
   cluster = json.load(fh)
 #end with
 
-Label = config["Label"]
+
+# =============================================================================
+# Configuration (samplesheet-driven)
+# =============================================================================
+
+# Sample sheet path passed via: --config samples_csv=... (defaults to ./samples.csv)
+SAMPLES_CSV = config.get("samples_csv", "samples.csv")
+if not os.path.exists(SAMPLES_CSV):
+    raise FileNotFoundError(f"samples.csv not found: {SAMPLES_CSV}")
+samples_df = pd.read_csv(SAMPLES_CSV)
+if "sample" not in samples_df.columns:
+    raise ValueError(f"samples.csv must contain a 'sample' column. Found: {list(samples_df.columns)}")
+SAMPLES = samples_df["sample"].astype(str).tolist()
 
 BASEDIR = os.getcwd()
+OUTROOT = os.path.join(BASEDIR, "results")
 
-print("# Visualizations! We are operating out of base directory:", BASEDIR)
+#print("# Visualizations! We are operating out of base directory:", BASEDIR)
+#print("# Output root directory:", OUTROOT)
+#print("# Labels from samples.csv:", SAMPLES)
 
-OUTDIR = os.path.join(BASEDIR, "results", Label)
+def outdir(label: str) -> str:
+    return os.path.join(OUTROOT, label)
 
-OUTDIR_Viz = os.path.join(BASEDIR, "results", Label, "Visualizations")
+def vizdir(label: str) -> str:
+    return os.path.join(OUTROOT, label, "Visualizations")
 
-print("# Output directory:", OUTDIR)
+def recombinants(label: str):
+    return sorted([os.path.basename(x) for x in glob.glob(os.path.join(outdir(label), "*.codon.fas"))])
 
-Recombinants       = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR,
-                                                                                 '*.codon.fas'))])
+def fel_jsons(label: str):
+    return sorted([os.path.basename(x) for x in glob.glob(os.path.join(outdir(label), "*.FEL.json"))])
 
-Recombinants_Trees = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR,
-                                                                                 '*.tree.nwk'))])
+def meme_jsons(label: str):
+    return sorted([os.path.basename(x) for x in glob.glob(os.path.join(outdir(label), "*.MEME.json"))])
 
-DATADIR = os.path.join(BASEDIR,
-                       "data",
-                       Label)
-                       
-CladeLabels = sorted([x for x in glob.glob(os.path.join(OUTDIR, '*.clade'))])
+felJsons   = []
+memeJsons  = []
+absrelJsons = []
+bsmhJsons = []
+relaxJsons = []
+cfelJsons  = []
 
-ReferenceClade = os.path.basename(CladeLabels[0]).split(".")[0]
+for label in SAMPLES:
+    d = outdir(label)  # should be results/{label}
+    felJsons    += glob.glob(os.path.join(d, "*.FEL.json"))
+    memeJsons   += glob.glob(os.path.join(d, "*.MEME.json"))
+    absrelJsons += glob.glob(os.path.join(d, "*.ABSREL.json"))
+    bsmhJsons += glob.glob(os.path.join(d, "*.BUSTEDS-MH.json")) + glob.glob(os.path.join(d, "*.BUSTED*.json"))
+    relaxJsons  += glob.glob(os.path.join(d, "*.RELAX.json"))
+    cfelJsons   += glob.glob(os.path.join(d, "*.CFEL.json"))
 
-print("# We will process selection analyses in", len(Recombinants), "files")
-print("# We will use the following clade labels:", CladeLabels)
+# Make deterministic
+felJsons.sort()
+memeJsons.sort()
+absrelJsons.sort()
+bsmhJsons.sort()
+relaxJsons.sort()
+cfelJsons.sort()
+
+
+
+# Build concrete targets for rule all (SummarizeResults runs after selection,
+# so JSONs should already exist on disk).
+ALL_TARGETS = []
+for label in SAMPLES:
+    for j in fel_jsons(label):
+        ALL_TARGETS.extend([
+            os.path.join(outdir(label), "Tables", f"{j}.FEL.csv"),
+            os.path.join(vizdir(label), f"{j}.FEL.png"),
+            os.path.join(vizdir(label), f"{j}.FEL.svg"),
+            os.path.join(vizdir(label), f"{j}.FEL.figureLegend"),
+        ])
+    for j in meme_jsons(label):
+        ALL_TARGETS.extend([
+            os.path.join(outdir(label), "Tables", f"{j}.MEME.csv"),
+            os.path.join(vizdir(label), f"{j}.MEME.png"),
+            os.path.join(vizdir(label), f"{j}.MEME.svg"),
+            os.path.join(vizdir(label), f"{j}.MEME.figureLegend"),
+        ])
+
+    segs = recombinants(label)
+    if not segs:
+        continue
+    ALL_TARGETS.extend([
+        #os.path.join(outdir(label), "Tables", f"{label}.AOC.executiveSummary.csv"),
+        os.path.join(outdir(label), "Tables", f"{label}.AOC.merged_FEL_Results.csv"),
+        os.path.join(outdir(label), "Tables", f"{label}.AOC.merged_MEME_Results.csv"),
+        os.path.join(vizdir(label), f"{label}.FEL.merged.png"),
+        os.path.join(vizdir(label), f"{label}.FEL.merged.svg"),
+    ])
+
 
 # Set PPN
 PPN = cluster["__default__"]["ppn"]
@@ -79,7 +143,7 @@ PPN = cluster["__default__"]["ppn"]
 HYPHY = "hyphy"
 HYPHYMPI = "HYPHYMPI"
 
-FITMG94 = os.path.join(BASEDIR, "software", "hyphy-analyses", "FitMG94", "FitMG94.bf")
+#FITMG94 = os.path.join(BASEDIR, "software", "hyphy-analyses", "FitMG94", "FitMG94.bf")
 
 # =============================================================================
 # Viz settings
@@ -97,36 +161,25 @@ multitestcorr = config["multitestcorr"]
 # Results files
 # =============================================================================
 
-#tn93files   = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.dst'))])
-felJsons     = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.FEL.json'))])
-fubarJsons   = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.FUBAR.json'))])
-bustedsJsons = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.BUSTEDS.json'))])
-memeJsons    = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.MEME.json'))])
-absrelJsons  = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.ABSREL.json'))])
-slacJsons    = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.SLAC.json'))])
-bgmJsons     = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.BGM.json'))])
-bsmhJsons    = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.BUSTEDS-MH.json'))])
-fmmJsons     = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.FMM.json'))])
-cfelJsons    = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.CFEL.json'))])
-relaxJsons   = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR, '*.RELAX.json'))])
+# Results files (label-scoped): handled dynamically via ALL_TARGETS
 
 jsonDict = {
             "FEL": felJsons,
-            "FUBAR": fubarJsons,
-            "BUSTEDS": bustedsJsons,
+            #"FUBAR": fubarJsons,
+            #"BUSTEDS": bustedsJsons,
             "MEME": memeJsons,
             "ABSREL": absrelJsons,
-            "SLAC": slacJsons,
-            "BGM": bgmJsons,
+            #"SLAC": slacJsons,
+            #"BGM": bgmJsons,
             "BUSTEDS-MH": bsmhJsons,
-            "FMM": fmmJsons,
+            #"FMM": fmmJsons,
             "CFEL": cfelJsons,
             "RELAX": relaxJsons
             }
 
-for _ in jsonDict.keys():
-    print(f"We found {len(jsonDict[_])} {_} json files...")
-# end for
+#for _ in jsonDict.keys():
+#    print(f"We found {len(jsonDict[_])} {_} json files...")
+## end for
 
 #print("# Summarizing results...")
 
@@ -335,29 +388,8 @@ def get_FitMG94_results(json_file):
 
 rule all:
     input:
-        # FEL
-        expand(os.path.join(OUTDIR, "Tables", "{sample}.FEL.csv"), sample=felJsons),
-        expand(os.path.join(OUTDIR_Viz, "{sample}.FEL.png"), sample=felJsons),
-        expand(os.path.join(OUTDIR_Viz, "{sample}.FEL.svg"), sample=felJsons),
-        expand(os.path.join(OUTDIR_Viz, "{sample}.FEL.figureLegend"), sample=felJsons),
-        # MEME
-        expand(os.path.join(OUTDIR, "Tables", "{sample}.MEME.csv"), sample=memeJsons),
-        expand(os.path.join(OUTDIR_Viz, "{sample}.MEME.png"), sample=memeJsons),
-        expand(os.path.join(OUTDIR_Viz, "{sample}.MEME.svg"), sample=memeJsons),
-        expand(os.path.join(OUTDIR_Viz, "{sample}.MEME.figureLegend"), sample=memeJsons),
-        # BGM
-        #expand(os.path.join(OUTDIR, "Tables", "{sample}.BGM.csv"), sample=bgmJsons),
-        #expand(os.path.join(OUTDIR_Viz, "{sample}.BGM.png"), sample=bgmJsons),
-        #expand(os.path.join(OUTDIR_Viz, "{sample}.BGM.svg"), sample=bgmJsons),
-        ##expand(os.path.join(OUTDIR_Viz, "{sample}.BGM.figureLegend"), sample=bgmJsons),
-        # Executive Summary
-        expand(os.path.join(OUTDIR, "Tables", "{sample}.AOC.executiveSummary.csv"), sample = Label),
-        # Merge CSVs
-        expand(os.path.join(OUTDIR, "Tables", "{sample}.AOC.merged_FEL_Results.csv"), sample = Label),
-        expand(os.path.join(OUTDIR, "Tables", "{sample}.AOC.merged_MEME_Results.csv"), sample = Label),
-        # Merged Visualization
-        expand(os.path.join(OUTDIR_Viz, "{sample}.FEL.merged.png"), sample = Label),
-        expand(os.path.join(OUTDIR_Viz, "{sample}.FEL.merged.svg"), sample = Label)
+        ALL_TARGETS,
+        #[os.path.join(OUTROOT, l, "Tables", f"{l}.AOC.merged_FEL_Results.csv") for l in SAMPLES]
 # end rule all
 
 # =============================================================================
@@ -370,17 +402,27 @@ rule all:
 
 rule MergeFELCSVs:
     input:
-        expand(os.path.join(OUTDIR, "Tables", "{sample}.FEL.csv"), sample=felJsons)
+        fel_csvs=lambda wc: sorted(
+            glob.glob(os.path.join(OUTROOT, wc.label, "Tables", "*.FEL.csv"))
+        )
     output:
-        merged_csv = os.path.join(OUTDIR, "Tables", "{sample}.AOC.merged_FEL_Results.csv")
+        merged_csv=os.path.join(OUTROOT, "{label}", "Tables", "{label}.AOC.merged_FEL_Results.csv")
     run:
         import pandas as pd
-        all_dfs = []
 
-        for file in input:
+        # If no FEL CSVs exist for this label, write an empty merged file with a header (or skip)
+        if not input.fel_csvs:
+            outdir = os.path.dirname(output.merged_csv)
+            os.makedirs(outdir, exist_ok=True)
+            pd.DataFrame(columns=["Sample"]).to_csv(output.merged_csv, index=False)
+            print(f"[MergeFELCSVs] No FEL CSVs found for label={wildcards.label}. Wrote empty: {output.merged_csv}")
+            return
+
+        all_dfs = []
+        for file in input.fel_csvs:
             df = pd.read_csv(file)
             sample_name = os.path.basename(file).replace(".FEL.csv", "")
-            df.insert(0, "Sample", sample_name)  # Add a column to track which sample the row came from
+            df.insert(0, "Sample", sample_name)
             all_dfs.append(df)
 
         merged_df = pd.concat(all_dfs, ignore_index=True)
@@ -389,19 +431,28 @@ rule MergeFELCSVs:
 
 rule MergeMEMECSVs:
     input:
-        expand(os.path.join(OUTDIR, "Tables", "{sample}.MEME.csv"), sample=memeJsons)
+        meme_csvs=lambda wc: sorted(
+            glob.glob(os.path.join(OUTROOT, wc.label, "Tables", "*.MEME.csv"))
+        )
     output:
-        merged_csv = os.path.join(OUTDIR, "Tables", "{sample}.AOC.merged_MEME_Results.csv")
+        merged_csv=os.path.join(OUTROOT, "{label}", "Tables", "{label}.AOC.merged_MEME_Results.csv")
     run:
         import pandas as pd
-        all_dfs = []
 
-        for file in input:
+        if not input.meme_csvs:
+            outdir_ = os.path.dirname(output.merged_csv)
+            os.makedirs(outdir_, exist_ok=True)
+            pd.DataFrame(columns=["Sample"]).to_csv(output.merged_csv, index=False)
+            print(f"[MergeMEMECSVs] No MEME CSVs found for label={wildcards.label}. Wrote empty: {output.merged_csv}")
+            return
+
+        all_dfs = []
+        for file in input.meme_csvs:
             df = pd.read_csv(file)
             sample_name = os.path.basename(file).replace(".MEME.csv", "")
-            df.insert(0, "Sample", sample_name)  # Add a column to track which sample the row came from
+            df.insert(0, "Sample", sample_name)
             all_dfs.append(df)
-        # end if
+
         merged_df = pd.concat(all_dfs, ignore_index=True)
         merged_df.to_csv(output.merged_csv, index=False)
 # end rule
@@ -410,9 +461,9 @@ rule PlotFELMerge:
     input:
         input = rules.MergeFELCSVs.output.merged_csv
     output:
-        output_png = os.path.join(OUTDIR_Viz, "{sample}.FEL.merged.png"),
-        output_svg = os.path.join(OUTDIR_Viz, "{sample}.FEL.merged.svg"),
-        #output_figureLegend = os.path.join(OUTDIR_Viz, "{sample}.FEL.figureLegend")
+        output_png = os.path.join(OUTROOT, "{label}", "Visualizations", "{label}.FEL.merged.png"),
+        output_svg = os.path.join(OUTROOT, "{label}", "Visualizations", "{label}.FEL.merged.svg"),
+        #output_figureLegend = os.path.join(OUTROOT, "{label}", "Visualizations", "{sample}.FEL.figureLegend")
     run:
         df = pd.read_csv(input.input)
         unadjusted_pvalues = df["p-value"].tolist()
@@ -473,12 +524,12 @@ rule PlotFELMerge:
 
 rule PlotFEL:
     input:
-        input = os.path.join(OUTDIR, "{sample}")
+        input = os.path.join(OUTROOT, "{label}", "{sample}")
     output:
-        output_csv = os.path.join(OUTDIR, "Tables", "{sample}.FEL.csv"),
-        output_png = os.path.join(OUTDIR_Viz, "{sample}.FEL.png"),
-        output_svg = os.path.join(OUTDIR_Viz, "{sample}.FEL.svg"),
-        output_figureLegend = os.path.join(OUTDIR_Viz, "{sample}.FEL.figureLegend")
+        output_csv = os.path.join(OUTROOT, "{label}", "Tables", "{sample}.FEL.csv"),
+        output_png = os.path.join(OUTROOT, "{label}", "Visualizations", "{sample}.FEL.png"),
+        output_svg = os.path.join(OUTROOT, "{label}", "Visualizations", "{sample}.FEL.svg"),
+        output_figureLegend = os.path.join(OUTROOT, "{label}", "Visualizations", "{sample}.FEL.figureLegend")
     run:
         # FEL Plotting
         JSON_FILE = input.input
@@ -548,12 +599,12 @@ rule PlotFEL:
 
 rule PlotMEME:
     input:
-        input = os.path.join(OUTDIR, "{sample}")
+        input = os.path.join(OUTROOT, "{label}", "{sample}")
     output:
-        output_csv = os.path.join(OUTDIR, "Tables", "{sample}.MEME.csv"),
-        output_png = os.path.join(OUTDIR_Viz, "{sample}.MEME.png"),
-        output_svg = os.path.join(OUTDIR_Viz, "{sample}.MEME.svg"),
-        output_figureLegend = os.path.join(OUTDIR_Viz, "{sample}.MEME.figureLegend")
+        output_csv = os.path.join(OUTROOT, "{label}", "Tables", "{sample}.MEME.csv"),
+        output_png = os.path.join(OUTROOT, "{label}", "Visualizations", "{sample}.MEME.png"),
+        output_svg = os.path.join(OUTROOT, "{label}", "Visualizations", "{sample}.MEME.svg"),
+        output_figureLegend = os.path.join(OUTROOT, "{label}", "Visualizations", "{sample}.MEME.figureLegend")
     run:
         JSON_FILE = input.input
         columns = getMEMEHeaders(JSON_FILE)
@@ -595,12 +646,12 @@ rule PlotMEME:
         
 rule PlotBGM:
     input:
-        input = os.path.join(OUTDIR, "{sample}")
+        input = os.path.join(OUTROOT, "{label}", "{sample}")
     output:
-        output_csv = os.path.join(OUTDIR, "Tables", "{sample}.BGM.csv"),
-        output_png = os.path.join(OUTDIR_Viz, "{sample}.BGM.png"),
-        output_svg = os.path.join(OUTDIR_Viz, "{sample}.BGM.svg"),
-        #output_figureLegend = os.path.join(OUTDIR_Viz, "{sample}.BGM.figureLegend")
+        output_csv = os.path.join(OUTROOT, "{label}", "Tables", "{sample}.BGM.csv"),
+        output_png = os.path.join(OUTROOT, "{label}", "Visualizations", "{sample}.BGM.png"),
+        output_svg = os.path.join(OUTROOT, "{label}", "Visualizations", "{sample}.BGM.svg"),
+        #output_figureLegend = os.path.join(OUTROOT, "{label}", "Visualizations", "{sample}.BGM.figureLegend")
     run:
         JSON_FILE = input.input
         columns = getBGMHeaders(JSON_FILE)
@@ -688,136 +739,35 @@ rule PlotBGM:
         plt.show()
 
         
+import glob
+import os
+
 rule executiveSummary:
     input:
-        input = os.path.join(OUTDIR, "{sample}")
+        # concrete lists; no {sample} wildcards here
+        fel_jsons   = lambda wc: sorted(glob.glob(os.path.join(outdir(wc.label), "*.FEL.json"))),
+        meme_jsons  = lambda wc: sorted(glob.glob(os.path.join(outdir(wc.label), "*.MEME.json"))),
+        absrel_jsons= lambda wc: sorted(glob.glob(os.path.join(outdir(wc.label), "*.ABSREL.json"))),
+        busted_jsons= lambda wc: sorted(glob.glob(os.path.join(outdir(wc.label), "*.BUSTEDS-MH.json"))),
+        relax_jsons = lambda wc: sorted(glob.glob(os.path.join(outdir(wc.label), "*.RELAX.json"))),
+        cfel_jsons  = lambda wc: sorted(glob.glob(os.path.join(outdir(wc.label), "*.CFEL.json"))),
     output:
-        #output_html = os.path.join(OUTDIR_Viz, "{sample}.results.html")
-        output_csv = os.path.join(OUTDIR, "Tables", "{sample}.AOC.executiveSummary.csv")
+        summary = os.path.join(OUTROOT, "{label}", "Summary", "{label}.executive_summary.md")
     params:
-        analysis_tag = Label,
-        recombinant_files = Recombinants,
-        working_dir = OUTDIR
-    run:
-        count = 1
-        
-        for file in sorted(params.recombinant_files):
-            print("## Exploring:", file)
-    
-            # Set file endings
-            FEL_JSON = file + ".FEL.json"
-            BUSTEDS_JSON = file + ".BUSTEDS.json"
-            BUSTEDSMH_JSON = file + ".BUSTEDS-MH.json"
-            MEME_JSON = file + ".MEME.json"
-            FUBAR_JSON = file + ".FUBAR.json"
-            BGM_JSON = file + ".BGM.json"
-            aBSREL_JSON = file + ".ABSREL.json"
-            RELAX_JSON = file + ".RELAX.json"
-            CFEL_JSON = file + ".CFEL.json"
-    
-            # Get file basename
-            basename = os.path.basename(file)
-    
-            # BUSTED[S]
-            print ("\t# Processing:", BUSTEDS_JSON)
-            BUSTEDS_data = get_JSON(os.path.join(params.working_dir, BUSTEDS_JSON))
-            BUSTEDS_pvalue = BUSTEDS_data["test results"]["p-value"]
-            
-            # BUSTED[S]+MH
-            print ("\t# Processing:", BUSTEDS_JSON)
-            BUSTEDSMH_data = get_JSON(os.path.join(params.working_dir, BUSTEDSMH_JSON))
-            BUSTEDSMH_pvalue = BUSTEDSMH_data["test results"]["p-value"]
-            
-            # FEL
-            print ("\t# Processing:", FEL_JSON)
-            FEL_data = get_JSON(os.path.join(params.working_dir, FEL_JSON))
-            df = pd.DataFrame(FEL_data["MLE"]["content"]["0"], columns=[x[0] for x in FEL_data["MLE"]["headers"]], dtype = float)
-            df_results = df[df["p-value"] <= pvalueThreshold]
-            positive_sites = df_results[df_results["dN/dS MLE"] > 1.0]
-            negative_sites = df_results[df_results["dN/dS MLE"] < 1.0]
-            N = FEL_data["input"]["number of sites"]
-            S = FEL_data["input"]["number of sequences"]
-            
-            # MEME
-            print ("\t# Processing:", MEME_JSON)
-            MEME_data = get_JSON(os.path.join(params.working_dir, MEME_JSON))
-            df_M = pd.DataFrame(MEME_data["MLE"]["content"]["0"], columns=[x[0] for x in MEME_data["MLE"]["headers"]], dtype = float)
-            df_results = df_M[df_M["p-value"] <= pvalueThreshold]
-            MEME_results = df_results.shape[0]
-            
-            # FUBAR results
-            FUBAR_positive, FUBAR_negative = get_FUBAR_results(os.path.join(params.working_dir, FUBAR_JSON))
-            
-            # BGM results
-            print ("\t# Processing:", BGM_JSON)
-            BGM_results = get_BGM_results(os.path.join(params.working_dir, BGM_JSON))
-            
-            # aBSREL results
-            print ("\t# Processing:", aBSREL_JSON)
-            aBSREL_results = get_aBSREL_results(os.path.join(params.working_dir, aBSREL_JSON))
-            
-            # RELAX results
-            print ("\t# Processing:", RELAX_JSON)
-            k, RELAX_results = get_RELAX_results(os.path.join(params.working_dir, RELAX_JSON))
-            
-            # CFEL results
-            print ("\t# Processing:", CFEL_JSON)
-            CFEL_results = get_CFEL_results(os.path.join(params.working_dir, CFEL_JSON))
-            
-            # MG94, SLAC
-            extensions = [".FITMG94.json", ".SLAC.json", ".PRIME.json", ".FMM.json"]
-            for ext in extensions:
-                JSON = file + ext
-                if ext == ".FITMG94.json":
-                    mg94_results = get_FitMG94_results(os.path.join(params.working_dir, JSON))
-                elif ext == ".SLAC.json":
-                    #print("# Processing SLAC results:", JSON)
-                    SLAC_positive, SLAC_negative = get_SLAC_results(os.path.join(params.working_dir, JSON))
-                elif ext == ".PRIME.json":
-                    PRIME_results = get_PRIME_results(os.path.join(params.working_dir, JSON))
-                elif ext == ".FMM.json":
-                    TH_pval, DH_pval = get_FMM_results(os.path.join(params.working_dir, JSON))
-                else:
-                    continue
-                #end if
-            #end for
-    
-    
-            # Report --------------------------------------------------------
-            results_dict[count] = {
-                "Filename": basename,
-                "Sequences": int(S),
-                "CodonSites": int(N),
-                "FitMG94(dNdS)": mg94_results,
-                "BUSTED[S](PValue)": BUSTEDS_pvalue,
-                "BUSTED[S]+MH(PValue)": BUSTEDSMH_pvalue,
-                "FEL[+](Sites)": positive_sites.shape[0],
-                "FEL[-](Sites)": negative_sites.shape[0],
-                "FUBAR[+](Sites)": FUBAR_positive,
-                "FUBAR[-](Sites)": FUBAR_negative,
-                "SLAC[+](Sites)": SLAC_positive,
-                "SLAC[-](Sites)": SLAC_negative,
-                "MEME(Sites)": MEME_results,
-                "BGM(Sites)": BGM_results,
-                "aBSREL(Branches)": aBSREL_results,
-                "FMM[TH](PValue)": TH_pval,
-                "FMM[DH](PValue)": DH_pval,
-                "RELAX(PValue)": RELAX_results,
-                "RELAX(KValue)": k,
-                "CFEL(Sites)": CFEL_results
-            }
-            
-            count += 1
-            print()
-        #end for
-        df = pd.DataFrame(results_dict)
-        df.to_csv(output.output_csv)
-    #end for
-    #end run
+        analysis_tag = lambda wc: wc.label,
+        working_dir  = lambda wc: outdir(wc.label)
+    shell:
+        r"""
+        mkdir -p $(dirname {output.summary})
+        python scripts/executive_summary.py \
+          --label "{params.analysis_tag}" \
+          --out "{output.summary}" \
+          --workdir "{params.working_dir}"
+        """
 # end rule
+
 
 
 # =============================================================================
 # End of file
 # =============================================================================
-
