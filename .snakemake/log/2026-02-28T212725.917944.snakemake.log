@@ -1,0 +1,461 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job               count
+--------------  -------
+ABSREL                5
+AssignLineages        5
+BUSTEDSMH             5
+FEL                   5
+MEME                  5
+all                   1
+fasttree              5
+total                31
+
+Select jobs to execute...
+
+[Sat Feb 28 21:27:27 2026]
+rule fasttree:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile
+    jobid: 1
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile
+    wildcards: label=BDNF, sample=BDNF.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+FastTree -nt -gtr /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas > /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile
+
+[Sat Feb 28 21:27:27 2026]
+rule fasttree:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile
+    jobid: 7
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile
+    wildcards: label=BDNF, sample=BDNF.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+FastTree -nt -gtr /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas > /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile
+
+[Sat Feb 28 21:27:27 2026]
+rule fasttree:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile
+    jobid: 13
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile
+    wildcards: label=BDNF-annot, sample=BDNF-annot.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+FastTree -nt -gtr /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas > /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile
+
+[Sat Feb 28 21:27:27 2026]
+rule fasttree:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile
+    jobid: 19
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile
+    wildcards: label=BDNF-annot, sample=BDNF-annot.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+FastTree -nt -gtr /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas > /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile
+
+[Sat Feb 28 21:27:27 2026]
+rule fasttree:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile
+    jobid: 25
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile
+    wildcards: label=BDNF-annot, sample=BDNF-annot.3.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+FastTree -nt -gtr /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas > /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile
+[Sat Feb 28 21:27:27 2026]
+Finished job 1.
+1 of 31 steps (3%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:27:27 2026]
+rule AssignLineages:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled
+    jobid: 3
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile
+    wildcards: label=BDNF, sample=BDNF.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 21:27:27 2026]
+Finished job 19.
+2 of 31 steps (6%) done
+[Sat Feb 28 21:27:27 2026]
+Finished job 13.
+3 of 31 steps (10%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:27:27 2026]
+rule AssignLineages:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled
+    jobid: 21
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile
+    wildcards: label=BDNF-annot, sample=BDNF-annot.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 21:27:27 2026]
+rule AssignLineages:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled
+    jobid: 15
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile
+    wildcards: label=BDNF-annot, sample=BDNF-annot.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 21:27:27 2026]
+Finished job 7.
+4 of 31 steps (13%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:27:27 2026]
+rule AssignLineages:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled
+    jobid: 9
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile
+    wildcards: label=BDNF, sample=BDNF.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 21:27:27 2026]
+Finished job 25.
+5 of 31 steps (16%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:27:27 2026]
+rule AssignLineages:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled
+    jobid: 27
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile
+    wildcards: label=BDNF-annot, sample=BDNF-annot.3.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 21:27:28 2026]
+Finished job 3.
+6 of 31 steps (19%) done
+[Sat Feb 28 21:27:28 2026]
+Finished job 9.
+7 of 31 steps (23%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:27:28 2026]
+rule MEME:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.MEME.json
+    jobid: 4
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.MEME.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF, sample=BDNF.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy MEME --alignment /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.MEME.json 
+
+[Sat Feb 28 21:27:28 2026]
+rule ABSREL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.ABSREL.json
+    jobid: 5
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.ABSREL.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF, sample=BDNF.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy ABSREL --alignment /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.ABSREL.json 
+
+[Sat Feb 28 21:27:28 2026]
+rule MEME:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.MEME.json
+    jobid: 10
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.MEME.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF, sample=BDNF.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy MEME --alignment /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.MEME.json 
+
+[Sat Feb 28 21:27:28 2026]
+rule BUSTEDSMH:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.BUSTEDS-MH.json
+    jobid: 12
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.BUSTEDS-MH.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF, sample=BDNF.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy BUSTED --alignment /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.BUSTEDS-MH.json --srv Yes --multiple-hits Double+Triple 
+
+[Sat Feb 28 21:27:28 2026]
+rule FEL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FEL.json
+    jobid: 2
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FEL.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF, sample=BDNF.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy FEL --alignment /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FEL.json --ci Yes 
+
+[Sat Feb 28 21:27:28 2026]
+rule FEL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FEL.json
+    jobid: 8
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FEL.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF, sample=BDNF.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy FEL --alignment /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FEL.json --ci Yes 
+
+[Sat Feb 28 21:27:28 2026]
+rule ABSREL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.ABSREL.json
+    jobid: 11
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.ABSREL.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF, sample=BDNF.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy ABSREL --alignment /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.ABSREL.json 
+[Sat Feb 28 21:27:29 2026]
+Finished job 21.
+8 of 31 steps (26%) done
+[Sat Feb 28 21:27:29 2026]
+Finished job 27.
+9 of 31 steps (29%) done
+[Sat Feb 28 21:27:29 2026]
+Finished job 15.
+10 of 31 steps (32%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:27:29 2026]
+rule BUSTEDSMH:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.BUSTEDS-MH.json
+    jobid: 24
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.BUSTEDS-MH.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy BUSTED --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.BUSTEDS-MH.json --srv Yes --multiple-hits Double+Triple --branches Test
+
+[Sat Feb 28 21:27:29 2026]
+rule ABSREL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.ABSREL.json
+    jobid: 17
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.ABSREL.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy ABSREL --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.ABSREL.json --branches Test
+
+[Sat Feb 28 21:27:29 2026]
+rule FEL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FEL.json
+    jobid: 20
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FEL.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy FEL --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FEL.json --ci Yes --branches Test
+Select jobs to execute...
+[Sat Feb 28 21:27:37 2026]
+Finished job 20.
+11 of 31 steps (35%) done
+
+[Sat Feb 28 21:27:37 2026]
+rule BUSTEDSMH:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.BUSTEDS-MH.json
+    jobid: 6
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.BUSTEDS-MH.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF, sample=BDNF.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy BUSTED --alignment /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.BUSTEDS-MH.json --srv Yes --multiple-hits Double+Triple 
+[Sat Feb 28 21:28:11 2026]
+Finished job 2.
+12 of 31 steps (39%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:28:11 2026]
+rule ABSREL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.ABSREL.json
+    jobid: 29
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.ABSREL.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.3.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy ABSREL --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.ABSREL.json --branches Test
+[Sat Feb 28 21:28:13 2026]
+Finished job 17.
+13 of 31 steps (42%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:28:13 2026]
+rule MEME:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.MEME.json
+    jobid: 28
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.MEME.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.3.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy MEME --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.MEME.json --branches Test
+[Sat Feb 28 21:28:23 2026]
+Finished job 11.
+14 of 31 steps (45%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:28:23 2026]
+rule BUSTEDSMH:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.BUSTEDS-MH.json
+    jobid: 18
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.BUSTEDS-MH.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy BUSTED --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.BUSTEDS-MH.json --srv Yes --multiple-hits Double+Triple --branches Test
+[Sat Feb 28 21:28:51 2026]
+Finished job 5.
+15 of 31 steps (48%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:28:51 2026]
+rule MEME:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.MEME.json
+    jobid: 16
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.MEME.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy MEME --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.MEME.json --branches Test
+[Sat Feb 28 21:28:52 2026]
+Finished job 4.
+16 of 31 steps (52%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:28:53 2026]
+rule ABSREL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.ABSREL.json
+    jobid: 23
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.ABSREL.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy ABSREL --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.ABSREL.json --branches Test
+[Sat Feb 28 21:29:02 2026]
+Finished job 29.
+17 of 31 steps (55%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:29:02 2026]
+rule FEL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FEL.json
+    jobid: 14
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FEL.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy FEL --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FEL.json --ci Yes --branches Test
+[Sat Feb 28 21:29:02 2026]
+Finished job 23.
+18 of 31 steps (58%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:29:02 2026]
+rule FEL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FEL.json
+    jobid: 26
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FEL.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.3.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy FEL --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FEL.json --ci Yes --branches Test
+[Sat Feb 28 21:29:49 2026]
+Finished job 16.
+19 of 31 steps (61%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:29:49 2026]
+rule MEME:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.MEME.json
+    jobid: 22
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.MEME.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy MEME --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.MEME.json --branches Test
+[Sat Feb 28 21:29:51 2026]
+Finished job 14.
+20 of 31 steps (65%) done
+Select jobs to execute...
+
+[Sat Feb 28 21:29:51 2026]
+rule BUSTEDSMH:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.BUSTEDS-MH.json
+    jobid: 30
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.BUSTEDS-MH.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled
+    wildcards: label=BDNF-annot, sample=BDNF-annot.3.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+hyphy BUSTED --alignment /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas --tree /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled --output /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.BUSTEDS-MH.json --srv Yes --multiple-hits Double+Triple --branches Test
+[Sat Feb 28 21:29:56 2026]
+Finished job 22.
+21 of 31 steps (68%) done
+[Sat Feb 28 21:30:10 2026]
+Finished job 8.
+22 of 31 steps (71%) done
+[Sat Feb 28 21:30:51 2026]
+Finished job 10.
+23 of 31 steps (74%) done
+[Sat Feb 28 21:31:28 2026]
+Finished job 28.
+24 of 31 steps (77%) done
+[Sat Feb 28 21:32:00 2026]
+Finished job 26.
+25 of 31 steps (81%) done
+[Sat Feb 28 21:32:24 2026]
+Finished job 24.
+26 of 31 steps (84%) done
+[Sat Feb 28 21:38:58 2026]
+Finished job 18.
+27 of 31 steps (87%) done
+[Sat Feb 28 22:59:32 2026]
+Finished job 6.
+28 of 31 steps (90%) done
+[Sat Feb 28 23:17:50 2026]
+Finished job 12.
+29 of 31 steps (94%) done
+[Sat Feb 28 23:20:32 2026]
+Finished job 30.
+30 of 31 steps (97%) done
+Select jobs to execute...
+
+[Sat Feb 28 23:20:32 2026]
+localrule all:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.BUSTEDS-MH.json
+    jobid: 0
+    reason: Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 23:20:32 2026]
+Finished job 0.
+31 of 31 steps (100%) done
+Complete log: .snakemake/log/2026-02-28T212725.917944.snakemake.log

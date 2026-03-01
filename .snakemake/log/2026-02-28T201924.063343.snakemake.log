@@ -1,0 +1,129 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                       count
+----------------------  -------
+all                           1
+cln                           1
+macse                         1
+parse_gard_alternative        1
+recombination                 1
+remove_duplicates_msa         1
+strike_ambigs_msa             1
+tn93_cluster                  1
+total                         8
+
+Select jobs to execute...
+
+[Sat Feb 28 20:19:25 2026]
+rule macse:
+    input: /Users/alex/Documents/AOC-develop/tests/data/tiny.fasta
+    output: /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.aa.fa
+    jobid: 1
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/tiny/tiny.aa.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.fa
+    wildcards: sample=tiny
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 20:19:28 2026]
+Finished job 1.
+1 of 8 steps (12%) done
+Select jobs to execute...
+
+[Sat Feb 28 20:19:28 2026]
+rule cln:
+    input: /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.fa
+    output: /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.cln.fa
+    jobid: 2
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.cln.fa; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.fa
+    wildcards: sample=tiny
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 20:19:28 2026]
+Finished job 2.
+2 of 8 steps (25%) done
+Select jobs to execute...
+
+[Sat Feb 28 20:19:28 2026]
+rule strike_ambigs_msa:
+    input: /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.cln.fa
+    output: /Users/alex/Documents/AOC-develop/results/tiny/tiny.SA.codons.cln.fa
+    jobid: 3
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/tiny/tiny.SA.codons.cln.fa; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.cln.fa
+    wildcards: sample=tiny
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 20:19:28 2026]
+Finished job 3.
+3 of 8 steps (38%) done
+Select jobs to execute...
+
+[Sat Feb 28 20:19:28 2026]
+rule remove_duplicates_msa:
+    input: /Users/alex/Documents/AOC-develop/results/tiny/tiny.SA.codons.cln.fa
+    output: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa
+    jobid: 4
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/tiny/tiny.SA.codons.cln.fa
+    wildcards: sample=tiny
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 20:19:28 2026]
+Finished job 4.
+4 of 8 steps (50%) done
+Select jobs to execute...
+
+[Sat Feb 28 20:19:28 2026]
+rule tn93_cluster:
+    input: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa
+    output: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.json, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta
+    jobid: 5
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa
+    wildcards: sample=tiny
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 20:19:28 2026]
+Finished job 5.
+5 of 8 steps (62%) done
+Select jobs to execute...
+
+[Sat Feb 28 20:19:28 2026]
+rule recombination:
+    input: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta
+    output: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta.GARD.json, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta.best-gard
+    jobid: 6
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta.best-gard, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta.GARD.json; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta
+    wildcards: sample=tiny
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 20:26:04 2026]
+Finished job 6.
+6 of 8 steps (75%) done
+Select jobs to execute...
+
+[Sat Feb 28 20:26:04 2026]
+rule parse_gard_alternative:
+    input: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta.best-gard, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa
+    output: /Users/alex/Documents/AOC-develop/results/tiny/tiny.1.codon.fas, /Users/alex/Documents/AOC-develop/results/tiny/tiny.gard.log
+    jobid: 7
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/tiny/tiny.1.codon.fas, /Users/alex/Documents/AOC-develop/results/tiny/tiny.gard.log; Input files updated by another job: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta.best-gard, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa
+    wildcards: sample=tiny
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 20:26:07 2026]
+Finished job 7.
+7 of 8 steps (88%) done
+Select jobs to execute...
+
+[Sat Feb 28 20:26:07 2026]
+localrule all:
+    input: /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.aa.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.cln.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.SA.codons.cln.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.json, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta.GARD.json, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta.best-gard, /Users/alex/Documents/AOC-develop/results/tiny/tiny.1.codon.fas, /Users/alex/Documents/AOC-develop/results/tiny/tiny.gard.log
+    jobid: 0
+    reason: Input files updated by another job: /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.1.codon.fas, /Users/alex/Documents/AOC-develop/results/tiny/tiny.codons.cln.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.json, /Users/alex/Documents/AOC-develop/results/tiny/tiny.gard.log, /Users/alex/Documents/AOC-develop/results/tiny/tiny.SA.codons.cln.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta.best-gard, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta, /Users/alex/Documents/AOC-develop/results/tiny/tiny.aa.fa, /Users/alex/Documents/AOC-develop/results/tiny/tiny.RD.SA.codons.cln.fa.cluster.fasta.GARD.json
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sat Feb 28 20:26:07 2026]
+Finished job 0.
+8 of 8 steps (100%) done
+Complete log: .snakemake/log/2026-02-28T201924.063343.snakemake.log

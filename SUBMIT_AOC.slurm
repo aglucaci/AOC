@@ -37,7 +37,7 @@ CORES="${SLURM_CPUS_PER_TASK:-16}"
 # Jobs = how many rules Snakemake can have in flight (can be > cores if many IO-bound steps)
 JOBS="${2:-20}"
 
-bash RUN_AOC.sh \
+bash run_aoc.sh \
   --samples "${SAMPLES_CSV}" \
   --cores "${CORES}" \
   --jobs "${JOBS}" \

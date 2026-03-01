@@ -52,8 +52,8 @@ The workflow is designed for both local execution and HPC environments, and scal
 
 ```
 AOC/
-├── Snakefile
 ├── workflow/
+│   ├── Snakefile
 │   ├── Snakefile_SelectionAnalysis
 │   └── Snakefile_SummarizeResults
 ├── config/
@@ -63,6 +63,8 @@ AOC/
 ├── envs/
 │   └── AOC.yaml
 ├── install.sh
+├── run_aoc.sh
+├── submit_aoc.slurm
 └── README.md
 ```
 

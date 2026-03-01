@@ -12,9 +12,10 @@ Written by Alexander G Lucaci
 # Imports
 # =============================================================================
 
-import itertools
+#import itertools
 import os
-import sys
+from os.path import exists
+#import sys
 import csv
 import json
 from pathlib import Path
@@ -23,15 +24,19 @@ import glob
 import numpy as np
 import pandas as pd
 import altair as alt
-import statsmodels
-import statsmodels.api
-import networkx as nx
+#import statsmodels
+import statsmodels.api as sm
+from statsmodels.stats.multitest import fdrcorrection
+#import networkx as nx
+# sm.stats.multitest.multipletests(...)
 #import nx_altair as nxa
 import matplotlib.pyplot as plt
 import matplotlib as mpl
-import matplotlib
-matplotlib.use('agg')
-from os.path import exists
+#import matplotlib
+mpl.use('agg')
+
+#import os
+#from pathlib import Path
 
 # =============================================================================
 # Configuration
@@ -264,7 +269,8 @@ def get_PRIME_results(json_file, pThreshold = 0.1):
 #end method
     
 def fdr_adjust(unadjusted_pvalues):
-    adjusted_pvalues =  statsmodels.stats.multitest.fdrcorrection(unadjusted_pvalues,
+    # multitest.multipletests
+    adjusted_pvalues =  fdrcorrection(unadjusted_pvalues,
                                                                   alpha=0.10,
                                                                   method='indep',
                                                                   is_sorted=False)
@@ -381,6 +387,53 @@ def get_FitMG94_results(json_file):
     #end if
     return data["fits"]["Standard MG94"]["Rate Distributions"]["non-synonymous/synonymous rate ratio"]
 #end method
+
+def save_altair_with_vl_convert(chart, *, png_path=None, svg_path=None, scale=2, ppi=None):
+    """
+    Save an Altair chart to PNG and/or SVG using vl-convert-python.
+
+    Args:
+        chart: altair.Chart (or any Altair object with .to_dict()).
+        png_path: output path for PNG (bytes).
+        svg_path: output path for SVG (text).
+        scale: raster scaling factor for PNG (higher = larger PNG).
+        ppi: optional; passed through if supported by your vl-convert version.
+
+    Requires:
+        pip/conda install vl-convert-python
+    """
+    try:
+        import vl_convert as vlc
+    except ImportError as e:
+        raise ImportError(
+            "vl-convert-python is not installed. "
+            "Install with: pip install vl-convert-python (or conda-forge: vl-convert-python)"
+        ) from e
+
+    # Build a Vega-Lite spec from Altair (includes inline datasets where needed)
+    spec = chart.to_dict(format="vega-lite")
+
+    # Ensure output dirs exist
+    for out in (png_path, svg_path):
+        if out:
+            Path(out).parent.mkdir(parents=True, exist_ok=True)
+
+    # SVG
+    if svg_path:
+        svg = vlc.vegalite_to_svg(spec)
+        # vegalite_to_svg returns a str
+        with open(svg_path, "w", encoding="utf-8") as f:
+            f.write(svg)
+
+    # PNG
+    if png_path:
+        # vegalite_to_png returns bytes
+        kwargs = {"scale": scale}
+        if ppi is not None:
+            kwargs["ppi"] = ppi  # ignored if your version doesn't support it
+        png = vlc.vegalite_to_png(spec, **kwargs)
+        with open(png_path, "wb") as f:
+            f.write(png)
 
 # =============================================================================
 # Rule all
@@ -505,8 +558,15 @@ rule PlotFELMerge:
                                                                y='dN/dS LB',
                                                                y2='dN/dS UB')
         chart = (line + band)
-        chart.save(output.output_svg)
-        chart.save(output.output_png)
+        #chart.save(output.output_svg)
+        #chart.save(output.output_png)
+        
+        save_altair_with_vl_convert(
+            chart,
+            svg_path=output.output_svg,
+            png_path=output.output_png,
+            scale=2
+        )
         
         # Figure legend
         #numSites = len(df["dN/dS MLE"])
@@ -540,7 +600,7 @@ rule PlotFEL:
         df.index += 1
         df["CodonSite"] = df.index
         unadjusted_pvalues = df["p-value"].tolist()
-        adjusted_pvalues =  statsmodels.stats.multitest.fdrcorrection(unadjusted_pvalues,
+        adjusted_pvalues =  fdrcorrection(unadjusted_pvalues,
                                                               alpha=0.10,
                                                               method='indep',
                                                               is_sorted=False)
@@ -581,8 +641,15 @@ rule PlotFEL:
                                                                y='dN/dS LB',
                                                                y2='dN/dS UB')
         chart = (line + band)
-        chart.save(output.output_svg)
-        chart.save(output.output_png)
+        #chart.save(output.output_svg)
+        #chart.save(output.output_png)
+        
+        save_altair_with_vl_convert(
+            chart,
+            svg_path=output.output_svg,
+            png_path=output.output_png,
+            scale=2
+        )
         
         # Figure legend
         numSites = len(df["dN/dS MLE"])
@@ -615,7 +682,7 @@ rule PlotMEME:
         df["CodonSite"] = df.index
     
         unadjusted_pvalues = df["p-value"].tolist()
-        adjusted_pvalues =  statsmodels.stats.multitest.fdrcorrection(unadjusted_pvalues,
+        adjusted_pvalues =  fdrcorrection(unadjusted_pvalues,
                                                               alpha=0.10,
                                                               method='indep',
                                                               is_sorted=False)
@@ -632,8 +699,15 @@ rule PlotMEME:
             width=800,
             height=600
         )
-        chart.save(output.output_svg)
-        chart.save(output.output_png)
+        #chart.save(output.output_svg)
+        #chart.save(output.output_png)
+        
+        save_altair_with_vl_convert(
+            chart,
+            svg_path=output.output_svg,
+            png_path=output.output_png,
+            scale=2
+        )
         
         # Figure legend
         a = len(df["CodonSite"])
@@ -644,6 +718,7 @@ rule PlotMEME:
     # end run
 # end rule
         
+"""
 rule PlotBGM:
     input:
         input = os.path.join(OUTROOT, "{label}", "{sample}")
@@ -738,9 +813,7 @@ rule PlotBGM:
         plt.savefig(output.output_svg)
         plt.show()
 
-        
-import glob
-import os
+"""
 
 rule executiveSummary:
     input:

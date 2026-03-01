@@ -1,0 +1,100 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job      count
+-----  -------
+CFEL         3
+RELAX        3
+all          1
+total        7
+
+Select jobs to execute...
+
+[Sun Mar  1 07:54:38 2026]
+rule CFEL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.test_sequences.txt
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.CFEL.json
+    jobid: 36
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.CFEL.json
+    wildcards: label=BDNF-annot, sample=BDNF-annot.3.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sun Mar  1 07:54:38 2026]
+rule CFEL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.test_sequences.txt
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.CFEL.json
+    jobid: 20
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.CFEL.json
+    wildcards: label=BDNF-annot, sample=BDNF-annot.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sun Mar  1 07:54:38 2026]
+rule CFEL:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.test_sequences.txt
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.CFEL.json
+    jobid: 28
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.CFEL.json
+    wildcards: label=BDNF-annot, sample=BDNF-annot.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sun Mar  1 07:54:38 2026]
+rule RELAX:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile.labelled, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.test_sequences.txt
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.RELAX.json
+    jobid: 35
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.RELAX.json
+    wildcards: label=BDNF-annot, sample=BDNF-annot.3.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sun Mar  1 07:54:38 2026]
+rule RELAX:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile.labelled, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.test_sequences.txt
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.RELAX.json
+    jobid: 19
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.RELAX.json
+    wildcards: label=BDNF-annot, sample=BDNF-annot.1.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sun Mar  1 07:54:38 2026]
+rule RELAX:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile.labelled, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.test_sequences.txt
+    output: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.RELAX.json
+    jobid: 27
+    reason: Missing output files: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.RELAX.json
+    wildcards: label=BDNF-annot, sample=BDNF-annot.2.codon.fas
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sun Mar  1 07:54:45 2026]
+Finished job 28.
+1 of 7 steps (14%) done
+[Sun Mar  1 07:55:15 2026]
+Finished job 20.
+2 of 7 steps (29%) done
+[Sun Mar  1 07:55:25 2026]
+Finished job 27.
+3 of 7 steps (43%) done
+[Sun Mar  1 07:56:44 2026]
+Finished job 36.
+4 of 7 steps (57%) done
+[Sun Mar  1 07:58:25 2026]
+Finished job 19.
+5 of 7 steps (71%) done
+[Sun Mar  1 07:59:34 2026]
+Finished job 35.
+6 of 7 steps (86%) done
+Select jobs to execute...
+
+[Sun Mar  1 07:59:34 2026]
+localrule all:
+    input: /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.1.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF/BDNF.2.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.RELAX.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.CFEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.RELAX.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.CFEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FastTree.treefile, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.FEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.MEME.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.ABSREL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.BUSTEDS-MH.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.RELAX.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.CFEL.json
+    jobid: 0
+    reason: Input files updated by another job: /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.CFEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.RELAX.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.1.codon.fas.CFEL.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.3.codon.fas.RELAX.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.RELAX.json, /Users/alex/Documents/AOC-develop/results/BDNF-annot/BDNF-annot.2.codon.fas.CFEL.json
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Sun Mar  1 07:59:34 2026]
+Finished job 0.
+7 of 7 steps (100%) done
+Complete log: .snakemake/log/2026-03-01T075437.081948.snakemake.log
