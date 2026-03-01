@@ -20,93 +20,140 @@ import glob
 # Configuration
 # =============================================================================
 
-configfile: os.path.join("config", "config.yml")
+configfile: os.path.join("config", "config.yaml")
 
-with open(os.path.join("config", "cluster.json"), "r") as fh: 
+with open(os.path.join("config", "cluster.json"), "r") as fh:
   cluster = json.load(fh)
 #end with
 
-Label = config["Label"]
+# -----------------------------------------------------------------------------
+# Samplesheet-driven configuration
+# -----------------------------------------------------------------------------
+
 BASEDIR = os.getcwd()
+OUTROOT = os.path.join(BASEDIR, "results")
 
-# Set output directory
-OUTDIR = os.path.join(BASEDIR, "results", Label)
-
-Recombinants       = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR,
-                                                                                 '*.codon.fas'))])
-Recombinants_Trees = sorted([os.path.basename(x) for x in glob.glob(os.path.join(OUTDIR,
-                                                                                 '*.tree.nwk'))])
-
-DATADIR = os.path.join(BASEDIR,
-                       "data",
-                       Label)
-                       
-CladeLabels = sorted([x for x in glob.glob(os.path.join(OUTDIR, '*.clade'))])
-ReferenceClade = os.path.basename(CladeLabels[0]).split(".")[0]
-
-# Report to user
-print("# Selection Analysis! We are operating out of base directory:", BASEDIR)
-print("# Output directory:", OUTDIR)
-print("# We will process selection analyses in", len(Recombinants), "files")
-print("# We will use the following clade labels:", CladeLabels)
-
-# Set PPN
+SAMPLES_CSV = config.get("samples_csv", "samples.csv")
 PPN = cluster["__default__"]["ppn"]
-
-# HyPhy settings
 HYPHY = "hyphy"
 HYPHYMPI = "HYPHYMPI"
-FITMG94 = os.path.join(BASEDIR, "software", "hyphy-analyses", "FitMG94", "FitMG94.bf")
 
-# =============================================================================
-# Rule all
-# =============================================================================
+if not os.path.exists(SAMPLES_CSV):
+    raise FileNotFoundError(f"[SelectionAnalysis] samples.csv not found: {SAMPLES_CSV}. "
+                            f"Pass via --config samples_csv=...")
+
+# Load sample sheet
+with open(SAMPLES_CSV, "r", newline="") as fh:
+    reader = csv.DictReader(fh)
+    required_cols = {"sample"}
+    missing = required_cols - set(reader.fieldnames or [])
+    if missing:
+        raise ValueError(f"[SelectionAnalysis] samples.csv missing required columns: {sorted(missing)}. "
+                         f"Found: {reader.fieldnames}")
+    SAMPLE_ROWS = [row for row in reader]
+
+SAMPLES = [r["sample"] for r in SAMPLE_ROWS]
+SAMPLE_ROW = {r["sample"]: r for r in SAMPLE_ROWS}
+
+def outdir(label: str) -> str:
+    return os.path.join(OUTROOT, label)
+
+def recombinants(label: str):
+    """Segment alignments produced by the main workflow (expected: *.codon.fas)."""
+    return sorted([os.path.basename(x) for x in glob.glob(os.path.join(outdir(label), "*.codon.fas"))])
+
+def recombinant_trees(label: str):
+    """Trees produced by the main workflow (expected: *.tree.nwk)."""
+    return sorted([os.path.basename(x) for x in glob.glob(os.path.join(outdir(label), "*.tree.nwk"))])
+
+def clade_files(label: str):
+    """Clade label files produced by the main workflow (expected: *.clade)."""
+    return sorted([x for x in glob.glob(os.path.join(outdir(label), "*.clade"))])
+
+def reference_clade(label: str) -> str:
+    files = clade_files(label)
+    if not files:
+        return ""
+    return os.path.basename(files[0]).split(".")[0]
+
+def hyphy_branch_arg(wc):
+    """
+    Return '--branches Test' only if the Test list exists AND is non-empty.
+    Otherwise return ''.
+
+    This must be existence-safe because Snakemake may evaluate it during DAG build.
+    """
+    import os
+
+    test_list = os.path.join(
+        OUTROOT,
+        wc.label,
+        f"{wc.label}.test_sequences.txt"
+    )
+
+    if not os.path.exists(test_list):
+        return ""
+
+    if os.path.getsize(test_list) == 0:
+        return ""
+
+    return "--branches Test"
+
+def test_list_path(label: str) -> str:
+    return os.path.join(OUTROOT, label, f"{label}.test_sequences.txt")
+
+def has_test_foreground(label: str) -> bool:
+    p = test_list_path(label)
+    return os.path.exists(p) and os.path.getsize(p) > 0
+
+#LABELS_WITH_TEST = [l for l in LABELS if has_test_foreground(l)]
+
+# Build concrete targets for rule all (SelectionAnalysis runs after the main workflow,
+# so recombinant segments should already exist on disk).
+ALL_TARGETS = []
+for label in SAMPLES:
+    segs = recombinants(label)
+    trees = recombinant_trees(label)
+
+    # If no segments exist for this label, skip gracefully.
+    if not segs:
+        continue
+
+    # Foreground gating: only run foreground-only methods if Test list exists+non-empty
+    test_list = os.path.join(outdir(label), f"{label}.test_sequences.txt")
+    has_test = os.path.exists(test_list) and os.path.getsize(test_list) > 0
+
+    for seg in segs:
+        # Always-run targets
+        ALL_TARGETS.extend([
+            os.path.join(outdir(label), f"{seg}.FastTree.treefile"),
+            os.path.join(outdir(label), f"{seg}.FEL.json"),
+            os.path.join(outdir(label), f"{seg}.MEME.json"),
+            os.path.join(outdir(label), f"{seg}.ABSREL.json"),
+            os.path.join(outdir(label), f"{seg}.BUSTEDS-MH.json"),
+        ])
+
+        # Only run RELAX / CFEL if we truly have a Test foreground and a labelled tree
+        labelled_tree = os.path.join(outdir(label), f"{seg}.FastTree.treefile.labelled")
+        if has_test and os.path.exists(labelled_tree):
+            ALL_TARGETS.extend([
+                os.path.join(outdir(label), f"{seg}.RELAX.json"),
+                os.path.join(outdir(label), f"{seg}.CFEL.json"),
+            ])
+
+    # tree labelling targets (if any trees exist)
+    for t in trees:
+        ALL_TARGETS.append(os.path.join(outdir(label), f"{t}.labelled"))
+
+# -----------------------------------------------------------------------------
 
 rule all:
     input:
-        # Calculate genetic distances
-        expand(os.path.join(OUTDIR, "{sample}.dst"), sample = Recombinants, tree = Recombinants_Trees),
-        expand(os.path.join(OUTDIR, "{sample}.FastTree.treefile"), sample=Recombinants),
-        # Selection analysis repertoire
-        #expand(os.path.join(OUTDIR, "{sample}.MG94.json"), sample=Recombinants),
-        expand(os.path.join(OUTDIR, "{sample}.FEL.json"), sample=Recombinants),
-        expand(os.path.join(OUTDIR, "{sample}.FUBAR.json"), sample=Recombinants),
-        expand(os.path.join(OUTDIR, "{sample}.BUSTEDS.json"), sample=Recombinants),
-        expand(os.path.join(OUTDIR, "{sample}.MEME.json"), sample=Recombinants),
-        #expand(os.path.join(OUTDIR, "{sample}.MEME-iS.json"), sample=Recombinants),
-        expand(os.path.join(OUTDIR, "{sample}.ABSREL.json"), sample=Recombinants),
-        expand(os.path.join(OUTDIR, "{sample}.SLAC.json"), sample=Recombinants),
-        expand(os.path.join(OUTDIR, "{sample}.BGM.json"), sample=Recombinants),
-        #expand(os.path.join(OUTDIR, "{sample}.PRIME.json"), sample=Recombinants),
-        #expand(os.path.join(OUTDIR, "{sample}.ABSREL-MH.json"), sample=Recombinants),
-        expand(os.path.join(OUTDIR, "{sample}.BUSTEDS-MH.json"), sample=Recombinants),
-        expand(os.path.join(OUTDIR, "{sample}.FMM.json"), sample=Recombinants),
-        # Labelling taxonomy
-        expand(os.path.join(OUTDIR, "{tree}.labelled"), tree = Recombinants_Trees),
-        expand(os.path.join(OUTDIR, "{sample}.RELAX.json"), sample=Recombinants),
-        expand(os.path.join(OUTDIR, "{sample}.CFEL.json"), sample=Recombinants),
-        # Executive Summary
-        #expand(os.path.join(OUTDIR, "{sample}.FEL.png"), sample=Recombinants), # Start summary of results
-        #expand(os.path.join(OUTDIR, "{sample}.FEL.csv"), sample=Recombinants),
-        #expand(os.path.join(OUTDIR, "{sample}.FEL.FigureLegend"), sample=Recombinants),
-        #expand(os.path.join(OUTDIR, "{sample}.cumulativeResults.csv"), sample=Recombinants)
-        # Executive Summary
-        #expand(os.path.join(OUTDIR, "{sample}.executiveSummary.csv"), sample=Recombinants)
-    #end input
-#end rule all
+        ALL_TARGETS
 
 # =============================================================================
 # Rules
 # =============================================================================
-
-rule tn93:
-    input:
-       input = os.path.join(OUTDIR, "{sample}")
-    output:
-       output = os.path.join(OUTDIR, "{sample}.dst")
-    shell:
-       "tn93 -t 1 -o {output.output} {input.input}"
-#end rule tn93
 
 # =============================================================================
 # FastTree
@@ -114,147 +161,11 @@ rule tn93:
 
 rule fasttree:
     input:
-        input = os.path.join(OUTDIR, "{sample}")
+        input = os.path.join(OUTROOT, "{label}", "{sample}")
     output:
-        tree = os.path.join(OUTDIR, "{sample}.FastTree.treefile")
+        tree = os.path.join(OUTROOT, "{label}", "{sample}.FastTree.treefile")
     shell:
         "FastTree -nt -gtr {input.input} > {output.tree}"
-#end rule
-
-# =============================================================================
-# Selection Analyses
-# =============================================================================
-
-rule FITMG94:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree = rules.fasttree.output.tree
-    output:
-        results = os.path.join(OUTDIR, "{sample}.MG94.json")
-    shell: 
-        "{HYPHY} {FITMG94} --alignment {input.codon_aln} --tree {input.tree} --output {output.results} --rooted No --lrt Yes --type global --frequencies CF3x4"
-#end rule 
-
-rule FEL:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.fasttree.output.tree
-    output:
-        results = os.path.join(OUTDIR, "{sample}.FEL.json")
-    shell: 
-        "mpirun -np {PPN} {HYPHYMPI} FEL --alignment {input.codon_aln} --tree {input.tree} --output {output.results} --ci Yes"
-#end rule 
-
-rule FUBAR:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.fasttree.output.tree
-    output:
-        results = os.path.join(OUTDIR, "{sample}.FUBAR.json")
-    shell: 
-        "mpirun -np {PPN} {HYPHYMPI} FUBAR --alignment {input.codon_aln} --tree {input.tree} --output {output.results}"
-#end rule 
-
-rule BUSTEDS:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.fasttree.output.tree
-    output:
-        results = os.path.join(OUTDIR, "{sample}.BUSTEDS.json")
-    shell: 
-        "{HYPHYMPI} BUSTED --alignment {input.codon_aln} --tree {input.tree} --output {output.results} --srv Yes --starting-points 25"
-#end rule
-
-rule MEME:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.fasttree.output.tree
-    output:
-        results = os.path.join(OUTDIR, "{sample}.MEME.json")
-    shell: 
-        "mpirun -np {PPN} {HYPHYMPI} MEME --alignment {input.codon_aln} --tree {input.tree} --output {output.results}"
-#end rule
-
-rule MEME_iS:
-    input:
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.fasttree.output.tree
-    output:
-        results = os.path.join(OUTDIR, "{sample}.MEME-iS.json")
-    shell:
-        "mpirun -np {PPN} {HYPHYMPI} MEME --alignment {input.codon_aln} --tree {input.tree} --output {output.results} --impute-states Yes"
-#end rule
-
-rule ABSREL:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.fasttree.output.tree
-    output:
-        results = os.path.join(OUTDIR, "{sample}.ABSREL.json")
-    shell: 
-        "mpirun -np {PPN} {HYPHYMPI} ABSREL --alignment {input.codon_aln} --tree {input.tree} --output {output.results}"
-#end rule
-
-rule SLAC:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.fasttree.output.tree
-    output:
-        results = os.path.join(OUTDIR, "{sample}.SLAC.json")
-    shell: 
-        "mpirun -np {PPN} {HYPHYMPI} SLAC --alignment {input.codon_aln} --tree {input.tree} --output {output.results}"
-#end rule 
-
-rule BGM:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.fasttree.output.tree
-    output:
-        results = os.path.join(OUTDIR, "{sample}.BGM.json")
-    shell: 
-        "{HYPHY} BGM --alignment {input.codon_aln} --tree {input.tree} --output {output.results}"
-#end rule 
-
-rule PRIME:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = os.path.join(OUTDIR, "{sample}.tree.nwk")
-    output: 
-        results = os.path.join(OUTDIR, "{sample}.PRIME.json")
-    shell: 
-        "mpirun -np {PPN} {HYPHYMPI} PRIME --alignment {input.codon_aln} --tree {input.tree} --output {output.results} --impute-states Yes"
-#end rule
-
-"""
-rule ABSRELMH:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = os.path.join(OUTDIR, "{sample}.tree.nwk")
-    output: 
-        results = os.path.join(OUTDIR, "{sample}.ABSREL-MH.json")
-    shell: 
-        "mpirun -np {PPN} {HYPHYMPI} LIBPATH={RES} ABSREL --alignment {input.codon_aln} --tree {input.tree} --output {output.results} --multiple-hits Double+Triple"
-#end rule ABSRELMH
-"""
-
-rule BUSTEDSMH:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.fasttree.output.tree
-    output:
-        results = os.path.join(OUTDIR, "{sample}.BUSTEDS-MH.json")
-    shell: 
-        "{HYPHY} BUSTED --alignment {input.codon_aln} --tree {input.tree} --output {output.results} --srv Yes --multiple-hits Double+Triple --starting-points 25"
-#end rule
-
-rule FMM:
-    input: 
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.fasttree.output.tree
-    output:
-        results = os.path.join(OUTDIR, "{sample}.FMM.json")
-    shell:
-        "mpirun -np {PPN} {HYPHYMPI} FMM --alignment {input.codon_aln} --tree {input.tree} --output {output.results} --triple-islands Yes"
 #end rule
 
 # =============================================================================
@@ -263,35 +174,80 @@ rule FMM:
 
 rule AssignLineages:
     input:
-        tree   = rules.fasttree.output.tree
+        tree = rules.fasttree.output.tree
     output:
-        output = os.path.join(OUTDIR, "{sample}.FastTree.treefile.labelled")
+        output = os.path.join(OUTROOT, "{label}", "{sample}.FastTree.treefile.labelled")
     run:
-        first_time = True
-        for clade_file in CladeLabels:
-            print(clade_file, input[0])
-            label      = os.path.basename(clade_file).split(".")[0]
+        import os
 
-            if first_time == True:
-                cmd = " ".join([HYPHY,
-                                os.path.join(BASEDIR, "scripts", "label-tree.bf"),
-                                "--tree", input[0],
-                                "--list", clade_file,
-                                "--output", output[0],
-                                "--label", label])
-                first_time = False
-            else:
-                cmd = " ".join([HYPHY,
-                                os.path.join(BASEDIR, "scripts", "label-tree.bf"),
-                                "--tree", output[0],
-                                "--list", clade_file,
-                                "--output", output[0],
-                                "--label", label])
-            #end if
+        test_list = os.path.join(OUTROOT, wildcards.label, f"{wildcards.label}.test_sequences.txt")
+
+        # If the test list doesn't exist or is empty, just copy the tree.
+        if (not os.path.exists(test_list)) or (os.path.getsize(test_list) == 0):
+            shell("cp {input.tree} {output.output}")
+        else:
+            cmd = " ".join([
+                HYPHY,
+                os.path.join(BASEDIR, "software", "LabelTrees", "label-tree.bf"),
+                "--tree", input.tree,
+                "--list", test_list,
+                "--output", output.output,
+                "--label", "Test"
+            ])
             print(cmd)
-            os.system(cmd)
-        #end for
-    #end run
+            shell(cmd)   # better than os.system for Snakemake error handling
+# end rule
+
+# =============================================================================
+# Selection Analyses
+# =============================================================================
+
+rule FEL:
+    input:
+        codon_aln = os.path.join(OUTROOT, "{label}", "{sample}"),
+        tree      = rules.AssignLineages.output.output
+    output:
+        results = os.path.join(OUTROOT, "{label}", "{sample}.FEL.json")
+    params:
+        branch_arg = hyphy_branch_arg
+    shell:
+        "{HYPHY} FEL --alignment {input.codon_aln} --tree {input.tree} --output {output.results} --ci Yes {params.branch_arg}"
+#end rule
+
+rule MEME:
+    input:
+        codon_aln = os.path.join(OUTROOT, "{label}", "{sample}"),
+        tree      = rules.AssignLineages.output.output
+    output:
+        results = os.path.join(OUTROOT, "{label}", "{sample}.MEME.json")
+    params:
+        branch_arg = hyphy_branch_arg
+    shell:
+        "{HYPHY} MEME --alignment {input.codon_aln} --tree {input.tree} --output {output.results} {params.branch_arg}"
+#end rule
+
+rule ABSREL:
+    input:
+        codon_aln = os.path.join(OUTROOT, "{label}", "{sample}"),
+        tree      = rules.AssignLineages.output.output
+    output:
+        results = os.path.join(OUTROOT, "{label}", "{sample}.ABSREL.json")
+    params:
+        branch_arg = hyphy_branch_arg
+    shell:
+        "{HYPHY} ABSREL --alignment {input.codon_aln} --tree {input.tree} --output {output.results} {params.branch_arg}"
+#end rule
+
+rule BUSTEDSMH:
+    input:
+        codon_aln = os.path.join(OUTROOT, "{label}", "{sample}"),
+        tree      = rules.AssignLineages.output.output
+    output:
+        results = os.path.join(OUTROOT, "{label}", "{sample}.BUSTEDS-MH.json")
+    params:
+        branch_arg = hyphy_branch_arg
+    shell:
+        "{HYPHY} BUSTED --alignment {input.codon_aln} --tree {input.tree} --output {output.results} --srv Yes --multiple-hits Double+Triple {params.branch_arg}"
 #end rule
 
 # =============================================================================
@@ -300,50 +256,45 @@ rule AssignLineages:
 
 rule RELAX:
     input:
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.AssignLineages.output.output
+        codon_aln = os.path.join(OUTROOT, "{label}", "{sample}"),
+        tree      = rules.AssignLineages.output.output,
+        test_list = lambda wc: test_list_path(wc.label)
     output:
-        output = os.path.join(OUTDIR, "{sample}.RELAX.json")
+        output = os.path.join(OUTROOT, "{label}", "{sample}.RELAX.json")
     params:
-        RefClade = ReferenceClade
-    shell:
-        "{HYPHY} RELAX --alignment {input.codon_aln} --tree {input.tree} --output {output.output} --reference-group {params.RefClade} --models All --mode 'Group mode' --starting-points 25 --srv Yes"
+        refClade = "Test",
+        bgClade = "Background"
+    run:
+        import os
+        # hard gate: if missing or empty, don't run (but also don't crash the whole pipeline)
+        if (not os.path.exists(input.test_list)) or os.path.getsize(input.test_list) == 0:
+            # create a tiny sentinel? better: raise a clear error if somehow scheduled
+            raise ValueError(f"RELAX scheduled but Test list missing/empty: {input.test_list}")
+        shell(
+            "{HYPHY} RELAX --alignment {input.codon_aln} --tree {input.tree} "
+            "--output {output.output} --reference {params.bgClade} --test {params.refClade}"
+        )
 #end rule
+
 
 rule CFEL:
     input:
-        codon_aln = os.path.join(OUTDIR, "{sample}"),
-        tree      = rules.AssignLineages.output.output
+        codon_aln = os.path.join(OUTROOT, "{label}", "{sample}"),
+        tree      = rules.AssignLineages.output.output,
+        test_list = lambda wc: test_list_path(wc.label)
     output:
-        output = os.path.join(OUTDIR, "{sample}.CFEL.json")
+        output = os.path.join(OUTROOT, "{label}", "{sample}.CFEL.json")
     params:
-        RefClade = ReferenceClade
-    shell:
-        "{HYPHY} contrast-fel --alignment {input.codon_aln} --tree {input.tree} --output {output.output} --branch-set {params.RefClade}"
+        refClade = "Test"
+    run:
+        import os
+        if (not os.path.exists(input.test_list)) or os.path.getsize(input.test_list) == 0:
+            raise ValueError(f"CFEL scheduled but Test list missing/empty: {input.test_list}")
+        shell(
+            "{HYPHY} contrast-fel --alignment {input.codon_aln} --tree {input.tree} "
+            "--output {output.output} --branch-set {params.refClade}"
+        )
 #end rule
-
-# =============================================================================
-# Summarize results 
-# =============================================================================
-
-rule executiveSummary:
-    input:
-        inputFEL   = rules.FEL.output.results,
-        inputFUBAR = rules.FUBAR.output.results,
-        inputMEME = rules.MEME.output.results,
-        #inputBUSTEDS = rules.BUSTEDS.output.results,
-        #inputBUSTEDSMH = rules.BUSTEDSMH.output.results,
-        inputBGM = rules.BGM.output.results,
-        inputABSREL = rules.ABSREL.output.results,
-        inputSLAC = rules.SLAC.output.results,
-        inputRELAX = rules.RELAX.output.output,
-        inputCFEL = rules.CFEL.output.output
-    output:
-        output = os.path.join(OUTDIR, "{sample}.executiveSummary.csv")
-    script:
-        os.path.join("scripts", "executiveSummary.py")
-#end rule
-
 
 # =============================================================================
 # End of file
