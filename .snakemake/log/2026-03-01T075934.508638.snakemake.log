@@ -1,3 +1,0 @@
-ModuleNotFoundError in file /Users/alex/Documents/AOC-develop/workflow/Snakefile_SummarizeResults, line 29:
-No module named 'networkx'
-  File "/Users/alex/Documents/AOC-develop/workflow/Snakefile_SummarizeResults", line 29, in <module>

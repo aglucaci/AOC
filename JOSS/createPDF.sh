@@ -1,1 +1,5 @@
-pandoc paper.md --from markdown --to pdf --citeproc --bibliography=paper.bib --output=AOC.pdf
+pandoc paper.md \
+  --pdf-engine=tectonic \
+  --citeproc \
+  --bibliography=paper.bib \
+  -o AOC.pdf

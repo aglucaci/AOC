@@ -18,6 +18,7 @@ dependencies:
   - ete3=3.1.2
   - macse
   - openjdk
+  - fasttree=2.2.0
 
   # Data + plotting
   - numpy
