@@ -152,13 +152,7 @@ Background,"NM_001081787.1 Equus caballus brain derived neurotrophic factor (BDN
 From the root directory:
 
 ```bash
-snakemake --cores 8   --configfile config/config.yaml   --config samples_csv=samples.csv   --rerun-incomplete   --printshellcmds
-```
-
-### Override output directory
-
-```bash
---config outdir=results
+bash run_aoc.sh --samples samples.csv
 ```
 
 ---
@@ -166,7 +160,7 @@ snakemake --cores 8   --configfile config/config.yaml   --config samples_csv=sam
 ## HPC Execution (SLURM Example)
 
 ```bash
-snakemake   --jobs 25   --cluster "sbatch --cpus-per-task={threads} --time=48:00:00"   --configfile config/config.yaml   --config samples_csv=samples.csv
+sbatch submit_aoc.slurm
 ```
 
 ---
