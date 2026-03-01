@@ -1,11 +1,3 @@
-
----
-
-# GitHub Actions CI
-
-`.github/workflows/test.yml`
-
-```yaml
 name: AOC Tests
 
 on: [push, pull_request]
@@ -27,4 +19,5 @@ jobs:
         run: pip install pytest
 
       - name: Run tests
+
         run: pytest
