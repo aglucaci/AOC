@@ -18,7 +18,7 @@ jobs:
       uses: conda-incubator/setup-miniconda@v2
       with:
         activate-environment: aoc
-        environment-file: config/environment.yml
+        environment-file: envs/aoc.yaml
         auto-activate-base: false
 
     - name: Test Snakemake dry-run
