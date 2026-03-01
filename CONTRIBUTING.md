@@ -35,18 +35,7 @@ For usage questions or clarification:
 
 Before posting, please verify:
 
-- `pytest` passes locally  
-- `bash scripts/test_installation.sh` succeeds  
+- `bash tests/test_installation.sh` succeeds  
 - Your `samples.csv` is correctly formatted  
 
 ---
-
-## Automated Testing
-
-AOC includes both **unit tests and lightweight integration tests**.
-
-### Run the full test suite:
-
-```bash
-pip install pytest
-pytest
