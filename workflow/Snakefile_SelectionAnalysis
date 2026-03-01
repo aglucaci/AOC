@@ -297,28 +297,5 @@ rule CFEL:
 #end rule
 
 # =============================================================================
-# Summarize results
-# =============================================================================
-
-rule executiveSummary:
-    input:
-        inputFEL   = rules.FEL.output.results,
-        #inputFUBAR = rules.FUBAR.output.results,
-        inputMEME = rules.MEME.output.results,
-        #inputBUSTEDS = rules.BUSTEDS.output.results,
-        #inputBUSTEDSMH = rules.BUSTEDSMH.output.results,
-        #inputBGM = rules.BGM.output.results,
-        inputABSREL = rules.ABSREL.output.results,
-        #inputSLAC = rules.SLAC.output.results,
-        inputRELAX = rules.RELAX.output.output,
-        inputCFEL = rules.CFEL.output.output
-    output:
-        output = os.path.join(OUTROOT, "{label}", "{sample}.executiveSummary.csv")
-    script:
-        os.path.join("scripts", "executiveSummary.py")
-#end rule
-
-
-# =============================================================================
 # End of file
 # =============================================================================

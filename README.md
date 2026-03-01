@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="logo/AOC_Logo_3.png" alt="AOC Logo" width="400"/>
+  <img src="https://raw.githubusercontent.com/aglucaci/AOC/refs/heads/develop/logo/aoc_logo.png" alt="AOC" width="400"/>
 </p>
 
 # Analysis of Orthologous Collections (AOC)
@@ -80,20 +80,27 @@ AOC provides a stable installer that:
 
 ### Run installer
 
-```bash
-bash install.sh aoc envs/AOC.yaml
+**On MAC OSX (do this first)**
+```
+conda config --env --set subdir osx-64
+```
+
+**Run installation script**
+
+```
+bash install.sh aoc envs/aoc.yaml
 ```
 
 ### Optional: Force a frontend
 
 ```bash
-FRONTEND_OVERRIDE=conda bash install.sh aoc envs/AOC.yaml
-FRONTEND_OVERRIDE=micromamba bash install.sh aoc envs/AOC.yaml
+FRONTEND_OVERRIDE=conda bash install.sh aoc envs/aoc.yaml
+FRONTEND_OVERRIDE=micromamba bash install.sh aoc envs/aoc.yaml
 ```
 
 After installation:
 
-```bash
+```
 conda activate aoc
 ```
 
@@ -106,7 +113,7 @@ AOC is driven by a `samples.csv` file.
 ### Required columns
 
 ```
-sample,fasta
+sample,codon_fasta
 ```
 
 ### Example
@@ -117,6 +124,24 @@ TP53,data/TP53.fasta
 ```
 
 Each row corresponds to one ortholog dataset.
+
+Optionally add a column: `sequence_labels_csv`
+
+```
+sample,codon_fasta,sequence_labels_csv
+BDNF-annot,data/BDNF/BDNF.small.fasta,data/BDNF/BDNF.small.sequence_labels.csv
+```
+
+And format the `sequence_labels_csv` file in this format, with `label` corresponding the branch label, and `fasta_sequence_header` corresponding to the fasta sequence header description:
+
+```
+label,fasta_sequence_header
+Test,"NM_001709.5 Homo sapiens brain derived neurotrophic factor (BDNF), transcript variant 4, mRNA"
+Test,"NM_001270630.1 Rattus norvegicus brain-derived neurotrophic factor (Bdnf), transcript variant 1, mRNA"
+Background,"XM_011226480.3 PREDICTED: Ailuropoda melanoleuca brain derived neurotrophic factor (BDNF), mRNA"
+Background,"XM_007497196.2 PREDICTED: Monodelphis domestica brain-derived neurotrophic factor (BDNF), transcript variant X1, mRNA"
+Background,"NM_001081787.1 Equus caballus brain derived neurotrophic factor (BDNF), mRNA"
+```
 
 ---
 
@@ -139,31 +164,8 @@ snakemake --cores 8   --configfile config/config.yaml   --config samples_csv=sam
 ## HPC Execution (SLURM Example)
 
 ```bash
-snakemake   --jobs 100   --cluster "sbatch --cpus-per-task={threads} --time=48:00:00"   --configfile config/config.yaml   --config samples_csv=samples.csv
+snakemake   --jobs 25   --cluster "sbatch --cpus-per-task={threads} --time=48:00:00"   --configfile config/config.yaml   --config samples_csv=samples.csv
 ```
-
----
-
-## Output Structure
-
-```
-<OUTDIR>/
-├── alignments/
-├── trees/
-├── selection/<sample>/
-├── labels/
-├── summary/
-└── logs/
-```
-
-Key outputs include:
-
-- Codon alignments
-- Phylogenetic trees (.nwk)
-- Selection model JSON outputs
-- Summarized CSV tables
-- run_manifest.csv
-- Log files
 
 ---
 
@@ -171,28 +173,21 @@ Key outputs include:
 
 | Method       | Scale   | Purpose |
 |--------------|----------|----------|
-| MG94         | Gene     | Baseline codon model |
 | FEL          | Site     | Pervasive selection |
 | MEME         | Site     | Episodic selection |
-| CFEL         | Site     | Contrast site-level selection |
-| RELAX        | Lineage  | Selection intensity shifts |
 | aBSREL       | Branch   | Adaptive branch selection |
 | BUSTED-S-MH  | Gene     | Gene-wide episodic selection |
+| CFEL         | Site     | Contrast site-level selection |
+| RELAX        | Lineage  | Selection intensity shifts |
 
 ---
 
 ## Automated Testing
 
-Run full test suite:
-
-```bash
-pytest
-```
-
 Quick installation validation:
 
-```bash
-bash scripts/test_installation.sh
+```
+bash tests/test_installation.sh
 ```
 
 ---

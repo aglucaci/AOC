@@ -12,7 +12,8 @@ import json
 import pandas as pd
 from pathlib import Path
 from Bio import SeqIO, Entrez, AlignIO, Phylo
-from ete3 import Tree, NCBITaxa
+#from ete3 import Tree, NCBITaxa
+import math
 
 # Configuration
 configfile: os.path.join("config", "config.yaml")
@@ -58,15 +59,28 @@ def outdir(sample: str) -> str:
 def codon_fasta_path(sample: str) -> str:
     return os.path.join(BASEDIR, CODON_FASTA_BY_SAMPLE[sample])
 
-def labels_csv_path(sample: str) -> str:
-    return os.path.join(BASEDIR, LABELS_CSV_BY_SAMPLE[sample])
+def _is_missing_path(x) -> bool:
+    # catches: None, "", "nan", numpy.nan, float('nan')
+    if x is None:
+        return True
+    if isinstance(x, float) and math.isnan(x):
+        return True
+    s = str(x).strip()
+    return (s == "") or (s.lower() == "nan")
 
+def labels_csv_path(sample: str) -> str:
+    v = LABELS_CSV_BY_SAMPLE.get(sample, None)
+    if _is_missing_path(v):
+        return ""  # signals "no labels csv"
+    return os.path.join(BASEDIR, str(v))
 
 # Only run header-map/Test-list generation for samples whose sequence_labels_csv exists
 SAMPLES_WITH_LABELS = [
     s for s in SAMPLES
-    if str(LABELS_CSV_BY_SAMPLE.get(s, '')).strip() and os.path.exists(labels_csv_path(s))
+    if (not _is_missing_path(LABELS_CSV_BY_SAMPLE.get(s, None)))
+    and os.path.exists(labels_csv_path(s))
 ]
+
 # HyPhy and custom scripts
 PPN = cluster["__default__"]["ppn"]
 HYPHY = "hyphy"
@@ -79,10 +93,11 @@ STRIKE_AMBIGS_BF = os.path.join("scripts", "strike-ambigs.bf")
 # Helper Functions
 # =============================================================================
 
-def match_transcript_to_tree(tree_newick, accession):
-    t = Tree(tree_newick, format=1)
-    return next((leaf for leaf in t.get_leaf_names() if accession in leaf), None)
+#def match_transcript_to_tree(tree_newick, accession):
+#    t = Tree(tree_newick, format=1)
+#    return next((leaf for leaf in t.get_leaf_names() if accession in leaf), None)
 
+"""
 def process_lineages(accessions, data_dict, tree_newick):
     ncbi = NCBITaxa()
     for idx, acc in enumerate(accessions, 1):
@@ -107,6 +122,7 @@ def process_lineages(accessions, data_dict, tree_newick):
             "LEAFNAME": leaf
         }
     return data_dict
+"""
 
 def get_lineage_column(lineages, loc):
     return [lineage[loc] for lineage in lineages if len(lineage) > loc]
@@ -197,6 +213,7 @@ rule cln:
         output=os.path.join(OUTDIR_RESULTS, "{sample}", "{sample}.codons.cln.fa")
     shell:
         "{HYPHY} CLN Universal {input.input} 'No/No' {output.output}"
+        #"{HYPHY} CLN Universal {input.input} {output.output}"
 
 rule strike_ambigs_msa:
     input:
@@ -241,7 +258,8 @@ rule recombination:
         output=os.path.join(OUTDIR_RESULTS, "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta.GARD.json"),
         bestgard=os.path.join(OUTDIR_RESULTS, "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta.best-gard")
     shell:
-        "mpirun --use-hwthread-cpus {HYPHYMPI} GARD --alignment {input.input} --rv GDD --output {output.output} --mode Faster ENV=TOLERATE_NUMERICAL_ERRORS=1;"
+        #"mpirun --use-hwthread-cpus {HYPHYMPI} GARD --alignment {input.input} --rv GDD --output {output.output} --mode Faster ENV=TOLERATE_NUMERICAL_ERRORS=1;"
+        "{HYPHY} GARD --alignment {input.input} --rv GDD --output {output.output} --mode Faster ENV=TOLERATE_NUMERICAL_ERRORS=1;"
 
 rule parse_gard_alternative:
     input:

@@ -13,7 +13,7 @@ set -euo pipefail
 #   - You run from the repo root (or pass --workdir)
 #
 # Usage:
-#   bash scripts/run_aoc_samples.sh --samples samples.csv
+#   bash run_aoc.sh --samples samples.csv
 #
 # Optional:
 #   --cores 8
