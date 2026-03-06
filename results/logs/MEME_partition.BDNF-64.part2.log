@@ -1,0 +1,106 @@
+
+Analysis Description
+--------------------
+MEME (Mixed Effects Model of Evolution) estimates a site-wise synonymous
+(&alpha;) and a two-category mixture of non-synonymous (&beta;-, with
+proportion p-, and &beta;+ with proportion [1-p-]) rates, and uses a
+likelihood ratio test to determine if &beta;+ > &alpha; at a site. The
+estimates aggregate information over a proportion of branches at a site,
+so the signal is derived from episodic diversification, which is a
+combination of strength of selection [effect size] and the proportion of
+the tree affected. A subset of branches can be selected for testing as
+well, in which case an additional (nuisance) parameter will be inferred
+-- the non-synonymous rate on branches NOT selected for testing.
+Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. Version 3.0 adds a different format for
+ancestral state reconstruction, branch-site posterior storage, and
+site-level heterogeneity testing. Version 4 adds support for multiple
+hits and more than 2 rate classes on omega, as well as site-level
+imputation option. Version 4.1 fixes bugs with EBF computation for > 2
+more rates and MH reporting. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Detecting Individual Sites Subject to Episodic Diversifying Selection.
+_PLoS Genet_ 8(7): e1002764.
+
+- __Written by__: Sergei L. Kosakovsky Pond, Steven Weaver
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 4.1
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-develop-singleSnakefile/results/BDNF-64/gard/segments/BDNF-64.part2.codon.fas'
+contains 39 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-develop-singleSnakefile/results/BDNF-64/selection/part2/FastTree.labelled.treefile
+results/BDNF-64/selection/part2/FastTree.labelled.treefile
+
+>Loaded a multiple sequence alignment with **60** sequences, **25** codons, and **1** partitions from `/Users/alex/Documents/AOC-develop-singleSnakefile/results/BDNF-64/gard/segments/BDNF-64.part2.codon.fas`
+
+>branches => Test
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample => 0
+The number omega rate classes to include in the model [2 is the strongly recommended default] (permissible range = [2,4], default value = 2, integer): 
+>rates => 2
+
+>multiple-hits => None
+
+>impute-states => No
+
+>precision => standard
+
+
+### Branches to include in the MEME analysis
+Selected 20 branches to include in the MEME analysis: `XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA, XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA, NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA, NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA, NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA, NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node75`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 1 zero-length internal branches: `Node28`
+* Log(L) =  -712.70, AIC-c =  1607.03 (89 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site) 104.506
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) =  -702.46, AIC-c =  1610.20 (96 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site) 105.202
+* non-synonymous/synonymous rate ratio for *background* =   0.9768
+* non-synonymous/synonymous rate ratio for *test* =   1.0114
+
+>full-model => Yes
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) =  -699.98
+* Log(L) =  -699.98, AIC-c =  1605.23 (96 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site) 5962.369
+* non-synonymous/synonymous rate ratio for *background* =   0.6929
+* non-synonymous/synonymous rate ratio for *test* =  31.7169
+
+### For partition 1 these sites are significant at p <=0.1
+
+|   Codon    | Partition  |   alpha    |non-syn rate (beta) distribution, rates : weights|    LRT     |Episodic selection detected?| # branches |         List of most common codon substitutions at this site          |
+|:----------:|:----------:|:----------:|:-----------------------------------------------:|:----------:|:--------------------------:|:----------:|:---------------------------------------------------------------------:|
+|     20     |     1      |    0.062   |              0.00/9.72 : 0.00/1.00              |    3.149   |      Yes, p =  0.0987      |     0      |[1]Ccc>Tcc,CCC>TGT,Cct>Act,CCT>ATA,ccT>ccC,cCT>cTG,cCt>cTt,Cct>Gct,C...|
+|     23     |     1      |    0.000   |              0.00/3.38 : 0.00/1.00              |    4.885   |      Yes, p =  0.0400      |     0      |  [1]AGg>GTg,Cga>Gga,GgA>AgG,Ggt>Agt,GGt>CCt,GgT>CgA,GGt>TCt,GtG>CtC   |
+|     24     |     1      |    0.140   |              0.01/9.84 : 0.00/1.00              |    5.826   |      Yes, p =  0.0247      |     0      |  [1]CTC>GAA,CTC>GAT,Ctc>Gtc,Ctc>Ttc,gAa>gGa,GAA>TGC,GAc>TCc,TGc>GAc   |
+
+### ** Found _3_ sites under episodic diversifying positive selection at p <= 0.1**

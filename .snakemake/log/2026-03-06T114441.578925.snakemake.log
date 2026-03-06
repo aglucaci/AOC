@@ -1,0 +1,57 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                          count
+-------------------------  -------
+MergeBUSTEDS_MH_CSVs             1
+TableBUSTEDS_MH_partition        4
+all                              1
+total                            6
+
+Select jobs to execute...
+
+[Fri Mar  6 11:44:43 2026]
+rule TableBUSTEDS_MH_partition:
+    input: results/BDNF-64/selection/part4/BUSTEDS-MH.json
+    output: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.BUSTEDS-MH_Results.csv
+    log: results/logs/TableBUSTEDS_MH_partition.BDNF-64.part4.log
+    jobid: 74
+    reason: Missing output files: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.BUSTEDS-MH_Results.csv
+    wildcards: sample=BDNF-64, part=4
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:43 2026]
+rule TableBUSTEDS_MH_partition:
+    input: results/BDNF-64/selection/part1/BUSTEDS-MH.json
+    output: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.BUSTEDS-MH_Results.csv
+    log: results/logs/TableBUSTEDS_MH_partition.BDNF-64.part1.log
+    jobid: 71
+    reason: Missing output files: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.BUSTEDS-MH_Results.csv
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:43 2026]
+rule TableBUSTEDS_MH_partition:
+    input: results/BDNF-64/selection/part2/BUSTEDS-MH.json
+    output: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.BUSTEDS-MH_Results.csv
+    log: results/logs/TableBUSTEDS_MH_partition.BDNF-64.part2.log
+    jobid: 72
+    reason: Missing output files: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.BUSTEDS-MH_Results.csv
+    wildcards: sample=BDNF-64, part=2
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:43 2026]
+rule TableBUSTEDS_MH_partition:
+    input: results/BDNF-64/selection/part3/BUSTEDS-MH.json
+    output: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.BUSTEDS-MH_Results.csv
+    log: results/logs/TableBUSTEDS_MH_partition.BDNF-64.part3.log
+    jobid: 73
+    reason: Missing output files: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.BUSTEDS-MH_Results.csv
+    wildcards: sample=BDNF-64, part=3
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-03-06T114441.578925.snakemake.log

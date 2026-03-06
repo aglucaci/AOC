@@ -1,0 +1,11 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+MissingInputException in rule MergeFELCSVs in file /Users/alex/Documents/AOC-develop/workflow/Snakefile, line 870:
+Missing input files for rule MergeFELCSVs:
+    output: results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv
+    wildcards: sample=BDNF-64
+    affected files:
+        results/BDNF-64/tables/BDNF-64.part2.FEL.csv
+        results/BDNF-64/tables/BDNF-64.part1.FEL.csv
+        results/BDNF-64/tables/BDNF-64.part3.FEL.csv
+        results/BDNF-64/tables/BDNF-64.part4.FEL.csv

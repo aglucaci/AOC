@@ -1,0 +1,102 @@
+
+Analysis Description
+--------------------
+FEL (Fixed Effects Likelihood) estimates site-wise synonymous (&alpha;)
+and non-synonymous (&beta;) rates, and uses a likelihood ratio test to
+determine if beta &neq; alpha at a site. The estimates aggregate
+information over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well, in which case an additional (nuisance) parameter
+will be inferred -- the non-synonymous rate on branches NOT selected for
+testing. Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. Version 2.5 adds MH support. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.5
+
+
+>code => Universal
+
+-------
+>[WARNING]
+'/Users/alex/Documents/AOC-develop-singleSnakefile/results/BDNF-64/gard/segments/BDNF-64.part1.codon.fas'
+contains 40 duplicate sequences. Identical sequences do not contribute
+any information to the analysis and only slow down computation. Please
+consider removing duplicate or 'nearly' duplicate sequences, e.g. using
+https://github.com/veg/hyphy-analyses/tree/master/remove-duplicates
+prior to running selection analyses
+-------
+/Users/alex/Documents/AOC-develop-singleSnakefile/results/BDNF-64/selection/part1/FastTree.labelled.treefile
+results/BDNF-64/selection/part1/FastTree.labelled.treefile
+
+>Loaded a multiple sequence alignment with **60** sequences, **113** codons, and **1** partitions from `/Users/alex/Documents/AOC-develop-singleSnakefile/results/BDNF-64/gard/segments/BDNF-64.part1.codon.fas`
+
+>branches => Test
+
+>srv => Yes
+
+>multiple-hits => None
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+>ci => Yes
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample => 0
+
+
+### Branches to include in the FEL analysis
+Selected 20 branches to include in FEL calculations: `XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node5, NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA, NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA, NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA, NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA, NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA, XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA`
+
+>precision => standard
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 1 zero-length internal branches: `Node3`
+* Log(L) = -2071.22, AIC-c =  4315.17 (86 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site) 51.778
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -2052.90, AIC-c =  4294.41 (93 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site) 52.786
+* non-synonymous/synonymous rate ratio for *background* =   0.8118
+* non-synonymous/synonymous rate ratio for *test* =   0.9011
+
+>full-model => Yes
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -2052.07, AIC-c =  4292.75 (93 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site) 55.951
+* non-synonymous/synonymous rate ratio for *background* =   0.7349
+* non-synonymous/synonymous rate ratio for *test* =   1.3523
+
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |     alpha      |      beta      |      LRT       |Selection detected?|dN/dS with confidence intervals|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|:-----------------------------:|
+|       [31m4[0m        |       [31m1[0m        |   [31m     0.323[0m   |   [31m     5.749[0m   |   [31m     2.756[0m   |  [31mPos. p = 0.0969[0m  |   [31m 17.773(   0.94- 123.20)[0m    |
+|       [31m10[0m       |       [31m1[0m        |   [31m     0.000[0m   |   [31m     6.364[0m   |   [31m     6.619[0m   |  [31mPos. p = 0.0101[0m  |  [31m10000.000(   0.00-10000.00)[0m  |
+|       [31m57[0m       |       [31m1[0m        |   [31m     0.000[0m   |   [31m     8.255[0m   |   [31m     6.017[0m   |  [31mPos. p = 0.0142[0m  |  [31m10000.000(   0.00-10000.00)[0m  |
+|       [32m64[0m       |       [32m1[0m        |   [32m     2.472[0m   |   [32m     0.000[0m   |   [32m     4.653[0m   |  [32mNeg. p = 0.0310[0m  |   [32m  0.000(   0.00-   0.41)[0m    |
+|       [32m87[0m       |       [32m1[0m        |   [32m     0.790[0m   |   [32m     0.000[0m   |   [32m     3.027[0m   |  [32mNeg. p = 0.0819[0m  |   [32m  0.000(   0.00-   1.00)[0m    |
+|       [31m90[0m       |       [31m1[0m        |   [31m     0.000[0m   |   [31m     1.448[0m   |   [31m     4.032[0m   |  [31mPos. p = 0.0447[0m  |  [31m10000.000(3806.75-10000.00)[0m  |
+|      [32m111[0m       |       [32m1[0m        |   [32m     5.427[0m   |   [32m     0.000[0m   |   [32m    12.259[0m   |  [32mNeg. p = 0.0005[0m  |   [32m  0.000(   0.00-   0.05)[0m    |
+|      [32m112[0m       |       [32m1[0m        |   [32m     8.340[0m   |   [32m     0.131[0m   |   [32m    10.921[0m   |  [32mNeg. p = 0.0010[0m  |   [32m  0.016(   0.00-   0.09)[0m    |
+
+### ** Found _4_ sites under pervasive positive diversifying and _4_ sites under negative selection at p <= 0.1**

@@ -1,0 +1,4 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+SyntaxError:
+Only input files can be specified as functions
+  File "/Users/alex/Documents/AOC-develop/workflow/Snakefile", line 796, in <module>

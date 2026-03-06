@@ -1,0 +1,145 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                       count
+----------------------  -------
+MergeFELCSVs                  1
+MergeMEMECSVs                 1
+PlotFELMerge                  1
+PlotFEL_partition             4
+PlotMEMEMerge                 1
+PlotMEME_partition            4
+SelectionOverviewTable        1
+all                           1
+executive_summary             1
+total                        15
+
+Select jobs to execute...
+
+[Fri Mar  6 11:18:56 2026]
+rule PlotMEME_partition:
+    input: results/BDNF-64/selection/part3/MEME.json
+    output: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.MEME_Results.csv, results/BDNF-64/visualizations/part3/BDNF-64.part3.MEME.png, results/BDNF-64/visualizations/part3/BDNF-64.part3.MEME.svg, results/BDNF-64/visualizations/part3/BDNF-64.part3.MEME.figure_legend.txt
+    log: results/logs/PlotMEME_partition.BDNF-64.part3.log
+    jobid: 58
+    reason: Missing output files: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.MEME_Results.csv
+    wildcards: sample=BDNF-64, part=3
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:18:56 2026]
+rule PlotFEL_partition:
+    input: results/BDNF-64/selection/part2/FEL.json
+    output: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.FEL_Results.csv, results/BDNF-64/visualizations/part2/BDNF-64.part2.FEL.png, results/BDNF-64/visualizations/part2/BDNF-64.part2.FEL.svg, results/BDNF-64/visualizations/part2/BDNF-64.part2.FEL.figure_legend.txt
+    log: results/logs/PlotFEL_partition.BDNF-64.part2.log
+    jobid: 53
+    reason: Missing output files: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.FEL_Results.csv
+    wildcards: sample=BDNF-64, part=2
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:18:56 2026]
+rule PlotFEL_partition:
+    input: results/BDNF-64/selection/part4/FEL.json
+    output: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.FEL_Results.csv, results/BDNF-64/visualizations/part4/BDNF-64.part4.FEL.png, results/BDNF-64/visualizations/part4/BDNF-64.part4.FEL.svg, results/BDNF-64/visualizations/part4/BDNF-64.part4.FEL.figure_legend.txt
+    log: results/logs/PlotFEL_partition.BDNF-64.part4.log
+    jobid: 55
+    reason: Missing output files: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.FEL_Results.csv
+    wildcards: sample=BDNF-64, part=4
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:18:56 2026]
+rule PlotMEME_partition:
+    input: results/BDNF-64/selection/part2/MEME.json
+    output: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.MEME_Results.csv, results/BDNF-64/visualizations/part2/BDNF-64.part2.MEME.png, results/BDNF-64/visualizations/part2/BDNF-64.part2.MEME.svg, results/BDNF-64/visualizations/part2/BDNF-64.part2.MEME.figure_legend.txt
+    log: results/logs/PlotMEME_partition.BDNF-64.part2.log
+    jobid: 57
+    reason: Missing output files: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.MEME_Results.csv
+    wildcards: sample=BDNF-64, part=2
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:18:56 2026]
+rule PlotFEL_partition:
+    input: results/BDNF-64/selection/part1/FEL.json
+    output: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.FEL_Results.csv, results/BDNF-64/visualizations/part1/BDNF-64.part1.FEL.png, results/BDNF-64/visualizations/part1/BDNF-64.part1.FEL.svg, results/BDNF-64/visualizations/part1/BDNF-64.part1.FEL.figure_legend.txt
+    log: results/logs/PlotFEL_partition.BDNF-64.part1.log
+    jobid: 52
+    reason: Missing output files: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.FEL_Results.csv
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:18:56 2026]
+rule PlotMEME_partition:
+    input: results/BDNF-64/selection/part4/MEME.json
+    output: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.MEME_Results.csv, results/BDNF-64/visualizations/part4/BDNF-64.part4.MEME.png, results/BDNF-64/visualizations/part4/BDNF-64.part4.MEME.svg, results/BDNF-64/visualizations/part4/BDNF-64.part4.MEME.figure_legend.txt
+    log: results/logs/PlotMEME_partition.BDNF-64.part4.log
+    jobid: 59
+    reason: Missing output files: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.MEME_Results.csv
+    wildcards: sample=BDNF-64, part=4
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:18:56 2026]
+rule PlotFEL_partition:
+    input: results/BDNF-64/selection/part3/FEL.json
+    output: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.FEL_Results.csv, results/BDNF-64/visualizations/part3/BDNF-64.part3.FEL.png, results/BDNF-64/visualizations/part3/BDNF-64.part3.FEL.svg, results/BDNF-64/visualizations/part3/BDNF-64.part3.FEL.figure_legend.txt
+    log: results/logs/PlotFEL_partition.BDNF-64.part3.log
+    jobid: 54
+    reason: Missing output files: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.FEL_Results.csv
+    wildcards: sample=BDNF-64, part=3
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:18:56 2026]
+rule PlotMEME_partition:
+    input: results/BDNF-64/selection/part1/MEME.json
+    output: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.MEME_Results.csv, results/BDNF-64/visualizations/part1/BDNF-64.part1.MEME.png, results/BDNF-64/visualizations/part1/BDNF-64.part1.MEME.svg, results/BDNF-64/visualizations/part1/BDNF-64.part1.MEME.figure_legend.txt
+    log: results/logs/PlotMEME_partition.BDNF-64.part1.log
+    jobid: 56
+    reason: Missing output files: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.MEME_Results.csv
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:19:02 2026]
+Finished job 53.
+1 of 15 steps (7%) done
+[Fri Mar  6 11:19:02 2026]
+Finished job 54.
+2 of 15 steps (13%) done
+[Fri Mar  6 11:19:03 2026]
+Finished job 52.
+3 of 15 steps (20%) done
+[Fri Mar  6 11:19:03 2026]
+Finished job 55.
+4 of 15 steps (27%) done
+Select jobs to execute...
+
+[Fri Mar  6 11:19:03 2026]
+rule MergeFELCSVs:
+    input: results/BDNF-64/selection/ALL_PARTITIONS.done, results/BDNF-64/tables/part1/BDNF-64.part1.AOC.FEL_Results.csv, results/BDNF-64/tables/part2/BDNF-64.part2.AOC.FEL_Results.csv, results/BDNF-64/tables/part3/BDNF-64.part3.AOC.FEL_Results.csv, results/BDNF-64/tables/part4/BDNF-64.part4.AOC.FEL_Results.csv
+    output: results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv
+    log: results/logs/MergeFELCSVs.BDNF-64.log
+    jobid: 10
+    reason: Input files updated by another job: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.FEL_Results.csv, results/BDNF-64/tables/part2/BDNF-64.part2.AOC.FEL_Results.csv, results/BDNF-64/tables/part1/BDNF-64.part1.AOC.FEL_Results.csv, results/BDNF-64/tables/part4/BDNF-64.part4.AOC.FEL_Results.csv; Set of input files has changed since last execution; Code has changed since last execution
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:19:05 2026]
+Finished job 10.
+5 of 15 steps (33%) done
+Select jobs to execute...
+
+[Fri Mar  6 11:19:05 2026]
+rule PlotFELMerge:
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.FEL.merged.png, results/BDNF-64/visualizations/BDNF-64.FEL.merged.svg
+    log: results/logs/PlotFELMerge.BDNF-64.log
+    jobid: 13
+    reason: Missing output files: results/BDNF-64/visualizations/BDNF-64.FEL.merged.png; Input files updated by another job: results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:19:10 2026]
+Finished job 13.
+6 of 15 steps (40%) done
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-03-06T111853.827842.snakemake.log

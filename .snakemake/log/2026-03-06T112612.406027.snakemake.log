@@ -1,0 +1,56 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                       count
+----------------------  -------
+SelectionOverviewTable        1
+all                           1
+executive_summary             1
+total                         3
+
+Select jobs to execute...
+
+[Fri Mar  6 11:26:14 2026]
+rule SelectionOverviewTable:
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv, results/BDNF-64/tables/BDNF-64.AOC.merged_MEME_Results.csv, results/BDNF-64/selection/part1/ABSREL.json, results/BDNF-64/selection/part1/BUSTEDS-MH.json, results/BDNF-64/selection/part1/RELAX.json, results/BDNF-64/selection/part1/CFEL.json, results/BDNF-64/selection/part2/ABSREL.json, results/BDNF-64/selection/part2/BUSTEDS-MH.json, results/BDNF-64/selection/part2/RELAX.json, results/BDNF-64/selection/part2/CFEL.json, results/BDNF-64/selection/part3/ABSREL.json, results/BDNF-64/selection/part3/BUSTEDS-MH.json, results/BDNF-64/selection/part3/RELAX.json, results/BDNF-64/selection/part3/CFEL.json, results/BDNF-64/selection/part4/ABSREL.json, results/BDNF-64/selection/part4/BUSTEDS-MH.json, results/BDNF-64/selection/part4/RELAX.json, results/BDNF-64/selection/part4/CFEL.json
+    output: results/BDNF-64/tables/BDNF-64.selection_overview.csv
+    log: results/logs/SelectionOverviewTable.BDNF-64.log
+    jobid: 12
+    reason: Missing output files: results/BDNF-64/tables/BDNF-64.selection_overview.csv; Updated input files: results/BDNF-64/tables/BDNF-64.AOC.merged_MEME_Results.csv, results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:26:17 2026]
+Finished job 12.
+1 of 3 steps (33%) done
+Select jobs to execute...
+
+[Fri Mar  6 11:26:17 2026]
+rule executive_summary:
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv, results/BDNF-64/tables/BDNF-64.AOC.merged_MEME_Results.csv, results/BDNF-64/visualizations/BDNF-64.FEL.merged.png, results/BDNF-64/visualizations/BDNF-64.MEME.merged.png, results/BDNF-64/tables/BDNF-64.selection_overview.csv
+    output: results/BDNF-64/summary/executive_summary.html
+    log: results/logs/executive_summary.BDNF-64.log
+    jobid: 15
+    reason: Updated input files: results/BDNF-64/tables/BDNF-64.AOC.merged_MEME_Results.csv, results/BDNF-64/visualizations/BDNF-64.MEME.merged.png, results/BDNF-64/visualizations/BDNF-64.FEL.merged.png, results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv; Input files updated by another job: results/BDNF-64/tables/BDNF-64.selection_overview.csv
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:26:19 2026]
+Finished job 15.
+2 of 3 steps (67%) done
+Select jobs to execute...
+
+[Fri Mar  6 11:26:19 2026]
+localrule all:
+    input: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa, results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta.best-gard, results/BDNF-64/selection/ALL_PARTITIONS.done, results/BDNF-64/BDNF-64.test_sequences.txt, results/BDNF-64/BDNF-64.sequence_header_map.csv, results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv, results/BDNF-64/tables/BDNF-64.AOC.merged_MEME_Results.csv, results/BDNF-64/tables/BDNF-64.selection_overview.csv, results/BDNF-64/visualizations/BDNF-64.FEL.merged.png, results/BDNF-64/visualizations/BDNF-64.MEME.merged.png, results/BDNF-64/summary/executive_summary.html
+    jobid: 0
+    reason: Input files updated by another job: results/BDNF-64/summary/executive_summary.html, results/BDNF-64/tables/BDNF-64.selection_overview.csv
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:26:19 2026]
+Finished job 0.
+3 of 3 steps (100%) done
+Complete log: .snakemake/log/2026-03-06T112612.406027.snakemake.log

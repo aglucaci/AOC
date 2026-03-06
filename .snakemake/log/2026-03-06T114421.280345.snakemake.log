@@ -1,0 +1,264 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                          count
+-------------------------  -------
+MergeABSRELCSVs                  1
+MergeBUSTEDS_MH_CSVs             1
+MergeCFELCSVs                    1
+MergeRELAXCSVs                   1
+TableABSREL_partition            4
+TableBUSTEDS_MH_partition        4
+TableCFEL_partition              4
+TableRELAX_partition             4
+all                              1
+total                           21
+
+Select jobs to execute...
+
+[Fri Mar  6 11:44:24 2026]
+rule TableCFEL_partition:
+    input: results/BDNF-64/selection/part3/CFEL.json
+    output: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.CFEL_Results.csv
+    log: results/logs/TableCFEL_partition.BDNF-64.part3.log
+    jobid: 81
+    reason: Missing output files: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.CFEL_Results.csv
+    wildcards: sample=BDNF-64, part=3
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:24 2026]
+rule TableRELAX_partition:
+    input: results/BDNF-64/selection/part1/RELAX.json
+    output: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.RELAX_Results.csv
+    log: results/logs/TableRELAX_partition.BDNF-64.part1.log
+    jobid: 75
+    reason: Missing output files: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.RELAX_Results.csv
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:24 2026]
+rule TableABSREL_partition:
+    input: results/BDNF-64/selection/part2/ABSREL.json
+    output: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.ABSREL_Results.csv
+    log: results/logs/TableABSREL_partition.BDNF-64.part2.log
+    jobid: 68
+    reason: Missing output files: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.ABSREL_Results.csv
+    wildcards: sample=BDNF-64, part=2
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:24 2026]
+rule TableABSREL_partition:
+    input: results/BDNF-64/selection/part3/ABSREL.json
+    output: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.ABSREL_Results.csv
+    log: results/logs/TableABSREL_partition.BDNF-64.part3.log
+    jobid: 69
+    reason: Missing output files: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.ABSREL_Results.csv
+    wildcards: sample=BDNF-64, part=3
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:24 2026]
+rule TableRELAX_partition:
+    input: results/BDNF-64/selection/part2/RELAX.json
+    output: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.RELAX_Results.csv
+    log: results/logs/TableRELAX_partition.BDNF-64.part2.log
+    jobid: 76
+    reason: Missing output files: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.RELAX_Results.csv
+    wildcards: sample=BDNF-64, part=2
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:24 2026]
+rule TableABSREL_partition:
+    input: results/BDNF-64/selection/part4/ABSREL.json
+    output: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.ABSREL_Results.csv
+    log: results/logs/TableABSREL_partition.BDNF-64.part4.log
+    jobid: 70
+    reason: Missing output files: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.ABSREL_Results.csv
+    wildcards: sample=BDNF-64, part=4
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:24 2026]
+rule TableRELAX_partition:
+    input: results/BDNF-64/selection/part4/RELAX.json
+    output: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.RELAX_Results.csv
+    log: results/logs/TableRELAX_partition.BDNF-64.part4.log
+    jobid: 78
+    reason: Missing output files: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.RELAX_Results.csv
+    wildcards: sample=BDNF-64, part=4
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:24 2026]
+rule TableBUSTEDS_MH_partition:
+    input: results/BDNF-64/selection/part1/BUSTEDS-MH.json
+    output: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.BUSTEDS-MH_Results.csv
+    log: results/logs/TableBUSTEDS_MH_partition.BDNF-64.part1.log
+    jobid: 71
+    reason: Missing output files: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.BUSTEDS-MH_Results.csv
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:24 2026]
+rule TableCFEL_partition:
+    input: results/BDNF-64/selection/part1/CFEL.json
+    output: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.CFEL_Results.csv
+    log: results/logs/TableCFEL_partition.BDNF-64.part1.log
+    jobid: 79
+    reason: Missing output files: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.CFEL_Results.csv
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:24 2026]
+rule TableBUSTEDS_MH_partition:
+    input: results/BDNF-64/selection/part3/BUSTEDS-MH.json
+    output: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.BUSTEDS-MH_Results.csv
+    log: results/logs/TableBUSTEDS_MH_partition.BDNF-64.part3.log
+    jobid: 73
+    reason: Missing output files: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.BUSTEDS-MH_Results.csv
+    wildcards: sample=BDNF-64, part=3
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:27 2026]
+Finished job 79.
+1 of 21 steps (5%) done
+[Fri Mar  6 11:44:27 2026]
+Finished job 68.
+2 of 21 steps (10%) done
+[Fri Mar  6 11:44:27 2026]
+Finished job 81.
+3 of 21 steps (14%) done
+Select jobs to execute...
+
+[Fri Mar  6 11:44:28 2026]
+rule TableCFEL_partition:
+    input: results/BDNF-64/selection/part2/CFEL.json
+    output: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.CFEL_Results.csv
+    log: results/logs/TableCFEL_partition.BDNF-64.part2.log
+    jobid: 80
+    reason: Missing output files: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.CFEL_Results.csv
+    wildcards: sample=BDNF-64, part=2
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:28 2026]
+rule TableBUSTEDS_MH_partition:
+    input: results/BDNF-64/selection/part2/BUSTEDS-MH.json
+    output: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.BUSTEDS-MH_Results.csv
+    log: results/logs/TableBUSTEDS_MH_partition.BDNF-64.part2.log
+    jobid: 72
+    reason: Missing output files: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.BUSTEDS-MH_Results.csv
+    wildcards: sample=BDNF-64, part=2
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:28 2026]
+rule TableRELAX_partition:
+    input: results/BDNF-64/selection/part3/RELAX.json
+    output: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.RELAX_Results.csv
+    log: results/logs/TableRELAX_partition.BDNF-64.part3.log
+    jobid: 77
+    reason: Missing output files: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.RELAX_Results.csv
+    wildcards: sample=BDNF-64, part=3
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:28 2026]
+Finished job 70.
+4 of 21 steps (19%) done
+[Fri Mar  6 11:44:28 2026]
+Finished job 78.
+5 of 21 steps (24%) done
+[Fri Mar  6 11:44:28 2026]
+Finished job 76.
+6 of 21 steps (29%) done
+[Fri Mar  6 11:44:28 2026]
+Finished job 69.
+7 of 21 steps (33%) done
+[Fri Mar  6 11:44:28 2026]
+Finished job 75.
+8 of 21 steps (38%) done
+Select jobs to execute...
+
+[Fri Mar  6 11:44:28 2026]
+rule TableABSREL_partition:
+    input: results/BDNF-64/selection/part1/ABSREL.json
+    output: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.ABSREL_Results.csv
+    log: results/logs/TableABSREL_partition.BDNF-64.part1.log
+    jobid: 67
+    reason: Missing output files: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.ABSREL_Results.csv
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:28 2026]
+rule TableCFEL_partition:
+    input: results/BDNF-64/selection/part4/CFEL.json
+    output: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.CFEL_Results.csv
+    log: results/logs/TableCFEL_partition.BDNF-64.part4.log
+    jobid: 82
+    reason: Missing output files: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.CFEL_Results.csv
+    wildcards: sample=BDNF-64, part=4
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:28 2026]
+rule TableBUSTEDS_MH_partition:
+    input: results/BDNF-64/selection/part4/BUSTEDS-MH.json
+    output: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.BUSTEDS-MH_Results.csv
+    log: results/logs/TableBUSTEDS_MH_partition.BDNF-64.part4.log
+    jobid: 74
+    reason: Missing output files: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.BUSTEDS-MH_Results.csv
+    wildcards: sample=BDNF-64, part=4
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:31 2026]
+Finished job 82.
+9 of 21 steps (43%) done
+[Fri Mar  6 11:44:31 2026]
+Finished job 67.
+10 of 21 steps (48%) done
+[Fri Mar  6 11:44:31 2026]
+Finished job 80.
+11 of 21 steps (52%) done
+[Fri Mar  6 11:44:31 2026]
+Finished job 77.
+12 of 21 steps (57%) done
+Select jobs to execute...
+
+[Fri Mar  6 11:44:31 2026]
+rule MergeABSRELCSVs:
+    input: results/BDNF-64/selection/ALL_PARTITIONS.done, results/BDNF-64/tables/part1/BDNF-64.part1.AOC.ABSREL_Results.csv, results/BDNF-64/tables/part2/BDNF-64.part2.AOC.ABSREL_Results.csv, results/BDNF-64/tables/part3/BDNF-64.part3.AOC.ABSREL_Results.csv, results/BDNF-64/tables/part4/BDNF-64.part4.AOC.ABSREL_Results.csv
+    output: results/BDNF-64/tables/BDNF-64.AOC.merged_ABSREL_Results.csv
+    log: results/logs/MergeABSRELCSVs.BDNF-64.log
+    jobid: 12
+    reason: Missing output files: results/BDNF-64/tables/BDNF-64.AOC.merged_ABSREL_Results.csv; Input files updated by another job: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.ABSREL_Results.csv, results/BDNF-64/tables/part2/BDNF-64.part2.AOC.ABSREL_Results.csv, results/BDNF-64/tables/part4/BDNF-64.part4.AOC.ABSREL_Results.csv, results/BDNF-64/tables/part3/BDNF-64.part3.AOC.ABSREL_Results.csv
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:31 2026]
+rule MergeRELAXCSVs:
+    input: results/BDNF-64/selection/ALL_PARTITIONS.done, results/BDNF-64/tables/part1/BDNF-64.part1.AOC.RELAX_Results.csv, results/BDNF-64/tables/part2/BDNF-64.part2.AOC.RELAX_Results.csv, results/BDNF-64/tables/part3/BDNF-64.part3.AOC.RELAX_Results.csv, results/BDNF-64/tables/part4/BDNF-64.part4.AOC.RELAX_Results.csv
+    output: results/BDNF-64/tables/BDNF-64.AOC.merged_RELAX_Results.csv
+    log: results/logs/MergeRELAXCSVs.BDNF-64.log
+    jobid: 14
+    reason: Missing output files: results/BDNF-64/tables/BDNF-64.AOC.merged_RELAX_Results.csv; Input files updated by another job: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.RELAX_Results.csv, results/BDNF-64/tables/part4/BDNF-64.part4.AOC.RELAX_Results.csv, results/BDNF-64/tables/part1/BDNF-64.part1.AOC.RELAX_Results.csv, results/BDNF-64/tables/part2/BDNF-64.part2.AOC.RELAX_Results.csv
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:31 2026]
+rule MergeCFELCSVs:
+    input: results/BDNF-64/selection/ALL_PARTITIONS.done, results/BDNF-64/tables/part1/BDNF-64.part1.AOC.CFEL_Results.csv, results/BDNF-64/tables/part2/BDNF-64.part2.AOC.CFEL_Results.csv, results/BDNF-64/tables/part3/BDNF-64.part3.AOC.CFEL_Results.csv, results/BDNF-64/tables/part4/BDNF-64.part4.AOC.CFEL_Results.csv
+    output: results/BDNF-64/tables/BDNF-64.AOC.merged_CFEL_Results.csv
+    log: results/logs/MergeCFELCSVs.BDNF-64.log
+    jobid: 15
+    reason: Missing output files: results/BDNF-64/tables/BDNF-64.AOC.merged_CFEL_Results.csv; Input files updated by another job: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.CFEL_Results.csv, results/BDNF-64/tables/part1/BDNF-64.part1.AOC.CFEL_Results.csv, results/BDNF-64/tables/part4/BDNF-64.part4.AOC.CFEL_Results.csv, results/BDNF-64/tables/part3/BDNF-64.part3.AOC.CFEL_Results.csv
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:44:34 2026]
+Finished job 15.
+13 of 21 steps (62%) done
+[Fri Mar  6 11:44:34 2026]
+Finished job 12.
+14 of 21 steps (67%) done
+[Fri Mar  6 11:44:34 2026]
+Finished job 14.
+15 of 21 steps (71%) done
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-03-06T114421.280345.snakemake.log

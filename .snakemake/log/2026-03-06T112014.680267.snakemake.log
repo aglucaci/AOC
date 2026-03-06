@@ -1,0 +1,60 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                       count
+----------------------  -------
+MergeMEMECSVs                 1
+PlotMEMEMerge                 1
+PlotMEME_partition            4
+SelectionOverviewTable        1
+all                           1
+executive_summary             1
+total                         9
+
+Select jobs to execute...
+
+[Fri Mar  6 11:20:17 2026]
+rule PlotMEME_partition:
+    input: results/BDNF-64/selection/part3/MEME.json
+    output: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.MEME_Results.csv, results/BDNF-64/visualizations/part3/BDNF-64.part3.MEME.png, results/BDNF-64/visualizations/part3/BDNF-64.part3.MEME.svg, results/BDNF-64/visualizations/part3/BDNF-64.part3.MEME.figure_legend.txt
+    log: results/logs/PlotMEME_partition.BDNF-64.part3.log
+    jobid: 58
+    reason: Missing output files: results/BDNF-64/tables/part3/BDNF-64.part3.AOC.MEME_Results.csv
+    wildcards: sample=BDNF-64, part=3
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:20:17 2026]
+rule PlotMEME_partition:
+    input: results/BDNF-64/selection/part4/MEME.json
+    output: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.MEME_Results.csv, results/BDNF-64/visualizations/part4/BDNF-64.part4.MEME.png, results/BDNF-64/visualizations/part4/BDNF-64.part4.MEME.svg, results/BDNF-64/visualizations/part4/BDNF-64.part4.MEME.figure_legend.txt
+    log: results/logs/PlotMEME_partition.BDNF-64.part4.log
+    jobid: 59
+    reason: Missing output files: results/BDNF-64/tables/part4/BDNF-64.part4.AOC.MEME_Results.csv
+    wildcards: sample=BDNF-64, part=4
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:20:17 2026]
+rule PlotMEME_partition:
+    input: results/BDNF-64/selection/part1/MEME.json
+    output: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.MEME_Results.csv, results/BDNF-64/visualizations/part1/BDNF-64.part1.MEME.png, results/BDNF-64/visualizations/part1/BDNF-64.part1.MEME.svg, results/BDNF-64/visualizations/part1/BDNF-64.part1.MEME.figure_legend.txt
+    log: results/logs/PlotMEME_partition.BDNF-64.part1.log
+    jobid: 56
+    reason: Missing output files: results/BDNF-64/tables/part1/BDNF-64.part1.AOC.MEME_Results.csv
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:20:17 2026]
+rule PlotMEME_partition:
+    input: results/BDNF-64/selection/part2/MEME.json
+    output: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.MEME_Results.csv, results/BDNF-64/visualizations/part2/BDNF-64.part2.MEME.png, results/BDNF-64/visualizations/part2/BDNF-64.part2.MEME.svg, results/BDNF-64/visualizations/part2/BDNF-64.part2.MEME.figure_legend.txt
+    log: results/logs/PlotMEME_partition.BDNF-64.part2.log
+    jobid: 57
+    reason: Missing output files: results/BDNF-64/tables/part2/BDNF-64.part2.AOC.MEME_Results.csv
+    wildcards: sample=BDNF-64, part=2
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+Exiting because a job execution failed. Look above for error message
+Complete log: .snakemake/log/2026-03-06T112014.680267.snakemake.log

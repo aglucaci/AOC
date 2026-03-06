@@ -1,0 +1,40 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                  count
+-----------------  -------
+all                      1
+executive_summary        1
+total                    2
+
+Select jobs to execute...
+
+[Fri Mar  6 11:02:11 2026]
+rule executive_summary:
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv, results/BDNF-64/tables/BDNF-64.AOC.merged_MEME_Results.csv, results/BDNF-64/selection/ALL_PARTITIONS.done
+    output: results/BDNF-64/summary/executive_summary.html
+    log: results/logs/executive_summary.BDNF-64.log
+    jobid: 10
+    reason: Missing output files: results/BDNF-64/summary/executive_summary.html; Code has changed since last execution
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:02:13 2026]
+Finished job 10.
+1 of 2 steps (50%) done
+Select jobs to execute...
+
+[Fri Mar  6 11:02:13 2026]
+localrule all:
+    input: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa, results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta.best-gard, results/BDNF-64/selection/ALL_PARTITIONS.done, results/BDNF-64/BDNF-64.test_sequences.txt, results/BDNF-64/BDNF-64.sequence_header_map.csv, results/BDNF-64/summary/executive_summary.html
+    jobid: 0
+    reason: Input files updated by another job: results/BDNF-64/summary/executive_summary.html
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+
+[Fri Mar  6 11:02:13 2026]
+Finished job 0.
+2 of 2 steps (100%) done
+Complete log: .snakemake/log/2026-03-06T110209.152319.snakemake.log

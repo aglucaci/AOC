@@ -1,0 +1,22 @@
+FastTree Version 2.2.0 Double precision
+Alignment: results/BDNF-64/gard/segments/BDNF-64.part1.codon.fas
+Nucleotide distances: Jukes-Cantor Joins: balanced Support: SH-like 1000
+Search: Normal +NNI +SPR (2 rounds range 10) +ML-NNI opt-each=1
+TopHits: 1.00*sqrtN close=default refresh=0.80
+ML Model: Generalized Time-Reversible, CAT approximation with 20 rate categories
+Initial topology in 0.00 seconds
+Refining topology: 17 rounds ME-NNIs, 2 rounds ME-SPRs, 9 rounds ML-NNIs
+Total branch-length 12.510 after 0.01 sec
+ML-NNI round 1: LogLk = -2124.993 NNIs 4 max delta 2.51 Time 0.03
+GTR Frequencies: 0.1867 0.2944 0.2944 0.2246
+GTR rates(ac ag at cg ct gt) 0.7012 1.8885 0.8365 1.1461 1.9271 1.0000
+Switched to using 20 rate categories (CAT approximation)
+Rate categories were divided by 0.712 so that average rate = 1.0
+CAT-based log-likelihoods may not be comparable across runs
+Use -gamma for approximate but comparable Gamma(20) log-likelihoods
+ML-NNI round 2: LogLk = -1996.114 NNIs 4 max delta 0.40 Time 0.05
+ML-NNI round 3: LogLk = -1995.798 NNIs 2 max delta 0.03 Time 0.06
+Turning off heuristics for final round of ML NNIs (converged)
+ML-NNI round 4: LogLk = -1995.007 NNIs 1 max delta 0.04 Time 0.08 (final)
+Optimize all lengths: LogLk = -1994.827 Time 0.08
+Total time: 0.10 seconds Unique: 20/60 Bad splits: 0/17
