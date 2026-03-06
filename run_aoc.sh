@@ -60,6 +60,10 @@ USE_CLUSTER_CONFIG="yes"
 
 WORKDIR=""
 
+export GRPC_VERBOSITY=NONE
+export GRPC_TRACE=
+export GLOG_minloglevel=3
+
 # -----------------------------
 # Args
 # -----------------------------
@@ -150,7 +154,8 @@ fi
 # -----------------------------
 # Logs dir
 # -----------------------------
-mkdir -p logs
+# Handled internally in results/<sample>/logs
+#mkdir -p logs
 
 # -----------------------------
 # Snakemake wrapper
@@ -192,7 +197,7 @@ run_smk () {
 # Run pipeline phases
 # -----------------------------
 run_smk "${SNAKEFILE_MAIN}"      "Running the AOC Snakemake pipeline (samples.csv)"
-run_smk "${SNAKEFILE_SELECTION}" "Selection analyses (recombination-free)"
-run_smk "${SNAKEFILE_SUMMARIZE}" "Visualization and summary"
+#run_smk "${SNAKEFILE_SELECTION}" "Selection analyses (recombination-free)"
+#run_smk "${SNAKEFILE_SUMMARIZE}" "Visualization and summary"
 
 echo "[DONE] All requested phases finished."

@@ -1,0 +1,2029 @@
+{
+ "Site Log Likelihood":{
+   "tested":{
+     "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":      [
+[-25.59320424955895, -3.707906027698147, -4.41171619190536, -3.838175787291137, -4.015952231935307, -10.79577210305496, -16.67138028634008, -12.23046747689903, -12.47148267533527, -11.93733348350354, -12.16188665977121, -12.22870101100686, -40.12301257213134, -48.02348090432989, -51.96153308955785, -46.01124110741529, -37.12982898276269, -51.80156883868638, -41.90459857928352, -51.84290945347128, -43.46365090263031, -31.12034228201975, -38.06184271621051, -38.75384224404566, -33.50133126693789] 
+      ],
+     "XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":      [
+[-25.63482267642646, -3.707958973413578, -4.411551263756405, -3.838316938291571, -4.016340677151637, -10.79287291265772, -16.68059361548603, -12.23001289294976, -12.47316917757066, -11.93874442908825, -12.15782842771386, -12.23719187681695, -40.09851559301721, -47.93457109151381, -51.9358642775578, -46.02416276349035, -37.10941453144173, -52.17879162483986, -41.89870897909482, -51.86387370670256, -43.50350570585119, -31.11607896432804, -38.08851022954767, -39.12367974494884, -33.48432956563029] 
+      ],
+     "XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA":      [
+[-25.61018260645069, -3.70796171055899, -4.411648154955362, -3.838269061388954, -4.016191012736591, -10.79453386109464, -16.67249927031899, -12.22975990927918, -12.47289774782463, -11.93866091866893, -12.15995525678948, -12.23209895825615, -40.11313913707124, -47.98932313245809, -51.94163235688486, -46.01697286851571, -37.12067191688499, -51.81466240812998, -41.90337103091606, -52.25887595136835, -43.47296741360282, -31.12325693043857, -38.07277187494113, -38.75690595944973, -33.48914968749835] 
+      ],
+     "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":      [
+[-25.55572771344354, -3.707824131698702, -4.41173964950275, -3.838091738398518, -4.015717666181999, -10.79603782827051, -16.67488813775362, -12.23169163312506, -12.46983272415729, -11.93546415034776, -12.16290799463276, -12.22777968775283, -40.19269479639853, -48.04029451945635, -51.96138365098292, -46.02022318816297, -37.10703827335537, -51.74255658907764, -41.9126523600189, -51.82849955022696, -43.4120635618504, -31.14921097465601, -38.12394876769724, -38.74013696425411, -33.56682135177579] 
+      ],
+     "XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA":      [
+[-25.59269650799722, -3.707892719248846, -4.411708086311682, -3.838160841992319, -4.015951528886262, -10.7957059700937, -16.67178024791751, -12.23037917737169, -12.47161893804648, -11.93747760376156, -12.16163246591627, -12.22872162833468, -40.12430694483114, -48.02663193595959, -51.96080637295823, -46.01164197669209, -37.12953424176641, -51.79920159780579, -41.90419481017845, -51.8419898356309, -43.46192507132138, -31.1223096745112, -38.06137305320556, -38.75520741356167, -33.50030830660744] 
+      ]
+    },
+   "unconstrained":    [
+[-25.58473360319251, -3.707890641871232, -4.411696460100797, -3.838160661395445, -4.01591513591918, -10.79504087303142, -16.66997545872443, -12.2298498346986, -12.47215898611122, -11.9381306958586, -12.1624070339068, -12.22915628393935, -40.12260177003677, -48.02786457135309, -51.96806768876795, -46.00324922477586, -37.13735280293459, -51.83066599032412, -41.89783269777543, -51.83471177678072, -43.45766550498275, -31.12359766642633, -38.05836431616151, -38.75307500669815, -33.49455610094169] 
+    ]
+  },
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM / UCSD viral evolution group",
+   "citation":"\n                                Less Is More: An Adaptive Branch-Site Random Effects Model for Efficient Detection of Episodic Diversifying Selection (2015). \n                                Mol Biol Evol 32 (5): 1342-1353. \n                            ",
+   "contact":"spond@temple.edu",
+   "info":"aBSREL (Adaptive branch-site random effects likelihood)\n                            uses an adaptive random effects branch-site model framework\n                            to test whether each branch has evolved under positive selection,\n                            using a procedure which infers an optimal number of rate categories per branch. v2.2 adds support for multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for ancestral state reconstruction, identification of sites contributing to selection signal, and some diagnostics. ",
+   "requirements":"in-frame codon alignment and a phylogenetic tree",
+   "settings":{
+     "multiple-hit":"None",
+     "srv":0
+    },
+   "version":"2.5"
+  },
+ "branch attributes":{
+   "0":{
+     "NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":2.421991815562346e-07,
+       "Baseline MG94xREV omega ratio":0.9999688939680352,
+       "Corrected P-value":1,
+       "Full adaptive model":7.546737497559948e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.131878422547266e-07,
+       "Full adaptive model (synonymous subs/site)":2.414859075012682e-07,
+       "LRT":0,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794668114871, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":2.37551554151568e-07,
+       "Baseline MG94xREV omega ratio":0.9999686035077104,
+       "Corrected P-value":1,
+       "Full adaptive model":7.450986948672621e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.066766619512774e-07,
+       "Full adaptive model (synonymous subs/site)":2.384220329159842e-07,
+       "LRT":0,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999793434264493, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA":{
+       "Baseline MG94xREV":2.458166816061574e-07,
+       "Baseline MG94xREV omega ratio":0.9148631359369492,
+       "Corrected P-value":1,
+       "Full adaptive model":7.629792031503244e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.089327253823992e-07,
+       "Full adaptive model (synonymous subs/site)":2.540464777679252e-07,
+       "LRT":0,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9426570385352506, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA"
+      },
+     "NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":2.414392855463596e-07,
+       "Baseline MG94xREV omega ratio":0.9691019840719366,
+       "Corrected P-value":1,
+       "Full adaptive model":7.534271977174739e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.089327253823992e-07,
+       "Full adaptive model (synonymous subs/site)":2.444944723350746e-07,
+       "LRT":0,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9794851314872398, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA":{
+       "Baseline MG94xREV":0,
+       "Baseline MG94xREV omega ratio":1,
+       "Corrected P-value":1,
+       "Full adaptive model":4.94047319554687e-16,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":0,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA"
+      },
+     "NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA":{
+       "Baseline MG94xREV":2.398067999419859e-07,
+       "Baseline MG94xREV omega ratio":1.013515062489715,
+       "Corrected P-value":1,
+       "Full adaptive model":7.669897870763933e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.111873617635817e-07,
+       "Full adaptive model (synonymous subs/site)":2.558024253128113e-07,
+       "LRT":0,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9403336228680635, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA"
+      },
+     "Node10":{
+       "Baseline MG94xREV":1.626078645948811,
+       "Baseline MG94xREV omega ratio":3.282370717491907,
+       "Corrected P-value":null,
+       "Full adaptive model":2.101716870873083,
+       "Full adaptive model (non-synonymous subs/site)":1.75918453813257,
+       "Full adaptive model (synonymous subs/site)":0.3425323327405123,
+       "LRT":null,
+       "Nucleotide GTR":2.671404953171374,
+       "Rate Distributions":        [
+[2.416664385378083, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node12":{
+       "Baseline MG94xREV":0.09634258223016313,
+       "Baseline MG94xREV omega ratio":0.461201921294357,
+       "Corrected P-value":null,
+       "Full adaptive model":0.1151596100268428,
+       "Full adaptive model (non-synonymous subs/site)":0.06547735239926986,
+       "Full adaptive model (synonymous subs/site)":0.04968225762757288,
+       "LRT":null,
+       "Nucleotide GTR":0.01978836429827577,
+       "Rate Distributions":        [
+[0.6201493638897951, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node14":{
+       "Baseline MG94xREV":0.4893906448135095,
+       "Baseline MG94xREV omega ratio":0.03969644664307901,
+       "Corrected P-value":null,
+       "Full adaptive model":0.5411452533854801,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.5411452533854801,
+       "LRT":null,
+       "Nucleotide GTR":42.29681746339081,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node15":{
+       "Baseline MG94xREV":3.125176014154239,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":null,
+       "Full adaptive model":3.735909660836457,
+       "Full adaptive model (non-synonymous subs/site)":3.735909660836457,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":1.374471460373993e-07,
+       "Rate Distributions":        [
+[3558232592255015, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node18":{
+       "Baseline MG94xREV":344.6460812552677,
+       "Baseline MG94xREV omega ratio":0.04197370049902611,
+       "Corrected P-value":null,
+       "Full adaptive model":487.1763266089776,
+       "Full adaptive model (non-synonymous subs/site)":44.13325537965614,
+       "Full adaptive model (synonymous subs/site)":443.0430712293214,
+       "LRT":null,
+       "Nucleotide GTR":42.4251321411528,
+       "Rate Distributions":        [
+[0.04687340783342835, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node2":{
+       "Baseline MG94xREV":0,
+       "Baseline MG94xREV omega ratio":1,
+       "Corrected P-value":null,
+       "Full adaptive model":8.889909682408491e-15,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":0.02933066269165594,
+       "Rate Distributions":        [
+[10000000000, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node20":{
+       "Baseline MG94xREV":2.09881835329402,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":null,
+       "Full adaptive model":2.857008287070264,
+       "Full adaptive model (non-synonymous subs/site)":2.857008287070263,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":1.489191301139889,
+       "Rate Distributions":        [
+[321376525649497.1, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node21":{
+       "Baseline MG94xREV":0.1524689394531286,
+       "Baseline MG94xREV omega ratio":0.3041100344953909,
+       "Corrected P-value":null,
+       "Full adaptive model":0.1745583307655088,
+       "Full adaptive model (non-synonymous subs/site)":0.05994531310515181,
+       "Full adaptive model (synonymous subs/site)":0.1146130176603569,
+       "LRT":null,
+       "Nucleotide GTR":0.1554332347471797,
+       "Rate Distributions":        [
+[0.246109172694319, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node22":{
+       "Baseline MG94xREV":0.01069485210193591,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":null,
+       "Full adaptive model":0.009011526024541545,
+       "Full adaptive model (non-synonymous subs/site)":0.009011526024541545,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":0.01123001816902671,
+       "Rate Distributions":        [
+[10000000000, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node25":{
+       "Baseline MG94xREV":0.003328776672355861,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":null,
+       "Full adaptive model":0.005171037696490464,
+       "Full adaptive model (non-synonymous subs/site)":0.005171037696489966,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":0.002487280511362613,
+       "Rate Distributions":        [
+[4925107012172.842, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node31":{
+       "Baseline MG94xREV":4.842022464982324,
+       "Baseline MG94xREV omega ratio":0.9917508253953513,
+       "Corrected P-value":null,
+       "Full adaptive model":4.693602365478775,
+       "Full adaptive model (non-synonymous subs/site)":3.196063861658102,
+       "Full adaptive model (synonymous subs/site)":1.497538503820669,
+       "LRT":null,
+       "Nucleotide GTR":7.433877148606819,
+       "Rate Distributions":        [
+[1.004254914830335, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node4":{
+       "Baseline MG94xREV":0.2284234019155729,
+       "Baseline MG94xREV omega ratio":0.5958205675865729,
+       "Corrected P-value":null,
+       "Full adaptive model":0.2595769689026169,
+       "Full adaptive model (non-synonymous subs/site)":0.1216656555003358,
+       "Full adaptive model (synonymous subs/site)":0.1379113134022812,
+       "LRT":null,
+       "Nucleotide GTR":0.5812857454711403,
+       "Rate Distributions":        [
+[0.4151209204702405, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node5":{
+       "Baseline MG94xREV":2.390794255209156,
+       "Baseline MG94xREV omega ratio":1.220347434918655,
+       "Corrected P-value":null,
+       "Full adaptive model":3.393701307692576,
+       "Full adaptive model (non-synonymous subs/site)":2.579216314893418,
+       "Full adaptive model (synonymous subs/site)":0.8144849927991605,
+       "LRT":null,
+       "Nucleotide GTR":2.692713809791391,
+       "Rate Distributions":        [
+[1.490085523453253, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node71":{
+       "Baseline MG94xREV":0.05539573585701063,
+       "Baseline MG94xREV omega ratio":0.3270349244333233,
+       "Corrected P-value":null,
+       "Full adaptive model":0.05608047444594996,
+       "Full adaptive model (non-synonymous subs/site)":0.02323316568062549,
+       "Full adaptive model (synonymous subs/site)":0.03284730876532449,
+       "LRT":null,
+       "Nucleotide GTR":0.05546070048436803,
+       "Rate Distributions":        [
+[0.3328243645186695, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node72":{
+       "Baseline MG94xREV":0.020818911918865,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":null,
+       "Full adaptive model":0.02741759197629446,
+       "Full adaptive model (non-synonymous subs/site)":0.02741759197629337,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":0.02152750031278688,
+       "Rate Distributions":        [
+[11962921657358.54, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node73":{
+       "Baseline MG94xREV":0.04242753643404881,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":null,
+       "Full adaptive model":0.04193497417007769,
+       "Full adaptive model (non-synonymous subs/site)":0.0419349741700745,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":0.046600319097776,
+       "Rate Distributions":        [
+[6166088047694.57, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node75":{
+       "Baseline MG94xREV":0.02769215433599441,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.02796210680122749,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.02796210680122648,
+       "LRT":0,
+       "Nucleotide GTR":0.02125853669782317,
+       "Rate Distributions":        [
+[1.766845835568502e-14, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1
+      },
+     "Node78":{
+       "Baseline MG94xREV":0.166376806613329,
+       "Baseline MG94xREV omega ratio":1.732508430918171,
+       "Corrected P-value":null,
+       "Full adaptive model":0.1859120926943428,
+       "Full adaptive model (non-synonymous subs/site)":0.1525529170586389,
+       "Full adaptive model (synonymous subs/site)":0.03335917563570386,
+       "LRT":null,
+       "Nucleotide GTR":0.1763467895933505,
+       "Rate Distributions":        [
+[2.151848647005114, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node8":{
+       "Baseline MG94xREV":1.15640968306534,
+       "Baseline MG94xREV omega ratio":12901528474271080,
+       "Corrected P-value":null,
+       "Full adaptive model":1.361097742050975,
+       "Full adaptive model (non-synonymous subs/site)":1.361097742050975,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":0.6232174338422387,
+       "Rate Distributions":        [
+[11608609329574270, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "Node9":{
+       "Baseline MG94xREV":4.245358075132467,
+       "Baseline MG94xREV omega ratio":4.239140613601392e-17,
+       "Corrected P-value":null,
+       "Full adaptive model":6.425647670033539,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":6.425647670033539,
+       "LRT":null,
+       "Nucleotide GTR":0.3532047383345014,
+       "Rate Distributions":        [
+[4.056519152650685e-17, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null
+      },
+     "XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.50741239756165e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.105136774752402e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794210624514, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.50741239756165e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.105136774752402e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794210624514, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.399063627873792e-07,
+       "Baseline MG94xREV omega ratio":1.004465444531624,
+       "Corrected P-value":null,
+       "Full adaptive model":7.499077797507923e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.104290793677682e-07,
+       "Full adaptive model (synonymous subs/site)":2.394787003830239e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[1.00294018032392, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.42014085198374e-07,
+       "Baseline MG94xREV omega ratio":0.9999688939749747,
+       "Corrected P-value":null,
+       "Full adaptive model":7.626257428491387e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.185953187614611e-07,
+       "Full adaptive model (synonymous subs/site)":2.440304240876777e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999795817541364, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.401731966956951e-07,
+       "Baseline MG94xREV omega ratio":1.000733557532946,
+       "Corrected P-value":null,
+       "Full adaptive model":7.504958285482233e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.104290793677682e-07,
+       "Full adaptive model (synonymous subs/site)":2.400667491804548e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[1.000483456229692, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.42014085198374e-07,
+       "Baseline MG94xREV omega ratio":0.9999688939749747,
+       "Corrected P-value":1,
+       "Full adaptive model":7.5429301569542e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.129289386423602e-07,
+       "Full adaptive model (synonymous subs/site)":2.413640770530604e-07,
+       "LRT":0,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794694840903, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.391526899986882e-07,
+       "Baseline MG94xREV omega ratio":0.999968708660838,
+       "Corrected P-value":null,
+       "Full adaptive model":7.484009361370853e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.089222357540623e-07,
+       "Full adaptive model (synonymous subs/site)":2.394787003830239e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999793889686911, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.37551554151568e-07,
+       "Baseline MG94xREV omega ratio":0.9999686035077104,
+       "Corrected P-value":1,
+       "Full adaptive model":7.450986948672621e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.066766619512774e-07,
+       "Full adaptive model (synonymous subs/site)":2.384220329159842e-07,
+       "LRT":0,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999793434264493, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.42014085198374e-07,
+       "Baseline MG94xREV omega ratio":0.9999688939749747,
+       "Corrected P-value":null,
+       "Full adaptive model":7.5429301569542e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.129289386423602e-07,
+       "Full adaptive model (synonymous subs/site)":2.413640770530604e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794694840903, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA":{
+       "Baseline MG94xREV":2.42014085198374e-07,
+       "Baseline MG94xREV omega ratio":0.9999688939749747,
+       "Corrected P-value":null,
+       "Full adaptive model":7.5429301569542e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.129289386423602e-07,
+       "Full adaptive model (synonymous subs/site)":2.413640770530604e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794694840903, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA"
+      },
+     "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0,
+       "Baseline MG94xREV omega ratio":1,
+       "Corrected P-value":1,
+       "Full adaptive model":9.391129817392848e-15,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":-0.00311932585282193,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[8.467112229077015, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":0.5,
+       "original name":"XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0,
+       "Baseline MG94xREV omega ratio":1,
+       "Corrected P-value":1,
+       "Full adaptive model":0,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":0,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[1, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.50741239756165e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.105136774752402e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794210624514, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0.0490335808043257,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":1,
+       "Full adaptive model":0.05069211094995924,
+       "Full adaptive model (non-synonymous subs/site)":0.05069211094995879,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":1.429379705156862,
+       "Nucleotide GTR":0.05368567293660852,
+       "Rate Distributions":        [
+[48281232076678.62, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":0.1931762966235066,
+       "original name":"XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.42014085198374e-07,
+       "Baseline MG94xREV omega ratio":0.9999688939749747,
+       "Corrected P-value":null,
+       "Full adaptive model":7.5429301569542e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.129289386423602e-07,
+       "Full adaptive model (synonymous subs/site)":2.413640770530604e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794694840903, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":0.02726637844080726,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":1,
+       "Full adaptive model":0.02655698803340861,
+       "Full adaptive model (non-synonymous subs/site)":0.02655698803340814,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":0.7872766995476468,
+       "Nucleotide GTR":0.02674030514621218,
+       "Rate Distributions":        [
+[25293957550205.29, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":0.2773643670158356,
+       "original name":"XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA":{
+       "Baseline MG94xREV":2.42014085198374e-07,
+       "Baseline MG94xREV omega ratio":0.9999688939749747,
+       "Corrected P-value":1,
+       "Full adaptive model":7.5429301569542e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.129289386423602e-07,
+       "Full adaptive model (synonymous subs/site)":2.413640770530604e-07,
+       "LRT":0,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794694840903, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA"
+      },
+     "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0.03069437092922327,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":null,
+       "Full adaptive model":0.03055116581874777,
+       "Full adaptive model (non-synonymous subs/site)":0.03055116581874777,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[10000000000, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.4009946563434e-07,
+       "Baseline MG94xREV omega ratio":0.9992045604868353,
+       "Corrected P-value":null,
+       "Full adaptive model":7.503596820248382e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.101719259724218e-07,
+       "Full adaptive model (synonymous subs/site)":2.401877560524169e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9994756233866701, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0.01705447775153401,
+       "Baseline MG94xREV omega ratio":0,
+       "Corrected P-value":1,
+       "Full adaptive model":0.01418401872619345,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":0.01418401872619242,
+       "LRT":0,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[3.483126531991757e-14, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0.08951708914809768,
+       "Baseline MG94xREV omega ratio":0.8383003773948132,
+       "Corrected P-value":null,
+       "Full adaptive model":0.09436001693155326,
+       "Full adaptive model (non-synonymous subs/site)":0.06278130674434133,
+       "Full adaptive model (synonymous subs/site)":0.03157871018721198,
+       "LRT":null,
+       "Nucleotide GTR":0.08611042529972131,
+       "Rate Distributions":        [
+[0.9354971705023374, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":2.421991815562346e-07,
+       "Baseline MG94xREV omega ratio":0.9999688939680352,
+       "Corrected P-value":null,
+       "Full adaptive model":7.546737497559948e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.131878422547266e-07,
+       "Full adaptive model (synonymous subs/site)":2.414859075012682e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794668114871, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":2.397222546361224,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":null,
+       "Full adaptive model":3.31562037963945,
+       "Full adaptive model (non-synonymous subs/site)":3.315620379639449,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":1.2364541157685,
+       "Rate Distributions":        [
+[372964461742560, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":{
+       "Baseline MG94xREV":0.05439181693498794,
+       "Baseline MG94xREV omega ratio":0.3068413647966617,
+       "Corrected P-value":null,
+       "Full adaptive model":0.05739596230215979,
+       "Full adaptive model (non-synonymous subs/site)":0.02418435417164666,
+       "Full adaptive model (synonymous subs/site)":0.03321160813051312,
+       "LRT":null,
+       "Nucleotide GTR":0.05375410982103571,
+       "Rate Distributions":        [
+[0.3426502903850674, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA"
+      },
+     "XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.419245232435531e-07,
+       "Baseline MG94xREV omega ratio":1.001207266321029,
+       "Corrected P-value":null,
+       "Full adaptive model":7.540959551109524e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.129289386423602e-07,
+       "Full adaptive model (synonymous subs/site)":2.411670164685919e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[1.000796565211352, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0,
+       "Baseline MG94xREV omega ratio":1,
+       "Corrected P-value":1,
+       "Full adaptive model":0,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":0,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[1, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA":{
+       "Baseline MG94xREV":0,
+       "Baseline MG94xREV omega ratio":1,
+       "Corrected P-value":null,
+       "Full adaptive model":4.94047319554687e-16,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA"
+      },
+     "XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA":{
+       "Baseline MG94xREV":0,
+       "Baseline MG94xREV omega ratio":1,
+       "Corrected P-value":null,
+       "Full adaptive model":0,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[1, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA"
+      },
+     "XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.50741239756165e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.105136774752402e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794210624514, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.50741239756165e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.105136774752402e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794210624514, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.388573137226008e-07,
+       "Baseline MG94xREV omega ratio":0.9813569228097245,
+       "Corrected P-value":null,
+       "Full adaptive model":7.524339368800856e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.066177965111056e-07,
+       "Full adaptive model (synonymous subs/site)":2.45816140368981e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.969787453321848, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0.02671722689529994,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":null,
+       "Full adaptive model":0.02790497212560972,
+       "Full adaptive model (non-synonymous subs/site)":0.02790497212560972,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":0.02645168869109047,
+       "Rate Distributions":        [
+[10000000000, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.50741239756165e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.105136774752402e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794210624514, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.401731966956951e-07,
+       "Baseline MG94xREV omega ratio":1.000733557532946,
+       "Corrected P-value":null,
+       "Full adaptive model":7.504958285482233e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.104290793677682e-07,
+       "Full adaptive model (synonymous subs/site)":2.400667491804548e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[1.000483456229692, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0,
+       "Baseline MG94xREV omega ratio":1,
+       "Corrected P-value":null,
+       "Full adaptive model":9.383957001963182e-15,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[8.467112228582881, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.50741239756165e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.105136774752402e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794210624514, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0.08230978228902258,
+       "Baseline MG94xREV omega ratio":27511404.17327138,
+       "Corrected P-value":1,
+       "Full adaptive model":0.06284182016399621,
+       "Full adaptive model (non-synonymous subs/site)":0.06284182016399621,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":0.121013632939821,
+       "Nucleotide GTR":0.1705739740879716,
+       "Rate Distributions":        [
+[10000000000, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":0.4279737483537795,
+       "original name":"XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.563942763995465e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.161667141186224e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[1.0110524256837, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":0.156741651345451,
+       "Baseline MG94xREV omega ratio":0.1045094046179962,
+       "Corrected P-value":null,
+       "Full adaptive model":0.2214594326044454,
+       "Full adaptive model (non-synonymous subs/site)":0.02852966534469299,
+       "Full adaptive model (synonymous subs/site)":0.1929297672597523,
+       "LRT":null,
+       "Nucleotide GTR":0.1264052198852165,
+       "Rate Distributions":        [
+[0.06958312863571676, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.50741239756165e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.105136774752402e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794210624514, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0.01730144337777536,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":null,
+       "Full adaptive model":4.183154100900087e-15,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402281259537385e-07,
+       "Baseline MG94xREV omega ratio":0.9999687667683403,
+       "Corrected P-value":1,
+       "Full adaptive model":7.506168354201853e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.104290793677682e-07,
+       "Full adaptive model (synonymous subs/site)":2.401877560524169e-07,
+       "LRT":0,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794114961968, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA":{
+       "Baseline MG94xREV":0.1473773803503739,
+       "Baseline MG94xREV omega ratio":10000000000,
+       "Corrected P-value":null,
+       "Full adaptive model":0.4697275367919066,
+       "Full adaptive model (non-synonymous subs/site)":0.4697186792477605,
+       "Full adaptive model (synonymous subs/site)":8.85754414606823e-06,
+       "LRT":null,
+       "Nucleotide GTR":0.1536154233872661,
+       "Rate Distributions":        [
+[0, 0.7504652576249838],
+        [99999.99999999693, 0.2495347423750162] 
+        ],
+       "Rate classes":2,
+       "Uncorrected P-value":null,
+       "original name":"XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA"
+      },
+     "XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0,
+       "Baseline MG94xREV omega ratio":1,
+       "Corrected P-value":null,
+       "Full adaptive model":4.94047319554687e-16,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[0, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":{
+       "Baseline MG94xREV":2.402281259537385e-07,
+       "Baseline MG94xREV omega ratio":0.9999687667683403,
+       "Corrected P-value":null,
+       "Full adaptive model":7.506168354201853e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.104290793677682e-07,
+       "Full adaptive model (synonymous subs/site)":2.401877560524169e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794114961968, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA"
+      },
+     "XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.50741239756165e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.105136774752402e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794210624514, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.50741239756165e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.105136774752402e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794210624514, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":2.401731966956951e-07,
+       "Baseline MG94xREV omega ratio":1.000733557532946,
+       "Corrected P-value":1,
+       "Full adaptive model":7.504958285482233e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.104290793677682e-07,
+       "Full adaptive model (synonymous subs/site)":2.400667491804548e-07,
+       "LRT":-0.003127671601077964,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[1.000483456229692, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":0.5,
+       "original name":"XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":{
+       "Baseline MG94xREV":2.486734224022804,
+       "Baseline MG94xREV omega ratio":0.2542010060073555,
+       "Corrected P-value":null,
+       "Full adaptive model":2.602568396771928,
+       "Full adaptive model (non-synonymous subs/site)":1.042132073314816,
+       "Full adaptive model (synonymous subs/site)":1.560436323457114,
+       "LRT":null,
+       "Nucleotide GTR":1.466044513793891,
+       "Rate Distributions":        [
+[0.3142557450219116, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA"
+      },
+     "XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":1,
+       "Full adaptive model":7.762327671052851e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.278482993547926e-07,
+       "Full adaptive model (synonymous subs/site)":2.483844677504933e-07,
+       "LRT":0,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999797534521357, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":1,
+       "original name":"XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.762327671052851e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.278482993547926e-07,
+       "Full adaptive model (synonymous subs/site)":2.483844677504933e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999797534521357, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":0,
+       "Baseline MG94xREV omega ratio":1,
+       "Corrected P-value":null,
+       "Full adaptive model":5.492051834931915e-15,
+       "Full adaptive model (non-synonymous subs/site)":1e-10,
+       "Full adaptive model (synonymous subs/site)":1e-10,
+       "LRT":null,
+       "Nucleotide GTR":1e-06,
+       "Rate Distributions":        [
+[0.3369965015997564, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.50741239756165e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.105136774752402e-07,
+       "Full adaptive model (synonymous subs/site)":2.402275622809244e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999794210624514, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "Baseline MG94xREV":2.402885271869017e-07,
+       "Baseline MG94xREV omega ratio":0.9999687826178033,
+       "Corrected P-value":null,
+       "Full adaptive model":7.762327671052851e-07,
+       "Full adaptive model (non-synonymous subs/site)":5.278482993547926e-07,
+       "Full adaptive model (synonymous subs/site)":2.483844677504933e-07,
+       "LRT":null,
+       "Nucleotide GTR":6.717191975931825e-08,
+       "Rate Distributions":        [
+[0.9999797534521357, 1] 
+        ],
+       "Rate classes":1,
+       "Uncorrected P-value":null,
+       "original name":"XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      }
+    },
+   "attributes":{
+     "Baseline MG94xREV":{
+       "attribute type":"branch length",
+       "display order":1
+      },
+     "Baseline MG94xREV omega ratio":{
+       "attribute type":"branch label",
+       "display order":1
+      },
+     "Corrected P-value":{
+       "attribute type":"branch label",
+       "display order":6
+      },
+     "Full adaptive model":{
+       "attribute type":"branch length",
+       "display order":2
+      },
+     "Full adaptive model (non-synonymous subs/site)":{
+       "attribute type":"branch label",
+       "display order":10
+      },
+     "Full adaptive model (synonymous subs/site)":{
+       "attribute type":"branch label",
+       "display order":9
+      },
+     "LRT":{
+       "attribute type":"branch label",
+       "display order":4
+      },
+     "Nucleotide GTR":{
+       "attribute type":"branch length",
+       "display order":0
+      },
+     "Rate Distributions":{
+       "attribute type":"branch label",
+       "display order":3
+      },
+     "Rate classes":{
+       "attribute type":"branch label",
+       "display order":2
+      },
+     "Uncorrected P-value":{
+       "attribute type":"branch label",
+       "display order":5
+      },
+     "original name":{
+       "attribute type":"node label",
+       "display order":-1
+      },
+     "posterior":{
+       "attribute type":"branch annotations",
+       "display order":-1
+      }
+    }
+  },
+ "data partitions":{
+   "0":{
+     "coverage":      [
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24] 
+      ],
+     "name":"absrel.filter.default"
+    }
+  },
+ "fits":{
+   "Baseline MG94xREV":{
+     "AIC-c":1770.73920602857,
+     "Equilibrium frequencies":      [
+[0.0155950374974701],
+      [0.01642292297394568],
+      [0.027784783712925],
+      [0.02228869228081119],
+      [0.01110771453126261],
+      [0.01169738387567816],
+      [0.01978997779557198],
+      [0.01587533413565503],
+      [0.0123887754725501],
+      [0.0130464518190613],
+      [0.02207237058767161],
+      [0.01770624817596787],
+      [0.01414974064533999],
+      [0.01490090041511121],
+      [0.02520978121973311],
+      [0.02022304948920015],
+      [0.01510458347419432],
+      [0.01590643247831036],
+      [0.02691096991414048],
+      [0.02158772706643111],
+      [0.01075838396491159],
+      [0.0113295085830052],
+      [0.01916759556456092],
+      [0.01537606496115369],
+      [0.01199915635332976],
+      [0.01263614919650138],
+      [0.0213782085531325],
+      [0.01714939791790138],
+      [0.01370474029000634],
+      [0.01443227656215744],
+      [0.02441694961370934],
+      [0.01958704742851305],
+      [0.01772638319882222],
+      [0.01866741429304861],
+      [0.03158208008615578],
+      [0.02533484773181114],
+      [0.01262578588068345],
+      [0.01329604427290624],
+      [0.02249463843593843],
+      [0.01804498747397153],
+      [0.01408192711471318],
+      [0.01482948690358513],
+      [0.02508896174228195],
+      [0.02012612924025163],
+      [0.0160835602276645],
+      [0.01693737965096912],
+      [0.02865515663761345],
+      [0.02298689725834018],
+      [0.009490870400062126],
+      [0.01288072106041309],
+      [0.006419190982284205],
+      [0.00675996316611629],
+      [0.01143670434159962],
+      [0.009174416702691555],
+      [0.007539594723290398],
+      [0.0127557079213046],
+      [0.01023250897395357],
+      [0.008177189582662253],
+      [0.00861128770489965],
+      [0.01456882960176991],
+      [0.01168697814028217] 
+      ],
+     "Log Likelihood":-688.3884709388134,
+     "Rate Distributions":{
+       "Per-branch omega":{
+         "2.5%":0,
+         "97.5%":4.239140613601392e-17,
+         "Mean":379457014758309.1,
+         "Median":0.9999686560842742
+        }
+      },
+     "display order":1,
+     "estimated parameters":174
+    },
+   "Full adaptive model":{
+     "AIC-c":1766.622412094959,
+     "Log Likelihood":-683.7647207867086,
+     "Rate Distributions":{
+      },
+     "display order":2,
+     "estimated parameters":176
+    },
+   "Nucleotide GTR":{
+     "AIC-c":1607.032744886754,
+     "Equilibrium frequencies":      [
+[0.2458210422812193],
+      [0.2310717797443461],
+      [0.2949852507374631],
+      [0.2281219272369715] 
+      ],
+     "Log Likelihood":-712.7000459127645,
+     "Rate Distributions":{
+       "Substitution rate from nucleotide A to nucleotide C":0.7495135703204419,
+       "Substitution rate from nucleotide A to nucleotide G":1,
+       "Substitution rate from nucleotide A to nucleotide T":0.5427445112525009,
+       "Substitution rate from nucleotide C to nucleotide G":0.6063502354523362,
+       "Substitution rate from nucleotide C to nucleotide T":2.866050447983429,
+       "Substitution rate from nucleotide G to nucleotide T":0.5124689404595189
+      },
+     "display order":0,
+     "estimated parameters":89
+    }
+  },
+ "input":{
+   "file name":"/Users/alex/Documents/AOC-develop-singleSnakefile/results/BDNF-64/gard/segments/BDNF-64.part2.codon.fas",
+   "number of sequences":60,
+   "number of sites":25,
+   "partition count":1,
+   "trees":{
+     "0":"(XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA,(XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,((XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA)Node5,(((XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,(XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,((XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA)Node15,(XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA,(((XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA,XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA)Node22,(NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA,XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA)Node25)Node21,XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA)Node20)Node18)Node14)Node12)Node10,(NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA,NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA,XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA,XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA,XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA,XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA,XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA,XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA,XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA,XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA,NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA,NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA,XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA,XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA)Node31)Node9,XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA)Node8)Node4)Node2,(((XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA,(XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA,XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA)Node75)Node73,(XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA,XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA)Node78)Node72,XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA)Node71)"
+    }
+  },
+ "runtime":"2.5.74",
+ "substitutions":{
+   "0":{
+     "0":{
+       "Node10":"GCG",
+       "Node14":"GCT",
+       "Node15":"TGT",
+       "Node18":"GTA",
+       "Node21":"GCA",
+       "Node31":"---",
+       "Node5":"---",
+       "Node73":"---",
+       "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"AGC",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"GTG",
+       "XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"GTA",
+       "root":"GTG"
+      },
+     "1":{
+       "Node15":"---",
+       "Node18":"GGG",
+       "Node31":"---",
+       "Node5":"---",
+       "Node71":"---",
+       "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "root":"GAG"
+      },
+     "10":{
+       "Node10":"ATG",
+       "Node15":"---",
+       "Node18":"GAT",
+       "Node20":"AAT",
+       "Node31":"---",
+       "Node5":"GAT",
+       "Node71":"---",
+       "Node8":"CCA",
+       "Node9":"CCG",
+       "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"CAA"
+      },
+     "11":{
+       "Node10":"GAG",
+       "Node15":"---",
+       "Node18":"GTG",
+       "Node31":"---",
+       "Node5":"TTA",
+       "Node71":"---",
+       "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"GGG"
+      },
+     "12":{
+       "Node10":"CTC",
+       "Node12":"TTC",
+       "Node14":"TTT",
+       "Node15":"GCT",
+       "Node18":"GTT",
+       "Node20":"ACT",
+       "Node31":"---",
+       "Node5":"ATG",
+       "Node9":"GTT",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"CCT",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"TCC",
+       "XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA":"TGG",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"GAG",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"GTG"
+      },
+     "13":{
+       "Node10":"AGG",
+       "Node12":"CGG",
+       "Node15":"CGC",
+       "Node18":"ATG",
+       "Node20":"CCG",
+       "Node21":"CCA",
+       "Node31":"---",
+       "Node5":"AGT",
+       "Node78":"GAG",
+       "Node9":"GAG",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"AAA",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"CCT",
+       "XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA":"AAT",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"GAA"
+      },
+     "14":{
+       "Node10":"GGA",
+       "Node14":"GGT",
+       "Node15":"GTT",
+       "Node18":"CTG",
+       "Node20":"CCG",
+       "Node21":"CTG",
+       "Node31":"---",
+       "Node5":"TTG",
+       "Node72":"TTG",
+       "Node73":"TTT",
+       "Node78":"CCG",
+       "Node8":"AGC",
+       "Node9":"AGT",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"CCG",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"AAC",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"TGG"
+      },
+     "15":{
+       "Node10":"TCC",
+       "Node15":"TGC",
+       "Node18":"CAG",
+       "Node20":"CCG",
+       "Node31":"---",
+       "Node5":"GTT",
+       "Node8":"ATC",
+       "Node9":"ATT",
+       "XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"AAT",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"TCT",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"CAA",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"AAA",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"AAC"
+      },
+     "16":{
+       "Node10":"CCG",
+       "Node15":"AAG",
+       "Node18":"GTG",
+       "Node20":"GGG",
+       "Node31":"---",
+       "Node5":"AAC",
+       "Node8":"ACA",
+       "Node9":"ACG",
+       "XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"AGA",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"TTG",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"CTG",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"AAA"
+      },
+     "17":{
+       "Node10":"AAG",
+       "Node15":"CTC",
+       "Node20":"ACC",
+       "Node21":"ATC",
+       "Node31":"---",
+       "Node5":"TTG",
+       "Node71":"CTG",
+       "Node8":"ACA",
+       "Node9":"ACG",
+       "XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"CCG",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"GCA",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"TGT",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"CCA"
+      },
+     "18":{
+       "Node10":"TCC",
+       "Node14":"TCT",
+       "Node15":"CGT",
+       "Node18":"GTT",
+       "Node20":"CGT",
+       "Node21":"CGA",
+       "Node31":"---",
+       "Node4":"ATC",
+       "Node5":"GAG",
+       "Node75":"ATC",
+       "Node8":"TTC",
+       "Node9":"TTT",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"CCT",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"AAA",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"ATT"
+      },
+     "19":{
+       "Node10":"TCC",
+       "Node12":"CCC",
+       "Node14":"CCT",
+       "Node15":"TGT",
+       "Node18":"GAT",
+       "Node20":"GAG",
+       "Node31":"---",
+       "Node4":"CCA",
+       "Node5":"CTG",
+       "Node78":"GCT",
+       "Node8":"ATA",
+       "Node9":"ATT",
+       "XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA":"CTT",
+       "XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"ACT",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"GTT",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"TCT",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"ATG",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"CCT"
+      },
+     "2":{
+       "Node15":"---",
+       "Node18":"GGC",
+       "Node20":"CGC",
+       "Node31":"---",
+       "Node5":"---",
+       "Node71":"---",
+       "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "root":"GAG"
+      },
+     "20":{
+       "Node10":"CGT",
+       "Node12":"CGC",
+       "Node14":"CGG",
+       "Node15":"GTG",
+       "Node18":"GTT",
+       "Node20":"CTT",
+       "Node31":"---",
+       "Node5":"CAG",
+       "Node8":"ATC",
+       "Node9":"ATT",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"TCT",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"GAG",
+       "XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"GCG",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"GTG",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"GAA"
+      },
+     "21":{
+       "Node10":"AAA",
+       "Node15":"GGA",
+       "Node18":"GTT",
+       "Node20":"TGT",
+       "Node31":"---",
+       "Node5":"ATG",
+       "Node8":"ATG",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"GCT",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "root":"AAT"
+      },
+     "22":{
+       "Node10":"CGA",
+       "Node12":"GGA",
+       "Node14":"GGG",
+       "Node15":"AGG",
+       "Node18":"GAG",
+       "Node20":"GTG",
+       "Node31":"---",
+       "Node5":"TCT",
+       "Node8":"CCT",
+       "Node9":"CCA",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"CTC",
+       "XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA":"AGT",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "root":"GGT"
+      },
+     "23":{
+       "Node10":"GGA",
+       "Node12":"GAA",
+       "Node15":"TGC",
+       "Node18":"GTC",
+       "Node20":"GAC",
+       "Node31":"---",
+       "Node5":"GAT",
+       "Node78":"GTC",
+       "Node8":"GTC",
+       "Node9":"GTA",
+       "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"TTC",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"TCC",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "root":"CTC"
+      },
+     "24":{
+       "Node10":"AGG",
+       "Node15":"GGG",
+       "Node18":"CAA",
+       "Node20":"CCC",
+       "Node21":"CCT",
+       "Node31":"---",
+       "Node5":"TCG",
+       "Node78":"CTA",
+       "Node8":"AAA",
+       "Node9":"AAG",
+       "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"CCA",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"CCG",
+       "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "root":"ATA"
+      },
+     "3":{
+       "Node15":"---",
+       "Node18":"GGG",
+       "Node20":"AGG",
+       "Node31":"---",
+       "Node5":"---",
+       "Node71":"---",
+       "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "root":"GAG"
+      },
+     "4":{
+       "Node15":"---",
+       "Node18":"GTC",
+       "Node20":"GAC",
+       "Node31":"---",
+       "Node5":"---",
+       "Node71":"---",
+       "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "root":"GAG"
+      },
+     "5":{
+       "Node15":"---",
+       "Node18":"GAG",
+       "Node20":"CAG",
+       "Node31":"---",
+       "Node71":"---",
+       "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"ATG"
+      },
+     "6":{
+       "Node10":"CAT",
+       "Node15":"---",
+       "Node18":"GAG",
+       "Node22":"AAG",
+       "Node31":"---",
+       "Node5":"GTT",
+       "Node71":"---",
+       "Node8":"TTT",
+       "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"CTT"
+      },
+     "7":{
+       "Node15":"---",
+       "Node18":"GGT",
+       "Node20":"CGT",
+       "Node31":"---",
+       "Node5":"TTT",
+       "Node71":"---",
+       "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"CAT"
+      },
+     "8":{
+       "Node15":"---",
+       "Node18":"GTC",
+       "Node20":"GAC",
+       "Node31":"---",
+       "Node5":"TCT",
+       "Node71":"---",
+       "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"CAG"
+      },
+     "9":{
+       "Node15":"---",
+       "Node18":"GTC",
+       "Node20":"AAC",
+       "Node31":"---",
+       "Node5":"GCG",
+       "Node71":"---",
+       "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"---",
+       "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"---",
+       "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"---",
+       "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"---",
+       "root":"AAT"
+      }
+    }
+  },
+ "test results":{
+   "P-value threshold":0.05,
+   "positive test results":0,
+   "tested":20
+  },
+ "tested":{
+   "0":{
+     "NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA":"test",
+     "NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA":"test",
+     "NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA":"test",
+     "NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA":"test",
+     "NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA":"test",
+     "NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA":"test",
+     "Node10":"background",
+     "Node12":"background",
+     "Node14":"background",
+     "Node15":"background",
+     "Node18":"background",
+     "Node2":"background",
+     "Node20":"background",
+     "Node21":"background",
+     "Node22":"background",
+     "Node25":"background",
+     "Node31":"background",
+     "Node4":"background",
+     "Node5":"background",
+     "Node71":"background",
+     "Node72":"background",
+     "Node73":"background",
+     "Node75":"test",
+     "Node78":"background",
+     "Node8":"background",
+     "Node9":"background",
+     "XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"test",
+     "XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"test",
+     "XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA":"background",
+     "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"test",
+     "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"test",
+     "XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA":"background",
+     "XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"test",
+     "XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA":"test",
+     "XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA":"test",
+     "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"test",
+     "XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA":"background",
+     "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"background",
+     "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"background",
+     "XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"test",
+     "XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA":"background",
+     "XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA":"background",
+     "XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA":"background",
+     "XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"test",
+     "XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"background",
+     "XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"test",
+     "XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA":"background",
+     "XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"background",
+     "XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA":"background",
+     "XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA":"test",
+     "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"background",
+     "XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"test",
+     "XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA":"background",
+     "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"background",
+     "XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background",
+     "XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"background"
+    }
+  },
+ "timers":{
+   "Baseline model fitting":{
+     "order":2,
+     "timer":12
+    },
+   "Complexity analysis":{
+     "order":3,
+     "timer":74
+    },
+   "Full adaptive model fitting":{
+     "order":4,
+     "timer":28
+    },
+   "Overall":{
+     "order":0,
+     "timer":157
+    },
+   "Preliminary model fitting":{
+     "order":1,
+     "timer":0
+    },
+   "Testing for selection":{
+     "order":5,
+     "timer":43
+    }
+  }
+}
