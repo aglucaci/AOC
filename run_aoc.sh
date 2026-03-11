@@ -189,7 +189,8 @@ run_smk () {
     --latency-wait "${LATENCY_WAIT}" \
     ${RERUN_INCOMPLETE} \
     ${DRYRUN} --printshellcmds \
-    --config "samples_csv=${SAMPLES_CSV}"
+    --config "samples_csv=${SAMPLES_CSV}" \
+    --rerun-triggers mtime
   echo ""
 }
 

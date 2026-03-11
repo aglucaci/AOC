@@ -1,2 +1,2 @@
 Sample,Partition,test,k,p_value,LRT,selection_shift,status
-BDNF-64,1,RELAX,1.198113648748599,0.5175772868869419,0.4187182891500925,intensified,ok
+BDNF-64,1,RELAX,1,1,0,no_change,ok
