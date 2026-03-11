@@ -644,8 +644,9 @@ bash tests/test_installation.sh
 
 If you use AOC in your work, please cite:
 
-Lucaci AG, Pond SLK. AOC: Analysis of Orthologous Collections. 2024.
-
+```
+Lucaci AG, Pond SLK. AOC: Analysis of Orthologous Collections - an application for the characterization of natural selection in protein-coding sequences. ArXiv [Preprint]. 2024 Jun 13:arXiv:2406.09522v1. PMID: 38947939; PMCID: PMC11213150.
+```
 ---
 
 ## License
