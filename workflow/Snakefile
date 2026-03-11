@@ -17,7 +17,6 @@ import json
 import math
 import glob
 from pathlib import Path
-
 import pandas as pd
 import altair as alt
 from statsmodels.stats.multitest import fdrcorrection
@@ -660,7 +659,7 @@ rule MEME_partition:
     shell:
         r"""
         mkdir -p {OUTROOT}/{wildcards.sample}/selection/part{wildcards.part}
-        {HYPHY} MEME --alignment {input.aln} --tree {input.tree} --output {output.json} {params.branch_arg} > {log} 2>&1
+        {HYPHY} MEME --alignment {input.aln} --tree {input.tree} --output {output.json} {params.branch_arg} ENV=TOLERATE_NUMERICAL_ERRORS=1; > {log} 2>&1
         """
 
 rule ABSREL_partition:
