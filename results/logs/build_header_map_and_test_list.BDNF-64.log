@@ -1,0 +1,56 @@
+[INFO] sample=BDNF-64
+[INFO] labels=/Users/alex/Documents/AOC-develop/data/BDNF/BDNF-64.sequence_labels.csv
+[INFO] label_col=label, header_col=header
+[INFO] total_rows=64
+[INFO] test_rows=20
+[INFO] first_mappings:
+  - NM_001709.5 Homo sapiens brain derived neurotrophic factor (BDNF), transcript variant 4, mRNA -> NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA
+  - NM_001270630.1 Rattus norvegicus brain-derived neurotrophic factor (Bdnf), transcript variant 1, mRNA -> NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA
+  - NM_001048142.1 Mus musculus brain derived neurotrophic factor (Bdnf), transcript variant 4, mRNA -> NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA
+  - XM_015114598.2 PREDICTED: Macaca mulatta brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA
+  - XM_005654684.3 PREDICTED: Sus scrofa brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA
+[INFO] label_col=label, header_col=header
+[INFO] total_rows=64
+[INFO] test_rows=20
+[INFO] first_mappings:
+  - NM_001709.5 Homo sapiens brain derived neurotrophic factor (BDNF), transcript variant 4, mRNA -> NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA
+  - NM_001270630.1 Rattus norvegicus brain-derived neurotrophic factor (Bdnf), transcript variant 1, mRNA -> NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA
+  - NM_001048142.1 Mus musculus brain derived neurotrophic factor (Bdnf), transcript variant 4, mRNA -> NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA
+  - XM_015114598.2 PREDICTED: Macaca mulatta brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA
+  - XM_005654684.3 PREDICTED: Sus scrofa brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA
+[INFO] label_col=label, header_col=header
+[INFO] total_rows=64
+[INFO] test_rows=20
+[INFO] first_mappings:
+  - NM_001709.5 Homo sapiens brain derived neurotrophic factor (BDNF), transcript variant 4, mRNA -> NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA
+  - NM_001270630.1 Rattus norvegicus brain-derived neurotrophic factor (Bdnf), transcript variant 1, mRNA -> NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA
+  - NM_001048142.1 Mus musculus brain derived neurotrophic factor (Bdnf), transcript variant 4, mRNA -> NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA
+  - XM_015114598.2 PREDICTED: Macaca mulatta brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA
+  - XM_005654684.3 PREDICTED: Sus scrofa brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA
+[INFO] label_col=label, header_col=header
+[INFO] total_rows=64
+[INFO] test_rows=20
+[INFO] first_mappings:
+  - NM_001709.5 Homo sapiens brain derived neurotrophic factor (BDNF), transcript variant 4, mRNA -> NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA
+  - NM_001270630.1 Rattus norvegicus brain-derived neurotrophic factor (Bdnf), transcript variant 1, mRNA -> NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA
+  - NM_001048142.1 Mus musculus brain derived neurotrophic factor (Bdnf), transcript variant 4, mRNA -> NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA
+  - XM_015114598.2 PREDICTED: Macaca mulatta brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA
+  - XM_005654684.3 PREDICTED: Sus scrofa brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA
+[INFO] label_col=label, header_col=header
+[INFO] total_rows=64
+[INFO] test_rows=20
+[INFO] first_mappings:
+  - NM_001709.5 Homo sapiens brain derived neurotrophic factor (BDNF), transcript variant 4, mRNA -> NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA
+  - NM_001270630.1 Rattus norvegicus brain-derived neurotrophic factor (Bdnf), transcript variant 1, mRNA -> NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA
+  - NM_001048142.1 Mus musculus brain derived neurotrophic factor (Bdnf), transcript variant 4, mRNA -> NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA
+  - XM_015114598.2 PREDICTED: Macaca mulatta brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA
+  - XM_005654684.3 PREDICTED: Sus scrofa brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA
+[INFO] label_col=label, header_col=header
+[INFO] total_rows=64
+[INFO] test_rows=20
+[INFO] first_mappings:
+  - NM_001709.5 Homo sapiens brain derived neurotrophic factor (BDNF), transcript variant 4, mRNA -> NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA
+  - NM_001270630.1 Rattus norvegicus brain-derived neurotrophic factor (Bdnf), transcript variant 1, mRNA -> NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA
+  - NM_001048142.1 Mus musculus brain derived neurotrophic factor (Bdnf), transcript variant 4, mRNA -> NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA
+  - XM_015114598.2 PREDICTED: Macaca mulatta brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA
+  - XM_005654684.3 PREDICTED: Sus scrofa brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA -> XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA

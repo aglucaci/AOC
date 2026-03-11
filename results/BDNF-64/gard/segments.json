@@ -7,30 +7,30 @@
     {
       "part": 1,
       "start0": 0,
-      "end_excl": 339,
+      "end_excl": 369,
       "fasta": "results/BDNF-64/gard/segments/BDNF-64.part1.codon.fas",
-      "length": 339
+      "length": 369
     },
     {
       "part": 2,
-      "start0": 339,
+      "start0": 369,
       "end_excl": 414,
       "fasta": "results/BDNF-64/gard/segments/BDNF-64.part2.codon.fas",
-      "length": 75
+      "length": 45
     },
     {
       "part": 3,
       "start0": 414,
-      "end_excl": 516,
+      "end_excl": 519,
       "fasta": "results/BDNF-64/gard/segments/BDNF-64.part3.codon.fas",
-      "length": 102
+      "length": 105
     },
     {
       "part": 4,
-      "start0": 516,
+      "start0": 519,
       "end_excl": 1221,
       "fasta": "results/BDNF-64/gard/segments/BDNF-64.part4.codon.fas",
-      "length": 705
+      "length": 702
     }
   ]
 }
