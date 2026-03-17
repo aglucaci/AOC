@@ -98,6 +98,9 @@ while IFS= read -r jar_path; do
   staged_jar="${tmp_dir}/${jar_rel}"
   mkdir -p "$(dirname "${staged_jar}")"
   cp "${jar_path}" "${staged_jar}"
+
+  # Some MACSE launchers expect the jar to sit directly beside bin/macse.
+  cp "${jar_path}" "$(dirname "${tmp_macse}")/$(basename "${jar_path}")"
 done < <(find "${macse_root}" -maxdepth 6 -type f -iname '*macse*.jar')
 
 staged_jar_count="$(find "${tmp_dir}" -type f -iname '*macse*.jar' | wc -l | tr -d '[:space:]')"
