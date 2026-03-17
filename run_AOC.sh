@@ -5,8 +5,7 @@ set -euo pipefail
 # AOC one-shot local runner (samples.csv-driven)
 #
 # What it does:
-#   1) Ensures software/hyphy-analyses is present (clones if missing)
-#   2) Runs the AOC workflow(s) using a samples.csv file (no yq config editing)
+#   1) Runs the AOC workflow(s) using a samples.csv file (no yq config editing)
 #
 # Expected:
 #   - Your Snakefile(s) read the samples sheet via config key: samples_csv
@@ -145,7 +144,6 @@ run_smk () {
     --jobs "${JOBS}" \
     --cores "${CORES}" \
     ${KEEP_GOING} \
-    ${REASON} \
     --latency-wait "${LATENCY_WAIT}" \
     ${RERUN_INCOMPLETE} \
     ${DRYRUN} --printshellcmds \
