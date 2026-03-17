@@ -1,2 +1,9 @@
 log_dir: logs
 multitestcorr: fdr
+macse_heap_fraction: 0.875
+macse_heap_reserve_mb: 1024
+macse_min_heap_mb: 2048
+macse_xms_mb: 512
+# Optional overrides:
+# macse_mem_mb: 65536
+# macse_heap_mb: 57344

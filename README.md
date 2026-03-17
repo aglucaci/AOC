@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/aglucaci/AOC/refs/heads/develop/logo/aoc_logo.png" alt="AOC" width="400"/>
+  <img src="https://raw.githubusercontent.com/aglucaci/AOC/refs/heads/develop/logo/AOC_logo.png" alt="AOC" width="400"/>
 </p>
 
 # Analysis of Orthologous Collections (AOC)
@@ -60,7 +60,7 @@ AOC/
 ├── scripts/
 ├── tests/
 ├── envs/
-│   └── aoc.yaml
+│   └── AOC.yaml
 ├── install.sh
 ├── run_aoc.sh
 ├── submit_aoc.slurm
@@ -89,14 +89,14 @@ conda config --env --set subdir osx-64
 **Run installation script**
 
 ```
-bash install.sh aoc envs/aoc.yaml
+bash install.sh AOC envs/AOC.yaml
 ```
 
 ### Optional: Force a frontend
 
 ```bash
-FRONTEND_OVERRIDE=conda bash install.sh aoc envs/aoc.yaml
-FRONTEND_OVERRIDE=micromamba bash install.sh aoc envs/aoc.yaml
+FRONTEND_OVERRIDE=conda bash install.sh AOC envs/AOC.yaml
+FRONTEND_OVERRIDE=micromamba bash install.sh AOC envs/AOC.yaml
 ```
 
 After installation:
@@ -163,6 +163,8 @@ bash run_aoc.sh --samples samples.csv
 ```bash
 sbatch submit_aoc.slurm
 ```
+
+The example `submit_aoc.slurm` writes Slurm stdout/stderr to `aoc_<jobid>.out` and `aoc_<jobid>.err` in the submission directory, so no pre-existing `logs/` folder is required.
 
 ---
 

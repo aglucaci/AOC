@@ -19,14 +19,13 @@ set -euo pipefail
 #   --cores 8
 #   --jobs 4
 #   --snakefile workflow/Snakefile
-#   --selection workflow/Snakefile_SelectionAnalysis
-#   --summarize workflow/Snakefile_SummarizeResults
 #   --latency-wait 60
 #   --rerun-incomplete
 #   --dry-run
 # ------------------------------------------------------------------------------
 
 # Pretty banner
+if [[ -t 1 && -z "${SLURM_JOB_ID:-}" ]]; then
 clear || true
 echo ""
 cat <<'EOF'
@@ -38,11 +37,12 @@ cat <<'EOF'
     ╚═╝  ╚═╝  ╚═════╝   ╚═════╝
 EOF
 echo ""
+fi
 
 # -----------------------------
 # Defaults
 # -----------------------------
-SAMPLES_CSV=""
+SAMPLES_CSV="samples.csv"
 CORES="all"
 JOBS="4"
 LATENCY_WAIT="60"
@@ -52,11 +52,6 @@ RERUN_INCOMPLETE="--rerun-incomplete"
 DRYRUN=""
 
 SNAKEFILE_MAIN="workflow/Snakefile"
-SNAKEFILE_SELECTION="workflow/Snakefile_SelectionAnalysis"
-SNAKEFILE_SUMMARIZE="workflow/Snakefile_SummarizeResults"
-
-CLUSTER_CONFIG="config/cluster.json"   # kept for compatibility; safe to omit locally
-USE_CLUSTER_CONFIG="yes"
 
 WORKDIR=""
 
@@ -79,12 +74,6 @@ while [[ $# -gt 0 ]]; do
       LATENCY_WAIT="$2"; shift 2;;
     --snakefile)
       SNAKEFILE_MAIN="$2"; shift 2;;
-    --selection)
-      SNAKEFILE_SELECTION="$2"; shift 2;;
-    --summarize)
-      SNAKEFILE_SUMMARIZE="$2"; shift 2;;
-    --no-cluster-config)
-      USE_CLUSTER_CONFIG="no"; shift 1;;
     --workdir)
       WORKDIR="$2"; shift 2;;
     --no-rerun-incomplete)
@@ -103,9 +92,6 @@ Options:
   --jobs, -j             Snakemake --jobs value (default: 4)
   --latency-wait         Snakemake --latency-wait (default: 60)
   --snakefile            Main Snakefile path (default: workflow/Snakefile)
-  --selection            Selection-analysis Snakefile (default: workflow/Snakefile_SelectionAnalysis)
-  --summarize            Summarize-results Snakefile (default: workflow/Snakefile_SummarizeResults)
-  --no-cluster-config    Do not pass --cluster-config config/cluster.json
   --workdir              Change into this directory before running
   --no-rerun-incomplete  Disable --rerun-incomplete
   --dry-run, -n          Snakemake dry run
@@ -113,7 +99,7 @@ Options:
 
 Examples:
   bash scripts/run_aoc_samples.sh --samples samples.csv --cores 8 --jobs 4
-  bash scripts/run_aoc_samples.sh -s config/samples.csv --no-cluster-config
+  bash scripts/run_aoc_samples.sh -s config/samples.csv
 EOF
       exit 0;;
     *)
@@ -173,15 +159,9 @@ run_smk () {
   echo "# ${title}"
   echo "###############################################################################"
 
-  local cluster_args=()
-  if [[ "${USE_CLUSTER_CONFIG}" == "yes" && -f "${CLUSTER_CONFIG}" ]]; then
-    cluster_args=(--cluster-config "${CLUSTER_CONFIG}")
-  fi
-
   # Always pass samples_csv into config for the Snakefile(s) to consume.
   snakemake \
     -s "${snakefile}" \
-    "${cluster_args[@]}" \
     --jobs "${JOBS}" \
     --cores "${CORES}" \
     ${KEEP_GOING} \
@@ -198,7 +178,5 @@ run_smk () {
 # Run pipeline phases
 # -----------------------------
 run_smk "${SNAKEFILE_MAIN}"      "Running the AOC Snakemake pipeline (samples.csv)"
-#run_smk "${SNAKEFILE_SELECTION}" "Selection analyses (recombination-free)"
-#run_smk "${SNAKEFILE_SUMMARIZE}" "Visualization and summary"
 
 echo "[DONE] All requested phases finished."
