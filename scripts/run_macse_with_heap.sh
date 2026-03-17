@@ -52,12 +52,22 @@ if [[ ! -r "${macse_path}" ]]; then
 fi
 
 macse_dir="$(cd "$(dirname "${macse_path}")" && pwd -P)"
+macse_root="${macse_dir}"
+if [[ "$(basename "${macse_dir}")" == "bin" ]]; then
+  macse_root="$(cd "${macse_dir}/.." && pwd -P)"
+fi
+
 if ! tmp_dir="$(mktemp -d)"; then
   error "Failed to create temporary staging directory."
   exit 1
 fi
 
-tmp_macse="${tmp_dir}/$(basename "${macse_path}")"
+launcher_rel="${macse_path#${macse_root}/}"
+if [[ "${launcher_rel}" == "${macse_path}" ]]; then
+  launcher_rel="$(basename "${macse_path}")"
+fi
+
+tmp_macse="${tmp_dir}/${launcher_rel}"
 cleanup() {
   rm -rf "${tmp_dir}"
 }
@@ -69,28 +79,36 @@ if ! grep -q '^default_jvm_mem_opts=' "${macse_path}"; then
   exit 1
 fi
 
+mkdir -p "$(dirname "${tmp_macse}")"
 sed "s/^default_jvm_mem_opts=.*/default_jvm_mem_opts=\"-Xms${XMS_MB}m -Xmx${XMX_MB}m\"/" "${macse_path}" > "${tmp_macse}"
 chmod +x "${tmp_macse}"
 
-# MACSE launchers often resolve their jar relative to the script path ($0).
-# Keep adjacent jar files available next to the modified temporary launcher.
-jar_count="$(find "${macse_dir}" -maxdepth 1 -type f -name '*.jar' | wc -l | tr -d '[:space:]')"
+# MACSE launchers often resolve their resources relative to the script path ($0),
+# often from within a conda env rooted above bin/. Preserve that layout in the
+# temporary staging tree.
+jar_count="$(find "${macse_root}" -maxdepth 6 -type f -iname '*macse*.jar' | wc -l | tr -d '[:space:]')"
 if [[ "${jar_count}" == "0" ]]; then
-  error "No adjacent MACSE jar files were found next to launcher: ${macse_path}"
-  error "Expected to find files like macse_v*.jar in: ${macse_dir}"
+  error "No MACSE jar files were found under: ${macse_root}"
+  error "Expected to find files like macse_v*.jar somewhere under the active conda environment."
   exit 1
 fi
 
-find "${macse_dir}" -maxdepth 1 -type f -name '*.jar' -exec cp '{}' "${tmp_dir}/" ';'
+while IFS= read -r jar_path; do
+  jar_rel="${jar_path#${macse_root}/}"
+  staged_jar="${tmp_dir}/${jar_rel}"
+  mkdir -p "$(dirname "${staged_jar}")"
+  cp "${jar_path}" "${staged_jar}"
+done < <(find "${macse_root}" -maxdepth 6 -type f -iname '*macse*.jar')
 
-staged_jar_count="$(find "${tmp_dir}" -maxdepth 1 -type f -name '*.jar' | wc -l | tr -d '[:space:]')"
+staged_jar_count="$(find "${tmp_dir}" -type f -iname '*macse*.jar' | wc -l | tr -d '[:space:]')"
 if [[ "${staged_jar_count}" == "0" ]]; then
   error "Failed to stage MACSE jar files into temporary directory: ${tmp_dir}"
   exit 1
 fi
 
 echo "[INFO] MACSE launcher: ${macse_path}" >&2
-echo "[INFO] MACSE jar source dir: ${macse_dir}" >&2
+echo "[INFO] MACSE environment root: ${macse_root}" >&2
+echo "[INFO] Staged launcher path: ${tmp_macse}" >&2
 echo "[INFO] Staged ${staged_jar_count} jar file(s) with heap opts -Xms${XMS_MB}m -Xmx${XMX_MB}m" >&2
 
 "${tmp_macse}" "$@"
