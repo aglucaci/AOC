@@ -1,9 +1,59 @@
-log_dir: logs
-multitestcorr: fdr
+# AOC configuration
+#
+# Most users only need to change:
+# - `samples_csv` to point at their sample sheet
+# - `outdir` if they want results somewhere other than `results/`
+# - optional MACSE memory settings on large alignments
+
+# Core inputs / outputs
+samples_csv: samples.csv
+outdir: results
+
+# External executables
+# Leave these as-is if the tools are available on PATH in the AOC environment.
+hyphy: hyphy
+fasttree: FastTree
+macse_launcher: macse
+
+# Helper scripts / bundled resources
+# Only override these if you have moved files or want to use custom versions.
+remove_dups_bf: software/remove-duplicates/remove-duplicates.bf
+strike_ambigs_bf: scripts/strike-ambigs.bf
+label_tree_bf: software/LabelTrees/label-tree.bf
+make_test_list_py: scripts/make_sequence_header_map.py
+tn93_cluster_py: scripts/tn93_cluster.py
+merge_fel_py: scripts/MergeFELResults.py
+merge_meme_py: scripts/MergeMEMEResults.py
+exec_summary_py: scripts/ExecutiveSummary.py
+macse_runner: scripts/run_macse_with_heap.sh
+
+# TN93 clustering
+# `tn93_threshold` controls clustering stringency before GARD.
+# `tn93_max_seqs` limits how many sequences are retained per cluster.
+tn93_threshold: 0.01
+tn93_max_seqs: 20
+
+# Branch-label behavior
+# If true, samples that include a labels CSV must produce at least one Test sequence.
+require_test_sequences: false
+
+# MACSE Java memory tuning
+# Default behavior:
+# - detect Slurm memory if available
+# - otherwise fall back to `macse_min_heap_mb`
+# - set Java heap to roughly 87.5% of requested memory, keeping 1024 MB in reserve
 macse_heap_fraction: 0.875
 macse_heap_reserve_mb: 1024
 macse_min_heap_mb: 2048
 macse_xms_mb: 512
-# Optional overrides:
+
+# Optional explicit overrides for MACSE memory.
+# Uncomment these if automatic detection is not appropriate for your environment.
 # macse_mem_mb: 65536
 # macse_heap_mb: 57344
+
+# Legacy / compatibility keys
+# These are currently not consumed by the Snakefile, but are kept here so users
+# upgrading from older configs do not lose their placeholders immediately.
+log_dir: logs
+multitestcorr: fdr

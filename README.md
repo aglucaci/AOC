@@ -62,8 +62,8 @@ AOC/
 ├── envs/
 │   └── AOC.yaml
 ├── install.sh
-├── run_aoc.sh
-├── submit_aoc.slurm
+├── run_AOC.sh
+├── submit_AOC.slurm
 └── README.md
 ```
 
@@ -102,7 +102,7 @@ FRONTEND_OVERRIDE=micromamba bash install.sh AOC envs/AOC.yaml
 After installation:
 
 ```
-conda activate aoc
+conda activate AOC
 ```
 
 ---
@@ -153,7 +153,7 @@ Branches labeled “Test” represent the foreground lineages where a specific e
 From the root directory:
 
 ```bash
-bash run_aoc.sh --samples samples.csv
+bash run_AOC.sh --samples samples.csv
 ```
 
 ---
@@ -161,10 +161,10 @@ bash run_aoc.sh --samples samples.csv
 ## HPC Execution (SLURM Example)
 
 ```bash
-sbatch submit_aoc.slurm
+sbatch submit_AOC.slurm
 ```
 
-The example `submit_aoc.slurm` writes Slurm stdout/stderr to `aoc_<jobid>.out` and `aoc_<jobid>.err` in the submission directory, so no pre-existing `logs/` folder is required.
+The example `submit_AOC.slurm` writes Slurm stdout/stderr to `AOC_<jobid>.out` and `AOC_<jobid>.err` in the submission directory, so no pre-existing `logs/` folder is required.
 
 ---
 

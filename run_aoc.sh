@@ -13,7 +13,7 @@ set -euo pipefail
 #   - You run from the repo root (or pass --workdir)
 #
 # Usage:
-#   bash run_aoc.sh --samples samples.csv
+#   bash run_AOC.sh --samples samples.csv
 #
 # Optional:
 #   --cores 8
@@ -98,8 +98,8 @@ Options:
   --help, -h             Show this help
 
 Examples:
-  bash scripts/run_aoc_samples.sh --samples samples.csv --cores 8 --jobs 4
-  bash scripts/run_aoc_samples.sh -s config/samples.csv
+  bash scripts/run_AOC.sh --samples samples.csv --cores 8 --jobs 4
+  bash scripts/run_AOC.sh -s config/samples.csv
 EOF
       exit 0;;
     *)
@@ -122,26 +122,6 @@ if [[ ! -f "${SAMPLES_CSV}" ]]; then
   echo "[ERROR] samples.csv not found: ${SAMPLES_CSV}" >&2
   exit 2
 fi
-
-# -----------------------------
-# Ensure hyphy-analyses exists
-# -----------------------------
-#FOLDER="software/hyphy-analyses"
-#URL="https://github.com/veg/hyphy-analyses.git"
-
-#if [[ ! -d "${FOLDER}" ]]; then
-#  echo "[INFO] Cloning hyphy-analyses into ${FOLDER} ..."
-#  mkdir -p "$(dirname "${FOLDER}")"
-#  git clone "${URL}" "${FOLDER}"
-#else
-#  echo "[INFO] Found ${FOLDER} (skipping clone)"
-#fi
-
-# -----------------------------
-# Logs dir
-# -----------------------------
-# Handled internally in results/<sample>/logs
-#mkdir -p logs
 
 # -----------------------------
 # Snakemake wrapper

@@ -280,8 +280,7 @@ rule all:
         expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_CFEL_Results.csv"), sample=SAMPLES),
         expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.selection_overview.csv"), sample=SAMPLES),
         expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.FEL.merged.png"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.MEME.merged.png"), sample=SAMPLES),
-        #expand(os.path.join(str(OUTROOT), "{sample}", "summary", "executive_summary.html"), sample=SAMPLES),
+        expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.MEME.merged.png"), sample=SAMPLES)
 
 ###############################################################################
 # Preprocessing

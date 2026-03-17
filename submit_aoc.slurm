@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=AOC
-#SBATCH --output=aoc_%j.out
-#SBATCH --error=aoc_%j.err
+#SBATCH --output=AOC_%j.out
+#SBATCH --error=AOC_%j.err
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=32
@@ -20,7 +20,7 @@ cd "${SLURM_SUBMIT_DIR}"
 
 # Activate your env (edit env name)
 source "$(conda info --base)/etc/profile.d/conda.sh"
-conda activate aoc
+conda activate AOC
 
 # --- Run AOC (samples.csv-driven) ---
 # Uses your runner behavior: --config samples_csv=...
@@ -33,7 +33,7 @@ CORES="${SLURM_CPUS_PER_TASK:-16}"
 # Jobs = how many rules Snakemake can have in flight (can be > cores if many IO-bound steps)
 JOBS="${2:-20}"
 
-bash run_aoc.sh \
+bash run_AOC.sh \
   --samples "${SAMPLES_CSV}" \
   --cores "${CORES}" \
   --jobs "${JOBS}" \
