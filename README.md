@@ -25,7 +25,7 @@ AOC integrates:
 
 The workflow is designed for both local execution and HPC environments, and scales across many ortholog datasets via a `samples.csv` configuration.
 
-## Statment of Need
+## Statement of Need
 While individual HyPhy analyses can be run through DataMonkey or the HyPhy command line, AOC is designed for reproducible large-scale analyses across many genes or datasets. It automates alignment preparation, phylogenetic inference, branch labeling, multiple selection tests, and standardized result aggregation within a single workflow.
 
 ---
