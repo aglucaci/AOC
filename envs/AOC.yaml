@@ -1,4 +1,4 @@
-name: aoc
+name: AOC
 channels:
   - conda-forge
   - bioconda

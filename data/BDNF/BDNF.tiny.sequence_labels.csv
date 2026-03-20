@@ -1,9 +1,0 @@
-label,fasta_sequence_header
-Test,"NM_001709.5 Homo sapiens brain derived neurotrophic factor (BDNF), transcript variant 4, mRNA"
-Test,"NM_001270630.1 Rattus norvegicus brain-derived neurotrophic factor (Bdnf), transcript variant 1, mRNA"
-Test,"NM_001048142.1 Mus musculus brain derived neurotrophic factor (Bdnf), transcript variant 4, mRNA"
-Test,"XM_015114598.2 PREDICTED: Macaca mulatta brain derived neurotrophic factor (BDNF), transcript variant X1, mRNA"
-Background,"XM_011226480.3 PREDICTED: Ailuropoda melanoleuca brain derived neurotrophic factor (BDNF), mRNA"
-Background,"XM_007497196.2 PREDICTED: Monodelphis domestica brain-derived neurotrophic factor (BDNF), transcript variant X1, mRNA"
-Background,"NM_001081787.1 Equus caballus brain derived neurotrophic factor (BDNF), mRNA"
-Background,"XM_005578346.2 PREDICTED: Macaca fascicularis brain-derived neurotrophic factor (BDNF), transcript variant X1, mRNA"

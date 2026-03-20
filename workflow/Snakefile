@@ -22,6 +22,9 @@ import altair as alt
 from statsmodels.stats.multitest import fdrcorrection
 from Bio import SeqIO
 
+# These plots are rendered locally with vl-convert, so allow larger in-memory datasets.
+alt.data_transformers.disable_max_rows()
+
 ###############################################################################
 # Config + samples
 ###############################################################################
@@ -52,6 +55,49 @@ EXEC_SUMMARY_PY = config.get("exec_summary_py", "scripts/ExecutiveSummary.py")
 # Logging
 LOGDIR = os.path.join(str(OUTROOT), "logs")
 os.makedirs(LOGDIR, exist_ok=True)
+
+MACSE_LAUNCHER = config.get("macse_launcher", "macse")
+MACSE_HEAP_FRACTION = float(config.get("macse_heap_fraction", 0.875))
+MACSE_HEAP_RESERVE_MB = int(config.get("macse_heap_reserve_mb", 1024))
+MACSE_MIN_HEAP_MB = int(config.get("macse_min_heap_mb", 2048))
+MACSE_XMS_MB = int(config.get("macse_xms_mb", 512))
+MACSE_RUNNER = config.get("macse_runner", "scripts/run_macse_with_heap.sh")
+
+def _coerce_int(value):
+    try:
+        return int(str(value).strip())
+    except (TypeError, ValueError, AttributeError):
+        return None
+
+def _slurm_mem_mb():
+    per_node = _coerce_int(os.environ.get("SLURM_MEM_PER_NODE"))
+    if per_node:
+        return per_node
+
+    per_cpu = _coerce_int(os.environ.get("SLURM_MEM_PER_CPU"))
+    cpus = _coerce_int(os.environ.get("SLURM_CPUS_PER_TASK"))
+    if per_cpu and cpus:
+        return per_cpu * cpus
+
+    return None
+
+def _macse_requested_mem_mb():
+    explicit = _coerce_int(config.get("macse_mem_mb"))
+    if explicit:
+        return explicit
+    return _slurm_mem_mb() or MACSE_MIN_HEAP_MB
+
+def _macse_heap_mb():
+    explicit_heap = _coerce_int(config.get("macse_heap_mb"))
+    if explicit_heap:
+        return explicit_heap
+
+    requested = _macse_requested_mem_mb()
+    baseline = min(MACSE_MIN_HEAP_MB, requested)
+    heap_from_fraction = int(requested * MACSE_HEAP_FRACTION)
+    heap_after_reserve = requested - MACSE_HEAP_RESERVE_MB
+    usable = min(heap_from_fraction, heap_after_reserve) if heap_after_reserve > 0 else heap_from_fraction
+    return max(baseline, min(requested, usable))
 
 ###############################################################################
 # Read samples.csv (must include: sample, codon_fasta, sequence_labels_csv)
@@ -234,8 +280,7 @@ rule all:
         expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_CFEL_Results.csv"), sample=SAMPLES),
         expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.selection_overview.csv"), sample=SAMPLES),
         expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.FEL.merged.png"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.MEME.merged.png"), sample=SAMPLES),
-        #expand(os.path.join(str(OUTROOT), "{sample}", "summary", "executive_summary.html"), sample=SAMPLES),
+        expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.MEME.merged.png"), sample=SAMPLES)
 
 ###############################################################################
 # Preprocessing
@@ -282,15 +327,27 @@ rule macse:
     output:
         codons=os.path.join(str(OUTROOT), "{sample}", "{sample}.codons.fa"),
         aa=os.path.join(str(OUTROOT), "{sample}", "{sample}.aa.fa"),
+    params:
+        launcher=MACSE_LAUNCHER,
+        runner=MACSE_RUNNER,
+        xms_mb=MACSE_XMS_MB,
+        xmx_mb=_macse_heap_mb(),
+    resources:
+        mem_mb=_macse_requested_mem_mb(),
     log:
         os.path.join(LOGDIR, "macse.{sample}.log")
     shell:
         r"""
         mkdir -p {OUTROOT}/{wildcards.sample}
-        macse -prog alignSequences \
-          -seq {input.fasta} \
-          -out_NT {output.codons} \
-          -out_AA {output.aa} \
+        bash "{params.runner}" \
+          --macse-bin "{params.launcher}" \
+          --xms-mb {params.xms_mb} \
+          --xmx-mb {params.xmx_mb} \
+          -- \
+          -prog alignSequences \
+          -seq "{input.fasta}" \
+          -out_NT "{output.codons}" \
+          -out_AA "{output.aa}" \
           -max_refine_iter 3 \
           -local_realign_init 0.3 \
           -local_realign_dec 0.2 \
