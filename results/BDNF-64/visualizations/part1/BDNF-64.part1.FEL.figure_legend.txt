@@ -1,1 +1,0 @@
-FEL identified 2 significant codon sites in BDNF-64 partition 1 at FDR <= 0.10, including 0 sites with dN/dS > 1 and 2 sites with dN/dS < 1.
