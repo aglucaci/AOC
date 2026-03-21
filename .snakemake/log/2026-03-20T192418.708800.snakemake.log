@@ -1,0 +1,164 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: Alexs-MacBook-Pro-2.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                               count
+------------------------------  -------
+MergeABSRELCSVs                       1
+MergeBUSTEDS_MH_CSVs                  1
+MergeCFELCSVs                         1
+MergeFELCSVs                          1
+MergeMEMECSVs                         1
+MergeRELAXCSVs                        1
+PlotFELMerge                          1
+PlotMEMEMerge                         1
+SelectionOverviewTable                1
+all                                   1
+build_header_map_and_test_list        1
+cln                                   1
+macse                                 1
+parse_gard                            1
+recombination                         1
+remove_duplicates_msa                 1
+run_selection_all_partitions          1
+strike_ambigs_msa                     1
+tn93_cluster                          1
+total                                19
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: PULP_CBC_CMD: Not Available (check permissions on cbc)
+Execute 2 jobs...
+[Fri Mar 20 19:24:19 2026]
+localrule macse:
+    input: /Users/alex/Documents/AOC-develop-new-snakemake/data/BDNF/BDNF-64.fasta
+    output: results/BDNF-64/BDNF-64.codons.fa, results/BDNF-64/BDNF-64.aa.fa
+    log: results/logs/macse.BDNF-64.log
+    jobid: 4
+    reason: Missing output files: results/BDNF-64/BDNF-64.codons.fa
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T, mem_mb=2048, mem_mib=1954
+Shell command: 
+        mkdir -p results/BDNF-64
+        bash "scripts/run_macse_with_heap.sh" \
+          --macse-bin "macse" \
+          --xms-mb 512 \
+          --xmx-mb 2048 \
+          -- \
+          -prog alignSequences \
+          -seq "/Users/alex/Documents/AOC-develop-new-snakemake/data/BDNF/BDNF-64.fasta" \
+          -out_NT "results/BDNF-64/BDNF-64.codons.fa" \
+          -out_AA "results/BDNF-64/BDNF-64.aa.fa" \
+          -max_refine_iter 3 \
+          -local_realign_init 0.3 \
+          -local_realign_dec 0.2 \
+          > results/logs/macse.BDNF-64.log 2>&1
+        
+[Fri Mar 20 19:24:19 2026]
+localrule build_header_map_and_test_list:
+    input: /Users/alex/Documents/AOC-develop-new-snakemake/data/BDNF/BDNF-64.sequence_labels.csv
+    output: results/BDNF-64/BDNF-64.sequence_header_map.csv, results/BDNF-64/BDNF-64.test_sequences.txt
+    log: results/logs/build_header_map_and_test_list.BDNF-64.log
+    jobid: 9
+    reason: Missing output files: results/BDNF-64/BDNF-64.sequence_header_map.csv, results/BDNF-64/BDNF-64.test_sequences.txt
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 19:24:22 2026]
+Finished jobid: 9 (Rule: build_header_map_and_test_list)
+1 of 19 steps (5%) done
+[Fri Mar 20 19:24:37 2026]
+Finished jobid: 4 (Rule: macse)
+2 of 19 steps (11%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 19:24:37 2026]
+localrule cln:
+    input: results/BDNF-64/BDNF-64.codons.fa
+    output: results/BDNF-64/BDNF-64.codons.cln.fa
+    log: results/logs/cln.BDNF-64.log
+    jobid: 3
+    reason: Missing output files: results/BDNF-64/BDNF-64.codons.cln.fa; Input files updated by another job: results/BDNF-64/BDNF-64.codons.fa
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        hyphy CLN Universal results/BDNF-64/BDNF-64.codons.fa 'No/No' results/BDNF-64/BDNF-64.codons.cln.fa > results/logs/cln.BDNF-64.log 2>&1
+        
+[Fri Mar 20 19:24:37 2026]
+Finished jobid: 3 (Rule: cln)
+3 of 19 steps (16%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 19:24:37 2026]
+localrule strike_ambigs_msa:
+    input: results/BDNF-64/BDNF-64.codons.cln.fa
+    output: results/BDNF-64/BDNF-64.SA.codons.cln.fa
+    log: results/logs/strike_ambigs_msa.BDNF-64.log
+    jobid: 2
+    reason: Missing output files: results/BDNF-64/BDNF-64.SA.codons.cln.fa; Input files updated by another job: results/BDNF-64/BDNF-64.codons.cln.fa
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        hyphy scripts/strike-ambigs.bf --alignment results/BDNF-64/BDNF-64.codons.cln.fa --output results/BDNF-64/BDNF-64.SA.codons.cln.fa > results/logs/strike_ambigs_msa.BDNF-64.log 2>&1
+        
+[Fri Mar 20 19:24:37 2026]
+Finished jobid: 2 (Rule: strike_ambigs_msa)
+4 of 19 steps (21%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 19:24:37 2026]
+localrule remove_duplicates_msa:
+    input: results/BDNF-64/BDNF-64.SA.codons.cln.fa
+    output: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa
+    log: results/logs/remove_duplicates_msa.BDNF-64.log
+    jobid: 1
+    reason: Missing output files: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa; Input files updated by another job: results/BDNF-64/BDNF-64.SA.codons.cln.fa
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        hyphy software/remove-duplicates/remove-duplicates.bf --msa results/BDNF-64/BDNF-64.SA.codons.cln.fa --output results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa ENV='DATA_FILE_PRINT_FORMAT=9' > results/logs/remove_duplicates_msa.BDNF-64.log 2>&1
+        
+[Fri Mar 20 19:24:37 2026]
+Finished jobid: 1 (Rule: remove_duplicates_msa)
+5 of 19 steps (26%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 19:24:37 2026]
+localrule tn93_cluster:
+    input: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa
+    output: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.json, results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta
+    log: results/logs/tn93_cluster.BDNF-64.log
+    jobid: 6
+    reason: Missing output files: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta; Input files updated by another job: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        python scripts/tn93_cluster.py \
+          --input results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa \
+          --output_fasta results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta \
+          --output_json results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.json \
+          --threshold 0.01 \
+          --max_retain 20 \
+          > results/logs/tn93_cluster.BDNF-64.log 2>&1
+        
+[Fri Mar 20 19:24:38 2026]
+Finished jobid: 6 (Rule: tn93_cluster)
+6 of 19 steps (32%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 19:24:38 2026]
+localrule recombination:
+    input: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta
+    output: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta.GARD.json, results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta.best-gard
+    log: results/logs/recombination.BDNF-64.log
+    jobid: 5
+    reason: Missing output files: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta.best-gard; Input files updated by another job: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        hyphy GARD --alignment results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta --rv GDD --output results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta.GARD.json --mode Faster \
+          ENV=TOLERATE_NUMERICAL_ERRORS=1 > results/logs/recombination.BDNF-64.log 2>&1
+        

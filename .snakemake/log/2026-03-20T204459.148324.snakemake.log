@@ -1,0 +1,187 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: Alexs-MacBook-Pro-2.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                             count
+----------------------------  -------
+MergeABSRELCSVs                     1
+MergeBUSTEDS_MH_CSVs                1
+MergeCFELCSVs                       1
+MergeFELCSVs                        1
+MergeMEMECSVs                       1
+MergeRELAXCSVs                      1
+PlotFELMerge                        1
+PlotMEMEMerge                       1
+SelectionOverviewTable              1
+all                                 1
+parse_gard                          1
+run_selection_all_partitions        1
+total                              12
+
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 20:45:00 2026]
+localcheckpoint parse_gard:
+    input: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa.cluster.fasta.best-gard, results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa
+    output: results/BDNF-64/gard/segments.json, results/BDNF-64/gard/segments, results/BDNF-64/BDNF-64.gard.log
+    jobid: 8
+    reason: Missing output files: <TBD>
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+DAG of jobs will be updated after completion.
+[Fri Mar 20 20:45:04 2026]
+Finished jobid: 8 (Rule: parse_gard)
+1 of 12 steps (8%) done
+Updating checkpoint dependencies.
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: PULP_CBC_CMD: Not Available (check permissions on cbc)
+Execute 4 jobs...
+[Fri Mar 20 20:45:04 2026]
+localrule iqtree_partition:
+    input: results/BDNF-64/gard/segments/BDNF-64.part2.codon.fas
+    output: results/BDNF-64/selection/part2/IQ-TREE.treefile
+    log: results/logs/iqtree_partition.BDNF-64.part2.log
+    jobid: 45
+    reason: Missing output files: results/BDNF-64/selection/part2/IQ-TREE.treefile
+    wildcards: sample=BDNF-64, part=2
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        mkdir -p results/BDNF-64/selection/part2
+        iqtree \
+          -s results/BDNF-64/gard/segments/BDNF-64.part2.codon.fas \
+          -st DNA \
+          -m GTR+G \
+          -nt AUTO \
+          --prefix results/BDNF-64/selection/part2/IQ-TREE \
+          --redo \
+          > results/logs/iqtree_partition.BDNF-64.part2.log 2>&1
+        
+[Fri Mar 20 20:45:04 2026]
+localrule iqtree_partition:
+    input: results/BDNF-64/gard/segments/BDNF-64.part4.codon.fas
+    output: results/BDNF-64/selection/part4/IQ-TREE.treefile
+    log: results/logs/iqtree_partition.BDNF-64.part4.log
+    jobid: 61
+    reason: Missing output files: results/BDNF-64/selection/part4/IQ-TREE.treefile
+    wildcards: sample=BDNF-64, part=4
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        mkdir -p results/BDNF-64/selection/part4
+        iqtree \
+          -s results/BDNF-64/gard/segments/BDNF-64.part4.codon.fas \
+          -st DNA \
+          -m GTR+G \
+          -nt AUTO \
+          --prefix results/BDNF-64/selection/part4/IQ-TREE \
+          --redo \
+          > results/logs/iqtree_partition.BDNF-64.part4.log 2>&1
+        
+[Fri Mar 20 20:45:04 2026]
+localrule iqtree_partition:
+    input: results/BDNF-64/gard/segments/BDNF-64.part3.codon.fas
+    output: results/BDNF-64/selection/part3/IQ-TREE.treefile
+    log: results/logs/iqtree_partition.BDNF-64.part3.log
+    jobid: 53
+    reason: Missing output files: results/BDNF-64/selection/part3/IQ-TREE.treefile
+    wildcards: sample=BDNF-64, part=3
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        mkdir -p results/BDNF-64/selection/part3
+        iqtree \
+          -s results/BDNF-64/gard/segments/BDNF-64.part3.codon.fas \
+          -st DNA \
+          -m GTR+G \
+          -nt AUTO \
+          --prefix results/BDNF-64/selection/part3/IQ-TREE \
+          --redo \
+          > results/logs/iqtree_partition.BDNF-64.part3.log 2>&1
+        
+[Fri Mar 20 20:45:04 2026]
+localrule iqtree_partition:
+    input: results/BDNF-64/gard/segments/BDNF-64.part1.codon.fas
+    output: results/BDNF-64/selection/part1/IQ-TREE.treefile
+    log: results/logs/iqtree_partition.BDNF-64.part1.log
+    jobid: 37
+    reason: Missing output files: results/BDNF-64/selection/part1/IQ-TREE.treefile
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        mkdir -p results/BDNF-64/selection/part1
+        iqtree \
+          -s results/BDNF-64/gard/segments/BDNF-64.part1.codon.fas \
+          -st DNA \
+          -m GTR+G \
+          -nt AUTO \
+          --prefix results/BDNF-64/selection/part1/IQ-TREE \
+          --redo \
+          > results/logs/iqtree_partition.BDNF-64.part1.log 2>&1
+        
+RuleException:
+CalledProcessError in file "/Users/alex/Documents/AOC-develop-new-snakemake/workflow/rules/selection.smk", line 22:
+Command 'set -euo pipefail;  
+        mkdir -p results/BDNF-64/selection/part2
+        iqtree \
+          -s results/BDNF-64/gard/segments/BDNF-64.part2.codon.fas \
+          -st DNA \
+          -m GTR+G \
+          -nt AUTO \
+          --prefix results/BDNF-64/selection/part2/IQ-TREE \
+          --redo \
+          > results/logs/iqtree_partition.BDNF-64.part2.log 2>&1' returned non-zero exit status 2.
+[Fri Mar 20 20:45:04 2026]
+Error in rule iqtree_partition:
+    message: None
+    jobid: 45
+    input: results/BDNF-64/gard/segments/BDNF-64.part2.codon.fas
+    output: results/BDNF-64/selection/part2/IQ-TREE.treefile
+    log: results/logs/iqtree_partition.BDNF-64.part2.log (check log file(s) for error details)
+    shell:
+        
+        mkdir -p results/BDNF-64/selection/part2
+        iqtree \
+          -s results/BDNF-64/gard/segments/BDNF-64.part2.codon.fas \
+          -st DNA \
+          -m GTR+G \
+          -nt AUTO \
+          --prefix results/BDNF-64/selection/part2/IQ-TREE \
+          --redo \
+          > results/logs/iqtree_partition.BDNF-64.part2.log 2>&1
+        
+        (command exited with non-zero exit code)
+RuleException:
+CalledProcessError in file "/Users/alex/Documents/AOC-develop-new-snakemake/workflow/rules/selection.smk", line 22:
+Command 'set -euo pipefail;  
+        mkdir -p results/BDNF-64/selection/part1
+        iqtree \
+          -s results/BDNF-64/gard/segments/BDNF-64.part1.codon.fas \
+          -st DNA \
+          -m GTR+G \
+          -nt AUTO \
+          --prefix results/BDNF-64/selection/part1/IQ-TREE \
+          --redo \
+          > results/logs/iqtree_partition.BDNF-64.part1.log 2>&1' returned non-zero exit status 2.
+[Fri Mar 20 20:45:04 2026]
+Error in rule iqtree_partition:
+    message: None
+    jobid: 37
+    input: results/BDNF-64/gard/segments/BDNF-64.part1.codon.fas
+    output: results/BDNF-64/selection/part1/IQ-TREE.treefile
+    log: results/logs/iqtree_partition.BDNF-64.part1.log (check log file(s) for error details)
+    shell:
+        
+        mkdir -p results/BDNF-64/selection/part1
+        iqtree \
+          -s results/BDNF-64/gard/segments/BDNF-64.part1.codon.fas \
+          -st DNA \
+          -m GTR+G \
+          -nt AUTO \
+          --prefix results/BDNF-64/selection/part1/IQ-TREE \
+          --redo \
+          > results/logs/iqtree_partition.BDNF-64.part1.log 2>&1
+        
+        (command exited with non-zero exit code)

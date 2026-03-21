@@ -1,0 +1,43 @@
+Traceback (most recent call last):
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/cli.py", line 2105, in args_to_api
+    dag_api = workflow_api.dag(
+              ^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/api.py", line 344, in dag
+    return DAGApi(
+           ^^^^^^^
+
+  File "<string>", line 6, in __init__
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/api.py", line 449, in __post_init__
+    self.workflow_api._workflow.dag_settings = self.dag_settings
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/api.py", line 394, in _workflow
+    workflow = self._get_workflow()
+               ^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/api.py", line 409, in _get_workflow
+    return Workflow(
+           ^^^^^^^^^
+
+  File "<string>", line 21, in __init__
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/workflow.py", line 211, in __post_init__
+    self._sourcecache = SourceCache(
+                        ^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/sourcecache.py", line 365, in __init__
+    self.runtime_cache = tempfile.TemporaryDirectory(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/tempfile.py", line 871, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/tempfile.py", line 385, in mkdtemp
+    _os.mkdir(file, 0o700)
+
+PermissionError: [Errno 1] Operation not permitted: '/Users/alex/Library/Caches/snakemake/snakemake/source-cache/runtime-cache/tmp3vku68dc'
+

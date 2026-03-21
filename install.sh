@@ -140,6 +140,7 @@ if [ $RC -ne 0 ]; then
 fi
 
 echo "[install] environment ready: ${ENV_NAME}"
+echo "[install] expected Snakemake major line: 9.x"
 
 # --- install hyphy-analyses (bf files)
 #if [ ! -d "software/hyphy-analyses" ]; then

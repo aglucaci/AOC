@@ -1,0 +1,16 @@
+{
+  "sample": "BDNF-64",
+  "msa": "results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa",
+  "bestgard": null,
+  "recombination_enabled": false,
+  "n_parts": 1,
+  "parts": [
+    {
+      "part": 1,
+      "start0": 0,
+      "end_excl": 1221,
+      "fasta": "results/BDNF-64/gard/segments/BDNF-64.part1.codon.fas",
+      "length": 1221
+    }
+  ]
+}

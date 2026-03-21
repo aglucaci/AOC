@@ -1,0 +1,246 @@
+
+Analysis Description
+--------------------
+FEL (Fixed Effects Likelihood) estimates site-wise synonymous (&alpha;)
+and non-synonymous (&beta;) rates, and uses a likelihood ratio test to
+determine if beta &neq; alpha at a site. The estimates aggregate
+information over all branches, so the signal is derived from pervasive
+diversification or conservation. A subset of branches can be selected
+for testing as well, in which case an additional (nuisance) parameter
+will be inferred -- the non-synonymous rate on branches NOT selected for
+testing. Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. Version 2.5 adds MH support. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Not So Different After All: A Comparison of Methods for Detecting Amino
+Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222
+
+- __Written by__: Sergei L Kosakovsky Pond and Simon DW Frost
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.5
+
+
+>code => Universal
+/Users/alex/Documents/AOC-develop-new-snakemake/results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile
+results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile
+
+>Loaded a multiple sequence alignment with **60** sequences, **407** codons, and **1** partitions from `/Users/alex/Documents/AOC-develop-new-snakemake/results/BDNF-64/selection/part1/partition.filtered.codon.fas`
+
+>branches => All
+
+>srv => Yes
+
+>multiple-hits => None
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+>ci => Yes
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample => 0
+
+
+### Branches to include in the FEL analysis
+Selected 117 branches to include in FEL calculations: `NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA, XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA, XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA, Node17, XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node16, Node14, Node12, XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA, Node11, XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node10, Node8, XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node24, XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node29, Node27, Node23, Node7, XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node34, Node32, Node6, XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA, XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node42, XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node46, XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA, Node45, Node41, XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node53, Node51, XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node50, Node40, XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA, Node57, Node39, NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA, Node38, XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node67, XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node66, XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node65, XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node73, XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node72, Node64, XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node63, XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node82, NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA, XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node87, XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node86, NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA, XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node91, Node85, Node81, XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node80, XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node79, XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node78, Node62, XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node102, XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA, Node101, XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node100, XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node99, Node97, Node61, Node37, Node5, XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA, Node112, XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA, Node111, Node109, XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA, Node108, Node4, Node2, NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA`
+
+>precision => standard
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 3 zero-length internal branches: `Node16, Node17, Node45`
+* Log(L) = -10677.29, AIC-c = 21605.01 (125 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.161
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -10215.33, AIC-c = 20690.04 (129 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.246
+* non-synonymous/synonymous rate ratio for *test* =   0.2530
+
+>full-model => Yes
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -10189.16, AIC-c = 20637.69 (129 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.240
+* non-synonymous/synonymous rate ratio for *test* =   0.2308
+
+### For partition 1 these sites are significant at p <=0.1
+
+|     Codon      |   Partition    |     alpha      |      beta      |      LRT       |Selection detected?|dN/dS with confidence intervals|
+|:--------------:|:--------------:|:--------------:|:--------------:|:--------------:|:-----------------:|:-----------------------------:|
+|       [31m10[0m       |       [31m1[0m        |   [31m     0.000[0m   |   [31m     1.550[0m   |   [31m     4.160[0m   |  [31mPos. p = 0.0414[0m  |  [31m10000.000(7254.27-10000.00)[0m  |
+|       [31m52[0m       |       [31m1[0m        |   [31m     0.802[0m   |   [31m     3.155[0m   |   [31m     2.820[0m   |  [31mPos. p = 0.0931[0m  |   [31m  3.933(   1.65-   9.32)[0m    |
+|       [32m53[0m       |       [32m1[0m        |   [32m    11.327[0m   |   [32m     1.654[0m   |   [32m     3.162[0m   |  [32mNeg. p = 0.0754[0m  |   [32m  0.146(   0.06-   0.34)[0m    |
+|       [31m57[0m       |       [31m1[0m        |   [31m     0.000[0m   |   [31m     3.030[0m   |   [31m     5.089[0m   |  [31mPos. p = 0.0241[0m  |  [31m10000.000(8195.02-10000.00)[0m  |
+|       [31m61[0m       |       [31m1[0m        |   [31m     0.000[0m   |   [31m     1.741[0m   |   [31m     2.896[0m   |  [31mPos. p = 0.0888[0m  |  [31m10000.000(7569.98-10000.00)[0m  |
+|       [32m64[0m       |       [32m1[0m        |   [32m     4.295[0m   |   [32m     0.700[0m   |   [32m     3.538[0m   |  [32mNeg. p = 0.0600[0m  |   [32m  0.163(   0.04-   0.46)[0m    |
+|       [31m65[0m       |       [31m1[0m        |   [31m     0.000[0m   |   [31m     1.558[0m   |   [31m     3.004[0m   |  [31mPos. p = 0.0831[0m  |  [31m10000.000(7808.91-10000.00)[0m  |
+|       [32m83[0m       |       [32m1[0m        |   [32m     4.966[0m   |   [32m     0.580[0m   |   [32m     4.604[0m   |  [32mNeg. p = 0.0319[0m  |   [32m  0.117(   0.03-   0.31)[0m    |
+|      [32m109[0m       |       [32m1[0m        |   [32m    12.731[0m   |   [32m     1.367[0m   |   [32m     3.244[0m   |  [32mNeg. p = 0.0717[0m  |   [32m  0.107(   0.04-   0.24)[0m    |
+|      [31m121[0m       |       [31m1[0m        |   [31m     0.000[0m   |   [31m     1.893[0m   |   [31m     2.897[0m   |  [31mPos. p = 0.0888[0m  |  [31m10000.000(5238.62-10000.00)[0m  |
+|      [31m133[0m       |       [31m1[0m        |   [31m     0.773[0m   |   [31m     5.714[0m   |   [31m     3.975[0m   |  [31mPos. p = 0.0462[0m  |   [31m  7.395(   3.85-  14.47)[0m    |
+|      [31m135[0m       |       [31m1[0m        |   [31m     0.000[0m   |   [31m     2.220[0m   |   [31m     4.343[0m   |  [31mPos. p = 0.0372[0m  |  [31m10000.000(8717.88-10000.00)[0m  |
+|      [32m142[0m       |       [32m1[0m        |   [32m     0.644[0m   |   [32m     0.000[0m   |   [32m     3.943[0m   |  [32mNeg. p = 0.0471[0m  |   [32m  0.000(   0.00-   0.30)[0m    |
+|      [32m152[0m       |       [32m1[0m        |   [32m     0.311[0m   |   [32m     0.000[0m   |   [32m     4.025[0m   |  [32mNeg. p = 0.0448[0m  |   [32m  0.000(   0.00-   0.55)[0m    |
+|      [32m157[0m       |       [32m1[0m        |   [32m     0.351[0m   |   [32m     0.000[0m   |   [32m     3.706[0m   |  [32mNeg. p = 0.0542[0m  |   [32m  0.000(   0.00-   0.63)[0m    |
+|      [32m159[0m       |       [32m1[0m        |   [32m     0.952[0m   |   [32m     0.000[0m   |   [32m     7.961[0m   |  [32mNeg. p = 0.0048[0m  |   [32m  0.000(   0.00-   0.15)[0m    |
+|      [32m163[0m       |       [32m1[0m        |   [32m     0.573[0m   |   [32m     0.000[0m   |   [32m     4.033[0m   |  [32mNeg. p = 0.0446[0m  |   [32m  0.000(   0.00-   0.29)[0m    |
+|      [32m164[0m       |       [32m1[0m        |   [32m     0.491[0m   |   [32m     0.000[0m   |   [32m     6.299[0m   |  [32mNeg. p = 0.0121[0m  |   [32m  0.000(   0.00-   0.34)[0m    |
+|      [32m165[0m       |       [32m1[0m        |   [32m     0.427[0m   |   [32m     0.000[0m   |   [32m     4.927[0m   |  [32mNeg. p = 0.0264[0m  |   [32m  0.000(   0.00-   0.39)[0m    |
+|      [32m166[0m       |       [32m1[0m        |   [32m     0.419[0m   |   [32m     0.000[0m   |   [32m     4.969[0m   |  [32mNeg. p = 0.0258[0m  |   [32m  0.000(   0.00-   0.39)[0m    |
+|      [32m168[0m       |       [32m1[0m        |   [32m     0.617[0m   |   [32m     0.000[0m   |   [32m     5.990[0m   |  [32mNeg. p = 0.0144[0m  |   [32m  0.000(   0.00-   0.28)[0m    |
+|      [31m172[0m       |       [31m1[0m        |   [31m     0.000[0m   |   [31m     0.917[0m   |   [31m     7.252[0m   |  [31mPos. p = 0.0071[0m  |  [31m10000.000(8076.16-10000.00)[0m  |
+|      [32m174[0m       |       [32m1[0m        |   [32m     0.725[0m   |   [32m     0.098[0m   |   [32m     4.173[0m   |  [32mNeg. p = 0.0411[0m  |   [32m  0.135(   0.01-   0.60)[0m    |
+|      [32m177[0m       |       [32m1[0m        |   [32m     0.632[0m   |   [32m     0.000[0m   |   [32m     7.268[0m   |  [32mNeg. p = 0.0070[0m  |   [32m  0.000(   0.00-   0.27)[0m    |
+|      [32m180[0m       |       [32m1[0m        |   [32m     0.646[0m   |   [32m     0.088[0m   |   [32m     3.571[0m   |  [32mNeg. p = 0.0588[0m  |   [32m  0.136(   0.01-   0.60)[0m    |
+|      [32m181[0m       |       [32m1[0m        |   [32m     0.460[0m   |   [32m     0.000[0m   |   [32m     3.469[0m   |  [32mNeg. p = 0.0625[0m  |   [32m  0.000(   0.00-   0.41)[0m    |
+|      [32m182[0m       |       [32m1[0m        |   [32m     0.803[0m   |   [32m     0.000[0m   |   [32m     9.692[0m   |  [32mNeg. p = 0.0019[0m  |   [32m  0.000(   0.00-   0.20)[0m    |
+|      [32m185[0m       |       [32m1[0m        |   [32m     0.324[0m   |   [32m     0.000[0m   |   [32m     3.846[0m   |  [32mNeg. p = 0.0499[0m  |   [32m  0.000(   0.00-   0.59)[0m    |
+|      [32m187[0m       |       [32m1[0m        |   [32m     0.618[0m   |   [32m     0.076[0m   |   [32m     3.058[0m   |  [32mNeg. p = 0.0803[0m  |   [32m  0.123(   0.01-   0.54)[0m    |
+|      [32m192[0m       |       [32m1[0m        |   [32m     1.655[0m   |   [32m     0.147[0m   |   [32m     6.218[0m   |  [32mNeg. p = 0.0126[0m  |   [32m  0.089(   0.01-   0.28)[0m    |
+|      [32m194[0m       |       [32m1[0m        |   [32m     1.556[0m   |   [32m     0.255[0m   |   [32m     5.975[0m   |  [32mNeg. p = 0.0145[0m  |   [32m  0.164(   0.04-   0.43)[0m    |
+|      [32m199[0m       |       [32m1[0m        |   [32m     1.292[0m   |   [32m     0.091[0m   |   [32m    10.034[0m   |  [32mNeg. p = 0.0015[0m  |   [32m  0.070(   0.00-   0.31)[0m    |
+|      [32m200[0m       |       [32m1[0m        |   [32m     2.658[0m   |   [32m     0.224[0m   |   [32m    13.715[0m   |  [32mNeg. p = 0.0002[0m  |   [32m  0.084(   0.01-   0.26)[0m    |
+|      [32m201[0m       |       [32m1[0m        |   [32m     1.868[0m   |   [32m     0.000[0m   |   [32m    19.308[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.10)[0m    |
+|      [32m209[0m       |       [32m1[0m        |   [32m     3.444[0m   |   [32m     0.374[0m   |   [32m    16.600[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.109(   0.03-   0.26)[0m    |
+|      [32m210[0m       |       [32m1[0m        |   [32m     4.272[0m   |   [32m     0.209[0m   |   [32m    24.044[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.049(   0.01-   0.15)[0m    |
+|      [32m211[0m       |       [32m1[0m        |   [32m    10.955[0m   |   [32m     0.382[0m   |   [32m     5.947[0m   |  [32mNeg. p = 0.0147[0m  |   [32m  0.035(   0.00-   0.17)[0m    |
+|      [32m213[0m       |       [32m1[0m        |   [32m    46.277[0m   |   [32m     0.000[0m   |   [32m     9.183[0m   |  [32mNeg. p = 0.0024[0m  |   [32m  0.000(   0.00-   0.03)[0m    |
+|      [32m219[0m       |       [32m1[0m        |   [32m     1.105[0m   |   [32m     0.000[0m   |   [32m    11.064[0m   |  [32mNeg. p = 0.0009[0m  |   [32m  0.000(   0.00-   0.18)[0m    |
+|      [32m220[0m       |       [32m1[0m        |   [32m     0.672[0m   |   [32m     0.000[0m   |   [32m     8.505[0m   |  [32mNeg. p = 0.0035[0m  |   [32m  0.000(   0.00-   0.25)[0m    |
+|      [32m221[0m       |       [32m1[0m        |   [32m     0.464[0m   |   [32m     0.000[0m   |   [32m     3.865[0m   |  [32mNeg. p = 0.0493[0m  |   [32m  0.000(   0.00-   0.32)[0m    |
+|      [32m222[0m       |       [32m1[0m        |   [32m     0.814[0m   |   [32m     0.000[0m   |   [32m    10.224[0m   |  [32mNeg. p = 0.0014[0m  |   [32m  0.000(   0.00-   0.21)[0m    |
+|      [32m223[0m       |       [32m1[0m        |   [32m     2.406[0m   |   [32m     0.000[0m   |   [32m    23.464[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.06)[0m    |
+|      [32m224[0m       |       [32m1[0m        |   [32m     1.355[0m   |   [32m     0.000[0m   |   [32m    12.410[0m   |  [32mNeg. p = 0.0004[0m  |   [32m  0.000(   0.00-   0.12)[0m    |
+|      [32m225[0m       |       [32m1[0m        |   [32m     5.710[0m   |   [32m     0.000[0m   |   [32m    30.959[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.03)[0m    |
+|      [32m226[0m       |       [32m1[0m        |   [32m     0.715[0m   |   [32m     0.000[0m   |   [32m     7.562[0m   |  [32mNeg. p = 0.0060[0m  |   [32m  0.000(   0.00-   0.25)[0m    |
+|      [32m227[0m       |       [32m1[0m        |   [32m     2.477[0m   |   [32m     0.000[0m   |   [32m    21.279[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.06)[0m    |
+|      [32m228[0m       |       [32m1[0m        |   [32m     1.951[0m   |   [32m     0.000[0m   |   [32m    16.644[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.09)[0m    |
+|      [32m230[0m       |       [32m1[0m        |   [32m     0.782[0m   |   [32m     0.000[0m   |   [32m     8.704[0m   |  [32mNeg. p = 0.0032[0m  |   [32m  0.000(   0.00-   0.27)[0m    |
+|      [32m231[0m       |       [32m1[0m        |   [32m     1.519[0m   |   [32m     0.107[0m   |   [32m     9.760[0m   |  [32mNeg. p = 0.0018[0m  |   [32m  0.070(   0.00-   0.31)[0m    |
+|      [32m232[0m       |       [32m1[0m        |   [32m     2.322[0m   |   [32m     0.160[0m   |   [32m    12.184[0m   |  [32mNeg. p = 0.0005[0m  |   [32m  0.069(   0.01-   0.21)[0m    |
+|      [32m233[0m       |       [32m1[0m        |   [32m     1.302[0m   |   [32m     0.000[0m   |   [32m     8.373[0m   |  [32mNeg. p = 0.0038[0m  |   [32m  0.000(   0.00-   0.13)[0m    |
+|      [32m236[0m       |       [32m1[0m        |   [32m     2.361[0m   |   [32m     0.176[0m   |   [32m    10.178[0m   |  [32mNeg. p = 0.0014[0m  |   [32m  0.075(   0.01-   0.23)[0m    |
+|      [32m238[0m       |       [32m1[0m        |   [32m     1.084[0m   |   [32m     0.201[0m   |   [32m     4.454[0m   |  [32mNeg. p = 0.0348[0m  |   [32m  0.186(   0.03-   0.58)[0m    |
+|      [32m239[0m       |       [32m1[0m        |   [32m     0.422[0m   |   [32m     0.000[0m   |   [32m     4.980[0m   |  [32mNeg. p = 0.0256[0m  |   [32m  0.000(   0.00-   0.38)[0m    |
+|      [32m241[0m       |       [32m1[0m        |   [32m     1.454[0m   |   [32m     0.000[0m   |   [32m    12.854[0m   |  [32mNeg. p = 0.0003[0m  |   [32m  0.000(   0.00-   0.12)[0m    |
+|      [32m242[0m       |       [32m1[0m        |   [32m     3.386[0m   |   [32m     0.000[0m   |   [32m    24.877[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.05)[0m    |
+|      [32m243[0m       |       [32m1[0m        |   [32m     2.063[0m   |   [32m     0.324[0m   |   [32m     5.535[0m   |  [32mNeg. p = 0.0186[0m  |   [32m  0.157(   0.05-   0.37)[0m    |
+|      [32m245[0m       |       [32m1[0m        |   [32m     1.216[0m   |   [32m     0.000[0m   |   [32m     8.124[0m   |  [32mNeg. p = 0.0044[0m  |   [32m  0.000(   0.00-   0.14)[0m    |
+|      [32m246[0m       |       [32m1[0m        |   [32m     1.428[0m   |   [32m     0.000[0m   |   [32m    11.502[0m   |  [32mNeg. p = 0.0007[0m  |   [32m  0.000(   0.00-   0.10)[0m    |
+|      [32m247[0m       |       [32m1[0m        |   [32m     0.690[0m   |   [32m     0.000[0m   |   [32m     7.657[0m   |  [32mNeg. p = 0.0057[0m  |   [32m  0.000(   0.00-   0.24)[0m    |
+|      [32m250[0m       |       [32m1[0m        |   [32m     8.231[0m   |   [32m     0.000[0m   |   [32m    38.420[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.02)[0m    |
+|      [32m251[0m       |       [32m1[0m        |   [32m     2.161[0m   |   [32m     0.183[0m   |   [32m    13.342[0m   |  [32mNeg. p = 0.0003[0m  |   [32m  0.085(   0.01-   0.26)[0m    |
+|      [32m252[0m       |       [32m1[0m        |   [32m     0.596[0m   |   [32m     0.000[0m   |   [32m     7.131[0m   |  [32mNeg. p = 0.0076[0m  |   [32m  0.000(   0.00-   0.28)[0m    |
+|      [32m253[0m       |       [32m1[0m        |   [32m     2.151[0m   |   [32m     0.000[0m   |   [32m    20.259[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.08)[0m    |
+|      [32m254[0m       |       [32m1[0m        |   [32m     0.457[0m   |   [32m     0.000[0m   |   [32m     4.952[0m   |  [32mNeg. p = 0.0261[0m  |   [32m  0.000(   0.00-   0.39)[0m    |
+|      [32m256[0m       |       [32m1[0m        |   [32m     0.597[0m   |   [32m     0.000[0m   |   [32m     6.870[0m   |  [32mNeg. p = 0.0088[0m  |   [32m  0.000(   0.00-   0.30)[0m    |
+|      [32m257[0m       |       [32m1[0m        |   [32m     1.913[0m   |   [32m     0.000[0m   |   [32m    15.807[0m   |  [32mNeg. p = 0.0001[0m  |   [32m  0.000(   0.00-   0.07)[0m    |
+|      [32m258[0m       |       [32m1[0m        |   [32m     1.418[0m   |   [32m     0.000[0m   |   [32m    14.049[0m   |  [32mNeg. p = 0.0002[0m  |   [32m  0.000(   0.00-   0.10)[0m    |
+|      [32m259[0m       |       [32m1[0m        |   [32m     0.650[0m   |   [32m     0.000[0m   |   [32m     5.920[0m   |  [32mNeg. p = 0.0150[0m  |   [32m  0.000(   0.00-   0.28)[0m    |
+|      [32m261[0m       |       [32m1[0m        |   [32m     0.314[0m   |   [32m     0.000[0m   |   [32m     4.181[0m   |  [32mNeg. p = 0.0409[0m  |   [32m  0.000(   0.00-   0.52)[0m    |
+|      [32m262[0m       |       [32m1[0m        |   [32m     0.489[0m   |   [32m     0.000[0m   |   [32m     4.890[0m   |  [32mNeg. p = 0.0270[0m  |   [32m  0.000(   0.00-   0.40)[0m    |
+|      [32m263[0m       |       [32m1[0m        |   [32m     0.519[0m   |   [32m     0.000[0m   |   [32m     3.873[0m   |  [32mNeg. p = 0.0491[0m  |   [32m  0.000(   0.00-   0.32)[0m    |
+|      [32m264[0m       |       [32m1[0m        |   [32m     1.484[0m   |   [32m     0.000[0m   |   [32m    18.227[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.11)[0m    |
+|      [32m265[0m       |       [32m1[0m        |   [32m     1.274[0m   |   [32m     0.000[0m   |   [32m    15.801[0m   |  [32mNeg. p = 0.0001[0m  |   [32m  0.000(   0.00-   0.13)[0m    |
+|      [32m266[0m       |       [32m1[0m        |   [32m     2.089[0m   |   [32m     0.000[0m   |   [32m    21.881[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.09)[0m    |
+|      [32m267[0m       |       [32m1[0m        |   [32m     0.405[0m   |   [32m     0.000[0m   |   [32m     4.703[0m   |  [32mNeg. p = 0.0301[0m  |   [32m  0.000(   0.00-   0.43)[0m    |
+|      [32m268[0m       |       [32m1[0m        |   [32m     2.610[0m   |   [32m     0.000[0m   |   [32m    24.355[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.05)[0m    |
+|      [32m270[0m       |       [32m1[0m        |   [32m     3.794[0m   |   [32m     0.000[0m   |   [32m    36.184[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.05)[0m    |
+|      [32m272[0m       |       [32m1[0m        |   [32m     0.639[0m   |   [32m     0.000[0m   |   [32m     6.098[0m   |  [32mNeg. p = 0.0135[0m  |   [32m  0.000(   0.00-   0.26)[0m    |
+|      [32m277[0m       |       [32m1[0m        |   [32m     0.448[0m   |   [32m     0.000[0m   |   [32m     4.973[0m   |  [32mNeg. p = 0.0257[0m  |   [32m  0.000(   0.00-   0.49)[0m    |
+|      [32m278[0m       |       [32m1[0m        |   [32m     0.601[0m   |   [32m     0.000[0m   |   [32m     6.260[0m   |  [32mNeg. p = 0.0124[0m  |   [32m  0.000(   0.00-   0.25)[0m    |
+|      [32m279[0m       |       [32m1[0m        |   [32m     1.496[0m   |   [32m     0.000[0m   |   [32m    17.937[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.11)[0m    |
+|      [32m280[0m       |       [32m1[0m        |   [32m     1.117[0m   |   [32m     0.000[0m   |   [32m    13.536[0m   |  [32mNeg. p = 0.0002[0m  |   [32m  0.000(   0.00-   0.15)[0m    |
+|      [32m281[0m       |       [32m1[0m        |   [32m     0.983[0m   |   [32m     0.000[0m   |   [32m     7.733[0m   |  [32mNeg. p = 0.0054[0m  |   [32m  0.000(   0.00-   0.16)[0m    |
+|      [32m283[0m       |       [32m1[0m        |   [32m     1.540[0m   |   [32m     0.000[0m   |   [32m    17.361[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.11)[0m    |
+|      [32m285[0m       |       [32m1[0m        |   [32m     1.394[0m   |   [32m     0.000[0m   |   [32m    12.994[0m   |  [32mNeg. p = 0.0003[0m  |   [32m  0.000(   0.00-   0.11)[0m    |
+|      [32m286[0m       |       [32m1[0m        |   [32m     0.624[0m   |   [32m     0.000[0m   |   [32m     7.006[0m   |  [32mNeg. p = 0.0081[0m  |   [32m  0.000(   0.00-   0.29)[0m    |
+|      [32m287[0m       |       [32m1[0m        |   [32m     0.328[0m   |   [32m     0.000[0m   |   [32m     3.937[0m   |  [32mNeg. p = 0.0472[0m  |   [32m  0.000(   0.00-   0.57)[0m    |
+|      [32m289[0m       |       [32m1[0m        |   [32m     1.074[0m   |   [32m     0.000[0m   |   [32m     8.259[0m   |  [32mNeg. p = 0.0041[0m  |   [32m  0.000(   0.00-   0.13)[0m    |
+|      [32m290[0m       |       [32m1[0m        |   [32m     2.456[0m   |   [32m     0.000[0m   |   [32m    26.167[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.07)[0m    |
+|      [32m292[0m       |       [32m1[0m        |   [32m     3.232[0m   |   [32m     0.000[0m   |   [32m    32.405[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.05)[0m    |
+|      [32m293[0m       |       [32m1[0m        |   [32m     0.406[0m   |   [32m     0.000[0m   |   [32m     4.792[0m   |  [32mNeg. p = 0.0286[0m  |   [32m  0.000(   0.00-   0.41)[0m    |
+|      [32m294[0m       |       [32m1[0m        |   [32m     0.393[0m   |   [32m     0.000[0m   |   [32m     4.767[0m   |  [32mNeg. p = 0.0290[0m  |   [32m  0.000(   0.00-   0.42)[0m    |
+|      [32m295[0m       |       [32m1[0m        |   [32m     2.910[0m   |   [32m     0.000[0m   |   [32m    29.985[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.06)[0m    |
+|      [32m299[0m       |       [32m1[0m        |   [32m     0.455[0m   |   [32m     0.000[0m   |   [32m     3.949[0m   |  [32mNeg. p = 0.0469[0m  |   [32m  0.000(   0.00-   0.30)[0m    |
+|      [32m300[0m       |       [32m1[0m        |   [32m     0.994[0m   |   [32m     0.000[0m   |   [32m    10.221[0m   |  [32mNeg. p = 0.0014[0m  |   [32m  0.000(   0.00-   0.18)[0m    |
+|      [32m301[0m       |       [32m1[0m        |   [32m     3.367[0m   |   [32m     0.000[0m   |   [32m    29.626[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.04)[0m    |
+|      [32m303[0m       |       [32m1[0m        |   [32m     1.583[0m   |   [32m     0.072[0m   |   [32m     9.963[0m   |  [32mNeg. p = 0.0016[0m  |   [32m  0.046(   0.00-   0.20)[0m    |
+|      [32m304[0m       |       [32m1[0m        |   [32m     1.274[0m   |   [32m     0.081[0m   |   [32m     9.162[0m   |  [32mNeg. p = 0.0025[0m  |   [32m  0.063(   0.00-   0.28)[0m    |
+|      [32m305[0m       |       [32m1[0m        |   [32m     5.228[0m   |   [32m     0.000[0m   |   [32m    33.748[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.03)[0m    |
+|      [32m306[0m       |       [32m1[0m        |   [32m     1.256[0m   |   [32m     0.000[0m   |   [32m     8.280[0m   |  [32mNeg. p = 0.0040[0m  |   [32m  0.000(   0.00-   0.13)[0m    |
+|      [32m308[0m       |       [32m1[0m        |   [32m     2.430[0m   |   [32m     0.000[0m   |   [32m    23.279[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.07)[0m    |
+|      [32m309[0m       |       [32m1[0m        |   [32m     2.148[0m   |   [32m     0.000[0m   |   [32m    22.833[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.08)[0m    |
+|      [32m310[0m       |       [32m1[0m        |   [32m     0.701[0m   |   [32m     0.000[0m   |   [32m     7.742[0m   |  [32mNeg. p = 0.0054[0m  |   [32m  0.000(   0.00-   0.24)[0m    |
+|      [32m311[0m       |       [32m1[0m        |   [32m     1.733[0m   |   [32m     0.000[0m   |   [32m    19.483[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.10)[0m    |
+|      [32m312[0m       |       [32m1[0m        |   [32m     1.554[0m   |   [32m     0.077[0m   |   [32m     9.429[0m   |  [32mNeg. p = 0.0021[0m  |   [32m  0.050(   0.00-   0.22)[0m    |
+|      [32m313[0m       |       [32m1[0m        |   [32m     0.600[0m   |   [32m     0.000[0m   |   [32m     5.893[0m   |  [32mNeg. p = 0.0152[0m  |   [32m  0.000(   0.00-   0.28)[0m    |
+|      [32m315[0m       |       [32m1[0m        |   [32m     1.002[0m   |   [32m     0.000[0m   |   [32m    12.418[0m   |  [32mNeg. p = 0.0004[0m  |   [32m  0.000(   0.00-   0.17)[0m    |
+|      [32m316[0m       |       [32m1[0m        |   [32m     0.525[0m   |   [32m     0.000[0m   |   [32m     6.538[0m   |  [32mNeg. p = 0.0106[0m  |   [32m  0.000(   0.00-   0.32)[0m    |
+|      [32m320[0m       |       [32m1[0m        |   [32m     2.172[0m   |   [32m     0.000[0m   |   [32m    20.251[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.09)[0m    |
+|      [32m321[0m       |       [32m1[0m        |   [32m     1.740[0m   |   [32m     0.000[0m   |   [32m    19.255[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.10)[0m    |
+|      [32m322[0m       |       [32m1[0m        |   [32m     1.263[0m   |   [32m     0.000[0m   |   [32m    13.146[0m   |  [32mNeg. p = 0.0003[0m  |   [32m  0.000(   0.00-   0.13)[0m    |
+|      [32m323[0m       |       [32m1[0m        |   [32m     1.656[0m   |   [32m     0.000[0m   |   [32m    16.347[0m   |  [32mNeg. p = 0.0001[0m  |   [32m  0.000(   0.00-   0.10)[0m    |
+|      [32m325[0m       |       [32m1[0m        |   [32m     3.437[0m   |   [32m     0.000[0m   |   [32m    33.094[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.05)[0m    |
+|      [32m327[0m       |       [32m1[0m        |   [32m     1.895[0m   |   [32m     0.000[0m   |   [32m    20.446[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.10)[0m    |
+|      [32m328[0m       |       [32m1[0m        |   [32m     1.769[0m   |   [32m     0.000[0m   |   [32m    14.147[0m   |  [32mNeg. p = 0.0002[0m  |   [32m  0.000(   0.00-   0.09)[0m    |
+|      [32m329[0m       |       [32m1[0m        |   [32m     4.139[0m   |   [32m     0.000[0m   |   [32m    29.411[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.04)[0m    |
+|      [32m331[0m       |       [32m1[0m        |   [32m     1.963[0m   |   [32m     0.000[0m   |   [32m    22.210[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.08)[0m    |
+|      [32m332[0m       |       [32m1[0m        |   [32m     1.069[0m   |   [32m     0.000[0m   |   [32m    11.806[0m   |  [32mNeg. p = 0.0006[0m  |   [32m  0.000(   0.00-   0.17)[0m    |
+|      [32m333[0m       |       [32m1[0m        |   [32m     5.328[0m   |   [32m     0.099[0m   |   [32m    31.842[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.019(   0.00-   0.08)[0m    |
+|      [32m336[0m       |       [32m1[0m        |   [32m     1.365[0m   |   [32m     0.000[0m   |   [32m    12.003[0m   |  [32mNeg. p = 0.0005[0m  |   [32m  0.000(   0.00-   0.13)[0m    |
+|      [32m338[0m       |       [32m1[0m        |   [32m     0.580[0m   |   [32m     0.000[0m   |   [32m     4.059[0m   |  [32mNeg. p = 0.0439[0m  |   [32m  0.000(   0.00-   0.29)[0m    |
+|      [32m339[0m       |       [32m1[0m        |   [32m     5.454[0m   |   [32m     0.000[0m   |   [32m    32.959[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.03)[0m    |
+|      [32m340[0m       |       [32m1[0m        |   [32m     0.891[0m   |   [32m     0.000[0m   |   [32m     6.741[0m   |  [32mNeg. p = 0.0094[0m  |   [32m  0.000(   0.00-   0.21)[0m    |
+|      [32m342[0m       |       [32m1[0m        |   [32m     1.172[0m   |   [32m     0.000[0m   |   [32m     7.558[0m   |  [32mNeg. p = 0.0060[0m  |   [32m  0.000(   0.00-   0.16)[0m    |
+|      [32m343[0m       |       [32m1[0m        |   [32m     0.593[0m   |   [32m     0.000[0m   |   [32m     4.095[0m   |  [32mNeg. p = 0.0430[0m  |   [32m  0.000(   0.00-   0.28)[0m    |
+|      [32m345[0m       |       [32m1[0m        |   [32m     0.585[0m   |   [32m     0.000[0m   |   [32m     4.062[0m   |  [32mNeg. p = 0.0439[0m  |   [32m  0.000(   0.00-   0.28)[0m    |
+|      [32m346[0m       |       [32m1[0m        |   [32m     0.812[0m   |   [32m     0.000[0m   |   [32m     7.380[0m   |  [32mNeg. p = 0.0066[0m  |   [32m  0.000(   0.00-   0.18)[0m    |
+|      [32m347[0m       |       [32m1[0m        |   [32m     0.607[0m   |   [32m     0.000[0m   |   [32m     6.243[0m   |  [32mNeg. p = 0.0125[0m  |   [32m  0.000(   0.00-   0.25)[0m    |
+|      [32m350[0m       |       [32m1[0m        |   [32m     0.680[0m   |   [32m     0.000[0m   |   [32m     8.536[0m   |  [32mNeg. p = 0.0035[0m  |   [32m  0.000(   0.00-   0.25)[0m    |
+|      [32m351[0m       |       [32m1[0m        |   [32m     0.434[0m   |   [32m     0.000[0m   |   [32m     3.360[0m   |  [32mNeg. p = 0.0668[0m  |   [32m  0.000(   0.00-   0.44)[0m    |
+|      [32m352[0m       |       [32m1[0m        |   [32m     3.541[0m   |   [32m     0.000[0m   |   [32m    31.761[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.05)[0m    |
+|      [32m353[0m       |       [32m1[0m        |   [32m     2.217[0m   |   [32m     0.000[0m   |   [32m    15.437[0m   |  [32mNeg. p = 0.0001[0m  |   [32m  0.000(   0.00-   0.08)[0m    |
+|      [32m354[0m       |       [32m1[0m        |   [32m     1.949[0m   |   [32m     0.087[0m   |   [32m    10.004[0m   |  [32mNeg. p = 0.0016[0m  |   [32m  0.045(   0.00-   0.20)[0m    |
+|      [32m355[0m       |       [32m1[0m        |   [32m     1.090[0m   |   [32m     0.000[0m   |   [32m    12.270[0m   |  [32mNeg. p = 0.0005[0m  |   [32m  0.000(   0.00-   0.16)[0m    |
+|      [32m357[0m       |       [32m1[0m        |   [32m     1.687[0m   |   [32m     0.000[0m   |   [32m    16.038[0m   |  [32mNeg. p = 0.0001[0m  |   [32m  0.000(   0.00-   0.09)[0m    |
+|      [32m358[0m       |       [32m1[0m        |   [32m     0.406[0m   |   [32m     0.000[0m   |   [32m     4.768[0m   |  [32mNeg. p = 0.0290[0m  |   [32m  0.000(   0.00-   0.42)[0m    |
+|      [32m359[0m       |       [32m1[0m        |   [32m     0.396[0m   |   [32m     0.000[0m   |   [32m     3.744[0m   |  [32mNeg. p = 0.0530[0m  |   [32m  0.000(   0.00-   0.35)[0m    |
+|      [32m361[0m       |       [32m1[0m        |   [32m     0.681[0m   |   [32m     0.000[0m   |   [32m     6.292[0m   |  [32mNeg. p = 0.0121[0m  |   [32m  0.000(   0.00-   0.25)[0m    |
+|      [32m363[0m       |       [32m1[0m        |   [32m     7.818[0m   |   [32m     0.000[0m   |   [32m    40.720[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.02)[0m    |
+|      [32m365[0m       |       [32m1[0m        |   [32m     1.695[0m   |   [32m     0.000[0m   |   [32m    12.078[0m   |  [32mNeg. p = 0.0005[0m  |   [32m  0.000(   0.00-   0.09)[0m    |
+|      [32m366[0m       |       [32m1[0m        |   [32m     1.145[0m   |   [32m     0.000[0m   |   [32m    12.370[0m   |  [32mNeg. p = 0.0004[0m  |   [32m  0.000(   0.00-   0.15)[0m    |
+|      [32m367[0m       |       [32m1[0m        |   [32m     1.640[0m   |   [32m     0.000[0m   |   [32m    11.248[0m   |  [32mNeg. p = 0.0008[0m  |   [32m  0.000(   0.00-   0.11)[0m    |
+|      [32m368[0m       |       [32m1[0m        |   [32m     0.893[0m   |   [32m     0.000[0m   |   [32m     7.671[0m   |  [32mNeg. p = 0.0056[0m  |   [32m  0.000(   0.00-   0.16)[0m    |
+|      [32m372[0m       |       [32m1[0m        |   [32m     2.052[0m   |   [32m     0.000[0m   |   [32m    12.325[0m   |  [32mNeg. p = 0.0004[0m  |   [32m  0.000(   0.00-   0.09)[0m    |
+|      [32m373[0m       |       [32m1[0m        |   [32m     1.312[0m   |   [32m     0.000[0m   |   [32m    12.794[0m   |  [32mNeg. p = 0.0003[0m  |   [32m  0.000(   0.00-   0.14)[0m    |
+|      [32m374[0m       |       [32m1[0m        |   [32m    22.174[0m   |   [32m     0.000[0m   |   [32m    53.411[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.01)[0m    |
+|      [32m375[0m       |       [32m1[0m        |   [32m     0.639[0m   |   [32m     0.000[0m   |   [32m     7.102[0m   |  [32mNeg. p = 0.0077[0m  |   [32m  0.000(   0.00-   0.28)[0m    |
+|      [32m377[0m       |       [32m1[0m        |   [32m     1.814[0m   |   [32m     0.000[0m   |   [32m    18.531[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.09)[0m    |
+|      [32m378[0m       |       [32m1[0m        |   [32m     2.287[0m   |   [32m     0.000[0m   |   [32m    24.114[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.08)[0m    |
+|      [32m385[0m       |       [32m1[0m        |   [32m     2.810[0m   |   [32m     0.000[0m   |   [32m    28.575[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.06)[0m    |
+|      [32m386[0m       |       [32m1[0m        |   [32m     1.157[0m   |   [32m     0.082[0m   |   [32m     8.428[0m   |  [32mNeg. p = 0.0037[0m  |   [32m  0.071(   0.00-   0.31)[0m    |
+|      [32m387[0m       |       [32m1[0m        |   [32m     0.615[0m   |   [32m     0.000[0m   |   [32m     7.164[0m   |  [32mNeg. p = 0.0074[0m  |   [32m  0.000(   0.00-   0.27)[0m    |
+|      [32m389[0m       |       [32m1[0m        |   [32m     2.605[0m   |   [32m     0.000[0m   |   [32m    25.843[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.07)[0m    |
+|      [32m391[0m       |       [32m1[0m        |   [32m     1.232[0m   |   [32m     0.000[0m   |   [32m    11.216[0m   |  [32mNeg. p = 0.0008[0m  |   [32m  0.000(   0.00-   0.11)[0m    |
+|      [32m392[0m       |       [32m1[0m        |   [32m     0.976[0m   |   [32m     0.000[0m   |   [32m     9.541[0m   |  [32mNeg. p = 0.0020[0m  |   [32m  0.000(   0.00-   0.16)[0m    |
+|      [32m396[0m       |       [32m1[0m        |   [32m     1.051[0m   |   [32m     0.000[0m   |   [32m    12.150[0m   |  [32mNeg. p = 0.0005[0m  |   [32m  0.000(   0.00-   0.16)[0m    |
+|      [32m398[0m       |       [32m1[0m        |   [32m     0.715[0m   |   [32m     0.000[0m   |   [32m     8.528[0m   |  [32mNeg. p = 0.0035[0m  |   [32m  0.000(   0.00-   0.25)[0m    |
+|      [32m400[0m       |       [32m1[0m        |   [32m     0.345[0m   |   [32m     0.000[0m   |   [32m     4.240[0m   |  [32mNeg. p = 0.0395[0m  |   [32m  0.000(   0.00-   0.50)[0m    |
+|      [32m401[0m       |       [32m1[0m        |   [32m     0.998[0m   |   [32m     0.000[0m   |   [32m    10.286[0m   |  [32mNeg. p = 0.0013[0m  |   [32m  0.000(   0.00-   0.21)[0m    |
+|      [32m404[0m       |       [32m1[0m        |   [32m     2.075[0m   |   [32m     0.000[0m   |   [32m    16.891[0m   |  [32mNeg. p = 0.0000[0m  |   [32m  0.000(   0.00-   0.08)[0m    |
+|      [32m405[0m       |       [32m1[0m        |   [32m     1.116[0m   |   [32m     0.000[0m   |   [32m    10.252[0m   |  [32mNeg. p = 0.0014[0m  |   [32m  0.000(   0.00-   0.14)[0m    |
+|      [32m406[0m       |       [32m1[0m        |   [32m     0.340[0m   |   [32m     0.000[0m   |   [32m     4.015[0m   |  [32mNeg. p = 0.0451[0m  |   [32m  0.000(   0.00-   0.56)[0m    |
+
+### ** Found _9_ sites under pervasive positive diversifying and _155_ sites under negative selection at p <= 0.1**

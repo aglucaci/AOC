@@ -55,6 +55,11 @@ While individual HyPhy analyses can be run through DataMonkey or the HyPhy comma
 AOC/
 ├── workflow/
 │   ├── Snakefile
+│   └── rules/
+│       ├── preprocessing.smk
+│       ├── selection.smk
+│       ├── summarize.smk
+│       └── targets.smk
 ├── config/
 │   └── config.yaml
 ├── scripts/
@@ -81,10 +86,9 @@ AOC provides a stable installer that:
 
 ### Run installer
 
-**On MAC OSX (do this first)**
-```
-conda config --env --set subdir osx-64
-```
+**On Apple Silicon Macs**
+
+Use the native `osx-arm64` environment by default. Only force `osx-64` under Rosetta if a dependency is unavailable for ARM in your own setup.
 
 **Run installation script**
 
@@ -103,6 +107,12 @@ After installation:
 
 ```
 conda activate AOC
+```
+
+Updates / Pruning environment
+
+```
+conda env update -n AOC -f envs/AOC.yaml --prune
 ```
 
 ---
@@ -155,6 +165,16 @@ From the root directory:
 ```bash
 bash run_AOC.sh --samples samples.csv
 ```
+
+The top-level [workflow/Snakefile](/Users/alex/Documents/AOC-develop-new-snakemake/workflow/Snakefile) now provides shared config/helpers and includes modular rule files from [workflow/rules/preprocessing.smk](/Users/alex/Documents/AOC-develop-new-snakemake/workflow/rules/preprocessing.smk), [workflow/rules/selection.smk](/Users/alex/Documents/AOC-develop-new-snakemake/workflow/rules/selection.smk), [workflow/rules/summarize.smk](/Users/alex/Documents/AOC-develop-new-snakemake/workflow/rules/summarize.smk), and [workflow/rules/targets.smk](/Users/alex/Documents/AOC-develop-new-snakemake/workflow/rules/targets.smk).
+
+This repository now targets Snakemake 9.x. If you add per-rule `conda:` environments later, prefer Snakemake's current deployment CLI, for example:
+
+```bash
+bash run_AOC.sh --samples samples.csv --software-deployment-method conda
+```
+
+To enable recombination detection with MPI-backed GARD for specific genes, add a `run_recombination` column to your `samples.csv` and set it to `true` for those rows. `gard_launcher`, `gard_mpi_runner`, and `gard_mpi_procs` remain global settings in [config/config.yaml](/Users/alex/Documents/AOC-develop-new-snakemake/config/config.yaml).
 
 ---
 
@@ -379,8 +399,17 @@ results/
       {sample}.AOC.merged_CFEL_Results.csv
       {sample}.selection_overview.csv
     visualizations/
-      FEL.merged.png
-      MEME.merged.png
+      {sample}.FEL.merged.png
+      {sample}.FEL.marginals.png
+      {sample}.MEME.merged.png
+      {sample}.MEME.marginals.png
+      {sample}.ABSREL.merged.png
+      {sample}.BUSTEDS-MH.merged.png
+      {sample}.RELAX.merged.png
+      {sample}.CFEL.merged.png
+      {sample}.selection.method_heatmap.png
+      {sample}.selection.concordance.png
+      {sample}.selection.dashboard.png
 ```
 
 ---
@@ -596,16 +625,25 @@ AOC also generates plots summarizing selection signals across the alignment.
 Examples include:
 
 ```
-FEL.merged.png
-MEME.merged.png
+{sample}.FEL.merged.png
+{sample}.FEL.marginals.png
+{sample}.MEME.merged.png
+{sample}.MEME.marginals.png
+{sample}.ABSREL.merged.png
+{sample}.BUSTEDS-MH.merged.png
+{sample}.RELAX.merged.png
+{sample}.CFEL.merged.png
+{sample}.selection.method_heatmap.png
+{sample}.selection.concordance.png
+{sample}.selection.dashboard.png
 ```
 
-These plots typically display:
+The visualization set is split into two layers:
 
-- codon site position on the x-axis
-- significance or selection metrics on the y-axis
+- Single-analysis summaries: large merged FEL and MEME site landscapes, companion FEL and MEME marginal views, aBSREL branch-signal bars, BUSTED-S-MH gene-wide evidence bars, RELAX intensity-shift bars, and CFEL partition summaries.
+- Integrated summaries: a partition-by-method heatmap, a concordance plot showing how many tests support each partition, and a dashboard that aggregates evidence burden across both methods and partitions.
 
-They help visually identify clusters of sites under selection.
+These plots are intended to make it easy to see where selection is concentrated, whether the signal is site-level or branch-level, and which partitions are consistently highlighted by multiple tests.
 
 ---
 

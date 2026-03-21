@@ -1,0 +1,277 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: Alexs-MacBook-Pro-2.local
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                               count
+------------------------------  -------
+MergeABSRELCSVs                       1
+MergeBUSTEDS_MH_CSVs                  1
+MergeCFELCSVs                         1
+MergeFELCSVs                          1
+MergeMEMECSVs                         1
+MergeRELAXCSVs                        1
+PlotFELMerge                          1
+PlotMEMEMerge                         1
+SelectionOverviewTable                1
+all                                   1
+build_header_map_and_test_list        1
+cln                                   1
+macse                                 1
+parse_gard                            1
+remove_duplicates_msa                 1
+run_selection_all_partitions          1
+strike_ambigs_msa                     1
+total                                17
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: PULP_CBC_CMD: Not Available (check permissions on cbc)
+Execute 2 jobs...
+[Fri Mar 20 20:46:56 2026]
+localrule build_header_map_and_test_list:
+    input: /Users/alex/Documents/AOC-develop-new-snakemake/data/BDNF/BDNF-64.sequence_labels.csv
+    output: results/BDNF-64/BDNF-64.sequence_header_map.csv, results/BDNF-64/BDNF-64.test_sequences.txt
+    log: results/logs/build_header_map_and_test_list.BDNF-64.log
+    jobid: 7
+    reason: Missing output files: results/BDNF-64/BDNF-64.sequence_header_map.csv, results/BDNF-64/BDNF-64.test_sequences.txt
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 20:46:56 2026]
+localrule macse:
+    input: /Users/alex/Documents/AOC-develop-new-snakemake/data/BDNF/BDNF-64.fasta
+    output: results/BDNF-64/BDNF-64.codons.fa, results/BDNF-64/BDNF-64.aa.fa
+    log: results/logs/macse.BDNF-64.log
+    jobid: 4
+    reason: Missing output files: results/BDNF-64/BDNF-64.codons.fa
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T, mem_mb=2048, mem_mib=1954
+Shell command: 
+        mkdir -p results/BDNF-64
+        bash "scripts/run_macse_with_heap.sh" \
+          --macse-bin "macse" \
+          --xms-mb 512 \
+          --xmx-mb 2048 \
+          -- \
+          -prog alignSequences \
+          -seq "/Users/alex/Documents/AOC-develop-new-snakemake/data/BDNF/BDNF-64.fasta" \
+          -out_NT "results/BDNF-64/BDNF-64.codons.fa" \
+          -out_AA "results/BDNF-64/BDNF-64.aa.fa" \
+          -max_refine_iter 3 \
+          -local_realign_init 0.3 \
+          -local_realign_dec 0.2 \
+          > results/logs/macse.BDNF-64.log 2>&1
+        
+[Fri Mar 20 20:46:59 2026]
+Finished jobid: 7 (Rule: build_header_map_and_test_list)
+1 of 17 steps (6%) done
+[Fri Mar 20 20:47:15 2026]
+Finished jobid: 4 (Rule: macse)
+2 of 17 steps (12%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 20:47:15 2026]
+localrule cln:
+    input: results/BDNF-64/BDNF-64.codons.fa
+    output: results/BDNF-64/BDNF-64.codons.cln.fa
+    log: results/logs/cln.BDNF-64.log
+    jobid: 3
+    reason: Missing output files: results/BDNF-64/BDNF-64.codons.cln.fa; Input files updated by another job: results/BDNF-64/BDNF-64.codons.fa
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        hyphy CLN Universal results/BDNF-64/BDNF-64.codons.fa 'No/No' results/BDNF-64/BDNF-64.codons.cln.fa > results/logs/cln.BDNF-64.log 2>&1
+        
+[Fri Mar 20 20:47:15 2026]
+Finished jobid: 3 (Rule: cln)
+3 of 17 steps (18%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 20:47:15 2026]
+localrule strike_ambigs_msa:
+    input: results/BDNF-64/BDNF-64.codons.cln.fa
+    output: results/BDNF-64/BDNF-64.SA.codons.cln.fa
+    log: results/logs/strike_ambigs_msa.BDNF-64.log
+    jobid: 2
+    reason: Missing output files: results/BDNF-64/BDNF-64.SA.codons.cln.fa; Input files updated by another job: results/BDNF-64/BDNF-64.codons.cln.fa
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        hyphy scripts/strike-ambigs.bf --alignment results/BDNF-64/BDNF-64.codons.cln.fa --output results/BDNF-64/BDNF-64.SA.codons.cln.fa > results/logs/strike_ambigs_msa.BDNF-64.log 2>&1
+        
+[Fri Mar 20 20:47:15 2026]
+Finished jobid: 2 (Rule: strike_ambigs_msa)
+4 of 17 steps (24%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 20:47:15 2026]
+localrule remove_duplicates_msa:
+    input: results/BDNF-64/BDNF-64.SA.codons.cln.fa
+    output: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa
+    log: results/logs/remove_duplicates_msa.BDNF-64.log
+    jobid: 1
+    reason: Missing output files: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa; Input files updated by another job: results/BDNF-64/BDNF-64.SA.codons.cln.fa
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        hyphy software/remove-duplicates/remove-duplicates.bf --msa results/BDNF-64/BDNF-64.SA.codons.cln.fa --output results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa ENV='DATA_FILE_PRINT_FORMAT=9' > results/logs/remove_duplicates_msa.BDNF-64.log 2>&1
+        
+[Fri Mar 20 20:47:15 2026]
+Finished jobid: 1 (Rule: remove_duplicates_msa)
+5 of 17 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 20:47:15 2026]
+localcheckpoint parse_gard:
+    input: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa
+    output: results/BDNF-64/gard/segments.json, results/BDNF-64/gard/segments, results/BDNF-64/BDNF-64.gard.log
+    jobid: 6
+    reason: Missing output files: <TBD>; Input files updated by another job: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+DAG of jobs will be updated after completion.
+[Fri Mar 20 20:47:18 2026]
+Finished jobid: 6 (Rule: parse_gard)
+6 of 17 steps (35%) done
+Updating checkpoint dependencies.
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 20:47:18 2026]
+localrule sanitize_partition_alignment:
+    input: results/BDNF-64/gard/segments/BDNF-64.part1.codon.fas
+    output: results/BDNF-64/selection/part1/partition.filtered.codon.fas
+    log: results/logs/sanitize_partition_alignment.BDNF-64.part1.log
+    jobid: 34
+    reason: Missing output files: results/BDNF-64/selection/part1/partition.filtered.codon.fas
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 20:47:21 2026]
+Finished jobid: 34 (Rule: sanitize_partition_alignment)
+7 of 32 steps (22%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 20:47:21 2026]
+localrule iqtree_partition:
+    input: results/BDNF-64/selection/part1/partition.filtered.codon.fas
+    output: results/BDNF-64/selection/part1/IQ-TREE.treefile
+    log: results/logs/iqtree_partition.BDNF-64.part1.log
+    jobid: 36
+    reason: Missing output files: results/BDNF-64/selection/part1/IQ-TREE.treefile; Input files updated by another job: results/BDNF-64/selection/part1/partition.filtered.codon.fas
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        mkdir -p results/BDNF-64/selection/part1
+        iqtree \
+          -s results/BDNF-64/selection/part1/partition.filtered.codon.fas \
+          -st DNA \
+          -m GTR+G \
+          -nt AUTO \
+          --prefix results/BDNF-64/selection/part1/IQ-TREE \
+          --redo \
+          > results/logs/iqtree_partition.BDNF-64.part1.log 2>&1
+        
+[Fri Mar 20 20:48:18 2026]
+Finished jobid: 36 (Rule: iqtree_partition)
+8 of 32 steps (25%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 20:48:18 2026]
+localrule label_tree_TestForeground_partition:
+    input: results/BDNF-64/selection/part1/IQ-TREE.treefile, results/BDNF-64/BDNF-64.test_sequences.txt
+    output: results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile
+    log: results/logs/label_tree_TestForeground_partition.BDNF-64.part1.log
+    jobid: 35
+    reason: Missing output files: results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile; Input files updated by another job: results/BDNF-64/selection/part1/IQ-TREE.treefile
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 20:48:21 2026]
+Finished jobid: 35 (Rule: label_tree_TestForeground_partition)
+9 of 32 steps (28%) done
+Select jobs to execute...
+Execute 6 jobs...
+[Fri Mar 20 20:48:21 2026]
+localrule MEME_partition:
+    input: results/BDNF-64/selection/part1/partition.filtered.codon.fas, results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile
+    output: results/BDNF-64/selection/part1/MEME.json
+    log: results/logs/MEME_partition.BDNF-64.part1.log
+    jobid: 37
+    reason: Missing output files: results/BDNF-64/selection/part1/MEME.json; Input files updated by another job: results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile, results/BDNF-64/selection/part1/partition.filtered.codon.fas
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        mkdir -p results/BDNF-64/selection/part1
+        hyphy MEME --alignment results/BDNF-64/selection/part1/partition.filtered.codon.fas --tree results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile --output results/BDNF-64/selection/part1/MEME.json \
+          --branches Test ENV=TOLERATE_NUMERICAL_ERRORS=1 > results/logs/MEME_partition.BDNF-64.part1.log 2>&1
+        
+[Fri Mar 20 20:48:21 2026]
+localrule ABSREL_partition:
+    input: results/BDNF-64/selection/part1/partition.filtered.codon.fas, results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile
+    output: results/BDNF-64/selection/part1/ABSREL.json
+    log: results/logs/ABSREL_partition.BDNF-64.part1.log
+    jobid: 38
+    reason: Missing output files: results/BDNF-64/selection/part1/ABSREL.json; Input files updated by another job: results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile, results/BDNF-64/selection/part1/partition.filtered.codon.fas
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        mkdir -p results/BDNF-64/selection/part1
+        hyphy ABSREL --alignment results/BDNF-64/selection/part1/partition.filtered.codon.fas --tree results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile --output results/BDNF-64/selection/part1/ABSREL.json --branches Test > results/logs/ABSREL_partition.BDNF-64.part1.log 2>&1
+        
+[Fri Mar 20 20:48:21 2026]
+localrule RELAX_partition:
+    input: results/BDNF-64/selection/part1/partition.filtered.codon.fas, results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile, results/BDNF-64/BDNF-64.test_sequences.txt
+    output: results/BDNF-64/selection/part1/RELAX.json
+    log: results/logs/RELAX_partition.BDNF-64.part1.log
+    jobid: 40
+    reason: Missing output files: results/BDNF-64/selection/part1/RELAX.json; Input files updated by another job: results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile, results/BDNF-64/selection/part1/partition.filtered.codon.fas
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 20:48:21 2026]
+localrule FEL_partition:
+    input: results/BDNF-64/selection/part1/partition.filtered.codon.fas, results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile
+    output: results/BDNF-64/selection/part1/FEL.json
+    log: results/logs/FEL_partition.BDNF-64.part1.log
+    jobid: 33
+    reason: Missing output files: results/BDNF-64/selection/part1/FEL.json; Input files updated by another job: results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile, results/BDNF-64/selection/part1/partition.filtered.codon.fas
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        mkdir -p results/BDNF-64/selection/part1
+        hyphy FEL --alignment results/BDNF-64/selection/part1/partition.filtered.codon.fas --tree results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile --output results/BDNF-64/selection/part1/FEL.json --ci Yes --branches Test > results/logs/FEL_partition.BDNF-64.part1.log 2>&1
+        
+[Fri Mar 20 20:48:21 2026]
+localrule CFEL_partition:
+    input: results/BDNF-64/selection/part1/partition.filtered.codon.fas, results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile, results/BDNF-64/BDNF-64.test_sequences.txt
+    output: results/BDNF-64/selection/part1/CFEL.json
+    log: results/logs/CFEL_partition.BDNF-64.part1.log
+    jobid: 41
+    reason: Missing output files: results/BDNF-64/selection/part1/CFEL.json; Input files updated by another job: results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile, results/BDNF-64/selection/part1/partition.filtered.codon.fas
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 20:48:21 2026]
+localrule BUSTEDS_MH_partition:
+    input: results/BDNF-64/selection/part1/partition.filtered.codon.fas, results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile
+    output: results/BDNF-64/selection/part1/BUSTEDS-MH.json
+    log: results/logs/BUSTEDS_MH_partition.BDNF-64.part1.log
+    jobid: 39
+    reason: Missing output files: results/BDNF-64/selection/part1/BUSTEDS-MH.json; Input files updated by another job: results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile, results/BDNF-64/selection/part1/partition.filtered.codon.fas
+    wildcards: sample=BDNF-64, part=1
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: 
+        mkdir -p results/BDNF-64/selection/part1
+        hyphy BUSTED \
+          --alignment results/BDNF-64/selection/part1/partition.filtered.codon.fas \
+          --tree results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile \
+          --output results/BDNF-64/selection/part1/BUSTEDS-MH.json \
+          --srv Yes \
+          --multiple-hits Double+Triple \
+          --branches Test \
+          > results/logs/BUSTEDS_MH_partition.BDNF-64.part1.log 2>&1
+        

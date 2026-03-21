@@ -21,6 +21,7 @@ set -euo pipefail
 #   --latency-wait 60
 #   --rerun-incomplete
 #   --dry-run
+#   --software-deployment-method conda
 # ------------------------------------------------------------------------------
 
 # Pretty banner
@@ -49,6 +50,7 @@ KEEP_GOING="--keep-going"
 REASON="--reason"
 RERUN_INCOMPLETE="--rerun-incomplete"
 DRYRUN=""
+SOFTWARE_DEPLOYMENT_METHOD=""
 
 SNAKEFILE_MAIN="workflow/Snakefile"
 
@@ -79,6 +81,8 @@ while [[ $# -gt 0 ]]; do
       RERUN_INCOMPLETE=""; shift 1;;
     --dry-run|-n)
       DRYRUN="--dry-run"; shift 1;;
+    --software-deployment-method)
+      SOFTWARE_DEPLOYMENT_METHOD="--software-deployment-method $2"; shift 2;;
     --help|-h)
       cat <<EOF
 Usage: bash scripts/run_aoc_samples.sh --samples samples.csv [options]
@@ -94,6 +98,7 @@ Options:
   --workdir              Change into this directory before running
   --no-rerun-incomplete  Disable --rerun-incomplete
   --dry-run, -n          Snakemake dry run
+  --software-deployment-method  Pass through Snakemake deployment backend(s), e.g. 'conda'
   --help, -h             Show this help
 
 Examples:
@@ -134,9 +139,9 @@ run_smk () {
     return 0
   fi
 
-  echo "###############################################################################"
-  echo "# ${title}"
-  echo "###############################################################################"
+  #echo "###############################################################################"
+  #echo "# ${title}"
+  #echo "###############################################################################"
 
   # Always pass samples_csv into config for the Snakefile(s) to consume.
   snakemake \
@@ -146,6 +151,8 @@ run_smk () {
     ${KEEP_GOING} \
     --latency-wait "${LATENCY_WAIT}" \
     ${RERUN_INCOMPLETE} \
+    ${SOFTWARE_DEPLOYMENT_METHOD} \
+    all \
     ${DRYRUN} --printshellcmds \
     --config "samples_csv=${SAMPLES_CSV}" \
     --rerun-triggers mtime
@@ -155,6 +162,6 @@ run_smk () {
 # -----------------------------
 # Run pipeline phases
 # -----------------------------
-run_smk "${SNAKEFILE_MAIN}"      "Running the AOC Snakemake pipeline (samples.csv)"
+run_smk "${SNAKEFILE_MAIN}"      "Running the AOC Snakemake workflow"
 
 echo "[DONE] All requested phases finished."

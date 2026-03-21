@@ -1,0 +1,5 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: Alexs-MacBook-Pro-2.local
+Building DAG of jobs...
+Nothing to be done (all requested files are present and up to date).

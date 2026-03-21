@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -euo pipefail
 
 echo "Running AOC installation test..."
 
@@ -10,7 +10,9 @@ rm -rf tests/tmp_output
 snakemake \
   --cores 1 \
   --snakefile workflow/Snakefile \
-  --config samples_csv=tests/data/tiny_samples.csv outdir=tests/tmp_output
+  all \
+  --config samples_csv=tests/data/tiny_samples.csv outdir=tests/tmp_output \
+  --rerun-triggers mtime
 
 # Basic checks
 #if [ ! -f tests/tmp_output/summary/run_manifest.csv ]; then

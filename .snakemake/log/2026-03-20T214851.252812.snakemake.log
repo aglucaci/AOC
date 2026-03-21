@@ -1,0 +1,127 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: Alexs-MacBook-Pro-2.local
+Building DAG of jobs...
+Updating checkpoint dependencies.
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job              count
+-------------  -------
+PlotFELMerge         1
+PlotMEMEMerge        1
+all                  1
+total                3
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: PULP_CBC_CMD: Not Available (check permissions on cbc)
+Execute 2 jobs...
+[Fri Mar 20 21:48:52 2026]
+localrule PlotMEMEMerge:
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_MEME_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.MEME.merged.png, results/BDNF-64/visualizations/BDNF-64.MEME.merged.svg, results/BDNF-64/visualizations/BDNF-64.MEME.marginals.png, results/BDNF-64/visualizations/BDNF-64.MEME.marginals.svg
+    log: results/logs/PlotMEMEMerge.BDNF-64.log
+    jobid: 15
+    reason: Missing output files: results/BDNF-64/visualizations/BDNF-64.MEME.marginals.png, results/BDNF-64/visualizations/BDNF-64.MEME.merged.png
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 21:48:52 2026]
+localrule PlotFELMerge:
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.FEL.merged.png, results/BDNF-64/visualizations/BDNF-64.FEL.merged.svg, results/BDNF-64/visualizations/BDNF-64.FEL.marginals.png, results/BDNF-64/visualizations/BDNF-64.FEL.marginals.svg
+    log: results/logs/PlotFELMerge.BDNF-64.log
+    jobid: 14
+    reason: Missing output files: results/BDNF-64/visualizations/BDNF-64.FEL.merged.png, results/BDNF-64/visualizations/BDNF-64.FEL.marginals.png
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+Traceback (most recent call last):
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/executors/local.py", line 232, in spawn_job
+    subprocess.check_call(cmd, shell=True)
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+
+subprocess.CalledProcessError: Command 'cd /Users/alex/Documents/AOC-develop-new-snakemake && /Users/alex/miniconda3/envs/AOC/bin/python3.11 -m snakemake --snakefile '/Users/alex/Documents/AOC-develop-new-snakemake/workflow/Snakefile' --target-jobs 'PlotMEMEMerge:sample=BDNF-64' --allowed-rules PlotMEMEMerge --cores 10 --attempt 1 --force-use-threads  --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime --conda-frontend 'conda' --shared-fs-usage storage-local-copies persistence sources source-cache input-output software-deployment software-deployment-cache --wrapper-prefix 'https://github.com/snakemake/snakemake-wrappers/raw/' --config 'samples_csv=samples.csv' --printshellcmds  --latency-wait 60 --scheduler 'ilp' --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path '/Users/alex/miniconda3/envs/AOC/bin' --runtime-source-cache-path '/Users/alex/Library/Caches/snakemake/snakemake/source-cache/runtime-cache/tmp47dzywpd' --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --quiet progress rules host --mode 'subprocess' --local-groupid 'local'' returned non-zero exit status 1.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/executors/local.py", line 247, in cached_or_run
+    run_func(*args)
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/executors/local.py", line 234, in spawn_job
+    raise SpawnedJobError()
+
+snakemake.exceptions.SpawnedJobError
+
+Traceback (most recent call last):
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/executors/local.py", line 232, in spawn_job
+    subprocess.check_call(cmd, shell=True)
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+
+subprocess.CalledProcessError: Command 'cd /Users/alex/Documents/AOC-develop-new-snakemake && /Users/alex/miniconda3/envs/AOC/bin/python3.11 -m snakemake --snakefile '/Users/alex/Documents/AOC-develop-new-snakemake/workflow/Snakefile' --target-jobs 'PlotFELMerge:sample=BDNF-64' --allowed-rules PlotFELMerge --cores 10 --attempt 1 --force-use-threads  --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime --conda-frontend 'conda' --shared-fs-usage storage-local-copies persistence sources source-cache input-output software-deployment software-deployment-cache --wrapper-prefix 'https://github.com/snakemake/snakemake-wrappers/raw/' --config 'samples_csv=samples.csv' --printshellcmds  --latency-wait 60 --scheduler 'ilp' --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path '/Users/alex/miniconda3/envs/AOC/bin' --runtime-source-cache-path '/Users/alex/Library/Caches/snakemake/snakemake/source-cache/runtime-cache/tmp47dzywpd' --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --quiet progress rules host --mode 'subprocess' --local-groupid 'local'' returned non-zero exit status 1.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/executors/local.py", line 247, in cached_or_run
+    run_func(*args)
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/executors/local.py", line 234, in spawn_job
+    raise SpawnedJobError()
+
+snakemake.exceptions.SpawnedJobError
+
+[Fri Mar 20 21:48:55 2026]
+Error in rule PlotMEMEMerge:
+    message: None
+    jobid: 15
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_MEME_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.MEME.merged.png, results/BDNF-64/visualizations/BDNF-64.MEME.merged.svg, results/BDNF-64/visualizations/BDNF-64.MEME.marginals.png, results/BDNF-64/visualizations/BDNF-64.MEME.marginals.svg
+    log: results/logs/PlotMEMEMerge.BDNF-64.log (check log file(s) for error details)
+[Fri Mar 20 21:48:55 2026]
+Error in rule PlotFELMerge:
+    message: None
+    jobid: 14
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.FEL.merged.png, results/BDNF-64/visualizations/BDNF-64.FEL.merged.svg, results/BDNF-64/visualizations/BDNF-64.FEL.marginals.png, results/BDNF-64/visualizations/BDNF-64.FEL.marginals.svg
+    log: results/logs/PlotFELMerge.BDNF-64.log (check log file(s) for error details)
+Exiting because a job execution failed. Look below for error messages
+[Fri Mar 20 21:48:55 2026]
+Error in rule PlotMEMEMerge:
+    message: None
+    jobid: 15
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_MEME_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.MEME.merged.png, results/BDNF-64/visualizations/BDNF-64.MEME.merged.svg, results/BDNF-64/visualizations/BDNF-64.MEME.marginals.png, results/BDNF-64/visualizations/BDNF-64.MEME.marginals.svg
+    log: results/logs/PlotMEMEMerge.BDNF-64.log (check log file(s) for error details)
+[Fri Mar 20 21:48:55 2026]
+Error in rule PlotFELMerge:
+    message: None
+    jobid: 14
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.FEL.merged.png, results/BDNF-64/visualizations/BDNF-64.FEL.merged.svg, results/BDNF-64/visualizations/BDNF-64.FEL.marginals.png, results/BDNF-64/visualizations/BDNF-64.FEL.marginals.svg
+    log: results/logs/PlotFELMerge.BDNF-64.log (check log file(s) for error details)
+Complete log(s): /Users/alex/Documents/AOC-develop-new-snakemake/.snakemake/log/2026-03-20T214851.252812.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

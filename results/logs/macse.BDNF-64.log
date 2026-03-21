@@ -1,0 +1,18 @@
+[INFO] MACSE launcher: /Users/alex/miniconda3/envs/AOC/bin/macse
+[INFO] MACSE environment root: /Users/alex/miniconda3/envs/AOC
+[INFO] Staged launcher path: /var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T/tmp.raHD5cknAC/bin/macse
+[INFO] Staged 2 jar file(s) with heap opts -Xms512m -Xmx2048m
+file : /Users/alex/Documents/AOC-develop-new-snakemake/data/BDNF/BDNF-64.fasta
+64	sequences with genetic code	The_Standard_Code
+compute initial pairwise distances
+................................................................
+compute first alignment with guide tree
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+first alignment score : 2478058.8
+
+start refining the alignment
+refine 2 cut : sum of pairs ========= 0 => 2478058.8
+
+The file 'results/BDNF-64/BDNF-64.codons.fa' was created.
+The file 'results/BDNF-64/BDNF-64.aa.fa' was created.
+PROGRAM HAS FINISHED SUCCESSFULLY

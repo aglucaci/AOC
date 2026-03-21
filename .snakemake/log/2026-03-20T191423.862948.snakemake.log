@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/cli.py", line 2092, in args_to_api
+    workflow_api.list_rules(only_targets=True)
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/api.py", line 301, in _handle_no_dag
+    return method(self, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/api.py", line 378, in list_rules
+    self._workflow.list_rules(only_targets=only_targets)
+    ^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/api.py", line 394, in _workflow
+    workflow = self._get_workflow()
+               ^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/api.py", line 409, in _get_workflow
+    return Workflow(
+           ^^^^^^^^^
+
+  File "<string>", line 21, in __init__
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/workflow.py", line 211, in __post_init__
+    self._sourcecache = SourceCache(
+                        ^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/sourcecache.py", line 365, in __init__
+    self.runtime_cache = tempfile.TemporaryDirectory(
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/tempfile.py", line 871, in __init__
+    self.name = mkdtemp(suffix, prefix, dir)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/tempfile.py", line 385, in mkdtemp
+    _os.mkdir(file, 0o700)
+
+PermissionError: [Errno 1] Operation not permitted: '/Users/alex/Library/Caches/snakemake/snakemake/source-cache/runtime-cache/tmps0f10m53'
+

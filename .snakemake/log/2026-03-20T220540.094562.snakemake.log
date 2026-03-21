@@ -1,0 +1,43 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: Alexs-MacBook-Pro-2.local
+Building DAG of jobs...
+Updating checkpoint dependencies.
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                         count
+------------------------  -------
+PlotSelectionConcordance        1
+all                             1
+total                           2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 22:05:41 2026]
+localrule PlotSelectionConcordance:
+    input: results/BDNF-64/tables/BDNF-64.selection_overview.csv
+    output: results/BDNF-64/visualizations/BDNF-64.selection.concordance.png, results/BDNF-64/visualizations/BDNF-64.selection.concordance.svg
+    log: results/logs/PlotSelectionConcordance.BDNF-64.log
+    jobid: 21
+    reason: Missing output files: results/BDNF-64/visualizations/BDNF-64.selection.concordance.png
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 22:05:44 2026]
+Finished jobid: 21 (Rule: PlotSelectionConcordance)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 22:05:44 2026]
+localrule all:
+    input: results/BDNF-64/BDNF-64.RD.SA.codons.cln.fa, results/BDNF-64/selection/ALL_PARTITIONS.done, results/BDNF-64/tables/BDNF-64.AOC.merged_FEL_Results.csv, results/BDNF-64/tables/BDNF-64.AOC.merged_MEME_Results.csv, results/BDNF-64/tables/BDNF-64.AOC.merged_ABSREL_Results.csv, results/BDNF-64/tables/BDNF-64.AOC.merged_BUSTEDS-MH_Results.csv, results/BDNF-64/tables/BDNF-64.AOC.merged_RELAX_Results.csv, results/BDNF-64/tables/BDNF-64.AOC.merged_CFEL_Results.csv, results/BDNF-64/tables/BDNF-64.selection_overview.csv, results/BDNF-64/visualizations/BDNF-64.FEL.merged.png, results/BDNF-64/visualizations/BDNF-64.FEL.marginals.png, results/BDNF-64/visualizations/BDNF-64.MEME.merged.png, results/BDNF-64/visualizations/BDNF-64.MEME.marginals.png, results/BDNF-64/visualizations/BDNF-64.ABSREL.merged.png, results/BDNF-64/visualizations/BDNF-64.BUSTEDS-MH.merged.png, results/BDNF-64/visualizations/BDNF-64.RELAX.merged.png, results/BDNF-64/visualizations/BDNF-64.CFEL.merged.png, results/BDNF-64/visualizations/BDNF-64.selection.method_heatmap.png, results/BDNF-64/visualizations/BDNF-64.selection.concordance.png, results/BDNF-64/visualizations/BDNF-64.selection.dashboard.png
+    jobid: 0
+    reason: Input files updated by another job: results/BDNF-64/visualizations/BDNF-64.selection.concordance.png
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 22:05:44 2026]
+Finished jobid: 0 (Rule: all)
+2 of 2 steps (100%) done
+Complete log(s): /Users/alex/Documents/AOC-develop-new-snakemake/.snakemake/log/2026-03-20T220540.094562.snakemake.log

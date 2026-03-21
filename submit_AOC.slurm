@@ -23,7 +23,7 @@ source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate AOC
 
 # --- Run AOC (samples.csv-driven) ---
-# Uses your runner behavior: --config samples_csv=...
+# Uses the Snakemake 9-compatible wrapper in run_AOC.sh.
 # Adjust samples path if needed.
 SAMPLES_CSV="${1:-samples.csv}"
 

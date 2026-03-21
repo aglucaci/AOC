@@ -1,0 +1,112 @@
+
+Analysis Description
+--------------------
+MEME (Mixed Effects Model of Evolution) estimates a site-wise synonymous
+(&alpha;) and a two-category mixture of non-synonymous (&beta;-, with
+proportion p-, and &beta;+ with proportion [1-p-]) rates, and uses a
+likelihood ratio test to determine if &beta;+ > &alpha; at a site. The
+estimates aggregate information over a proportion of branches at a site,
+so the signal is derived from episodic diversification, which is a
+combination of strength of selection [effect size] and the proportion of
+the tree affected. A subset of branches can be selected for testing as
+well, in which case an additional (nuisance) parameter will be inferred
+-- the non-synonymous rate on branches NOT selected for testing.
+Multiple partitions within a NEXUS file are also supported for
+recombination - aware analysis. Version 3.0 adds a different format for
+ancestral state reconstruction, branch-site posterior storage, and
+site-level heterogeneity testing. Version 4 adds support for multiple
+hits and more than 2 rate classes on omega, as well as site-level
+imputation option. Version 4.1 fixes bugs with EBF computation for > 2
+more rates and MH reporting. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__: Detecting Individual Sites Subject to Episodic Diversifying Selection.
+_PLoS Genet_ 8(7): e1002764.
+
+- __Written by__: Sergei L. Kosakovsky Pond, Steven Weaver
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 4.1
+
+
+>code => Universal
+/Users/alex/Documents/AOC-develop-new-snakemake/results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile
+results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile
+
+>Loaded a multiple sequence alignment with **60** sequences, **407** codons, and **1** partitions from `/Users/alex/Documents/AOC-develop-new-snakemake/results/BDNF-64/selection/part1/partition.filtered.codon.fas`
+
+>branches => All
+
+>Select the p-value threshold to use when testing for selection (permissible range = [0,1], default value = 0.1): 
+>pvalue => 0.1
+
+>[Advanced setting, will result in MUCH SLOWER run time] Perform parametric bootstrap resampling to derive site-level null LRT distributions up to this many replicates per site. Recommended use for small to medium (<30 sequences) datasets (permissible range = [0,1000], default value = 50, integer): 
+>resample => 0
+The number omega rate classes to include in the model [2 is the strongly recommended default] (permissible range = [2,4], default value = 2, integer): 
+>rates => 2
+
+>multiple-hits => None
+
+>impute-states => No
+
+>precision => standard
+
+
+### Branches to include in the MEME analysis
+Selected 117 branches to include in the MEME analysis: `NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA, XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA, XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA, Node17, XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node16, Node14, Node12, XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA, Node11, XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node10, Node8, XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node24, XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node29, Node27, Node23, Node7, XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node34, Node32, Node6, XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA, XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node42, XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node46, XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA, Node45, Node41, XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node53, Node51, XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node50, Node40, XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA, Node57, Node39, NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA, Node38, XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node67, XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node66, XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node65, XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node73, XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node72, Node64, XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node63, XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node82, NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA, XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node87, XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node86, NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA, XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node91, Node85, Node81, XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node80, XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node79, XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node78, Node62, XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node102, XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA, Node101, XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node100, XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node99, Node97, Node61, Node37, Node5, XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA, Node112, XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA, Node111, Node109, XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA, Node108, Node4, Node2, NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 3 zero-length internal branches: `Node16, Node17, Node45`
+* Log(L) = -10677.29, AIC-c = 21605.01 (125 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.161
+
+### Obtaining the global omega estimate based on relative GTR branch lengths and nucleotide substitution biases
+* Log(L) = -10215.33, AIC-c = 20690.04 (129 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.246
+* non-synonymous/synonymous rate ratio for *test* =   0.2530
+
+>full-model => Yes
+Only analyze sites whose 1-based indices match the following list (null to skip) : 
+>limit-to-sites => null
+For sites whose 1-based indices match the following list, write out likelihood function snapshots (null string to skip) : 
+>save-lf-for-sites => null
+
+### Improving branch lengths, nucleotide substitution biases, and global dN/dS ratios under a full codon model
+* Log(L) = -10189.16
+* Log(L) = -10189.16, AIC-c = 20637.69 (129 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.240
+* non-synonymous/synonymous rate ratio for *test* =   0.2310
+
+### For partition 1 these sites are significant at p <=0.1
+
+|   Codon    | Partition  |   alpha    |non-syn rate (beta) distribution, rates : weights|    LRT     |Episodic selection detected?| # branches |         List of most common codon substitutions at this site          |
+|:----------:|:----------:|:----------:|:-----------------------------------------------:|:----------:|:--------------------------:|:----------:|:---------------------------------------------------------------------:|
+|     7      |     1      |    0.022   |             0.01/20.54 : 0.75/0.25              |    4.303   |      Yes, p =  0.0541      |     2      |                      [1]AGG>TTT,tTt>tCt,tTT>tGG                       |
+|     10     |     1      |    0.001   |              0.00/7.19 : 0.00/1.00              |    4.161   |      Yes, p =  0.0582      |     0      |              [1]cGg>cAg,CGg>GTg,Gtg>Ctg,gTg>gAg,Tgg>Cgg               |
+|     13     |     1      |    7.229   |            0.00/5792.16 : 0.41/0.59             |   12.803   |      Yes, p =  0.0007      |     1      |          [1]AGG>TTA,Cgg>Agg,CGG>TTT,CTA>GGG,TTA>AGG,Tta>Cta           |
+|     52     |     1      |    3.598   |             0.00/27.16 : 0.47/0.53              |    3.184   |      Yes, p =  0.0969      |     1      |      [1]ccC>ccT,CCt>GTt,Cgc>Tgc,GTt>ACt,Gtt>Att,GTT>CGC,Gtt>Ttt       |
+|     57     |     1      |    0.001   |             0.00/14.06 : 0.00/1.00              |    5.087   |      Yes, p =  0.0360      |     0      |                 [2]aTt>aCt,ATt>GCt|[1]Att>Gtt,TCG>ATT                 |
+|     61     |     1      |    0.021   |             0.01/27.89 : 0.66/0.34              |    3.807   |      Yes, p =  0.0700      |     0      |                  [1]ATg>CAg,cAg>cCg,CaG>GaT,CAg>TCg                   |
+|     90     |     1      |    2.574   |             0.00/251.42 : 0.87/0.13             |    7.589   |      Yes, p =  0.0100      |     0      |                  [1]CCa>AGa,CCA>GAT,ccG>ccA,CCg>GGg                   |
+|    108     |     1      |    0.000   |            0.00/57324.45 : 1.00/0.00            |    5.547   |      Yes, p =  0.0284      |     0      |  [1]aTG>aAT,ATg>CAg,Atg>Gtg,ATG>TGC,CtC>GtG,CTC>TGT,GTg>AAg,GtG>CtC   |
+|    126     |     1      |    0.001   |             0.00/152.57 : 0.74/0.26             |    6.904   |      Yes, p =  0.0142      |     0      |[1]Act>Cct,ACT>GTG,GAG>TCC,Gtg>Atg,gTg>gAg,gTG>gCT,GTg>TGg,TcC>AcT,T...|
+|    127     |     1      |   13.411   |             0.00/258.06 : 0.65/0.35             |    4.635   |      Yes, p =  0.0455      |     0      |[1]Agg>Cgg,ccG>ccT,CCT>GAA,Gaa>Aaa,GaA>AaT,GAA>AGT,GAA>CGC,gaA>gaG,G...|
+|    128     |     1      |    0.480   |            0.48/1406.56 : 0.39/0.61             |   14.825   |      Yes, p =  0.0003      |     0      |[1]CCG>AAC,cCg>cTg,CCG>GGA,CCg>TGg,CCG>TTT,TGG>GTT,TTG>AGC,TTT>CCG,t...|
+|    130     |     1      |    6.195   |            6.19/7898.01 : 0.92/0.08             |    4.994   |      Yes, p =  0.0378      |     1      |[1]aaA>aaC,aaA>aaG,aAa>aCa,aAa>aGa,AAA>CTG,CCg>GGg,cTg>cCg,GGG>AAA,G...|
+|    132     |     1      |    5.835   |             0.00/74.72 : 0.70/0.30              |    4.250   |      Yes, p =  0.0556      |     0      |[2]atT>atC|[1]ATC>GAG,Atc>Ttc,aTT>aAA,ATt>CGt,ATT>TCC,CGt>ATt,cGt>cC...|
+|    133     |     1      |    3.133   |             0.00/31.64 : 0.14/0.86              |    4.041   |      Yes, p =  0.0619      |     0      |[1]ACt>TGt,CCC>GAG,Ccc>Tcc,Cct>Act,CCT>ATG,ccT>ccC,cCT>cTG,cCt>cTt,C...|
+|    135     |     1      |    0.000   |             0.00/40.26 : 0.70/0.30              |   10.548   |      Yes, p =  0.0022      |     2      |         [2]aAT>aTG|[1]aaT>aaA,AAt>TGt,ATG>GGA,GCt>AAt,TGt>GCt         |
+|    136     |     1      |    3.271   |             1.70/75.78 : 0.70/0.30              |    4.354   |      Yes, p =  0.0527      |     0      |[1]Cct>Tct,Gga>Cga,gGA>gTG,Ggt>Agt,GGt>CCt,ggT>ggA,GGt>TCt,GtG>CtC,g...|
+|    138     |     1      |    9.765   |             0.00/75.95 : 0.57/0.43              |    3.645   |      Yes, p =  0.0761      |     1      |[2]ATA>TCG|[1]AGG>CCT,aTA>aGG,Ata>Cta,CCa>ATa,ccC>ccG,ccG>ccA,TCg>GG...|
+|    139     |     1      |    4.096   |             4.10/604.17 : 0.87/0.13             |   14.468   |      Yes, p =  0.0003      |     2      |[5]aAg>aTg|[2]aaG>aaT,Aag>Gag|[1]AAG>TCA,aTg>aAg,ATg>CAg,Gag>Aag,GAg...|
+|    172     |     1      |    0.000   |              0.00/4.21 : 0.00/1.00              |    7.254   |      Yes, p =  0.0119      |     5      |       [3]Gtc>Atc|[2]Gtc>Ctc|[1]Atc>Gtc,gGc>gTc,gTc>gCc,gTc>gGc        |
+|    173     |     1      |    1.522   |             0.00/63.24 : 0.75/0.25              |    4.084   |      Yes, p =  0.0606      |     1      |                         [2]caC>caT|[1]cGA>cAC                         |
+|    183     |     1      |    3.024   |             0.00/46.40 : 0.55/0.45              |    4.541   |      Yes, p =  0.0478      |     4      |           [3]gGt>gCt|[2]ggT>ggC|[1]ggC>ggA,GGt>AAt,ggT>ggG            |
+
+### ** Found _21_ sites under episodic diversifying positive selection at p <= 0.1**

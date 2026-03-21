@@ -1,2 +1,2 @@
-sample,codon_fasta,sequence_labels_csv
-tiny,tests/data/tiny.fasta,
+sample,codon_fasta,sequence_labels_csv,run_recombination
+tiny,tests/data/tiny.fasta,,false

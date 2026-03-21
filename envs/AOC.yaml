@@ -7,18 +7,19 @@ dependencies:
   # Core
   - python=3.11
   - pip
-  - snakemake=7.32.4
+  - snakemake=9.13.7
   - hyphy=2.5.74
   - pyyaml
   - rich
-  - tn93=1.0.14
+  - tn93>=1.0.15
 
   # Bio / phylo utilities
   - biopython=1.83
   - ete3=3.1.2
   - macse
   - openjdk
-  - fasttree=2.2.0
+  - openmpi
+  - iqtree
 
   # Data + plotting
   - numpy

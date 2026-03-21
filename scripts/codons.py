@@ -16,16 +16,29 @@ The idea for this script is that:
 # =============================================================================
 # Imports
 # =============================================================================
-from Bio import SeqIO
-import sys
 import argparse
+import sys
+
+from Bio import SeqIO
 
 # =============================================================================
 # Declares
 # =============================================================================
-PROTEIN_FASTA = snakemake.params.Prot
-TRANSCRIPTS_FASTA = snakemake.params.Nuc
-OUTPUT = snakemake.params.Out
+def _resolve_args():
+    try:
+        return snakemake.params.Prot, snakemake.params.Nuc, snakemake.params.Out
+    except NameError:
+        parser = argparse.ArgumentParser(
+            description="Match protein FASTA records to transcript FASTA records and emit coding sequences."
+        )
+        parser.add_argument("--protein-fasta", required=True)
+        parser.add_argument("--transcripts-fasta", required=True)
+        parser.add_argument("--output", required=True)
+        args = parser.parse_args()
+        return args.protein_fasta, args.transcripts_fasta, args.output
+
+
+PROTEIN_FASTA, TRANSCRIPTS_FASTA, OUTPUT = _resolve_args()
 
 results = []
 no_match = []

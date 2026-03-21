@@ -1,0 +1,148 @@
+Config file config/config.yaml is extended by additional config specified via the command line.
+Assuming unrestricted shared filesystem usage.
+host: Alexs-MacBook-Pro-2.local
+Building DAG of jobs...
+Updating checkpoint dependencies.
+Using shell: /bin/bash
+Provided cores: 10
+Rules claiming more threads will be scaled down.
+Job stats:
+job                           count
+--------------------------  -------
+PlotABSRELMerge                   1
+PlotBUSTEDSMHMerge                1
+PlotCFELMerge                     1
+PlotRELAXMerge                    1
+PlotSelectionDashboard            1
+PlotSelectionMethodHeatmap        1
+all                               1
+total                             7
+
+Select jobs to execute...
+Failed to solve scheduling problem with ILP solver, falling back to greedy scheduler. You likely have to fix your ILP solver installation. Error message: PULP_CBC_CMD: Not Available (check permissions on cbc)
+Execute 4 jobs...
+[Fri Mar 20 21:41:30 2026]
+localrule PlotABSRELMerge:
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_ABSREL_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.ABSREL.merged.png, results/BDNF-64/visualizations/BDNF-64.ABSREL.merged.svg
+    log: results/logs/PlotABSRELMerge.BDNF-64.log
+    jobid: 16
+    reason: Missing output files: results/BDNF-64/visualizations/BDNF-64.ABSREL.merged.png
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 21:41:30 2026]
+localrule PlotSelectionDashboard:
+    input: results/BDNF-64/tables/BDNF-64.selection_overview.csv
+    output: results/BDNF-64/visualizations/BDNF-64.selection.dashboard.png, results/BDNF-64/visualizations/BDNF-64.selection.dashboard.svg
+    log: results/logs/PlotSelectionDashboard.BDNF-64.log
+    jobid: 21
+    reason: Missing output files: results/BDNF-64/visualizations/BDNF-64.selection.dashboard.png
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 21:41:30 2026]
+localrule PlotBUSTEDSMHMerge:
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_BUSTEDS-MH_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.BUSTEDS-MH.merged.png, results/BDNF-64/visualizations/BDNF-64.BUSTEDS-MH.merged.svg
+    log: results/logs/PlotBUSTEDSMHMerge.BDNF-64.log
+    jobid: 17
+    reason: Missing output files: results/BDNF-64/visualizations/BDNF-64.BUSTEDS-MH.merged.png
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 21:41:30 2026]
+localrule PlotSelectionMethodHeatmap:
+    input: results/BDNF-64/tables/BDNF-64.selection_overview.csv
+    output: results/BDNF-64/visualizations/BDNF-64.selection.method_heatmap.png, results/BDNF-64/visualizations/BDNF-64.selection.method_heatmap.svg
+    log: results/logs/PlotSelectionMethodHeatmap.BDNF-64.log
+    jobid: 20
+    reason: Missing output files: results/BDNF-64/visualizations/BDNF-64.selection.method_heatmap.png
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+Select jobs to execute...
+[Fri Mar 20 21:41:34 2026]
+Finished jobid: 17 (Rule: PlotBUSTEDSMHMerge)
+1 of 7 steps (14%) done
+Execute 1 jobs...
+[Fri Mar 20 21:41:34 2026]
+localrule PlotRELAXMerge:
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_RELAX_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.RELAX.merged.png, results/BDNF-64/visualizations/BDNF-64.RELAX.merged.svg
+    log: results/logs/PlotRELAXMerge.BDNF-64.log
+    jobid: 18
+    reason: Missing output files: results/BDNF-64/visualizations/BDNF-64.RELAX.merged.png
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 21:41:34 2026]
+Finished jobid: 16 (Rule: PlotABSRELMerge)
+2 of 7 steps (29%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Fri Mar 20 21:41:34 2026]
+localrule PlotCFELMerge:
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_CFEL_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.CFEL.merged.png, results/BDNF-64/visualizations/BDNF-64.CFEL.merged.svg
+    log: results/logs/PlotCFELMerge.BDNF-64.log
+    jobid: 19
+    reason: Missing output files: results/BDNF-64/visualizations/BDNF-64.CFEL.merged.png
+    wildcards: sample=BDNF-64
+    resources: tmpdir=/var/folders/3l/76gtv9qd0v3_8hn3cb7hfbs40000gn/T
+Shell command: None
+[Fri Mar 20 21:41:34 2026]
+Finished jobid: 20 (Rule: PlotSelectionMethodHeatmap)
+3 of 7 steps (43%) done
+[Fri Mar 20 21:41:34 2026]
+Finished jobid: 21 (Rule: PlotSelectionDashboard)
+4 of 7 steps (57%) done
+[Fri Mar 20 21:41:37 2026]
+Finished jobid: 18 (Rule: PlotRELAXMerge)
+5 of 7 steps (71%) done
+Traceback (most recent call last):
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/executors/local.py", line 232, in spawn_job
+    subprocess.check_call(cmd, shell=True)
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/subprocess.py", line 413, in check_call
+    raise CalledProcessError(retcode, cmd)
+
+subprocess.CalledProcessError: Command 'cd /Users/alex/Documents/AOC-develop-new-snakemake && /Users/alex/miniconda3/envs/AOC/bin/python3.11 -m snakemake --snakefile '/Users/alex/Documents/AOC-develop-new-snakemake/workflow/Snakefile' --target-jobs 'PlotCFELMerge:sample=BDNF-64' --allowed-rules PlotCFELMerge --cores 10 --attempt 1 --force-use-threads  --force --target-files-omit-workdir-adjustment --max-inventory-time 0 --nocolor --no-hooks --nolock --ignore-incomplete --rerun-triggers mtime --conda-frontend 'conda' --shared-fs-usage source-cache software-deployment sources persistence input-output software-deployment-cache storage-local-copies --wrapper-prefix 'https://github.com/snakemake/snakemake-wrappers/raw/' --config 'samples_csv=samples.csv' --printshellcmds  --latency-wait 60 --scheduler 'ilp' --local-storage-prefix base64//LnNuYWtlbWFrZS9zdG9yYWdl --scheduler-solver-path '/Users/alex/miniconda3/envs/AOC/bin' --runtime-source-cache-path '/Users/alex/Library/Caches/snakemake/snakemake/source-cache/runtime-cache/tmp6di7it5l' --default-resources base64//dG1wZGlyPXN5c3RlbV90bXBkaXI= --quiet progress rules host --mode 'subprocess' --local-groupid 'local'' returned non-zero exit status 1.
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/executors/local.py", line 247, in cached_or_run
+    run_func(*args)
+
+  File "/Users/alex/miniconda3/envs/AOC/lib/python3.11/site-packages/snakemake/executors/local.py", line 234, in spawn_job
+    raise SpawnedJobError()
+
+snakemake.exceptions.SpawnedJobError
+
+[Fri Mar 20 21:41:37 2026]
+Error in rule PlotCFELMerge:
+    message: None
+    jobid: 19
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_CFEL_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.CFEL.merged.png, results/BDNF-64/visualizations/BDNF-64.CFEL.merged.svg
+    log: results/logs/PlotCFELMerge.BDNF-64.log (check log file(s) for error details)
+Exiting because a job execution failed. Look below for error messages
+[Fri Mar 20 21:41:37 2026]
+Error in rule PlotCFELMerge:
+    message: None
+    jobid: 19
+    input: results/BDNF-64/tables/BDNF-64.AOC.merged_CFEL_Results.csv
+    output: results/BDNF-64/visualizations/BDNF-64.CFEL.merged.png, results/BDNF-64/visualizations/BDNF-64.CFEL.merged.svg
+    log: results/logs/PlotCFELMerge.BDNF-64.log (check log file(s) for error details)
+Complete log(s): /Users/alex/Documents/AOC-develop-new-snakemake/.snakemake/log/2026-03-20T214128.794998.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

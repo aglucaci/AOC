@@ -1,2 +1,3 @@
-sample,codon_fasta,sequence_labels_csv
-BDNF-64,data/BDNF/BDNF-64.fasta,data/BDNF/BDNF-64.sequence_labels.csv
+sample,codon_fasta,sequence_labels_csv,run_recombination
+BDNF-64,data/BDNF/BDNF-64.fasta,,false
+

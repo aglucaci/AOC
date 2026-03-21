@@ -1,0 +1,403 @@
+IQ-TREE version 3.0.1 for MacOS ARM 64-bit built Jul  9 2025
+Developed by Bui Quang Minh, Thomas Wong, Nhan Ly-Trong, Huaiyan Ren
+Contributed by Lam-Tung Nguyen, Dominik Schrempf, Chris Bielow,
+Olga Chernomor, Michael Woodhams, Diep Thi Hoang, Heiko Schmidt
+
+Host:    Alexs-MacBook-Pro-2.local (SSE4.2, 16 GB RAM)
+Command: iqtree -s results/BDNF-64/selection/part1/partition.filtered.codon.fas -st DNA -m GTR+G -nt AUTO --prefix results/BDNF-64/selection/part1/IQ-TREE --redo
+Seed:    809999 (Using SPRNG - Scalable Parallel Random Number Generator)
+Time:    Fri Mar 20 21:00:38 2026
+Kernel:  SSE2 - auto-detect threads (10 CPU cores detected)
+
+Reading alignment file results/BDNF-64/selection/part1/partition.filtered.codon.fas ... Fasta format detected
+Reading fasta file: done in 0.000823021 secs using 89.18% CPU
+Alignment most likely contains DNA/RNA sequences
+Constructing alignment: done in 0.000727892 secs using 68.42% CPU
+Alignment has 60 sequences with 1221 columns, 543 distinct patterns
+418 parsimony-informative, 96 singleton sites, 707 constant sites
+                                                                                                                           Gap/Ambiguity  Composition  p-value
+Analyzing sequences: done in 5.6982e-05 secs using 91.26% CPU
+   1  NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA                                   39.31%    passed     34.70%
+   2  XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA                   25.31%    passed     86.60%
+   3  NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA                                                  39.31%    passed     47.56%
+   4  XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA                       36.12%    passed     93.42%
+   5  XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA                   20.39%    passed     31.25%
+   6  XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA        39.31%    passed     81.62%
+   7  XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA                                    39.31%    passed     78.77%
+   8  XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA          37.35%    passed     70.68%
+   9  XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA               39.31%    passed     75.47%
+  10  XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA           37.35%    passed     66.81%
+  11  XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA               37.35%    passed     72.20%
+  12  XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA      37.35%    passed     78.27%
+  13  XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA                                       39.31%    passed     93.89%
+  14  XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA                                        39.31%    passed     96.05%
+  15  XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA             32.19%    passed     73.67%
+  16  XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA       36.36%    passed     82.65%
+  17  XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA                                 20.64%    passed     60.61%
+  18  XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA               37.35%    passed     37.77%
+  19  XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA                37.35%    passed     24.67%
+  20  XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA          19.66%    passed     19.81%
+  21  XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA               37.35%    passed     89.31%
+  22  XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA                                          39.31%    passed     61.20%
+  23  XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA           37.35%    passed     88.00%
+  24  XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA                   39.31%    passed     85.29%
+  25  XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA                    37.35%    passed     84.95%
+  26  XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA              32.43%    passed     80.75%
+  27  XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA               32.43%    passed     71.66%
+  28  XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA               32.43%    passed     80.54%
+  29  XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA                  37.35%    passed     82.00%
+  30  XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA                  38.57%    passed     74.56%
+  31  XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA                       36.61%    passed     71.48%
+  32  XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA                38.57%    passed     61.67%
+  33  XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA                                            18.18%    passed     36.09%
+  34  XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA                        36.61%    passed     69.34%
+  35  XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA                       38.57%    passed     53.71%
+  36  XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA   36.61%    passed     37.84%
+  37  XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA               18.92%    passed     12.32%
+  38  NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA                                                      39.31%    passed     96.86%
+  39  XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA                                39.31%    passed     87.01%
+  40  XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA                                        10.57%    failed      0.03%
+  41  XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA                  18.92%    passed     23.88%
+  42  XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA                                    19.90%    passed     24.66%
+  43  NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA                                38.82%    passed     87.04%
+  44  XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA                                             11.30%    passed     16.88%
+  45  XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA                                             11.30%    passed     39.99%
+  46  NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA                                                   39.31%    passed     71.91%
+  47  XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA                                      20.15%    passed     31.99%
+  48  NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA                           11.06%    failed      3.84%
+  49  XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA                    11.06%    passed      5.25%
+  50  XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA                  19.66%    passed     66.01%
+  51  XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA              36.86%    failed      3.59%
+  52  XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA                    36.86%    failed      4.09%
+  53  XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA                  35.38%    failed      0.68%
+  54  XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA            35.87%    failed      2.80%
+  55  XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA           32.68%    passed     31.42%
+  56  XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA                 39.56%    passed     35.25%
+  57  XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA            33.17%    passed     11.27%
+  58  XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA                                  39.56%    passed     42.63%
+  59  XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA             37.59%    passed     99.81%
+  60  XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA                                     40.29%    failed      0.00%
+****  TOTAL                                                                                                                       32.27%  7 sequences failed composition chi2 test (p-value<5%; df=3)
+Checking for duplicate sequences: done in 0.00010705 secs using 81.27% CPU
+
+Create initial parsimony tree by phylogenetic likelihood library (PLL)... 0.004 seconds
+
+NOTE: 4 MB RAM (0 GB) is required!
+Measuring multi-threading efficiency up to 10 CPU cores
+Increase to 10 rounds for branch lengths
+240 trees examined
+Threads: 1 / Time: 10.029 sec / Speedup: 1.000 / Efficiency: 100% / LogL: -15223
+Threads: 2 / Time: 12.887 sec / Speedup: 0.778 / Efficiency: 39% / LogL: -15223
+Determining AUTO threadcount: done in 22.9157 secs using 95.32% CPU
+BEST NUMBER OF THREADS: 1
+
+Estimate model parameters (epsilon = 0.100)
+1. Initial log-likelihood: -10328.399
+2. Current log-likelihood: -9511.090
+3. Current log-likelihood: -9485.370
+4. Current log-likelihood: -9484.741
+Optimal log-likelihood: -9484.710
+Rate parameters:  A-C: 0.91077  A-G: 2.33260  A-T: 0.46997  C-G: 1.12639  C-T: 3.84317  G-T: 1.00000
+Base frequencies:  A: 0.258  C: 0.247  G: 0.288  T: 0.206
+Gamma shape alpha: 0.263
+Parameters optimization took 4 rounds (0.233 sec)
+Wrote distance file to... 
+Computing ML distances based on estimated model parameters...
+Calculating distance matrix: done in 0.0159469 secs using 98.97% CPU
+Computing ML distances took 0.016089 sec (of wall-clock time) 0.015885 sec (of CPU time)
+Setting up auxiliary I and S matrices: done in 7.79629e-05 secs using 76.96% CPU
+Constructing RapidNJ tree: done in 0.000152111 secs using 94.01% CPU
+Computing RapidNJ tree took 0.000277 sec (of wall-clock time) 0.000214 sec (of CPU time)
+Log-likelihood of RapidNJ tree: -9601.573
+--------------------------------------------------------------------
+|             INITIALIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Generating 98 parsimony trees... 0.353 second
+Computing log-likelihood of 98 initial trees ... 0.553 seconds
+Current best score: -9484.710
+
+Do NNI search on 20 best initial trees
+Optimizing NNI: done in 0.049299 secs using 96.57% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 1: -9478.008
+Optimizing NNI: done in 0.099812 secs using 98.52% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 2: -9465.717
+Optimizing NNI: done in 0.0865471 secs using 98.44% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 3: -9463.070
+Optimizing NNI: done in 0.0815141 secs using 98.88% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 4: -9457.375
+Optimizing NNI: done in 0.108999 secs using 98.39% CPU
+Optimizing NNI: done in 0.0886149 secs using 98.63% CPU
+Optimizing NNI: done in 0.0843582 secs using 98.35% CPU
+Optimizing NNI: done in 0.0850601 secs using 98.73% CPU
+Optimizing NNI: done in 0.0964251 secs using 98.61% CPU
+Optimizing NNI: done in 0.0899 secs using 98.39% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 10: -9454.680
+Iteration 10 / LogL: -9454.680 / Time: 0h:0m:25s
+Optimizing NNI: done in 0.0801909 secs using 98.75% CPU
+Optimizing NNI: done in 0.0948179 secs using 98.36% CPU
+Optimizing NNI: done in 0.102676 secs using 98.05% CPU
+Optimizing NNI: done in 0.0930321 secs using 98.46% CPU
+Optimizing NNI: done in 0.0850282 secs using 98.81% CPU
+Optimizing NNI: done in 0.0933049 secs using 98.41% CPU
+Optimizing NNI: done in 0.0960281 secs using 98.69% CPU
+Optimizing NNI: done in 0.086293 secs using 98.95% CPU
+Optimizing NNI: done in 0.0881739 secs using 98.43% CPU
+Optimizing NNI: done in 0.105543 secs using 98.75% CPU
+Iteration 20 / LogL: -9478.064 / Time: 0h:0m:26s
+Finish initializing candidate tree set (17)
+Current best tree score: -9454.680 / CPU time: 2.969
+Number of iterations: 20
+--------------------------------------------------------------------
+|               OPTIMIZING CANDIDATE TREE SET                      |
+--------------------------------------------------------------------
+Optimizing NNI: done in 0.116315 secs using 97.62% CPU
+Optimizing NNI: done in 0.12804 secs using 98.47% CPU
+Optimizing NNI: done in 0.164834 secs using 98.47% CPU
+Optimizing NNI: done in 0.133616 secs using 98.42% CPU
+Optimizing NNI: done in 0.127977 secs using 98.59% CPU
+Optimizing NNI: done in 0.139281 secs using 98.34% CPU
+Optimizing NNI: done in 0.166626 secs using 97.83% CPU
+Optimizing NNI: done in 0.115704 secs using 98.3% CPU
+Optimizing NNI: done in 0.0971329 secs using 98.13% CPU
+Optimizing NNI: done in 0.10225 secs using 98.57% CPU
+Iteration 30 / LogL: -9462.782 / Time: 0h:0m:27s (0h:1m:16s left)
+Optimizing NNI: done in 0.127766 secs using 98.54% CPU
+Optimizing NNI: done in 0.113166 secs using 98.55% CPU
+UPDATE BEST LOG-LIKELIHOOD: -9454.675
+Optimizing NNI: done in 0.098351 secs using 98.37% CPU
+Optimizing NNI: done in 0.0884202 secs using 98.2% CPU
+Optimizing NNI: done in 0.128975 secs using 98.44% CPU
+Optimizing NNI: done in 0.0973279 secs using 98.42% CPU
+Optimizing NNI: done in 0.095911 secs using 98.5% CPU
+Optimizing NNI: done in 0.0865061 secs using 98.18% CPU
+Optimizing NNI: done in 0.138499 secs using 98.53% CPU
+Optimizing NNI: done in 0.108049 secs using 98.83% CPU
+Iteration 40 / LogL: -9455.713 / Time: 0h:0m:28s (0h:0m:51s left)
+Optimizing NNI: done in 0.119739 secs using 98.5% CPU
+Optimizing NNI: done in 0.141377 secs using 98.48% CPU
+Optimizing NNI: done in 0.111184 secs using 98.53% CPU
+Optimizing NNI: done in 0.118068 secs using 98.48% CPU
+Optimizing NNI: done in 0.122067 secs using 98.17% CPU
+Optimizing NNI: done in 0.0892801 secs using 98.38% CPU
+Optimizing NNI: done in 0.115345 secs using 98.47% CPU
+Optimizing NNI: done in 0.100469 secs using 98.49% CPU
+Optimizing NNI: done in 0.148484 secs using 98.22% CPU
+Optimizing NNI: done in 0.127444 secs using 98.85% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 50: -9454.589
+Iteration 50 / LogL: -9454.589 / Time: 0h:0m:29s (0h:1m:1s left)
+Optimizing NNI: done in 0.082293 secs using 98.85% CPU
+Optimizing NNI: done in 0.092201 secs using 98.38% CPU
+Optimizing NNI: done in 0.14132 secs using 98.51% CPU
+Optimizing NNI: done in 0.137957 secs using 98.53% CPU
+Optimizing NNI: done in 0.136535 secs using 98.43% CPU
+Optimizing NNI: done in 0.0971329 secs using 98.6% CPU
+Optimizing NNI: done in 0.123891 secs using 98.45% CPU
+Optimizing NNI: done in 0.127299 secs using 98.64% CPU
+Optimizing NNI: done in 0.136079 secs using 98.52% CPU
+Optimizing NNI: done in 0.107316 secs using 98.42% CPU
+Iteration 60 / LogL: -9455.681 / Time: 0h:0m:31s (0h:0m:47s left)
+Optimizing NNI: done in 0.106403 secs using 98.63% CPU
+Optimizing NNI: done in 0.125046 secs using 98.64% CPU
+Optimizing NNI: done in 0.122355 secs using 98.36% CPU
+Optimizing NNI: done in 0.158525 secs using 98.6% CPU
+Optimizing NNI: done in 0.139441 secs using 98.97% CPU
+Optimizing NNI: done in 0.150001 secs using 99.15% CPU
+Optimizing NNI: done in 0.120337 secs using 98.37% CPU
+Optimizing NNI: done in 0.110785 secs using 98.68% CPU
+Optimizing NNI: done in 0.085062 secs using 98.46% CPU
+Optimizing NNI: done in 0.116696 secs using 98.63% CPU
+Iteration 70 / LogL: -9457.738 / Time: 0h:0m:32s (0h:0m:37s left)
+Optimizing NNI: done in 0.120827 secs using 98.68% CPU
+Optimizing NNI: done in 0.128777 secs using 98.38% CPU
+Optimizing NNI: done in 0.109027 secs using 98.56% CPU
+Optimizing NNI: done in 0.165883 secs using 98.47% CPU
+Optimizing NNI: done in 0.108478 secs using 98.55% CPU
+Optimizing NNI: done in 0.106312 secs using 98.49% CPU
+Optimizing NNI: done in 0.0975399 secs using 98.62% CPU
+Optimizing NNI: done in 0.132426 secs using 98.43% CPU
+Optimizing NNI: done in 0.110052 secs using 98.61% CPU
+Optimizing NNI: done in 0.115445 secs using 98.51% CPU
+Iteration 80 / LogL: -9455.633 / Time: 0h:0m:33s (0h:0m:29s left)
+Optimizing NNI: done in 0.157525 secs using 98.51% CPU
+Optimizing NNI: done in 0.132929 secs using 98.72% CPU
+Optimizing NNI: done in 0.127123 secs using 98.66% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 83: -9446.325
+Optimizing NNI: done in 0.152441 secs using 98.47% CPU
+Optimizing NNI: done in 0.133385 secs using 98.56% CPU
+Optimizing NNI: done in 0.153942 secs using 95.69% CPU
+Optimizing NNI: done in 0.161815 secs using 98.3% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 87: -9444.623
+Optimizing NNI: done in 0.16937 secs using 98.51% CPU
+Optimizing NNI: done in 0.126541 secs using 98.44% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 89: -9443.941
+Optimizing NNI: done in 0.144113 secs using 98.2% CPU
+Iteration 90 / LogL: -9444.534 / Time: 0h:0m:35s (0h:0m:39s left)
+Optimizing NNI: done in 0.112849 secs using 98.74% CPU
+Optimizing NNI: done in 0.138022 secs using 98.62% CPU
+Optimizing NNI: done in 0.116492 secs using 98.57% CPU
+Optimizing NNI: done in 0.160557 secs using 98.44% CPU
+Optimizing NNI: done in 0.129807 secs using 98.69% CPU
+Optimizing NNI: done in 0.109986 secs using 98.44% CPU
+Optimizing NNI: done in 0.0981619 secs using 98.46% CPU
+Optimizing NNI: done in 0.101722 secs using 98.04% CPU
+Optimizing NNI: done in 0.122683 secs using 98.44% CPU
+Optimizing NNI: done in 0.116138 secs using 98.56% CPU
+Iteration 100 / LogL: -9443.942 / Time: 0h:0m:36s (0h:0m:32s left)
+Optimizing NNI: done in 0.159237 secs using 98.78% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 101: -9441.957
+Optimizing NNI: done in 0.110807 secs using 99.06% CPU
+Optimizing NNI: done in 0.091593 secs using 98.65% CPU
+Optimizing NNI: done in 0.1534 secs using 98.49% CPU
+Optimizing NNI: done in 0.130103 secs using 98.61% CPU
+Estimate model parameters (epsilon = 0.100)
+BETTER TREE FOUND at iteration 105: -9441.196
+Optimizing NNI: done in 0.124934 secs using 98.75% CPU
+Optimizing NNI: done in 0.0992022 secs using 98.45% CPU
+Optimizing NNI: done in 0.107723 secs using 98.6% CPU
+Optimizing NNI: done in 0.142029 secs using 98.42% CPU
+Optimizing NNI: done in 0.113577 secs using 98.6% CPU
+Iteration 110 / LogL: -9445.017 / Time: 0h:0m:37s (0h:0m:32s left)
+Optimizing NNI: done in 0.0974121 secs using 97.83% CPU
+Optimizing NNI: done in 0.0931931 secs using 98.27% CPU
+Optimizing NNI: done in 0.117103 secs using 98.49% CPU
+Optimizing NNI: done in 0.175562 secs using 98.68% CPU
+Optimizing NNI: done in 0.109729 secs using 98.41% CPU
+Optimizing NNI: done in 0.125004 secs using 98.35% CPU
+Optimizing NNI: done in 0.143989 secs using 98.43% CPU
+Optimizing NNI: done in 0.132352 secs using 98.53% CPU
+Optimizing NNI: done in 0.129927 secs using 98.46% CPU
+Optimizing NNI: done in 0.139565 secs using 98.37% CPU
+Iteration 120 / LogL: -9444.210 / Time: 0h:0m:39s (0h:0m:27s left)
+Optimizing NNI: done in 0.116123 secs using 98.4% CPU
+Optimizing NNI: done in 0.141139 secs using 98.24% CPU
+Optimizing NNI: done in 0.0948811 secs using 98.23% CPU
+Optimizing NNI: done in 0.131241 secs using 98.53% CPU
+Optimizing NNI: done in 0.124726 secs using 98.46% CPU
+Optimizing NNI: done in 0.142141 secs using 98.58% CPU
+Optimizing NNI: done in 0.191668 secs using 90.51% CPU
+Optimizing NNI: done in 0.129644 secs using 98.46% CPU
+Optimizing NNI: done in 0.140954 secs using 98.31% CPU
+Optimizing NNI: done in 0.13174 secs using 98.47% CPU
+Iteration 130 / LogL: -9458.205 / Time: 0h:0m:40s (0h:0m:23s left)
+Optimizing NNI: done in 0.171142 secs using 98.56% CPU
+Optimizing NNI: done in 0.146575 secs using 98.53% CPU
+Optimizing NNI: done in 0.148267 secs using 98.5% CPU
+Optimizing NNI: done in 0.161362 secs using 98.42% CPU
+Optimizing NNI: done in 0.175331 secs using 98.08% CPU
+Optimizing NNI: done in 0.199487 secs using 98.5% CPU
+Optimizing NNI: done in 0.110288 secs using 97.84% CPU
+Optimizing NNI: done in 0.094162 secs using 98.36% CPU
+Optimizing NNI: done in 0.109121 secs using 98.41% CPU
+Optimizing NNI: done in 0.153942 secs using 98.58% CPU
+Iteration 140 / LogL: -9446.560 / Time: 0h:0m:41s (0h:0m:19s left)
+Optimizing NNI: done in 0.173992 secs using 98.52% CPU
+Optimizing NNI: done in 0.103932 secs using 98.24% CPU
+Optimizing NNI: done in 0.158686 secs using 98.41% CPU
+Optimizing NNI: done in 0.143122 secs using 99.22% CPU
+Optimizing NNI: done in 0.132673 secs using 99.05% CPU
+Optimizing NNI: done in 0.10695 secs using 98.08% CPU
+Optimizing NNI: done in 0.098006 secs using 97.65% CPU
+Optimizing NNI: done in 0.110223 secs using 98.04% CPU
+Optimizing NNI: done in 0.11065 secs using 98.69% CPU
+Optimizing NNI: done in 0.143374 secs using 98.34% CPU
+Iteration 150 / LogL: -9441.896 / Time: 0h:0m:43s (0h:0m:15s left)
+Optimizing NNI: done in 0.144097 secs using 98.24% CPU
+Optimizing NNI: done in 0.129546 secs using 98.06% CPU
+Optimizing NNI: done in 0.160714 secs using 98.41% CPU
+Optimizing NNI: done in 0.101877 secs using 98.72% CPU
+Optimizing NNI: done in 0.127787 secs using 98.35% CPU
+Optimizing NNI: done in 0.100091 secs using 98.38% CPU
+Optimizing NNI: done in 0.121765 secs using 98.27% CPU
+Optimizing NNI: done in 0.156816 secs using 98.33% CPU
+Optimizing NNI: done in 0.142537 secs using 98.49% CPU
+Optimizing NNI: done in 0.105052 secs using 98.37% CPU
+Iteration 160 / LogL: -9441.896 / Time: 0h:0m:44s (0h:0m:12s left)
+Optimizing NNI: done in 0.10387 secs using 98.2% CPU
+Optimizing NNI: done in 0.152552 secs using 98.51% CPU
+Optimizing NNI: done in 0.148625 secs using 98.49% CPU
+Optimizing NNI: done in 0.142994 secs using 98.48% CPU
+Optimizing NNI: done in 0.16136 secs using 98.57% CPU
+Optimizing NNI: done in 0.169637 secs using 98.55% CPU
+Optimizing NNI: done in 0.110198 secs using 98.39% CPU
+Optimizing NNI: done in 0.10464 secs using 98.36% CPU
+Optimizing NNI: done in 0.12495 secs using 98.52% CPU
+Optimizing NNI: done in 0.144406 secs using 98.51% CPU
+Iteration 170 / LogL: -9455.009 / Time: 0h:0m:45s (0h:0m:9s left)
+Optimizing NNI: done in 0.219282 secs using 98.3% CPU
+Optimizing NNI: done in 0.143889 secs using 98.53% CPU
+Optimizing NNI: done in 0.214916 secs using 98.65% CPU
+Optimizing NNI: done in 0.104796 secs using 98.29% CPU
+Optimizing NNI: done in 0.161672 secs using 98.41% CPU
+Optimizing NNI: done in 0.121407 secs using 98.41% CPU
+Optimizing NNI: done in 0.17334 secs using 98.52% CPU
+Optimizing NNI: done in 0.174257 secs using 98.53% CPU
+Optimizing NNI: done in 0.124378 secs using 98.45% CPU
+Optimizing NNI: done in 0.106935 secs using 98.36% CPU
+Iteration 180 / LogL: -9445.940 / Time: 0h:0m:47s (0h:0m:6s left)
+Optimizing NNI: done in 0.15189 secs using 98.47% CPU
+Optimizing NNI: done in 0.088985 secs using 99.51% CPU
+Optimizing NNI: done in 0.099437 secs using 98.94% CPU
+Optimizing NNI: done in 0.127541 secs using 98.63% CPU
+Optimizing NNI: done in 0.110129 secs using 98.67% CPU
+Optimizing NNI: done in 0.131105 secs using 98.57% CPU
+Optimizing NNI: done in 0.115361 secs using 98.51% CPU
+Optimizing NNI: done in 0.138244 secs using 98.49% CPU
+Optimizing NNI: done in 0.122017 secs using 98.38% CPU
+Optimizing NNI: done in 0.108895 secs using 98.49% CPU
+Iteration 190 / LogL: -9441.204 / Time: 0h:0m:48s (0h:0m:3s left)
+Optimizing NNI: done in 0.17477 secs using 98.28% CPU
+Optimizing NNI: done in 0.136696 secs using 98.88% CPU
+Optimizing NNI: done in 0.112234 secs using 98.46% CPU
+Optimizing NNI: done in 0.130165 secs using 98.47% CPU
+Optimizing NNI: done in 0.076638 secs using 98.84% CPU
+Optimizing NNI: done in 0.117524 secs using 98.42% CPU
+Optimizing NNI: done in 0.158072 secs using 98.48% CPU
+Optimizing NNI: done in 0.149851 secs using 98.64% CPU
+Optimizing NNI: done in 0.161357 secs using 99.08% CPU
+Optimizing NNI: done in 0.116866 secs using 98.62% CPU
+Iteration 200 / LogL: -9444.497 / Time: 0h:0m:49s (0h:0m:1s left)
+Optimizing NNI: done in 0.17588 secs using 98.61% CPU
+Optimizing NNI: done in 0.139054 secs using 98.46% CPU
+Optimizing NNI: done in 0.119887 secs using 98.58% CPU
+Optimizing NNI: done in 0.101397 secs using 98.36% CPU
+Optimizing NNI: done in 0.10627 secs using 98.4% CPU
+Optimizing NNI: done in 0.0952079 secs using 98.56% CPU
+TREE SEARCH COMPLETED AFTER 206 ITERATIONS / Time: 0h:0m:50s
+
+--------------------------------------------------------------------
+|                    FINALIZING TREE SEARCH                        |
+--------------------------------------------------------------------
+Performs final model parameters optimization
+Estimate model parameters (epsilon = 0.010)
+1. Initial log-likelihood: -9441.196
+Optimal log-likelihood: -9441.196
+Rate parameters:  A-C: 0.99596  A-G: 2.59715  A-T: 0.53712  C-G: 1.11752  C-T: 3.99536  G-T: 1.00000
+Base frequencies:  A: 0.258  C: 0.247  G: 0.288  T: 0.206
+Gamma shape alpha: 0.251
+Parameters optimization took 1 rounds (0.021 sec)
+BEST SCORE FOUND : -9441.196
+Total tree length: 5.025
+
+Total number of iterations: 206
+CPU time used for tree search: 26.936 sec (0h:0m:26s)
+Wall-clock time used for tree search: 27.396 sec (0h:0m:27s)
+Total CPU time used: 49.189 sec (0h:0m:49s)
+Total wall-clock time used: 50.733 sec (0h:0m:50s)
+
+Analysis results written to: 
+  IQ-TREE report:                results/BDNF-64/selection/part1/IQ-TREE.iqtree
+  Maximum-likelihood tree:       results/BDNF-64/selection/part1/IQ-TREE.treefile
+  Likelihood distances:          results/BDNF-64/selection/part1/IQ-TREE.mldist
+  Screen log file:               results/BDNF-64/selection/part1/IQ-TREE.log
+
+Date and Time: Fri Mar 20 21:01:29 2026

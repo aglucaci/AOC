@@ -1,0 +1,7 @@
+sample,partition,method,metric,value
+BDNF-64,1,FEL,significant_sites_FDR_0.10,132
+BDNF-64,1,MEME,significant_sites_FDR_0.10,3
+BDNF-64,1,ABSREL,significant_branches,14
+BDNF-64,1,BUSTEDS-MH,gene_wide_pvalue,0.5
+BDNF-64,1,RELAX,status,skipped
+BDNF-64,1,CFEL,status,skipped

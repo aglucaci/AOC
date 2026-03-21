@@ -12,7 +12,7 @@ outdir: results
 # External executables
 # Leave these as-is if the tools are available on PATH in the AOC environment.
 hyphy: hyphy
-fasttree: FastTree
+iqtree: iqtree
 macse_launcher: macse
 
 # Helper scripts / bundled resources
@@ -22,9 +22,6 @@ strike_ambigs_bf: scripts/strike-ambigs.bf
 label_tree_bf: software/LabelTrees/label-tree.bf
 make_test_list_py: scripts/make_sequence_header_map.py
 tn93_cluster_py: scripts/tn93_cluster.py
-merge_fel_py: scripts/MergeFELResults.py
-merge_meme_py: scripts/MergeMEMEResults.py
-exec_summary_py: scripts/ExecutiveSummary.py
 macse_runner: scripts/run_macse_with_heap.sh
 
 # TN93 clustering
@@ -33,9 +30,22 @@ macse_runner: scripts/run_macse_with_heap.sh
 tn93_threshold: 0.01
 tn93_max_seqs: 20
 
+# Recombination detection and partitioning
+# Prefer the optional `run_recombination` column in samples.csv for per-gene
+# control. This config key is only a backward-compatible fallback when that
+# column is absent.
+run_recombination: false
+gard_launcher: hyphympi
+gard_mpi_runner: mpirun
+gard_mpi_procs: 8
+
 # Branch-label behavior
 # If true, samples that include a labels CSV must produce at least one Test sequence.
 require_test_sequences: false
+
+# Optional external HTML summary generator. If omitted or missing, the workflow
+# writes a built-in HTML executive summary directly from merged result tables.
+exec_summary_py: scripts/ExecutiveSummary.py
 
 # MACSE Java memory tuning
 # Default behavior:
@@ -52,8 +62,6 @@ macse_xms_mb: 512
 # macse_mem_mb: 65536
 # macse_heap_mb: 57344
 
-# Legacy / compatibility keys
-# These are currently not consumed by the Snakefile, but are kept here so users
-# upgrading from older configs do not lose their placeholders immediately.
+# Legacy / compatibility keys retained for older local configs.
 log_dir: logs
 multitestcorr: fdr

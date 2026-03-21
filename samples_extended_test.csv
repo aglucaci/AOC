@@ -1,0 +1,6 @@
+sample,codon_fasta,sequence_labels_csv,run_recombination
+BDNF-64-no-annot-no-recomb,,false
+BDNF-64-no-annot-yes-recomb,,true
+BDNF-64-yes-annot-no-recomb,data/BDNF/BDNF-64.fasta,data/BDNF/BDNF-64.sequence_labels.csv,false
+BDNF-64-yes-annot-yes-recomb,data/BDNF/BDNF-64.fasta,data/BDNF/BDNF-64.sequence_labels.csv,true
+

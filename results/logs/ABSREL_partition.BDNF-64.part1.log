@@ -1,0 +1,339 @@
+
+Analysis Description
+--------------------
+aBSREL (Adaptive branch-site random effects likelihood) uses an adaptive
+random effects branch-site model framework to test whether each branch
+has evolved under positive selection, using a procedure which infers an
+optimal number of rate categories per branch. v2.2 adds support for
+multiple-hit models. v2.3 adds support for SRV. v2.5 adds support for
+ancestral state reconstruction, identification of sites contributing to
+selection signal, and some diagnostics. 
+
+- __Requirements__: in-frame codon alignment and a phylogenetic tree
+
+- __Citation__:  Less Is More: An Adaptive Branch-Site Random Effects Model for
+Efficient Detection of Episodic Diversifying Selection (2015). Mol Biol
+Evol 32 (5): 1342-1353. 
+
+- __Written by__: Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM /
+UCSD viral evolution group
+
+- __Contact Information__: spond@temple.edu
+
+- __Analysis Version__: 2.5
+
+[Advanced option] Bag of little bootstrap alignment resampling rate (permissible range = [0.01,1], default value = 1): blb: 1
+
+>code => Universal
+/Users/alex/Documents/AOC-develop-new-snakemake/results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile
+results/BDNF-64/selection/part1/IQ-TREE.labelled.treefile
+
+>Loaded a multiple sequence alignment with **60** sequences, **407** codons, and **1** partitions from `/Users/alex/Documents/AOC-develop-new-snakemake/results/BDNF-64/selection/part1/partition.filtered.codon.fas`
+
+>branches => All
+
+>multiple-hits => None
+
+>srv => No
+
+
+### * Selected 117 branches for testing: `NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA, XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA, XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA, Node17, XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node16, Node14, Node12, XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA, Node11, XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node10, Node8, XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node24, XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node29, Node27, Node23, Node7, XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node34, Node32, Node6, XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA, XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node42, XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node46, XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA, Node45, Node41, XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node53, Node51, XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node50, Node40, XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA, Node57, Node39, NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA, Node38, XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node67, XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node66, XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node65, XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node73, XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node72, Node64, XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node63, XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node82, NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA, XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node87, XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node86, NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA, XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node91, Node85, Node81, XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA, Node80, XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node79, XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA, Node78, Node62, XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node102, XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA, Node101, XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node100, XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, Node99, Node97, Node61, Node37, Node5, XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA, XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA, Node112, XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA, Node111, Node109, XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA, Node108, Node4, Node2, NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA`
+
+
+### Obtaining branch lengths and nucleotide substitution biases under the nucleotide GTR model
+
+>kill-zero-lengths => Yes
+
+### Deleted 3 zero-length internal branches: `Node16, Node17, Node45`
+* Log(L) = -10677.29, AIC-c = 21605.01 (125 estimated parameters)
+* 1 partition. Total tree length by partition (subs/site)  2.161
+
+### Fitting the baseline model with a single dN/dS class per branch, and no site-to-site variation. 
+* Log(L) = -9999.96, AIC-c = 20488.79 (242 estimated parameters)
+* Branch-level non-synonymous/synonymous rate ratio distribution has median  0.28, and 95% of the weight in  0.02 -  2.58
+
+### Determining the optimal number of rate classes per branch using a step up procedure
+
+|              Branch               |  Length  |  Rates   |     Max. dN/dS     |    Log(L)     |     AIC-c     |Best AIC-c so far|
+|-----------------------------------|----------|----------|--------------------|---------------|---------------|-----------------|
+|              Node85               |   0.12   |    2     |   >1000 (18.33%)   |   -9900.63    |   20294.20    |    20294.20     |
+|              Node85               |   0.12   |    3     |   >1000 (18.32%)   |   -9900.63    |   20298.28    |    20294.20     |
+|              Node99               |   0.11   |    2     |    2.44 ( 9.21%)   |   -9892.98    |   20282.98    |    20282.98     |
+|              Node99               |   0.11   |    3     |   72.21 ( 3.81%)   |   -9891.96    |   20285.03    |    20282.98     |
+|              Node37               |   0.10   |    2     |   >1000 (17.54%)   |   -9802.45    |   20106.01    |    20106.01     |
+|              Node37               |   0.10   |    3     |   >1000 (17.54%)   |   -9802.45    |   20110.10    |    20106.01     |
+|              Node23               |   0.09   |    2     |    0.05 (53.30%)   |   -9802.45    |   20110.09    |    20106.01     |
+|              Node81               |   0.08   |    2     |   >1000 (11.75%)   |   -9741.49    |   19988.16    |    19988.16     |
+|              Node81               |   0.08   |    3     |   >1000 (11.77%)   |   -9741.49    |   19992.25    |    19988.16     |
+|               Node4               |   0.07   |    2     |   >1000 ( 8.52%)   |   -9702.80    |   19914.88    |    19914.88     |
+|               Node4               |   0.07   |    3     |  161.39 ( 8.43%)   |   -9702.75    |   19918.87    |    19914.88     |
+|XM_013019592_1_PREDICTED_Dipodom...|   0.07   |    2     |  220.65 ( 2.26%)   |   -9694.22    |   19901.81    |    19901.81     |
+|XM_013019592_1_PREDICTED_Dipodom...|   0.07   |    3     |  213.14 ( 2.24%)   |   -9694.23    |   19905.90    |    19901.81     |
+|XM_033764060_1_PREDICTED_Fukomys...|   0.07   |    2     |    0.65 (20.75%)   |   -9693.36    |   19904.17    |    19901.81     |
+|              Node10               |   0.07   |    2     |  117.26 (14.37%)   |   -9649.57    |   19816.59    |    19816.59     |
+|              Node10               |   0.07   |    3     |  116.79 (14.38%)   |   -9649.57    |   19820.68    |    19816.59     |
+|XM_004660846_2_PREDICTED_Jaculus...|   0.07   |    2     |    0.09 (71.66%)   |   -9649.57    |   19820.68    |    19816.59     |
+|               Node5               |   0.06   |    2     |   >1000 ( 8.50%)   |   -9614.98    |   19751.50    |    19751.50     |
+|               Node5               |   0.06   |    3     |    0.81 ( 2.39%)   |   -9626.48    |   19778.58    |    19751.50     |
+|XM_020977976_1_PREDICTED_Phascol...|   0.05   |    2     |   61.06 ( 5.12%)   |   -9588.54    |   19702.69    |    19702.69     |
+|XM_020977976_1_PREDICTED_Phascol...|   0.05   |    3     |   60.74 ( 5.12%)   |   -9588.54    |   19706.78    |    19702.69     |
+|NM_001081787_1_Equus_caballus_br...|   0.05   |    2     |    0.07 (13.92%)   |   -9588.53    |   19706.77    |    19702.69     |
+|XM_031944159_1_PREDICTED_Sarcoph...|   0.04   |    2     |    0.07 (33.49%)   |   -9588.54    |   19706.78    |    19702.69     |
+|XM_007497196_2_PREDICTED_Monodel...|   0.04   |    2     |  159.86 ( 3.30%)   |   -9571.44    |   19672.59    |    19672.59     |
+|XM_007497196_2_PREDICTED_Monodel...|   0.04   |    3     |  159.71 ( 3.30%)   |   -9571.44    |   19676.67    |    19672.59     |
+|              Node73               |   0.04   |    2     |   0.09 (100.00%)   |   -9571.44    |   19676.67    |    19672.59     |
+|              Node66               |   0.04   |    2     |   >1000 ( 8.18%)   |   -9501.83    |   19537.45    |    19537.45     |
+|              Node66               |   0.04   |    3     |   >1000 ( 8.17%)   |   -9501.84    |   19541.55    |    19537.45     |
+|              Node111              |   0.04   |    2     |  436.41 ( 6.73%)   |   -9489.49    |   19516.87    |    19516.87     |
+|              Node111              |   0.04   |    3     |   >1000 ( 5.72%)   |   -9489.01    |   19519.99    |    19516.87     |
+|              Node67               |   0.04   |    2     |   >1000 ( 3.84%)   |   -9452.81    |   19447.58    |    19447.58     |
+|              Node67               |   0.04   |    3     |   >1000 ( 3.85%)   |   -9452.85    |   19451.75    |    19447.58     |
+|XM_013147262_2_PREDICTED_Cavia_p...|   0.04   |    2     |    0.11 ( 0.00%)   |   -9452.81    |   19451.67    |    19447.58     |
+|XM_020177315_1_PREDICTED_Castor_...|   0.03   |    2     |   79.17 ( 0.76%)   |   -9450.11    |   19446.29    |    19446.29     |
+|XM_020177315_1_PREDICTED_Castor_...|   0.03   |    3     |   79.49 ( 0.77%)   |   -9450.11    |   19450.36    |    19446.29     |
+|               Node6               |   0.03   |    2     |    0.22 (11.18%)   |   -9449.07    |   19448.28    |    19446.29     |
+|              Node79               |   0.03   |    2     |   18.70 ( 2.68%)   |   -9444.73    |   19439.62    |    19439.62     |
+|              Node79               |   0.03   |    3     |   18.78 ( 2.63%)   |   -9444.73    |   19443.71    |    19439.62     |
+|              Node108              |   0.03   |    2     |    0.56 ( 0.18%)   |   -9443.63    |   19441.51    |    19439.62     |
+|XM_031371313_1_PREDICTED_Mastomy...|   0.03   |    2     |    0.40 (80.12%)   |   -9444.73    |   19443.69    |    19439.62     |
+|XM_009007854_3_PREDICTED_Callith...|   0.03   |    2     |    5.26 (18.30%)   |   -9442.80    |   19439.84    |    19439.62     |
+|              Node82               |   0.03   |    2     |    0.00 ( 0.00%)   |   -9434.19    |   19422.63    |    19422.63     |
+|              Node82               |   0.03   |    3     |    0.15 ( 0.00%)   |   -9434.19    |   19426.72    |    19422.63     |
+|XM_037204438_1_PREDICTED_Peromys...|   0.03   |    2     |  824.07 ( 2.31%)   |   -9406.18    |   19370.70    |    19370.70     |
+|XM_037204438_1_PREDICTED_Peromys...|   0.03   |    3     |   >1000 ( 2.31%)   |   -9406.19    |   19374.80    |    19370.70     |
+|XM_029555090_1_PREDICTED_Nannosp...|   0.03   |    2     |    7.41 ( 2.87%)   |   -9403.56    |   19369.55    |    19369.55     |
+|XM_029555090_1_PREDICTED_Nannosp...|   0.03   |    3     |    8.34 ( 2.27%)   |   -9403.65    |   19373.82    |    19369.55     |
+|XM_004851581_3_PREDICTED_Heteroc...|   0.03   |    2     |    0.09 ( 8.96%)   |   -9403.56    |   19373.64    |    19369.55     |
+|XM_004644113_2_PREDICTED_Octodon...|   0.03   |    2     |   0.15 (100.00%)   |   -9403.56    |   19373.64    |    19369.55     |
+|XM_007653166_4_PREDICTED_Cricetu...|   0.03   |    2     |    3.06 ( 8.36%)   |   -9402.78    |   19372.09    |    19369.55     |
+|XM_005654684_3_PREDICTED_Sus_scr...|   0.03   |    2     |    0.82 ( 0.00%)   |   -9403.51    |   19373.55    |    19369.55     |
+|              Node65               |   0.03   |    2     |  347.69 ( 1.07%)   |   -9396.17    |   19358.85    |    19358.85     |
+|              Node65               |   0.03   |    3     |  346.69 ( 1.07%)   |   -9396.17    |   19362.95    |    19358.85     |
+|               Node8               |   0.02   |    2     |    0.61 (51.39%)   |   -9392.09    |   19354.80    |    19354.80     |
+|               Node8               |   0.02   |    3     |    0.80 ( 1.35%)   |   -9392.09    |   19358.90    |    19354.80     |
+|XM_020903256_1_PREDICTED_Odocoil...|   0.02   |    2     |    0.21 ( 0.00%)   |   -9392.07    |   19358.85    |    19354.80     |
+|XM_036763631_1_PREDICTED_Trichos...|   0.02   |    2     |    0.00 ( 5.00%)   |   -9392.09    |   19358.90    |    19354.80     |
+|               Node7               |   0.02   |    2     |    0.00 ( 2.08%)   |   -9391.91    |   19358.52    |    19354.80     |
+|XM_005401751_2_PREDICTED_Chinchi...|   0.02   |    2     |    0.24 ( 0.00%)   |   -9392.09    |   19358.90    |    19354.80     |
+|              Node32               |   0.02   |    2     |    0.04 (16.15%)   |   -9392.02    |   19358.74    |    19354.80     |
+|XM_019974522_1_PREDICTED_Bos_ind...|   0.02   |    2     |    1.00 (70.46%)   |   -9390.66    |   19356.02    |    19354.80     |
+|              Node29               |   0.02   |    2     |    0.19 (49.41%)   |   -9392.10    |   19358.91    |    19354.80     |
+|              Node102              |   0.02   |    2     |    0.68 (88.55%)   |   -9390.76    |   19356.23    |    19354.80     |
+|              Node97               |   0.02   |    2     |   12.19 ( 0.93%)   |   -9391.49    |   19357.68    |    19354.80     |
+|              Node86               |   0.01   |    2     |    0.31 ( 0.00%)   |   -9392.03    |   19358.78    |    19354.80     |
+|              Node78               |   0.01   |    2     |    0.00 ( 2.78%)   |   -9392.09    |   19358.90    |    19354.80     |
+|              Node11               |   0.01   |    2     |    0.44 (24.82%)   |   -9390.31    |   19355.32    |    19354.80     |
+|XM_027852578_1_PREDICTED_Vombatu...|   0.01   |    2     |    0.07 (10.07%)   |   -9392.09    |   19358.89    |    19354.80     |
+|              Node101              |   0.01   |    2     |    0.24 (49.08%)   |   -9391.30    |   19357.31    |    19354.80     |
+|XM_027936596_1_PREDICTED_Marmota...|   0.01   |    2     |   >1000 ( 0.58%)   |   -9386.53    |   19347.77    |    19347.77     |
+|XM_027936596_1_PREDICTED_Marmota...|   0.01   |    3     |   >1000 ( 0.58%)   |   -9386.53    |   19351.87    |    19347.77     |
+|              Node62               |   0.01   |    2     |   >1000 ( 0.70%)   |   -9374.78    |   19328.36    |    19328.36     |
+|              Node62               |   0.01   |    3     |   >1000 ( 0.69%)   |   -9374.86    |   19332.62    |    19328.36     |
+|              Node38               |   0.01   |    2     |    0.00 ( 3.29%)   |   -9374.78    |   19332.45    |    19328.36     |
+|              Node24               |   0.01   |    2     |    0.00 ( 0.00%)   |   -9374.78    |   19332.46    |    19328.36     |
+|              Node61               |   0.01   |    2     |    0.31 ( 6.78%)   |   -9374.61    |   19332.11    |    19328.36     |
+|XM_015476449_1_PREDICTED_Marmota...|   0.01   |    2     |    0.58 (55.26%)   |   -9374.07    |   19331.05    |    19328.36     |
+|              Node40               |   0.01   |    2     |   62.17 ( 3.22%)   |   -9370.69    |   19324.29    |    19324.29     |
+|              Node40               |   0.01   |    3     |   64.72 ( 3.09%)   |   -9370.70    |   19328.39    |    19324.29     |
+|              Node80               |   0.01   |    2     |    0.39 (10.46%)   |   -9368.78    |   19324.55    |    19324.29     |
+|              Node100              |   0.01   |    2     |    0.00 ( 0.82%)   |   -9370.69    |   19328.38    |    19324.29     |
+|XM_021192829_2_PREDICTED_Mus_pah...|   0.01   |    2     |    0.30 (53.38%)   |   -9370.68    |   19328.36    |    19324.29     |
+|              Node57               |   0.01   |    2     |    0.27 (50.51%)   |   -9370.68    |   19328.35    |    19324.29     |
+|XM_040284582_1_PREDICTED_Ictidom...|   0.01   |    2     |    0.35 (75.03%)   |   -9368.53    |   19324.05    |    19324.05     |
+|XM_040284582_1_PREDICTED_Ictidom...|   0.01   |    3     |    0.35 (75.03%)   |   -9368.53    |   19328.15    |    19324.05     |
+|              Node72               |   0.01   |    2     |    0.00 ( 1.39%)   |   -9368.51    |   19328.11    |    19324.05     |
+|              Node91               |   0.01   |    2     |    0.60 (87.19%)   |   -9368.36    |   19327.81    |    19324.05     |
+|              Node64               |   0.01   |    2     |    0.17 (89.12%)   |   -9367.94    |   19326.98    |    19324.05     |
+|XM_029957152_1_PREDICTED_Suricat...|   0.01   |    2     |    0.00 ( 3.34%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_035012477_1_PREDICTED_Miroung...|   0.01   |    2     |    0.19 (49.28%)   |   -9368.53    |   19328.15    |    19324.05     |
+|NM_001009828_1_Felis_catus_brain...|   0.01   |    2     |    2.13 (50.90%)   |   -9368.53    |   19328.16    |    19324.05     |
+|              Node39               |   0.01   |    2     |    0.31 (26.14%)   |   -9368.51    |   19328.11    |    19324.05     |
+|              Node109              |   0.01   |    2     |    0.00 ( 1.11%)   |   -9368.26    |   19327.61    |    19324.05     |
+|               Node2               |   0.01   |    2     |    0.00 ( 0.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_012096129_4_PREDICTED_Ovis_ar...|   0.01   |    2     |    0.00 ( 0.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_008686880_2_PREDICTED_Ursus_m...|   0.01   |    2     |    0.24 (50.40%)   |   -9368.53    |   19328.15    |    19324.05     |
+|              Node27               |   0.01   |    2     |    0.51 (50.43%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_039217098_1_PREDICTED_Hyaena_...|   0.01   |    2     |   0.40 (100.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_011226480_3_PREDICTED_Ailurop...|   0.00   |    2     |    0.39 (52.64%)   |   -9368.52    |   19328.12    |    19324.05     |
+|              Node112              |   0.00   |    2     |    0.00 ( 2.27%)   |   -9368.35    |   19327.79    |    19324.05     |
+|XM_032414183_1_PREDICTED_Phoca_v...|   0.00   |    2     |   1.00 (100.00%)   |   -9369.39    |   19329.88    |    19324.05     |
+|              Node50               |   0.00   |    2     |    0.00 ( 2.11%)   |   -9368.53    |   19328.15    |    19324.05     |
+|NM_001012441_1_Pan_troglodytes_b...|   0.00   |    2     |    0.00 ( 5.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_040980297_1_PREDICTED_Ochoton...|   0.00   |    2     |    0.20 (90.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_026412272_1_PREDICTED_Urocite...|   0.00   |    2     |    0.00 ( 3.35%)   |   -9368.52    |   19328.13    |    19324.05     |
+|XM_032903861_1_PREDICTED_Rattus_...|   0.00   |    2     |    0.00 ( 0.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_015544869_1_PREDICTED_Panther...|   0.00   |    2     |    0.00 ( 3.56%)   |   -9368.53    |   19328.15    |    19324.05     |
+|NM_001270630_1_Rattus_norvegicus...|   0.00   |    2     |   1.00 (100.00%)   |   -9369.31    |   19329.71    |    19324.05     |
+|XM_006068006_2_PREDICTED_Bubalus...|   0.00   |    2     |    0.00 ( 5.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_025879326_1_PREDICTED_Callorh...|   0.00   |    2     |    0.00 ( 5.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|              Node63               |   0.00   |    2     |    0.00 ( 2.15%)   |   -9368.51    |   19328.12    |    19324.05     |
+|XM_030333208_1_PREDICTED_Lynx_ca...|   0.00   |    2     |    0.00 ( 4.60%)   |   -9368.44    |   19327.98    |    19324.05     |
+|XM_021151236_2_PREDICTED_Mus_car...|   0.00   |    2     |    0.24 (48.20%)   |   -9368.52    |   19328.13    |    19324.05     |
+|              Node41               |   0.00   |    2     |    0.00 ( 6.74%)   |   -9368.52    |   19328.14    |    19324.05     |
+|              Node87               |   0.00   |    2     |    0.21 (74.03%)   |   -9368.48    |   19328.06    |    19324.05     |
+|              Node14               |   0.00   |    2     |    0.00 ( 2.97%)   |   -9368.52    |   19328.12    |    19324.05     |
+|XM_015114598_2_PREDICTED_Macaca_...|   0.00   |    2     |    0.00 ( 1.69%)   |   -9368.49    |   19328.07    |    19324.05     |
+|              Node34               |   0.00   |    2     |    0.00 ( 5.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_005216334_4_PREDICTED_Bos_tau...|   0.00   |    2     |    0.00 ( 5.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|              Node51               |   0.00   |    2     |    0.00 ( 5.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|              Node46               |   0.00   |    2     |    0.00 ( 5.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_031025064_1_PREDICTED_Leptony...|   0.00   |    2     |    0.00 ( 5.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|              Node53               |   0.00   |    2     |    0.00 ( 5.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_027577807_1_PREDICTED_Zalophu...|   0.00   |    2     |    0.00 ( 5.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_004408653_1_PREDICTED_Odobenu...|   0.00   |    2     |   1.00 (100.00%)   |   -9368.84    |   19328.78    |    19324.05     |
+|NM_001709_5_Homo_sapiens_brain_d...|   0.00   |    2     |    0.00 ( 5.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_004585440_1_PREDICTED_Ochoton...|   0.00   |    2     |    0.00 ( 3.60%)   |   -9368.53    |   19328.15    |    19324.05     |
+|              Node42               |   0.00   |    2     |    0.00 ( 0.73%)   |   -9368.53    |   19328.15    |    19324.05     |
+|NM_001048142_1_Mus_musculus_brai...|   0.00   |    2     |    0.25 (51.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_036109493_1_PREDICTED_Halicho...|   0.00   |    2     |    0.25 ( 2.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_010831788_1_PREDICTED_Bison_b...|   0.00   |    2     |    0.39 ( 2.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_038429434_1_PREDICTED_Canis_l...|   0.00   |    2     |    0.39 ( 2.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_005890667_2_PREDICTED_Bos_mut...|   0.00   |    2     |    0.25 ( 2.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_026018600_1_PREDICTED_Vulpes_...|   0.00   |    2     |    0.25 (51.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|              Node12               |   0.00   |    2     |    0.25 ( 2.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_028117708_1_PREDICTED_Eumetop...|   0.00   |    2     |    0.25 (51.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_021685880_1_PREDICTED_Neomona...|   0.00   |    2     |    0.25 ( 2.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+|XM_041730708_1_PREDICTED_Vulpes_...|   0.00   |    2     |    0.39 ( 2.00%)   |   -9368.53    |   19328.15    |    19324.05     |
+
+### Rate class analyses summary
+*  24 branches with **2** rate classes
+*  90 branches with **1** rate classes
+
+### Improving parameter estimates of the adaptive rate class model
+* Log(L) = -9326.77, AIC-c = 19240.53 (290 estimated parameters)
+
+### Testing selected branches for selection
+
+|              Branch               |  Rates   |     Max. dN/dS     | Sites @ EBF>=100 |      Test LRT      |Uncorrected p-value |
+|-----------------------------------|----------|--------------------|------------------|--------------------|--------------------|
+|              Node85               |     2    |   >1000 (15.13%)   |         20       |       127.49       |       0.00000      |
+|              Node99               |     2    |   18.82 ( 2.62%)   |          3       |        1.28        |       0.21034      |
+|              Node37               |     2    |   >1000 (15.45%)   |          7       |       77.28        |       0.00000      |
+|              Node23               |     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node81               |     2    |   >1000 (13.84%)   |         17       |       121.02       |       0.00000      |
+|               Node4               |     2    |  253.53 ( 6.50%)   |          6       |       25.97        |       0.00000      |
+|XM_013019592_1_PREDICTED_Dipodom...|     2    |   >1000 ( 2.80%)   |          6       |       12.18        |       0.00078      |
+|XM_033764060_1_PREDICTED_Fukomys...|     1    |   0.12 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node10               |     2    |   61.44 (14.70%)   |          6       |       34.79        |       0.00000      |
+|XM_004660846_2_PREDICTED_Jaculus...|     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node5               |     2    |   >1000 ( 8.19%)   |          0       |       11.45        |       0.00112      |
+|XM_020977976_1_PREDICTED_Phascol...|     2    |   49.54 ( 4.12%)   |          5       |       13.54        |       0.00039      |
+|NM_001081787_1_Equus_caballus_br...|     1    |   0.07 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_031944159_1_PREDICTED_Sarcoph...|     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_007497196_2_PREDICTED_Monodel...|     2    |  130.81 ( 3.49%)   |          6       |       14.04        |       0.00030      |
+|              Node73               |     1    |   0.08 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node66               |     2    |   >1000 ( 5.82%)   |          5       |       54.21        |       0.00000      |
+|              Node111              |     2    |   >1000 ( 7.62%)   |          3       |       23.76        |       0.00000      |
+|              Node67               |     2    |   >1000 ( 4.63%)   |          4       |       54.19        |       0.00000      |
+|XM_013147262_2_PREDICTED_Cavia_p...|     1    |   0.05 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_020177315_1_PREDICTED_Castor_...|     2    |    1.92 ( 8.82%)   |          1       |        0.02        |       0.47480      |
+|               Node6               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node79               |     2    |    6.43 ( 5.40%)   |          3       |        2.47        |       0.11073      |
+|              Node108              |     1    |   0.18 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_031371313_1_PREDICTED_Mastomy...|     1    |   0.32 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_009007854_3_PREDICTED_Callith...|     1    |   0.71 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node82               |     2    |    0.00 ( 0.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_037204438_1_PREDICTED_Peromys...|     2    |   >1000 ( 2.44%)   |          6       |       44.64        |       0.00000      |
+|XM_029555090_1_PREDICTED_Nannosp...|     2    |    7.03 ( 3.12%)   |          5       |        3.08        |       0.08008      |
+|XM_004851581_3_PREDICTED_Heteroc...|     1    |   0.06 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_004644113_2_PREDICTED_Octodon...|     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_007653166_4_PREDICTED_Cricetu...|     1    |   0.18 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_005654684_3_PREDICTED_Sus_scr...|     1    |   0.02 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node65               |     2    |  122.06 ( 1.52%)   |          4       |       24.29        |       0.00000      |
+|               Node8               |     2    |    1.00 ( 6.46%)   |       N/A        |        0.00        |       1.00000      |
+|XM_020903256_1_PREDICTED_Odocoil...|     1    |   0.02 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_036763631_1_PREDICTED_Trichos...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node7               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_005401751_2_PREDICTED_Chinchi...|     1    |   0.03 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node32               |     1    |   0.05 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_019974522_1_PREDICTED_Bos_ind...|     1    |  >1000 (100.00%)   |       N/A        |        2.26        |       0.12364      |
+|              Node29               |     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node102              |     1    |   0.86 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node97               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node86               |     1    |   0.23 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node78               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node11               |     1    |   0.37 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_027852578_1_PREDICTED_Vombatu...|     1    |   0.04 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node101              |     1    |   0.15 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_027936596_1_PREDICTED_Marmota...|     2    |   >1000 ( 0.61%)   |          1       |        9.92        |       0.00243      |
+|              Node62               |     2    |   >1000 ( 0.72%)   |          2       |       19.65        |       0.00002      |
+|              Node38               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node24               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node61               |     1    |   0.13 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_015476449_1_PREDICTED_Marmota...|     1    |   0.42 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node40               |     2    |   52.63 ( 3.81%)   |          4       |        8.10        |       0.00610      |
+|              Node80               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node100              |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_021192829_2_PREDICTED_Mus_pah...|     1    |   0.28 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node57               |     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_040284582_1_PREDICTED_Ictidom...|     2    |    0.37 (57.59%)   |       N/A        |        0.00        |       1.00000      |
+|              Node72               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node91               |     1    |   0.47 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node64               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_029957152_1_PREDICTED_Suricat...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_035012477_1_PREDICTED_Miroung...|     1    |   0.09 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|NM_001009828_1_Felis_catus_brain...|     1    |   1.47 (100.00%)   |       N/A        |        0.12        |       0.42749      |
+|              Node39               |     1    |   0.58 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node109              |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|               Node2               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_012096129_4_PREDICTED_Ovis_ar...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_008686880_2_PREDICTED_Ursus_m...|     1    |   0.12 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node27               |     1    |   0.70 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_039217098_1_PREDICTED_Hyaena_...|     1    |   0.36 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_011226480_3_PREDICTED_Ailurop...|     1    |   0.46 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node112              |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_032414183_1_PREDICTED_Phoca_v...|     1    |  >1000 (100.00%)   |       N/A        |        1.53        |       0.18240      |
+|              Node50               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|NM_001012441_1_Pan_troglodytes_b...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_040980297_1_PREDICTED_Ochoton...|     1    |   0.18 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_026412272_1_PREDICTED_Urocite...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_032903861_1_PREDICTED_Rattus_...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_015544869_1_PREDICTED_Panther...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|NM_001270630_1_Rattus_norvegicus...|     1    |  >1000 (100.00%)   |       N/A        |        1.51        |       0.18517      |
+|XM_006068006_2_PREDICTED_Bubalus...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_025879326_1_PREDICTED_Callorh...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node63               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_030333208_1_PREDICTED_Lynx_ca...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_021151236_2_PREDICTED_Mus_car...|     1    |   0.07 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node41               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node87               |     1    |   0.19 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node14               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_015114598_2_PREDICTED_Macaca_...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node34               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_005216334_4_PREDICTED_Bos_tau...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node51               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node46               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_031025064_1_PREDICTED_Leptony...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node53               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_027577807_1_PREDICTED_Zalophu...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_004408653_1_PREDICTED_Odobenu...|     1    |  >1000 (100.00%)   |       N/A        |        0.61        |       0.30763      |
+|NM_001709_5_Homo_sapiens_brain_d...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_004585440_1_PREDICTED_Ochoton...|     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node42               |     1    |   0.00 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|NM_001048142_1_Mus_musculus_brai...|     1    |   0.02 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_036109493_1_PREDICTED_Halicho...|     1    |   0.05 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_010831788_1_PREDICTED_Bison_b...|     1    |   0.18 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_038429434_1_PREDICTED_Canis_l...|     1    |   0.12 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_005890667_2_PREDICTED_Bos_mut...|     1    |   0.05 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_026018600_1_PREDICTED_Vulpes_...|     1    |   0.40 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|              Node12               |     1    |   0.14 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_028117708_1_PREDICTED_Eumetop...|     1    |   0.13 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_021685880_1_PREDICTED_Neomona...|     1    |   0.02 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+|XM_041730708_1_PREDICTED_Vulpes_...|     1    |   0.36 (100.00%)   |       N/A        |        0.00        |       1.00000      |
+----
+### Adaptive branch site random effects likelihood test 
+Likelihood ratio test for episodic diversifying positive selection at Holm-Bonferroni corrected _p =   0.0500_ found **13** branches under selection among **114** tested.
+
+* Node81, p-value =  0.00000
+* Node37, p-value =  0.00000
+* Node85, p-value =  0.00000
+* Node66, p-value =  0.00000
+* Node67, p-value =  0.00000
+* XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA, p-value =  0.00000
+* Node10, p-value =  0.00000
+* Node4, p-value =  0.00008
+* Node65, p-value =  0.00019
+* Node111, p-value =  0.00024
+* Node62, p-value =  0.00188
+* XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, p-value =  0.03132
+* XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA, p-value =  0.03980
