@@ -81,9 +81,11 @@ AOC provides a stable installer that:
 
 ### Run installer
 
-**On MAC OSX (do this first)**
-```
-conda config --env --set subdir osx-64
+**Clone the repository**
+
+```bash
+git clone https://github.com/aglucaci/AOC.git
+cd AOC
 ```
 
 **Run installation script**
@@ -105,6 +107,14 @@ After installation:
 conda activate AOC
 ```
 
+### Validate installation
+
+Run the automated test workflow to confirm that the environment and setup are working correctly:
+
+```bash
+bash tests/test_installation.sh
+```
+
 ---
 
 ## Input Format
@@ -114,26 +124,31 @@ AOC is driven by a `samples.csv` file.
 ### Required columns
 
 ```
-sample,codon_fasta
+sample,codon_fasta,sequence_labels_csv
 ```
 
 ### Example
 
 ```
-BDNF,data/BDNF.fasta
-TP53,data/TP53.fasta
+BDNF-8,data/BDNF/BDNF-8.fasta,data/BDNF/BDNF-8.sequence_labels.csv
+tiny-no-labels,tests/data/tiny.fasta,
 ```
 
-Each row corresponds to one ortholog dataset.
+Each row corresponds to one ortholog dataset. The current workflow requires the
+`sequence_labels_csv` column to be present in `samples.csv`, even when you do
+not want to provide branch labels for a sample.
 
-Optionally add a column: `sequence_labels_csv`
+If you do not have foreground/background labels for a sample yet, leave the
+third column blank:
 
 ```
 sample,codon_fasta,sequence_labels_csv
-BDNF-annot,data/BDNF/BDNF.small.fasta,data/BDNF/BDNF.small.sequence_labels.csv
+tiny-no-labels,tests/data/tiny.fasta,
 ```
 
-And format the `sequence_labels_csv` file in this format, with `label` corresponding the branch label, and `fasta_sequence_header` corresponding to the fasta sequence header description:
+If you do provide a `sequence_labels_csv` file, format it with `label`
+corresponding to the branch label and `fasta_sequence_header` corresponding to
+the FASTA header description:
 
 ```
 label,fasta_sequence_header
@@ -146,14 +161,48 @@ Background,"NM_001081787.1 Equus caballus brain derived neurotrophic factor (BDN
 
 Branches labeled “Test” represent the foreground lineages where a specific evolutionary hypothesis (e.g., adaptive selection) is being evaluated, while “Background” branches represent the remainder of the phylogeny and serve as a reference group against which evolutionary patterns in the Test set are compared.
 
+The `sample` value becomes the output directory name under `results/`, so it is
+usually best to keep it aligned with the input dataset name.
+
 ---
 
 ## Running the Pipeline
 
-From the root directory:
+From the repository root directory:
 
 ```bash
 bash run_AOC.sh --samples samples.csv
+```
+
+### Manual run example with bundled test data
+
+This example uses a real dataset included in the repository.
+
+```bash
+cat > samples.csv <<'EOF'
+sample,codon_fasta,sequence_labels_csv
+BDNF-8,data/BDNF/BDNF-8.fasta,data/BDNF/BDNF-8.sequence_labels.csv
+EOF
+
+bash run_AOC.sh --samples samples.csv
+```
+
+If you want to run without branch labels, keep the third column header and leave
+the value empty:
+
+```bash
+cat > samples.csv <<'EOF'
+sample,codon_fasta,sequence_labels_csv
+tiny-no-labels,tests/data/tiny.fasta,
+EOF
+
+bash run_AOC.sh --samples samples.csv
+```
+
+For a quick setup check before a full manual run, use:
+
+```bash
+bash tests/test_installation.sh
 ```
 
 ---
@@ -629,16 +678,6 @@ Detailed explanations of each method and its statistical output are available in
 https://hyphy.org/methods/selection-methods/
 
 Users interested in advanced interpretation or methodological details should consult the original HyPhy publications associated with each method.
-
----
-
-## Automated Testing
-
-Quick installation validation:
-
-```
-bash tests/test_installation.sh
-```
 
 ---
 

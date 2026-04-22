@@ -155,6 +155,6 @@ run_smk () {
 # -----------------------------
 # Run pipeline phases
 # -----------------------------
-run_smk "${SNAKEFILE_MAIN}"      "Running the AOC Snakemake pipeline (samples.csv)"
+run_smk "${SNAKEFILE_MAIN}"      "Running the AOC Snakemake workflow"
 
 echo "[DONE] All requested phases finished."

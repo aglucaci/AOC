@@ -108,13 +108,13 @@ update_env() {
 create_python_only_fallback() {
   echo "[install] Fallback: creating python-only environment (no HyPhy/IQ-TREE/FastTree)."
   if [ "${FRONTEND}" = "micromamba" ]; then
-    micromamba create -y -n "${ENV_NAME}" python=3.11 pip
-    micromamba run -n "${ENV_NAME}" pip install -U \
-      snakemake pandas numpy biopython matplotlib pytest pyyaml rich
+    micromamba create -y -n "${ENV_NAME}" -c conda-forge -c bioconda \
+      python=3.11 pip snakemake-minimal=7.32.4 pandas numpy biopython \
+      matplotlib pytest pyyaml rich statsmodels altair vl-convert-python
   else
-    conda create -y -n "${ENV_NAME}" python=3.11 pip
-    conda run -n "${ENV_NAME}" pip install -U \
-      snakemake pandas numpy biopython matplotlib pytest pyyaml rich
+    conda create -y -n "${ENV_NAME}" -c conda-forge -c bioconda \
+      python=3.11 pip snakemake-minimal=7.32.4 pandas numpy biopython \
+      matplotlib pytest pyyaml rich statsmodels altair vl-convert-python
   fi
   echo "[install] WARNING: Tool binaries (hyphy/iqtree/fasttree) not installed in fallback."
   echo "[install] If possible, install via conda-forge/bioconda later."
@@ -162,12 +162,11 @@ echo "[install] environment ready: ${ENV_NAME}"
 #  echo "[install] hyphy-analyses present."
 #fi
 
-# --- quick smoke checks (non-fatal)
+# --- quick smoke checks
 echo "[install] smoke checks…"
-set +e
 run_in_env python -V
 run_in_env snakemake --version
 run_in_env pytest --version
-set -e
+run_in_env python -c "import pandas, altair, statsmodels, vl_convert, Bio; print('python deps ok')"
 
 echo "[install] done."

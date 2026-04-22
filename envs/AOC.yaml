@@ -11,7 +11,7 @@ dependencies:
   - hyphy=2.5.74
   - pyyaml
   - rich
-  - tn93=1.0.14
+  - tn93=1.0.15
 
   # Bio / phylo utilities
   - biopython=1.83
