@@ -15,9 +15,9 @@ authors:
     corresponding: true
     affiliation: 2
 affiliations:
- - name: Department of Systems and Computational Biomedicine, Weill Cornell Medicine, Cornell University, New York, NY 10021, USA
+ - name: Department of Systems and Computational Biomedicine, Weill Cornell Medicine, Cornell University, New York, NY 10021, United States of America
    index: 1
- - name: Institute for Genomics and Evolutionary Medicine, Temple University, Philadelphia, PA, USA
+ - name: Institute for Genomics and Evolutionary Medicine, Temple University, Philadelphia, PA, United States of America
    index: 2
 date: 22 April 2026
 bibliography: paper.bib
