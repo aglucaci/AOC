@@ -7,6 +7,7 @@
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]
 [![Snakemake](https://img.shields.io/badge/Snakemake-pipeline-brightgreen)]
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)]
+[[![DOI](https://joss.theoj.org/papers/10.21105/joss.09872/status.svg)](https://doi.org/10.21105/joss.09872)]
 
 ---
 
@@ -686,7 +687,7 @@ Users interested in advanced interpretation or methodological details should con
 If you use AOC in your work, please cite:
 
 ```
-Lucaci AG, Pond SLK. AOC: Analysis of Orthologous Collections - an application for the characterization of natural selection in protein-coding sequences. ArXiv [Preprint]. 2024 Jun 13:arXiv:2406.09522v1. PMID: 38947939; PMCID: PMC11213150.
+Lucaci et al., (2026). AOC: A Snakemake workflow for the characterization of natural selection in protein-coding genes. Journal of Open Source Software, 11(121), 9872, https://doi.org/10.21105/joss.09872
 ```
 ---
 
