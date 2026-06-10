@@ -422,7 +422,7 @@ rule recombination:
         os.path.join(LOGDIR, "recombination.{sample}.log")
     shell:
         r"""
-        {HYPHY} GARD --alignment {input.msa} --rv GDD --output {output.gard_json} --mode Faster ENV=TOLERATE_NUMERICAL_ERRORS=1; \
+        {HYPHY} GARD --alignment {input.msa} --rv GDD --output {output.gard_json} --mode Faster ENV='TOLERATE_NUMERICAL_ERRORS=1;' \
           > {log} 2>&1
         """
 
@@ -716,7 +716,7 @@ rule MEME_partition:
     shell:
         r"""
         mkdir -p {OUTROOT}/{wildcards.sample}/selection/part{wildcards.part}
-        {HYPHY} MEME --alignment {input.aln} --tree {input.tree} --output {output.json} {params.branch_arg} ENV=TOLERATE_NUMERICAL_ERRORS=1; > {log} 2>&1
+        {HYPHY} MEME --alignment {input.aln} --tree {input.tree} --output {output.json} {params.branch_arg} ENV='TOLERATE_NUMERICAL_ERRORS=1;' > {log} 2>&1
         """
 
 rule ABSREL_partition:
