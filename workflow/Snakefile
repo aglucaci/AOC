@@ -21,6 +21,7 @@ import pandas as pd
 import altair as alt
 from statsmodels.stats.multitest import fdrcorrection
 from Bio import SeqIO
+from scripts.busteds_mh import count_busteds_mh_branches
 
 # These plots are rendered locally with vl-convert, so allow larger in-memory datasets.
 alt.data_transformers.disable_max_rows()
@@ -1071,17 +1072,7 @@ rule TableBUSTEDS_MH_partition:
             # structure differs across HyPhy versions
             # -------------------------------
 
-            tested = data.get("tested", None)
-            background = data.get("background", None)
-
-            def count_branches(x):
-                if isinstance(x, dict):
-                    return sum(len(v) if isinstance(v, list) else 0 for v in x.values())
-                if isinstance(x, list):
-                    return len(x)
-                if isinstance(x, int):
-                    return x
-                return None
+            tested_branches, background_branches = count_busteds_mh_branches(data)
 
             rows.append({
                 "Sample": wildcards.sample,
@@ -1089,8 +1080,8 @@ rule TableBUSTEDS_MH_partition:
                 "test": "BUSTEDS-MH",
                 "p_value": pval,
                 "LRT": lrt,
-                "tested_branches": count_branches(tested),
-                "background_branches": count_branches(background),
+                "tested_branches": tested_branches,
+                "background_branches": background_branches,
                 "status": "ok"
             })
 
