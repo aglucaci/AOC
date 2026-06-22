@@ -139,6 +139,24 @@ Each row corresponds to one ortholog dataset. The current workflow requires the
 `sequence_labels_csv` column to be present in `samples.csv`, even when you do
 not want to provide branch labels for a sample.
 
+Multiple rows may reference the same FASTA file. AOC identifies FASTA inputs by
+their SHA-256 content, so byte-identical files are preprocessed only once even
+when they have different paths. MACSE, cleaning, TN93 clustering, GARD
+partitioning, and the unlabelled FastTree trees are stored under
+`results/_shared/fastas/<sha256>/` and reused by every matching sample.
+Label-specific trees and selection analyses remain under `results/<sample>/`.
+The mapping from samples to shared FASTA results is written to
+`results/_shared/fastas/index.csv`.
+
+For example, these two analyses use the exact same GARD partitions and
+unlabelled trees while applying different foreground labels:
+
+```
+sample,codon_fasta,sequence_labels_csv
+red,red_and_blue.fasta,red.sequence_labels.csv
+blue,red_and_blue.fasta,blue.sequence_labels.csv
+```
+
 If you do not have foreground/background labels for a sample yet, leave the
 third column blank:
 

@@ -16,6 +16,7 @@ import re
 import json
 import math
 import glob
+import hashlib
 from pathlib import Path
 import pandas as pd
 import altair as alt
@@ -113,6 +114,10 @@ if missing:
 samples_df["sample"] = samples_df["sample"].astype(str)
 
 SAMPLES = samples_df["sample"].tolist()
+if len(SAMPLES) != len(set(SAMPLES)):
+    duplicates = sorted(samples_df.loc[samples_df["sample"].duplicated(keep=False), "sample"].unique())
+    raise ValueError(f"samples.csv contains duplicate sample names: {duplicates}")
+
 CODON_FASTA_BY_SAMPLE = dict(zip(samples_df["sample"], samples_df["codon_fasta"].astype(str)))
 LABELS_CSV_BY_SAMPLE  = dict(zip(samples_df["sample"], samples_df["sequence_labels_csv"].astype(str)))
 
@@ -138,21 +143,42 @@ SAMPLES_WITH_LABELS = [
     if (not _is_missing(LABELS_CSV_BY_SAMPLE.get(s, None))) and os.path.exists(labels_csv_path(s))
 ]
 
+def _sha256_file(path):
+    digest = hashlib.sha256()
+    with open(path, "rb") as fh:
+        for chunk in iter(lambda: fh.read(1024 * 1024), b""):
+            digest.update(chunk)
+    return digest.hexdigest()
+
+FASTA_ID_BY_SAMPLE = {}
+FASTA_PATH_BY_ID = {}
+SAMPLES_BY_FASTA_ID = {}
+for sample in SAMPLES:
+    fasta_path = os.path.realpath(codon_fasta_path(sample))
+    if not os.path.isfile(fasta_path):
+        raise FileNotFoundError(f"codon_fasta not found for sample={sample}: {fasta_path}")
+    fasta_id = _sha256_file(fasta_path)
+    FASTA_ID_BY_SAMPLE[sample] = fasta_id
+    FASTA_PATH_BY_ID.setdefault(fasta_id, fasta_path)
+    SAMPLES_BY_FASTA_ID.setdefault(fasta_id, []).append(sample)
+
+FASTA_IDS = list(FASTA_PATH_BY_ID)
+
 ###############################################################################
 # Path helpers
 ###############################################################################
 
 def sample_dir(sample): return os.path.join(str(OUTROOT), sample)
+def shared_fasta_dir(fasta_id): return os.path.join(str(OUTROOT), "_shared", "fastas", fasta_id)
+def shared_gard_segments_dir(fasta_id): return os.path.join(shared_fasta_dir(fasta_id), "gard", "segments")
+def shared_rd_file(fasta_id): return os.path.join(shared_fasta_dir(fasta_id), "alignment.RD.SA.codons.cln.fa")
+def shared_bestgard_file(fasta_id): return os.path.join(shared_fasta_dir(fasta_id), "alignment.RD.SA.codons.cln.fa.cluster.fasta.best-gard")
+def shared_partition_fasta(fasta_id, part): return os.path.join(shared_gard_segments_dir(fasta_id), f"part{part}.codon.fas")
+def shared_partition_tree(fasta_id, part): return os.path.join(shared_fasta_dir(fasta_id), "trees", f"part{part}", "FastTree.treefile")
 
 def test_list_file(sample): return os.path.join(sample_dir(sample), f"{sample}.test_sequences.txt")
 def empty_test_list_file(sample): return os.path.join(sample_dir(sample), f"{sample}.test_sequences.EMPTY.txt")
 def header_map_file(sample): return os.path.join(sample_dir(sample), f"{sample}.sequence_header_map.csv")
-
-def gard_dir(sample): return os.path.join(sample_dir(sample), "gard")
-def gard_segments_dir(sample): return os.path.join(gard_dir(sample), "segments")
-def gard_manifest(sample): return os.path.join(gard_dir(sample), "segments.json")
-def gard_log(sample): return os.path.join(sample_dir(sample), f"{sample}.gard.log")
-def codon1_file(sample): return os.path.join(sample_dir(sample), f"{sample}.1.codon.fas")
 
 def selection_dir(sample): return os.path.join(sample_dir(sample), "selection")
 def selection_part_dir(sample, part): return os.path.join(selection_dir(sample), f"part{part}")
@@ -268,8 +294,9 @@ def _branch_arg(sample):
 
 rule all:
     input:
-        expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta.best-gard"), sample=SAMPLES),
+        os.path.join(str(OUTROOT), "_shared", "fastas", "index.csv"),
+        expand(os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.RD.SA.codons.cln.fa"), fasta_id=FASTA_IDS),
+        expand(os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.RD.SA.codons.cln.fa.cluster.fasta.best-gard"), fasta_id=FASTA_IDS),
         expand(os.path.join(str(OUTROOT), "{sample}", "selection", "ALL_PARTITIONS.done"), sample=SAMPLES),
         expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.test_sequences.txt"), sample=SAMPLES_WITH_LABELS),
         expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.sequence_header_map.csv"), sample=SAMPLES_WITH_LABELS),
@@ -288,6 +315,7 @@ rule all:
 ###############################################################################
 
 ruleorder:
+    shared_fasta_index >
     macse >
     cln >
     strike_ambigs_msa >
@@ -322,12 +350,31 @@ ruleorder:
     SelectionOverviewTable >
     executive_summary
 
+rule shared_fasta_index:
+    input:
+        samples_csv=SAMPLES_CSV,
+        fastas=list(FASTA_PATH_BY_ID.values())
+    output:
+        os.path.join(str(OUTROOT), "_shared", "fastas", "index.csv")
+    run:
+        rows = []
+        for fasta_id in FASTA_IDS:
+            for sample in SAMPLES_BY_FASTA_ID[fasta_id]:
+                rows.append({
+                    "fasta_id": fasta_id,
+                    "sample": sample,
+                    "codon_fasta": CODON_FASTA_BY_SAMPLE[sample],
+                    "resolved_codon_fasta": FASTA_PATH_BY_ID[fasta_id],
+                })
+        os.makedirs(os.path.dirname(output[0]), exist_ok=True)
+        pd.DataFrame(rows).to_csv(output[0], index=False)
+
 rule macse:
     input:
-        fasta=lambda wc: codon_fasta_path(wc.sample)
+        fasta=lambda wc: FASTA_PATH_BY_ID[wc.fasta_id]
     output:
-        codons=os.path.join(str(OUTROOT), "{sample}", "{sample}.codons.fa"),
-        aa=os.path.join(str(OUTROOT), "{sample}", "{sample}.aa.fa"),
+        codons=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.codons.fa"),
+        aa=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.aa.fa"),
     params:
         launcher=MACSE_LAUNCHER,
         runner=MACSE_RUNNER,
@@ -336,10 +383,10 @@ rule macse:
     resources:
         mem_mb=_macse_requested_mem_mb(),
     log:
-        os.path.join(LOGDIR, "macse.{sample}.log")
+        os.path.join(LOGDIR, "macse.{fasta_id}.log")
     shell:
         r"""
-        mkdir -p {OUTROOT}/{wildcards.sample}
+        mkdir -p {OUTROOT}/_shared/fastas/{wildcards.fasta_id}
         bash "{params.runner}" \
           --macse-bin "{params.launcher}" \
           --xms-mb {params.xms_mb} \
@@ -359,9 +406,9 @@ rule cln:
     input:
         codons=rules.macse.output.codons
     output:
-        cln=os.path.join(str(OUTROOT), "{sample}", "{sample}.codons.cln.fa")
+        cln=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.codons.cln.fa")
     log:
-        os.path.join(LOGDIR, "cln.{sample}.log")
+        os.path.join(LOGDIR, "cln.{fasta_id}.log")
     shell:
         r"""
         {HYPHY} CLN Universal {input.codons} 'No/No' {output.cln} > {log} 2>&1
@@ -371,9 +418,9 @@ rule strike_ambigs_msa:
     input:
         cln=rules.cln.output.cln
     output:
-        sa=os.path.join(str(OUTROOT), "{sample}", "{sample}.SA.codons.cln.fa")
+        sa=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.SA.codons.cln.fa")
     log:
-        os.path.join(LOGDIR, "strike_ambigs_msa.{sample}.log")
+        os.path.join(LOGDIR, "strike_ambigs_msa.{fasta_id}.log")
     shell:
         r"""
         {HYPHY} {STRIKE_AMBIGS_BF} --alignment {input.cln} --output {output.sa} > {log} 2>&1
@@ -383,9 +430,9 @@ rule remove_duplicates_msa:
     input:
         sa=rules.strike_ambigs_msa.output.sa
     output:
-        rd=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa")
+        rd=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.RD.SA.codons.cln.fa")
     log:
-        os.path.join(LOGDIR, "remove_duplicates_msa.{sample}.log")
+        os.path.join(LOGDIR, "remove_duplicates_msa.{fasta_id}.log")
     shell:
         r"""
         {HYPHY} {REMOVE_DUPS_BF} --msa {input.sa} --output {output.rd} ENV='DATA_FILE_PRINT_FORMAT=9' > {log} 2>&1
@@ -395,13 +442,13 @@ rule tn93_cluster:
     input:
         rd=rules.remove_duplicates_msa.output.rd
     output:
-        cluster_json=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.json"),
-        cluster_fasta=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta"),
+        cluster_json=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.RD.SA.codons.cln.fa.cluster.json"),
+        cluster_fasta=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.RD.SA.codons.cln.fa.cluster.fasta"),
     params:
         threshold=lambda wc: config.get("tn93_threshold", 0.01),
         max_seqs=lambda wc: config.get("tn93_max_seqs", 20),
     log:
-        os.path.join(LOGDIR, "tn93_cluster.{sample}.log")
+        os.path.join(LOGDIR, "tn93_cluster.{fasta_id}.log")
     shell:
         r"""
         python {TN93_CLUSTER_PY} \
@@ -417,10 +464,10 @@ rule recombination:
     input:
         msa=rules.tn93_cluster.output.cluster_fasta
     output:
-        gard_json=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta.GARD.json"),
-        bestgard=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta.best-gard"),
+        gard_json=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.RD.SA.codons.cln.fa.cluster.fasta.GARD.json"),
+        bestgard=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.RD.SA.codons.cln.fa.cluster.fasta.best-gard"),
     log:
-        os.path.join(LOGDIR, "recombination.{sample}.log")
+        os.path.join(LOGDIR, "recombination.{fasta_id}.log")
     shell:
         r"""
         {HYPHY} GARD --alignment {input.msa} --rv GDD --output {output.gard_json} --mode Faster ENV='TOLERATE_NUMERICAL_ERRORS=1;' \
@@ -556,9 +603,9 @@ checkpoint parse_gard:
         bestgard=rules.recombination.output.bestgard,
         msa=rules.remove_duplicates_msa.output.rd
     output:
-        manifest=os.path.join(str(OUTROOT), "{sample}", "gard", "segments.json"),
-        segdir=directory(os.path.join(str(OUTROOT), "{sample}", "gard", "segments")),
-        log=os.path.join(str(OUTROOT), "{sample}", "{sample}.gard.log"),
+        manifest=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "gard", "segments.json"),
+        segdir=directory(os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "gard", "segments")),
+        log=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "gard", "gard.log"),
         #codon1=os.path.join(str(OUTROOT), "{sample}", "{sample}.1.codon.fas")
     run:
         # Logging for checkpoint: use output.log (gard.log)
@@ -589,10 +636,12 @@ checkpoint parse_gard:
             data_adjusted_coords.append([start, end - remainder])
             carryOver = remainder
 
-        os.makedirs(gard_segments_dir(wildcards.sample), exist_ok=True)
+        os.makedirs(shared_gard_segments_dir(wildcards.fasta_id), exist_ok=True)
 
         manifest = {
-            "sample": wildcards.sample,
+            "fasta_id": wildcards.fasta_id,
+            "samples": SAMPLES_BY_FASTA_ID[wildcards.fasta_id],
+            "source_fasta": FASTA_PATH_BY_ID[wildcards.fasta_id],
             "msa": str(input.msa),
             "bestgard": str(input.bestgard),
             "n_parts": len(data_adjusted_coords),
@@ -601,7 +650,7 @@ checkpoint parse_gard:
 
         with open(output.log, "w") as log_file:
             for i, (start, stop) in enumerate(data_adjusted_coords, start=1):
-                out_fa = os.path.join(gard_segments_dir(wildcards.sample), f"{wildcards.sample}.part{i}.codon.fas")
+                out_fa = shared_partition_fasta(wildcards.fasta_id, i)
                 with open(out_fa, "w") as out_f:
                     for record in records:
                         partition = record[int(start):int(stop)]
@@ -634,14 +683,18 @@ checkpoint parse_gard:
 ###############################################################################
 
 def _parts_for_sample(wc):
-    ck = checkpoints.parse_gard.get(sample=wc.sample)
+    fasta_id = FASTA_ID_BY_SAMPLE[wc.sample]
+    ck = checkpoints.parse_gard.get(fasta_id=fasta_id)
     with open(ck.output.manifest) as fh:
         m = json.load(fh)
     return [str(p["part"]) for p in m["parts"]]
 
 # QUICKFIX: deterministic partition fasta path (no json-as-alignment bugs)
 def _partition_fasta(wc):
-    return os.path.join(str(OUTROOT), wc.sample, "gard", "segments", f"{wc.sample}.part{wc.part}.codon.fas")
+    return shared_partition_fasta(FASTA_ID_BY_SAMPLE[wc.sample], wc.part)
+
+def _shared_partition_tree(wc):
+    return shared_partition_tree(FASTA_ID_BY_SAMPLE[wc.sample], wc.part)
 
 ###############################################################################
 # Selection analysis per partition
@@ -649,20 +702,20 @@ def _partition_fasta(wc):
 
 rule fasttree_partition:
     input:
-        aln=_partition_fasta
+        aln=lambda wc: shared_partition_fasta(wc.fasta_id, wc.part)
     output:
-        tree=os.path.join(str(OUTROOT), "{sample}", "selection", "part{part}", "FastTree.treefile")
+        tree=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "trees", "part{part}", "FastTree.treefile")
     log:
-        os.path.join(LOGDIR, "fasttree_partition.{sample}.part{part}.log")
+        os.path.join(LOGDIR, "fasttree_partition.{fasta_id}.part{part}.log")
     shell:
         r"""
-        mkdir -p {OUTROOT}/{wildcards.sample}/selection/part{wildcards.part}
+        mkdir -p {OUTROOT}/_shared/fastas/{wildcards.fasta_id}/trees/part{wildcards.part}
         {FASTTREE} -nt -gtr {input.aln} > {output.tree} 2> {log}
         """
 
 rule label_tree_TestForeground_partition:
     input:
-        tree=rules.fasttree_partition.output.tree,
+        tree=_shared_partition_tree,
         test_list=_test_list_for_sample
     output:
         tree=os.path.join(str(OUTROOT), "{sample}", "selection", "part{part}", "FastTree.labelled.treefile")
