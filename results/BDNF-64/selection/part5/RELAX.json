@@ -1,0 +1,1467 @@
+{
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond, Ben Murrell, Steven Weaver and Temple iGEM / UCSD viral evolution g",
+   "citation":"RELAX: Detecting Relaxed Selection in a Phylogenetic Framework (2015). Mol Biol Evol 32 (3): 820-832",
+   "contact":"spond@temple.edu",
+   "info":"RELAX (a random effects test of selection relaxation) uses a random effects branch-site model framework to test whether a set of 'Test' branches evolves under relaxed selection relative to a set of 'Reference' branches (R), as measured by the relaxation parameter (K).\n                                                Version 2.1 adds a check for stability in K estimates to try to mitigate convergence problems. \n                                                Version 3 provides support for >2 branch sets.\n                                                Version 3.1 adds LHC + Nedler-Mead initial fit phase and keyword support.\n                                                Version 3.1.1 adds some bug fixes for better convergence.\n                                                Version 4.0 adds support for synonymous rate variation.\n                                                Version 4.1 adds further support for multiple hit models.\n                                                Version 4.1.1 adds reporting for convergence diagnostics.\n                                                Version 4.5 adds support for multiple datasets for joint testing.",
+   "requirements":"in-frame codon alignment and a phylogenetic tree, with at least two groups of branches defined using the {} notation (one group can be defined as all unlabeled branches)",
+   "settings":{
+     "convergence-flat-surface":0.01030251596330345,
+     "convergence-negative-lrt":3,
+     "convergence-unstable-alernative":      [
+[1, -2426.558659069346] 
+      ]
+    },
+   "version":"4.5"
+  },
+ "branch attributes":{
+   "0":{
+     "NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":0.0002245740471732112,
+       "MG94xREV with separate rates for branch sets":0.005638784849762962,
+       "Nucleotide GTR":0.005121826709235648,
+       "RELAX alternative":0.005524832821689479,
+       "RELAX null":0.005523244041132362,
+       "RELAX partitioned descriptive":0.0004065268653940801,
+       "k (general descriptive)":1.015588390608203,
+       "original name":"NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":0.007670540124534274,
+       "MG94xREV with separate rates for branch sets":0.007644413273747208,
+       "Nucleotide GTR":0.007672554711741323,
+       "RELAX alternative":0.007645200127537325,
+       "RELAX null":0.007642995495634073,
+       "RELAX partitioned descriptive":0.0462670755893555,
+       "k (general descriptive)":0.2316398941768691,
+       "original name":"NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA":{
+       "General descriptive":1.670297439717997e-16,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":1.877625069764168e-29,
+       "k (general descriptive)":0.1364688488274104,
+       "original name":"NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA"
+      },
+     "NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":5.153486412850444,
+       "MG94xREV with separate rates for branch sets":0.04980075417593366,
+       "Nucleotide GTR":0.03739348169119026,
+       "RELAX alternative":0.05037372768180588,
+       "RELAX null":0.05035907881792874,
+       "RELAX partitioned descriptive":0.3098956207051877,
+       "k (general descriptive)":1.463263557385554,
+       "original name":"NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA":{
+       "General descriptive":1.649814443522426e-16,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":1.877625069764168e-29,
+       "k (general descriptive)":0.1546816955684774,
+       "original name":"NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA"
+      },
+     "NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA":{
+       "General descriptive":1.703781982530626e-16,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":8.320931535743208e-16,
+       "k (general descriptive)":0.1095916061208901,
+       "original name":"NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA"
+      },
+     "Node1":{
+       "General descriptive":0.002540728765573894,
+       "MG94xREV with separate rates for branch sets":0.002538284118988389,
+       "Nucleotide GTR":0.002537126234867745,
+       "RELAX alternative":0.002538504886465774,
+       "RELAX null":0.002538721457020351,
+       "RELAX partitioned descriptive":0.002538775987558936,
+       "k (general descriptive)":0.2239352417781927
+      },
+     "Node100":{
+       "General descriptive":0.00235732832368967,
+       "MG94xREV with separate rates for branch sets":0.002181015121496757,
+       "Nucleotide GTR":0.003915154001938075,
+       "RELAX alternative":4.87194145582333e-21,
+       "RELAX null":2.23565013169591e-21,
+       "RELAX partitioned descriptive":6.199050165250142e-26,
+       "k (general descriptive)":0.2236847865662198
+      },
+     "Node102":{
+       "General descriptive":1e+26,
+       "MG94xREV with separate rates for branch sets":0.01552589455290531,
+       "Nucleotide GTR":0.01200390037894761,
+       "RELAX alternative":0.03141536355602839,
+       "RELAX null":0.03141803316785523,
+       "RELAX partitioned descriptive":0.03140650108309324,
+       "k (general descriptive)":9.957825531494748
+      },
+     "Node106":{
+       "General descriptive":0.00523918766431291,
+       "MG94xREV with separate rates for branch sets":0.005224840710309175,
+       "Nucleotide GTR":0.005098751385161934,
+       "RELAX alternative":0.005230592589172025,
+       "RELAX null":0.005231036702564799,
+       "RELAX partitioned descriptive":0.005229882128221584,
+       "k (general descriptive)":0.2280993035826928
+      },
+     "Node107":{
+       "General descriptive":0.002551398149108021,
+       "MG94xREV with separate rates for branch sets":0.002548057817985204,
+       "Nucleotide GTR":0.00253585314054665,
+       "RELAX alternative":0.002550309989186705,
+       "RELAX null":0.002550527568610498,
+       "RELAX partitioned descriptive":0.00255062353938495,
+       "k (general descriptive)":0.2240183078674915
+      },
+     "Node11":{
+       "General descriptive":0.01040567580744272,
+       "MG94xREV with separate rates for branch sets":0.01035290489222094,
+       "Nucleotide GTR":0.009456888710334758,
+       "RELAX alternative":0.01037691799133622,
+       "RELAX null":0.01037779326439292,
+       "RELAX partitioned descriptive":0.01037420174220932,
+       "k (general descriptive)":0.2361670770393182
+      },
+     "Node112":{
+       "General descriptive":0.002555044336211962,
+       "MG94xREV with separate rates for branch sets":0.002550382066644445,
+       "Nucleotide GTR":0.002536347280981859,
+       "RELAX alternative":0.00255359029476515,
+       "RELAX null":0.00255380823019064,
+       "RELAX partitioned descriptive":0.002553942835779937,
+       "k (general descriptive)":0.2239589591949833
+      },
+     "Node13":{
+       "General descriptive":0.002588118875107571,
+       "MG94xREV with separate rates for branch sets":0.002584710475686148,
+       "Nucleotide GTR":0.002515286720913718,
+       "RELAX alternative":0.002585338186078093,
+       "RELAX null":0.002585557628734084,
+       "RELAX partitioned descriptive":0.002584685729609716,
+       "k (general descriptive)":0.2240085622347505
+      },
+     "Node16":{
+       "General descriptive":0.002512157698817921,
+       "MG94xREV with separate rates for branch sets":0.002496162623188039,
+       "Nucleotide GTR":0.002529075761793103,
+       "RELAX alternative":6.363352105960548e-21,
+       "RELAX null":3.042968234957742e-21,
+       "RELAX partitioned descriptive":2.362462726953433e-26,
+       "k (general descriptive)":0.2238968666912788
+      },
+     "Node19":{
+       "General descriptive":0.00264824310420613,
+       "MG94xREV with separate rates for branch sets":0.002231633617498169,
+       "Nucleotide GTR":0.002500203249684331,
+       "RELAX alternative":0.004921508326466415,
+       "RELAX null":0.004921926111314498,
+       "RELAX partitioned descriptive":0.005178460352945576,
+       "k (general descriptive)":0.2241325168635537
+      },
+     "Node20":{
+       "General descriptive":0.008795800000036609,
+       "MG94xREV with separate rates for branch sets":0.009016248285143042,
+       "Nucleotide GTR":0.01118386805386441,
+       "RELAX alternative":0.008906001223513586,
+       "RELAX null":0.008906756953364167,
+       "RELAX partitioned descriptive":0.008717523322724678,
+       "k (general descriptive)":0.2335089939956476
+      },
+     "Node21":{
+       "General descriptive":1e+26,
+       "MG94xREV with separate rates for branch sets":0.02201128070282364,
+       "Nucleotide GTR":0.01720606568622604,
+       "RELAX alternative":0.02197809428553638,
+       "RELAX null":0.02197994417097322,
+       "RELAX partitioned descriptive":0.0218799571628554,
+       "k (general descriptive)":46.37164153768374
+      },
+     "Node23":{
+       "General descriptive":0.00266501609036387,
+       "MG94xREV with separate rates for branch sets":0.002658690316152462,
+       "Nucleotide GTR":0.002534262906911613,
+       "RELAX alternative":0.002666010044364038,
+       "RELAX null":0.002666236359093544,
+       "RELAX partitioned descriptive":0.002665874507262211,
+       "k (general descriptive)":0.2241734741804654
+      },
+     "Node26":{
+       "General descriptive":0.007195869345205397,
+       "MG94xREV with separate rates for branch sets":0.007277043496466577,
+       "Nucleotide GTR":0.01019463365460355,
+       "RELAX alternative":0.007237094855554435,
+       "RELAX null":0.007237709979305257,
+       "RELAX partitioned descriptive":0.007138512247030597,
+       "k (general descriptive)":0.2310193518680202
+      },
+     "Node28":{
+       "General descriptive":0.01947129347640915,
+       "MG94xREV with separate rates for branch sets":0.01953280809528539,
+       "Nucleotide GTR":0.01568722164126366,
+       "RELAX alternative":0.01942598154053555,
+       "RELAX null":0.01942763611637946,
+       "RELAX partitioned descriptive":0.01924106715960015,
+       "k (general descriptive)":0.2530729318612978
+      },
+     "Node30":{
+       "General descriptive":2.829700642025026,
+       "MG94xREV with separate rates for branch sets":0.03025606295631405,
+       "Nucleotide GTR":0.02190142648632592,
+       "RELAX alternative":0.03065332630290701,
+       "RELAX null":0.0306558625557618,
+       "RELAX partitioned descriptive":0.03061321950095625,
+       "k (general descriptive)":1.450346302718373
+      },
+     "Node32":{
+       "General descriptive":5.660554131376457e-05,
+       "MG94xREV with separate rates for branch sets":0.0002948411084961002,
+       "Nucleotide GTR":0.004737624954026674,
+       "RELAX alternative":4.87194145582333e-21,
+       "RELAX null":2.23565013169591e-21,
+       "RELAX partitioned descriptive":3.104832635233844e-26,
+       "k (general descriptive)":0.2204042362674934
+      },
+     "Node42":{
+       "General descriptive":1e+26,
+       "MG94xREV with separate rates for branch sets":0.02128384751555777,
+       "Nucleotide GTR":0.01903347237929252,
+       "RELAX alternative":0.03069281218430237,
+       "RELAX null":0.0306954350049967,
+       "RELAX partitioned descriptive":0.03075771571706248,
+       "k (general descriptive)":9.621672314673731
+      },
+     "Node43":{
+       "General descriptive":0.01440680386302693,
+       "MG94xREV with separate rates for branch sets":0.01422074661143069,
+       "Nucleotide GTR":0.01333125192033411,
+       "RELAX alternative":0.003536447678299356,
+       "RELAX null":0.003536748086065258,
+       "RELAX partitioned descriptive":0.003473112565379683,
+       "k (general descriptive)":0.243172539719732
+      },
+     "Node44":{
+       "General descriptive":47780872790150880,
+       "MG94xREV with separate rates for branch sets":0.04355616408755778,
+       "Nucleotide GTR":0.04020399438566199,
+       "RELAX alternative":0.04003815306799503,
+       "RELAX null":0.04004162827179549,
+       "RELAX partitioned descriptive":0.03995413451960775,
+       "k (general descriptive)":6.292808191506581
+      },
+     "Node47":{
+       "General descriptive":0.008440680076811204,
+       "MG94xREV with separate rates for branch sets":0.008509179093531541,
+       "Nucleotide GTR":0.009327968026940957,
+       "RELAX alternative":0.01010619336462638,
+       "RELAX null":0.01010327939216549,
+       "RELAX partitioned descriptive":0.06209101354983293,
+       "k (general descriptive)":0.2328795636642102
+      },
+     "Node50":{
+       "General descriptive":0.005028167470500734,
+       "MG94xREV with separate rates for branch sets":0.005013042743364137,
+       "Nucleotide GTR":0.005088124831119647,
+       "RELAX alternative":0.005031889193231223,
+       "RELAX null":0.005030444786044174,
+       "RELAX partitioned descriptive":0.03047035662660624,
+       "k (general descriptive)":0.2277150702750871
+      },
+     "Node54":{
+       "General descriptive":0.01557923058664826,
+       "MG94xREV with separate rates for branch sets":0.01539434655845336,
+       "Nucleotide GTR":0.01474673144329846,
+       "RELAX alternative":0.0666729137427407,
+       "RELAX null":0.06667832372171877,
+       "RELAX partitioned descriptive":0.06661014635255948,
+       "k (general descriptive)":0.2451199025018371
+      },
+     "Node55":{
+       "General descriptive":0.002486670043656568,
+       "MG94xREV with separate rates for branch sets":0.002490891084183701,
+       "Nucleotide GTR":0.003491257503404122,
+       "RELAX alternative":0.051872313681042,
+       "RELAX null":0.0518767396203997,
+       "RELAX partitioned descriptive":0.05186640716231338,
+       "k (general descriptive)":0.2238720742259418
+      },
+     "Node56":{
+       "General descriptive":20.57337315039065,
+       "MG94xREV with separate rates for branch sets":0.02581471264865043,
+       "Nucleotide GTR":0.02408830949045398,
+       "RELAX alternative":0.02763648193741569,
+       "RELAX null":0.0276388859904567,
+       "RELAX partitioned descriptive":0.0276556896022976,
+       "k (general descriptive)":1.734234029240418
+      },
+     "Node58":{
+       "General descriptive":0.002593562592955765,
+       "MG94xREV with separate rates for branch sets":0.002593522469248491,
+       "Nucleotide GTR":0.002534542803717277,
+       "RELAX alternative":0.002591390252940949,
+       "RELAX null":0.002591610035016488,
+       "RELAX partitioned descriptive":0.00259083094849437,
+       "k (general descriptive)":0.2240194924321973
+      },
+     "Node59":{
+       "General descriptive":0.005154989018736072,
+       "MG94xREV with separate rates for branch sets":0.005142208580673889,
+       "Nucleotide GTR":0.005055925504712457,
+       "RELAX alternative":0.005145915267860506,
+       "RELAX null":0.005146346846096751,
+       "RELAX partitioned descriptive":0.005143214189476938,
+       "k (general descriptive)":0.2279866681151776
+      },
+     "Node6":{
+       "General descriptive":0.005163534443313337,
+       "MG94xREV with separate rates for branch sets":0.005149414347039823,
+       "Nucleotide GTR":0.005097620985832186,
+       "RELAX alternative":0.005154242726273436,
+       "RELAX null":0.005154677797641304,
+       "RELAX partitioned descriptive":0.005153106119847977,
+       "k (general descriptive)":0.2279924734657284
+      },
+     "Node63":{
+       "General descriptive":0.006716620424356329,
+       "MG94xREV with separate rates for branch sets":0.006735291062069044,
+       "Nucleotide GTR":0.007647602609255488,
+       "RELAX alternative":0.007195729651064905,
+       "RELAX null":0.007196340704433009,
+       "RELAX partitioned descriptive":0.00719000423016213,
+       "k (general descriptive)":0.2303137977400876
+      },
+     "Node65":{
+       "General descriptive":2.727823291494096,
+       "MG94xREV with separate rates for branch sets":0.02912267071635639,
+       "Nucleotide GTR":0.02456625415141585,
+       "RELAX alternative":0.02633082610500658,
+       "RELAX null":0.02633312863736309,
+       "RELAX partitioned descriptive":0.02623853291855212,
+       "k (general descriptive)":1.451325877848856
+      },
+     "Node67":{
+       "General descriptive":0.01581320684188866,
+       "MG94xREV with separate rates for branch sets":0.01561743831537398,
+       "Nucleotide GTR":0.01493140783542622,
+       "RELAX alternative":0.01566786826177954,
+       "RELAX null":0.01566920274509808,
+       "RELAX partitioned descriptive":0.01562628003419372,
+       "k (general descriptive)":0.245573072213233
+      },
+     "Node68":{
+       "General descriptive":0.008819076021888143,
+       "MG94xREV with separate rates for branch sets":0.008712520386544808,
+       "Nucleotide GTR":0.007808872139931113,
+       "RELAX alternative":0.008574093779300351,
+       "RELAX null":0.008574822482122371,
+       "RELAX partitioned descriptive":0.008511487407559942,
+       "k (general descriptive)":0.2336089002772181
+      },
+     "Node69":{
+       "General descriptive":0.002911432322680605,
+       "MG94xREV with separate rates for branch sets":0.002944976107209962,
+       "Nucleotide GTR":0.002345574418904258,
+       "RELAX alternative":0.002915068389806645,
+       "RELAX null":0.002915314882712807,
+       "RELAX partitioned descriptive":0.002901063084691124,
+       "k (general descriptive)":0.2244789660405536
+      },
+     "Node7":{
+       "General descriptive":0.007901605150461684,
+       "MG94xREV with separate rates for branch sets":0.007858505187317538,
+       "Nucleotide GTR":0.007556337543317988,
+       "RELAX alternative":0.007896247749082022,
+       "RELAX null":0.007896917608830073,
+       "RELAX partitioned descriptive":0.007895555697598542,
+       "k (general descriptive)":0.2320125104107856
+      },
+     "Node72":{
+       "General descriptive":1e+26,
+       "MG94xREV with separate rates for branch sets":0.01515421686997408,
+       "Nucleotide GTR":0.01566685294193862,
+       "RELAX alternative":0.01518282570604381,
+       "RELAX null":0.01518409455138318,
+       "RELAX partitioned descriptive":0.01518612174252947,
+       "k (general descriptive)":10.70025566975531
+      },
+     "Node74":{
+       "General descriptive":0.002452779275872645,
+       "MG94xREV with separate rates for branch sets":0.002451376094799174,
+       "Nucleotide GTR":0.002529028787761534,
+       "RELAX alternative":0.002450648729870851,
+       "RELAX null":0.002450854932689624,
+       "RELAX partitioned descriptive":0.002449517272139947,
+       "k (general descriptive)":0.2238080904965251
+      },
+     "Node79":{
+       "General descriptive":0.01361675212718658,
+       "MG94xREV with separate rates for branch sets":0.01349782592440992,
+       "Nucleotide GTR":0.0129903921827805,
+       "RELAX alternative":0.0136078761558497,
+       "RELAX null":0.01360903335181326,
+       "RELAX partitioned descriptive":0.01359074316799967,
+       "k (general descriptive)":0.2416762702966542
+      },
+     "Node8":{
+       "General descriptive":0.003132968353864308,
+       "MG94xREV with separate rates for branch sets":0.003131850587682519,
+       "Nucleotide GTR":0.003487943802112434,
+       "RELAX alternative":0.003097044583974369,
+       "RELAX null":0.003097307395685847,
+       "RELAX partitioned descriptive":0.003097043566740095,
+       "k (general descriptive)":0.2248809101691057
+      },
+     "Node82":{
+       "General descriptive":1.919569050899958e+25,
+       "MG94xREV with separate rates for branch sets":0.02024627281681056,
+       "Nucleotide GTR":0.01799299675631678,
+       "RELAX alternative":1.203071257757421e-20,
+       "RELAX null":7.514268500045014e-21,
+       "RELAX partitioned descriptive":2.425968675512892e-23,
+       "k (general descriptive)":8.989246175667619
+      },
+     "Node84":{
+       "General descriptive":0.005248837555243495,
+       "MG94xREV with separate rates for branch sets":0.004789480673631628,
+       "Nucleotide GTR":0.005619863658654916,
+       "RELAX alternative":0.02904984349349482,
+       "RELAX null":0.02905234563557755,
+       "RELAX partitioned descriptive":0.02905442004219912,
+       "k (general descriptive)":0.2281286699538541
+      },
+     "Node85":{
+       "General descriptive":0.06570811527028518,
+       "MG94xREV with separate rates for branch sets":0.06949882744544893,
+       "Nucleotide GTR":0.05585519439679135,
+       "RELAX alternative":0.08098056953794512,
+       "RELAX null":0.08098746899112344,
+       "RELAX partitioned descriptive":0.08090585587907467,
+       "k (general descriptive)":0.09193594409679144
+      },
+     "Node87":{
+       "General descriptive":0.01583634625672095,
+       "MG94xREV with separate rates for branch sets":0.0159007922812476,
+       "Nucleotide GTR":0.01448201288531611,
+       "RELAX alternative":0.02025494906934198,
+       "RELAX null":0.0202566497796265,
+       "RELAX partitioned descriptive":0.02009189652056127,
+       "k (general descriptive)":0.2455688243879274
+      },
+     "Node89":{
+       "General descriptive":0.01087851928246837,
+       "MG94xREV with separate rates for branch sets":0.01083690306026414,
+       "Nucleotide GTR":0.01145223404445828,
+       "RELAX alternative":0.01129322487217295,
+       "RELAX null":0.01129417511391955,
+       "RELAX partitioned descriptive":0.01114504143370828,
+       "k (general descriptive)":0.2369929218563285
+      },
+     "Node91":{
+       "General descriptive":0.006386131410792403,
+       "MG94xREV with separate rates for branch sets":0.00635366872800916,
+       "Nucleotide GTR":0.007158586409924694,
+       "RELAX alternative":0.005617417601843001,
+       "RELAX null":0.005617896302933302,
+       "RELAX partitioned descriptive":0.005583706065992604,
+       "k (general descriptive)":0.2299128695813307
+      },
+     "Node94":{
+       "General descriptive":4.099334222494525,
+       "MG94xREV with separate rates for branch sets":0.0219598059741985,
+       "Nucleotide GTR":0.01861546808911594,
+       "RELAX alternative":0.01745033288939489,
+       "RELAX null":0.01745181979512129,
+       "RELAX partitioned descriptive":0.01745926022397382,
+       "k (general descriptive)":1.539506024635272
+      },
+     "Node96":{
+       "General descriptive":12.73697600033526,
+       "MG94xREV with separate rates for branch sets":0.0443850806823122,
+       "Nucleotide GTR":0.03422449726884903,
+       "RELAX alternative":0.03573704425664292,
+       "RELAX null":0.03574010589434572,
+       "RELAX partitioned descriptive":0.03574049451161566,
+       "k (general descriptive)":1.596418342729305
+      },
+     "Node97":{
+       "General descriptive":0.007621947171469333,
+       "MG94xREV with separate rates for branch sets":0.007371235477198672,
+       "Nucleotide GTR":0.006441033114811169,
+       "RELAX alternative":0.008173573826573991,
+       "RELAX null":0.008174270047323054,
+       "RELAX partitioned descriptive":0.008174863405703101,
+       "k (general descriptive)":0.2318852556150761
+      },
+     "XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":1.637347615013808e-16,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":1.40386221084721e-16,
+       "k (general descriptive)":0.1364143804405073,
+       "original name":"XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":0.002242745763152035,
+       "MG94xREV with separate rates for branch sets":0.002247148242913134,
+       "Nucleotide GTR":0.002500565900386771,
+       "RELAX alternative":0.002275172516746515,
+       "RELAX null":0.002275364535075153,
+       "RELAX partitioned descriptive":0.00227482690221964,
+       "k (general descriptive)":0.2235051389619737,
+       "original name":"XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":0.01690744025173218,
+       "MG94xREV with separate rates for branch sets":0.01800609663669959,
+       "Nucleotide GTR":0.01534879605692486,
+       "RELAX alternative":0.02047277406555658,
+       "RELAX null":0.020474519054647,
+       "RELAX partitioned descriptive":0.020466820253532,
+       "k (general descriptive)":0.08324784555912797,
+       "original name":"XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":0.0362912120777151,
+       "MG94xREV with separate rates for branch sets":0.03833670589354769,
+       "Nucleotide GTR":0.03350524421500043,
+       "RELAX alternative":0.04939361070538674,
+       "RELAX null":0.0493977968288082,
+       "RELAX partitioned descriptive":0.04934965893775402,
+       "k (general descriptive)":0.1088713111190919,
+       "original name":"XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":7.829816900862137e+23,
+       "MG94xREV with separate rates for branch sets":0.0172277631109856,
+       "Nucleotide GTR":0.01594963206609368,
+       "RELAX alternative":4.87194145582333e-21,
+       "RELAX null":2.23565013169591e-21,
+       "RELAX partitioned descriptive":1.17961328509127e-23,
+       "k (general descriptive)":8.581067713591425,
+       "original name":"XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":0.002656410999501418,
+       "MG94xREV with separate rates for branch sets":0.002652754299450513,
+       "Nucleotide GTR":0.00252314110853866,
+       "RELAX alternative":0.002658135308443086,
+       "RELAX null":0.002657371391505515,
+       "RELAX partitioned descriptive":0.0161016757492638,
+       "k (general descriptive)":0.2241016619223634,
+       "original name":"XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":70329436176.81174,
+       "MG94xREV with separate rates for branch sets":0.01867234268688737,
+       "Nucleotide GTR":0.0178326085816668,
+       "RELAX alternative":0.0164509981953061,
+       "RELAX null":0.01645239819106736,
+       "RELAX partitioned descriptive":0.01645437196112767,
+       "k (general descriptive)":4.64349015484558,
+       "original name":"XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":4577684213297261,
+       "MG94xREV with separate rates for branch sets":0.03226260936453422,
+       "Nucleotide GTR":0.02651653989961418,
+       "RELAX alternative":0.0324051662860735,
+       "RELAX null":0.03239584503477337,
+       "RELAX partitioned descriptive":0.1984410839145117,
+       "k (general descriptive)":6.025830032140951,
+       "original name":"XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":5.411496303636868e-18,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":4.87194145582333e-21,
+       "RELAX null":2.23565013169591e-21,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.1367001702940594,
+       "original name":"XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA":{
+       "General descriptive":3.785441048612153e-18,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":4.100595915764723e-17,
+       "RELAX null":4.108063614213524e-17,
+       "RELAX partitioned descriptive":3.935404094625353e-17,
+       "k (general descriptive)":0.1367001707797842,
+       "original name":"XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA"
+      },
+     "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":2.218203934810665,
+       "MG94xREV with separate rates for branch sets":0.0291103333307728,
+       "Nucleotide GTR":0.02807040088858308,
+       "RELAX alternative":0.02986898604433693,
+       "RELAX null":0.02986040142895271,
+       "RELAX partitioned descriptive":0.1821017574945714,
+       "k (general descriptive)":1.425298054360174,
+       "original name":"XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":0.008736744860962171,
+       "MG94xREV with separate rates for branch sets":0.008771919097945233,
+       "Nucleotide GTR":0.01022374883644202,
+       "RELAX alternative":0.008865217612304747,
+       "RELAX null":0.008862665541120146,
+       "RELAX partitioned descriptive":0.05423801704479736,
+       "k (general descriptive)":0.2334952946542425,
+       "original name":"XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":1.06473428613873e-15,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":3.164468217271425e-16,
+       "k (general descriptive)":0.1368433292009242,
+       "original name":"XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":0.002499984851154601,
+       "MG94xREV with separate rates for branch sets":0.002497463675891662,
+       "Nucleotide GTR":0.002541463458573748,
+       "RELAX alternative":0.00251369201773458,
+       "RELAX null":0.002512968234584486,
+       "RELAX partitioned descriptive":0.01519771781498691,
+       "k (general descriptive)":0.2238753295476886,
+       "original name":"XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":1.870713559044721e-20,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":4.100595915764723e-17,
+       "RELAX null":4.108063614213524e-17,
+       "RELAX partitioned descriptive":3.935404094625353e-17,
+       "k (general descriptive)":0.1367001707797842,
+       "original name":"XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":0.005113194098287276,
+       "MG94xREV with separate rates for branch sets":0.005093705407081367,
+       "Nucleotide GTR":0.005076235154278725,
+       "RELAX alternative":0.005103239955813799,
+       "RELAX null":0.00510177567882739,
+       "RELAX partitioned descriptive":0.03090754434789389,
+       "k (general descriptive)":0.2278562675312721,
+       "original name":"XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA":{
+       "General descriptive":0.01097502062974371,
+       "MG94xREV with separate rates for branch sets":0.01091164213904166,
+       "Nucleotide GTR":0.01018453662583029,
+       "RELAX alternative":0.01093724911021362,
+       "RELAX null":0.010934119918947,
+       "RELAX partitioned descriptive":0.06639060014386633,
+       "k (general descriptive)":0.2377326800712161,
+       "original name":"XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA"
+      },
+     "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":4.54238695858479e+21,
+       "MG94xREV with separate rates for branch sets":0.03790124268920513,
+       "Nucleotide GTR":0.03240312173265558,
+       "RELAX alternative":3.579385559158006e-21,
+       "RELAX null":1.552534813601484e-21,
+       "RELAX partitioned descriptive":1.33432700143911e-21,
+       "k (general descriptive)":7.807770459351506,
+       "original name":"XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":0.03864591125389838,
+       "MG94xREV with separate rates for branch sets":0.04019696832024552,
+       "Nucleotide GTR":0.03116414827493569,
+       "RELAX alternative":0.04557512102146164,
+       "RELAX null":0.04557900054827157,
+       "RELAX partitioned descriptive":0.04555620939534468,
+       "k (general descriptive)":0.110784759448843,
+       "original name":"XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":0.005029252685374514,
+       "MG94xREV with separate rates for branch sets":0.005014160107736552,
+       "Nucleotide GTR":0.005077817295547742,
+       "RELAX alternative":0.005002537238990416,
+       "RELAX null":0.005001101649632783,
+       "RELAX partitioned descriptive":0.03028646234087118,
+       "k (general descriptive)":0.2277800444094806,
+       "original name":"XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":1.633981365066441e-16,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":1.404193170651915e-16,
+       "k (general descriptive)":0.1932218691345823,
+       "original name":"XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":0.002571191720219839,
+       "MG94xREV with separate rates for branch sets":0.002565453128565476,
+       "Nucleotide GTR":0.002535791785430029,
+       "RELAX alternative":0.002568723200801934,
+       "RELAX null":0.002568939402754966,
+       "RELAX partitioned descriptive":0.002567667186979522,
+       "k (general descriptive)":0.2239872367235644,
+       "original name":"XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":3.716775113834417e-18,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":6.363352105960548e-21,
+       "RELAX null":3.042968234957742e-21,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.1367001702940594,
+       "original name":"XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":{
+       "General descriptive":1.401205245794982,
+       "MG94xREV with separate rates for branch sets":0.02459681174181779,
+       "Nucleotide GTR":0.02183724151517607,
+       "RELAX alternative":0.02642388979068289,
+       "RELAX null":0.02642610807282358,
+       "RELAX partitioned descriptive":0.02642773409881485,
+       "k (general descriptive)":1.386255413876367,
+       "original name":"XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA"
+      },
+     "XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":4191144.476344331,
+       "MG94xREV with separate rates for branch sets":0.03443068203342377,
+       "Nucleotide GTR":0.02623623174188406,
+       "RELAX alternative":0.03489094252477307,
+       "RELAX null":0.03489387299949669,
+       "RELAX partitioned descriptive":0.03488157167833027,
+       "k (general descriptive)":3.293944976274211,
+       "original name":"XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":185001852.0319656,
+       "MG94xREV with separate rates for branch sets":0.02663682777392925,
+       "Nucleotide GTR":0.02413169213371364,
+       "RELAX alternative":0.02629840108407798,
+       "RELAX null":0.0262908057231093,
+       "RELAX partitioned descriptive":0.1603497762256634,
+       "k (general descriptive)":3.824018792464887,
+       "original name":"XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA":{
+       "General descriptive":1.792586740315166e-20,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":1.404358665181973e-16,
+       "k (general descriptive)":0.1365571890269938,
+       "original name":"XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA"
+      },
+     "XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA":{
+       "General descriptive":1.05015438415413e-15,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":1.404358665181973e-16,
+       "k (general descriptive)":0.1932347774419414,
+       "original name":"XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA"
+      },
+     "XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":6.882652528838479e-18,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":1.590838026094757e-21,
+       "RELAX null":9.936222806561589e-22,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.1362717308172048,
+       "original name":"XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":0.00253714030417151,
+       "MG94xREV with separate rates for branch sets":0.002533782650172571,
+       "Nucleotide GTR":0.002536632899969506,
+       "RELAX alternative":0.002535273003548215,
+       "RELAX null":0.002535489224131487,
+       "RELAX partitioned descriptive":0.002535505693685765,
+       "k (general descriptive)":0.223930031977837,
+       "original name":"XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":1.832041282252072e-20,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":8.053617509606729e-21,
+       "RELAX null":3.974489123405274e-21,
+       "RELAX partitioned descriptive":1.044321341488812e-26,
+       "k (general descriptive)":0.136271731301708,
+       "original name":"XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":1.616727803099198e-16,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":1.406333115187698e-16,
+       "k (general descriptive)":0.1552783940021572,
+       "original name":"XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":0.002533675799854732,
+       "MG94xREV with separate rates for branch sets":0.002530889158254157,
+       "Nucleotide GTR":0.002537516930550938,
+       "RELAX alternative":0.002530993941007418,
+       "RELAX null":0.00253120983149466,
+       "RELAX partitioned descriptive":0.002531223616295647,
+       "k (general descriptive)":0.2239246148205649,
+       "original name":"XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":0.01480535252535928,
+       "MG94xREV with separate rates for branch sets":0.01470588940316845,
+       "Nucleotide GTR":0.01504529710574923,
+       "RELAX alternative":0.0148172680951043,
+       "RELAX null":0.01481852983047911,
+       "RELAX partitioned descriptive":0.01475460354898061,
+       "k (general descriptive)":0.243887888067423,
+       "original name":"XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":6.517562841917605e-20,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":9.824695593032565e-30,
+       "k (general descriptive)":0.1544158089737006,
+       "original name":"XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":1.649705972786467e-20,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":0,
+       "RELAX null":0,
+       "RELAX partitioned descriptive":3.069843491217699e-16,
+       "k (general descriptive)":0.136271736683343,
+       "original name":"XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":0.002708250166584741,
+       "MG94xREV with separate rates for branch sets":0.002818027680286859,
+       "Nucleotide GTR":0.004516517713644943,
+       "RELAX alternative":0.002867679461218027,
+       "RELAX null":0.002866854619450232,
+       "RELAX partitioned descriptive":0.01808129385977075,
+       "k (general descriptive)":0.2241840614633468,
+       "original name":"XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":0.01063447913323834,
+       "MG94xREV with separate rates for branch sets":0.01057709169597154,
+       "Nucleotide GTR":0.0102374734122902,
+       "RELAX alternative":0.01057959464761191,
+       "RELAX null":0.01058049009155077,
+       "RELAX partitioned descriptive":0.01057699004803814,
+       "k (general descriptive)":0.2366076986418726,
+       "original name":"XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":0.00264132660128259,
+       "MG94xREV with separate rates for branch sets":0.002646572668877952,
+       "Nucleotide GTR":0.00253559192758084,
+       "RELAX alternative":0.00516166265978184,
+       "RELAX null":0.005162100891761863,
+       "RELAX partitioned descriptive":0.005161120594422496,
+       "k (general descriptive)":0.2241370823134077,
+       "original name":"XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":0.00254470259340908,
+       "MG94xREV with separate rates for branch sets":0.002540169682092489,
+       "Nucleotide GTR":0.002536243102110302,
+       "RELAX alternative":0.002543049678630641,
+       "RELAX null":0.002543266316281753,
+       "RELAX partitioned descriptive":0.002543209127751033,
+       "k (general descriptive)":0.2239438986217953,
+       "original name":"XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":0.01279524503202285,
+       "MG94xREV with separate rates for branch sets":0.01270686581509141,
+       "Nucleotide GTR":0.0128211424407353,
+       "RELAX alternative":0.01271143691230739,
+       "RELAX null":0.01271252093857665,
+       "RELAX partitioned descriptive":0.01270981124870629,
+       "k (general descriptive)":0.2402696412208434,
+       "original name":"XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":0.0125154062102275,
+       "MG94xREV with separate rates for branch sets":0.01222220919961736,
+       "Nucleotide GTR":0.01134396423063595,
+       "RELAX alternative":0.008441184934966392,
+       "RELAX null":0.008438750005274944,
+       "RELAX partitioned descriptive":0.05243339241782685,
+       "k (general descriptive)":0.2397120764753307,
+       "original name":"XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA":{
+       "General descriptive":5.0165544107205e-18,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":4.87194145582333e-21,
+       "RELAX null":2.23565013169591e-21,
+       "RELAX partitioned descriptive":4.008793722052298e-28,
+       "k (general descriptive)":0.1367883646274922,
+       "original name":"XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA"
+      },
+     "XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":0.004961123419097484,
+       "MG94xREV with separate rates for branch sets":0.004951577117766478,
+       "Nucleotide GTR":0.005075162798406045,
+       "RELAX alternative":0.004949692891881093,
+       "RELAX null":0.004950117505050023,
+       "RELAX partitioned descriptive":0.004950713317207435,
+       "k (general descriptive)":0.2277075446939926,
+       "original name":"XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":{
+       "General descriptive":0.05187259280165445,
+       "MG94xREV with separate rates for branch sets":0.05652865939341953,
+       "Nucleotide GTR":0.04186878988312175,
+       "RELAX alternative":0.0743123622649675,
+       "RELAX null":0.07431824860779787,
+       "RELAX partitioned descriptive":0.07425646319008458,
+       "k (general descriptive)":0.08381064747547184,
+       "original name":"XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA"
+      },
+     "XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":6.97685034046311e-18,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":2.485684415927503e-21,
+       "RELAX null":1.552534813601484e-21,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.1365572421194003,
+       "original name":"XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":6.962041913491182e-18,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":3.579385559158006e-21,
+       "RELAX null":2.23565013169591e-21,
+       "RELAX partitioned descriptive":0,
+       "k (general descriptive)":0.1364143744244027,
+       "original name":"XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":0.01564583788049322,
+       "MG94xREV with separate rates for branch sets":0.01550112082478367,
+       "Nucleotide GTR":0.01554201415998544,
+       "RELAX alternative":0.0154459049335289,
+       "RELAX null":0.01544144735493116,
+       "RELAX partitioned descriptive":0.09413253320454551,
+       "k (general descriptive)":0.2453482831123613,
+       "original name":"XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":{
+       "General descriptive":1e+26,
+       "MG94xREV with separate rates for branch sets":0.01678809994081922,
+       "Nucleotide GTR":0.01566580896568422,
+       "RELAX alternative":0.01671955959944577,
+       "RELAX null":0.0167209655525967,
+       "RELAX partitioned descriptive":0.01662934133883268,
+       "k (general descriptive)":12.35943392765884,
+       "original name":"XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA"
+      },
+     "XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":1.812496040584843e-20,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":9.946445663867562e-21,
+       "RELAX null":6.210139255930614e-21,
+       "RELAX partitioned descriptive":3.45671514116016e-26,
+       "k (general descriptive)":0.1362717318511414,
+       "original name":"XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "General descriptive":0.00514697861476711,
+       "MG94xREV with separate rates for branch sets":0.005128496245680341,
+       "Nucleotide GTR":0.00510331307148325,
+       "RELAX alternative":0.005137665031573824,
+       "RELAX null":0.005138099460109115,
+       "RELAX partitioned descriptive":0.005136438651754793,
+       "k (general descriptive)":0.2279747010951729,
+       "original name":"XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":{
+       "General descriptive":0.002617789583673824,
+       "MG94xREV with separate rates for branch sets":0.00261449317497043,
+       "Nucleotide GTR":0.002531341911626391,
+       "RELAX alternative":0.002615291358365292,
+       "RELAX null":0.002615513714577138,
+       "RELAX partitioned descriptive":0.00261497402292858,
+       "k (general descriptive)":0.2240658478254286,
+       "original name":"XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA"
+      },
+     "XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":0.002693696280171789,
+       "MG94xREV with separate rates for branch sets":0.002683104721316398,
+       "Nucleotide GTR":0.002553289528398385,
+       "RELAX alternative":0.002653668004678329,
+       "RELAX null":0.002653894724354455,
+       "RELAX partitioned descriptive":0.002653387135860982,
+       "k (general descriptive)":0.2242042896985504,
+       "original name":"XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      },
+     "XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":{
+       "General descriptive":1.812496040584843e-20,
+       "MG94xREV with separate rates for branch sets":0,
+       "Nucleotide GTR":1e-06,
+       "RELAX alternative":8.053617509606729e-21,
+       "RELAX null":5.030212797056795e-21,
+       "RELAX partitioned descriptive":2.786819236399665e-26,
+       "k (general descriptive)":0.1362717318511414,
+       "original name":"XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA"
+      }
+    },
+   "attributes":{
+     "General descriptive":{
+       "attribute type":"branch length",
+       "display order":4
+      },
+     "MG94xREV with separate rates for branch sets":{
+       "attribute type":"branch length",
+       "display order":1
+      },
+     "Nucleotide GTR":{
+       "attribute type":"branch length",
+       "display order":0
+      },
+     "RELAX alternative":{
+       "attribute type":"branch length",
+       "display order":2
+      },
+     "RELAX null":{
+       "attribute type":"branch length",
+       "display order":3
+      },
+     "RELAX partitioned descriptive":{
+       "attribute type":"branch length",
+       "display order":5
+      },
+     "k (general descriptive)":{
+       "attribute type":"branch label",
+       "display order":4
+      },
+     "original name":{
+       "attribute type":"node label",
+       "display order":-1
+      }
+    }
+  },
+ "data partitions":{
+   "0":{
+     "coverage":      [
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131] 
+      ],
+     "name":"relax.filter.default"
+    }
+  },
+ "fits":{
+   "General descriptive":{
+     "AIC-c":5205.608191975387,
+     "Log Likelihood":-2362.710419172705,
+     "Rate Distributions":{
+       "Shared":{
+         "0":{
+           "omega":2.089957772970616e-15,
+           "proportion":0.9639967216296919
+          },
+         "1":{
+           "omega":2.089957772970616e-15,
+           "proportion":0.0355247998034524
+          },
+         "2":{
+           "omega":2089.957772970616,
+           "proportion":0.0004784785668557417
+          }
+        }
+      },
+     "display order":4,
+     "estimated parameters":233
+    },
+   "MG94xREV with separate rates for branch sets":{
+     "AIC-c":5003.948428485516,
+     "Equilibrium frequencies":      [
+[0.02095303636235775],
+      [0.03622452684296464],
+      [0.03721446202174668],
+      [0.017126826895175],
+      [0.0141559556813899],
+      [0.02447343610253842],
+      [0.02514224029282095],
+      [0.01157095316870115],
+      [0.01824477740558653],
+      [0.03154237015785978],
+      [0.03240435248206768],
+      [0.01491311993940143],
+      [0.01415896236250911],
+      [0.0244786341845265],
+      [0.02514758042674652],
+      [0.01157341080329726],
+      [0.009743798395937718],
+      [0.01684550536934038],
+      [0.01730585529859585],
+      [0.007964494765470393],
+      [0.006582949405322914],
+      [0.01138089121380997],
+      [0.01169190547846225],
+      [0.005380844712664549],
+      [0.00848437571263732],
+      [0.01466816028155091],
+      [0.01506900824662352],
+      [0.006935053785570544],
+      [0.006584347603376874],
+      [0.01138330847983583],
+      [0.01169438880295414],
+      [0.00538198758740696],
+      [0.01728519647177669],
+      [0.02988340461732176],
+      [0.03070005112924741],
+      [0.01412876695775928],
+      [0.01167794829193215],
+      [0.02018934841022954],
+      [0.02074107807987062],
+      [0.009545451810795249],
+      [0.01505101965106831],
+      [0.02602086189014572],
+      [0.02673195376110239],
+      [0.01230257055358433],
+      [0.01168042865196087],
+      [0.02019363656526763],
+      [0.0207454834205808],
+      [0.00954747923517971],
+      [0.02268304000578604],
+      [0.01072446028955868],
+      [0.008864162958790004],
+      [0.01532475310442164],
+      [0.01574354428063164],
+      [0.007245488526834952],
+      [0.01975117155483293],
+      [0.02029092683249463],
+      [0.009338283358757693],
+      [0.008866045679533528],
+      [0.01532800803449154],
+      [0.01574688816064959],
+      [0.007247027446145196] 
+      ],
+     "Log Likelihood":-2377.017826351532,
+     "Rate Distributions":{
+       "non-synonymous/synonymous rate ratio for *Reference*":        [
+[0.008385999026052913, 1] 
+        ],
+       "non-synonymous/synonymous rate ratio for *Test*":        [
+[0.007692480925414754, 1] 
+        ]
+      },
+     "display order":1,
+     "estimated parameters":123
+    },
+   "Nucleotide GTR":{
+     "AIC-c":6038.70971108733,
+     "Equilibrium frequencies":      [
+[0.2734427609427609],
+      [0.2423821548821549],
+      [0.2982323232323232],
+      [0.185942760942761] 
+      ],
+     "Log Likelihood":-2895.709568693098,
+     "Rate Distributions":{
+       "Substitution rate from nucleotide A to nucleotide C":0.3276149176661475,
+       "Substitution rate from nucleotide A to nucleotide G":1,
+       "Substitution rate from nucleotide A to nucleotide T":0.1226754426093126,
+       "Substitution rate from nucleotide C to nucleotide G":0.4212804192248498,
+       "Substitution rate from nucleotide C to nucleotide T":2.144537173671711,
+       "Substitution rate from nucleotide G to nucleotide T":0.2988986651129475
+      },
+     "display order":0,
+     "estimated parameters":123
+    },
+   "RELAX alternative":{
+     "AIC-c":5111.289145959424,
+     "Log Likelihood":-2426.558330679917,
+     "Rate Distributions":{
+       "Reference":{
+         "0":{
+           "omega":0.007627871554259986,
+           "proportion":1
+          },
+         "1":{
+           "omega":0.1104930616594653,
+           "proportion":0
+          },
+         "2":{
+           "omega":1.788393124422262,
+           "proportion":0
+          }
+        },
+       "Test":{
+         "0":{
+           "omega":0.007759821050801795,
+           "proportion":1
+          },
+         "1":{
+           "omega":0.11135249080845,
+           "proportion":0
+          },
+         "2":{
+           "omega":1.784740134872543,
+           "proportion":0
+          }
+        }
+      },
+     "display order":2,
+     "estimated parameters":127
+    },
+   "RELAX null":{
+     "AIC-c":5109.224082081565,
+     "Log Likelihood":-2426.558659801209,
+     "Rate Distributions":{
+       "Reference":{
+         "0":{
+           "omega":0.007653894359514228,
+           "proportion":1
+          },
+         "1":{
+           "omega":0.1061102942021725,
+           "proportion":0
+          },
+         "2":{
+           "omega":1.487353179608688,
+           "proportion":0
+          }
+        },
+       "Test":{
+         "0":{
+           "omega":0.007653894359514228,
+           "proportion":1
+          },
+         "1":{
+           "omega":0.1061102942021725,
+           "proportion":0
+          },
+         "2":{
+           "omega":1.487353179608688,
+           "proportion":0
+          }
+        }
+      },
+     "display order":3,
+     "estimated parameters":126
+    },
+   "RELAX partitioned descriptive":{
+     "AIC-c":5115.835590159662,
+     "Log Likelihood":-2424.69745609678,
+     "Rate Distributions":{
+       "Reference":{
+         "0":{
+           "omega":0.007642294722087001,
+           "proportion":1
+          },
+         "1":{
+           "omega":0.0986119375282833,
+           "proportion":0
+          },
+         "2":{
+           "omega":1.511499020917909,
+           "proportion":0
+          }
+        },
+       "Test":{
+         "0":{
+           "omega":0,
+           "proportion":0.9990426796122738
+          },
+         "1":{
+           "omega":0.8493555716195538,
+           "proportion":0
+          },
+         "2":{
+           "omega":1831.817869371306,
+           "proportion":0.0009573203877262237
+          }
+        }
+      },
+     "display order":5,
+     "estimated parameters":131
+    }
+  },
+ "input":{
+   "file name":"/Users/alex/Documents/AOC/results/BDNF-64/gard/segments/BDNF-64.part5.codon.fas",
+   "number of sequences":60,
+   "number of sites":132,
+   "partition count":1,
+   "trees":{
+     "0":"((XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA)Node1,XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,(((XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA,XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA)Node8,(XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA,(XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA,((((XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA)Node44,(XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,(NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA,NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA)Node50,XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA)Node47)Node43,(((XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,((XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA)Node59,XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA)Node58)Node56,(XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA,(XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,(((NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA,XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA)Node69,(XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA,(XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA,XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA)Node74)Node72)Node68,(XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA)Node79)Node67)Node65)Node63)Node55,(XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,((XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,(XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,(XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,(XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA)Node91)Node89)Node87)Node85,(XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,((XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA)Node97,(XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,(XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA,XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA)Node102)Node100)Node96)Node94)Node84)Node82)Node54)Node42,XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA,(((XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,(XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA)Node23)Node21,(NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA,(XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,(XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,(XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA,XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA,XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA,XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA)Node32)Node30)Node28)Node26)Node20,NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA)Node19)Node16,XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA)Node13)Node11)Node7,((XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA,XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA)Node107,XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA,(XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA,XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA)Node112)Node106)Node6,XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA)"
+    }
+  },
+ "runtime":"2.5.74",
+ "test results":{
+   "LRT":0.0006582425830856664,
+   "p-value":0.979531528833666,
+   "relaxation or intensification parameter":0.9964826470444502
+  },
+ "tested":{
+   "0":{
+     "NM_001009828_1_Felis_catus_brain_derived_neurotrophic_factor_BDNF_mRNA":"Test",
+     "NM_001012441_1_Pan_troglodytes_brain_derived_neurotrophic_factor_BDNF_mRNA":"Test",
+     "NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA":"Test",
+     "NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA":"Test",
+     "NM_001270630_1_Rattus_norvegicus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_1_mRNA":"Test",
+     "NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA":"Test",
+     "Node1":"Reference",
+     "Node100":"Reference",
+     "Node102":"Reference",
+     "Node106":"Reference",
+     "Node107":"Reference",
+     "Node11":"Reference",
+     "Node112":"Reference",
+     "Node13":"Reference",
+     "Node16":"Reference",
+     "Node19":"Reference",
+     "Node20":"Reference",
+     "Node21":"Reference",
+     "Node23":"Reference",
+     "Node26":"Reference",
+     "Node28":"Reference",
+     "Node30":"Reference",
+     "Node32":"Reference",
+     "Node42":"Reference",
+     "Node43":"Reference",
+     "Node44":"Reference",
+     "Node47":"Test",
+     "Node50":"Test",
+     "Node54":"Reference",
+     "Node55":"Reference",
+     "Node56":"Reference",
+     "Node58":"Reference",
+     "Node59":"Reference",
+     "Node6":"Reference",
+     "Node63":"Reference",
+     "Node65":"Reference",
+     "Node67":"Reference",
+     "Node68":"Reference",
+     "Node69":"Reference",
+     "Node7":"Reference",
+     "Node72":"Reference",
+     "Node74":"Reference",
+     "Node79":"Reference",
+     "Node8":"Reference",
+     "Node82":"Reference",
+     "Node84":"Reference",
+     "Node85":"Reference",
+     "Node87":"Reference",
+     "Node89":"Reference",
+     "Node91":"Reference",
+     "Node94":"Reference",
+     "Node96":"Reference",
+     "Node97":"Reference",
+     "XM_004408653_1_PREDICTED_Odobenus_rosmarus_divergens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_004585440_1_PREDICTED_Ochotona_princeps_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_004644113_2_PREDICTED_Octodon_degus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_004660846_2_PREDICTED_Jaculus_jaculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_004851581_3_PREDICTED_Heterocephalus_glaber_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_005216334_4_PREDICTED_Bos_taurus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Test",
+     "XM_005401751_2_PREDICTED_Chinchilla_lanigera_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_005654684_3_PREDICTED_Sus_scrofa_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Test",
+     "XM_005890667_2_PREDICTED_Bos_mutus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_006068006_2_PREDICTED_Bubalus_bubalis_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA":"Reference",
+     "XM_007497196_2_PREDICTED_Monodelphis_domestica_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Test",
+     "XM_007653166_4_PREDICTED_Cricetulus_griseus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Test",
+     "XM_008686880_2_PREDICTED_Ursus_maritimus_brain_derived_neurotrophic_factor_BDNF_mRNA":"Reference",
+     "XM_009007854_3_PREDICTED_Callithrix_jacchus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Test",
+     "XM_010831788_1_PREDICTED_Bison_bison_bison_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_011226480_3_PREDICTED_Ailuropoda_melanoleuca_brain_derived_neurotrophic_factor_BDNF_mRNA":"Test",
+     "XM_012096129_4_PREDICTED_Ovis_aries_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X2_mRNA":"Test",
+     "XM_013019592_1_PREDICTED_Dipodomys_ordii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_013147262_2_PREDICTED_Cavia_porcellus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_015114598_2_PREDICTED_Macaca_mulatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Test",
+     "XM_015476449_1_PREDICTED_Marmota_marmota_marmota_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_015544869_1_PREDICTED_Panthera_tigris_altaica_brain_derived_neurotrophic_factor_BDNF_mRNA":"Reference",
+     "XM_019974522_1_PREDICTED_Bos_indicus_brain_derived_neurotrophic_factor_BDNF_mRNA":"Reference",
+     "XM_020177315_1_PREDICTED_Castor_canadensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"Reference",
+     "XM_020903256_1_PREDICTED_Odocoileus_virginianus_texanus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_020977976_1_PREDICTED_Phascolarctos_cinereus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Test",
+     "XM_021151236_2_PREDICTED_Mus_caroli_brain_derived_neurotrophic_factor_Bdnf_mRNA":"Reference",
+     "XM_021192829_2_PREDICTED_Mus_pahari_brain_derived_neurotrophic_factor_Bdnf_mRNA":"Reference",
+     "XM_021685880_1_PREDICTED_Neomonachus_schauinslandi_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_025879326_1_PREDICTED_Callorhinus_ursinus_brain_derived_neurotrophic_factor_BDNF_mRNA":"Reference",
+     "XM_026018600_1_PREDICTED_Vulpes_vulpes_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_026412272_1_PREDICTED_Urocitellus_parryii_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_027577807_1_PREDICTED_Zalophus_californianus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_027852578_1_PREDICTED_Vombatus_ursinus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_027936596_1_PREDICTED_Marmota_flaviventris_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_028117708_1_PREDICTED_Eumetopias_jubatus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_029555090_1_PREDICTED_Nannospalax_galili_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Test",
+     "XM_029957152_1_PREDICTED_Suricata_suricatta_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_030333208_1_PREDICTED_Lynx_canadensis_brain_derived_neurotrophic_factor_BDNF_mRNA":"Reference",
+     "XM_031025064_1_PREDICTED_Leptonychotes_weddellii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_031371313_1_PREDICTED_Mastomys_coucha_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_031944159_1_PREDICTED_Sarcophilus_harrisii_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Test",
+     "XM_032414183_1_PREDICTED_Phoca_vitulina_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X6_mRNA":"Reference",
+     "XM_032903861_1_PREDICTED_Rattus_rattus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_033764060_1_PREDICTED_Fukomys_damarensis_brain_derived_neurotrophic_factor_Bdnf_mRNA":"Reference",
+     "XM_035012477_1_PREDICTED_Mirounga_leonina_brain_derived_neurotrophic_factor_BDNF_mRNA":"Reference",
+     "XM_036109493_1_PREDICTED_Halichoerus_grypus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_036763631_1_PREDICTED_Trichosurus_vulpecula_brain_derived_neurotrophic_factor_BDNF_mRNA":"Test",
+     "XM_037204438_1_PREDICTED_Peromyscus_leucopus_brain_derived_neurotrophic_factor_Bdnf_mRNA":"Reference",
+     "XM_038429434_1_PREDICTED_Canis_lupus_familiaris_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Test",
+     "XM_039217098_1_PREDICTED_Hyaena_hyaena_brain_derived_neurotrophic_factor_BDNF_mRNA":"Reference",
+     "XM_040284582_1_PREDICTED_Ictidomys_tridecemlineatus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_X1_mRNA":"Reference",
+     "XM_040980297_1_PREDICTED_Ochotona_curzoniae_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference",
+     "XM_041730708_1_PREDICTED_Vulpes_lagopus_brain_derived_neurotrophic_factor_BDNF_transcript_variant_X1_mRNA":"Reference"
+    }
+  },
+ "timers":{
+   "General descriptive model fitting":{
+     "order":2,
+     "timer":575
+    },
+   "Overall":{
+     "order":0,
+     "timer":891
+    },
+   "Preliminary model fitting":{
+     "order":1,
+     "timer":34
+    },
+   "RELAX alternative model fitting":{
+     "order":3,
+     "timer":1783160637
+    },
+   "RELAX null model fitting":{
+     "order":4,
+     "timer":5
+    },
+   "RELAX partitioned descriptive":{
+     "order":5,
+     "timer":65
+    }
+  }
+}

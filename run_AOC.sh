@@ -23,6 +23,9 @@ set -euo pipefail
 #   --dry-run
 # ------------------------------------------------------------------------------
 
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd -P)"
+VERSION_FILE="${SCRIPT_DIR}/VERSION"
+
 # Pretty banner
 if [[ -t 1 && -z "${SLURM_JOB_ID:-}" ]]; then
 clear || true
@@ -37,6 +40,14 @@ cat <<'EOF'
 EOF
 echo ""
 fi
+
+if [[ -f "${VERSION_FILE}" ]]; then
+  AOC_VERSION="$(<"${VERSION_FILE}")"
+else
+  AOC_VERSION="unknown"
+fi
+echo "AOC version: ${AOC_VERSION}"
+echo ""
 
 # -----------------------------
 # Defaults
@@ -134,21 +145,32 @@ run_smk () {
     return 0
   fi
 
-  echo "###############################################################################"
-  echo "# ${title}"
-  echo "###############################################################################"
+  #echo "###############################################################################"
+  #echo "# ${title}"
+  #echo "###############################################################################"
 
   # Always pass samples_csv into config for the Snakefile(s) to consume.
-  snakemake \
-    -s "${snakefile}" \
-    --jobs "${JOBS}" \
-    --cores "${CORES}" \
-    ${KEEP_GOING} \
-    --latency-wait "${LATENCY_WAIT}" \
-    ${RERUN_INCOMPLETE} \
-    ${DRYRUN} --printshellcmds \
-    --config "samples_csv=${SAMPLES_CSV}" \
+  local smk_args=(
+    -s "${snakefile}"
+    --jobs "${JOBS}"
+    --cores "${CORES}"
+    --latency-wait "${LATENCY_WAIT}"
+    --printshellcmds
+    --config "samples_csv=${SAMPLES_CSV}"
     --rerun-triggers mtime
+  )
+
+  if [[ -n "${KEEP_GOING}" ]]; then
+    smk_args+=("${KEEP_GOING}")
+  fi
+  if [[ -n "${RERUN_INCOMPLETE}" ]]; then
+    smk_args+=("${RERUN_INCOMPLETE}")
+  fi
+  if [[ -n "${DRYRUN}" ]]; then
+    smk_args+=("${DRYRUN}")
+  fi
+
+  snakemake "${smk_args[@]}"
   echo ""
 }
 

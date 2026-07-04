@@ -1,0 +1,5 @@
+Partition 1: start=0, stop=324, length=324, remainder=0
+Partition 2: start=324, stop=414, length=90, remainder=0
+Partition 3: start=414, stop=513, length=99, remainder=0
+Partition 4: start=513, stop=825, length=312, remainder=0
+Partition 5: start=825, stop=1221, length=396, remainder=0
