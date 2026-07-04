@@ -32,8 +32,12 @@ macse_runner: scripts/run_macse_with_heap.sh
 # TN93 clustering
 # `tn93_threshold` controls clustering stringency before GARD.
 # `tn93_max_seqs` limits how many sequences are retained per cluster.
+# `preserve_test_sequences` keeps labeled Test sequences during duplicate
+# removal and TN93 clustering, even if this causes the retained alignment to
+# exceed `tn93_max_seqs`.
 tn93_threshold: 0.01
 tn93_max_seqs: 20
+preserve_test_sequences: true
 
 # GARD MPI settings
 # `gard_processors` controls the number of MPI ranks used by mpirun for GARD.

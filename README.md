@@ -165,6 +165,26 @@ Branches labeled “Test” represent the foreground lineages where a specific e
 The `sample` value becomes the output directory name under `results/`, so it is
 usually best to keep it aligned with the input dataset name.
 
+### Preserving Test sequences during reduction
+
+AOC removes duplicate sequences and applies TN93 clustering before recombination
+and selection analyses. By default, labeled Test sequences are protected during
+these reduction steps:
+
+```yaml
+preserve_test_sequences: true
+```
+
+When this option is enabled, Test sequences from `sequence_labels_csv` are kept
+through duplicate removal and TN93 clustering so branch labeling can still find
+the requested foreground lineages later in the workflow. This can cause the
+retained alignment to contain more sequences than `tn93_max_seqs`, because Test
+sequences are treated as required records rather than optional cluster
+representatives.
+
+Set `preserve_test_sequences: false` only if you intentionally want duplicate
+removal and TN93 clustering to be allowed to discard labeled Test sequences.
+
 ---
 
 ## Running the Pipeline

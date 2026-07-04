@@ -70,6 +70,7 @@ MAKE_TEST_LIST_PY  = config.get("make_test_list_py", "scripts/make_sequence_head
 TN93_CLUSTER_PY    = config.get("tn93_cluster_py", "scripts/tn93_cluster.py")
 
 GARD_PROCESSORS = int(config.get("gard_processors", 4))
+PRESERVE_TEST_SEQUENCES_RAW = config.get("preserve_test_sequences", True)
 
 # Summarizer scripts (from your Snakefile_SummarizeResults)
 # If these scripts differ in your repo, update paths in config.yaml
@@ -88,11 +89,20 @@ MACSE_MIN_HEAP_MB = int(config.get("macse_min_heap_mb", 2048))
 MACSE_XMS_MB = int(config.get("macse_xms_mb", 512))
 MACSE_RUNNER = config.get("macse_runner", "scripts/run_macse_with_heap.sh")
 
+def _coerce_bool(value):
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return False
+    return str(value).strip().lower() in {"1", "true", "yes", "y", "on"}
+
 def _coerce_int(value):
     try:
         return int(str(value).strip())
     except (TypeError, ValueError, AttributeError):
         return None
+
+PRESERVE_TEST_SEQUENCES = _coerce_bool(PRESERVE_TEST_SEQUENCES_RAW)
 
 def _slurm_mem_mb():
     per_node = _coerce_int(os.environ.get("SLURM_MEM_PER_NODE"))
@@ -281,6 +291,59 @@ def _branch_arg(sample):
         return "--branches Test"
     return ""
 
+def _preserve_test_list_input(wc):
+    if PRESERVE_TEST_SEQUENCES and wc.sample in SAMPLES_WITH_LABELS:
+        return test_list_file(wc.sample)
+    return []
+
+def _read_preserve_names(path):
+    if not path:
+        return []
+    if isinstance(path, (list, tuple)):
+        if len(path) == 0:
+            return []
+        path = path[0]
+    if not os.path.exists(str(path)):
+        return []
+    with open(str(path)) as fh:
+        return [line.strip() for line in fh if line.strip()]
+
+def _fasta_ids(path):
+    return {record.id for record in SeqIO.parse(str(path), "fasta")}
+
+def _restore_missing_preserved_sequences(source_fasta, output_fasta, preserve_names, log_file):
+    if not preserve_names:
+        return
+
+    present = _fasta_ids(output_fasta)
+    missing = [name for name in preserve_names if name not in present]
+    if not missing:
+        return
+
+    records_by_id = {record.id: record for record in SeqIO.parse(str(source_fasta), "fasta")}
+    unavailable = [name for name in missing if name not in records_by_id]
+    if unavailable:
+        raise RuntimeError(
+            f"Could not preserve requested Test sequences because they were not found in {source_fasta}: {unavailable}"
+        )
+
+    with open(str(output_fasta), "a") as out:
+        SeqIO.write([records_by_id[name] for name in missing], out, "fasta")
+
+    with open(str(log_file), "a") as L:
+        L.write(f"\n[INFO] Restored {len(missing)} preserved Test sequences after duplicate removal: {missing}\n")
+
+def _assert_preserved_sequences(output_fasta, preserve_names):
+    if not preserve_names:
+        return
+
+    present = _fasta_ids(output_fasta)
+    missing = [name for name in preserve_names if name not in present]
+    if missing:
+        raise RuntimeError(
+            f"Preserved Test sequences are missing from {output_fasta}: {missing}"
+        )
+
 ###############################################################################
 # Rule all
 ###############################################################################
@@ -405,19 +468,29 @@ rule strike_ambigs_msa:
 
 rule remove_duplicates_msa:
     input:
-        sa=rules.strike_ambigs_msa.output.sa
+        sa=rules.strike_ambigs_msa.output.sa,
+        preserve_list=_preserve_test_list_input
     output:
         rd=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa")
     log:
         os.path.join(LOGDIR, "remove_duplicates_msa.{sample}.log")
-    shell:
-        r"""
-        {HYPHY} {REMOVE_DUPS_BF} --msa {input.sa} --output {output.rd} ENV='DATA_FILE_PRINT_FORMAT=9' > {log} 2>&1
-        """
+    run:
+        preserve_names = _read_preserve_names(input.preserve_list)
+        preserve_arg = ""
+        if PRESERVE_TEST_SEQUENCES and preserve_names:
+            preserve_arg = "--preserve " + ",".join(preserve_names)
+        shell(
+            f"{HYPHY} {REMOVE_DUPS_BF} --msa {input.sa} {preserve_arg} "
+            f"--output {output.rd} ENV='DATA_FILE_PRINT_FORMAT=9' > {log} 2>&1"
+        )
+        if PRESERVE_TEST_SEQUENCES and preserve_names:
+            _restore_missing_preserved_sequences(input.sa, output.rd, preserve_names, log[0])
+            _assert_preserved_sequences(output.rd, preserve_names)
 
 rule tn93_cluster:
     input:
-        rd=rules.remove_duplicates_msa.output.rd
+        rd=rules.remove_duplicates_msa.output.rd,
+        preserve_list=_preserve_test_list_input
     output:
         cluster_json=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.json"),
         cluster_fasta=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta"),
@@ -426,16 +499,23 @@ rule tn93_cluster:
         max_seqs=lambda wc: config.get("tn93_max_seqs", 20),
     log:
         os.path.join(LOGDIR, "tn93_cluster.{sample}.log")
-    shell:
-        r"""
-        python {TN93_CLUSTER_PY} \
-          --input {input.rd} \
-          --output_fasta {output.cluster_fasta} \
-          --output_json {output.cluster_json} \
-          --threshold {params.threshold} \
-          --max_retain {params.max_seqs} \
-          > {log} 2>&1
-        """
+    run:
+        preserve_names = _read_preserve_names(input.preserve_list)
+        preserve_arg = ""
+        if PRESERVE_TEST_SEQUENCES and preserve_names:
+            preserve_arg = f"--preserve_list {input.preserve_list}"
+        shell(
+            f"python {TN93_CLUSTER_PY} "
+            f"--input {input.rd} "
+            f"--output_fasta {output.cluster_fasta} "
+            f"--output_json {output.cluster_json} "
+            f"--threshold {params.threshold} "
+            f"--max_retain {params.max_seqs} "
+            f"{preserve_arg} "
+            f"> {log} 2>&1"
+        )
+        if PRESERVE_TEST_SEQUENCES and preserve_names:
+            _assert_preserved_sequences(output.cluster_fasta, preserve_names)
 
 rule recombination:
     input:
