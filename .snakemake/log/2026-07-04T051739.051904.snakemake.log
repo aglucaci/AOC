@@ -1,0 +1,3 @@
+ModuleNotFoundError in file "/Users/alex/Documents/AOC/workflow/Snakefile", line 24:
+No module named 'scripts'
+  File "/Users/alex/Documents/AOC/workflow/Snakefile", line 24, in <module>

@@ -16,13 +16,32 @@ import re
 import json
 import math
 import glob
-import hashlib
+import importlib.util
+import sys
 from pathlib import Path
+
+def _find_project_root():
+    starts = [Path(__file__).resolve().parent, Path.cwd().resolve()]
+    for start in starts:
+        for candidate in (start, *start.parents):
+            if (candidate / "scripts" / "busteds_mh.py").is_file():
+                return candidate
+    raise FileNotFoundError("Could not find scripts/busteds_mh.py from Snakefile or working directory")
+
+PROJECT_ROOT = _find_project_root()
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
+
+_busteds_mh_path = PROJECT_ROOT / "scripts" / "busteds_mh.py"
+_busteds_mh_spec = importlib.util.spec_from_file_location("aoc_busteds_mh", _busteds_mh_path)
+_busteds_mh = importlib.util.module_from_spec(_busteds_mh_spec)
+_busteds_mh_spec.loader.exec_module(_busteds_mh)
+count_busteds_mh_branches = _busteds_mh.count_busteds_mh_branches
+
 import pandas as pd
 import altair as alt
 from statsmodels.stats.multitest import fdrcorrection
 from Bio import SeqIO
-from scripts.busteds_mh import count_busteds_mh_branches
 
 # These plots are rendered locally with vl-convert, so allow larger in-memory datasets.
 alt.data_transformers.disable_max_rows()
@@ -39,6 +58,8 @@ SAMPLES_CSV = config.get("samples_csv", "samples.csv")
 
 # Tools / scripts (override in config/config.yaml as needed)
 HYPHY        = config.get("hyphy", "hyphy")
+HYPHY_MPI    = config.get("hyphy_mpi", "HYPHYMPI")
+MPIRUN       = config.get("mpirun", "mpirun")
 FASTTREE     = config.get("fasttree", "FastTree")
 
 REMOVE_DUPS_BF     = config.get("remove_dups_bf", "software/remove-duplicates/remove-duplicates.bf")
@@ -47,6 +68,8 @@ LABEL_TREE_BF      = config.get("label_tree_bf", "software/LabelTrees/label-tree
 
 MAKE_TEST_LIST_PY  = config.get("make_test_list_py", "scripts/make_sequence_header_map.py")
 TN93_CLUSTER_PY    = config.get("tn93_cluster_py", "scripts/tn93_cluster.py")
+
+GARD_PROCESSORS = int(config.get("gard_processors", 4))
 
 # Summarizer scripts (from your Snakefile_SummarizeResults)
 # If these scripts differ in your repo, update paths in config.yaml
@@ -464,13 +487,16 @@ rule recombination:
     input:
         msa=rules.tn93_cluster.output.cluster_fasta
     output:
-        gard_json=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.RD.SA.codons.cln.fa.cluster.fasta.GARD.json"),
-        bestgard=os.path.join(str(OUTROOT), "_shared", "fastas", "{fasta_id}", "alignment.RD.SA.codons.cln.fa.cluster.fasta.best-gard"),
+        gard_json=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta.GARD.json"),
+        bestgard=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta.best-gard"),
+    threads: GARD_PROCESSORS
+    params:
+        processors=GARD_PROCESSORS
     log:
         os.path.join(LOGDIR, "recombination.{fasta_id}.log")
     shell:
         r"""
-        {HYPHY} GARD --alignment {input.msa} --rv GDD --output {output.gard_json} --mode Faster ENV='TOLERATE_NUMERICAL_ERRORS=1;' \
+        {MPIRUN} -np {params.processors} {HYPHY_MPI} GARD --alignment {input.msa} --rv GDD --output {output.gard_json} --mode Faster ENV='TOLERATE_NUMERICAL_ERRORS=1;' \
           > {log} 2>&1
         """
 

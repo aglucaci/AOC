@@ -12,6 +12,8 @@ outdir: results
 # External executables
 # Leave these as-is if the tools are available on PATH in the AOC environment.
 hyphy: hyphy
+hyphy_mpi: HYPHYMPI
+mpirun: mpirun
 fasttree: FastTree
 macse_launcher: macse
 
@@ -32,6 +34,10 @@ macse_runner: scripts/run_macse_with_heap.sh
 # `tn93_max_seqs` limits how many sequences are retained per cluster.
 tn93_threshold: 0.01
 tn93_max_seqs: 20
+
+# GARD MPI settings
+# `gard_processors` controls the number of MPI ranks used by mpirun for GARD.
+gard_processors: 4
 
 # Branch-label behavior
 # If true, samples that include a labels CSV must produce at least one Test sequence.
