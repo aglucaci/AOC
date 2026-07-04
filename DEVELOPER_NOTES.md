@@ -44,7 +44,9 @@ bash run_AOC.sh --samples samples.csv --dry-run
 
 ### Coding conventions
 
-- Prefer explicit, sample-scoped output paths under `results/{sample}/`.
+- Prefer explicit output paths: shared sequence artifacts under
+  `results/sequences/{sequence}/` and sample-specific artifacts under
+  `results/{sample}/`.
 - Keep Snakemake rules deterministic: declare all important inputs and outputs,
   write logs, and avoid relying on hidden files.
 - Use `config/config.yaml` for paths, executable names, and tunable parameters
@@ -123,23 +125,40 @@ samples.csv
 
 ### Configuration and inputs
 
-AOC is driven by `samples.csv`, whose required columns are:
+AOC supports two input modes. The legacy mode keeps the FASTA path directly in
+`samples.csv`:
 
 ```text
 sample,codon_fasta,sequence_labels_csv
 ```
 
-The Snakefile reads this file through the `samples_csv` config key. Each row
-defines a sample-specific execution branch. The `sample` value becomes the
-directory name under the configured output root, which defaults to `results/`.
+The shared-sequence mode separates foreground test samples from reusable FASTA
+inputs:
 
-The `sequence_labels_csv` column must exist even for unlabeled samples. For
-unlabeled runs, leave the value blank. Labeled samples are used to build a
-header map and a Test-branch list for branch-aware HyPhy methods.
+```text
+sample,sequence,sequence_labels_csv
+```
+
+paired with `sequences.csv`:
+
+```text
+sequence,codon_fasta
+```
+
+The Snakefile reads this file through the `samples_csv` config key. Each row
+defines a sample-specific execution branch. In shared-sequence mode, the
+`sequence` value identifies the shared preprocessing/GARD/tree branch. The
+`sample` value becomes the sample-specific output directory name under the
+configured output root, which defaults to `results/`.
+
+If `sequence_labels_csv` is omitted or blank, the sample is treated as
+unlabeled. Labeled samples are used to build a header map and a Test-branch list
+for branch-aware HyPhy methods.
 
 Important config keys include:
 
 - `samples_csv`: sample sheet path.
+- `sequences_csv`: sequence-to-FASTA sheet path for shared-sequence mode.
 - `outdir`: output root.
 - `hyphy`, `hyphy_mpi`, `mpirun`, `fasttree`, `macse_launcher`: executable
   names or paths.
@@ -154,7 +173,7 @@ Important config keys include:
 
 #### 1. Preprocessing
 
-The preprocessing rules produce a cleaned codon alignment for each sample:
+The preprocessing rules produce a cleaned codon alignment for each sequence:
 
 1. `macse`: runs MACSE for codon-aware alignment and amino-acid output.
 2. `cln`: runs HyPhy CLN on the codon alignment.
@@ -165,8 +184,8 @@ The preprocessing rules produce a cleaned codon alignment for each sample:
 5. `tn93_cluster`: clusters and limits retained sequences before recombination
    analysis while retaining protected Test records.
 
-These steps write sample-local files under `results/{sample}/` and logs under
-`results/logs/`.
+These steps write sequence-local files under `results/sequences/{sequence}/` and
+logs under `results/logs/`.
 
 #### 2. Recombination and dynamic partitions
 
@@ -174,20 +193,16 @@ These steps write sample-local files under `results/{sample}/` and logs under
 `.best-gard` breakpoint file.
 
 The `parse_gard` checkpoint reads the `.best-gard` file, creates codon-aligned
-partition FASTA files under:
+partition FASTA files, and writes a manifest under:
 
 ```text
-results/{sample}/gard/segments/
-```
-
-and writes a manifest:
-
-```text
-results/{sample}/gard/segments.json
+results/sequences/{sequence}/gard/segments/
+results/sequences/{sequence}/gard/segments.json
 ```
 
 This checkpoint is what makes downstream partition fan-out dynamic. Helper
-functions read the manifest to discover the actual partitions for each sample.
+functions read the sequence manifest to discover the actual partitions for each
+sample that points at that sequence.
 
 #### 3. Branch-label preparation
 
@@ -206,8 +221,9 @@ file. RELAX and CFEL then emit skipped JSON placeholders instead of failing.
 
 For each GARD partition:
 
-1. `fasttree_partition` builds a nucleotide tree with FastTree.
-2. `label_tree_TestForeground_partition` labels Test branches when a non-empty
+1. `fasttree_partition` builds one shared nucleotide tree per sequence partition
+   with FastTree.
+2. `label_tree_TestForeground_partition` labels Test branches per sample when a non-empty
    test list exists.
 3. Selection rules run HyPhy methods:
    - `FEL_partition`
@@ -259,6 +275,8 @@ The output layout is part of AOC's practical API. Downstream users may rely on:
 - `results/{sample}/visualizations/{sample}.FEL.merged.png`
 - `results/{sample}/visualizations/{sample}.MEME.merged.png`
 - `results/{sample}/summary/executive_summary.html`
+- `results/sequences/{sequence}/gard/segments.json`
+- `results/sequences/{sequence}/trees/part{part}/FastTree.treefile`
 
 If a change renames, removes, or changes the schema of any of these files, treat
 it as a user-facing change and document it.
@@ -308,7 +326,9 @@ To change input sample metadata:
 
 - The workflow should remain runnable from the repository root with
   `bash run_AOC.sh --samples samples.csv`.
-- Outputs should remain sample-scoped and partition-aware.
+- Outputs should keep the sequence/sample split: shared sequence artifacts under
+  `results/sequences/{sequence}/`, sample-specific artifacts under
+  `results/{sample}/`, and selection outputs partition-aware.
 - Dynamic partitions should continue to flow through the GARD manifest rather
   than hard-coded partition counts.
 - Labeled and unlabeled samples should both be first-class modes.

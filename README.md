@@ -120,9 +120,12 @@ bash tests/test_installation.sh
 
 ## Input Format
 
-AOC is driven by a `samples.csv` file.
+AOC is driven by a `samples.csv` file. For simple runs, each row can point
+directly at a FASTA. For workflows where several foreground groups use the same
+gene FASTA, `samples.csv` can instead point to a reusable `sequence` name and a
+separate `sequences.csv` can map each sequence name to its FASTA.
 
-### Required columns
+### Simple sample sheet
 
 ```
 sample,codon_fasta,sequence_labels_csv
@@ -135,9 +138,43 @@ BDNF-8,data/BDNF/BDNF-8.fasta,data/BDNF/BDNF-8.sequence_labels.csv
 tiny-no-labels,tests/data/tiny.fasta,
 ```
 
-Each row corresponds to one ortholog dataset. The current workflow requires the
-`sequence_labels_csv` column to be present in `samples.csv`, even when you do
-not want to provide branch labels for a sample.
+Each row corresponds to one foreground/background analysis. If
+`sequence_labels_csv` is omitted or blank, AOC runs methods that do not require
+branch labels and skips label-required methods with explicit placeholder output.
+
+### Shared sequence sheet
+
+Use this mode when multiple samples should share the same alignment,
+recombination partitions, and partition trees.
+
+`samples.csv`:
+
+```
+sample,sequence,sequence_labels_csv
+red_purple,purple,red_purple.sequence_labels.csv
+blue_purple,purple,blue_purple.sequence_labels.csv
+red_orange,orange,red_orange.sequence_labels.csv
+```
+
+`sequences.csv`:
+
+```
+sequence,codon_fasta
+purple,purple.fasta
+orange,orange.fasta
+```
+
+Set the sequence sheet path in `config/config.yaml` or on the command line:
+
+```yaml
+sequences_csv: sequences.csv
+```
+
+In this mode, AOC runs MACSE, cleanup, duplicate removal, TN93 clustering, GARD,
+partition generation, and FastTree once per `sequence`. Branch labeling,
+selection analyses, tables, plots, and summaries still run once per `sample`.
+Shared sequence outputs are written under `results/sequences/{sequence}/`, while
+sample-specific outputs stay under `results/{sample}/`.
 
 If you do not have foreground/background labels for a sample yet, leave the
 third column blank:
@@ -160,6 +197,20 @@ Background,"XM_007497196.2 PREDICTED: Monodelphis domestica brain-derived neurot
 Background,"NM_001081787.1 Equus caballus brain derived neurotrophic factor (BDNF), mRNA"
 ```
 
+When several samples share the same sequence, you can also use one label file
+per sequence and identify the foreground rows by sample:
+
+```
+sample,fasta_sequence_header
+red_purple,red1
+red_purple,red2
+blue_purple,blue1
+blue_purple,blue2
+```
+
+Rows whose `sample` value matches the current sample are treated as Test
+branches for that sample.
+
 Branches labeled “Test” represent the foreground lineages where a specific evolutionary hypothesis (e.g., adaptive selection) is being evaluated, while “Background” branches represent the remainder of the phylogeny and serve as a reference group against which evolutionary patterns in the Test set are compared.
 
 The `sample` value becomes the output directory name under `results/`, so it is
@@ -168,8 +219,8 @@ usually best to keep it aligned with the input dataset name.
 ### Preserving Test sequences during reduction
 
 AOC removes duplicate sequences and applies TN93 clustering before recombination
-and selection analyses. By default, labeled Test sequences are protected during
-these reduction steps:
+and selection analyses. To protect labeled Test sequences during these reduction
+steps, enable:
 
 ```yaml
 preserve_test_sequences: true
@@ -182,8 +233,8 @@ retained alignment to contain more sequences than `tn93_max_seqs`, because Test
 sequences are treated as required records rather than optional cluster
 representatives.
 
-Set `preserve_test_sequences: false` only if you intentionally want duplicate
-removal and TN93 clustering to be allowed to discard labeled Test sequences.
+The default is `preserve_test_sequences: false`, which allows duplicate removal
+and TN93 clustering to discard labeled Test sequences.
 
 ---
 

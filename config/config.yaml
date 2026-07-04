@@ -7,6 +7,7 @@
 
 # Core inputs / outputs
 samples_csv: samples.csv
+sequences_csv: sequences.csv
 outdir: results
 
 # External executables
@@ -37,7 +38,7 @@ macse_runner: scripts/run_macse_with_heap.sh
 # exceed `tn93_max_seqs`.
 tn93_threshold: 0.01
 tn93_max_seqs: 20
-preserve_test_sequences: true
+preserve_test_sequences: false
 
 # GARD MPI settings
 # `gard_processors` controls the number of MPI ranks used by mpirun for GARD.
