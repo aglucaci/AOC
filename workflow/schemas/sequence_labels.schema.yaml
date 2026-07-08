@@ -1,0 +1,38 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+type: object
+description: entry of a sequence_labels sheet
+# Three possible cases:
+oneOf:
+  - required: [sample]
+    minProperties: 3
+    maxProperties: 3
+  - not:
+      required: [sample]
+    minProperties: 2
+    maxProperties: 2
+  - patternProperties:
+      "label|group|set|class|foreground|branchset":
+        type: string
+      "fasta_sequence_header|sequence_header|seq_header|id|name|taxon|tip|sequence":
+        type: string
+    allOf:
+    - comment: "Enforce that at least one property matches the ^foo_ pattern"
+      propertyNames:
+        anyOf:
+          - pattern: "^label|group|set|class|foreground|branchset$"
+          - not:
+              pattern: "^label|group|set|class|foreground|branchset$"
+      not:
+        propertyNames:
+          not:
+            pattern: "^label|group|set|class|foreground|branchset$"
+    - comment: "Enforce that at least one property matches the ^bar_ pattern"
+      propertyNames:
+        anyOf:
+          - pattern: "^fasta_sequence_header|sequence_header|seq_header|id|name|taxon|tip|sequence$"
+          - not:
+              pattern: "^fasta_sequence_header|sequence_header|seq_header|id|name|taxon|tip|sequence$"
+      not:
+        propertyNames:
+          not:
+            pattern: "^fasta_sequence_header|sequence_header|seq_header|id|name|taxon|tip|sequence$"

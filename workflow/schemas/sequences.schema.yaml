@@ -1,0 +1,17 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+type: object
+description: entry of shared-sequence mode sequences sheet
+properties:
+  sequence:
+    type: string
+    description: sequence name/identifier (must be unique)
+    uniqueItems: true
+  codon_fasta:
+    type: string
+    description: path to FASTA file with nucleotide sequences for sample
+
+required:
+  - sequence
+  - codon_fasta
+
+additionalProperties: false

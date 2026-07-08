@@ -1,0 +1,20 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+type: object
+description: entry of per-sample mode samples sheet
+properties:
+  sample:
+    type: string
+    description: sample name/identifier
+    uniqueItems: true
+  codon_fasta:
+    type: string
+    description: path to FASTA file with nucleotide sequences for sample
+  sequence_labels_csv:
+    type: string
+    description: path to CSV with labels for sequences in the codon_fasta
+
+required:
+  - sample
+  - codon_fasta
+
+additionalProperties: false

@@ -56,6 +56,7 @@ validate(config, "schemas/config.schema.yaml")
 
 BASEDIR = os.getcwd()
 OUTROOT = Path(config.get("outdir", "results"))
+SHARED_SEQUENCE_MODE = config["shared_sequence_mode"]
 SAMPLES_CSV = config.get("samples_csv", "samples.csv")
 SEQUENCES_CSV = config.get("sequences_csv", "sequences.csv")
 
@@ -149,6 +150,11 @@ if "sequence_labels_csv" not in samples_df.columns:
 
 samples_df["sample"] = samples_df["sample"].astype(str)
 
+if SHARED_SEQUENCE_MODE:
+    validate(samples_df, "schemas/per_sequence_samples.schema.yaml")
+else:
+    validate(samples_df, "schemas/per_sample_samples.schema.yaml")
+
 if "sequence" in samples_df.columns:
     samples_df["sequence"] = samples_df["sequence"].astype(str)
 else:
@@ -168,6 +174,8 @@ else:
             f"paired with sequences_csv={SEQUENCES_CSV!r}"
         )
     sequence_fasta_df = pd.read_csv(SEQUENCES_CSV).copy()
+    validate(sequence_fasta_df, "schemas/sequences.schema.yaml")
+
     required_sequences = {"sequence", "codon_fasta"}
     missing_sequences = required_sequences.difference(sequence_fasta_df.columns)
     if missing_sequences:
@@ -598,6 +606,8 @@ rule build_header_map_and_test_list:
         test_txt=os.path.join(str(OUTROOT), "{sample}", "{sample}.test_sequences.txt"),
     log:
         os.path.join(LOGDIR, "build_header_map_and_test_list.{sample}.log")
+    params:
+        schema="schemas/sequence_labels.schema.yaml"
     run:
         import os, re
         import pandas as pd
@@ -639,6 +649,8 @@ rule build_header_map_and_test_list:
         sample_col = "sample" if "sample" in df.columns else None
         if sample_col is not None:
             df = df[df[sample_col].astype(str).str.strip() == str(wildcards.sample)].copy()
+
+        validate(df, params.schema)
 
         # heuristic column detection
         label_candidates  = ["label", "group", "set", "class", "foreground", "branchset"]
