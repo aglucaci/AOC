@@ -125,6 +125,14 @@ directly at a FASTA. For workflows where several foreground groups use the same
 gene FASTA, `samples.csv` can instead point to a reusable `sequence` name and a
 separate `sequences.csv` can map each sequence name to its FASTA.
 
+To switch between modes, use the `shared_sequence_mode` setting in `config/config.yaml`
+
+If set to false (the default) only `samples.csv` is required, and AOC run the
+alignment steps once for each sample.
+
+If set to true, both `samples.csv` and `sequences.csv` are required, and AOC will run
+the alignment steps once for each unique sequence.
+
 ### Simple sample sheet
 
 ```
