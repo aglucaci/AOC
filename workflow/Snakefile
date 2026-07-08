@@ -19,6 +19,7 @@ import glob
 import importlib.util
 import sys
 from pathlib import Path
+from snakemake.utils import validate
 
 def _find_project_root():
     starts = [Path(__file__).resolve().parent, Path.cwd().resolve()]
@@ -51,6 +52,7 @@ alt.data_transformers.disable_max_rows()
 ###############################################################################
 
 configfile: "config/config.yaml"
+validate(config, "schemas/config.schema.yaml")
 
 BASEDIR = os.getcwd()
 OUTROOT = Path(config.get("outdir", "results"))

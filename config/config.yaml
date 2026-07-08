@@ -7,8 +7,24 @@
 
 # Core inputs / outputs
 samples_csv: samples.csv
-sequences_csv: sequences.csv
+# sequences_csv: sequences.csv
 outdir: results
+
+# Core settings:
+# `shared_sequence_mode`
+# If false, samples_csv must contain sample,codon_fasta,sequence_labels_csv
+# and the workflow will run one alignment per sample.
+# If true, samples_csv must contain sample,sequence,sequence_labels_csv and
+# sequences_csv must be provided and contain sequence,codon_fasta.
+# The workflow will then run one alignment per sequence.
+shared_sequence_mode: false
+# `preserve_test_sequences` keeps labeled Test sequences during duplicate
+# removal and TN93 clustering, even if this causes the retained alignment to
+# have duplicate sequences or exceed `tn93_max_seqs`.
+preserve_test_sequences: false
+# Branch-label behavior
+# If true, samples that include a labels CSV must produce at least one Test sequence.
+require_test_sequences: false
 
 # External executables
 # Leave these as-is if the tools are available on PATH in the AOC environment.
@@ -38,15 +54,10 @@ macse_runner: scripts/run_macse_with_heap.sh
 # exceed `tn93_max_seqs`.
 tn93_threshold: 0.01
 tn93_max_seqs: 20
-preserve_test_sequences: false
 
 # GARD MPI settings
 # `gard_processors` controls the number of MPI ranks used by mpirun for GARD.
 gard_processors: 4
-
-# Branch-label behavior
-# If true, samples that include a labels CSV must produce at least one Test sequence.
-require_test_sequences: false
 
 # MACSE Java memory tuning
 # Default behavior:
