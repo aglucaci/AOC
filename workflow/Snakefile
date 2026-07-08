@@ -20,6 +20,7 @@ import importlib.util
 import sys
 from pathlib import Path
 from snakemake.utils import validate
+from snakemake.exceptions import WorkflowError
 
 def _find_project_root():
     starts = [Path(__file__).resolve().parent, Path.cwd().resolve()]
@@ -151,9 +152,15 @@ if "sequence_labels_csv" not in samples_df.columns:
 samples_df["sample"] = samples_df["sample"].astype(str)
 
 if SHARED_SEQUENCE_MODE:
-    validate(samples_df, "schemas/per_sequence_samples.schema.yaml")
+    try:
+        validate(samples_df, "schemas/per_sequence_samples.schema.yaml")
+    except WorkflowError as e:
+        raise WorkflowError(f"Error validating samples.csv against schema:", e)
 else:
-    validate(samples_df, "schemas/per_sample_samples.schema.yaml")
+    try:
+        validate(samples_df, "schemas/per_sample_samples.schema.yaml")
+    except WorkflowError as e:
+        raise WorkflowError(f"Error validating samples.csv against schema:", e)
 
 if "sequence" in samples_df.columns:
     samples_df["sequence"] = samples_df["sequence"].astype(str)
@@ -174,7 +181,11 @@ else:
             f"paired with sequences_csv={SEQUENCES_CSV!r}"
         )
     sequence_fasta_df = pd.read_csv(SEQUENCES_CSV).copy()
-    validate(sequence_fasta_df, "schemas/sequences.schema.yaml")
+
+    try:
+        validate(sequence_fasta_df, "schemas/sequences.schema.yaml")
+    except WorkflowError as e:
+        raise WorkflowError(f"Error validating sequences.csv against schema:", e)
 
     required_sequences = {"sequence", "codon_fasta"}
     missing_sequences = required_sequences.difference(sequence_fasta_df.columns)
@@ -650,7 +661,10 @@ rule build_header_map_and_test_list:
         if sample_col is not None:
             df = df[df[sample_col].astype(str).str.strip() == str(wildcards.sample)].copy()
 
-        validate(df, params.schema)
+        try:
+            validate(df, params.schema)
+        except WorkflowError as e:
+            raise WorkflowError(f"[build_header_map_and_test_list] Error validating labels CSV against schema:", e)
 
         # heuristic column detection
         label_candidates  = ["label", "group", "set", "class", "foreground", "branchset"]
