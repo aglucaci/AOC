@@ -405,20 +405,21 @@ def _assert_preserved_sequences(output_fasta, preserve_names):
 
 rule all:
     input:
-        expand(os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa"), sequence=SEQUENCES),
-        expand(os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa.cluster.fasta.best-gard"), sequence=SEQUENCES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "selection", "ALL_PARTITIONS.done"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.test_sequences.txt"), sample=SAMPLES_WITH_LABELS),
-        expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.sequence_header_map.csv"), sample=SAMPLES_WITH_LABELS),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_FEL_Results.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_MEME_Results.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_ABSREL_Results.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_BUSTEDS-MH_Results.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_RELAX_Results.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_CFEL_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa"), sequence=SEQUENCES),
+        # expand(os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa.cluster.fasta.best-gard"), sequence=SEQUENCES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "selection", "ALL_PARTITIONS.done"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.test_sequences.txt"), sample=SAMPLES_WITH_LABELS),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.sequence_header_map.csv"), sample=SAMPLES_WITH_LABELS),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_FEL_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_MEME_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_ABSREL_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_BUSTEDS-MH_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_RELAX_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_CFEL_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.FEL.merged.png"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.MEME.merged.png"), sample=SAMPLES),
         expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.selection_overview.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.FEL.merged.png"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.MEME.merged.png"), sample=SAMPLES)
+
 
 ###############################################################################
 # Preprocessing
