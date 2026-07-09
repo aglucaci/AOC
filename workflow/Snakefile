@@ -320,20 +320,22 @@ def _assert_preserved_sequences(output_fasta, preserve_names):
 
 rule all:
     input:
-        expand("results/sequences/{sequence}/{sequence}.RD.SA.codons.cln.fa", sequence=SEQUENCES),
-        expand("results/sequences/{sequence}/{sequence}.RD.SA.codons.cln.fa.cluster.fasta.best-gard", sequence=SEQUENCES),
-        expand("results/{sample}/selection/ALL_PARTITIONS.done", sample=SAMPLES),
-        expand("results/{sample}/{sample}.test_sequences.txt", sample=SAMPLES_WITH_LABELS),
-        expand("results/{sample}/{sample}.sequence_header_map.csv", sample=SAMPLES_WITH_LABELS),
-        expand("results/{sample}/tables/{sample}.AOC.merged_FEL_Results.csv", sample=SAMPLES),
-        expand("results/{sample}/tables/{sample}.AOC.merged_MEME_Results.csv", sample=SAMPLES),
-        expand("results/{sample}/tables/{sample}.AOC.merged_ABSREL_Results.csv", sample=SAMPLES),
-        expand("results/{sample}/tables/{sample}.AOC.merged_BUSTEDS-MH_Results.csv", sample=SAMPLES),
-        expand("results/{sample}/tables/{sample}.AOC.merged_RELAX_Results.csv", sample=SAMPLES),
-        expand("results/{sample}/tables/{sample}.AOC.merged_CFEL_Results.csv", sample=SAMPLES),
+        # expand("results/sequences/{sequence}/{sequence}.codons.fa", sequence=SEQUENCES),
+        # expand("results/sequences/{sequence}/{sequence}.codons.cln.fa", sequence=SEQUENCES),
+        # expand("results/sequences/{sequence}/{sequence}.SA.codons.cln.fa", sequence=SEQUENCES),
+        # expand("results/sequences/{sequence}/{sequence}.RD.SA.codons.cln.fa", sequence=SEQUENCES),
+        # expand("results/sequences/{sequence}/{sequence}.RD.SA.codons.cln.fa.cluster.fasta", sequence=SEQUENCES),
+        # expand("results/sequences/{sequence}/{sequence}.RD.SA.codons.cln.fa.cluster.fasta.best-gard", sequence=SEQUENCES),
+        # expand("results/{sample}/{sample}.test_sequences.txt", sample=SAMPLES_WITH_LABELS),
+        # expand("results/{sample}/{sample}.sequence_header_map.csv", sample=SAMPLES_WITH_LABELS),
+        # expand("results/sequences/{sequence}/gard/segments.json", sequence=SEQUENCES),
+        # expand("results/{sample}/selection/part{part}/{test}.json", sample=SAMPLES, test=["FEL", "MEME", "ABSREL", "BUSTEDS-MH", "RELAX", "CFEL"], part="1"),
+        # expand("results/{sample}/selection/ALL_PARTITIONS.done", sample=SAMPLES),
+        # expand("results/{sample}/tables/part{part}/{sample}.part{part}.AOC.{test}_Results.csv", sample=SAMPLES, test=["FEL", "MEME", "ABSREL", "BUSTEDS-MH", "RELAX", "CFEL"], part="1"),
+        # expand("results/{sample}/visualizations/{sample}.{test}.merged.png", sample=SAMPLES, test=["FEL", "MEME"]),
+        expand("results/{sample}/tables/{sample}.AOC.merged_{test}_Results.csv", sample=SAMPLES, test=["FEL", "MEME", "ABSREL", "BUSTEDS-MH", "RELAX", "CFEL"]),
         expand("results/{sample}/tables/{sample}.selection_overview.csv", sample=SAMPLES),
-        expand("results/{sample}/visualizations/{sample}.FEL.merged.png", sample=SAMPLES),
-        expand("results/{sample}/visualizations/{sample}.MEME.merged.png", sample=SAMPLES)
+
 
 ###############################################################################
 # Preprocessing
@@ -950,6 +952,11 @@ rule PlotFEL_partition:
         df.to_csv(output.output_csv, index=False)
 
         source = df.copy().dropna().rename(columns={"p-value": "p_value", "adjusted_p-value": "adjusted_p_value"})
+        
+        df.insert(0, 'Partition', wildcards.part)
+        df.insert(0, 'Sample', wildcards.sample)
+        df.to_csv(output.output_csv, index=False)
+        
         line = alt.Chart(source).mark_circle(clip=True, opacity=0.9, size=70).encode(
             x=alt.X("CodonSite:Q", title="Codon site"),
             y=alt.Y("dN/dS MLE:Q", title="dN/dS estimate", scale=alt.Scale(domain=(0, 5), clamp=True, nice=False, type="sqrt")),
@@ -985,13 +992,16 @@ rule PlotMEME_partition:
         df.index += 1
         df["CodonSite"] = df.index
         df["adjusted_p-value"] = _safe_fdrcorrection(df["p-value"].tolist(), alpha=0.10)
-        df.to_csv(output.output_csv, index=False)
 
         source = df.copy().rename(columns={
             "p-value": "p_value",
             "adjusted_p-value": "adjusted_p_value",
             "beta+": "beta_plus"
         })
+
+        df.insert(0, 'Partition', wildcards.part)
+        df.insert(0, 'Sample', wildcards.sample)
+        df.to_csv(output.output_csv, index=False)
 
         tooltip_fields = [alt.Tooltip("CodonSite:Q", title="Codon site")]
         if "alpha" in source.columns:
@@ -1241,17 +1251,9 @@ rule MergeFELCSVs:
     log:
         "logs/MergeFELCSVs.{sample}.log"
     run:
-        all_dfs = []
-        for file in input.fel_csvs:
-            df = pd.read_csv(file)
-            base = os.path.basename(file).replace('.AOC.FEL_Results.csv', '')
-            part_match = re.search(r'part(\d+)', base)
-            part = int(part_match.group(1)) if part_match else None
-            df.insert(0, 'Partition', part)
-            df.insert(0, 'Sample', wildcards.sample)
-            all_dfs.append(df)
-        merged_df = pd.concat(all_dfs, ignore_index=True) if all_dfs else pd.DataFrame(columns=['Sample','Partition'])
-        merged_df.to_csv(output.merged_csv, index=False)
+        dfs = [pd.read_csv(f) for f in input.fel_csvs]
+        out = pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame(columns=['Sample','Partition'])
+        out.to_csv(output.merged_csv, index=False)
 
 rule MergeMEMECSVs:
     input:
@@ -1265,17 +1267,9 @@ rule MergeMEMECSVs:
     log:
         "logs/MergeMEMECSVs.{sample}.log"
     run:
-        all_dfs = []
-        for file in input.meme_csvs:
-            df = pd.read_csv(file)
-            base = os.path.basename(file).replace('.AOC.MEME_Results.csv', '')
-            part_match = re.search(r'part(\d+)', base)
-            part = int(part_match.group(1)) if part_match else None
-            df.insert(0, 'Partition', part)
-            df.insert(0, 'Sample', wildcards.sample)
-            all_dfs.append(df)
-        merged_df = pd.concat(all_dfs, ignore_index=True) if all_dfs else pd.DataFrame(columns=['Sample','Partition'])
-        merged_df.to_csv(output.merged_csv, index=False)
+        dfs = [pd.read_csv(f) for f in input.meme_csvs]
+        out = pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame(columns=['Sample','Partition'])
+        out.to_csv(output.merged_csv, index=False)
 
 rule MergeABSRELCSVs:
     input:

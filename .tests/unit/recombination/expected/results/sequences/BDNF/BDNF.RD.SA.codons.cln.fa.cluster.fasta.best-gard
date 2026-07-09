@@ -1,0 +1,28 @@
+#NEXUS
+
+BEGIN TAXA;
+	DIMENSIONS NTAX = 3;
+	TAXLABELS
+		'NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA' 'NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA' 'NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA' ;
+END;
+
+BEGIN CHARACTERS;
+	DIMENSIONS NCHAR = 132;
+	FORMAT
+		DATATYPE = DNA
+		GAP=-
+		MISSING=?
+	;
+
+MATRIX
+	'NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA'    ATGACCATCCTTTTCCTTACTATGGTTATTTCATACTTTGGTTGCATGAAGGCTAGCAAAAAGAGAATTGGCTGGCGATTCATAAGGATAGACACTTCTTGTGTATGTACATTGACCATTAAAAGGGGAAGA
+	'NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA' ATGACCATCCTTTTCCTTACTATGGTTATTTCATACTTCGGTTGCATGAAGGCGAGCAAAAAGAGAATTGGCTGGCGATTCATAAGGATAGACACTTCCTGTGTATGTACACTGACCATTAAAAGGGGAAGA
+	'NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA'                    ATGACCATCCTTTTCCTTACTATGGTTATTTCATACTTCGGTTGCATGAAGGCTAGCAAAAAGAGAATCGGCTGGCGGTTCATAAGGATAGACACTTCCTGTGTATGTACATTGACCATTAAAAGGGGAAGA;
+END;
+
+BEGIN ASSUMPTIONS;
+	CHARSET span_1 = 1-132;
+END;
+BEGIN TREES;
+	TREE tree_1 = (NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA:0.01614493379911244,NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA:0.0156641743230894,NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA:0.0155299456892331);
+END;

@@ -1,0 +1,15 @@
+{
+  "sequence": "BDNF",
+  "msa": "results/sequences/BDNF/BDNF.RD.SA.codons.cln.fa",
+  "bestgard": "results/sequences/BDNF/BDNF.RD.SA.codons.cln.fa.cluster.fasta.best-gard",
+  "n_parts": 1,
+  "parts": [
+    {
+      "part": 1,
+      "start0": 0,
+      "end_excl": 132,
+      "fasta": "results/sequences/BDNF/gard/segments/BDNF.part1.codon.fas",
+      "length": 132
+    }
+  ]
+}
