@@ -52,7 +52,6 @@ alt.data_transformers.disable_max_rows()
 
 configfile: "config/config.yaml"
 
-BASEDIR = os.getcwd()
 OUTROOT = Path(config.get("outdir", "results"))
 SAMPLES_CSV = config.get("samples_csv", "samples.csv")
 SEQUENCES_CSV = config.get("sequences_csv", "sequences.csv")
@@ -135,6 +134,14 @@ def _macse_heap_mb():
     usable = min(heap_from_fraction, heap_after_reserve) if heap_after_reserve > 0 else heap_from_fraction
     return max(baseline, min(requested, usable))
 
+def _is_missing(x):
+    if x is None:
+        return True
+    if isinstance(x, float) and math.isnan(x):
+        return True
+    s = str(x).strip()
+    return (s == "") or (s.lower() == "nan")
+
 ###############################################################################
 # Read samples.csv
 ###############################################################################
@@ -187,31 +194,15 @@ if missing_sequence_paths:
     raise ValueError(f"No codon_fasta entry found for sequences: {missing_sequence_paths}")
 
 LABELS_CSV_BY_SAMPLE  = dict(zip(samples_df["sample"], samples_df["sequence_labels_csv"].astype(str)))
-
-def _is_missing(x):
-    if x is None:
-        return True
-    if isinstance(x, float) and math.isnan(x):
-        return True
-    s = str(x).strip()
-    return (s == "") or (s.lower() == "nan")
+LABELS_CSV_BY_SAMPLE = {
+    k: v for k, v in LABELS_CSV_BY_SAMPLE.items() if not _is_missing(v)
+}
 
 def sequence_for_sample(sample):
     return SEQUENCE_BY_SAMPLE[sample]
 
-def codon_fasta_path(sequence):
-    return os.path.join(BASEDIR, CODON_FASTA_BY_SEQUENCE[sequence])
+SAMPLES_WITH_LABELS = list(LABELS_CSV_BY_SAMPLE.keys())
 
-def labels_csv_path(sample):
-    v = LABELS_CSV_BY_SAMPLE.get(sample, None)
-    if _is_missing(v):
-        return ""
-    return os.path.join(BASEDIR, str(v))
-
-SAMPLES_WITH_LABELS = [
-    s for s in SAMPLES
-    if (not _is_missing(LABELS_CSV_BY_SAMPLE.get(s, None))) and os.path.exists(labels_csv_path(s))
-]
 SAMPLES_WITH_LABELS_BY_SEQUENCE = {
     sequence: [s for s in SAMPLES_WITH_LABELS if sequence_for_sample(s) == sequence]
     for sequence in SEQUENCES
@@ -329,10 +320,10 @@ def _ensure_empty_test_list(sample):
     return p
 
 def _test_list_for_sample(wc):
-    p = test_list_file(wc.sample)
-    if os.path.exists(p):
-        return p
-    return _ensure_empty_test_list(wc.sample)
+    if LABELS_CSV_BY_SAMPLE.get(wc.sample, False):
+        return "results/{sample}/{sample}.test_sequences.txt"
+    else:
+        return _ensure_empty_test_list(wc.sample)
 
 def _branch_arg(sample):
     p = test_list_file(sample)
@@ -461,7 +452,7 @@ ruleorder:
 
 rule macse:
     input:
-        fasta=lambda wc: codon_fasta_path(wc.sequence)
+        fasta=lambda wildcards: CODON_FASTA_BY_SEQUENCE[wildcards.sequence],
     output:
         codons=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.codons.fa"),
         aa=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.aa.fa"),
@@ -590,7 +581,7 @@ rule recombination:
 
 rule build_header_map_and_test_list:
     input:
-        labels=lambda wc: labels_csv_path(wc.sample)
+        labels=lambda wc: LABELS_CSV_BY_SAMPLE[wc.sample],
     output:
         map_csv=os.path.join(str(OUTROOT), "{sample}", "{sample}.sequence_header_map.csv"),
         test_txt=os.path.join(str(OUTROOT), "{sample}", "{sample}.test_sequences.txt"),
