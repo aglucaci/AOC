@@ -8,7 +8,6 @@
 # Core inputs / outputs
 samples_csv: samples.csv
 sequences_csv: sequences.csv
-outdir: results
 
 # External executables
 # Leave these as-is if the tools are available on PATH in the AOC environment.

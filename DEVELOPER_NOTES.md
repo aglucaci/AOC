@@ -148,8 +148,7 @@ sequence,codon_fasta
 The Snakefile reads this file through the `samples_csv` config key. Each row
 defines a sample-specific execution branch. In shared-sequence mode, the
 `sequence` value identifies the shared preprocessing/GARD/tree branch. The
-`sample` value becomes the sample-specific output directory name under the
-configured output root, which defaults to `results/`.
+`sample` value becomes the sample-specific output directory name in `results/`.
 
 If `sequence_labels_csv` is omitted or blank, the sample is treated as
 unlabeled. Labeled samples are used to build a header map and a Test-branch list
@@ -159,7 +158,6 @@ Important config keys include:
 
 - `samples_csv`: sample sheet path.
 - `sequences_csv`: sequence-to-FASTA sheet path for shared-sequence mode.
-- `outdir`: output root.
 - `hyphy`, `hyphy_mpi`, `mpirun`, `fasttree`, `macse_launcher`: executable
   names or paths.
 - `gard_processors`: MPI ranks for GARD.
@@ -185,7 +183,7 @@ The preprocessing rules produce a cleaned codon alignment for each sequence:
    analysis while retaining protected Test records.
 
 These steps write sequence-local files under `results/sequences/{sequence}/` and
-logs under `results/logs/`.
+logs under `logs/`.
 
 #### 2. Recombination and dynamic partitions
 
