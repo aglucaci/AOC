@@ -19,25 +19,6 @@ import glob
 import importlib.util
 import sys
 from pathlib import Path
-
-def _find_project_root():
-    starts = [Path(__file__).resolve().parent, Path.cwd().resolve()]
-    for start in starts:
-        for candidate in (start, *start.parents):
-            if (candidate / "scripts" / "busteds_mh.py").is_file():
-                return candidate
-    raise FileNotFoundError("Could not find scripts/busteds_mh.py from Snakefile or working directory")
-
-PROJECT_ROOT = _find_project_root()
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
-
-_busteds_mh_path = PROJECT_ROOT / "scripts" / "busteds_mh.py"
-_busteds_mh_spec = importlib.util.spec_from_file_location("aoc_busteds_mh", _busteds_mh_path)
-_busteds_mh = importlib.util.module_from_spec(_busteds_mh_spec)
-_busteds_mh_spec.loader.exec_module(_busteds_mh)
-count_busteds_mh_branches = _busteds_mh.count_busteds_mh_branches
-
 import pandas as pd
 import altair as alt
 from statsmodels.stats.multitest import fdrcorrection
@@ -51,6 +32,8 @@ alt.data_transformers.disable_max_rows()
 ###############################################################################
 
 configfile: "config/config.yaml"
+
+include: "rules/common.smk"
 
 BASEDIR = os.getcwd()
 OUTROOT = Path(config.get("outdir", "results"))
