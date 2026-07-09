@@ -78,9 +78,6 @@ MERGE_FEL_PY  = config.get("merge_fel_py",  "scripts/MergeFELResults.py")
 MERGE_MEME_PY = config.get("merge_meme_py", "scripts/MergeMEMEResults.py")
 EXEC_SUMMARY_PY = config.get("exec_summary_py", "scripts/ExecutiveSummary.py")
 
-# Logging
-LOGDIR = os.path.join(str(OUTROOT), "logs")
-
 MACSE_LAUNCHER = config.get("macse_launcher", "macse")
 MACSE_HEAP_FRACTION = float(config.get("macse_heap_fraction", 0.875))
 MACSE_HEAP_RESERVE_MB = int(config.get("macse_heap_reserve_mb", 1024))
@@ -232,8 +229,8 @@ def selection_part_dir(sample, part): return os.path.join(selection_dir(sample),
 
 def log_path(rule_name, sample, part=None):
     if part is None:
-        return os.path.join(LOGDIR, f"{rule_name}.{sample}.log")
-    return os.path.join(LOGDIR, f"{rule_name}.{sample}.part{part}.log")
+        return f"logs/{rule_name}.{sample}.log"
+    return f"logs/{rule_name}.{sample}.part{part}.log"
 
 def tables_dir(sample): return os.path.join(sample_dir(sample), "tables")
 def viz_dir(sample): return os.path.join(sample_dir(sample), "visualizations")
@@ -463,7 +460,7 @@ rule macse:
     resources:
         mem_mb=_macse_requested_mem_mb(),
     log:
-        os.path.join(LOGDIR, "macse.{sequence}.log")
+        "logs/macse.{sequence}.log",
     shell:
         r"""
         bash "{params.runner}" \
@@ -487,7 +484,7 @@ rule cln:
     output:
         cln=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.codons.cln.fa")
     log:
-        os.path.join(LOGDIR, "cln.{sequence}.log")
+        "logs/cln.{sequence}.log"
     shell:
         r"""
         {HYPHY} CLN Universal {input.codons} 'No/No' {output.cln} > {log} 2>&1
@@ -499,7 +496,7 @@ rule strike_ambigs_msa:
     output:
         sa=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.SA.codons.cln.fa")
     log:
-        os.path.join(LOGDIR, "strike_ambigs_msa.{sequence}.log")
+        "logs/strike_ambigs_msa.{sequence}.log"
     shell:
         r"""
         {HYPHY} {STRIKE_AMBIGS_BF} --alignment {input.cln} --output {output.sa} > {log} 2>&1
@@ -512,7 +509,7 @@ rule remove_duplicates_msa:
     output:
         rd=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa")
     log:
-        os.path.join(LOGDIR, "remove_duplicates_msa.{sequence}.log")
+        "logs/remove_duplicates_msa.{sequence}.log"
     run:
         preserve_names = _read_preserve_names(input.preserve_list)
         preserve_arg = ""
@@ -537,7 +534,7 @@ rule tn93_cluster:
         threshold=lambda wc: config.get("tn93_threshold", 0.01),
         max_seqs=lambda wc: config.get("tn93_max_seqs", 20),
     log:
-        os.path.join(LOGDIR, "tn93_cluster.{sequence}.log")
+        "logs/tn93_cluster.{sequence}.log"
     run:
         preserve_names = _read_preserve_names(input.preserve_list)
         preserve_arg = ""
@@ -566,7 +563,7 @@ rule recombination:
     params:
         processors=GARD_PROCESSORS
     log:
-        os.path.join(LOGDIR, "recombination.{sequence}.log")
+        "logs/recombination.{sequence}.log"
     shell:
         r"""
         {MPIRUN} -np {params.processors} {HYPHY_MPI} GARD --alignment {input.msa} --rv GDD --output {output.gard_json} --mode Faster ENV='TOLERATE_NUMERICAL_ERRORS=1;' \
@@ -584,7 +581,7 @@ rule build_header_map_and_test_list:
         map_csv=os.path.join(str(OUTROOT), "{sample}", "{sample}.sequence_header_map.csv"),
         test_txt=os.path.join(str(OUTROOT), "{sample}", "{sample}.test_sequences.txt"),
     log:
-        os.path.join(LOGDIR, "build_header_map_and_test_list.{sample}.log")
+        "logs/build_header_map_and_test_list.{sample}.log"
     run:
         import os, re
         import pandas as pd
@@ -812,7 +809,7 @@ rule fasttree_partition:
     output:
         tree=os.path.join(str(OUTROOT), "sequences", "{sequence}", "trees", "part{part}", "FastTree.treefile")
     log:
-        os.path.join(LOGDIR, "fasttree_partition.{sequence}.part{part}.log")
+        "logs/fasttree_partition.{sequence}.part{part}.log"
     shell:
         r"""
         {FASTTREE} -nt -gtr {input.aln} > {output.tree} 2> {log}
@@ -825,7 +822,7 @@ rule label_tree_TestForeground_partition:
     output:
         tree=os.path.join(str(OUTROOT), "{sample}", "selection", "part{part}", "FastTree.labelled.treefile")
     log:
-        os.path.join(LOGDIR, "label_tree_TestForeground_partition.{sample}.part{part}.log")
+        "logs/label_tree_TestForeground_partition.{sample}.part{part}.log"
     run:
         with open(log[0] if hasattr(log, "__iter__") else str(log), "a") as L:
             L.write("START\n")
@@ -854,7 +851,7 @@ rule FEL_partition:
     params:
         branch_arg=lambda wc: _branch_arg(wc.sample)
     log:
-        os.path.join(LOGDIR, "FEL_partition.{sample}.part{part}.log")
+        "logs/FEL_partition.{sample}.part{part}.log"
     shell:
         r"""
         {HYPHY} FEL --alignment {input.aln} --tree {input.tree} --output {output.json} --ci Yes {params.branch_arg} > {log} 2>&1
@@ -869,7 +866,7 @@ rule MEME_partition:
     params:
         branch_arg=lambda wc: _branch_arg(wc.sample)
     log:
-        os.path.join(LOGDIR, "MEME_partition.{sample}.part{part}.log")
+        "logs/MEME_partition.{sample}.part{part}.log"
     shell:
         r"""
         {HYPHY} MEME --alignment {input.aln} --tree {input.tree} --output {output.json} {params.branch_arg} ENV='TOLERATE_NUMERICAL_ERRORS=1;' > {log} 2>&1
@@ -884,7 +881,7 @@ rule ABSREL_partition:
     params:
         branch_arg=lambda wc: _branch_arg(wc.sample)
     log:
-        os.path.join(LOGDIR, "ABSREL_partition.{sample}.part{part}.log")
+        "logs/ABSREL_partition.{sample}.part{part}.log"
     shell:
         r"""
         {HYPHY} ABSREL --alignment {input.aln} --tree {input.tree} --output {output.json} {params.branch_arg} > {log} 2>&1
@@ -899,7 +896,7 @@ rule BUSTEDS_MH_partition:
     params:
         branch_arg=lambda wc: _branch_arg(wc.sample)
     log:
-        os.path.join(LOGDIR, "BUSTEDS_MH_partition.{sample}.part{part}.log")
+        "logs/BUSTEDS_MH_partition.{sample}.part{part}.log"
     shell:
         r"""
         {HYPHY} BUSTED \
@@ -920,7 +917,7 @@ rule RELAX_partition:
     output:
         json=os.path.join(str(OUTROOT), "{sample}", "selection", "part{part}", "RELAX.json")
     log:
-        os.path.join(LOGDIR, "RELAX_partition.{sample}.part{part}.log")
+        "logs/RELAX_partition.{sample}.part{part}.log"
     run:
         logp = log[0] if hasattr(log, "__iter__") else str(log)
         with open(logp, "a") as L:
@@ -947,7 +944,7 @@ rule CFEL_partition:
     output:
         json=os.path.join(str(OUTROOT), "{sample}", "selection", "part{part}", "CFEL.json")
     log:
-        os.path.join(LOGDIR, "CFEL_partition.{sample}.part{part}.log")
+        "logs/CFEL_partition.{sample}.part{part}.log"
     run:
         logp = log[0] if hasattr(log, "__iter__") else str(log)
         with open(logp, "a") as L:
@@ -990,7 +987,7 @@ rule run_selection_all_partitions:
     output:
         done=os.path.join(str(OUTROOT), "{sample}", "selection", "ALL_PARTITIONS.done")
     log:
-        os.path.join(LOGDIR, "run_selection_all_partitions.{sample}.log")
+        "logs/run_selection_all_partitions.{sample}.log"
     run:
         with open(log[0] if hasattr(log, "__iter__") else str(log), "a") as L:
             L.write("START\n")
@@ -1037,7 +1034,7 @@ rule PlotFEL_partition:
         output_svg=os.path.join(str(OUTROOT), "{sample}", "visualizations", "part{part}", "{sample}.part{part}.FEL.svg"),
         output_figureLegend=os.path.join(str(OUTROOT), "{sample}", "visualizations", "part{part}", "{sample}.part{part}.FEL.figure_legend.txt")
     log:
-        os.path.join(LOGDIR, "PlotFEL_partition.{sample}.part{part}.log")
+        "logs/PlotFEL_partition.{sample}.part{part}.log"
     run:
         data = _read_json(input.json)
         headers = _hyphy_headers(data)
@@ -1075,7 +1072,7 @@ rule PlotMEME_partition:
         output_svg=os.path.join(str(OUTROOT), "{sample}", "visualizations", "part{part}", "{sample}.part{part}.MEME.svg"),
         output_figureLegend=os.path.join(str(OUTROOT), "{sample}", "visualizations", "part{part}", "{sample}.part{part}.MEME.figure_legend.txt")
     log:
-        os.path.join(LOGDIR, "PlotMEME_partition.{sample}.part{part}.log")
+        "logs/PlotMEME_partition.{sample}.part{part}.log"
     run:
         data = _read_json(input.json)
         headers = _hyphy_headers(data)
@@ -1125,7 +1122,7 @@ rule TableABSREL_partition:
     output:
         csv=os.path.join(str(OUTROOT), "{sample}", "tables", "part{part}", "{sample}.part{part}.AOC.ABSREL_Results.csv")
     log:
-        os.path.join(LOGDIR, "TableABSREL_partition.{sample}.part{part}.log")
+        "logs/TableABSREL_partition.{sample}.part{part}.log"
     run:
         data = _read_json(input.json)
         rows = []
@@ -1186,7 +1183,7 @@ rule TableBUSTEDS_MH_partition:
     output:
         csv=os.path.join(str(OUTROOT), "{sample}", "tables", "part{part}", "{sample}.part{part}.AOC.BUSTEDS-MH_Results.csv")
     log:
-        os.path.join(LOGDIR, "TableBUSTEDS_MH_partition.{sample}.part{part}.log")
+        "logs/TableBUSTEDS_MH_partition.{sample}.part{part}.log"
     run:
         data = _read_json(input.json)
 
@@ -1243,7 +1240,7 @@ rule TableRELAX_partition:
     output:
         csv=os.path.join(str(OUTROOT), "{sample}", "tables", "part{part}", "{sample}.part{part}.AOC.RELAX_Results.csv")
     log:
-        os.path.join(LOGDIR, "TableRELAX_partition.{sample}.part{part}.log")
+        "logs/TableRELAX_partition.{sample}.part{part}.log"
     run:
         data = _read_json(input.json)
 
@@ -1297,7 +1294,7 @@ rule TableCFEL_partition:
     output:
         csv=os.path.join(str(OUTROOT), "{sample}", "tables", "part{part}", "{sample}.part{part}.AOC.CFEL_Results.csv")
     log:
-        os.path.join(LOGDIR, "TableCFEL_partition.{sample}.part{part}.log")
+        "logs/TableCFEL_partition.{sample}.part{part}.log"
     run:
         data = _read_json(input.json)
 
@@ -1334,7 +1331,7 @@ rule MergeFELCSVs:
     output:
         merged_csv=os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_FEL_Results.csv")
     log:
-        os.path.join(LOGDIR, "MergeFELCSVs.{sample}.log")
+        "logs/MergeFELCSVs.{sample}.log"
     run:
         all_dfs = []
         for file in input.fel_csvs:
@@ -1355,7 +1352,7 @@ rule MergeMEMECSVs:
     output:
         merged_csv=os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_MEME_Results.csv")
     log:
-        os.path.join(LOGDIR, "MergeMEMECSVs.{sample}.log")
+        "logs/MergeMEMECSVs.{sample}.log"
     run:
         all_dfs = []
         for file in input.meme_csvs:
@@ -1376,7 +1373,7 @@ rule MergeABSRELCSVs:
     output:
         merged_csv=os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_ABSREL_Results.csv")
     log:
-        os.path.join(LOGDIR, "MergeABSRELCSVs.{sample}.log")
+        "logs/MergeABSRELCSVs.{sample}.log"
     run:
         dfs = [pd.read_csv(f) for f in input.csvs]
         out = pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame()
@@ -1389,7 +1386,7 @@ rule MergeBUSTEDS_MH_CSVs:
     output:
         merged_csv=os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_BUSTEDS-MH_Results.csv")
     log:
-        os.path.join(LOGDIR, "MergeBUSTEDS_MH_CSVs.{sample}.log")
+        "logs/MergeBUSTEDS_MH_CSVs.{sample}.log"
     run:
         dfs = [pd.read_csv(f) for f in input.csvs]
         out = pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame()
@@ -1402,7 +1399,7 @@ rule MergeRELAXCSVs:
     output:
         merged_csv=os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_RELAX_Results.csv")
     log:
-        os.path.join(LOGDIR, "MergeRELAXCSVs.{sample}.log")
+        "logs/MergeRELAXCSVs.{sample}.log"
     run:
         dfs = [pd.read_csv(f) for f in input.csvs]
         out = pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame()
@@ -1415,7 +1412,7 @@ rule MergeCFELCSVs:
     output:
         merged_csv=os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_CFEL_Results.csv")
     log:
-        os.path.join(LOGDIR, "MergeCFELCSVs.{sample}.log")
+        "logs/MergeCFELCSVs.{sample}.log"
     run:
         dfs = [pd.read_csv(f) for f in input.csvs]
         out = pd.concat(dfs, ignore_index=True) if dfs else pd.DataFrame()
@@ -1429,7 +1426,7 @@ rule PlotFELMerge:
         output_png=os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.FEL.merged.png"),
         output_svg=os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.FEL.merged.svg")
     log:
-        os.path.join(LOGDIR, "PlotFELMerge.{sample}.log")
+        "logs/PlotFELMerge.{sample}.log"
     run:
         df = pd.read_csv(input.merged_csv)
         if df.empty:
@@ -1452,7 +1449,7 @@ rule PlotMEMEMerge:
         output_png=os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.MEME.merged.png"),
         output_svg=os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.MEME.merged.svg")
     log:
-        os.path.join(LOGDIR, "PlotMEMEMerge.{sample}.log")
+        "logs/PlotMEMEMerge.{sample}.log"
     run:
         df = pd.read_csv(input.merged_csv)
         if df.empty:
@@ -1474,7 +1471,7 @@ rule SelectionOverviewTable:
     output:
         csv=os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.selection_overview.csv")
     log:
-        os.path.join(LOGDIR, "SelectionOverviewTable.{sample}.log")
+        "logs/SelectionOverviewTable.{sample}.log"
     run:
         rows = []
 
@@ -1616,7 +1613,7 @@ rule executive_summary:
     output:
         html=os.path.join(str(OUTROOT), "{sample}", "summary", "executive_summary.html")
     log:
-        os.path.join(LOGDIR, "executive_summary.{sample}.log")
+        "logs/executive_summary.{sample}.log"
     run:
         logp = log[0] if hasattr(log, "__iter__") else str(log)
         if os.path.exists(EXEC_SUMMARY_PY):
