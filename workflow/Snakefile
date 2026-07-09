@@ -19,29 +19,11 @@ import glob
 import importlib.util
 import sys
 from pathlib import Path
-
-def _find_project_root():
-    starts = [Path(__file__).resolve().parent, Path.cwd().resolve()]
-    for start in starts:
-        for candidate in (start, *start.parents):
-            if (candidate / "scripts" / "busteds_mh.py").is_file():
-                return candidate
-    raise FileNotFoundError("Could not find scripts/busteds_mh.py from Snakefile or working directory")
-
-PROJECT_ROOT = _find_project_root()
-if str(PROJECT_ROOT) not in sys.path:
-    sys.path.insert(0, str(PROJECT_ROOT))
-
-_busteds_mh_path = PROJECT_ROOT / "scripts" / "busteds_mh.py"
-_busteds_mh_spec = importlib.util.spec_from_file_location("aoc_busteds_mh", _busteds_mh_path)
-_busteds_mh = importlib.util.module_from_spec(_busteds_mh_spec)
-_busteds_mh_spec.loader.exec_module(_busteds_mh)
-count_busteds_mh_branches = _busteds_mh.count_busteds_mh_branches
-
 import pandas as pd
 import altair as alt
 from statsmodels.stats.multitest import fdrcorrection
 from Bio import SeqIO
+from scripts.busteds_mh import count_busteds_mh_branches
 
 # These plots are rendered locally with vl-convert, so allow larger in-memory datasets.
 alt.data_transformers.disable_max_rows()
@@ -61,26 +43,26 @@ HYPHY_MPI    = config.get("hyphy_mpi", "HYPHYMPI")
 MPIRUN       = config.get("mpirun", "mpirun")
 FASTTREE     = config.get("fasttree", "FastTree")
 
-STRIKE_AMBIGS_BF   = config.get("strike_ambigs_bf", "scripts/strike-ambigs.bf")
-
-MAKE_TEST_LIST_PY  = config.get("make_test_list_py", "scripts/make_sequence_header_map.py")
-TN93_CLUSTER_PY    = config.get("tn93_cluster_py", "scripts/tn93_cluster.py")
+STRIKE_AMBIGS_BF   = workflow.source_path("scripts/strike-ambigs.bf")
+# MAKE_TEST_LIST_PY  = workflow.source_path("scripts/make_sequence_header_map.py")
+TN93_CLUSTER_PY    = workflow.source_path("scripts/tn93_cluster.py")
+MACSE_RUNNER = workflow.source_path("scripts/run_macse_with_heap.sh")
 
 GARD_PROCESSORS = int(config.get("gard_processors", 4))
 PRESERVE_TEST_SEQUENCES_RAW = config.get("preserve_test_sequences", False)
 
 # Summarizer scripts (from your Snakefile_SummarizeResults)
 # If these scripts differ in your repo, update paths in config.yaml
-MERGE_FEL_PY  = config.get("merge_fel_py",  "scripts/MergeFELResults.py")
-MERGE_MEME_PY = config.get("merge_meme_py", "scripts/MergeMEMEResults.py")
-EXEC_SUMMARY_PY = config.get("exec_summary_py", "scripts/ExecutiveSummary.py")
+# MERGE_FEL_PY  = config.get("merge_fel_py",  "scripts/MergeFELResults.py")
+# MERGE_MEME_PY = config.get("merge_meme_py", "scripts/MergeMEMEResults.py")
+# EXEC_SUMMARY_PY = config.get("exec_summary_py", "scripts/ExecutiveSummary.py")
 
 MACSE_LAUNCHER = config.get("macse_launcher", "macse")
 MACSE_HEAP_FRACTION = float(config.get("macse_heap_fraction", 0.875))
 MACSE_HEAP_RESERVE_MB = int(config.get("macse_heap_reserve_mb", 1024))
 MACSE_MIN_HEAP_MB = int(config.get("macse_min_heap_mb", 2048))
 MACSE_XMS_MB = int(config.get("macse_xms_mb", 512))
-MACSE_RUNNER = config.get("macse_runner", "scripts/run_macse_with_heap.sh")
+
 
 def _coerce_bool(value):
     if isinstance(value, bool):

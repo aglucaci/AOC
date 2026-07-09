@@ -17,16 +17,6 @@ mpirun: mpirun
 fasttree: FastTree
 macse_launcher: macse
 
-# Helper scripts / bundled resources
-# Only override these if you have moved files or want to use custom versions.
-strike_ambigs_bf: scripts/strike-ambigs.bf
-make_test_list_py: scripts/make_sequence_header_map.py
-tn93_cluster_py: scripts/tn93_cluster.py
-merge_fel_py: scripts/MergeFELResults.py
-merge_meme_py: scripts/MergeMEMEResults.py
-exec_summary_py: scripts/ExecutiveSummary.py
-macse_runner: scripts/run_macse_with_heap.sh
-
 # TN93 clustering
 # `tn93_threshold` controls clustering stringency before GARD.
 # `tn93_max_seqs` limits how many sequences are retained per cluster.
