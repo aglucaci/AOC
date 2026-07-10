@@ -56,10 +56,10 @@ While individual HyPhy analyses can be run through DataMonkey or the HyPhy comma
 AOC/
 ├── workflow/
 │   ├── Snakefile
+│   └── scripts
 ├── config/
 │   └── config.yaml
-├── scripts/
-├── tests/
+├── .tests/
 ├── envs/
 │   └── AOC.yaml
 ├── install.sh
@@ -113,7 +113,7 @@ conda activate AOC
 Run the automated test workflow to confirm that the environment and setup are working correctly:
 
 ```bash
-bash tests/test_installation.sh
+bash .tests/test_installation.sh
 ```
 
 ---
@@ -274,7 +274,7 @@ bash run_AOC.sh --samples samples.csv
 For a quick setup check before a full manual run, use:
 
 ```bash
-bash tests/test_installation.sh
+bash .tests/test_installation.sh
 ```
 
 ---

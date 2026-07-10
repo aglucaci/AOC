@@ -20,7 +20,7 @@ Run the smoke test before making changes so you know the local environment is
 healthy:
 
 ```bash
-bash tests/test_installation.sh
+bash .tests/test_installation.sh
 ```
 
 For a dry run against the default sample sheet:
@@ -65,12 +65,11 @@ The current test suite is intentionally small and centered on installation and
 stable parser behavior.
 
 ```bash
-python -m unittest tests/test_busteds_mh.py
-bash tests/test_installation.sh
+pytest .tests/unit/
+bash .tests/test_installation.sh
 ```
 
-Use `tests/data/tiny_samples.csv` and `tests/data/tiny.fasta` for quick workflow
-checks. Larger biological examples belong under `data/` only when they are
+Use `.tests/integration/config/tiny_samples.csv` and `.tests/integration/config/tiny.fasta` for quick workflow checks. Larger biological examples belong under `data/` only when they are
 small enough to be practical for repository users.
 
 When changing the workflow, validate at least one labeled and one unlabeled
@@ -117,9 +116,8 @@ samples.csv
 - `submit_AOC.slurm`: example Slurm entry point.
 - `install.sh`: environment installer and smoke-test helper.
 - `envs/AOC.yaml`: conda environment specification.
-- `scripts/`: Python and HyPhy helper scripts used by the workflow.
-- `software/`: bundled HyPhy utilities such as LabelTrees and duplicate removal.
-- `tests/`: smoke tests, unit tests, and tiny workflow fixtures.
+- `workflow/scripts/`: Python and HyPhy helper scripts used by the workflow.
+- `.tests/`: unit and integration tests.
 - `data/`: small example datasets.
 - `JOSS/`: manuscript and publication assets.
 
