@@ -465,22 +465,19 @@ rule macse:
     output:
         codons=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.codons.fa"),
         aa=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.aa.fa"),
-    params:
-        launcher=MACSE_LAUNCHER,
-        runner=MACSE_RUNNER,
-        xms_mb=MACSE_XMS_MB,
-        xmx_mb=_macse_heap_mb(),
     resources:
         mem_mb=_macse_requested_mem_mb(),
+        xms_mb=MACSE_XMS_MB,
+        xmx_mb=_macse_heap_mb(),
     log:
         os.path.join(LOGDIR, "macse.{sequence}.log")
     shell:
         r"""
         mkdir -p {OUTROOT}/sequences/{wildcards.sequence}
-        bash "{params.runner}" \
-          --macse-bin "{params.launcher}" \
-          --xms-mb {params.xms_mb} \
-          --xmx-mb {params.xmx_mb} \
+        bash "{MACSE_RUNNER}" \
+          --macse-bin "{MACSE_LAUNCHER}" \
+          --xms-mb {resources.xms_mb} \
+          --xmx-mb {resources.xmx_mb} \
           -- \
           -prog alignSequences \
           -seq "{input.fasta}" \
@@ -573,14 +570,13 @@ rule recombination:
     output:
         gard_json=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa.cluster.fasta.GARD.json"),
         bestgard=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa.cluster.fasta.best-gard"),
-    threads: GARD_PROCESSORS
-    params:
-        processors=GARD_PROCESSORS
+    resources:
+        tasks=GARD_PROCESSORS,
     log:
         os.path.join(LOGDIR, "recombination.{sequence}.log")
     shell:
         r"""
-        {MPIRUN} -np {params.processors} {HYPHY_MPI} GARD --alignment {input.msa} --rv GDD --output {output.gard_json} --mode Faster ENV='TOLERATE_NUMERICAL_ERRORS=1;' \
+        {MPIRUN} -np {threads} {HYPHY_MPI} GARD --alignment {input.msa} --rv GDD --output {output.gard_json} --mode Faster ENV='TOLERATE_NUMERICAL_ERRORS=1;' \
           > {log} 2>&1
         """
 
