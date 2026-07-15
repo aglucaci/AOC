@@ -576,7 +576,7 @@ rule recombination:
         os.path.join(LOGDIR, "recombination.{sequence}.log")
     shell:
         r"""
-        {MPIRUN} -np {threads} {HYPHY_MPI} GARD --alignment {input.msa} --rv GDD --output {output.gard_json} --mode Faster ENV='TOLERATE_NUMERICAL_ERRORS=1;' \
+        {MPIRUN} -np {resources.tasks} {HYPHY_MPI} GARD --alignment {input.msa} --rv GDD --output {output.gard_json} --mode Faster ENV='TOLERATE_NUMERICAL_ERRORS=1;' \
           > {log} 2>&1
         """
 
