@@ -103,6 +103,14 @@ def _coerce_int(value):
     except (TypeError, ValueError, AttributeError):
         return None
 
+def _is_missing(x):
+    if x is None:
+        return True
+    if isinstance(x, float) and math.isnan(x):
+        return True
+    s = str(x).strip()
+    return (s == "") or (s.lower() == "nan")
+
 PRESERVE_TEST_SEQUENCES = _coerce_bool(PRESERVE_TEST_SEQUENCES_RAW)
 
 def _slurm_mem_mb():
@@ -187,14 +195,9 @@ if missing_sequence_paths:
     raise ValueError(f"No codon_fasta entry found for sequences: {missing_sequence_paths}")
 
 LABELS_CSV_BY_SAMPLE  = dict(zip(samples_df["sample"], samples_df["sequence_labels_csv"].astype(str)))
-
-def _is_missing(x):
-    if x is None:
-        return True
-    if isinstance(x, float) and math.isnan(x):
-        return True
-    s = str(x).strip()
-    return (s == "") or (s.lower() == "nan")
+LABELS_CSV_BY_SAMPLE = {
+    k: v for k, v in LABELS_CSV_BY_SAMPLE.items() if not _is_missing(v)
+}
 
 def sequence_for_sample(sample):
     return SEQUENCE_BY_SAMPLE[sample]
@@ -208,10 +211,8 @@ def labels_csv_path(sample):
         return ""
     return os.path.join(BASEDIR, str(v))
 
-SAMPLES_WITH_LABELS = [
-    s for s in SAMPLES
-    if (not _is_missing(LABELS_CSV_BY_SAMPLE.get(s, None))) and os.path.exists(labels_csv_path(s))
-]
+SAMPLES_WITH_LABELS = list(LABELS_CSV_BY_SAMPLE.keys())
+
 SAMPLES_WITH_LABELS_BY_SEQUENCE = {
     sequence: [s for s in SAMPLES_WITH_LABELS if sequence_for_sample(s) == sequence]
     for sequence in SEQUENCES
@@ -320,19 +321,11 @@ def _hyphy_content_table(data):
 # Utility: ensure empty test list exists for unlabeled samples
 ###############################################################################
 
-def _ensure_empty_test_list(sample):
-    p = empty_test_list_file(sample)
-    if not os.path.exists(p):
-        os.makedirs(os.path.dirname(p), exist_ok=True)
-        with open(p, "w") as fh:
-            fh.write("")
-    return p
-
-def _test_list_for_sample(wc):
-    p = test_list_file(wc.sample)
-    if os.path.exists(p):
-        return p
-    return _ensure_empty_test_list(wc.sample)
+def _test_list_for_sample(wildcards):
+    if LABELS_CSV_BY_SAMPLE.get(wildcards.sample, False):
+        return test_list_file(wildcards.sample)
+    else:
+        return empty_test_list_file(wildcards.sample)
 
 def _branch_arg(sample):
     p = test_list_file(sample)
@@ -587,6 +580,16 @@ rule recombination:
 ###############################################################################
 # Labels -> header map + test list (only used when labels CSV exists)
 ###############################################################################
+
+rule build_empty_test_list:
+    output:
+        touch(os.path.join(str(OUTROOT), "{sample}", "{sample}.test_sequences.EMPTY.txt")),
+    log:
+        os.path.join(LOGDIR, "build_empty_test_list.{sample}.log"),
+    run:
+        with open(log[0], "a") as L:
+            L.write(f"Created empty test list for sample {wildcards.sample}\n")
+
 
 rule build_header_map_and_test_list:
     input:
