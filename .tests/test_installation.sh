@@ -11,7 +11,8 @@ rm -rf .tests/integration/logs
 snakemake \
   --cores 1 \
   --directory .tests/integration \
-  --scheduler greedy
+  --rerun-trigger mtime \
+  --configfile .tests/integration/config/config_mini_legacy.yaml \
 
 
 # Basic checks

@@ -329,12 +329,10 @@ rule all:
         # expand("results/{sample}/{sample}.test_sequences.txt", sample=SAMPLES_WITH_LABELS),
         # expand("results/{sample}/{sample}.sequence_header_map.csv", sample=SAMPLES_WITH_LABELS),
         # expand("results/sequences/{sequence}/gard/segments.json", sequence=SEQUENCES),
-        # expand("results/{sample}/selection/part{part}/{test}.json", sample=SAMPLES, test=["FEL", "MEME", "ABSREL", "BUSTEDS-MH", "RELAX", "CFEL"], part="1"),
         # expand("results/{sample}/selection/ALL_PARTITIONS.done", sample=SAMPLES),
-        # expand("results/{sample}/tables/part{part}/{sample}.part{part}.AOC.{test}_Results.csv", sample=SAMPLES, test=["FEL", "MEME", "ABSREL", "BUSTEDS-MH", "RELAX", "CFEL"], part="1"),
-        # expand("results/{sample}/visualizations/{sample}.{test}.merged.png", sample=SAMPLES, test=["FEL", "MEME"]),
-        expand("results/{sample}/tables/{sample}.AOC.merged_{test}_Results.csv", sample=SAMPLES, test=["FEL", "MEME", "ABSREL", "BUSTEDS-MH", "RELAX", "CFEL"]),
+        # expand("results/{sample}/tables/{sample}.AOC.merged_{test}_Results.csv", sample=SAMPLES, test=["FEL", "MEME", "ABSREL", "BUSTEDS-MH", "RELAX", "CFEL"]),
         expand("results/{sample}/tables/{sample}.selection_overview.csv", sample=SAMPLES),
+        expand("results/{sample}/visualizations/{sample}.{test}.merged.png", sample=SAMPLES, test=["FEL", "MEME"]),
 
 
 ###############################################################################
