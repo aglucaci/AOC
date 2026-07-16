@@ -12,6 +12,7 @@ workflow/notebooks/.ipynb_checkpoints/**
 **/.Rproj.user/**
 **/.RData
 **/Rplots.pdf
+tests/tmp_output/**
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
