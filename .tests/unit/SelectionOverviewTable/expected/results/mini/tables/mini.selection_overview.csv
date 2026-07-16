@@ -1,0 +1,7 @@
+sample,partition,method,metric,value
+mini,1,FEL,significant_sites_FDR_0.10,0
+mini,1,MEME,significant_sites_FDR_0.10,0
+mini,1,ABSREL,significant_branches,0
+mini,1,BUSTEDS-MH,gene_wide_pvalue,0.5
+mini,1,RELAX,status,skipped
+mini,1,CFEL,status,skipped

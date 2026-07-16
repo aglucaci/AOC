@@ -1,0 +1,47 @@
+{
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond",
+   "citation":"**Automated Phylogenetic Detection of Recombination Using a Genetic Algorithm**, _Mol Biol Evol 23(10), 1891–1901",
+   "contact":"spond@temple.edu",
+   "info":"GARD : Genetic Algorithms for Recombination Detection. Implements a heuristic\n    approach to screening alignments of sequences for recombination, by using the CHC genetic algorithm to search for phylogenetic\n    incongruence among different partitions of the data. The number of partitions is determined using a step-up procedure, while the\n    placement of breakpoints is searched for with the GA. The best fitting model (based on c-AIC) is returned; and additional post-hoc\n    tests run to distinguish topological incongruence from rate-variation. v0.2 adds  and spooling results to JSON after each breakpoint search conclusion",
+   "requirements":"A sequence alignment.",
+   "version":"0.2"
+  },
+ "baselineScore":465.4637936842356,
+ "bestModelAICc":465.4637936842356,
+ "breakpointData":{
+   "0":{
+     "bps":      [
+["1", "132"] 
+      ],
+     "tree":"(NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA:0.01575647507517517,NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA:0.01569410071048591,NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA:0.01562575086053961)"
+    }
+  },
+ "improvements":{
+   "0":{
+     "breakpoints":null,
+     "deltaAICc":0
+    }
+  },
+ "input":{
+   "file name":"/home/sjenkins/dev/AOC_env/AOC3/results/sequences/BDNF/BDNF.RD.SA.codons.cln.fa.cluster.fasta",
+   "number of sequences":3,
+   "number of sites":132,
+   "partition count":1
+  },
+ "potentialBreakpoints":5,
+ "singleTreeAICc":465.4637936657728,
+ "siteBreakPointSupport":{
+   "111":0.006078217186250662,
+   "38":0.02432637831284804,
+   "53":0.02781666128565224,
+   "68":0.006982174748280207,
+   "77":0.06681091217132654,
+   "98":0.06343756271474084
+  },
+ "timeElapsed":1,
+ "totalModelCount":20,
+ "trees":{
+   "newickString":"(NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA:0.01575647507517517,NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA:0.01569410071048591,NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA:0.01562575086053961)"
+  }
+}
