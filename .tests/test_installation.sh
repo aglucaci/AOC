@@ -12,7 +12,7 @@ snakemake \
   --cores 1 \
   --directory .tests/integration \
   --rerun-trigger mtime \
-  --configfile .tests/integration/config/config_mini_legacy.yaml \
+  --configfile .tests/integration/config/config.yaml \
 
 
 # Basic checks
