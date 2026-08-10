@@ -55,6 +55,7 @@ configfile: "config/config.yaml"
 BASEDIR = os.getcwd()
 OUTROOT = Path(config.get("outdir", "results"))
 SAMPLES_CSV = config.get("samples_csv", "samples.csv")
+SEQUENCES_CSV = config.get("sequences_csv", "sequences.csv")
 
 # Tools / scripts (override in config/config.yaml as needed)
 HYPHY        = config.get("hyphy", "hyphy")
@@ -70,6 +71,7 @@ MAKE_TEST_LIST_PY  = config.get("make_test_list_py", "scripts/make_sequence_head
 TN93_CLUSTER_PY    = config.get("tn93_cluster_py", "scripts/tn93_cluster.py")
 
 GARD_PROCESSORS = int(config.get("gard_processors", 4))
+PRESERVE_TEST_SEQUENCES_RAW = config.get("preserve_test_sequences", False)
 
 # Summarizer scripts (from your Snakefile_SummarizeResults)
 # If these scripts differ in your repo, update paths in config.yaml
@@ -88,11 +90,20 @@ MACSE_MIN_HEAP_MB = int(config.get("macse_min_heap_mb", 2048))
 MACSE_XMS_MB = int(config.get("macse_xms_mb", 512))
 MACSE_RUNNER = config.get("macse_runner", "scripts/run_macse_with_heap.sh")
 
+def _coerce_bool(value):
+    if isinstance(value, bool):
+        return value
+    if value is None:
+        return False
+    return str(value).strip().lower() in {"1", "true", "yes", "y", "on"}
+
 def _coerce_int(value):
     try:
         return int(str(value).strip())
     except (TypeError, ValueError, AttributeError):
         return None
+
+PRESERVE_TEST_SEQUENCES = _coerce_bool(PRESERVE_TEST_SEQUENCES_RAW)
 
 def _slurm_mem_mb():
     per_node = _coerce_int(os.environ.get("SLURM_MEM_PER_NODE"))
@@ -125,19 +136,56 @@ def _macse_heap_mb():
     return max(baseline, min(requested, usable))
 
 ###############################################################################
-# Read samples.csv (must include: sample, codon_fasta, sequence_labels_csv)
+# Read samples.csv
 ###############################################################################
 
 samples_df = pd.read_csv(SAMPLES_CSV).copy()
-required = {"sample", "codon_fasta", "sequence_labels_csv"}
-missing = required.difference(samples_df.columns)
-if missing:
-    raise ValueError(f"samples.csv missing required columns {sorted(missing)}")
+if "sample" not in samples_df.columns:
+    raise ValueError("samples.csv missing required column ['sample']")
+if "sequence_labels_csv" not in samples_df.columns:
+    samples_df["sequence_labels_csv"] = ""
 
 samples_df["sample"] = samples_df["sample"].astype(str)
 
+if "sequence" in samples_df.columns:
+    samples_df["sequence"] = samples_df["sequence"].astype(str)
+else:
+    samples_df["sequence"] = samples_df["sample"].astype(str)
+
+if "codon_fasta" in samples_df.columns:
+    sequence_fasta_df = (
+        samples_df[["sequence", "codon_fasta"]]
+        .dropna(subset=["codon_fasta"])
+        .drop_duplicates()
+        .copy()
+    )
+else:
+    if not os.path.exists(SEQUENCES_CSV):
+        raise ValueError(
+            "samples.csv must include either a 'codon_fasta' column or a 'sequence' column "
+            f"paired with sequences_csv={SEQUENCES_CSV!r}"
+        )
+    sequence_fasta_df = pd.read_csv(SEQUENCES_CSV).copy()
+    required_sequences = {"sequence", "codon_fasta"}
+    missing_sequences = required_sequences.difference(sequence_fasta_df.columns)
+    if missing_sequences:
+        raise ValueError(f"sequences.csv missing required columns {sorted(missing_sequences)}")
+
+sequence_fasta_df["sequence"] = sequence_fasta_df["sequence"].astype(str)
+sequence_fasta_df["codon_fasta"] = sequence_fasta_df["codon_fasta"].astype(str)
+duplicate_sequence_paths = sequence_fasta_df.groupby("sequence")["codon_fasta"].nunique()
+ambiguous_sequences = duplicate_sequence_paths[duplicate_sequence_paths > 1].index.tolist()
+if ambiguous_sequences:
+    raise ValueError(f"Each sequence must map to exactly one codon_fasta; ambiguous sequences: {ambiguous_sequences}")
+
 SAMPLES = samples_df["sample"].tolist()
-CODON_FASTA_BY_SAMPLE = dict(zip(samples_df["sample"], samples_df["codon_fasta"].astype(str)))
+SEQUENCES = list(dict.fromkeys(samples_df["sequence"].tolist()))
+SEQUENCE_BY_SAMPLE = dict(zip(samples_df["sample"], samples_df["sequence"]))
+CODON_FASTA_BY_SEQUENCE = dict(zip(sequence_fasta_df["sequence"], sequence_fasta_df["codon_fasta"]))
+missing_sequence_paths = [seq for seq in SEQUENCES if seq not in CODON_FASTA_BY_SEQUENCE]
+if missing_sequence_paths:
+    raise ValueError(f"No codon_fasta entry found for sequences: {missing_sequence_paths}")
+
 LABELS_CSV_BY_SAMPLE  = dict(zip(samples_df["sample"], samples_df["sequence_labels_csv"].astype(str)))
 
 def _is_missing(x):
@@ -148,8 +196,11 @@ def _is_missing(x):
     s = str(x).strip()
     return (s == "") or (s.lower() == "nan")
 
-def codon_fasta_path(sample):
-    return os.path.join(BASEDIR, CODON_FASTA_BY_SAMPLE[sample])
+def sequence_for_sample(sample):
+    return SEQUENCE_BY_SAMPLE[sample]
+
+def codon_fasta_path(sequence):
+    return os.path.join(BASEDIR, CODON_FASTA_BY_SEQUENCE[sequence])
 
 def labels_csv_path(sample):
     v = LABELS_CSV_BY_SAMPLE.get(sample, None)
@@ -161,22 +212,30 @@ SAMPLES_WITH_LABELS = [
     s for s in SAMPLES
     if (not _is_missing(LABELS_CSV_BY_SAMPLE.get(s, None))) and os.path.exists(labels_csv_path(s))
 ]
+SAMPLES_WITH_LABELS_BY_SEQUENCE = {
+    sequence: [s for s in SAMPLES_WITH_LABELS if sequence_for_sample(s) == sequence]
+    for sequence in SEQUENCES
+}
 
 ###############################################################################
 # Path helpers
 ###############################################################################
 
 def sample_dir(sample): return os.path.join(str(OUTROOT), sample)
+def sequence_dir(sequence): return os.path.join(str(OUTROOT), "sequences", sequence)
 
 def test_list_file(sample): return os.path.join(sample_dir(sample), f"{sample}.test_sequences.txt")
 def empty_test_list_file(sample): return os.path.join(sample_dir(sample), f"{sample}.test_sequences.EMPTY.txt")
 def header_map_file(sample): return os.path.join(sample_dir(sample), f"{sample}.sequence_header_map.csv")
 
-def gard_dir(sample): return os.path.join(sample_dir(sample), "gard")
-def gard_segments_dir(sample): return os.path.join(gard_dir(sample), "segments")
-def gard_manifest(sample): return os.path.join(gard_dir(sample), "segments.json")
-def gard_log(sample): return os.path.join(sample_dir(sample), f"{sample}.gard.log")
-def codon1_file(sample): return os.path.join(sample_dir(sample), f"{sample}.1.codon.fas")
+def gard_dir(sequence): return os.path.join(sequence_dir(sequence), "gard")
+def gard_segments_dir(sequence): return os.path.join(gard_dir(sequence), "segments")
+def gard_manifest(sequence): return os.path.join(gard_dir(sequence), "segments.json")
+def gard_log(sequence): return os.path.join(sequence_dir(sequence), f"{sequence}.gard.log")
+def codon1_file(sequence): return os.path.join(sequence_dir(sequence), f"{sequence}.1.codon.fas")
+def sequence_tree_dir(sequence): return os.path.join(sequence_dir(sequence), "trees")
+def sequence_tree_part_dir(sequence, part): return os.path.join(sequence_tree_dir(sequence), f"part{part}")
+def fasttree_tree_file(sequence, part): return os.path.join(sequence_tree_part_dir(sequence, part), "FastTree.treefile")
 
 def selection_dir(sample): return os.path.join(sample_dir(sample), "selection")
 def selection_part_dir(sample, part): return os.path.join(selection_dir(sample), f"part{part}")
@@ -281,6 +340,60 @@ def _branch_arg(sample):
         return "--branches Test"
     return ""
 
+def _preserve_test_list_input(wc):
+    if PRESERVE_TEST_SEQUENCES:
+        return [test_list_file(s) for s in SAMPLES_WITH_LABELS_BY_SEQUENCE.get(wc.sequence, [])]
+    return []
+
+def _read_preserve_names(path):
+    if not path:
+        return []
+    if isinstance(path, (list, tuple)):
+        names = []
+        for p in path:
+            names.extend(_read_preserve_names(p))
+        return list(dict.fromkeys(names))
+    if not os.path.exists(str(path)):
+        return []
+    with open(str(path)) as fh:
+        return [line.strip() for line in fh if line.strip()]
+
+def _fasta_ids(path):
+    return {record.id for record in SeqIO.parse(str(path), "fasta")}
+
+def _restore_missing_preserved_sequences(source_fasta, output_fasta, preserve_names, log_file):
+    if not preserve_names:
+        return
+
+    present = _fasta_ids(output_fasta)
+    missing = [name for name in preserve_names if name not in present]
+    if not missing:
+        return
+
+    records_by_id = {record.id: record for record in SeqIO.parse(str(source_fasta), "fasta")}
+    unavailable = [name for name in missing if name not in records_by_id]
+    if unavailable:
+        raise RuntimeError(
+            f"Could not preserve requested Test sequences because they were not found in {source_fasta}: {unavailable}"
+        )
+
+    with open(str(output_fasta), "a") as out:
+        SeqIO.write([records_by_id[name] for name in missing], out, "fasta")
+
+    with open(str(log_file), "a") as L:
+        L.write(f"\n[INFO] Restored {len(missing)} preserved Test sequences after duplicate removal: {missing}\n")
+
+def _assert_preserved_sequences(output_fasta, preserve_names):
+    if not preserve_names:
+        return
+
+    present = _fasta_ids(output_fasta)
+    missing = [name for name in preserve_names if name not in present]
+    if missing:
+        raise RuntimeError(
+            f"Preserved Test sequences are missing from {output_fasta}: {missing}"
+        )
+
 ###############################################################################
 # Rule all
 ###############################################################################
@@ -292,20 +405,21 @@ def _branch_arg(sample):
 
 rule all:
     input:
-        expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta.best-gard"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "selection", "ALL_PARTITIONS.done"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.test_sequences.txt"), sample=SAMPLES_WITH_LABELS),
-        expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.sequence_header_map.csv"), sample=SAMPLES_WITH_LABELS),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_FEL_Results.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_MEME_Results.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_ABSREL_Results.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_BUSTEDS-MH_Results.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_RELAX_Results.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_CFEL_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa"), sequence=SEQUENCES),
+        # expand(os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa.cluster.fasta.best-gard"), sequence=SEQUENCES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "selection", "ALL_PARTITIONS.done"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.test_sequences.txt"), sample=SAMPLES_WITH_LABELS),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "{sample}.sequence_header_map.csv"), sample=SAMPLES_WITH_LABELS),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_FEL_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_MEME_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_ABSREL_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_BUSTEDS-MH_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_RELAX_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.AOC.merged_CFEL_Results.csv"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.FEL.merged.png"), sample=SAMPLES),
+        # expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.MEME.merged.png"), sample=SAMPLES),
         expand(os.path.join(str(OUTROOT), "{sample}", "tables", "{sample}.selection_overview.csv"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.FEL.merged.png"), sample=SAMPLES),
-        expand(os.path.join(str(OUTROOT), "{sample}", "visualizations", "{sample}.MEME.merged.png"), sample=SAMPLES)
+
 
 ###############################################################################
 # Preprocessing
@@ -348,10 +462,10 @@ ruleorder:
 
 rule macse:
     input:
-        fasta=lambda wc: codon_fasta_path(wc.sample)
+        fasta=lambda wc: codon_fasta_path(wc.sequence)
     output:
-        codons=os.path.join(str(OUTROOT), "{sample}", "{sample}.codons.fa"),
-        aa=os.path.join(str(OUTROOT), "{sample}", "{sample}.aa.fa"),
+        codons=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.codons.fa"),
+        aa=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.aa.fa"),
     params:
         launcher=MACSE_LAUNCHER,
         runner=MACSE_RUNNER,
@@ -360,10 +474,10 @@ rule macse:
     resources:
         mem_mb=_macse_requested_mem_mb(),
     log:
-        os.path.join(LOGDIR, "macse.{sample}.log")
+        os.path.join(LOGDIR, "macse.{sequence}.log")
     shell:
         r"""
-        mkdir -p {OUTROOT}/{wildcards.sample}
+        mkdir -p {OUTROOT}/sequences/{wildcards.sequence}
         bash "{params.runner}" \
           --macse-bin "{params.launcher}" \
           --xms-mb {params.xms_mb} \
@@ -383,9 +497,9 @@ rule cln:
     input:
         codons=rules.macse.output.codons
     output:
-        cln=os.path.join(str(OUTROOT), "{sample}", "{sample}.codons.cln.fa")
+        cln=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.codons.cln.fa")
     log:
-        os.path.join(LOGDIR, "cln.{sample}.log")
+        os.path.join(LOGDIR, "cln.{sequence}.log")
     shell:
         r"""
         {HYPHY} CLN Universal {input.codons} 'No/No' {output.cln} > {log} 2>&1
@@ -395,9 +509,9 @@ rule strike_ambigs_msa:
     input:
         cln=rules.cln.output.cln
     output:
-        sa=os.path.join(str(OUTROOT), "{sample}", "{sample}.SA.codons.cln.fa")
+        sa=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.SA.codons.cln.fa")
     log:
-        os.path.join(LOGDIR, "strike_ambigs_msa.{sample}.log")
+        os.path.join(LOGDIR, "strike_ambigs_msa.{sequence}.log")
     shell:
         r"""
         {HYPHY} {STRIKE_AMBIGS_BF} --alignment {input.cln} --output {output.sa} > {log} 2>&1
@@ -405,49 +519,66 @@ rule strike_ambigs_msa:
 
 rule remove_duplicates_msa:
     input:
-        sa=rules.strike_ambigs_msa.output.sa
+        sa=rules.strike_ambigs_msa.output.sa,
+        preserve_list=_preserve_test_list_input
     output:
-        rd=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa")
+        rd=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa")
     log:
-        os.path.join(LOGDIR, "remove_duplicates_msa.{sample}.log")
-    shell:
-        r"""
-        {HYPHY} {REMOVE_DUPS_BF} --msa {input.sa} --output {output.rd} ENV='DATA_FILE_PRINT_FORMAT=9' > {log} 2>&1
-        """
+        os.path.join(LOGDIR, "remove_duplicates_msa.{sequence}.log")
+    run:
+        preserve_names = _read_preserve_names(input.preserve_list)
+        preserve_arg = ""
+        if PRESERVE_TEST_SEQUENCES and preserve_names:
+            preserve_arg = "--preserve " + ",".join(preserve_names)
+        shell(
+            f"{HYPHY} {REMOVE_DUPS_BF} --msa {input.sa} {preserve_arg} "
+            f"--output {output.rd} ENV='DATA_FILE_PRINT_FORMAT=9' > {log} 2>&1"
+        )
+        if PRESERVE_TEST_SEQUENCES and preserve_names:
+            _restore_missing_preserved_sequences(input.sa, output.rd, preserve_names, log[0])
+            _assert_preserved_sequences(output.rd, preserve_names)
 
 rule tn93_cluster:
     input:
-        rd=rules.remove_duplicates_msa.output.rd
+        rd=rules.remove_duplicates_msa.output.rd,
+        preserve_list=_preserve_test_list_input
     output:
-        cluster_json=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.json"),
-        cluster_fasta=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta"),
+        cluster_json=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa.cluster.json"),
+        cluster_fasta=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa.cluster.fasta"),
     params:
         threshold=lambda wc: config.get("tn93_threshold", 0.01),
         max_seqs=lambda wc: config.get("tn93_max_seqs", 20),
     log:
-        os.path.join(LOGDIR, "tn93_cluster.{sample}.log")
-    shell:
-        r"""
-        python {TN93_CLUSTER_PY} \
-          --input {input.rd} \
-          --output_fasta {output.cluster_fasta} \
-          --output_json {output.cluster_json} \
-          --threshold {params.threshold} \
-          --max_retain {params.max_seqs} \
-          > {log} 2>&1
-        """
+        os.path.join(LOGDIR, "tn93_cluster.{sequence}.log")
+    run:
+        preserve_names = _read_preserve_names(input.preserve_list)
+        preserve_arg = ""
+        if PRESERVE_TEST_SEQUENCES and preserve_names:
+            preserve_arg = f"--preserve_list {input.preserve_list}"
+        shell(
+            f"python {TN93_CLUSTER_PY} "
+            f"--input {input.rd} "
+            f"--output_fasta {output.cluster_fasta} "
+            f"--output_json {output.cluster_json} "
+            f"--threshold {params.threshold} "
+            f"--max_retain {params.max_seqs} "
+            f"{preserve_arg} "
+            f"> {log} 2>&1"
+        )
+        if PRESERVE_TEST_SEQUENCES and preserve_names:
+            _assert_preserved_sequences(output.cluster_fasta, preserve_names)
 
 rule recombination:
     input:
         msa=rules.tn93_cluster.output.cluster_fasta
     output:
-        gard_json=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta.GARD.json"),
-        bestgard=os.path.join(str(OUTROOT), "{sample}", "{sample}.RD.SA.codons.cln.fa.cluster.fasta.best-gard"),
+        gard_json=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa.cluster.fasta.GARD.json"),
+        bestgard=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.RD.SA.codons.cln.fa.cluster.fasta.best-gard"),
     threads: GARD_PROCESSORS
     params:
         processors=GARD_PROCESSORS
     log:
-        os.path.join(LOGDIR, "recombination.{sample}.log")
+        os.path.join(LOGDIR, "recombination.{sequence}.log")
     shell:
         r"""
         {MPIRUN} -np {params.processors} {HYPHY_MPI} GARD --alignment {input.msa} --rv GDD --output {output.gard_json} --mode Faster ENV='TOLERATE_NUMERICAL_ERRORS=1;' \
@@ -504,26 +635,36 @@ rule build_header_map_and_test_list:
 
         # normalize column names
         df.columns = [c.strip().lower() for c in df.columns]
+        sample_col = "sample" if "sample" in df.columns else None
+        if sample_col is not None:
+            df = df[df[sample_col].astype(str).str.strip() == str(wildcards.sample)].copy()
 
         # heuristic column detection
         label_candidates  = ["label", "group", "set", "class", "foreground", "branchset"]
-        header_candidates = ["header", "sequence_header", "seq_header", "id", "name", "taxon", "tip", "sequence"]
+        header_candidates = ["fasta_sequence_header", "header", "sequence_header", "seq_header", "id", "name", "taxon", "tip", "sequence"]
 
         label_col  = next((c for c in label_candidates if c in df.columns), None)
         header_col = next((c for c in header_candidates if c in df.columns), None)
 
-        if label_col is None or header_col is None:
-            if df.shape[1] == 2:
+        if header_col is None:
+            if sample_col is not None and df.shape[1] == 2:
+                header_col = next(c for c in df.columns if c != sample_col)
+            elif df.shape[1] == 2:
                 label_col  = df.columns[0]
                 header_col = df.columns[1]
             else:
                 raise ValueError(
                     f"[build_header_map_and_test_list] Could not infer label/header columns.\n"
                     f"Columns found: {list(df.columns)}\n"
-                    f"Expected something like LABEL + HEADER (or a 2-column CSV)."
+                    f"Expected something like LABEL + HEADER, SAMPLE + FASTA_SEQUENCE_HEADER, or a 2-column CSV."
                 )
 
-        labels_raw  = df[label_col].astype(str).str.strip()
+        if label_col is None and sample_col is not None:
+            labels_raw = pd.Series(["Test"] * len(df), index=df.index)
+        elif label_col is None:
+            labels_raw = pd.Series(["Test"] * len(df), index=df.index)
+        else:
+            labels_raw = df[label_col].astype(str).str.strip()
         headers_raw = df[header_col].astype(str).str.strip().str.lstrip(">")
 
         # sanitize -> mapped headers
@@ -539,7 +680,7 @@ rule build_header_map_and_test_list:
             else:
                 mapped_unique.append(f"{m}_dup{counts[m]}")
 
-        mapped_unique = pd.Series(mapped_unique)
+        mapped_unique = pd.Series(mapped_unique, index=df.index)
 
         # define what counts as Test
         labels_norm = labels_raw.str.lower()
@@ -558,7 +699,7 @@ rule build_header_map_and_test_list:
             out.write("\n".join(test_headers_mapped) + ("\n" if test_headers_mapped else ""))
 
         with open(logp, "a") as L:
-            L.write(f"[INFO] label_col={label_col}, header_col={header_col}\n")
+            L.write(f"[INFO] sample_col={sample_col}, label_col={label_col}, header_col={header_col}\n")
             L.write(f"[INFO] total_rows={len(df)}\n")
             L.write(f"[INFO] test_rows={len(test_headers_mapped)}\n")
             L.write("[INFO] first_mappings:\n")
@@ -583,9 +724,9 @@ checkpoint parse_gard:
         bestgard=rules.recombination.output.bestgard,
         msa=rules.remove_duplicates_msa.output.rd
     output:
-        manifest=os.path.join(str(OUTROOT), "{sample}", "gard", "segments.json"),
-        segdir=directory(os.path.join(str(OUTROOT), "{sample}", "gard", "segments")),
-        log=os.path.join(str(OUTROOT), "{sample}", "{sample}.gard.log"),
+        manifest=os.path.join(str(OUTROOT), "sequences", "{sequence}", "gard", "segments.json"),
+        segdir=directory(os.path.join(str(OUTROOT), "sequences", "{sequence}", "gard", "segments")),
+        log=os.path.join(str(OUTROOT), "sequences", "{sequence}", "{sequence}.gard.log"),
         #codon1=os.path.join(str(OUTROOT), "{sample}", "{sample}.1.codon.fas")
     run:
         # Logging for checkpoint: use output.log (gard.log)
@@ -616,10 +757,10 @@ checkpoint parse_gard:
             data_adjusted_coords.append([start, end - remainder])
             carryOver = remainder
 
-        os.makedirs(gard_segments_dir(wildcards.sample), exist_ok=True)
+        os.makedirs(gard_segments_dir(wildcards.sequence), exist_ok=True)
 
         manifest = {
-            "sample": wildcards.sample,
+            "sequence": wildcards.sequence,
             "msa": str(input.msa),
             "bestgard": str(input.bestgard),
             "n_parts": len(data_adjusted_coords),
@@ -628,7 +769,7 @@ checkpoint parse_gard:
 
         with open(output.log, "w") as log_file:
             for i, (start, stop) in enumerate(data_adjusted_coords, start=1):
-                out_fa = os.path.join(gard_segments_dir(wildcards.sample), f"{wildcards.sample}.part{i}.codon.fas")
+                out_fa = os.path.join(gard_segments_dir(wildcards.sequence), f"{wildcards.sequence}.part{i}.codon.fas")
                 with open(out_fa, "w") as out_f:
                     for record in records:
                         partition = record[int(start):int(stop)]
@@ -660,15 +801,21 @@ checkpoint parse_gard:
 # Dynamic fan-out utilities (for partitions)
 ###############################################################################
 
-def _parts_for_sample(wc):
-    ck = checkpoints.parse_gard.get(sample=wc.sample)
+def _parts_for_sequence(sequence):
+    ck = checkpoints.parse_gard.get(sequence=sequence)
     with open(ck.output.manifest) as fh:
         m = json.load(fh)
     return [str(p["part"]) for p in m["parts"]]
 
+def _parts_for_sample(wc):
+    return _parts_for_sequence(sequence_for_sample(wc.sample))
+
 # QUICKFIX: deterministic partition fasta path (no json-as-alignment bugs)
+def _partition_fasta_by_sequence(sequence, part):
+    return os.path.join(str(OUTROOT), "sequences", sequence, "gard", "segments", f"{sequence}.part{part}.codon.fas")
+
 def _partition_fasta(wc):
-    return os.path.join(str(OUTROOT), wc.sample, "gard", "segments", f"{wc.sample}.part{wc.part}.codon.fas")
+    return _partition_fasta_by_sequence(sequence_for_sample(wc.sample), wc.part)
 
 ###############################################################################
 # Selection analysis per partition
@@ -676,20 +823,20 @@ def _partition_fasta(wc):
 
 rule fasttree_partition:
     input:
-        aln=_partition_fasta
+        aln=lambda wc: _partition_fasta_by_sequence(wc.sequence, wc.part)
     output:
-        tree=os.path.join(str(OUTROOT), "{sample}", "selection", "part{part}", "FastTree.treefile")
+        tree=os.path.join(str(OUTROOT), "sequences", "{sequence}", "trees", "part{part}", "FastTree.treefile")
     log:
-        os.path.join(LOGDIR, "fasttree_partition.{sample}.part{part}.log")
+        os.path.join(LOGDIR, "fasttree_partition.{sequence}.part{part}.log")
     shell:
         r"""
-        mkdir -p {OUTROOT}/{wildcards.sample}/selection/part{wildcards.part}
+        mkdir -p {OUTROOT}/sequences/{wildcards.sequence}/trees/part{wildcards.part}
         {FASTTREE} -nt -gtr {input.aln} > {output.tree} 2> {log}
         """
 
 rule label_tree_TestForeground_partition:
     input:
-        tree=rules.fasttree_partition.output.tree,
+        tree=lambda wc: fasttree_tree_file(sequence_for_sample(wc.sample), wc.part),
         test_list=_test_list_for_sample
     output:
         tree=os.path.join(str(OUTROOT), "{sample}", "selection", "part{part}", "FastTree.labelled.treefile")
