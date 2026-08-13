@@ -63,9 +63,7 @@ HYPHY_MPI    = config.get("hyphy_mpi", "HYPHYMPI")
 MPIRUN       = config.get("mpirun", "mpirun")
 FASTTREE     = config.get("fasttree", "FastTree")
 
-REMOVE_DUPS_BF     = config.get("remove_dups_bf", "software/remove-duplicates/remove-duplicates.bf")
 STRIKE_AMBIGS_BF   = config.get("strike_ambigs_bf", "scripts/strike-ambigs.bf")
-LABEL_TREE_BF      = config.get("label_tree_bf", "software/LabelTrees/label-tree.bf")
 
 MAKE_TEST_LIST_PY  = config.get("make_test_list_py", "scripts/make_sequence_header_map.py")
 TN93_CLUSTER_PY    = config.get("tn93_cluster_py", "scripts/tn93_cluster.py")
@@ -521,7 +519,7 @@ rule remove_duplicates_msa:
         if PRESERVE_TEST_SEQUENCES and preserve_names:
             preserve_arg = "--preserve " + ",".join(preserve_names)
         shell(
-            f"{HYPHY} {REMOVE_DUPS_BF} --msa {input.sa} {preserve_arg} "
+            f"{HYPHY} remove-duplicates --msa {input.sa} {preserve_arg} "
             f"--output {output.rd} ENV='DATA_FILE_PRINT_FORMAT=9' > {log} 2>&1"
         )
         if PRESERVE_TEST_SEQUENCES and preserve_names:
@@ -851,7 +849,7 @@ rule label_tree_TestForeground_partition:
                 L.write("No test list; copied tree\nEND\n")
         else:
             cmd = (
-                f"{HYPHY} {LABEL_TREE_BF} "
+                f"{HYPHY} label-tree "
                 f"--tree {input.tree} "
                 f"--list {input.test_list} "
                 f"--output {output.tree} "
