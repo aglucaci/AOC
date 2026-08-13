@@ -10,7 +10,8 @@ rm -rf tests/tmp_output
 snakemake \
   --cores 1 \
   --snakefile workflow/Snakefile \
-  --config samples_csv=tests/data/tiny_samples.csv outdir=tests/tmp_output
+  --config samples_csv=tests/data/tiny_samples.csv outdir=tests/tmp_output \
+  --rerun-trigger mtime
 
 # Basic checks
 #if [ ! -f tests/tmp_output/summary/run_manifest.csv ]; then
