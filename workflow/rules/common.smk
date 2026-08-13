@@ -1,5 +1,4 @@
-"""Helpers for summarizing BUSTED-S-MH JSON output."""
-
+# Helpers for summarizing BUSTED-S-MH JSON output.
 
 def _legacy_branch_count(branches):
     """Count branches in older HyPhy list-based branch sections."""
