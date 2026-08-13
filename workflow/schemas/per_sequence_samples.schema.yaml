@@ -1,0 +1,20 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+type: object
+description: entry of shared-sequence mode samples sheet
+properties:
+  sample:
+    type: string
+    description: sample name/identifier
+    uniqueItems: true
+  sequence:
+    type: string
+    description: name of sequence (must match sequence in sequences_csv)
+  sequence_labels_csv:
+    type: string
+    description: path to CSV with labels for sequences in the codon_fasta
+
+required:
+  - sample
+  - sequence
+
+additionalProperties: false

@@ -1,0 +1,161 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+type: object
+description: Configuration schema for the AOC workflow
+properties:
+  # Core settings
+  shared_sequence_mode:
+    type: boolean
+    description: Whether to use shared-sequence mode (true) or per-sample mode (false)
+    default: false
+  preserve_test_sequences:
+    type: boolean
+    description: Keep labeled Test sequences during duplicate removal and clustering
+    default: false
+  require_test_sequences:
+    type: boolean
+    description: If labels CSV is provided, require at least one Test sequence
+    default: false
+  # Core inputs / outputs
+  samples_csv:
+    type: string
+    description: Path to the sample sheet, mandatory
+    default: samples.csv
+  sequences_csv:
+    type: string
+    description: Path to sequences sheet, mandatory if shared_sequence_mode is true
+  outdir:
+    type: string
+    description: Output directory for workflow results
+    default: results
+  # External executables
+  hyphy:
+    type: string
+    description: HyPhy executable name or path
+    default: hyphy
+  hyphy_mpi:
+    type: string
+    description: HyPhy MPI executable name or path
+    default: HYPHYMPI
+  mpirun:
+    type: string
+    description: MPI launcher executable name or path
+    default: mpirun
+  fasttree:
+    type: string
+    description: FastTree executable name or path
+    default: FastTree
+  macse_launcher:
+    type: string
+    description: MACSE launcher executable name or path
+    default: macse
+  # Helper scripts / bundled resources
+  remove_dups_bf:
+    type: string
+    description: Path to the HyPhy duplicate-removal batch file
+    default: software/remove-duplicates/remove-duplicates.bf
+  strike_ambigs_bf:
+    type: string
+    description: Path to the ambig-stripping HyPhy batch file
+    default: scripts/strike-ambigs.bf
+  label_tree_bf:
+    type: string
+    description: Path to the tree-labeling HyPhy batch file
+    default: software/LabelTrees/label-tree.bf
+  make_test_list_py:
+    type: string
+    description: Path to the sequence-header mapping helper script
+    default: scripts/make_sequence_header_map.py
+  tn93_cluster_py:
+    type: string
+    description: Path to the TN93 clustering helper script
+    default: scripts/tn93_cluster.py
+  merge_fel_py:
+    type: string
+    description: Path to the FEL merge helper script
+    default: scripts/MergeFELResults.py
+  merge_meme_py:
+    type: string
+    description: Path to the MEME merge helper script
+    default: scripts/MergeMEMEResults.py
+  exec_summary_py:
+    type: string
+    description: Path to the executive summary helper script
+    default: scripts/ExecutiveSummary.py
+  macse_runner:
+    type: string
+    description: Path to the MACSE wrapper script
+    default: scripts/run_macse_with_heap.sh
+  # TN93 clustering
+  tn93_threshold:
+    type: number
+    description: TN93 clustering threshold
+    default: 0.01
+    minimum: 0
+  tn93_max_seqs:
+    type: integer
+    description: Maximum sequences retained per TN93 cluster
+    default: 20
+    minimum: 1
+  # GARD MPI settings
+  gard_processors:
+    type: integer
+    description: Number of MPI processors used for GARD
+    default: 4
+    minimum: 1
+  # MACSE Java memory tuning
+  macse_heap_fraction:
+    type: number
+    description: Fraction of requested memory used for MACSE heap sizing
+    default: 0.875
+    minimum: 0
+    maximum: 1
+  macse_heap_reserve_mb:
+    type: integer
+    description: Memory in MB reserved when sizing the MACSE heap
+    default: 1024
+    minimum: 1
+  macse_min_heap_mb:
+    type: integer
+    description: Minimum MACSE heap size in MB
+    default: 2048
+    minimum: 1
+  macse_xms_mb:
+    type: integer
+    description: Initial MACSE heap size in MB
+    default: 512
+    minimum: 1
+  macse_mem_mb:
+    type: integer
+    description: Optional explicit MACSE memory request in MB
+    minimum: 1
+  macse_heap_mb:
+    type: integer
+    description: Optional explicit MACSE heap size in MB
+    minimum: 1
+
+  log_dir:
+    type: string
+    description: Legacy compatibility log directory key
+    default: logs
+  multitestcorr:
+    type: string
+    description: Legacy compatibility multiple-test correction key
+    default: fdr
+
+required:
+  - shared_sequence_mode
+  - samples_csv
+
+if: 
+  properties:
+    shared_sequence_mode:
+      const: true
+then:
+  required: 
+    - "sequences_csv"
+else:
+  not:
+    required:
+      - "sequences_csv"
+
+additionalProperties: false
