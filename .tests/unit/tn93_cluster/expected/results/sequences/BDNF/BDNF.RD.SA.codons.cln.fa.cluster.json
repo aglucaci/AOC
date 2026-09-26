@@ -1,0 +1,17 @@
+[
+	{
+		"size" : 1, 
+		"members" : ["NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA"],
+		"centroid" : ">NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA\nATGACCATCCTTTTCCTTACTATGGTTATTTCATACTTTGGTTGCATGAAGGCTAGCAAAAAGAGAATTGGCTGGCGATTCATAAGGATAGACACTTCTTGTGTATGTACATTGACCATTAAAAGGGGAAGA\n"
+	},
+	{
+		"size" : 1, 
+		"members" : ["NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA"],
+		"centroid" : ">NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA\nATGACCATCCTTTTCCTTACTATGGTTATTTCATACTTCGGTTGCATGAAGGCGAGCAAAAAGAGAATTGGCTGGCGATTCATAAGGATAGACACTTCCTGTGTATGTACACTGACCATTAAAAGGGGAAGA\n"
+	},
+	{
+		"size" : 1, 
+		"members" : ["NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA"],
+		"centroid" : ">NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA\nATGACCATCCTTTTCCTTACTATGGTTATTTCATACTTCGGTTGCATGAAGGCTAGCAAAAAGAGAATCGGCTGGCGGTTCATAAGGATAGACACTTCCTGTGTATGTACATTGACCATTAAAAGGGGAAGA\n"
+	}
+]

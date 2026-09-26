@@ -1,0 +1,251 @@
+{
+ "MLE":{
+   "content":{
+     "0":      [
+[0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [6012.089358817244, 1.467273989728444e-05, 1.785559190713345, 3.747999236491076, 0.05287076180560901, 0.3593428198102715, 0, 2.440539223816694e-09, 0.0006528936075390125],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [6.063021055065074, 1.617295592034658e-06, 1.222434202711755, 2.716452092094244, 0.09931855401473821, 0.2460142210460523, 0, 2.66747480727213e-07, 0.557214922014434],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [6012.089358817244, 1.467273989728444e-05, 1.933583719623382, 3.658408448403918, 0.05578689919707314, 0.3891326760616174, 0, 2.440539223816694e-09, 0.0008864700878445484],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [15.16923420174189, 4.167016870178169e-06, 2.810818485654692, 3.260200084647456, 0.07098046502242306, 0.5656756974863835, 0, 2.747018613305916e-07, 0.4579806585773014],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [8.00815487469108, 4.410524055937516e-07, 1.87862421228894, 2.697151535113658, 0.1005277056103967, 0.3780721049846925, 0, 5.50754090667815e-08, 0.6614560799755782],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [7.037290118953115, 1.46044467795754e-05, 1.646033555677577, 3.028710939716888, 0.08180298340199255, 0.3312633613468748, 0, 2.075294116444355e-06, 0.6233368799637531],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0],
+      [0, 0, 0, 0, 1, 0, 0, 0, 0] 
+      ]
+    },
+   "headers":    [
+["alpha", "Synonymous substitution rate at a site"],
+    ["beta", "Non-synonymous substitution rate at a site"],
+    ["alpha=beta", "The rate estimate under the neutral model"],
+    ["LRT", "Likelihood ratio test statistic for beta = alpha, versus beta &neq; alpha"],
+    ["p-value", "Asymptotic p-value for evidence of selection, i.e. beta &neq; alpha"],
+    ["Total branch length", "The total length of branches contributing to inference at this site, and used to scale dN-dS"],
+    ["dN/dS LB", "95% profile likelihood CI lower bound for dN/dS (if available)"],
+    ["dN/dS MLE", "Point estimate for site dN/dS"],
+    ["dN/dS UB", "95% profile likelihood CI upper bound for dN/dS (if available)"] 
+    ]
+  },
+ "analysis":{
+   "authors":"Sergei L Kosakovsky Pond and Simon DW Frost",
+   "citation":"Not So Different After All: A Comparison of Methods for Detecting Amino Acid Sites Under Selection (2005). _Mol Biol Evol_ 22 (5): 1208-1222",
+   "contact":"spond@temple.edu",
+   "info":"FEL (Fixed Effects Likelihood)\n    estimates site-wise synonymous (&alpha;) and non-synonymous (&beta;) rates, and\n    uses a likelihood ratio test to determine if beta &neq; alpha at a site.\n    The estimates aggregate information over all branches,\n    so the signal is derived from\n    pervasive diversification or conservation. A subset of branches can be selected\n    for testing as well, in which case an additional (nuisance) parameter will be\n    inferred -- the non-synonymous rate on branches NOT selected for testing.\n    Multiple partitions within a NEXUS file are also supported\n    for recombination - aware analysis. Version 2.5 adds MH support.\n    ",
+   "requirements":"in-frame codon alignment and a phylogenetic tree",
+   "settings":{
+     "ci":1,
+     "multihit":"None",
+     "pvalue":0.1,
+     "resample":0,
+     "site-filter":{
+       "site-filter":null,
+       "site-save-filter":null
+      },
+     "srv":1
+    },
+   "version":"2.5"
+  },
+ "branch attributes":{
+   "0":{
+     "NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA":{
+       "Global MG94xREV":0.01723987385701254,
+       "Nucleotide GTR":0.01567047583091528,
+       "original name":"NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA"
+      },
+     "NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA":{
+       "Global MG94xREV":0.01793203067578043,
+       "Nucleotide GTR":0.01562815243892355,
+       "original name":"NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA"
+      },
+     "NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA":{
+       "Global MG94xREV":0.01743133615378,
+       "Nucleotide GTR":0.01573417771482271,
+       "original name":"NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA"
+      }
+    },
+   "attributes":{
+     "Global MG94xREV":{
+       "attribute type":"branch length",
+       "display order":1
+      },
+     "Nucleotide GTR":{
+       "attribute type":"branch length",
+       "display order":0
+      },
+     "original name":{
+       "attribute type":"node label",
+       "display order":-1
+      }
+    }
+  },
+ "confidence interval":1,
+ "data partitions":{
+   "0":{
+     "coverage":      [
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43] 
+      ],
+     "name":"fel.filter.default"
+    }
+  },
+ "fits":{
+   "Global MG94xREV":{
+     "AIC-c":428.2322354365438,
+     "Equilibrium frequencies":      [
+[0.0208651986653305],
+      [0.01997767794284272],
+      [0.01726898431338268],
+      [0.02055837772381023],
+      [0.02417969333167251],
+      [0.02315118748135838],
+      [0.02001221035776044],
+      [0.02382413303278965],
+      [0.04228078221980656],
+      [0.04048232963927002],
+      [0.03499349211203992],
+      [0.04165904697457978],
+      [0.05128743741546202],
+      [0.04910587834000729],
+      [0.0424478082575295],
+      [0.05053326008466474],
+      [0.003023174994335635],
+      [0.002894581420978578],
+      [0.002502116677208541],
+      [0.002978719467550556],
+      [0.003503414725328164],
+      [0.003354393706258546],
+      [0.002899584849651736],
+      [0.003451897314839892],
+      [0.006126095686798256],
+      [0.00586551648229681],
+      [0.005070234509359494],
+      [0.006036011979635195],
+      [0.007431077019918836],
+      [0.007114989214987493],
+      [0.006150296220363555],
+      [0.00732180367513398],
+      [0.006367641303564008],
+      [0.006096787730543755],
+      [0.005270148611966388],
+      [0.006274005689000261],
+      [0.007379158781847631],
+      [0.007065279367687079],
+      [0.006107326332886766],
+      [0.007270648890262651],
+      [0.01290324906693479],
+      [0.01235439731057198],
+      [0.01067931388062042],
+      [0.01271350790554505],
+      [0.01565190008870098],
+      [0.01498613189268029],
+      [0.01295422207292598],
+      [0.01542174025179628],
+      [0.01093966585279973],
+      [0.01125765383832807],
+      [0.01324066621899039],
+      [0.0126774621087691],
+      [0.01095857561205057],
+      [0.01304596336756647],
+      [0.02216789961593942],
+      [0.01916224257011057],
+      [0.02281226351490284],
+      [0.02808471682128319],
+      [0.02689010714783175],
+      [0.02324418482716862],
+      [0.02767173348977271] 
+      ],
+     "Log Likelihood":-193.0895690457055,
+     "Rate Distributions":{
+       "non-synonymous/synonymous rate ratio for *test*":        [
+[0, 1] 
+        ]
+      },
+     "display order":1,
+     "estimated parameters":18
+    },
+   "Nucleotide GTR":{
+     "AIC-c":446.0985262375298,
+     "Equilibrium frequencies":      [
+[0.3005050505050505],
+      [0.1742424242424242],
+      [0.2247474747474747],
+      [0.3005050505050505] 
+      ],
+     "Log Likelihood":-211.7055131187649,
+     "Rate Distributions":{
+       "Substitution rate from nucleotide A to nucleotide C":0,
+       "Substitution rate from nucleotide A to nucleotide G":1,
+       "Substitution rate from nucleotide A to nucleotide T":0,
+       "Substitution rate from nucleotide C to nucleotide G":0,
+       "Substitution rate from nucleotide C to nucleotide T":5.203109831555391,
+       "Substitution rate from nucleotide G to nucleotide T":0.9772191554792311
+      },
+     "display order":0,
+     "estimated parameters":11
+    }
+  },
+ "input":{
+   "file name":"/home/sjenkins/dev/AOC_env/AOC3/results/sequences/BDNF/gard/segments/BDNF.part1.codon.fas",
+   "number of sequences":3,
+   "number of sites":44,
+   "partition count":1,
+   "trees":{
+     "0":"(NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA:0.017516036,NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA:0.017457698,NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA:0.017358984)"
+    }
+  },
+ "runtime":"2.5.74",
+ "tested":{
+   "0":{
+     "NM_001048142_1_Mus_musculus_brain_derived_neurotrophic_factor_Bdnf_transcript_variant_4_mRNA":"test",
+     "NM_001081787_1_Equus_caballus_brain_derived_neurotrophic_factor_BDNF_mRNA":"test",
+     "NM_001709_5_Homo_sapiens_brain_derived_neurotrophic_factor_BDNF_transcript_variant_4_mRNA":"test"
+    }
+  },
+ "timers":{
+   "FEL analysis":{
+     "order":2,
+     "timer":3
+    },
+   "Model fitting":{
+     "order":1,
+     "timer":2
+    },
+   "Total time":{
+     "order":0,
+     "timer":5
+    }
+  }
+}

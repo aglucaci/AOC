@@ -20,7 +20,7 @@ Run the smoke test before making changes so you know the local environment is
 healthy:
 
 ```bash
-bash tests/test_installation.sh
+bash .tests/test_installation.sh
 ```
 
 For a dry run against the default sample sheet:
@@ -65,12 +65,11 @@ The current test suite is intentionally small and centered on installation and
 stable parser behavior.
 
 ```bash
-python -m unittest tests/test_busteds_mh.py
-bash tests/test_installation.sh
+pytest .tests/unit/
+bash .tests/test_installation.sh
 ```
 
-Use `tests/data/tiny_samples.csv` and `tests/data/tiny.fasta` for quick workflow
-checks. Larger biological examples belong under `data/` only when they are
+Use `.tests/integration/config/tiny_samples.csv` and `.tests/integration/config/tiny.fasta` for quick workflow checks. Larger biological examples belong under `data/` only when they are
 small enough to be practical for repository users.
 
 When changing the workflow, validate at least one labeled and one unlabeled
@@ -117,9 +116,8 @@ samples.csv
 - `submit_AOC.slurm`: example Slurm entry point.
 - `install.sh`: environment installer and smoke-test helper.
 - `envs/AOC.yaml`: conda environment specification.
-- `scripts/`: Python and HyPhy helper scripts used by the workflow.
-- `software/`: bundled HyPhy utilities such as LabelTrees and duplicate removal.
-- `tests/`: smoke tests, unit tests, and tiny workflow fixtures.
+- `workflow/scripts/`: Python and HyPhy helper scripts used by the workflow.
+- `.tests/`: unit and integration tests.
 - `data/`: small example datasets.
 - `JOSS/`: manuscript and publication assets.
 
@@ -148,8 +146,7 @@ sequence,codon_fasta
 The Snakefile reads this file through the `samples_csv` config key. Each row
 defines a sample-specific execution branch. In shared-sequence mode, the
 `sequence` value identifies the shared preprocessing/GARD/tree branch. The
-`sample` value becomes the sample-specific output directory name under the
-configured output root, which defaults to `results/`.
+`sample` value becomes the sample-specific output directory name in `results/`.
 
 If `sequence_labels_csv` is omitted or blank, the sample is treated as
 unlabeled. Labeled samples are used to build a header map and a Test-branch list
@@ -159,7 +156,6 @@ Important config keys include:
 
 - `samples_csv`: sample sheet path.
 - `sequences_csv`: sequence-to-FASTA sheet path for shared-sequence mode.
-- `outdir`: output root.
 - `hyphy`, `hyphy_mpi`, `mpirun`, `fasttree`, `macse_launcher`: executable
   names or paths.
 - `gard_processors`: MPI ranks for GARD.
@@ -185,7 +181,7 @@ The preprocessing rules produce a cleaned codon alignment for each sequence:
    analysis while retaining protected Test records.
 
 These steps write sequence-local files under `results/sequences/{sequence}/` and
-logs under `results/logs/`.
+logs under `logs/`.
 
 #### 2. Recombination and dynamic partitions
 
